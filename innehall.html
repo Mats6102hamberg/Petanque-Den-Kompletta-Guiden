@@ -20,6 +20,32 @@
             padding: 40px 20px;
         }
         
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -163,6 +189,12 @@
     </style>
 </head>
 <body>
+    <div class="language-switcher">
+        <a href="innehall.html" class="active" title="Svenska">🇸🇪</a>
+        <a href="en/contents.html" title="English">🇬🇧</a>
+        <a href="fr/sommaire.html" title="Français">🇫🇷</a>
+    </div>
+    
     <div class="container">
         <div class="header">
             <h1>PÉTANQUE</h1>

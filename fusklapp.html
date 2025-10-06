@@ -147,6 +147,94 @@
             margin-bottom: 3px;
         }
         
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 10pt;
+            }
+            
+            .cheatsheet {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 20pt;
+            }
+            
+            .header p {
+                font-size: 9pt;
+            }
+            
+            .section h2 {
+                font-size: 12pt;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .quick-ref {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+            
+            table {
+                font-size: 9pt;
+            }
+            
+            table th,
+            table td {
+                padding: 6px 4px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+                font-size: 9pt;
+            }
+            
+            .cheatsheet {
+                padding: 8px;
+            }
+            
+            .header h1 {
+                font-size: 18pt;
+            }
+            
+            .section h2 {
+                font-size: 11pt;
+            }
+            
+            .box {
+                padding: 6px;
+            }
+            
+            .box h3 {
+                font-size: 10pt;
+            }
+            
+            .box ul {
+                font-size: 8.5pt;
+                margin-left: 12px;
+            }
+            
+            table {
+                font-size: 8pt;
+            }
+            
+            table th,
+            table td {
+                padding: 4px 2px;
+            }
+            
+            .highlight {
+                font-size: 8.5pt;
+                padding: 6px;
+            }
+        }
+        
         @media print {
             body {
                 background: white;

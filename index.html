@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétanque - Den Kompletta Guiden</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .book-cover {
+            width: 600px;
+            height: 850px;
+            background: linear-gradient(160deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 60px 50px;
+            box-sizing: border-box;
+        }
+        
+        .cover-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
+        }
+        
+        .boule-decoration {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #E5E5E5, #808080, #404040);
+            box-shadow: inset -10px -10px 30px rgba(0,0,0,0.5), 
+                        inset 10px 10px 20px rgba(255,255,255,0.3),
+                        0 10px 30px rgba(0,0,0,0.3);
+            opacity: 0.3;
+        }
+        
+        .boule-1 {
+            top: -75px;
+            right: -75px;
+        }
+        
+        .boule-2 {
+            bottom: 100px;
+            left: -50px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .title-section {
+            margin-top: 100px;
+        }
+        
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            color: #FFFFFF;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 28px;
+            font-weight: 300;
+            color: #FFF8DC;
+            margin-top: 20px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        
+        .divider {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #FFF8DC, transparent);
+            margin: 40px auto;
+        }
+        
+        .description {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            color: #FFF8DC;
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 30px auto;
+            font-weight: 300;
+        }
+        
+        .author-section {
+            margin-bottom: 40px;
+        }
+        
+        .author-label {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            color: #FFF8DC;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .author-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .border-frame {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            border: 2px solid rgba(255, 248, 220, 0.3);
+            pointer-events: none;
+        }
+        
+        .open-book-btn {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            padding: 15px 40px;
+            background: rgba(255, 248, 220, 0.2);
+            border: 2px solid #FFF8DC;
+            color: #FFFFFF;
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+        
+        .open-book-btn:hover {
+            background: rgba(255, 248, 220, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="book-cover">
+        <div class="cover-decoration"></div>
+        <div class="boule-decoration boule-1"></div>
+        <div class="boule-decoration boule-2"></div>
+        <div class="border-frame"></div>
+        
+        <div class="content title-section">
+            <h1 class="title">PÉTANQUE</h1>
+            <p class="subtitle">Den Kompletta Guiden</p>
+            <div class="divider"></div>
+            <p class="description">
+                Från grundläggande tekniker till avancerade strategier - allt du behöver för att bemästra spelet
+            </p>
+        </div>
+        
+        <div class="content author-section">
+            <p class="author-label">Författare</p>
+            <p class="author-name">Mats Hamberg</p>
+        </div>
+        
+        <a href="innehall.html" class="open-book-btn">Öppna Boken</a>
+    </div>
+</body>
+</html>

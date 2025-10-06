@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table of Contents - Pétanque Guide</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -30,6 +44,147 @@
         .language-switcher a.active {
             filter: grayscale(0%);
             transform: scale(1.1);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(160deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #FFF8DC;
+            letter-spacing: 2px;
+        }
+        
+        .content {
+            padding: 60px 40px;
+        }
+        
+        .forord {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-left: 4px solid #D2691E;
+            border-radius: 5px;
+        }
+        
+        .forord h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        
+        .forord p {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .toc-section {
+            margin-bottom: 40px;
+        }
+        
+        .toc-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #D2691E;
+        }
+        
+        .chapter-list {
+            list-style: none;
+        }
+        
+        .chapter-item {
+            margin-bottom: 15px;
+        }
+        
+        .chapter-link {
+            display: block;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #CD853F;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .chapter-link:hover {
+            background: #8B4513;
+            color: white;
+            border-left-color: #FFF8DC;
+            transform: translateX(10px);
+        }
+        
+        .chapter-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-link:hover .chapter-number {
+            color: #FFF8DC;
+        }
+        
+        .chapter-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .chapter-link:hover .chapter-desc {
+            color: #FFF8DC;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #D2691E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
     </style>
 </head>

@@ -194,6 +194,69 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
         
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .book-cover {
+                width: 90vw;
+                max-width: 500px;
+                height: auto;
+                min-height: 600px;
+                padding: 40px 30px;
+            }
+            
+            .title {
+                font-size: 48px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+            
+            .description {
+                font-size: 16px;
+            }
+            
+            .author-name {
+                font-size: 28px;
+            }
+            
+            .open-book-btn {
+                font-size: 16px;
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .book-cover {
+                width: 95vw;
+                padding: 30px 20px;
+            }
+            
+            .title {
+                font-size: 42px;
+                letter-spacing: 1px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+            
+            .description {
+                font-size: 14px;
+                max-width: 300px;
+            }
+            
+            .author-name {
+                font-size: 24px;
+            }
+            
+            .boule-1, .boule-2 {
+                display: none;
+            }
+        }
+        
     </style>
 </head>
 <body>

@@ -179,14 +179,27 @@
         }
         
         @media print {
+            html, body {
+                background: white !important;
+            }
+            
             .protocol-header .button-group,
-            .save-hint {
-                display: none;
+            .save-hint,
+            .language-switcher {
+                display: none !important;
             }
             
             .section {
-                box-shadow: none;
+                box-shadow: none !important;
                 page-break-inside: avoid;
+            }
+            
+            .match-protocol {
+                padding: 0;
+            }
+            
+            .btn {
+                display: none !important;
             }
         }
         

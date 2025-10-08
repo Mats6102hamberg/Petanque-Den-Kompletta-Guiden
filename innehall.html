@@ -168,6 +168,19 @@
             color: #FFF8DC;
         }
         
+        /* Special styling for matchprotokoll with yellow background */
+        .chapter-link.matchprotokoll-link:hover {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #333;
+            border-left-color: #ff6f00;
+        }
+        
+        .chapter-link.matchprotokoll-link:hover .chapter-number,
+        .chapter-link.matchprotokoll-link:hover .chapter-title,
+        .chapter-link.matchprotokoll-link:hover .chapter-desc {
+            color: #333;
+        }
+        
         .back-btn {
             display: inline-block;
             margin-top: 40px;
@@ -367,7 +380,7 @@
                         </a>
                     </li>
                     <li class="chapter-item">
-                        <a href="matchprotokoll.html" class="chapter-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
+                        <a href="matchprotokoll.html" class="chapter-link matchprotokoll-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
                             <div class="chapter-title">📋 Matchprotokoll (Interaktivt)</div>
                             <div class="chapter-desc">Komplett matchprotokoll med automatisk analys: Spara lag, poäng per omgång, statistik (vunna omgångar, snittpoäng, shutouts, clutch-omgångar). Sparas automatiskt i webbläsaren. Perfekt för tävlingar och träning!</div>
                         </a>

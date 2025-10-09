@@ -327,6 +327,9 @@
       .filmstrip-side {
         width: 100%;
         height: auto;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
       }
 
       .book-frame {
@@ -364,7 +367,7 @@
       }
 
       .filmstrip {
-        position: relative;
+        position: absolute;
         animation: filmroll 60s linear infinite;
       }
 

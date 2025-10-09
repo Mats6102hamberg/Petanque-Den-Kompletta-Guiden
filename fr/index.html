@@ -1,229 +1,623 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pétanque - Le Guide Complet</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400&display=swap');
-        
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        
-        .language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            gap: 10px;
-        }
-        
-        .language-switcher a {
-            font-size: 32px;
-            text-decoration: none;
-            transition: transform 0.2s;
-            filter: grayscale(50%);
-        }
-        
-        .language-switcher a:hover {
-            transform: scale(1.2);
-            filter: grayscale(0%);
-        }
-        
-        .language-switcher a.active {
-            filter: grayscale(0%);
-            transform: scale(1.1);
-        }
-        
-        .book-cover {
-            width: 600px;
-            height: 850px;
-            background: linear-gradient(160deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 60px 50px;
-            box-sizing: border-box;
-        }
-        
-        .cover-decoration {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: 0.1;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
-        }
-        
-        .boule-decoration {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #E5E5E5, #808080, #404040);
-            box-shadow: inset -10px -10px 30px rgba(0,0,0,0.5), 
-                        inset 10px 10px 20px rgba(255,255,255,0.3),
-                        0 10px 30px rgba(0,0,0,0.3);
-            opacity: 0.3;
-        }
-        
-        .boule-1 {
-            top: -75px;
-            right: -75px;
-        }
-        
-        .boule-2 {
-            bottom: 100px;
-            left: -50px;
-            width: 100px;
-            height: 100px;
-        }
-        
-        .content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-        
-        .title-section {
-            margin-top: 100px;
-        }
-        
-        .title {
-            font-family: 'Playfair Display', serif;
-            font-size: 72px;
-            font-weight: 900;
-            color: #FFFFFF;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-            margin: 0;
-            line-height: 1.1;
-            letter-spacing: 2px;
-        }
-        
-        .subtitle {
-            font-family: 'Lato', sans-serif;
-            font-size: 28px;
-            font-weight: 300;
-            color: #FFF8DC;
-            margin-top: 20px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
-        
-        .divider {
-            width: 200px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #FFF8DC, transparent);
-            margin: 40px auto;
-        }
-        
-        .description {
-            font-family: 'Lato', sans-serif;
-            font-size: 18px;
-            color: #FFF8DC;
-            line-height: 1.6;
-            max-width: 400px;
-            margin: 30px auto;
-            font-weight: 300;
-        }
-        
-        .author-section {
-            margin-bottom: 40px;
-        }
-        
-        .author-label {
-            font-family: 'Lato', sans-serif;
-            font-size: 14px;
-            color: #FFF8DC;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        
-        .author-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: #FFFFFF;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .border-frame {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-            right: 30px;
-            bottom: 30px;
-            border: 2px solid rgba(255, 248, 220, 0.3);
-            pointer-events: none;
-        }
-        
-        .open-book-btn {
-            position: relative;
-            z-index: 2;
-            display: inline-block;
-            padding: 15px 40px;
-            background: rgba(255, 248, 220, 0.2);
-            border: 2px solid #FFF8DC;
-            color: #FFFFFF;
-            font-family: 'Lato', sans-serif;
-            font-size: 18px;
-            letter-spacing: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            margin-bottom: 40px;
-        }
-        
-        .open-book-btn:hover {
-            background: rgba(255, 248, 220, 0.4);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pétanque - Le Guide Complet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: #000;
+      overflow: hidden;
+    }
+    
+    .font-display {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    /* Split Screen */
+    .split-container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* GAUCHE - Couverture du livre (50%) */
+    .book-side {
+      width: 50%;
+      height: 100vh;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-frame {
+      position: relative;
+      width: 85%;
+      height: 92%;
+      background: linear-gradient(135deg, #c87137 0%, #d88a4f 50%, #c87137 100%);
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .book-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .book-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 6rem;
+      color: white;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .book-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: white;
+      letter-spacing: 0.3em;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .book-divider {
+      width: 200px;
+      height: 1px;
+      background: white;
+      margin: 2rem auto;
+    }
+
+    .book-description {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: white;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .book-author-section {
+      margin-top: auto;
+    }
+
+    .book-author-label {
+      font-size: 0.9rem;
+      letter-spacing: 0.3em;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-author-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: white;
+      font-weight: 700;
+    }
+
+    .book-cta {
+      border: 2px solid white;
+      padding: 1.5rem 3rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: transparent;
+      margin-top: 2rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .book-cta:hover {
+      background: white;
+      color: #c87137;
+    }
+
+    /* DROITE - Bande de film (50%) */
+    .filmstrip-side {
+      width: 50%;
+      height: 100vh;
+      background: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .filmstrip {
+      position: absolute;
+      width: 100%;
+      animation: filmroll 50s linear infinite;
+    }
+
+    @keyframes filmroll {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    .filmstrip:hover {
+      animation-play-state: paused;
+    }
+
+    /* Film frame */
+    .film-frame {
+      min-height: 100vh;
+      border-bottom: 8px solid #1a1a1a;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 3rem;
+      background: linear-gradient(to right, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+    }
+
+    /* Film perforations */
+    .film-frame::before,
+    .film-frame::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 100%;
+      background: 
+        repeating-linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.9) 0px,
+          rgba(255, 255, 255, 0.9) 30px,
+          transparent 30px,
+          transparent 40px
+        ),
+        linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+      top: 0;
+    }
+
+    .film-frame::before { left: 0; }
+    .film-frame::after { right: 0; }
+
+    /* Film content */
+    .film-content {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 500px;
+      padding: 0 2rem;
+    }
+
+    /* Part header (sections principales) */
+    .part-header {
+      text-align: left;
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid #c87137;
+    }
+
+    .part-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: #c87137;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Chapitres */
+    .chapter-item {
+      margin-bottom: 2.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid rgba(200, 113, 55, 0.3);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .chapter-item:hover {
+      border-left-color: #c87137;
+      padding-left: 1.5rem;
+    }
+
+    .chapter-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .chapter-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #c87137;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+
+    .chapter-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: white;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .chapter-description {
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* Sections spéciales */
+    .special-section {
+      background: linear-gradient(135deg, rgba(200, 113, 55, 0.1), rgba(200, 113, 55, 0.05));
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #c87137;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .special-section:hover {
+      background: linear-gradient(135deg, rgba(200, 113, 55, 0.15), rgba(200, 113, 55, 0.08));
+    }
+
+    .special-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #f4a460;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .special-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(200, 113, 55, 0.3);
+      color: #f4a460;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .split-container {
+        flex-direction: column;
+      }
+      
+      .book-side,
+      .filmstrip-side {
+        width: 100%;
+        height: 50vh;
+      }
+
+      .book-title {
+        font-size: 3rem;
+      }
+
+      .film-frame {
+        min-height: 50vh;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="language-switcher">
-        <a href="../index.html" title="Svenska">🇸🇪</a>
-        <a href="../en/index.html" title="English">🇬🇧</a>
-        <a href="index.html" class="active" title="Français">🇫🇷</a>
-    </div>
+  
+  <!-- Language Switcher -->
+  <div class="fixed top-6 right-6 z-50">
+    <select id="languageSelector" class="lang-switcher px-6 py-3 rounded-full cursor-pointer text-base outline-none transition-all">
+      <option value="se">🇸🇪 Svenska</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="fr" selected>🇫🇷 Français</option>
+    </select>
+  </div>
+
+  <!-- Split Screen Container -->
+  <div class="split-container">
     
-    <div class="book-cover">
-        <div class="cover-decoration"></div>
-        <div class="boule-decoration boule-1"></div>
-        <div class="boule-decoration boule-2"></div>
-        <div class="border-frame"></div>
-        
-        <div class="content title-section">
-            <h1 class="title">PÉTANQUE</h1>
-            <p class="subtitle">Du Débutant au Pro</p>
-            <div class="divider"></div>
-            <p class="description">
-                Des techniques de base aux stratégies avancées - tout ce dont vous avez besoin pour maîtriser le jeu
-            </p>
+    <!-- GAUCHE - COUVERTURE DU LIVRE -->
+    <div class="book-side">
+      <div class="book-frame">
+        <div>
+          <h1 class="book-title">PÉTANQUE</h1>
+          <p class="book-subtitle">Le Guide Complet</p>
+          
+          <div class="book-divider"></div>
+          
+          <p class="book-description">
+            Des techniques de base aux stratégies avancées - tout ce dont vous avez besoin pour maîtriser le jeu
+          </p>
         </div>
-        
-        <div class="content author-section">
-            <p class="author-label">Auteur</p>
-            <p class="author-name">Mats Hamberg</p>
+
+        <div class="book-author-section">
+          <p class="book-author-label">Auteur</p>
+          <p class="book-author-name">Mats Hamberg</p>
+          
+          <a href="sommaire.html" class="book-cta">Ouvrir le Livre</a>
         </div>
-        
-        <a href="sommaire.html" class="open-book-btn">Ouvrir le Livre</a>
+      </div>
     </div>
+
+    <!-- DROITE - BANDE DE FILM AVEC CHAPITRES -->
+    <div class="filmstrip-side">
+      <div class="filmstrip">
+        
+        <!-- PARTIE 1: LES BASES POUR DÉBUTANTS -->
+        <div class="film-frame">
+          <div class="film-content">
+            <div class="part-header">
+              <div class="part-title">Partie 1: Les Bases pour Débutants</div>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre1.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 1</div>
+                <div class="chapter-title">Qu'est-ce que la Pétanque?</div>
+                <div class="chapter-description">L'histoire de la pétanque, règles de base et concept du jeu, différences entre pétanque, boule et boccia/bocce</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre2.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 2</div>
+                <div class="chapter-title">Équipement – Choisir les Bonnes Boules</div>
+                <div class="chapter-description">Poids, taille et matériau, différence entre boules de compétition et de loisir, entretien et nettoyage</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre3.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 3</div>
+                <div class="chapter-title">Techniques de Base</div>
+                <div class="chapter-description">Bonne prise et position, comment pointer, comment tirer</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre4.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 4</div>
+                <div class="chapter-title">Stratégie pour Débutants</div>
+                <div class="chapter-description">Tactiques simples pour gagner des points, comment lire le terrain, erreurs courantes et comment les éviter</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PARTIE 2: TECHNIQUES AVANCÉES POUR PROS -->
+        <div class="film-frame">
+          <div class="film-content">
+            <div class="part-header">
+              <div class="part-title">Partie 2: Techniques Avancées pour Pros</div>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie2-chapitre5.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 5</div>
+                <div class="chapter-title">Améliorer Votre Pointage</div>
+                <div class="chapter-description">Techniques de placement avancées, adapter les lancers au terrain et à la météo, entraînement mental</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie2-chapitre6.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 6</div>
+                <div class="chapter-title">Tir de Championnat (tirer au fer)</div>
+                <div class="chapter-description">Tirs directs vs. tirs roulés, conseils d'entraînement pour devenir un bon tireur, analyse des styles de tir professionnels</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie2-chapitre7.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 7</div>
+                <div class="chapter-title">Tactiques de Haut Niveau</div>
+                <div class="chapter-description">Contrôler le tempo du jeu, guerre psychologique, jeu d'équipe et communication</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie2-chapitre8.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 8</div>
+                <div class="chapter-title">S'Entraîner Plus Intelligemment</div>
+                <div class="chapter-description">Exercices efficaces pour l'entraînement solo, analyse vidéo, préparation physique et mentale</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PARTIE 3: LA PÉTANQUE COMME MODE DE VIE -->
+        <div class="film-frame">
+          <div class="film-content">
+            <div class="part-header">
+              <div class="part-title">Partie 3: La Pétanque comme Mode de Vie</div>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie3-chapitre9.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 9</div>
+                <div class="chapter-title">Jeu Compétitif vs. Jeu Social</div>
+                <div class="chapter-description">Différences d'état d'esprit et de stratégie, comment trouver des clubs et des tournois</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie3-chapitre10.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 10</div>
+                <div class="chapter-title">La Pétanque dans le Monde</div>
+                <div class="chapter-description">Différences culturelles dans le jeu, grands tournois et joueurs légendaires</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PARTIE 4: APPROFONDISSEMENT ET DÉVELOPPEMENT -->
+        <div class="film-frame">
+          <div class="film-content">
+            <div class="part-header">
+              <div class="part-title">Partie 4: Approfondissement et Développement</div>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie4-approfondissement.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 11</div>
+                <div class="chapter-title">Analyse Stratégique et Tactique</div>
+                <div class="chapter-description">Stratégie de jeu avancée, analyse du terrain et jeu psychologique</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie4-approfondissement.html#mental" class="chapter-link">
+                <div class="chapter-number">Chapitre 12</div>
+                <div class="chapter-title">Force Mentale et Concentration</div>
+                <div class="chapter-description">Gestion de la pression, contrôle du tilt et motivation</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie4-approfondissement.html#entrainement" class="chapter-link">
+                <div class="chapter-number">Chapitre 13</div>
+                <div class="chapter-title">Plan d'Entraînement et Développement</div>
+                <div class="chapter-description">Entraînement efficace, analyse vidéo et plan d'étude étape par étape</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie4-approfondissement.html#physique" class="chapter-link">
+                <div class="chapter-number">Chapitre 14</div>
+                <div class="chapter-title">Entraînement Physique pour la Pétanque</div>
+                <div class="chapter-description">Force, équilibre, mobilité et préparation</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANNEXES ET RESSOURCES -->
+        <div class="film-frame">
+          <div class="film-content">
+            <div class="part-header">
+              <div class="part-title">Annexes</div>
+            </div>
+
+            <a href="equipement.html" class="special-section">
+              <div class="special-icon">📖</div>
+              <div class="special-title">Annexe A: Guide d'Équipement</div>
+              <div class="chapter-description">Guide détaillé sur les boules - fabrication, matériaux, dureté, modèles et entretien</div>
+            </a>
+
+            <a href="regles.html" class="special-section">
+              <div class="special-icon">📋</div>
+              <div class="special-title">Annexe B: Règlement Complet</div>
+              <div class="chapter-description">Guide complet des règles de base aux règles avancées et cas particuliers</div>
+            </a>
+
+            <div class="part-header" style="margin-top: 3rem;">
+              <div class="part-title">🎁 Ressources Téléchargeables</div>
+            </div>
+
+            <a href="antisèche.html" class="special-section">
+              <div class="special-icon">📝</div>
+              <div class="special-title">Antisèche (1 page)</div>
+              <div class="chapter-description">Tout ce dont vous avez besoin sur une page: Routine de match, étiquette, mesure, conseils de donnée, trajectoires de lancer et arbre de décision. Parfait à imprimer et à apporter sur le terrain!</div>
+            </a>
+
+            <a href="journal-entrainement.html" class="special-section">
+              <div class="special-icon">📊</div>
+              <div class="special-title">Journal d'Entraînement</div>
+              <div class="chapter-description">Documentez vos progrès: Date, terrain, objectifs, pourcentage de réussite, réflexions et prochaines étapes. Imprimez ou remplissez numériquement.</div>
+            </a>
+
+            <a href="protocole-match.html" class="special-section">
+              <div class="special-icon">📓</div>
+              <div class="special-title">Protocole de Match (Interactif)</div>
+              <div class="chapter-description">Protocole de match complet avec analyse automatique: Enregistrez les équipes, les points par manche, les statistiques (manches gagnées, points moyens, shutouts, manches clutch). Sauvegarde automatique dans le navigateur.</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dupliquer pour une boucle sans couture -->
+        <div class="film-frame">
+          <div class="film-content">
+            <div class="part-header">
+              <div class="part-title">Partie 1: Les Bases pour Débutants</div>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre1.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 1</div>
+                <div class="chapter-title">Qu'est-ce que la Pétanque?</div>
+                <div class="chapter-description">L'histoire de la pétanque, règles de base et concept du jeu, différences entre pétanque, boule et boccia/bocce</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre2.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 2</div>
+                <div class="chapter-title">Équipement – Choisir les Bonnes Boules</div>
+                <div class="chapter-description">Poids, taille et matériau, différence entre boules de compétition et de loisir, entretien et nettoyage</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre3.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 3</div>
+                <div class="chapter-title">Techniques de Base</div>
+                <div class="chapter-description">Bonne prise et position, comment pointer, comment tirer</div>
+              </a>
+            </div>
+
+            <div class="chapter-item">
+              <a href="partie1-chapitre4.html" class="chapter-link">
+                <div class="chapter-number">Chapitre 4</div>
+                <div class="chapter-title">Stratégie pour Débutants</div>
+                <div class="chapter-description">Tactiques simples pour gagner des points, comment lire le terrain, erreurs courantes et comment les éviter</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Language switcher functionality
+    document.getElementById('languageSelector').addEventListener('change', function() {
+      const lang = this.value;
+      if (lang === 'se') {
+        window.location.href = '../index.html';
+      } else if (lang === 'en') {
+        window.location.href = '../en/index.html';
+      }
+      // 'fr' stays on current page
+    });
+  </script>
+
 </body>
 </html>

@@ -318,12 +318,113 @@
         height: 50vh;
       }
 
+      .book-frame {
+        width: 90%;
+        height: 85%;
+        padding: 1.5rem;
+      }
+
       .book-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .book-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .book-divider {
+        width: 120px;
+        margin: 1rem auto;
+      }
+
+      .book-description {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      .book-author-label {
+        font-size: 0.6rem;
+      }
+
+      .book-author-name {
+        font-size: 1.3rem;
+      }
+
+      .book-cta {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+        margin-top: 1rem;
       }
 
       .film-frame {
         min-height: 50vh;
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .book-frame {
+        padding: 1rem;
+      }
+
+      .book-title {
+        font-size: 2rem;
+      }
+
+      .book-subtitle {
+        font-size: 1rem;
+        letter-spacing: 0.15em;
+      }
+
+      .book-description {
+        font-size: 0.9rem;
+      }
+
+      .book-author-name {
+        font-size: 1.1rem;
+      }
+
+      .book-cta {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .book-frame {
+        width: 95%;
+        padding: 0.8rem;
+      }
+
+      .book-title {
+        font-size: 1.6rem;
+      }
+
+      .book-subtitle {
+        font-size: 0.85rem;
+      }
+
+      .book-divider {
+        width: 100px;
+        margin: 0.8rem auto;
+      }
+
+      .book-description {
+        font-size: 0.8rem;
+      }
+
+      .book-author-label {
+        font-size: 0.5rem;
+      }
+
+      .book-author-name {
+        font-size: 1rem;
+      }
+
+      .book-cta {
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
       }
     }
   </style>

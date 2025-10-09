@@ -436,9 +436,10 @@
   <!-- Language Switcher -->
   <div class="fixed top-6 right-6 z-50">
     <select id="languageSelector" class="lang-switcher px-6 py-3 rounded-full cursor-pointer text-base outline-none transition-all">
-      <option value="se">🇸🇪 Svenska</option>
+      <option value="se" selected>🇸🇪 Svenska</option>
       <option value="en">🇬🇧 English</option>
       <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
     </select>
   </div>
 
@@ -717,6 +718,8 @@
         window.location.href = 'en/index.html';
       } else if (lang === 'fr') {
         window.location.href = 'fr/index.html';
+      } else if (lang === 'es') {
+        window.location.href = 'es/index.html';
       }
       // 'se' stays on current page
     });

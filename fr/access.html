@@ -160,5 +160,17 @@
         
     </div>
     
+    <script>
+        // Check if user has access via license key
+        window.addEventListener('load', () => {
+            const licenseKey = localStorage.getItem('petanque_license_key');
+            
+            if (!licenseKey) {
+                // Redirect to activation page if no license key
+                window.location.href = 'upload.html';
+            }
+        });
+    </script>
+    
 </body>
 </html>

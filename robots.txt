@@ -1,0 +1,10 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://petanque-den-kompletta-guiden.vercel.app/sitemap.xml
+
+# Disallow crawling of verification files
+Disallow: /googlee66182eefd677101.html
+Disallow: /public/

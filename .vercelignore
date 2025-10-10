@@ -1,0 +1,8 @@
+node_modules
+.git
+*.py
+*.md
+test-activation.html
+add-license-protection.py
+add-inline-protection.py
+GRATIS-LICENSNYCKLAR.md

@@ -1,0 +1,8 @@
+{
+  "name": "petanque-den-kompletta-guiden",
+  "version": "1.0.0",
+  "description": "Pétanque: Den Kompletta Guiden - Digital Book",
+  "scripts": {
+    "build": "echo 'No build needed - static HTML'"
+  }
+}

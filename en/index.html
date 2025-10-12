@@ -1,738 +1,803 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pétanque – The Complete Guide | Mats Hamberg</title>
-  <meta name="description" content="The most comprehensive book on pétanque in English. Technique, history, training, rules and culture – by Mats Hamberg.">
-  <meta name="keywords" content="pétanque, boules, petanque rules, boules technique, Mats Hamberg, petanque book, french boules">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétanque: The Complete Guide - Interactive Digital Book</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Cormorant Garamond', serif;
-      background: #000;
-      overflow: hidden;
-    }
-    
-    .font-display {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f0f1e;
+            color: #fff;
+            overflow-x: hidden;
+        }
 
-    /* Split Screen */
-    .split-container {
-      display: flex;
-      height: 100vh;
-      width: 100vw;
-    }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 80px 20px;
+        }
 
-    /* LEFT - Book Cover (50%) */
-    .book-side {
-      width: 50%;
-      height: 100vh;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(210,105,30,0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
 
-    .book-frame {
-      position: relative;
-      width: 85%;
-      height: 92%;
-      background: linear-gradient(135deg, #c87137 0%, #d88a4f 50%, #c87137 100%);
-      border: 3px solid rgba(255, 255, 255, 0.3);
-      padding: 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
 
-    .book-frame::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: 
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
-      pointer-events: none;
-    }
-f
-    .book-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: 6rem;
-      color: white;
-      letter-spacing: 0.05em;
-      line-height: 1;
-      margin-bottom: 1.5rem;
-    }
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
 
-    .book-subtitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      color: white;
-      letter-spacing: 0.3em;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #fff 0%, #D2691E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    .book-divider {
-      width: 200px;
-      height: 1px;
-      background: white;
-      margin: 2rem auto;
-    }
+        .hero-subtitle {
+            font-size: 24px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
 
-    .book-description {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: white;
-      line-height: 1.7;
-      font-weight: 300;
-    }
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 40px;
+        }
 
-    .book-author-section {
-      margin-top: auto;
-    }
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
 
-    .book-author-label {
-      font-size: 0.9rem;
-      letter-spacing: 0.3em;
-      color: white;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
+        .badge {
+            background: rgba(210,105,30,0.2);
+            border: 1px solid rgba(210,105,30,0.5);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #D2691E;
+        }
 
-    .book-author-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      color: white;
-      font-weight: 700;
-    }
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-    .book-cta {
-      border: 2px solid white;
-      padding: 1.5rem 3rem;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 1.4rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background: transparent;
-      margin-top: 2rem;
-      text-decoration: none;
-      display: inline-block;
-    }
+        .btn-primary {
+            background: linear-gradient(135deg, #D2691E 0%, #8B4513 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(210,105,30,0.3);
+        }
 
-    .book-cta:hover {
-      background: white;
-      color: #c87137;
-    }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(210,105,30,0.5);
+        }
 
-    /* RIGHT - Filmstrip (50%) */
-    .filmstrip-side {
-      width: 50%;
-      height: 100vh;
-      background: #0a0a0a;
-      position: relative;
-      overflow: hidden;
-    }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
 
-    .filmstrip {
-      position: absolute;
-      width: 100%;
-      animation: filmroll 50s linear infinite;
-    }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+        }
 
-    @keyframes filmroll {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-50%); }
-    }
+        .hero-visual {
+            position: relative;
+        }
 
-    .filmstrip:hover {
-      animation-play-state: paused;
-    }
+        .book-mockup {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
 
-    /* Film frame */
-    .film-frame {
-      min-height: 100vh;
-      border-bottom: 8px solid #1a1a1a;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 3rem;
-      background: linear-gradient(to right, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
-    }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
 
-    /* Film perforations */
-    .film-frame::before,
-    .film-frame::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 100%;
-      background: 
-        repeating-linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0.9) 0px,
-          rgba(255, 255, 255, 0.9) 30px,
-          transparent 30px,
-          transparent 40px
-        ),
-        linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
-      top: 0;
-    }
+        .book-cover {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            text-align: center;
+        }
 
-    .film-frame::before { left: 0; }
-    .film-frame::after { right: 0; }
+        .book-cover h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
 
-    /* Film content */
-    .film-content {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      max-width: 500px;
-      padding: 0 2rem;
-    }
+        .book-cover p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
 
-    /* Part header (major sections) */
-    .part-header {
-      text-align: left;
-      margin-bottom: 3rem;
-      padding-bottom: 1rem;
-      border-bottom: 3px solid #c87137;
-    }
+        /* Language Selector */
+        .language-selector {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 100;
+        }
 
-    .part-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      color: #c87137;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
+        .language-selector select {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
 
-    /* Chapters */
-    .chapter-item {
-      margin-bottom: 2.5rem;
-      padding-left: 1rem;
-      border-left: 3px solid rgba(200, 113, 55, 0.3);
-      text-align: left;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        .language-selector select:hover {
+            background: rgba(255,255,255,0.2);
+        }
 
-    .chapter-item:hover {
-      border-left-color: #c87137;
-      padding-left: 1.5rem;
-    }
+        /* Features Section */
+        .features {
+            padding: 120px 20px;
+            background: #0f0f1e;
+        }
 
-    .chapter-link {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      pointer-events: none;
-      cursor: default;
-    }
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
 
-    .chapter-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      color: #c87137;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.1em;
-    }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
 
-    .chapter-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      color: white;
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
-      font-weight: 700;
-    }
+        .section-header p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+        }
 
-    .chapter-description {
-      font-size: 1.4rem;
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.6;
-      font-style: italic;
-    }
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
 
-    /* Special sections */
-    .special-section {
-      background: linear-gradient(135deg, rgba(200, 113, 55, 0.1), rgba(200, 113, 55, 0.05));
-      padding: 2rem;
-      border-radius: 0.5rem;
-      margin-bottom: 2rem;
-      border-left: 4px solid #c87137;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        .feature-card {
+            background: linear-gradient(135deg, rgba(210,105,30,0.1) 0%, rgba(139,69,19,0.1) 100%);
+            border: 1px solid rgba(210,105,30,0.3);
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
 
-    .special-section:hover {
-      background: linear-gradient(135deg, rgba(200, 113, 55, 0.15), rgba(200, 113, 55, 0.08));
-    }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(210,105,30,0.3);
+            border-color: rgba(210,105,30,0.6);
+        }
 
-    .special-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: #f4a460;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
+        .feature-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
 
-    .special-icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
+        .feature-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #D2691E;
+        }
 
-    /* Language Switcher */
-    .lang-switcher {
-      background: rgba(10, 10, 10, 0.8);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(200, 113, 55, 0.3);
-      color: #f4a460;
-    }
+        .feature-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+        }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .split-container {
-        flex-direction: column;
-      }
-      
-      .book-side,
-      .filmstrip-side {
-        width: 100%;
-        height: 50vh;
-      }
+        /* Interactive Tools Section */
+        .interactive-tools {
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
 
-      .book-frame {
-        width: 90%;
-        height: 85%;
-        padding: 1.5rem;
-      }
+        .tools-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
 
-      .book-title {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-      }
+        .tool-card {
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(210,105,30,0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
 
-      .book-subtitle {
-        font-size: 1.2rem;
-      }
+        .tool-card:hover {
+            transform: scale(1.05);
+            border-color: rgba(210,105,30,0.6);
+            box-shadow: 0 20px 60px rgba(210,105,30,0.4);
+        }
 
-      .book-divider {
-        width: 120px;
-        margin: 1rem auto;
-      }
+        .tool-preview {
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
 
-      .book-description {
-        font-size: 1rem;
-        line-height: 1.4;
-      }
+        .tool-content {
+            padding: 30px;
+        }
 
-      .book-author-label {
-        font-size: 0.6rem;
-      }
+        .tool-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #D2691E;
+        }
 
-      .book-author-name {
-        font-size: 1.3rem;
-      }
+        .tool-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
 
-      .book-cta {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.85rem;
-        margin-top: 1rem;
-      }
+        .tool-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
 
-      .film-frame {
-        min-height: 50vh;
-        padding: 1.5rem;
-      }
-    }
+        .tool-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+        }
 
-    @media (max-width: 768px) {
-      .book-frame {
-        padding: 1rem;
-      }
+        .tool-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: 700;
+        }
 
-      .book-title {
-        font-size: 2rem;
-      }
+        /* Apps Section */
+        .apps-section {
+            padding: 120px 20px;
+            background: #0f0f1e;
+        }
 
-      .book-subtitle {
-        font-size: 1rem;
-        letter-spacing: 0.15em;
-      }
+        .apps-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
 
-      .book-description {
-        font-size: 0.9rem;
-      }
+        .app-card {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+            border: 2px solid rgba(102,126,234,0.3);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-      .book-author-name {
-        font-size: 1.1rem;
-      }
+        .app-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(102,126,234,0.6);
+            box-shadow: 0 20px 40px rgba(102,126,234,0.3);
+        }
 
-      .book-cta {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.8rem;
-      }
-    }
+        .app-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
 
-    @media (max-width: 480px) {
-      .book-frame {
-        width: 95%;
-        padding: 0.8rem;
-      }
+        .app-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
 
-      .book-title {
-        font-size: 1.6rem;
-      }
+        .app-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
 
-      .book-subtitle {
-        font-size: 0.85rem;
-      }
+        .app-pricing {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-      .book-divider {
-        width: 100px;
-        margin: 0.8rem auto;
-      }
+        .app-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
 
-      .book-description {
-        font-size: 0.8rem;
-      }
+        .app-price-period {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
 
-      .book-author-label {
-        font-size: 0.5rem;
-      }
+        .discount-badge {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
 
-      .book-author-name {
-        font-size: 1rem;
-      }
+        /* Pricing Section */
+        .pricing {
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
 
-      .book-cta {
-        padding: 0.6rem 1rem;
-        font-size: 0.75rem;
-      }
-    }
-  </style>
+        .pricing-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(210,105,30,0.5);
+            border-radius: 30px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .pricing-header {
+            margin-bottom: 40px;
+        }
+
+        .pricing-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .pricing-amount {
+            font-size: 72px;
+            font-weight: 900;
+            color: #D2691E;
+            margin-bottom: 10px;
+        }
+
+        .pricing-period {
+            font-size: 18px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .section-header h2 {
+                font-size: 40px;
+            }
+
+            .features-grid,
+            .tools-grid,
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  
-  <!-- Language Switcher -->
-  <div class="fixed top-6 right-6 z-50">
-    <select id="languageSelector" class="lang-switcher px-6 py-3 rounded-full cursor-pointer text-base outline-none transition-all">
-      <option value="se">🇸🇪 Svenska</option>
-      <option value="en" selected>🇬🇧 English</option>
-      <option value="fr">🇫🇷 Français</option>
-      <option value="es">🇪🇸 Español</option>
-      <option value="de">🇩🇪 Deutsch</option>
-      <option value="th">🇹🇭 ไทย</option>
-    </select>
-  </div>
-
-  <!-- Split Screen Container -->
-  <div class="split-container">
-    
-    <!-- LEFT - BOOK COVER -->
-    <div class="book-side">
-      <div class="book-frame">
-        <div>
-          <h1 class="book-title">PÉTANQUE</h1>
-          <p class="book-subtitle">The Complete Guide</p>
-          
-          <div class="book-divider"></div>
-          
-          <p class="book-description">
-            From basic techniques to advanced strategies - everything you need to master the game
-          </p>
-        </div>
-
-        <div class="book-author-section">
-          <p class="book-author-label">Author</p>
-          <p class="book-author-name">Mats Hamberg</p>
-          
-          <a href="https://mhg10.gumroad.com/l/pjdqai" class="book-cta">Buy the Book</a>
-        </div>
-      </div>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelector">
+            <option value="se" selected>🇸🇪 Svenska</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="th">🇹🇭 ไทย</option>
+        </select>
     </div>
 
-    <!-- RIGHT - FILMSTRIP WITH CHAPTERS -->
-    <div class="filmstrip-side">
-      <div class="filmstrip">
-        
-        <!-- PART 1: BASICS FOR BEGINNERS -->
-        <div class="film-frame">
-          <div class="film-content">
-            <div class="part-header">
-              <div class="part-title">Part 1: Basics for Beginners</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Pétanque: The Complete Guide</h1>
+                <p class="hero-subtitle">From Beginner to Pro – A Living, Interactive Digital Book</p>
+                <p class="hero-description">
+                    More than just a book – a complete ecosystem to master pétanque. 
+                    With monthly updates, interactive tools and access to premium apps.
+                </p>
+
+                <div class="hero-badges">
+                    <span class="badge">✨ Monthly Updates</span>
+                    <span class="badge">📊 Interactive Tools</span>
+                    <span class="badge">🌍 6 Languages</span>
+                    <span class="badge">📱 Includes Apps</span>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://mhg10.gumroad.com/l/qfwmvg" class="btn-primary">
+                        Buy the Book Now →
+                    </a>
+                    <a href="upload.html" class="btn-secondary">
+                        Already purchased? Activate
+                    </a>
+                </div>
             </div>
 
-            <div class="chapter-item">
-              <a href="part1-chapter1.html" class="chapter-link">
-                <div class="chapter-number">Chapter 1</div>
-                <div class="chapter-title">What is Pétanque?</div>
-                <div class="chapter-description">The history of pétanque, basic rules and game concept, differences between pétanque, boule and boccia/bocce</div>
-              </a>
+            <div class="hero-visual">
+                <div class="book-mockup">
+                    <div class="book-cover">
+                        <h2>PÉTANQUE</h2>
+                        <p>The Complete Guide</p>
+                        <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">15 Chapters • 3 Appendices • Interactive Tools</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="chapter-item">
-              <a href="part1-chapter2.html" class="chapter-link">
-                <div class="chapter-number">Chapter 2</div>
-                <div class="chapter-title">Equipment – Choose the Right Boules</div>
-                <div class="chapter-description">Weight, size and material, difference between competition and recreational boules, maintenance and cleaning</div>
-              </a>
-            </div>
-
-            <div class="chapter-item">
-              <a href="part1-chapter3.html" class="chapter-link">
-                <div class="chapter-number">Chapter 3</div>
-                <div class="chapter-title">Basic Techniques</div>
-                <div class="chapter-description">Proper grip and stance, how to point, how to shoot</div>
-              </a>
-            </div>
-
-            <div class="chapter-item">
-              <a href="part1-chapter4.html" class="chapter-link">
-                <div class="chapter-number">Chapter 4</div>
-                <div class="chapter-title">Strategy for Beginners</div>
-                <div class="chapter-description">Simple tactics to win points, how to read the terrain, common mistakes and how to avoid them</div>
-              </a>
-            </div>
-          </div>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-header">
+            <h2>What makes this book unique?</h2>
+            <p>Not just a static PDF – a living platform that grows and evolves every month</p>
         </div>
 
-        <!-- PART 2: ADVANCED TECHNIQUES FOR PROS -->
-        <div class="film-frame">
-          <div class="film-content">
-            <div class="part-header">
-              <div class="part-title">Part 2: Advanced Techniques for Pros</div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <div class="feature-title">15 Comprehensive Chapters</div>
+                <div class="feature-description">
+                    Från grundläggande tekniker till avancerad klotfysik. Täcker allt från grepp och ställning 
+                    till psykologisk krigföring och professionell taktik.
+                </div>
             </div>
 
-            <div class="chapter-item">
-              <a href="part2-chapter5.html" class="chapter-link">
-                <div class="chapter-number">Chapter 5</div>
-                <div class="chapter-title">Improve Your Pointing</div>
-                <div class="chapter-description">Advanced placement techniques, adapting throws to terrain and weather, mental training</div>
-              </a>
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <div class="feature-title">Monthly Updates</div>
+                <div class="feature-description">
+                    Nya artiklar, intervjuer med världsstjärnor, regeländringar och turneringsanalyser. 
+                    Boken uppdateras kontinuerligt med färskt innehåll.
+                </div>
             </div>
 
-            <div class="chapter-item">
-              <a href="part2-chapter6.html" class="chapter-link">
-                <div class="chapter-number">Chapter 6</div>
-                <div class="chapter-title">Championship Shooting (tirer au fer)</div>
-                <div class="chapter-description">Direct hits vs. rolling shots, training tips to become a skilled shooter, analysis of professional shooting styles</div>
-              </a>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Interactive Tools</div>
+                <div class="feature-description">
+                    Training Journal, matchprotokoll med automatisk analys, fusklapp och mer. 
+                    Allt sparas automatiskt i din webbläsare.
+                </div>
             </div>
 
-            <div class="chapter-item">
-              <a href="part2-chapter7.html" class="chapter-link">
-                <div class="chapter-number">Chapter 7</div>
-                <div class="chapter-title">High-Level Tactics</div>
-                <div class="chapter-description">Controlling game tempo, psychological warfare, team play and communication</div>
-              </a>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">6 Languages Available</div>
+                <div class="feature-description">
+                    Svenska, Engelska, Franska, Spanska, Tyska och Thailändska. 
+                    Välj ditt språk och få hela boken översatt.
+                </div>
             </div>
 
-            <div class="chapter-item">
-              <a href="part2-chapter8.html" class="chapter-link">
-                <div class="chapter-number">Chapter 8</div>
-                <div class="chapter-title">Train Smarter</div>
-                <div class="chapter-description">Effective solo training exercises, video analysis, physical and mental preparation</div>
-              </a>
+            <div class="feature-card">
+                <div class="feature-icon">📥</div>
+                <div class="feature-title">Downloadable Resources</div>
+                <div class="feature-description">
+                    Skriv ut fusklappen och ha med på banan. Använd träningsjournalen för att 
+                    dokumentera din utveckling över tid.
+                </div>
             </div>
-          </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <div class="feature-title">From the Pros</div>
+                <div class="feature-description">
+                    Lär dig av de bästa. Intervjuer, tekniker och strategier från världens 
+                    främsta pétanque-spelare.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section class="interactive-tools">
+        <div class="section-header">
+            <h2>Interactive Tools Inkluderade</h2>
+            <p>Practical tools that help you improve your game and track your progress</p>
         </div>
 
-        <!-- PART 3: PÉTANQUE AS A LIFESTYLE -->
-        <div class="film-frame">
-          <div class="film-content">
-            <div class="part-header">
-              <div class="part-title">Part 3: Pétanque as a Lifestyle</div>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-preview">📊</div>
+                <div class="tool-content">
+                    <div class="tool-title">Training Journal</div>
+                    <div class="tool-description">
+                        Dokumentera varje träningspass och följ din utveckling över tid. 
+                        Perfekt för att identifiera styrkor och svagheter.
+                    </div>
+                    <ul class="tool-features">
+                        <li>Save date, surface and weather conditions</li>
+                        <li>Document hit percentage and technique</li>
+                        <li>Write reflections and next steps</li>
+                        <li>Export and print</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="chapter-item">
-              <a href="part3-chapter9.html" class="chapter-link">
-                <div class="chapter-number">Chapter 9</div>
-                <div class="chapter-title">Competitive vs. Social Play</div>
-                <div class="chapter-description">Differences in mindset and strategy, how to find clubs and tournaments</div>
-              </a>
+            <div class="tool-card">
+                <div class="tool-preview">🏆</div>
+                <div class="tool-content">
+                    <div class="tool-title">Match Protocol (Interactive)</div>
+                    <div class="tool-description">
+                        Komplett matchprotokoll med automatisk statistik och analys. 
+                        Sparas automatiskt i webbläsaren.
+                    </div>
+                    <ul class="tool-features">
+                        <li>Save teams and points per round</li>
+                        <li>Automatic statistics (rounds won, average score)</li>
+                        <li>Identify clutch rounds and shutouts</li>
+                        <li>History of all your matches</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="chapter-item">
-              <a href="part3-chapter10.html" class="chapter-link">
-                <div class="chapter-number">Chapter 10</div>
-                <div class="chapter-title">Pétanque Around the World</div>
-                <div class="chapter-description">Cultural differences in the game, major tournaments and legendary players</div>
-              </a>
+            <div class="tool-card">
+                <div class="tool-preview">🎯</div>
+                <div class="tool-content">
+                    <div class="tool-title">Cheat Sheet (1 page)</div>
+                    <div class="tool-description">
+                        Allt du behöver på en sida. Perfekt att skriva ut och ha med på banan 
+                        för snabb referens.
+                    </div>
+                    <ul class="tool-features">
+                        <li>Match routine and mental preparation</li>
+                        <li>Etiquette and behavior rules</li>
+                        <li>Measuring and donnée tips</li>
+                        <li>Decision trees for different situations</li>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section class="apps-section">
+        <div class="section-header">
+            <h2>Exclusive Boule Apps</h2>
+            <p>As a book buyer you get a big discount on our premium pétanque apps</p>
         </div>
 
-        <!-- PART 4: IN-DEPTH AND DEVELOPMENT -->
-        <div class="film-frame">
-          <div class="film-content">
-            <div class="part-header">
-              <div class="part-title">Part 4: In-Depth and Development</div>
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-icon">🎯</div>
+                <div class="app-name">Training App</div>
+                <div class="app-description">
+                    Strukturerade träningsprogram, videoanalys och personlig utvecklingsplan. 
+                    Följ din progress med detaljerad statistik.
+                </div>
+                <div class="discount-badge">50% discount for book buyers</div>
+                <div class="app-pricing">
+                    <div class="app-price">99 kr</div>
+                    <div class="app-price-period">per month (regular 199 kr)</div>
+                </div>
+                <a href="#" class="btn-primary" style="font-size: 16px; padding: 12px 30px;">Read more</a>
             </div>
 
-            <div class="chapter-item">
-              <a href="part4-indepth.html" class="chapter-link">
-                <div class="chapter-number">Chapter 11</div>
-                <div class="chapter-title">Strategic Analysis and Tactics</div>
-                <div class="chapter-description">Advanced game strategy, terrain analysis and psychological play</div>
-              </a>
+            <div class="app-card">
+                <div class="app-icon">🏆</div>
+                <div class="app-name">Tournament App</div>
+                <div class="app-description">
+                    Hitta turneringar nära dig, anmäl dig direkt och följ resultat i realtid. 
+                    Perfekt för tävlingsspelare.
+                </div>
+                <div class="discount-badge">50% discount for book buyers</div>
+                <div class="app-pricing">
+                    <div class="app-price">149 kr</div>
+                    <div class="app-price-period">per month (regular 299 kr)</div>
+                </div>
+                <a href="#" class="btn-primary" style="font-size: 16px; padding: 12px 30px;">Read more</a>
             </div>
 
-            <div class="chapter-item">
-              <a href="part4-indepth.html#mental" class="chapter-link">
-                <div class="chapter-number">Chapter 12</div>
-                <div class="chapter-title">Mental Strength and Focus</div>
-                <div class="chapter-description">Handling pressure, tilt control and motivation</div>
-              </a>
+            <div class="app-card">
+                <div class="app-icon">📊</div>
+                <div class="app-name">Statistics App</div>
+                <div class="app-description">
+                    Avancerad matchanalys med AI-drivna insikter. Jämför dig med andra spelare 
+                    och identifiera förbättringsområden.
+                </div>
+                <div class="discount-badge">50% discount for book buyers</div>
+                <div class="app-pricing">
+                    <div class="app-price">199 kr</div>
+                    <div class="app-price-period">per month (regular 399 kr)</div>
+                </div>
+                <a href="#" class="btn-primary" style="font-size: 16px; padding: 12px 30px;">Read more</a>
             </div>
-
-            <div class="chapter-item">
-              <a href="part4-indepth.html#training" class="chapter-link">
-                <div class="chapter-number">Chapter 13</div>
-                <div class="chapter-title">Training Plan and Development</div>
-                <div class="chapter-description">Effective training, video analysis and step-by-step study plan</div>
-              </a>
-            </div>
-
-            <div class="chapter-item">
-              <a href="part4-indepth.html#physical" class="chapter-link">
-                <div class="chapter-number">Chapter 14</div>
-                <div class="chapter-title">Physical Training for Pétanque</div>
-                <div class="chapter-description">Strength, balance, mobility and preparation</div>
-              </a>
-            </div>
-          </div>
         </div>
 
-        <!-- APPENDICES AND RESOURCES -->
-        <div class="film-frame">
-          <div class="film-content">
-            <div class="part-header">
-              <div class="part-title">Appendices</div>
+        <div style="text-align: center; margin-top: 60px;">
+            <p style="font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 20px;">
+                💡 <strong>Package price:</strong> Buy all three apps for only 349 kr/month (regular 897 kr)
+            </p>
+            <p style="font-size: 16px; color: rgba(255,255,255,0.6);">
+                Discount code sent automatically after book purchase
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="section-header">
+            <h2>An Investment in Your Game</h2>
+            <p>Everything you need to take your pétanque game to the next level</p>
+        </div>
+
+        <div class="pricing-card">
+            <div class="pricing-header">
+                <div class="pricing-title">Pétanque: The Complete Guide</div>
+                <div class="pricing-amount">299 kr</div>
+                <div class="pricing-period">One-time payment - Lifetime access</div>
             </div>
 
-            <a href="equipment.html" class="special-section">
-              <div class="special-icon">📖</div>
-              <div class="special-title">Appendix A: Equipment Guide</div>
-              <div class="chapter-description">Detailed guide about boules - manufacturing, materials, hardness, models and maintenance</div>
+            <ul class="pricing-features">
+                <li>15 comprehensive chapters (200+ pages)</li>
+                <li>Monthly updates with new content</li>
+                <li>Interactive tools (training journal, match protocol)</li>
+                <li>Downloadable resources</li>
+                <li>Access in 6 different languages</li>
+                <li>50% discount on all premium apps</li>
+                <li>Annual activation required (free)</li>
+                <li>Lifetime access to all updates</li>
+            </ul>
+
+            <a href="https://mhg10.gumroad.com/l/qfwmvg" class="btn-primary" style="width: 100%; justify-content: center; font-size: 20px;">
+                Buy Now for 299 kr →
             </a>
 
-            <a href="rules.html" class="special-section">
-              <div class="special-icon">📋</div>
-              <div class="special-title">Appendix B: Complete Rulebook</div>
-              <div class="chapter-description">Complete rule guide from basic to advanced rules and special cases</div>
-            </a>
-
-            <div class="part-header" style="margin-top: 3rem;">
-              <div class="part-title">🎁 Downloadable Resources</div>
-            </div>
-
-            <a href="cheatsheet.html" class="special-section">
-              <div class="special-icon">📝</div>
-              <div class="special-title">Cheat Sheet (1 page)</div>
-              <div class="chapter-description">Everything you need on one page: Match routine, etiquette, measuring, donnée tips, throw trajectories and decision tree. Perfect to print and bring to the court!</div>
-            </a>
-
-            <a href="training-journal.html" class="special-section">
-              <div class="special-icon">📊</div>
-              <div class="special-title">Training Journal</div>
-              <div class="chapter-description">Document your progress: Date, terrain, goals, hit percentage, reflections and next steps. Print or fill in digitally.</div>
-            </a>
-
-            <a href="match-protocol.html" class="special-section">
-              <div class="special-icon">📓</div>
-              <div class="special-title">Match Protocol (Interactive)</div>
-              <div class="chapter-description">Complete match protocol with automatic analysis: Save teams, points per round, statistics (rounds won, average points, shutouts, clutch rounds). Automatically saved in browser.</div>
-            </a>
-          </div>
+            <p style="margin-top: 30px; font-size: 14px; color: rgba(255,255,255,0.6);">
+                ✓ 30-day money-back guarantee<br>
+                ✓ Secure payment via Gumroad<br>
+                ✓ Immediate access after purchase
+            </p>
         </div>
+    </section>
 
-        <!-- Duplicate for seamless loop -->
-        <div class="film-frame">
-          <div class="film-content">
-            <div class="part-header">
-              <div class="part-title">Part 1: Basics for Beginners</div>
-            </div>
-
-            <div class="chapter-item">
-              <a href="part1-chapter1.html" class="chapter-link">
-                <div class="chapter-number">Chapter 1</div>
-                <div class="chapter-title">What is Pétanque?</div>
-                <div class="chapter-description">The history of pétanque, basic rules and game concept, differences between pétanque, boule and boccia/bocce</div>
-              </a>
-            </div>
-
-            <div class="chapter-item">
-              <a href="part1-chapter2.html" class="chapter-link">
-                <div class="chapter-number">Chapter 2</div>
-                <div class="chapter-title">Equipment – Choose the Right Boules</div>
-                <div class="chapter-description">Weight, size and material, difference between competition and recreational boules, maintenance and cleaning</div>
-              </a>
-            </div>
-
-            <div class="chapter-item">
-              <a href="part1-chapter3.html" class="chapter-link">
-                <div class="chapter-number">Chapter 3</div>
-                <div class="chapter-title">Basic Techniques</div>
-                <div class="chapter-description">Proper grip and stance, how to point, how to shoot</div>
-              </a>
-            </div>
-
-            <div class="chapter-item">
-              <a href="part1-chapter4.html" class="chapter-link">
-                <div class="chapter-number">Chapter 4</div>
-                <div class="chapter-title">Strategy for Beginners</div>
-                <div class="chapter-description">Simple tactics to win points, how to read the terrain, common mistakes and how to avoid them</div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    // Language switcher functionality
-    document.getElementById('languageSelector').addEventListener('change', function() {
-      const lang = this.value;
-      if (lang === 'se') {
-        window.location.href = '/index.html';
-      } else if (lang === 'en') {
-        window.location.href = '/en/index.html';
-      } else if (lang === 'fr') {
-        window.location.href = '/fr/index.html';
-      } else if (lang === 'es') {
-        window.location.href = '/es/index.html';
-      } else if (lang === 'de') {
-        window.location.href = '/de/index.html';
-      } else if (lang === 'th') {
-        window.location.href = '/th/index.html';
-      }
-    });
-  </script>
-
+    <script>
+        // Language switcher
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const lang = this.value;
+            const langMap = {
+                'se': '/en/index.html',
+                'en': '/en/index.html',
+                'fr': '/fr/index.html',
+                'es': '/es/index.html',
+                'de': '/de/index.html',
+                'th': '/th/index.html'
+            };
+            window.location.href = langMap[lang];
+        });
+    </script>
 </body>
 </html>

@@ -115,16 +115,25 @@
             margin-bottom: 20px;
         }
     </style>
+    <script src="license-manager.js"></script>
     <script>
-        // License protection - Check immediately before page loads
+        // License protection with annual reactivation check
         (function() {
             'use strict';
             
-            const licenseKey = localStorage.getItem('petanque_license_key');
+            const status = LicenseManager.checkLicense();
             
-            if (!licenseKey) {
-                sessionStorage.setItem('petanque_return_url', window.location.pathname + window.location.search);
-                window.location.href = '/upload.html';
+            if (!status.valid) {
+                if (status.reason === 'expired') {
+                    window.location.href = '/licens-utgangen.html';
+                } else {
+                    sessionStorage.setItem('petanque_return_url', window.location.pathname + window.location.search);
+                    window.location.href = '/upload.html';
+                }
+            } else if (status.warning) {
+                window.addEventListener('load', () => {
+                    LicenseManager.showWarningBanner(status.daysUntilExpiry);
+                });
             }
         })();
     </script>

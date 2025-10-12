@@ -362,8 +362,10 @@
             
             if (isValid) {
                 // Store license key
+                const now = new Date().toISOString();
                 localStorage.setItem('petanque_license_key', license);
-                localStorage.setItem('petanque_activation_date', new Date().toISOString());
+                localStorage.setItem('petanque_activation_date', now);
+                localStorage.setItem('petanque_last_activation', now); // For annual reactivation system
                 
                 // Show success
                 showSuccess();

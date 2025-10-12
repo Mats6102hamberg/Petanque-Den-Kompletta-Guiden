@@ -199,35 +199,44 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-    </style>    <script>
-        // License protection - Check immediately before page loads
+    </style>    <script src="license-manager.js"></script>
+    <script>
+        // License protection with annual reactivation check
         (function() {
             'use strict';
             
-            const licenseKey = localStorage.getItem('petanque_license_key');
+            const status = LicenseManager.checkLicense();
             
-            if (!licenseKey) {
-                // Store current URL for return after activation
-                sessionStorage.setItem('petanque_return_url', window.location.pathname + window.location.search);
-                
-                // Determine correct upload.html path based on current location
-                const currentPath = window.location.pathname;
-                let uploadPath = '/upload.html';
-                
-                if (currentPath.includes('/en/')) {
-                    uploadPath = '/en/upload.html';
-                } else if (currentPath.includes('/de/')) {
-                    uploadPath = '/de/upload.html';
-                } else if (currentPath.includes('/fr/')) {
-                    uploadPath = '/fr/upload.html';
-                } else if (currentPath.includes('/es/')) {
-                    uploadPath = '/es/upload.html';
-                } else if (currentPath.includes('/th/')) {
-                    uploadPath = '/th/upload.html';
+            if (!status.valid) {
+                if (status.reason === 'expired') {
+                    // License has expired - redirect to expired page
+                    window.location.href = '/licens-utgangen.html';
+                } else {
+                    // No license - redirect to upload
+                    sessionStorage.setItem('petanque_return_url', window.location.pathname + window.location.search);
+                    
+                    const currentPath = window.location.pathname;
+                    let uploadPath = '/upload.html';
+                    
+                    if (currentPath.includes('/en/')) {
+                        uploadPath = '/en/upload.html';
+                    } else if (currentPath.includes('/de/')) {
+                        uploadPath = '/de/upload.html';
+                    } else if (currentPath.includes('/fr/')) {
+                        uploadPath = '/fr/upload.html';
+                    } else if (currentPath.includes('/es/')) {
+                        uploadPath = '/es/upload.html';
+                    } else if (currentPath.includes('/th/')) {
+                        uploadPath = '/th/upload.html';
+                    }
+                    
+                    window.location.href = uploadPath;
                 }
-                
-                // Redirect immediately
-                window.location.href = uploadPath;
+            } else if (status.warning) {
+                // Show warning banner
+                window.addEventListener('load', () => {
+                    LicenseManager.showWarningBanner(status.daysUntilExpiry);
+                });
             }
         })();
     </script>

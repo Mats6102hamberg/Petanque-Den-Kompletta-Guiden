@@ -15,6 +15,37 @@ body {
     color: #333;
 }
 
+/* Fixed Table of Contents Button */
+.toc-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toc-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+    background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+}
+
+.toc-button::before {
+    content: "📚";
+    font-size: 18px;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -526,6 +557,19 @@ body.dark-mode em {
     
     .language-switcher a {
         font-size: 24px;
+    }
+    
+    /* TOC button - mobil */
+    .toc-button {
+        top: 10px;
+        right: 10px;
+        padding: 10px 16px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    
+    .toc-button::before {
+        font-size: 16px;
     }
 }
 

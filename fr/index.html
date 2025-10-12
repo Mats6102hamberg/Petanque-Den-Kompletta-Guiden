@@ -719,17 +719,18 @@
     document.getElementById('languageSelector').addEventListener('change', function() {
       const lang = this.value;
       if (lang === 'se') {
-        window.location.href = '../index.html';
+        window.location.href = '/index.html';
       } else if (lang === 'en') {
-        window.location.href = '../en/index.html';
+        window.location.href = '/en/index.html';
+      } else if (lang === 'fr') {
+        window.location.href = '/fr/index.html';
       } else if (lang === 'es') {
-        window.location.href = '../es/index.html';
+        window.location.href = '/es/index.html';
       } else if (lang === 'de') {
-        window.location.href = '../de/index.html';
+        window.location.href = '/de/index.html';
       } else if (lang === 'th') {
-        window.location.href = '../th/index.html';
+        window.location.href = '/th/index.html';
       }
-      // 'fr' stays on current page
     });
   </script>
 

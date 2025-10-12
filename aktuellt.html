@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktuellt och Intervjuer - Pétanque Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .current-month-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .article-card {
+            background: #f9f9f9;
+            border-left: 4px solid #D2691E;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .article-category {
+            background: #8B4513;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #8B4513;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #D2691E;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #8B4513;
+            transform: translateX(5px);
+        }
+
+        .archive-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .archive-link:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        // License protection - Check immediately before page loads
+        (function() {
+            'use strict';
+            
+            const licenseKey = localStorage.getItem('petanque_license_key');
+            
+            if (!licenseKey) {
+                sessionStorage.setItem('petanque_return_url', window.location.pathname + window.location.search);
+                window.location.href = '/upload.html';
+            }
+        })();
+    </script>
+</head>
+<body>
+    <a href="innehall.html" class="toc-button">Innehåll</a>
+
+    <div class="container">
+        <div class="header">
+            <div class="chapter-number">🎙️ Aktuellt och Intervjuer</div>
+            <h1 class="chapter-title">Månadens Nyheter</h1>
+            <p class="chapter-subtitle">Senaste nytt från petanque-världen</p>
+        </div>
+
+        <div class="content">
+            <div class="current-month-badge">
+                📅 Oktober 2025
+            </div>
+
+            <!-- EXEMPEL ARTIKEL 1: Intervju -->
+            <div class="article-card">
+                <div class="article-header">
+                    <span class="article-date">12 oktober 2025</span>
+                    <span class="article-category">🎤 Intervju</span>
+                </div>
+                <h2 class="article-title">Intervju med Dylan Rocher: "Mentala spelet är 80% av framgången"</h2>
+                <div class="article-excerpt">
+                    <p>Vi fick möjlighet att sitta ner med den franske stjärnan Dylan Rocher efter hans senaste VM-guld. I denna djupgående intervju delar han sina tankar om mental träning, hur han hanterar press i avgörande ögonblick, och varför han tror att framtidens petanque kommer att fokusera mer på psykologi än teknik...</p>
+                </div>
+                <a href="#" class="read-more">Läs hela intervjun →</a>
+            </div>
+
+            <!-- EXEMPEL ARTIKEL 2: Regeländring -->
+            <div class="article-card">
+                <div class="article-header">
+                    <span class="article-date">8 oktober 2025</span>
+                    <span class="article-category">📋 Nya Regler</span>
+                </div>
+                <h2 class="article-title">FIPJP:s nya regler 2025: Vad du behöver veta</h2>
+                <div class="article-excerpt">
+                    <p>FIPJP har just publicerat uppdaterade regler som träder i kraft 1 januari 2026. De viktigaste förändringarna inkluderar nya regler för mätning, tidsregler för tävlingsspel, och uppdaterade specifikationer för klot. Vi går igenom varje ändring i detalj och förklarar bakgrunden till varför dessa förändringar gjordes...</p>
+                </div>
+                <a href="#" class="read-more">Läs mer om regeländringarna →</a>
+            </div>
+
+            <!-- EXEMPEL ARTIKEL 3: Turnering -->
+            <div class="article-card">
+                <div class="article-header">
+                    <span class="article-date">3 oktober 2025</span>
+                    <span class="article-category">🏆 Turnering</span>
+                </div>
+                <h2 class="article-title">Världsmästerskapen i Thailand: Analys och höjdpunkter</h2>
+                <div class="article-excerpt">
+                    <p>VM i Thailand bjöd på dramatik, överraskningar och fantastisk petanque. Vi analyserar de mest minnesvärda matcherna, taktiska innovationer som användes, och vad detta betyder för framtiden av internationell petanque. Plus: exklusiva bilder från bakom kulisserna...</p>
+                </div>
+                <a href="#" class="read-more">Läs hela analysen →</a>
+            </div>
+
+            <!-- INSTRUKTIONER FÖR UPPDATERING -->
+            <div class="highlight-box" style="margin-top: 50px;">
+                <h3>📝 Instruktioner för att uppdatera denna sida:</h3>
+                <ol>
+                    <li><strong>Ändra månadsbadgen</strong> längst upp till aktuell månad</li>
+                    <li><strong>Lägg till nya artiklar</strong> genom att kopiera en artikel-card och ändra innehållet</li>
+                    <li><strong>Kategorier att använda:</strong>
+                        <ul>
+                            <li>🎤 Intervju - för intervjuer med spelare</li>
+                            <li>📋 Nya Regler - för regeländringar</li>
+                            <li>🏆 Turnering - för turneringsrapporter</li>
+                            <li>📰 Nyheter - för allmänna nyheter</li>
+                            <li>🎓 Teknik - för tekniska artiklar</li>
+                        </ul>
+                    </li>
+                    <li><strong>I slutet av månaden:</strong> Flytta allt innehåll till arkiv.html och börja med en tom sida för nästa månad</li>
+                </ol>
+            </div>
+
+            <div class="navigation">
+                <a href="arkiv.html" class="archive-link">📚 Se Historiskt Arkiv</a>
+                <a href="innehall.html" class="nav-btn">← Tillbaka till Innehåll</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

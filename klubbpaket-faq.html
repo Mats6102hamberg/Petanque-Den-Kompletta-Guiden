@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klubbpaket FAQ - Vanliga Frågor | Pétanque Guiden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #28a745;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #20c997;
+            transform: translateX(-5px);
+        }
+
+        .faq-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(40,167,69,0.3);
+        }
+
+        .faq-item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(40,167,69,0.5);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .faq-question::before {
+            content: "❓";
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.8);
+            padding-left: 43px;
+        }
+
+        .faq-answer ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(40,167,69,0.2) 0%, rgba(32,201,151,0.2) 100%);
+            border: 2px solid #28a745;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .highlight-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(40,167,69,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(40,167,69,0.5);
+        }
+
+        .contact-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-box h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        .contact-item a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+
+            .faq-question {
+                font-size: 18px;
+            }
+
+            .faq-answer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html#klubbpaket" class="back-link">← Tillbaka till Klubbpaket</a>
+
+        <div class="header">
+            <h1>🏛️ Klubbpaket FAQ</h1>
+            <p>Vanliga frågor och svar om vårt klubbpaket</p>
+        </div>
+
+        <!-- Allmänna Frågor -->
+        <div class="faq-section">
+            <h2 class="section-title">📋 Allmänna Frågor</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Vad är Klubbpaketet?</div>
+                <div class="faq-answer">
+                    Klubbpaketet är ett komplett paket för petanque-klubbar som inkluderar:
+                    <ul>
+                        <li>10 böcker till styrelsen (värde: 2,990 kr)</li>
+                        <li>Tränings-Appen för tränaren (20 kr/mån)</li>
+                        <li>BoulePRO Turneringar (20 kr/mån)</li>
+                        <li>Faktura Snap för kassören (20 kr/mån)</li>
+                    </ul>
+                    Total kostnad: 1,999 kr engångsbetalning + 60 kr/mån för alla appar.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">För vilka klubbar passar paketet?</div>
+                <div class="faq-answer">
+                    Paketet är perfekt för klubbar med 50-500 medlemmar som vill:
+                    <ul>
+                        <li>Ge styrelsen professionella verktyg och kunskap</li>
+                        <li>Effektivisera administration och medlemshantering</li>
+                        <li>Förbättra träning med strukturerade program</li>
+                        <li>Organisera turneringar smidigt och professionellt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Hur mycket sparar vi egentligen?</div>
+                <div class="faq-answer">
+                    <strong>Ordinarie pris första året: 8,970 kr</strong><br>
+                    (10 böcker à 299 kr + 3 appar à ordinarie pris)<br><br>
+                    <strong>Klubbpris första året: 2,719 kr</strong><br>
+                    (1,999 kr + 60 kr/mån × 12 månader)<br><br>
+                    <strong>Total besparing: 6,251 kr (70% rabatt!)</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Böcker -->
+        <div class="faq-section">
+            <h2 class="section-title">📚 Frågor om Böckerna</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Hur fungerar de 10 böckerna?</div>
+                <div class="faq-answer">
+                    Varje styrelsemedlem får en egen unik licensnyckel via email. Med denna nyckel får de:
+                    <ul>
+                        <li>Livstidsåtkomst till hela boken (15 kapitel + bilagor)</li>
+                        <li>Alla framtida uppdateringar gratis</li>
+                        <li>Tillgång till interaktiva verktyg (träningsjournal, matchprotokoll)</li>
+                        <li>Månatliga uppdateringar med nytt innehåll</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kan vi välja vilka som får böckerna?</div>
+                <div class="faq-answer">
+                    Ja, absolut! Ni bestämmer själva vilka 10 personer i styrelsen som ska få böckerna. 
+                    Vanligtvis ger klubbar böcker till: Ordförande, Kassör, Sekreterare, Tränare, 
+                    Turneringsansvarig och övriga styrelsemedlemmar.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Vad händer om någon i styrelsen slutar?</div>
+                <div class="faq-answer">
+                    Licensnyckeln är personlig och kan inte överföras. Men ni kan kontakta oss så hjälper 
+                    vi er att inaktivera den gamla licensen och skapa en ny för den nya styrelsemedlemmen. 
+                    Detta görs utan extra kostnad en gång per år.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kan medlemmarna också få boken?</div>
+                <div class="faq-answer">
+                    Ja! Alla medlemmar i klubben får automatiskt 50% rabatt på boken. 
+                    De betalar 149 kr istället för 299 kr. Ni får en speciell rabattkod att dela med medlemmarna.
+                </div>
+            </div>
+        </div>
+
+        <!-- Appar -->
+        <div class="faq-section">
+            <h2 class="section-title">📱 Frågor om Apparna</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Måste vi köpa alla 3 apparna?</div>
+                <div class="faq-answer">
+                    Nej! Ni kan välja vilka appar ni vill ha. Priset är 20 kr/månad per app. 
+                    Men vi rekommenderar starkt att ta alla tre eftersom de kompletterar varandra 
+                    och tillsammans ger maximal nytta för klubben.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Vad gör Tränings-Appen?</div>
+                <div class="faq-answer">
+                    Tränings-Appen hjälper tränaren att:
+                    <ul>
+                        <li>Skapa strukturerade träningsprogram för olika nivåer</li>
+                        <li>Följa varje spelares utveckling med statistik</li>
+                        <li>Planera säsongen med träningskalender</li>
+                        <li>Analysera video av spelares teknik</li>
+                        <li>Dela övningar och tips med spelarna</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Vad gör BoulePRO Turneringar?</div>
+                <div class="faq-answer">
+                    BoulePRO hjälper er att:
+                    <ul>
+                        <li>Skapa och hantera turneringar (tête-à-tête, doublette, triplette)</li>
+                        <li>Ta emot anmälningar online</li>
+                        <li>Automatisk lottning och gruppindelning</li>
+                        <li>Live-resultat som deltagare kan följa</li>
+                        <li>Automatisk statistik och rankinglistor</li>
+                        <li>Exportera resultat för hemsidan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Vad gör Faktura Snap?</div>
+                <div class="faq-answer">
+                    Faktura Snap hjälper kassören med:
+                    <ul>
+                        <li>Automatisk fakturering av medlemsavgifter</li>
+                        <li>Medlemsregister med all information</li>
+                        <li>Påminnelser till de som inte betalat</li>
+                        <li>Bokföringsunderlag för revisorn</li>
+                        <li>Statistik över medlemsutveckling</li>
+                        <li>Integration med Swish och bankgiro</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kan flera personer använda samma app?</div>
+                <div class="faq-answer">
+                    Ja! Varje app kan användas av flera personer i klubben. Till exempel kan både 
+                    huvudtränare och assisterande tränare använda Tränings-Appen. Ni får inloggningsuppgifter 
+                    som ni kan dela inom klubben.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Fungerar apparna på mobil och dator?</div>
+                <div class="faq-answer">
+                    Ja! Alla appar är webbaserade och fungerar på:
+                    <ul>
+                        <li>iPhone och Android-mobiler</li>
+                        <li>iPad och surfplattor</li>
+                        <li>Windows och Mac-datorer</li>
+                        <li>Alla moderna webbläsare</li>
+                    </ul>
+                    Ingen nedladdning krävs - allt fungerar direkt i webbläsaren.
+                </div>
+            </div>
+        </div>
+
+        <!-- Betalning & Avtal -->
+        <div class="faq-section">
+            <h2 class="section-title">💳 Betalning & Avtal</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Hur betalar vi?</div>
+                <div class="faq-answer">
+                    Ni betalar via Gumroad med:
+                    <ul>
+                        <li>Kreditkort (Visa, Mastercard, Amex)</li>
+                        <li>PayPal</li>
+                        <li>Apple Pay / Google Pay</li>
+                    </ul>
+                    Betalningen är säker och krypterad. Ni får kvitto direkt via email.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kan vi få faktura istället?</div>
+                <div class="faq-answer">
+                    Ja! För klubbar kan vi ordna fakturering. Kontakta oss på 
+                    <a href="mailto:mats@petanqueguiden.se" style="color: #28a745;">mats@petanqueguiden.se</a> 
+                    så skickar vi en faktura med 30 dagars betalningstid.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Hur fungerar den månatliga betalningen för apparna?</div>
+                <div class="faq-answer">
+                    Apparna debiteras automatiskt varje månad (20 kr per app). Ni kan när som helst:
+                    <ul>
+                        <li>Avsluta en eller flera appar</li>
+                        <li>Pausa prenumerationen</li>
+                        <li>Ändra betalningsmetod</li>
+                    </ul>
+                    Det finns ingen bindningstid eller uppsägningstid.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Finns det någon bindningstid?</div>
+                <div class="faq-answer">
+                    <strong>Nej!</strong> Det finns ingen bindningstid. Ni kan avsluta apparna när som helst 
+                    utan extra kostnad. Böckerna behåller ni för alltid oavsett om ni avslutar apparna.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Vad händer om vi vill avsluta?</div>
+                <div class="faq-answer">
+                    <ul>
+                        <li><strong>Böckerna:</strong> Behåller ni för alltid med alla uppdateringar</li>
+                        <li><strong>Apparna:</strong> Kan avslutas när som helst. Data exporteras innan avslut</li>
+                        <li><strong>Ingen återbetalning:</strong> Engångsbetalningen för böckerna återbetalas inte</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Finns det pengarna-tillbaka-garanti?</div>
+                <div class="faq-answer">
+                    Ja! Vi har 30 dagars pengarna-tillbaka-garanti. Om ni inte är nöjda inom 30 dagar 
+                    får ni pengarna tillbaka, inga frågor ställda. Kontakta bara vår support.
+                </div>
+            </div>
+        </div>
+
+        <!-- Support & Onboarding -->
+        <div class="faq-section">
+            <h2 class="section-title">🎓 Support & Onboarding</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Får vi hjälp att komma igång?</div>
+                <div class="faq-answer">
+                    Ja! Alla klubbar som köper paketet får:
+                    <ul>
+                        <li><strong>Gratis onboarding-session</strong> (60 min via Zoom)</li>
+                        <li><strong>Installationshjälp</strong> för alla appar</li>
+                        <li><strong>Utbildning</strong> för styrelsen i hur allt fungerar</li>
+                        <li><strong>Skriftliga guider</strong> och videotutorials</li>
+                    </ul>
+                    Vi ser till att ni kommer igång smidigt!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Vilken support får vi?</div>
+                <div class="faq-answer">
+                    Som klubbkund får ni prioriterad support:
+                    <ul>
+                        <li><strong>Email-support:</strong> Svar inom 24 timmar</li>
+                        <li><strong>Telefonsupport:</strong> Ring oss direkt vid akuta problem</li>
+                        <li><strong>Direktkontakt:</strong> Prata direkt med utvecklarna</li>
+                        <li><strong>Hjälpcenter:</strong> Guider, FAQ och videotutorials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kan ni komma och presentera för vår styrelse?</div>
+                <div class="faq-answer">
+                    Ja! Vi kan göra en presentation för er styrelse via Zoom (gratis) eller 
+                    fysiskt besök om ni är i Stockholmsområdet. Kontakta oss för att boka.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tekniska Frågor -->
+        <div class="faq-section">
+            <h2 class="section-title">💻 Tekniska Frågor</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Behöver vi installera något?</div>
+                <div class="faq-answer">
+                    Nej! Allt fungerar direkt i webbläsaren. Ingen installation eller nedladdning krävs. 
+                    Ni behöver bara en internetanslutning och en modern webbläsare.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Var sparas vår data?</div>
+                <div class="faq-answer">
+                    All data sparas säkert i molnet (EU-servrar) med:
+                    <ul>
+                        <li>Kryptering av all data</li>
+                        <li>Dagliga säkerhetskopior</li>
+                        <li>GDPR-compliance</li>
+                        <li>99.9% uptime-garanti</li>
+                    </ul>
+                    Ni äger er data och kan när som helst exportera den.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Kan vi integrera med vår hemsida?</div>
+                <div class="faq-answer">
+                    Ja! BoulePRO Turneringar kan integreras med er hemsida så att:
+                    <ul>
+                        <li>Medlemmar kan anmäla sig direkt från hemsidan</li>
+                        <li>Resultat visas live på hemsidan</li>
+                        <li>Rankinglistor uppdateras automatiskt</li>
+                    </ul>
+                    Vi hjälper er med integrationen.
+                </div>
+            </div>
+        </div>
+
+        <!-- Highlight Box -->
+        <div class="highlight-box">
+            <h3>🎁 Specialerbjudande: Första 50 Klubbarna</h3>
+            <p>De första 50 klubbarna som köper får 500 kr extra rabatt + första månaden gratis på alla appar!</p>
+            <p style="font-size: 16px; margin-bottom: 25px;">Totalt värde: 3,220 kr i extra rabatt</p>
+            <a href="index.html#klubbpaket" class="cta-button">Köp Klubbpaket Nu →</a>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="contact-box">
+            <h3>Har du fler frågor?</h3>
+            <p>Vi hjälper gärna till! Kontakta oss så svarar vi inom 24 timmar.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:mats@petanqueguiden.se">mats@petanqueguiden.se</a>
+                </div>
+                <div class="contact-item">
+                    📞 <a href="tel:+46701234567">[Ditt telefonnummer]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

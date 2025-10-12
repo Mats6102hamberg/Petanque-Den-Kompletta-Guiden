@@ -190,13 +190,23 @@
         }
     </style>
     <script>
-        // License protection
+        // Premium Archive License Protection
         (function() {
             'use strict';
-            const licenseKey = localStorage.getItem('petanque_license_key');
-            if (!licenseKey) {
+            
+            // Check basic book license
+            const bookLicense = localStorage.getItem('petanque_license_key');
+            if (!bookLicense) {
                 sessionStorage.setItem('petanque_return_url', window.location.pathname + window.location.search);
                 window.location.href = '/upload.html';
+                return;
+            }
+            
+            // Check premium archive access
+            const archiveLicense = localStorage.getItem('petanque_archive_license');
+            if (!archiveLicense) {
+                // Redirect to archive paywall
+                window.location.href = '/arkiv-prenumeration.html';
             }
         })();
     </script>

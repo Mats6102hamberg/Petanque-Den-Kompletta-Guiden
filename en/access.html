@@ -1,164 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Pétanque: The Complete Guide</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        
-        .welcome-banner {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        .welcome-banner h1 {
-            font-size: 3rem;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-        
-        .welcome-banner p {
-            font-size: 1.3rem;
-            color: #666;
-            line-height: 1.8;
-        }
-        
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .content-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-        }
-        
-        .content-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .content-card h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        .content-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .content-card li {
-            margin-bottom: 15px;
-        }
-        
-        .content-card a {
-            color: #333;
-            text-decoration: none;
-            font-size: 1.1rem;
-            display: block;
-            padding: 10px;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-        
-        .content-card a:hover {
-            background: #f0f0f0;
-            color: #667eea;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pétanque – The Complete Guide | Mats Hamberg</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: #000;
+      overflow: hidden;
+    }
+    
+    .font-display {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    /* Full screen book cover */
+    .book-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background: white;
+    }
+
+    .book-frame {
+      position: relative;
+      width: 85%;
+      max-width: 800px;
+      height: 92%;
+      background: linear-gradient(135deg, #c87137 0%, #d88a4f 50%, #c87137 100%);
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .book-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .book-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 6rem;
+      color: white;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: white;
+      letter-spacing: 0.3em;
+      font-weight: 300;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-divider {
+      width: 200px;
+      height: 1px;
+      background: white;
+      margin: 2rem auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-description {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: white;
+      line-height: 1.7;
+      font-weight: 300;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-author-section {
+      margin-top: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-author-label {
+      font-size: 0.9rem;
+      letter-spacing: 0.3em;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-author-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: white;
+      font-weight: 700;
+    }
+
+    .book-cta {
+      border: 2px solid white;
+      padding: 1.5rem 3rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: transparent;
+      margin-top: 2rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .book-cta:hover {
+      background: white;
+      color: #c87137;
+      transform: scale(1.05);
+    }
+
+    .welcome-badge {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      color: white;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      z-index: 10;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(200, 113, 55, 0.3);
+      color: #f4a460;
+      padding: 12px 20px;
+      border-radius: 25px;
+      z-index: 1000;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .book-frame {
+        width: 95%;
+        padding: 2rem;
+      }
+
+      .book-title {
+        font-size: 3rem;
+      }
+
+      .book-subtitle {
+        font-size: 1.5rem;
+      }
+
+      .book-description {
+        font-size: 1.2rem;
+      }
+
+      .book-author-name {
+        font-size: 2rem;
+      }
+
+      .book-cta {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    
-    <div class="welcome-banner">
-        <h1>🎉 Welcome to Pétanque: The Complete Guide!</h1>
-        <p>Thank you for your purchase! You now have lifetime access to all chapters, resources, and future updates.</p>
-        <p style="margin-top: 20px;"><strong>📱 Bookmark this page</strong> to access the book anytime on any device.</p>
+  
+  <!-- Welcome Badge -->
+  <div class="welcome-badge">
+    ✓ Activated
+  </div>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <select id="languageSelector" style="background: transparent; border: none; color: #f4a460; cursor: pointer; outline: none;">
+      <option value="se">🇸🇪 Svenska</option>
+      <option value="en" selected>🇬🇧 English</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="th">🇹🇭 ไทย</option>
+    </select>
+  </div>
+
+  <!-- Book Cover -->
+  <div class="book-container">
+    <div class="book-frame">
+      <div>
+        <h1 class="book-title">PÉTANQUE</h1>
+        <p class="book-subtitle">The Complete Guide</p>
+        
+        <div class="book-divider"></div>
+        
+        <p class="book-description">
+          From basic techniques to advanced strategies - everything you need to master the game
+        </p>
+      </div>
+
+      <div class="book-author-section">
+        <p class="book-author-label">Author</p>
+        <p class="book-author-name">Mats Hamberg</p>
+        
+        <a href="contents.html" class="book-cta">Open Book →</a>
+      </div>
     </div>
-    
-    <div class="content-grid">
-        
-        <!-- Part 1 -->
-        <div class="content-card">
-            <h2>📚 Part 1: Basics for Beginners</h2>
-            <ul>
-                <li><a href="part1-chapter1.html">Chapter 1: What is Pétanque?</a></li>
-                <li><a href="part1-chapter2.html">Chapter 2: Equipment Guide</a></li>
-                <li><a href="part1-chapter3.html">Chapter 3: Basic Techniques</a></li>
-                <li><a href="part1-chapter4.html">Chapter 4: Beginner Strategy</a></li>
-            </ul>
-        </div>
-        
-        <!-- Part 2 -->
-        <div class="content-card">
-            <h2>🎯 Part 2: Advanced Techniques</h2>
-            <ul>
-                <li><a href="part2-chapter5.html">Chapter 5: Improve Your Pointing</a></li>
-                <li><a href="part2-chapter6.html">Chapter 6: Championship Shooting</a></li>
-                <li><a href="part2-chapter7.html">Chapter 7: High-Level Tactics</a></li>
-                <li><a href="part2-chapter8.html">Chapter 8: Train Smarter</a></li>
-            </ul>
-        </div>
-        
-        <!-- Part 3 -->
-        <div class="content-card">
-            <h2>🌍 Part 3: Pétanque as a Lifestyle</h2>
-            <ul>
-                <li><a href="part3-chapter9.html">Chapter 9: Competition vs. Social Play</a></li>
-                <li><a href="part3-chapter10.html">Chapter 10: Pétanque Around the World</a></li>
-            </ul>
-        </div>
-        
-        <!-- Part 4 -->
-        <div class="content-card">
-            <h2>🧠 Part 4: In-Depth Development</h2>
-            <ul>
-                <li><a href="part4-indepth.html">Strategic Analysis</a></li>
-                <li><a href="part4-indepth.html#mental">Mental Strength</a></li>
-                <li><a href="part4-indepth.html#training">Training Plan</a></li>
-                <li><a href="part4-indepth.html#physical">Physical Training</a></li>
-            </ul>
-        </div>
-        
-        <!-- Resources -->
-        <div class="content-card">
-            <h2>🎁 Bonus Resources</h2>
-            <ul>
-                <li><a href="cheat-sheet.html">📝 Cheat Sheet</a></li>
-                <li><a href="training-journal.html">📊 Training Journal</a></li>
-                <li><a href="match-protocol.html">📓 Match Protocol</a></li>
-                <li><a href="equipment-guide.html">📖 Equipment Guide</a></li>
-                <li><a href="rules.html">📋 Complete Rules</a></li>
-                <li><a href="glossary.html">📚 Glossary</a></li>
-            </ul>
-        </div>
-        
-        <!-- Quick Links -->
-        <div class="content-card">
-            <h2>🔗 Quick Links</h2>
-            <ul>
-                <li><a href="contents.html">📑 Table of Contents</a></li>
-                <li><a href="index.html">🏠 Home Page</a></li>
-            </ul>
-        </div>
-        
-    </div>
+  </div>
     
     <script>
         // Check if user has access via license key
@@ -190,7 +273,7 @@
                     localStorage.setItem('petanque_license_key', urlLicense);
                     localStorage.setItem('petanque_activation_date', new Date().toISOString());
                     
-                    // Reload page to show content
+                    // Reload access page to show book cover
                     window.location.href = 'access.html';
                 } else {
                     // Invalid license - redirect to manual activation
@@ -204,6 +287,7 @@
             if (!licenseKey) {
                 window.location.href = 'upload.html';
             }
+            // If license key exists, show the book cover (stay on this page)
         });
         
         async function verifyLicense(license) {
@@ -217,6 +301,24 @@
                 return false;
             }
         }
+
+        // Language switcher functionality
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const lang = this.value;
+            if (lang === 'se') {
+                window.location.href = '/access.html';
+            } else if (lang === 'en') {
+                window.location.href = '/en/access.html';
+            } else if (lang === 'fr') {
+                window.location.href = '/fr/access.html';
+            } else if (lang === 'es') {
+                window.location.href = '/es/access.html';
+            } else if (lang === 'de') {
+                window.location.href = '/de/access.html';
+            } else if (lang === 'th') {
+                window.location.href = '/th/access.html';
+            }
+        });
     </script>
     
 </body>

@@ -4,38 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tillverkning, Storlek, Hårdhet och Modellval - คู่มือเปตองค์</title>
-    <link rel="stylesheet" href="styles.css">    <script>
-        // License protection - Check immediately before page loads
-        (function() {
-            'use strict';
-            
-            const licenseKey = localStorage.getItem('petanque_license_key');
-            
-            if (!licenseKey) {
-                // Store current URL for return after activation
-                sessionStorage.setItem('petanque_return_url', window.location.pathname + window.location.search);
-                
-                // Determine correct upload.html path based on current location
-                const currentPath = window.location.pathname;
-                let uploadPath = '/upload.html';
-                
-                if (currentPath.includes('/en/')) {
-                    uploadPath = '/en/upload.html';
-                } else if (currentPath.includes('/de/')) {
-                    uploadPath = '/de/upload.html';
-                } else if (currentPath.includes('/fr/')) {
-                    uploadPath = '/fr/upload.html';
-                } else if (currentPath.includes('/es/')) {
-                    uploadPath = '/es/upload.html';
-                } else if (currentPath.includes('/th/')) {
-                    uploadPath = '/th/upload.html';
-                }
-                
-                // Redirect immediately
-                window.location.href = uploadPath;
-            }
-        })();
-    </script>
+    <link rel="stylesheet" href="styles.css">    
 </head>
 <body>
     <a href="../th/saraban.html" class="toc-button">สารบัญ</a>

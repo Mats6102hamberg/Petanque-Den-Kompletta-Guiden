@@ -227,13 +227,6 @@
         // Check if user has basic book license
         (function() {
             'use strict';
-            const bookLicense = localStorage.getItem('petanque_license_key');
-            if (!bookLicense) {
-                alert('Du måste först köpa boken för att få tillgång till premium-arkivet.');
-                window.location.href = '/index.html';
-            }
-        })();
-    </script>
 </head>
 <body>
     <div class="premium-container">

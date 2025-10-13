@@ -128,23 +128,55 @@ class PetanqueChatbot {
         }
     }
 
-    sendMessage() {
+    async sendMessage() {
         const input = document.getElementById('chatbot-input');
         const message = input.value.trim();
         
         if (!message) return;
 
         this.addMessage(message, 'user');
+        this.conversationHistory.push({ role: 'user', content: message });
         input.value = '';
 
-        // Simulate typing
+        // Show typing indicator
         this.showTypingIndicator();
         
-        setTimeout(() => {
+        try {
+            // Call AI backend
+            const response = await fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: message,
+                    conversationHistory: this.conversationHistory
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to get AI response');
+            }
+
+            const data = await response.json();
+            
             this.hideTypingIndicator();
-            const response = this.getResponse(message);
-            this.addMessage(response.text, 'bot', response.quickReplies);
-        }, 1000);
+            this.addMessage(data.response, 'bot');
+            this.conversationHistory.push({ role: 'assistant', content: data.response });
+
+            // Keep conversation history manageable
+            if (this.conversationHistory.length > 12) {
+                this.conversationHistory = this.conversationHistory.slice(-12);
+            }
+
+        } catch (error) {
+            console.error('Chatbot error:', error);
+            this.hideTypingIndicator();
+            
+            // Fallback to knowledge base if AI fails
+            const fallbackResponse = this.getResponse(message);
+            this.addMessage(fallbackResponse.text, 'bot', fallbackResponse.quickReplies);
+        }
     }
 
     addMessage(text, sender, quickReplies = null) {

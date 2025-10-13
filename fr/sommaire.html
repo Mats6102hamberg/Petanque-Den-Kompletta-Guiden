@@ -168,6 +168,19 @@
             color: #FFF8DC;
         }
         
+        /* Special styling for matchprotokoll with yellow background */
+        .chapter-link.matchprotokoll-link:hover {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #333;
+            border-left-color: #ff6f00;
+        }
+        
+        .chapter-link.matchprotokoll-link:hover .chapter-number,
+        .chapter-link.matchprotokoll-link:hover .chapter-title,
+        .chapter-link.matchprotokoll-link:hover .chapter-desc {
+            color: #333;
+        }
+        
         .back-btn {
             display: inline-block;
             margin-top: 40px;
@@ -236,6 +249,36 @@
             <div class="forord">
                 <h2>Avant-propos</h2>
                 <p>La pétanque est plus qu'un sport – c'est un mode de vie, une activité sociale et un défi à la fois tactique et technique. Ce livre est écrit pour donner aux débutants une base solide et offrir aux joueurs expérimentés de nouvelles perspectives et des conseils d'amélioration. Que vous teniez une boule pour la première fois ou que vous participiez déjà à des compétitions de haut niveau, il y a quelque chose ici pour vous.</p>
+                <p>Une remarque importante sur la terminologie : La pétanque a des racines profondément françaises. Pour que vos connaissances soient complètes – et pour que vous vous sentiez à l'aise dans tous les contextes, du club local aux compétitions internationales – nous utiliserons le langage technique international. Cela signifie que dans le texte, nous mélangeons les termes français (comme boule et tir) avec les expressions françaises universellement reconnues (comme carreau et tirer au fer). Considérez ces mots français comme les termes techniques officiels du sport ; ils font partie intégrante de la culture du jeu et de votre éducation.</p>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #fff; border: 2px solid #D2691E; border-radius: 8px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px; font-size: 24px;">📋 Outils Interactifs</h3>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="feuille-triche.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📝 Feuille de Triche
+                        </a>
+                        <a href="journal-entrainement.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📊 Journal d'Entraînement
+                        </a>
+                        <a href="protocole-match.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            🏆 Protocole de Match
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACTUALITÉS ET INTERVIEWS -->
+            <div class="toc-section">
+                <h2>🎙️ Actualités et Interviews</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="actualites.html" class="chapter-link">
+                            <div class="chapter-number">📰 Nouveau</div>
+                            <div class="chapter-title">Actualités du Mois</div>
+                            <div class="chapter-desc">Dernières nouvelles du monde de la pétanque : nouvelles règles, tournois, interviews avec des profils et des joueurs légendaires</div>
+                        </a>
+                    </li>
+                </ul>
             </div>
             
             <div class="toc-section">
@@ -367,6 +410,30 @@
                 </ul>
             </div>
             
+            <!-- ARCHIVES HISTORIQUES PREMIUM -->
+            <div class="toc-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 10px; border: 2px solid #667eea;">
+                <h2 style="color: #667eea;">📚 Archives Historiques Premium</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="archives.html" class="chapter-link" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: 4px solid #ffd700;">
+                            <div class="chapter-number" style="color: #ffd700;">🔒 Premium</div>
+                            <div class="chapter-title" style="color: white;">Archives Historiques</div>
+                            <div class="chapter-desc" style="color: rgba(255,255,255,0.9);">
+                                <strong>Abonnement Mensuel: 12,99€/mois</strong><br>
+                                Archives exclusives avec des centaines d'articles, interviews de légendes, changements de règles à travers les âges et analyses de tournois. 
+                                Parfait pour les journalistes, médias, historiens, clubs et passionnés sérieux. Matériel dans les six langues.
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #ffc107;">
+                    <p style="margin: 0; color: #666; line-height: 1.6;">
+                        <strong>💼 Pour Médias & Entreprises:</strong> Contactez-nous pour des tarifs spéciaux et une licence étendue à 
+                        <a href="mailto:mats@petanqueguiden.se" style="color: #667eea; text-decoration: none; font-weight: 700;">mats@petanqueguiden.se</a>
+                    </p>
+                </div>
+            </div>
+            
             <div class="toc-section">
                 <h2>Annexes</h2>
                 <ul class="chapter-list">
@@ -407,7 +474,7 @@
                         </a>
                     </li>
                     <li class="chapter-item">
-                        <a href="protocole-match.html" class="chapter-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
+                        <a href="protocole-match.html" class="chapter-link matchprotokoll-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
                             <div class="chapter-title">📋 Protocole de Match (Interactif)</div>
                             <div class="chapter-desc">Protocole de match complet avec analyse automatique: Sauvegarder les équipes, points par mène, statistiques (mènes gagnées, points moyens, fanny, mènes décisives). Sauvegardé automatiquement dans le navigateur. Parfait pour les compétitions et l'entraînement!</div>
                         </a>

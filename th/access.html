@@ -244,79 +244,21 @@
   </div>
     
     <script>
-        // Check if user has access via license key
-        window.addEventListener('load', async () => {
-            // Check URL parameters for license key (from Gumroad link)
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLicense = urlParams.get('license') || urlParams.get('key');
-            
-            // Check localStorage for existing license key
-            let licenseKey = localStorage.getItem('petanque_license_key');
-            
-            // If license key in URL, verify and save it
-            if (urlLicense && !licenseKey) {
-                // Show loading message
-                document.body.innerHTML = `
-                    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <div style="background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-                            <h2 style="color: #667eea; margin-bottom: 20px;">🔑 กำลังเปิดใช้งาน...</h2>
-                            <p style="color: #666;">Please wait while we verify your license key.</p>
-                        </div>
-                    </div>
-                `;
-                
-                // Verify the license key
-                const isValid = await verifyLicense(urlLicense);
-                
-                if (isValid) {
-                    // Save license key
-                    localStorage.setItem('petanque_license_key', urlLicense);
-                    localStorage.setItem('petanque_activation_date', new Date().toISOString());
-                    
-                    // Reload access page to show book cover
-                    window.location.href = 'access.html';
-                } else {
-                    // Invalid license - redirect to manual activation
-                    alert('คีย์ไม่ถูกต้อง คุณจะถูกนำไปยังหน้าเปิดใช้งาน');
-                    window.location.href = 'upload.html';
-                }
-                return;
-            }
-            
-            // If no license key at all, redirect to activation page
-            if (!licenseKey) {
-                window.location.href = 'upload.html';
-            }
-            // If license key exists, show the book cover (stay on this page)
-        });
-        
-        async function verifyLicense(license) {
-            // ⚠️ DEMO MODE - Replace with real Gumroad verification
-            // For now, accept any license key with 10+ characters
-            try {
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                return license.length >= 10;
-            } catch (error) {
-                console.error('License verification error:', error);
-                return false;
-            }
-        }
-
         // Language switcher functionality
         document.getElementById('languageSelector').addEventListener('change', function() {
             const lang = this.value;
             if (lang === 'se') {
-                window.location.href = '/access.html';
+                window.location.href = '../access.html';
             } else if (lang === 'en') {
-                window.location.href = '/en/access.html';
+                window.location.href = '../en/access.html';
             } else if (lang === 'fr') {
-                window.location.href = '/fr/access.html';
+                window.location.href = '../fr/access.html';
             } else if (lang === 'es') {
-                window.location.href = '/es/access.html';
+                window.location.href = '../es/access.html';
             } else if (lang === 'de') {
-                window.location.href = '/de/access.html';
+                window.location.href = '../de/access.html';
             } else if (lang === 'th') {
-                window.location.href = '/th/access.html';
+                window.location.href = 'access.html';
             }
         });
     </script>

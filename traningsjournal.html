@@ -242,6 +242,13 @@
             }
         }
     </style>    
+    <script src="simple-license.js"></script>
+    <script>
+        // Check premium access on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            PetanqueLicense.requirePremium();
+        });
+    </script>
 </head>
 <body>
     <a href="innehall.html" class="toc-button">Innehåll</a>

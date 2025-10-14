@@ -321,5 +321,15 @@
                 font-size: 14px;
             }
         }
-    </style>    </body>
+    </style>
+    <script src="simple-license.js"></script>
+    <script>
+        // Check premium access on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            PetanqueLicense.requirePremium();
+        });
+    </script>
+</head>
+<body>
+    </body>
 </html>

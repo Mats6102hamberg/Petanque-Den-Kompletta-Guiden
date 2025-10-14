@@ -10,12 +10,82 @@
         return licenseKey && licenseKey.length > 0;
     }
     
-    // Redirect to purchase page if no license
+    // Show preview and lock content if no license
     function requirePremium() {
         if (!hasValidLicense()) {
             // Save current page to return after purchase
             sessionStorage.setItem('petanque_return_url', window.location.href);
-            window.location.href = 'kop.html';
+            
+            // Add preview overlay after page loads
+            setTimeout(function() {
+                addPreviewOverlay();
+            }, 100);
+        }
+    }
+    
+    // Add preview overlay to lock content
+    function addPreviewOverlay() {
+        const content = document.querySelector('.content');
+        if (!content) return;
+        
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+            position: relative;
+            margin-top: 40px;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        `;
+        
+        overlay.innerHTML = `
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="color: white; font-size: 32px; margin-bottom: 20px;">🔒 Premium-innehåll</h2>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 30px;">
+                    Du har läst förhandsgranskningen! För att fortsätta läsa detta kapitel och få tillgång till allt premium-innehåll, uppgradera till Premium.
+                </p>
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+                    <h3 style="color: white; margin-bottom: 15px;">✨ Med Premium får du:</h3>
+                    <ul style="list-style: none; padding: 0; text-align: left; max-width: 400px; margin: 0 auto;">
+                        <li style="padding: 8px 0; font-size: 16px;">✓ Kapitel 4-15 (Fullständigt innehåll)</li>
+                        <li style="padding: 8px 0; font-size: 16px;">✓ Alla bilagor och guider</li>
+                        <li style="padding: 8px 0; font-size: 16px;">✓ Exklusiva artiklar med videolänkar</li>
+                        <li style="padding: 8px 0; font-size: 16px;">✓ Framtida uppdateringar</li>
+                        <li style="padding: 8px 0; font-size: 16px;">✓ Spara 50+ timmar research</li>
+                    </ul>
+                </div>
+                <a href="kop.html" style="display: inline-block; background: white; color: #667eea; padding: 18px 50px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                    Uppgradera till Premium från 149 kr →
+                </a>
+                <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;">
+                    Välj ditt eget pris • Swish eller Gumroad
+                </p>
+            </div>
+        `;
+        
+        // Add blur effect to remaining content
+        const allElements = content.children;
+        let previewCount = 0;
+        const maxPreviewElements = 5; // Show first 5 elements (usually 2-3 paragraphs)
+        
+        for (let i = 0; i < allElements.length; i++) {
+            if (previewCount >= maxPreviewElements) {
+                allElements[i].style.filter = 'blur(8px)';
+                allElements[i].style.opacity = '0.3';
+                allElements[i].style.pointerEvents = 'none';
+                allElements[i].style.userSelect = 'none';
+            }
+            previewCount++;
+        }
+        
+        // Insert overlay after preview content
+        if (allElements.length > maxPreviewElements) {
+            allElements[maxPreviewElements].parentNode.insertBefore(overlay, allElements[maxPreviewElements]);
+        } else {
+            content.appendChild(overlay);
         }
     }
     

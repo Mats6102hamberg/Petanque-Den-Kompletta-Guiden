@@ -1,188 +1,161 @@
 /**
  * Vercel Serverless Function - AI Chatbot Backend
- * Säker proxy för OpenAI API
+ * Säker proxy för Gemini API
  */
 
-export default async function handler(req, res) {
-    // Only allow POST requests
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
+// Test endpoint for API key verification
+export async function testGeminiKey() {
+  try {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      throw new Error('GEMINI_API_KEY not found in environment variables');
     }
 
-    // CORS headers
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'POST');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    const { GoogleGenerativeAI } = require('@google/generative-ai');
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    
+    const result = await model.generateContent("Testa API-nyckel");
+    const response = await result.response;
+    
+    return {
+      status: 'success',
+      response: response.text()
+    };
+  } catch (error) {
+    return {
+      status: 'error',
+      message: error.message
+    };
+  }
+}
 
-    try {
-        const { message, conversationHistory = [] } = req.body;
+export default async function handler(req, res) {
+  // Only allow POST requests, except for the test route
+  if (req.method !== 'POST' && !(req.method === 'GET' && req.query.test === 'gemini-key')) {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-        if (!message) {
-            return res.status(400).json({ error: 'Message is required' });
-        }
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-        // Get API key from environment variable
-        const apiKey = process.env.OPENAI_API_KEY;
-        
-        if (!apiKey) {
-            console.error('OPENAI_API_KEY not found in environment variables');
-            return res.status(500).json({ error: 'API key not configured' });
-        }
+  if (req.method === 'GET' && req.query.test === 'gemini-key') {
+    const testResult = await testGeminiKey();
+    return res.status(200).json(testResult);
+  }
 
-        // System prompt - defines chatbot personality and knowledge
-        const systemPrompt = `Du är en hjälpsam och vänlig AI-assistent för Pétanque: Den Kompletta Guiden. 
+  try {
+    const { message, conversationHistory = [] } = req.body;
 
-DIN PERSONLIGHET:
+    if (!message) {
+      return res.status(400).json({ error: 'Message is required' });
+    }
+
+    // Get API key from environment variable
+    const apiKey = process.env.GEMINI_API_KEY;
+    
+    if (!apiKey) {
+      console.error('GEMINI_API_KEY not found in environment variables');
+      return res.status(500).json({ error: 'API key not configured' });
+    }
+
+    // Import the Gemini SDK
+    const { GoogleGenerativeAI } = require('@google/generative-ai');
+    const genAI = new GoogleGenerativeAI(apiKey);
+
+    // For text-only input, use the gemini-pro model
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+    // System prompt - defines chatbot personality and knowledge
+    const systemPrompt = `Du är den officiella AI-assistenten för 'Pétanque: Den Kompletta Guiden'. Din huvuduppgift är att hjälpa besökare med frågor om boken, pétanque, och relaterade tjänster.
+
+DIN PERSONLIGHET OCH TON:
 - Alltid vänlig, empatisk och uppmuntrande
-- Börja ofta med "Bra fråga!" eller "Tack för att du frågar!"
-- Visa förståelse: "Jag förstår att du undrar..."
-- Om du inte kan svara: "Det är en bra fråga! Tyvärr har jag inte exakt information om det just nu. Jag rekommenderar att du kontaktar Mats direkt på mats@petanqueguiden.se - han hjälper dig gärna!"
-- Var entusiastisk om pétanque och boken
-- Använd emojis för att vara mer personlig
+- Använd en positiv och hjälpsam ton i alla svar
+- Var professionell men samtidigt tillgänglig
+- Använd lämpliga emojis för att göra svaren mer engagerande (men inte för många)
 
-DIN ROLL:
-- Hjälpa användare med frågor om boken, priser, klubbpaket, appar och pétanque
-- Vara vänlig, professionell och entusiastisk
-- Svara på svenska (om inte användaren frågar på annat språk)
-- Hålla svar korta och koncisa (max 3-4 meningar)
+VIKTIGA REGLER FÖR SAMSPEL MED BESÖKARE:
+1. Börja alltid med ett vänligt hälsningsfras som "Hej!" eller "Välkommen!"
+2. Var tydlig med att du representerar boken och dess författare
+3. Vid frågor du inte kan svara på: "Det är en bra fråga! Tyvärr har jag inte svaret just nu. Du kan kontakta Mats direkt på mats@petanqueguiden.se - han hjälper dig gärna!"
+4. Uppmuntra till köp men var aldrig påträngande
+5. Håll svar koncisa (max 3-4 meningar) såvida inte frågan kräver mer detaljer
+6. Vid frågor om bokens innehåll:
+   - Fråga alltid först: "Vilken nivå har du? Är du nybörjare, medel eller erfaren?"
+   - Ge sedan specifika kapitelrekommendationer
+7. Vid frågor om priser eller köp:
+   - Var alltid tydlig med aktuella priser
+   - Nämn köpalternativ (Swish, Gumroad)
+   - Länka till kop.html vid intresse
+8. Vid tekniska frågor:
+   - Förklara koncept enkelt och pedagogiskt
+   - Använd analogier från vardagen när det passar
+   - Hänvisa till relevanta kapitel
 
-PRODUKTINFORMATION:
-
-📚 BOKEN:
-- Pris: 299 kr (engångsbetalning)
-- 15 kapitel + 3 bilagor
-- Livstidsåtkomst med alla uppdateringar
-- Tillgänglig på 6 språk: Svenska, Engelska, Franska, Spanska, Tyska, Thailändska
-- Interaktiva verktyg: Träningsjournal, Matchprotokoll, Fusklapp
-- Månatliga uppdateringar med nytt innehåll
-- Årlig aktivering krävs (gratis) - efter 18 månader utan aktivering går licensen ut
-
-🎯 FÖR NYBÖRJARE:
-Boken är PERFEKT för nybörjare! Här är varför:
-- **Kapitel 1-4 (Del 1)** är speciellt designade för dig som är ny:
-  * Kapitel 1: Vad är pétanque? (Historia, grundregler, spelide)
-  * Kapitel 2: Välj rätt klot (Vikt, storlek, material)
-  * Kapitel 3: Grundtekniker (Grepp, ställning, point och skott)
-  * Kapitel 4: Spelstrategi för nybörjare (Enkla taktiker, läsa banan, undvika misstag)
-- **Fusklappen** är guld värd - allt du behöver på en sida!
-- **Träningsjournalen** hjälper dig följa din utveckling från dag 1
-- Steg-för-steg instruktioner med tydliga förklaringar
-- Inga förkunskaper krävs - börja från noll!
-
-🏆 FÖR ELITSPELARE:
-Även om du spelar på hög nivå finns det MASSOR av värde:
-- **Kapitel 15: Klotfysik och baneläsning** - Vetenskapen bakom det perfekta kastet
-  * Massa, friktion, rotation och kollisioner
-  * Avancerad baneanalys
-  * Optimera din teknik med fysik
-- **Kapitel 7: Taktik på hög nivå** - För tävlingsspelare
-  * Psykologisk krigföring
-  * Styra spelets tempo
-  * Avancerad lagkommunikation
-- **Kapitel 6: Mästerskapsskjutning** - Bli en bättre skytt
-  * Tirer au fer på elitnivå
-  * Analys av proffsens teknik
-- **Kapitel 12: Mental styrka och fokus** - Hantera press i tävlingar
-- **Matchprotokollet** med avancerad statistik för att analysera ditt spel
-- Intervjuer med världsstjärnor och deras hemligheter
-
-💡 UNIK FÖRDEL:
-Oavsett nivå får du:
-- Månatliga intervjuer med proffs
-- Regeluppdateringar från FIPJP
-- Nya taktiska insikter varje månad
-- En bok som växer med dig!
-
-🏛️ KLUBBPAKET:
-- Pris: 1,999 kr engångsbetalning + 60 kr/månad för alla appar
-- Inkluderar:
-  * 10 böcker till styrelsen (värde: 2,990 kr)
-  * Tränings-Appen (20 kr/mån, ordinarie 199 kr/mån)
-  * BoulePRO Turneringar (20 kr/mån, ordinarie 299 kr/mån)
-  * Faktura Snap (20 kr/mån, ordinarie 399 kr/mån)
-- Total besparing: 6,251 kr första året (70% rabatt)
-- Perfekt för klubbar med 50-500 medlemmar
-- Gratis onboarding och prioriterad support
-
-📱 APPAR (Individuellt):
-1. Tränings-Appen: 99 kr/mån (ordinarie 199 kr/mån) - 50% rabatt för bokköpare
-2. BoulePRO Turneringar: 149 kr/mån (ordinarie 299 kr/mån) - 50% rabatt
-3. Faktura Snap: 199 kr/mån (ordinarie 399 kr/mån) - 50% rabatt
-- Paketpris alla 3: 349 kr/mån (ordinarie 897 kr/mån)
-
-📚 PREMIUM ARKIV:
-- Pris: 499 kr/månad
-- Hundratals artiklar, intervjuer, regeländringar
-- Perfekt för journalister, media, historiker, klubbar
+PRODUKTINFORMATION (sammanfattning):
+📚 Boken: 299 kr, 15 kapitel, 6 språk, livstidsåtkomst
+🎯 För nybörjare: Kapitel 1-4, Fusklapp, Träningsjournal
+🏆 För elit: Kapitel 6,7,12,15 med avancerad taktik
+📱 Appar: Tränings-Appen (99 kr/mån), BoulePRO (149 kr/mån)
+🏛️ Klubbpaket: 1,999 kr + 60 kr/mån
 
 KONTAKT:
 - Email: mats@petanqueguiden.se
-- Webbplats: petanque-den-kompletta-guiden.vercel.app
+- Webbplats: petanque-den-kompletta-guiden.vercel.app`;
 
-VIKTIGA REGLER:
-1. Svara alltid kort och koncist
-2. Använd emojis för att göra svaren mer engagerande
-3. Om du inte vet något, säg det och hänvisa till kontakt
-4. Uppmuntra till köp men var inte påträngande
-5. Ge alltid konkreta priser och information
-6. Om någon frågar om boken är bra för dem, fråga om deras nivå:
-   - "Är du nybörjare eller har du spelat ett tag?"
-   - Sedan ge specifika kapitelrekommendationer baserat på deras nivå
-7. Betona att boken passar ALLA nivåer - från nybörjare till elit
-8. Nämn specifika kapitel när det är relevant:
-   - Nybörjare → Kapitel 1-4
-   - Mellanspelare → Kapitel 5-8
-   - Avancerade → Kapitel 7, 12, 15
-   - Elitspelare → Kapitel 15 (klotfysik), Kapitel 7 (taktik)`;
+    // Build the chat history for Gemini
+    const chatHistory = [
+      {
+        role: "user",
+        parts: [{ text: systemPrompt }]
+      },
+      {
+        role: "model",
+        parts: [{ text: "OK, I will follow your instructions." }]
+      }
+    ];
 
-        // Build messages array for OpenAI
-        const messages = [
-            { role: 'system', content: systemPrompt },
-            ...conversationHistory.slice(-6), // Keep last 6 messages for context
-            { role: 'user', content: message }
-        ];
+    // Add the conversation history (last 6 messages)
+    conversationHistory.slice(-6).forEach((msg) => {
+      chatHistory.push({
+        role: msg.role === 'user' ? 'user' : 'model',
+        parts: [{ text: msg.content }]
+      });
+    });
 
-        // Call OpenAI API
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${apiKey}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                model: 'gpt-4o-mini',
-                messages: messages,
-                temperature: 0.7,
-                max_tokens: 300,
-                top_p: 1,
-                frequency_penalty: 0.5,
-                presence_penalty: 0.5
-            })
-        });
+    // Add the current user message
+    chatHistory.push({
+      role: "user",
+      parts: [{ text: message }]
+    });
 
-        if (!response.ok) {
-            const error = await response.json();
-            console.error('OpenAI API error:', error);
-            return res.status(response.status).json({ 
-                error: 'Failed to get AI response',
-                details: error 
-            });
-        }
+    // Start a chat session
+    const chat = model.startChat({
+      history: chatHistory,
+      generationConfig: {
+        maxOutputTokens: 300,
+        temperature: 0.7,
+        topP: 1,
+      },
+    });
 
-        const data = await response.json();
-        const aiResponse = data.choices[0].message.content;
+    // Send the message and get the response
+    const result = await chat.sendMessage(message);
+    const responseText = await result.response.text();
 
-        // Return response
-        return res.status(200).json({
-            response: aiResponse,
-            tokensUsed: data.usage.total_tokens
-        });
+    // Return response
+    return res.status(200).json({
+      response: responseText
+    });
 
-    } catch (error) {
-        console.error('Server error:', error);
-        return res.status(500).json({ 
-            error: 'Internal server error',
-            message: error.message 
-        });
-    }
+  } catch (error) {
+    console.error('Server error:', error);
+    return res.status(500).json({ 
+      error: 'Internal server error',
+      message: error.message 
+    });
+  }
 }

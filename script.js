@@ -50,4 +50,21 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('darkMode', 'disabled');
         }
     });
+    
+    // License check for premium content
+    function checkPremiumAccess() {
+      if (!PetanqueLicense.hasPremiumAccess()) {
+        // Show popup if trying to access locked chapter
+        if (typeof showPremiumPopup === 'function') {
+          showPremiumPopup();
+        }
+        return false;
+      }
+      return true;
+    }
+
+    // Call this on chapter pages
+    if (window.location.pathname.includes('kapitel')) {
+      checkPremiumAccess();
+    }
 });

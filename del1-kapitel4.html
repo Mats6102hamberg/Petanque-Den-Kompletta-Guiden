@@ -13,7 +13,7 @@
         });
     </script>
 </head>
-<body>
+<body class="last-free-chapter">
     <a href="innehall.html" class="toc-button">Innehåll</a>
     <div class="container">
         <div class="header header-small">
@@ -147,5 +147,31 @@
             </div>
         </div>
     </div>
+    
+    <!-- Lägg till popup -->
+    <div id="premium-popup" class="premium-popup hidden">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Fortsätt läsa!</h2>
+            <p>Du har kommit till slutet av ditt gratisprov. Köp boken för att läsa alla kapitel.</p>
+            <a href="/kop.html" class="btn btn-primary">Köp boken nu</a>
+        </div>
+    </div>
+
+    <script>
+        // Popup-logik
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('premium-popup');
+            const closeBtn = document.querySelector('.close-btn');
+            
+            // Visa popup vid sidladdning
+            popup.classList.remove('hidden');
+            
+            // Stäng popup
+            closeBtn.addEventListener('click', function() {
+                popup.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

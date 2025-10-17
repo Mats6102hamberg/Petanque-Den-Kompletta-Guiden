@@ -3,279 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapitre 15: Physique des Boules et Lecture du Terrain - Guide de Pétanque</title>
+    <title>Chapitre 15: Diriger une Équipe de Boule Pétanque - Guide de Pétanque</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="../script.js" defer></script>    
+    <script src="../script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <a href="../fr/sommaire.html" class="toc-button">Sommaire</a>
+    <a href="sommaire.html" class="toc-button">Sommaire</a>
+    <div class="language-switcher">
+        <a href="../del4-kapitel15.html" title="Svenska">🇸🇪</a>
+        <a href="../en/part4-chapter15.html" title="English">🇬🇧</a>
+        <a href="partie4-chapitre15.html" class="active" title="Français">🇫🇷</a>
+    </div>
+    
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">Partie 4 • Chapitre 15</div>
-            <h1 class="chapter-title">Physique des Boules et Lecture du Terrain</h1>
-            <p class="chapter-subtitle">La science derrière le lancer parfait</p>
+            <h1 class="chapter-title">Diriger une Équipe de Boule Pétanque</h1>
+            <p class="chapter-subtitle">Coaching, construction d'équipe et préparation pour la compétition</p>
         </div>
         
         <div class="content">
-            <h2>Introduction à la Physique des Boules</h2>
-            <p>La pétanque n'est pas seulement un sport – c'est de la physique appliquée en pratique. Chaque lancer implique des interactions complexes entre la masse de la boule, la vitesse, la rotation, la pente du terrain et les conditions du sol. En comprenant la physique fondamentale, vous pouvez améliorer votre précision et prendre des décisions plus intelligentes sur le terrain.</p>
+            <h2>Introduction – Le Rôle de l'Entraîneur en Boule Pétanque</h2>
+            <p>Diriger une équipe de Boule Pétanque, c'est équilibrer stratégie et compréhension humaine. Un bon entraîneur n'est pas seulement un tacticien – mais aussi un motivateur, un psychologue et un bâtisseur d'équipe. Il s'agit de voir à la fois l'ensemble et l'individu, de créer la sécurité et le courage, et de prendre des décisions judicieuses quand cela compte le plus.</p>
             
-            <p>Dans ce chapitre, nous explorons les principes scientifiques qui régissent le comportement des boules, du moment où elles quittent votre main jusqu'à ce qu'elles s'arrêtent sur le sol. Nous examinerons tout, de la mécanique de base à la lecture avancée du terrain.</p>
-            
-            <h2>Mécanique de Base</h2>
-            
-            <h3>Masse et Centre de Gravité</h3>
-            <p>Une boule de pétanque pèse entre 650 et 800 grammes et a un diamètre de 70,5 à 80 mm. La masse de la boule et sa distribution affectent considérablement son comportement :</p>
-            
-            <div class="highlight-box">
-                <h4>Propriétés Importantes de la Masse :</h4>
-                <ul>
-                    <li><strong>Boules plus lourdes (750-800g) :</strong> Meilleures pour le tir, conservent plus d'énergie lors des collisions, moins affectées par un terrain irrégulier</li>
-                    <li><strong>Boules plus légères (650-700g) :</strong> Plus faciles à contrôler au pointer, nécessitent moins de force, meilleures pour les joueurs âgés</li>
-                    <li><strong>Centre de gravité :</strong> Doit être parfaitement centré pour un comportement prévisible</li>
-                    <li><strong>Distribution de masse :</strong> Affecte la façon dont la boule roule et tourne</li>
-                </ul>
-            </div>
-            
-            <h3>Vitesse et Accélération</h3>
-            <p>Lorsque vous lancez une boule, vous lui donnez une vitesse initiale. À partir de ce moment, plusieurs forces commencent à l'affecter :</p>
-            
+            <p>Dans ce chapitre, nous explorons comment vous, en tant qu'entraîneur :</p>
             <ul>
-                <li><strong>Gravité :</strong> Tire la boule vers le bas à 9,82 m/s²</li>
-                <li><strong>Résistance de l'air :</strong> Effet minimal sur de courtes distances mais notable sur les lancers hauts</li>
-                <li><strong>Friction :</strong> La force la plus importante lorsque la boule touche le sol</li>
+                <li>choisissez les bons joueurs pour la bonne occasion,</li>
+                <li>préparez l'équipe pour la compétition,</li>
+                <li>gérez la pression et les revers,</li>
+                <li>et construisez une culture où développement et esprit d'équipe vont de pair.</li>
             </ul>
             
-            <h3>Rotation et Rétro</h3>
-            <p>La technique classique de lancer de pétanque avec la paume vers le bas crée un effet rétro (rotation arrière). Ce n'est pas seulement une tradition – cela a d'importants avantages physiques :</p>
+            <h2>Avant la Compétition – Considérations Stratégiques</h2>
+            <p>Affronter une forte opposition nécessite plus que de la technique. Il s'agit de comprendre le contexte : la forme, les adversaires, la météo et la dynamique de l'équipe.</p>
             
             <div class="highlight-box">
-                <h4>Avantages de l'Effet Rétro :</h4>
-                <ol>
-                    <li><strong>Effet de freinage :</strong> Lorsque la boule atterrit, l'effet rétro s'oppose à la direction du mouvement, la faisant s'arrêter plus rapidement</li>
-                    <li><strong>Stabilité :</strong> La rotation stabilise la trajectoire de la boule dans l'air (effet gyroscopique)</li>
-                    <li><strong>Rebond contrôlé :</strong> L'effet rétro réduit la hauteur du rebond à l'atterrissage</li>
-                    <li><strong>Prévisibilité :</strong> Fournit un comportement plus cohérent sur différentes surfaces</li>
-                </ol>
+                <h4>Questions Centrales :</h4>
+                <ul>
+                    <li>Quelle est la forme et la préparation mentale des joueurs ?</li>
+                    <li>Quelles combinaisons fonctionnent le mieux dans l'équipe ?</li>
+                    <li>Comment le caractère du terrain affecte-t-il les choix tactiques ?</li>
+                    <li>Qu'est-ce qui pèse le plus dans la sélection de l'équipe – l'expérience, la forme ou la force mentale ?</li>
+                </ul>
             </div>
             
-            <h2>Physique du Terrain</h2>
-            
-            <h3>Friction et Résistance au Roulement</h3>
-            <p>Lorsque la boule touche le sol, la friction commence à la ralentir. Le coefficient de friction varie énormément selon la surface :</p>
-            
-            <table>
-                <tr>
-                    <th>Surface</th>
-                    <th>Coefficient de Friction</th>
-                    <th>Résistance au Roulement</th>
-                    <th>Effet sur le Jeu</th>
-                </tr>
-                <tr>
-                    <td>Gravier fin</td>
-                    <td>0,4-0,6</td>
-                    <td>Élevée</td>
-                    <td>La boule s'arrête rapidement, nécessite plus de force</td>
-                </tr>
-                <tr>
-                    <td>Gravier compact</td>
-                    <td>0,3-0,4</td>
-                    <td>Moyenne</td>
-                    <td>Conditions de jeu standard</td>
-                </tr>
-                <tr>
-                    <td>Gravier dur</td>
-                    <td>0,2-0,3</td>
-                    <td>Faible</td>
-                    <td>La boule roule plus loin, plus difficile à contrôler</td>
-                </tr>
-                <tr>
-                    <td>Gravier mouillé</td>
-                    <td>0,5-0,7</td>
-                    <td>Très élevée</td>
-                    <td>La boule s'arrête très rapidement, colle</td>
-                </tr>
-                <tr>
-                    <td>Herbe sèche</td>
-                    <td>0,3-0,5</td>
-                    <td>Variable</td>
-                    <td>Irrégulier, difficile à prévoir</td>
-                </tr>
-            </table>
-            
-            <h3>Pente et Gravité</h3>
-            <p>Même de petites pentes affectent considérablement la trajectoire de la boule. Une pente de seulement 2-3 degrés peut faire rouler une boule de plusieurs décimètres sur le côté.</p>
-            
-            <div class="highlight-box">
-                <h4>Calculer l'Effet de la Pente :</h4>
-                <p><strong>Formule de base :</strong> Déplacement latéral ≈ (pente en degrés × distance en mètres) / 10</p>
-                <p><strong>Exemple :</strong> À 8 mètres de distance avec une pente de 3 degrés :</p>
-                <p>Déplacement latéral ≈ (3 × 8) / 10 = 2,4 dm = 24 cm</p>
-                <p><em>C'est une simplification, mais elle donne une estimation utile !</em></p>
+            <div class="info-box">
+                <p><strong>🎯 Réflexion :</strong></p>
+                <p>Un entraîneur expérimenté sait que parfois le joueur le plus concentré est plus important que le plus technique.</p>
             </div>
             
-            <h2>Lecture Avancée du Terrain</h2>
+            <h2>Sélection de l'Équipe – Trouver le Bon Équilibre</h2>
+            <p>La sélection de l'équipe est un art qui pèse connaissances, intuition et chimie d'équipe. L'objectif est de créer une équipe où tous ont confiance en l'entraîneur et leurs coéquipiers.</p>
             
-            <h3>Analyse Visuelle</h3>
-            <p>Les joueurs professionnels lisent le terrain comme un joueur d'échecs lit un échiquier. Voici ce qu'il faut rechercher :</p>
-            
+            <h3>Facteurs à Considérer :</h3>
             <ul>
-                <li><strong>Variations de couleur :</strong> Les zones plus sombres sont souvent plus humides (friction plus élevée)</li>
-                <li><strong>Ombres :</strong> Révèlent de petites différences d'élévation et des dépressions</li>
-                <li><strong>Brillance :</strong> Les zones brillantes peuvent être compactes ou mouillées</li>
-                <li><strong>Traces :</strong> Les trajectoires de boules précédentes donnent des indices sur la pente</li>
-                <li><strong>Végétation :</strong> Même de petites graines d'herbe affectent le roulement</li>
+                <li><strong>Expérience et compétences :</strong> performances passées, technique, compréhension du jeu.</li>
+                <li><strong>Force mentale :</strong> confiance en soi, capacité à gérer la pression, concentration.</li>
+                <li><strong>Capacité sociale :</strong> communication, volonté de coopérer, dynamique de groupe.</li>
+                <li><strong>Forme :</strong> niveau d'entraînement actuel, détermination, courbe de développement.</li>
+                <li><strong>Compréhension du rôle :</strong> le joueur accepte-t-il son rôle – leader, remplaçant, rôle de soutien ?</li>
             </ul>
             
-            <h3>Investigation Tactile</h3>
-            <p>Avant le début du match, marchez sur le terrain et sentez avec vos pieds :</p>
-            
             <div class="highlight-box">
-                <h4>Ce qu'il Faut Sentir :</h4>
-                <ul>
-                    <li><strong>Compacité :</strong> Combien le sol cède-t-il ?</li>
-                    <li><strong>Texture :</strong> Surface fine ou grossière ?</li>
-                    <li><strong>Humidité :</strong> Sec ou mouillé ?</li>
-                    <li><strong>Pente :</strong> Dans quelle direction le terrain s'incline-t-il ?</li>
-                    <li><strong>Irrégularités :</strong> Y a-t-il des dépressions ou des élévations ?</li>
-                </ul>
+                <p><strong>📊 Conseil :</strong></p>
+                <p>Créez un simple tableau de sélection d'équipe où vous attribuez des points (1–5) pour chaque facteur. Cela rend la sélection plus réfléchie et ouverte à la réflexion.</p>
             </div>
             
-            <h3>Boules de Test</h3>
-            <p>Avant le début du match, utilisez vos lancers d'entraînement stratégiquement :</p>
+            <h2>Pendant la Compétition – Coaching en Temps Réel</h2>
+            <p>Lorsque le match est en cours, le rôle de l'entraîneur se transforme de planificateur en chef d'orchestre. Vos décisions affectent non seulement le jeu – mais aussi l'état émotionnel de l'équipe.</p>
             
-            <ol>
-                <li><strong>Lancer de test 1 :</strong> Lancez droit devant à vitesse moyenne pour évaluer la friction de base</li>
-                <li><strong>Lancer de test 2 :</strong> Lancez à différentes hauteurs pour voir comment le sol affecte le rebond</li>
-                <li><strong>Lancer de test 3 :</strong> Testez les pentes latérales en lançant dans différentes directions</li>
-            </ol>
-            
-            <h2>Physique des Collisions</h2>
-            
-            <h3>Collisions Élastiques et Inélastiques</h3>
-            <p>Lorsque deux boules entrent en collision, une collision partiellement inélastique se produit – une partie de l'énergie est conservée, mais une partie est perdue sous forme de son et de chaleur :</p>
-            
-            <div class="highlight-box">
-                <h4>Principes Clés :</h4>
-                <ul>
-                    <li><strong>La quantité de mouvement est conservée :</strong> Masse totale × vitesse avant = après</li>
-                    <li><strong>Perte d'énergie :</strong> Environ 20-30% de l'énergie est perdue lors de la collision</li>
-                    <li><strong>Angle d'impact :</strong> Détermine comment l'énergie est distribuée entre les boules</li>
-                    <li><strong>La masse compte :</strong> Les boules plus lourdes transfèrent plus d'énergie</li>
-                </ul>
-            </div>
-            
-            <h3>Angles d'Impact Optimaux</h3>
-            <table>
-                <tr>
-                    <th>Angle d'Impact</th>
-                    <th>Effet sur la Cible</th>
-                    <th>Effet sur Votre Boule</th>
-                    <th>Meilleur Pour</th>
-                </tr>
-                <tr>
-                    <td>0° (frontal)</td>
-                    <td>Mouvement maximum vers l'avant</td>
-                    <td>S'arrête ou rebondit en arrière</td>
-                    <td>Pousser les boules adverses</td>
-                </tr>
-                <tr>
-                    <td>30-45°</td>
-                    <td>Mouvement diagonal</td>
-                    <td>Continue dans une nouvelle direction</td>
-                    <td>Tirs combinés</td>
-                </tr>
-                <tr>
-                    <td>60-90° (latéral)</td>
-                    <td>Mouvement minimal</td>
-                    <td>Continue presque tout droit</td>
-                    <td>Frôler les obstacles</td>
-                </tr>
-            </table>
-            
-            <h2>Conditions Météorologiques et Physique</h2>
-            
-            <h3>Température</h3>
+            <h3>Aspects Importants :</h3>
             <ul>
-                <li><strong>Temps chaud (>25°C) :</strong> Le sol devient plus mou, friction plus élevée, les boules s'arrêtent plus vite</li>
-                <li><strong>Temps froid (<10°C) :</strong> Le sol devient plus dur, friction plus faible, les boules roulent plus loin</li>
-                <li><strong>Expansion du métal :</strong> Les boules se dilatent minimalement avec la chaleur (effet négligeable)</li>
+                <li>Adapter la tactique aux conditions météorologiques (pluie, vent, terrain).</li>
+                <li>Reconnaître les points de pression – par exemple, à 12–12 dans la dernière mène.</li>
+                <li>Être clair dans la communication, mais garder son calme.</li>
+                <li>Rester concentré sur le processus, pas seulement sur les résultats.</li>
             </ul>
             
-            <h3>Humidité et Pluie</h3>
-            <div class="highlight-box">
-                <h4>Effets de l'Humidité :</h4>
-                <ul>
-                    <li><strong>Humidité légère :</strong> Augmente la friction de 20-30%</li>
-                    <li><strong>Surface mouillée :</strong> Augmente la friction de 50-100%</li>
-                    <li><strong>Flaques :</strong> La boule peut "labourer" à travers l'eau et perdre beaucoup d'énergie</li>
-                    <li><strong>Séchage :</strong> Le terrain change continuellement pendant qu'il sèche</li>
-                </ul>
+            <div class="info-box">
+                <p><strong>🧠 L'État d'Esprit de l'Entraîneur :</strong></p>
+                <p><em>"Une équipe qui se sent en sécurité sous pression joue avec clarté – pas avec panique."</em></p>
             </div>
             
-            <h3>Vent</h3>
-            <p>Bien que les boules soient lourdes, elles sont affectées par un vent fort, surtout sur les lancers hauts :</p>
-            <ul>
-                <li><strong>Vent arrière :</strong> Peut ajouter 10-20 cm au lancer</li>
-                <li><strong>Vent de face :</strong> Peut retirer 10-20 cm</li>
-                <li><strong>Vent latéral :</strong> Peut déplacer la boule de 5-15 cm sur le côté</li>
-                <li><strong>Turbulence :</strong> Rend les lancers hauts plus imprévisibles</li>
-            </ul>
+            <h2>Moral et Coopération – Quand les Choses Tournent Mal</h2>
+            <p>Les erreurs arrivent dans chaque match. C'est la réaction de l'entraîneur qui détermine comment l'équipe se remet.</p>
             
-            <h2>Application Pratique</h2>
-            
-            <h3>Adaptez Votre Lancer aux Conditions</h3>
-            <div class="highlight-box">
-                <h4>Terrain rapide (faible friction) :</h4>
-                <ul>
-                    <li>Utilisez plus d'effet rétro</li>
-                    <li>Lancez plus bas pour minimiser le rebond</li>
-                    <li>Diminuez la vitesse de lancer</li>
-                    <li>Visez plus court que la normale</li>
-                </ul>
+            <div class="warning-box">
+                <h4>Scénario :</h4>
+                <p>Un joueur rate un lancer et devient frustré. Les adversaires célèbrent, le moral baisse.</p>
                 
-                <h4>Terrain lent (friction élevée) :</h4>
+                <p><strong>La tâche de l'entraîneur devient :</strong></p>
                 <ul>
-                    <li>Lancez plus haut pour minimiser la friction du sol</li>
-                    <li>Augmentez la vitesse de lancer</li>
-                    <li>Visez plus loin que la normale</li>
-                    <li>Utilisez moins d'effet rétro</li>
+                    <li>calmer le joueur,</li>
+                    <li>restaurer la concentration de l'équipe,</li>
+                    <li>transformer la frustration en concentration.</li>
                 </ul>
             </div>
             
-            <h3>Modèles Mentaux</h3>
-            <p>Développez des modèles mentaux pour différents scénarios :</p>
-            
-            <ol>
-                <li><strong>Visualisez la trajectoire :</strong> Voyez le chemin de la boule dans votre esprit avant de lancer</li>
-                <li><strong>Ajustez pour la pente :</strong> Ajoutez une "compensation" mentale pour la pente latérale</li>
-                <li><strong>Anticipez le rebond :</strong> Pensez à comment la boule se comportera à l'atterrissage</li>
-                <li><strong>Planifiez les collisions :</strong> Calculez comment les boules vont interagir</li>
-            </ol>
-            
-            <h2>Résumé</h2>
-            <p>Comprendre la physique derrière la pétanque fait de vous un joueur plus intelligent. Vous n'avez pas besoin de calculer des équations exactes sur le terrain, mais une compréhension intuitive de la masse, de la friction, de la rotation et des collisions vous aide à :</p>
-            
-            <ul>
-                <li>Faire de meilleurs jugements sur le comportement de la boule</li>
-                <li>Adapter votre jeu à différentes conditions</li>
-                <li>Comprendre pourquoi certains lancers fonctionnent et d'autres non</li>
-                <li>Développer une technique plus cohérente</li>
-                <li>Mieux communiquer avec les coéquipiers sur la tactique</li>
-            </ul>
-            
-            <p>Rappelez-vous : La physique est toujours la même, mais chaque terrain et chaque lancer est unique. Utilisez vos connaissances comme un outil, pas comme une règle. Le meilleur joueur est celui qui peut combiner compréhension théorique avec expérience pratique et intuition.</p>
-            
-            <div class="highlight-box" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
-                <h4>💡 Perspective Professionnelle :</h4>
-                <p><em>"Je ne pense pas à la physique quand je lance – mais je me suis tellement entraîné que mon corps la ressent. Chaque lancer est une expérience, et chaque résultat m'apprend quelque chose de nouveau sur le terrain. C'est pourquoi les premières manches sont si importantes – elles vous donnent des données avec lesquelles travailler."</em></p>
-                <p style="text-align: right; margin-top: 10px;"><strong>— Philippe Quintais, Champion du Monde</strong></p>
+            <div class="info-box">
+                <p><strong>💬 Réflexion :</strong></p>
+                <p>Une conversation, un sourire, ou juste un calme "c'est bon" peut faire la différence entre la défaite et le retournement.</p>
             </div>
             
-            <div class="chapter-nav">
-                <a href="partie3-chapitre10.html" class="nav-button">← Précédent : Chapitre 10</a>
-                <a href="sommaire.html" class="nav-button">Sommaire</a>
-                <a href="partie4-approfondissement.html" class="nav-button">Suivant : Approfondissement →</a>
+            <h2>Construire une Équipe</h2>
+            <p>Passer d'individus à une équipe fonctionnelle nécessite du travail et du temps.</p>
+            
+            <h3>Piliers de la Construction d'Équipe :</h3>
+            <ul>
+                <li><strong>Objectifs communs :</strong> Que voulons-nous accomplir ensemble ?</li>
+                <li><strong>Distribution des rôles :</strong> Chacun connaît sa tâche et l'accepte.</li>
+                <li><strong>Communication :</strong> Dialogue ouvert, honnête et respectueux.</li>
+                <li><strong>Team building :</strong> Les activités hors terrain renforcent les relations.</li>
+            </ul>
+            
+            <div class="info-box">
+                <p><strong>🤝 Réflexion :</strong></p>
+                <p>Une équipe avec des objectifs clairs et une forte communication survit même aux revers.</p>
+            </div>
+            
+            <h2>Team Building à Distance</h2>
+            <p>À une époque où les joueurs peuvent vivre dans différents endroits, la communauté numérique est cruciale.</p>
+            
+            <h3>Exemples :</h3>
+            <ul>
+                <li>Réunions vidéo pour la tactique, l'analyse et la discussion.</li>
+                <li>Séances d'entraînement communes en ligne via Facebook ou Teams.</li>
+                <li>Objectifs partagés et résultats d'entraînement.</li>
+                <li>Activités sociales – quiz, conversations, analyses.</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>💡 Leçon de l'Entraîneur :</strong></p>
+                <p>La distance ne doit pas signifier un manque de cohésion – juste de nouvelles façons de la créer.</p>
+            </div>
+            
+            <h2>Créer un Bon Environnement d'Entraînement</h2>
+            <p>L'entraînement est l'endroit où l'équipe se forme. C'est ici que la sécurité, la discipline et la motivation grandissent.</p>
+            
+            <h3>Clés d'un Environnement Positif :</h3>
+            <ul>
+                <li><strong>Sécurité et confiance :</strong> les joueurs osent échouer et essayer de nouvelles choses.</li>
+                <li><strong>Structure claire :</strong> séances d'entraînement planifiées avec objectifs et retours.</li>
+                <li><strong>Développement individuel :</strong> exercices personnalisés selon les besoins.</li>
+                <li><strong>Variation :</strong> différents environnements et styles de jeu.</li>
+            </ul>
+            
+            <div class="info-box">
+                <p><strong>🏗️ Réflexion :</strong></p>
+                <p>Le meilleur environnement d'entraînement est celui où le rire et la concentration coexistent sur le même terrain.</p>
+            </div>
+            
+            <h2>La Boussole de l'Entraîneur</h2>
+            <p>Entraîner en Boule Pétanque est un leadership construit sur l'équilibre. Cela nécessite de voir la personne derrière la boule.</p>
+            
+            <div class="highlight-box">
+                <h4>Les Principes Directeurs de l'Entraîneur :</h4>
+                <ul>
+                    <li><strong>Créer la sécurité</strong> – alors les joueurs osent prendre des risques.</li>
+                    <li><strong>Construire des relations</strong> – alors la confiance grandit.</li>
+                    <li><strong>Entraîner mentalement</strong> – alors le calme est maintenu dans les situations de pression.</li>
+                    <li><strong>Réfléchir</strong> – alors l'entraîneur et les joueurs se développent.</li>
+                </ul>
+            </div>
+            
+            <div class="info-box" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
+                <p style="font-style: italic; font-size: 18px; color: #2e7d32; text-align: center; margin: 20px 0;">
+                    <strong>"Une bonne équipe ne se construit pas en évitant les erreurs, mais en apprenant ensemble après chaque erreur."</strong>
+                </p>
+            </div>
+            
+            <h2>📘 Résumé</h2>
+            <p>L'entraînement en Boule Pétanque est à la fois une science et un art. Il s'agit de comprendre la technique, la psychologie et la dynamique humaine – et de les tisser ensemble en un tout fonctionnel.</p>
+            
+            <p>Un entraîneur qui réussit à créer la sécurité, la clarté et la confiance a déjà jeté les bases du succès – quel que soit le résultat sur le tableau de marque.</p>
+            
+            <div class="highlight-box" style="background: #f3e5f5; border-left: 4px solid #9c27b0;">
+                <h4>💡 Aperçu Professionnel :</h4>
+                <p><em>"Le meilleur entraîneur que j'ai eu ne parlait jamais beaucoup – mais quand il parlait, tout le monde écoutait. Son calme se propageait à nous. Quand nous ressentions la pression, nous le regardions et savions : Nous pouvons gérer ça. C'est ce sentiment qui gagne les matchs."</em></p>
+                <p style="text-align: right; margin-top: 10px;"><strong>— Dylan Rocher, Champion de France</strong></p>
+            </div>
+            
+            <div class="navigation">
+                <a href="partie4-approfondissement.html" class="nav-btn secondary">← Précédent : Chapitre 14</a>
+                <a href="partie4-chapitre16.html" class="nav-btn">Suivant : Physique des Boules →</a>
             </div>
         </div>
     </div>

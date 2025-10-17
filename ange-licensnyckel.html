@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ange Licensnyckel - Pétanque Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .license-container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .license-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .license-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .license-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .license-header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .info-box {
+            background: #f0f7ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .info-box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .info-box ul {
+            margin: 10px 0 0 20px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .license-form {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .license-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 18px;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .license-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .license-input::placeholder {
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 5px;
+            color: #155724;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success-message h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            border-radius: 5px;
+            color: #721c24;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .key-format {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .key-format code {
+            font-size: 18px;
+            color: #667eea;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="license-container">
+        <div class="license-header">
+            <div class="license-icon">🔑</div>
+            <h1>Aktivera Din Licensnyckel</h1>
+            <p>Välkommen! Ange din licensnyckel nedan för att låsa upp allt premium-innehåll.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📧 Har du köpt boken?</h3>
+            <p>Din licensnyckel har skickats till din e-post efter köpet via Swish eller Gumroad.</p>
+            <div class="key-format">
+                <p style="margin: 0 0 5px 0; font-size: 14px; color: #666;">Format:</p>
+                <code>PETANQUE-XXXX-XXXX-XXXX</code>
+            </div>
+        </div>
+
+        <div id="successMessage" class="success-message">
+            <h3>✅ Licens Aktiverad!</h3>
+            <p>Din licensnyckel har sparats. Du har nu tillgång till allt premium-innehåll.</p>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <form class="license-form" id="licenseForm">
+            <div class="form-group">
+                <label for="licenseKey" class="form-label">Licensnyckel</label>
+                <input 
+                    type="text" 
+                    id="licenseKey" 
+                    class="license-input" 
+                    placeholder="Ange din licensnyckel" 
+                    maxlength="50"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="submit-button" id="submitBtn">
+                Aktivera Licens
+            </button>
+        </form>
+
+        <div class="info-box">
+            <h3>💡 Vad ingår i Premium?</h3>
+            <ul>
+                <li>Alla 15 kapitel med djupgående innehåll</li>
+                <li>Interaktiva verktyg (matchprotokoll, träningsjournal, fusklapp)</li>
+                <li>Tillgång på alla 6 språk (Svenska, English, Français, Español, Deutsch, ไทย)</li>
+                <li>Årliga uppdateringar och nytt innehåll</li>
+                <li>Obegränsad åtkomst så länge licensen är aktiv</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
+            <h3>🛒 Har du inte köpt boken än?</h3>
+            <p>Besök vår köpsida för att få din licensnyckel.</p>
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="kop.html" style="display: inline-block; padding: 12px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: 700;">
+                    Gå till Köpsidan
+                </a>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← Tillbaka till startsidan</a>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('licenseForm');
+        const licenseInput = document.getElementById('licenseKey');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Auto-format license key as user types
+        licenseInput.addEventListener('input', function(e) {
+            let value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+            
+            // Auto-add dashes in PETANQUE-XXXX-XXXX-XXXX format
+            if (value.length > 8) {
+                value = value.substring(0, 8) + '-' + value.substring(8);
+            }
+            if (value.length > 13) {
+                value = value.substring(0, 13) + '-' + value.substring(13);
+            }
+            if (value.length > 18) {
+                value = value.substring(0, 18) + '-' + value.substring(18);
+            }
+            if (value.length > 23) {
+                value = value.substring(0, 23);
+            }
+            
+            e.target.value = value;
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const key = licenseInput.value.trim().toUpperCase();
+            
+            // Hide previous messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Basic validation
+            if (key.length < 10) {
+                errorMessage.textContent = '❌ Licensnyckeln är för kort. Kontrollera att du angett hela nyckeln.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+            
+            // Check if key format is valid (basic check)
+            if (!key.startsWith('PETANQUE-') && !key.includes('-')) {
+                errorMessage.textContent = '⚠️ Licensnyckeln verkar inte ha rätt format. Kontrollera att du kopierade hela nyckeln från ditt email.';
+                errorMessage.style.display = 'block';
+                // But still allow it to be saved
+            }
+            
+            // Disable button during processing
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Aktiverar...';
+            
+            // Simulate activation delay
+            setTimeout(() => {
+                try {
+                    // Save license key to localStorage
+                    localStorage.setItem('petanque_premium_key', key);
+                    
+                    // Save activation timestamp
+                    const now = new Date().toISOString();
+                    localStorage.setItem('petanque_last_activation', now);
+                    localStorage.setItem('petanque_first_activation', now);
+                    
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    licenseInput.value = '';
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Aktivera Licens';
+                    
+                    // Redirect after 2 seconds
+                    setTimeout(() => {
+                        // Check if there's a return URL from premium content
+                        const returnUrl = sessionStorage.getItem('petanque_return_url');
+                        if (returnUrl) {
+                            sessionStorage.removeItem('petanque_return_url');
+                            window.location.href = returnUrl;
+                        } else {
+                            window.location.href = 'innehall.html';
+                        }
+                    }, 2000);
+                    
+                } catch (error) {
+                    errorMessage.textContent = '❌ Ett fel uppstod vid sparandet. Kontrollera att cookies/localStorage är aktiverat i din webbläsare.';
+                    errorMessage.style.display = 'block';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Aktivera Licens';
+                }
+            }, 800);
+        });
+
+        // Check if user already has a license
+        window.addEventListener('load', () => {
+            const existingKey = localStorage.getItem('petanque_premium_key');
+            if (existingKey) {
+                errorMessage.textContent = 'ℹ️ Du har redan en aktiv licensnyckel. Om du vill byta till en ny nyckel, ange den nedan.';
+                errorMessage.style.display = 'block';
+                errorMessage.style.background = '#d1ecf1';
+                errorMessage.style.borderLeftColor = '#17a2b8';
+                errorMessage.style.color = '#0c5460';
+            }
+        });
+    </script>
+</body>
+</html>

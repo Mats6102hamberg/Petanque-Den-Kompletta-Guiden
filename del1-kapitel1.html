@@ -5,14 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapitel 1: Vad är boule pétanque? - Pétanque Guiden</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>    <script>
-        // License protection - Check immediately before page loads
-        (function() {
-            'use strict';
-            
+    <script src="script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <a href="innehall.html" class="toc-button">Innehåll</a>
+    <div class="language-switcher">
+        <a href="del1-kapitel1.html" class="active" title="Svenska">🇸🇪</a>
+        <a href="en/part1-chapter1.html" title="English">🇬🇧</a>
+        <a href="fr/partie1-chapitre1.html" title="Français">🇫🇷</a>
+    </div>
+    
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">Del 1 • Kapitel 1</div>
@@ -49,29 +78,29 @@
             
             <h2>Skillnader mellan pétanque, boule och boccia/bocce</h2>
             
-            <h3>Boule – ett paraplynamn</h3>
-            <p>Begreppet <em>boule</em> används i Sverige som ett paraplynamn för alla spel där man kastar klot mot en liten kula, men internationellt avser boules ofta den franska kategorin som omfattar jeu provençal, pétanque och liknande spel. Det är alltså mer korrekt att säga att pétanque är en gren av klotspel-familjen (boules-familjen).</p>
+            <h3>Boule – En samlingsbeteckning</h3>
+            <p>Termen <em>boule</em> används i Sverige som samlingsbeteckning för alla spel där man kastar bollar mot en liten boll, men internationellt avser boules ofta den franska kategorin som inkluderar jeu provençal, pétanque och liknande spel. Så det är mer korrekt att säga att pétanque är en gren av boules-familjen.</p>
             
-            <h3>Bocce – den italienska varianten</h3>
+            <h3>Bocce – Den italienska varianten</h3>
             <p><strong>Bocce</strong> (ibland kallat boccia) är en italiensk variant. Skillnaderna är tydliga:</p>
             
             <div class="info-box">
                 <h4>Bocce vs Pétanque:</h4>
                 <ul>
-                    <li><strong>Plan:</strong> Bocce spelas på en längre plan med plankor (ca 28 m), medan pétanque spelas på kortare banor (6-10 m från cirkeln)</li>
+                    <li><strong>Bana:</strong> Bocce spelas på en längre bana med plankor (cirka 28 m), medan pétanque spelas på kortare banor (6-10 m från cirkeln)</li>
                     <li><strong>Klot:</strong> Bocce-klot är större och tyngre (ofta av plast eller trä), medan pétanque använder metallklot</li>
-                    <li><strong>Teknik:</strong> I bocce får spelarna ta ansatssteg och bollen rullas med handflatan uppåt, medan pétanque-spelare måste stå stilla och kasta med handflatan nedåt</li>
-                    <li><strong>Antal klot:</strong> Bocce använder fyra klot per spelare och man kan ha upp till åtta spelare på planen, jämfört med tre klot per spelare i pétanque (i singel/dubbel)</li>
+                    <li><strong>Teknik:</strong> I bocce får spelarna ta ansteg och bollen rullas med handflatan uppåt, medan pétanque-spelare måste stå stilla och kasta med handflatan nedåt</li>
+                    <li><strong>Antal klot:</strong> Bocce använder fyra klot per spelare och man kan ha upp till åtta spelare på planen, jämfört med tre boules per spelare i pétanque (i singel/dubbel)</li>
                 </ul>
             </div>
             
-            <h3>Boccia – paralympiskt klotspel</h3>
-            <p><strong>Boccia</strong> är ett paralympiskt klotspel avsett för personer med svåra rörelsenedsättningar. Spelet är besläktat med bocce men spelas på en plan inomhus på 12,5 × 6 m med släta skinnbollar. Man kan kasta med hand, fot eller med ramp om spelaren inte kan kasta själv.</p>
+            <h3>Boccia – Paralympisk bollsport</h3>
+            <p><strong>Boccia</strong> är en paralympisk bollsport avsedd för personer med svåra rörelsehinder. Spelet är besläktat med bocce men spelas på en inomhusbana på 12,5 × 6 m med mjuka läderbollar. Man kan kasta med hand, fot eller med en ramp om spelaren inte kan kasta själv.</p>
             
-            <p>Boccia spelas individuellt, i par eller tremannalag; varje spelare har sex bollar per omgång och poäng ges för varje boll som ligger närmare jacken än motståndarens närmaste boll. Att jämföra: pétanque spelas oftast utomhus, med metallklot och kräver att spelaren står i en cirkel med båda fötterna i marken.</p>
+            <p>Boccia spelas individuellt, i par eller tremalag; varje spelare har sex bollar per omgång och poäng ges för varje boll som är närmare lillen än motståndarens närmaste boll. För att jämföra: pétanque spelas vanligen utomhus, med metallklot och kräver att spelaren står i en cirkel med båda fötterna på marken.</p>
             
             <div class="warning-box">
-                <p><strong>För dig som nybörjare</strong> räcker det att känna till att boccia är en paraidrott medan bocce och pétanque är olika historiska klotspel.</p>
+                <p><strong>För dig som nybörjare</strong> räcker det att veta att boccia är en parasport medan bocce och pétanque är olika historiska boules-spel.</p>
             </div>
             
             <div class="navigation">

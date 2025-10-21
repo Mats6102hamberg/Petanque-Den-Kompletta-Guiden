@@ -44,12 +44,16 @@ All pages include a language switcher in the top-right corner allowing seamless 
 - 🇫🇷 Français
 
 ### ✅ Completed:
-- Swedish version: All 14 chapters + 2 appendices
-- English: Cover page, table of contents, Chapter 1
-- French: Cover page, table of contents, Chapter 1
+- Swedish version: All 16 chapters + interactive tools
+- English: Cover page, table of contents, multiple chapters
+- French: Cover page, table of contents, multiple chapters
+- Spanish: Complete translation with all chapters
+- German & Thai: Partial translations
+- Interactive tools: Match protocol, training journal, cheat sheet
 - Language switcher on all pages
 - Responsive design
 - Professional typography
+- License system with localStorage
 
 ### 🚀 To View:
 1. Open `index.html` in your web browser
@@ -97,10 +101,29 @@ To enable real Gumroad license verification, you need to:
 
 ### 📖 Book Structure:
 **Part 1: Basics for Beginners** (Chapters 1-4)
+- Chapter 1: What is Pétanque?
+- Chapter 2: Equipment – Choosing the Right Boules
+- Chapter 3: Basic Techniques
+- Chapter 4: Game Strategy for Beginners
+
 **Part 2: Advanced Techniques for Pros** (Chapters 5-8)
+- Chapter 5-8: Advanced techniques and tactics
+
 **Part 3: Pétanque as a Lifestyle** (Chapters 9-10)
-**Part 4: In-Depth Study and Development** (Chapters 11-14)
-**Appendices:** Equipment Guide & Complete Rulebook
+- Chapter 9-10: Culture and community
+
+**Part 4: In-Depth Study and Development** (Chapters 11-16)
+- Chapters 11-14: In fordjupning.html
+- Chapter 15: Leading a Pétanque Team (del4-kapitel15.html)
+- Chapter 16: Ball Physics and Court Reading (del4-kapitel16.html)
+
+**Interactive Tools:**
+- matchprotokoll.html – Match protocol with automatic statistics (FREE)
+- traningsjournal.html – Training journal (FREE)
+- fusklapp.html – Quick reference cheat sheet
+- ordlista.html – Glossary
+- regler.html – Official rules
+- utrustning.html – Equipment guide
 
 ### 🎨 Features:
 - Beautiful book cover design

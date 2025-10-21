@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anexo B: Reglamento Completo - Guía de Petanca</title>
-    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../simple-license.js"></script>
+    <script src="../script.js" defer></script>
+    <style>
+        .language-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px; }
+        .language-switcher a { font-size: 28px; text-decoration: none; filter: grayscale(50%); transition: transform .2s; }
+        .language-switcher a:hover { transform: scale(1.15); filter: grayscale(0%); }
+        .language-switcher a.active { filter: grayscale(0%); transform: scale(1.05); }
+    </style>    
 </head>
 <body>
     <a href="../es/contenido.html" class="toc-button">Contenido</a>
+    <div class="language-switcher">
+        <a href="../regler.html" title="Svenska">🇸🇪</a>
+        <a href="../en/rules.html" title="English">🇬🇧</a>
+        <a href="../fr/reglement.html" title="Français">🇫🇷</a>
+        <a href="regler.html" class="active" title="Español">🇪🇸</a>
+    </div>
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">Anexo B</div>
@@ -16,267 +30,266 @@
         </div>
         
         <div class="content">
-            <h2>Inledning</h2>
-            <p>Pétanque är en del av boule-familjen – de franska spel där man kastar klot mot en liten träkula. Spelet är folkligt, socialt och precisionskrävande. Många lär sig grunderna på några minuter, men reglerna har en rik detaljeringsgrad för tävlingar.</p>
+            <h2>Introducción</h2>
+            <p>La petanca forma parte de la familia de la “boule”, los juegos franceses en los que se lanzan bolas hacia una pequeña bola de madera. Es un deporte popular, social y de gran precisión. Muchos aprenden lo básico en pocos minutos, pero el reglamento tiene un amplio nivel de detalle para la competición.</p>
             
             <div class="highlight-box">
-                <h2>⚡ 10 regler som löser 90% av situationerna</h2>
-                <p>Lär dig dessa regler först – de täcker de vanligaste situationerna i spelet:</p>
+                <h2>⚡ 10 reglas que resuelven el 90% de las situaciones</h2>
+                <p>Aprende primero estas reglas: cubren las situaciones más comunes del juego.</p>
                 
                 <table>
                     <tr>
                         <th>#</th>
-                        <th>Regel</th>
-                        <th>Vad det betyder</th>
+                        <th>Regla</th>
+                        <th>Qué significa</th>
                     </tr>
                     <tr>
                         <td><strong>1</strong></td>
-                        <td>Båda fötterna i cirkeln</td>
-                        <td>Du måste stå med båda fötterna helt inom cirkeln tills klotet landat. Annars är kastet ogiltigt.</td>
+                        <td>Ambos pies dentro del círculo</td>
+                        <td>Debes permanecer con ambos pies totalmente dentro del círculo hasta que la bola haya aterrizado. De lo contrario, el lanzamiento es inválido.</td>
                     </tr>
                     <tr>
                         <td><strong>2</strong></td>
-                        <td>Lillen 6-10 meter</td>
-                        <td>Lillen måste kastas minst 6m och max 10m från cirkeln. Minst 1m från hinder/gräns.</td>
+                        <td>Bolichín a 6–10 metros</td>
+                        <td>El bolichín debe lanzarse a al menos 6 m y como máximo 10 m desde el círculo. Mínimo 1 m de obstáculos/límites.</td>
                     </tr>
                     <tr>
                         <td><strong>3</strong></td>
-                        <td>Laget utan närmaste klot kastar</td>
-                        <td>Det lag som INTE har klotet närmast lillen fortsätter kasta tills de får närmaste klot eller slut på klot.</td>
+                        <td>Lanza el equipo que no tiene la bola más cercana</td>
+                        <td>El equipo que NO tiene la bola más cercana al bolichín continúa lanzando hasta conseguir la más cercana o quedarse sin bolas.</td>
                     </tr>
                     <tr>
                         <td><strong>4</strong></td>
-                        <td>Poäng = antal klot närmare</td>
-                        <td>Efter mènen räknas hur många av dina klot som ligger närmare lillen än motståndarens närmaste. Det är dina poäng.</td>
+                        <td>Puntos = número de bolas más cercanas</td>
+                        <td>Tras la mène (ronda), cuenta cuántas de tus bolas están más cerca del bolichín que la más cercana del rival. Esos son tus puntos.</td>
                     </tr>
                     <tr>
                         <td><strong>5</strong></td>
-                        <td>Första till 13 vinner</td>
-                        <td>Matchen spelas till ett lag når 13 poäng. Ingen övertid – första till 13 vinner direkt.</td>
+                        <td>El primero a 13 gana</td>
+                        <td>El partido se juega hasta que un equipo alcanza 13 puntos. No hay prórroga: el primero en 13 gana.</td>
                     </tr>
                     <tr>
                         <td><strong>6</strong></td>
-                        <td>Klot/lillen över gräns = dött</td>
-                        <td>Om ett klot eller lillen helt korsar gränsen/går utanför spelområdet är det dött och tas bort.</td>
+                        <td>Bola/bolichín fuera de límites = muerto</td>
+                        <td>Si una bola o el bolichín cruzan completamente el límite/área de juego, quedan muertos y se retiran.</td>
                     </tr>
                     <tr>
                         <td><strong>7</strong></td>
-                        <td>Död lillen = ny mène</td>
-                        <td>Om lillen blir död (över gräns/osynlig) och inget lag har klot kvar, börjar ny mène från samma cirkel. Samma lag kastar lillen.</td>
+                        <td>Bolichín muerto = nueva mène</td>
+                        <td>Si el bolichín queda muerto (fuera de límites/invisible) y ningún equipo tiene bolas restantes, comienza una nueva mène desde el mismo círculo. El mismo equipo lanza el bolichín.</td>
                     </tr>
                     <tr>
                         <td><strong>8</strong></td>
-                        <td>Mät bara vid tvivel</td>
-                        <td>Mät endast när det är omöjligt att se med ögat vilket klot som ligger närmast. Använd godkänt mätinstrument.</td>
+                        <td>Medir solo en caso de duda</td>
+                        <td>Mide solo cuando es imposible determinar a simple vista qué bola está más cerca. Usa un instrumento homologado.</td>
                     </tr>
                     <tr>
                         <td><strong>9</strong></td>
-                        <td>Rör inte klot innan mätning</td>
-                        <td>Flytta aldrig klot eller lillen innan båda lagen är överens om poängen. Annars förlorar du mènen.</td>
+                        <td>No muevas bolas antes de medir</td>
+                        <td>No muevas las bolas ni el bolichín antes de que ambos equipos estén de acuerdo con la puntuación. De lo contrario, pierdes la mène.</td>
                     </tr>
                     <tr>
                         <td><strong>10</strong></td>
-                        <td>1 minut per kast</td>
-                        <td>I tävling har du max 1 minut från att det blev din tur tills du kastar. Annars varning/diskvalificering.</td>
+                        <td>1 minuto por lanzamiento</td>
+                        <td>En competición tienes como máximo 1 minuto desde que te toca hasta lanzar. Si no, advertencia/descalificación.</td>
                     </tr>
                 </table>
                 
-                <p><strong>💡 Protip:</strong> Dessa 10 regler täcker nästan alla situationer i socialt spel. Läs vidare för specialfall och tävlingsregler!</p>
+                <p><strong>💡 Consejo:</strong> Estos 10 principios cubren casi todas las situaciones en juego social. Sigue leyendo para casos especiales y reglas de competición.</p>
             </div>
             
-            <h2>Grundläggande regler och spelidén</h2>
+            <h2>Reglas básicas y concepto de juego</h2>
             
-            <h3>Utrustning</h3>
+            <h3>Equipamiento</h3>
             <div class="highlight-box">
-                <h4>Klot (boule):</h4>
+                <h4>Bolas (boules):</h4>
                 <ul>
-                    <li>Tillverkad av metall</li>
-                    <li>Väger 650–800 g</li>
-                    <li>Diameter mellan 70,5 och 80 mm</li>
-                    <li>Yngre spelare får använda mindre klot (minst 600 g och 65 mm)</li>
-                    <li>Ska ha ingraverad vikt och tillverkarens märke</li>
+                    <li>Fabricadas en metal</li>
+                    <li>Peso: 650–800 g</li>
+                    <li>Diámetro: 70,5–80 mm</li>
+                    <li>Para jugadores jóvenes se permiten bolas más pequeñas (mín. 600 g y 65 mm)</li>
+                    <li>Deben llevar grabado el peso y la marca del fabricante</li>
                 </ul>
                 
-                <h4>Cochonnet/lillen:</h4>
+                <h4>Cochonnet/bolichín:</h4>
                 <ul>
-                    <li>Liten kula som är målet</li>
-                    <li>Tillverkad av trä eller godkänt syntetiskt material</li>
-                    <li>Diameter runt 30 mm</li>
-                    <li>Väger 10–18 g</li>
-                    <li>Får inte vara magnetisk</li>
+                    <li>Pequeña bola objetivo</li>
+                    <li>De madera o material sintético homologado</li>
+                    <li>Diámetro alrededor de 30 mm</li>
+                    <li>Peso: 10–18 g</li>
+                    <li>No puede ser magnético</li>
                 </ul>
             </div>
             
-            <h3>Spelformer och laguppställning</h3>
+            <h3>Modalidades de juego y alineaciones</h3>
             <table>
                 <tr>
-                    <th>Spelform</th>
-                    <th>Antal spelare per lag</th>
-                    <th>Antal klot per spelare</th>
+                    <th>Modalidad</th>
+                    <th>Jugadores por equipo</th>
+                    <th>Bolas por jugador</th>
                 </tr>
                 <tr>
-                    <td><strong>Singel</strong></td>
+                    <td><strong>Individual</strong></td>
                     <td>1</td>
                     <td>3</td>
                 </tr>
                 <tr>
-                    <td><strong>Dubbel</strong></td>
+                    <td><strong>Doble</strong></td>
                     <td>2</td>
                     <td>3</td>
                 </tr>
                 <tr>
-                    <td><strong>Trippel</strong></td>
+                    <td><strong>Triple</strong></td>
                     <td>3</td>
                     <td>2</td>
                 </tr>
             </table>
             
-            <h3>Spelplan och bana</h3>
+            <h3>Terreno de juego y pista</h3>
             <ul>
-                <li><strong>Internationella banor:</strong> Minst 15 × 4 meter</li>
-                <li><strong>Nationella/regionala banor:</strong> 12 × 3 meter</li>
-                <li>Gränser (linjer eller snören) markerar spelplanens längd</li>
-                <li>Om ett klot eller lillen helt korsar gränsen blir det dött</li>
+                <li><strong>Pistas internacionales:</strong> mínimo 15 × 4 metros</li>
+                <li><strong>Pistas nacionales/regionales:</strong> 12 × 3 metros</li>
+                <li>Las líneas (o cuerdas) delimitan el terreno de juego</li>
+                <li>Si una bola o el bolichín cruza completamente el límite, queda muerto</li>
             </ul>
             
-            <h3>Start av spelet</h3>
+            <h3>Inicio del juego</h3>
             <div class="info-box">
                 <ol>
-                    <li>Lagen singlar slant för att välja bana eller startkast</li>
-                    <li>Det vinnande laget ritar en cirkel på marken (diameter 35–50 cm)</li>
-                    <li>Cirkeln måste vara minst 1 m från hinder och 1,5 m från annan cirkel eller lillen</li>
-                    <li>Första spelaren kastar lillen 6–10 m bort</li>
-                    <li>Lillen ska ligga minst 50 cm från hinder och 1,5 m från andra lillen eller cirklar</li>
-                    <li>Om kastet inte blir godkänt får motståndaren placera lillen på en giltig plats</li>
+                    <li>Los equipos echan a suertes para elegir pista o primer lanzamiento</li>
+                    <li>El equipo ganador dibuja un círculo en el suelo (diámetro 35–50 cm)</li>
+                    <li>El círculo debe estar al menos a 1 m de obstáculos y a 1,5 m de otro círculo o del bolichín</li>
+                    <li>El primer jugador lanza el bolichín a 6–10 m</li>
+                    <li>El bolichín debe quedar al menos a 50 cm de obstáculos y a 1,5 m de otros bolichines o círculos</li>
+                    <li>Si el lanzamiento no es válido, el oponente coloca el bolichín en una posición válida</li>
                 </ol>
             </div>
             
-            <h3>Kastteknik</h3>
+            <h3>Técnica de lanzamiento</h3>
             <div class="highlight-box">
-                <p><strong>Viktiga regler:</strong></p>
+                <p><strong>Reglas importantes:</strong></p>
                 <ul>
-                    <li>Spelaren står med båda fötterna i cirkeln</li>
-                    <li>Fötterna får inte lämna marken förrän klotets landning</li>
-                    <li>Ett klot kastas med en mjuk pendelrörelse</li>
-                    <li>Under ett kast får du inte lämna cirkeln</li>
-                    <li>Ingen del av kroppen får röra marken utanför cirkeln</li>
-                    <li>För spelare med funktionsnedsättning räcker det att ett ben är i cirkeln</li>
-                    <li>Rullstolsspelare ska ha ett hjul i cirkeln</li>
+                    <li>El jugador permanece con ambos pies dentro del círculo</li>
+                    <li>Los pies no pueden abandonar el suelo hasta que la bola aterrice</li>
+                    <li>La bola se lanza con un movimiento pendular suave</li>
+                    <li>Durante un lanzamiento no puedes salir del círculo</li>
+                    <li>Ninguna parte del cuerpo puede tocar fuera del círculo</li>
+                    <li>Para jugadores con discapacidad basta con una pierna en el círculo</li>
+                    <li>Para jugadores en silla de ruedas, una rueda dentro del círculo</li>
                 </ul>
             </div>
             
-            <h3>Spelflöde och poängräkning</h3>
+            <h3>Desarrollo del juego y anotación</h3>
             <ol>
-                <li>Laget som kastade lillen spelar sitt första klot</li>
-                <li>Därefter spelar det lag som inte har klotet närmast lillen</li>
-                <li>Detta fortsätter tills alla klot har kastats</li>
-                <li>När alla klot har kastats räknas poängen</li>
-                <li>Laget med klotet närmast lillen får en poäng för varje klot som ligger närmare lillen än motståndarens närmaste klot</li>
-                <li>Ett vanligt parti går till <strong>13 poäng</strong></li>
-                <li>I kortare turneringar kan man spela till 11</li>
+                <li>El equipo que lanzó el bolichín juega su primera bola</li>
+                <li>Después juega el equipo que no tiene la bola más cercana al bolichín</li>
+                <li>Esto continúa hasta que todas las bolas han sido lanzadas</li>
+                <li>Cuando todas las bolas se han lanzado, se cuentan los puntos</li>
+                <li>El equipo con la bola más cercana obtiene un punto por cada bola que esté más cerca que la bola más cercana del rival</li>
+                <li>Una partida estándar se juega a <strong>13 puntos</strong></li>
+                <li>En torneos cortos se puede jugar a 11</li>
             </ol>
             
-            <h2>Avancerade regler</h2>
+            <h2>Reglas avanzadas</h2>
             
-            <h3>Regelbundna kast av lillen</h3>
+            <h3>Lanzamientos reglamentarios del bolichín</h3>
             <div class="highlight-box">
-                <h4>Avstånd:</h4>
+                <h4>Distancia:</h4>
                 <ul>
-                    <li>Lillen måste kastas 6–10 m för vuxna</li>
-                    <li>Kortare avstånd får användas i juniorklasser</li>
-                    <li>Ligga minst 50 cm från hinder</li>
-                    <li>1,5 m från annan lillen/cirkel</li>
+                    <li>El bolichín debe lanzarse a 6–10 m para adultos</li>
+                    <li>En categorías junior pueden usarse distancias menores</li>
+                    <li>Debe quedar al menos a 50 cm de obstáculos</li>
+                    <li>Y a 1,5 m de otro bolichín/círculo</li>
                 </ul>
                 
-                <h4>Synlighet:</h4>
-                <p>Den måste vara synlig från cirkeln när spelaren står upprätt. Domaren avgör vid tvist.</p>
+                <h4>Visibilidad:</h4>
+                <p>Debe ser visible desde el círculo con el jugador de pie erguido. El árbitro decide en caso de disputa.</p>
                 
-                <h4>Placering efter ogiltigt kast:</h4>
-                <p>Om lillen kastas ogiltigt får motståndarlaget placera den på giltig plats. Lagen har en minut på sig att kasta respektive placera lillen.</p>
+                <h4>Colocación tras lanzamiento no válido:</h4>
+                <p>Si el bolichín se lanza de forma no válida, el equipo oponente puede colocarlo en una posición válida. Los equipos disponen de un minuto para lanzar o colocar el bolichín.</p>
             </div>
             
-            <h3>Dead ball – döda klot och död lillen</h3>
+            <h3>Bola muerta – bolas muertas y bolichín muerto</h3>
             
-            <h4>Död lillen:</h4>
-            <p>Lillen är död om den:</p>
+            <h4>Bolichín muerto:</h4>
+            <p>El bolichín está muerto si:</p>
             <ul>
-                <li>Helt lämnar banan</li>
-                <li>Hamnar mindre än 3 m eller mer än 20 m från cirkeln</li>
-                <li>Inte längre syns från cirkeln (om den inte maskeras av ett klot)</li>
-                <li>Förloras</li>
-                <li>Ett out-of-bounds-område ligger mellan cirkeln och lillen</li>
+                <li>Abandona completamente la pista</li>
+                <li>Queda a menos de 3 m o a más de 20 m del círculo</li>
+                <li>Deja de ser visible desde el círculo (si no está tapado por una bola)</li>
+                <li>Se pierde</li>
+                <li>Existe una zona fuera de límites entre el círculo y el bolichín</li>
             </ul>
             
             <div class="info-box">
-                <h4>Konsekvenser:</h4>
+                <h4>Consecuencias:</h4>
                 <ul>
-                    <li>Om båda lagen har klot kvar blir omgången ogiltig</li>
-                    <li>Ny omgång startas av laget som vann föregående omgång</li>
-                    <li>Om endast ett lag har klot kvar får de poäng motsvarande antal återstående klot</li>
+                    <li>Si ambos equipos tienen bolas restantes, la mène queda nula</li>
+                    <li>La nueva mène la inicia el equipo que ganó la anterior</li>
+                    <li>Si solo un equipo tiene bolas, anota tantos puntos como bolas le queden</li>
                 </ul>
             </div>
             
-            <h4>Döda klot:</h4>
+            <h4>Bolas muertas:</h4>
             <ul>
-                <li>Ett klot blir dött när det lämnar banan helt</li>
-                <li>Om det bara ligger på linjen är det fortfarande giltigt</li>
-                <li>Döda klot ska omedelbart tas bort</li>
-                <li>Görs det inte anses klotet levande när motståndaren kastar</li>
+                <li>Una bola queda muerta cuando sale completamente de la pista</li>
+                <li>Si solo toca la línea, sigue siendo válida</li>
+                <li>Las bolas muertas deben retirarse inmediatamente</li>
+                <li>Si no se retiran, se consideran vivas cuando el oponente lanza</li>
             </ul>
             
-            <h3>Tidsgränser</h3>
+            <h3>Límites de tiempo</h3>
             <div class="warning-box">
-                <p>När lillen kastats har varje spelare <strong>max en minut</strong> att kasta sitt klot. Tiden börjar när föregående klot eller lillen har stannat, eller efter ett färdigmätt poäng.</p>
-                
-                <p>Överskrider spelaren tiden ger domaren en varning, och vid upprepning diskvalificeras kastet.</p>
+                <p>Una vez lanzado el bolichín, cada jugador tiene <strong>como máximo un minuto</strong> para lanzar su bola. El tiempo empieza cuando la bola anterior o el bolichín se detienen, o tras finalizar una medición.</p>
+                <p>Si el jugador excede el tiempo, el árbitro dará una advertencia y, en caso de repetición, el lanzamiento será descalificado.</p>
             </div>
             
-            <h3>Mäta och bestämma poäng</h3>
+            <h3>Medición y determinación de puntos</h3>
             <ul>
-                <li>För att mäta vilket klot som ligger närmast används en mätanordning (måttband, skjutmått)</li>
-                <li>Mätningen görs av spelaren som just kastat eller en lagkamrat</li>
-                <li>Motståndaren har alltid rätt att kontrollmäta</li>
-                <li>Fötter får aldrig användas som mätinstrument</li>
-                <li>Vid officiella tävlingar kan domaren vara den enda som får mäta</li>
+                <li>Para medir qué bola está más cerca se usa un dispositivo de medición (cinta métrica, calibre)</li>
+                <li>La medición la realiza el jugador que acaba de lanzar o un compañero</li>
+                <li>El oponente siempre tiene derecho a verificar</li>
+                <li>Los pies nunca pueden usarse como instrumento de medida</li>
+                <li>En competiciones oficiales, el árbitro puede ser el único autorizado para medir</li>
             </ul>
             
-            <h3>Disciplin och fair play</h3>
+            <h3>Disciplina y fair play</h3>
             <div class="highlight-box">
-                <h4>Straff för förseningar:</h4>
+                <h4>Sanciones por retrasos:</h4>
                 <ul>
-                    <li>Ett lag som inte är på plats inom 15 minuter får en poängs straff</li>
-                    <li>Ytterligare poäng dras för varje fem minuter av fördröjning</li>
-                    <li>Efter 30 minuter diskvalificeras laget</li>
+                    <li>Un equipo que no está presente dentro de 15 minutos recibe penalización de un punto</li>
+                    <li>Se restan puntos adicionales por cada cinco minutos de retraso</li>
+                    <li>Tras 30 minutos, el equipo queda descalificado</li>
                 </ul>
                 
-                <h4>Kort-system:</h4>
+                <h4>Sistema de tarjetas:</h4>
                 <ul>
-                    <li><strong>Gula kort:</strong> Mindre förseelser som tidsöverträdelse</li>
-                    <li><strong>Orange kort:</strong> Ett klot diskvalificeras</li>
-                    <li><strong>Rött kort:</strong> Spelaren utesluts från matchen</li>
+                    <li><strong>Tarjeta amarilla:</strong> Infracciones menores como exceder el tiempo</li>
+                    <li><strong>Tarjeta naranja:</strong> Se descalifica una bola</li>
+                    <li><strong>Tarjeta roja:</strong> El jugador es expulsado del partido</li>
                 </ul>
             </div>
             
-            <h2>Specialregler och etikett</h2>
+            <h2>Reglas especiales y etiqueta</h2>
             
-            <h3>Lillar</h3>
-            <p>För att få användas i tävling måste lillen både vara godkänd av FIPJP och uppfylla storleks- och viktkraven (29–31 mm i diameter och 10–18 g i vikt).</p>
+            <h3>Bolichines</h3>
+            <p>Para ser utilizado en competición, el bolichín debe estar homologado por la FIPJP y cumplir los requisitos de tamaño y peso (29–31 mm de diámetro y 10–18 g de peso).</p>
             
-            <h3>Antidoping</h3>
-            <p>Pétanque följer Världsantidopingkodens regler. Licensierade spelare måste vara medvetna om vad de stoppar i sig, även receptfria mediciner och kosttillskott.</p>
+            <h3>Antidopaje</h3>
+            <p>La petanca sigue el Código Mundial Antidopaje. Los jugadores con licencia deben ser conscientes de lo que consumen, incluidos medicamentos sin receta y complementos.</p>
             
-            <h3>God etikett</h3>
+            <h3>Buena etiqueta</h3>
             <ul>
-                <li>Stå still och tyst när motståndaren kastar</li>
-                <li>Gå inte framför spelaren som kastar</li>
-                <li>Använd godkända mätinstrument</li>
-                <li>Vänta med att ta bort klot innan båda lagen är överens om poängen</li>
-                <li>Visa respekt mot motståndare, publik och domare</li>
+                <li>Permanece quieto y en silencio cuando el rival lanza</li>
+                <li>No pases por delante del jugador que lanza</li>
+                <li>Usa instrumentos de medición homologados</li>
+                <li>Espera a retirar las bolas hasta que ambos equipos acuerden la puntuación</li>
+                <li>Muestra respeto hacia rivales, público y árbitro</li>
             </ul>
             
             <div class="navigation">
-                <a href="utrustning.html" class="nav-btn secondary">← Föregående</a>
-                <a href="ordlista.html" class="nav-btn">Nästa: Ordförklaringar →</a>
+                <a href="utrustning.html" class="nav-btn secondary">← Anterior: Guía de equipamiento</a>
+                <a href="ordlista.html" class="nav-btn">Siguiente: Glosario →</a>
             </div>
         </div>
     </div>

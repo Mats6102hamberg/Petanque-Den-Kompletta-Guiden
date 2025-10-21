@@ -245,324 +245,324 @@
 </head>
 <body>
     <a href="../es/contenido.html" class="toc-button">Contenido</a>
-    <button class="print-btn" onclick="window.print()">🖨️ Skriv ut</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
     
     <div class="journal">
         <div class="header">
-            <h1>📊 PÉTANQUE TRÄNINGSJOURNAL</h1>
-            <p>Documenta tu desarrollo - Från nybörjare till mästare</p>
+            <h1>📊 DIARIO DE ENTRENAMIENTO DE PÉTANQUE</h1>
+            <p>Documenta tu desarrollo — de principiante a maestro</p>
         </div>
         
         <div class="info-box">
-            <h3>📝 Hur du använder träningsjournalen:</h3>
+            <h3>📝 Cómo utilizar el diario de entrenamiento:</h3>
             <ul>
-                <li><strong>Fyll i efter varje träningspass</strong> - Dokumentera direkt medan minnet är färskt</li>
-                <li><strong>Var ärlig och specifik</strong> - Skriv både framgångar och utmaningar</li>
-                <li><strong>Sätt konkreta mål</strong> - Vad vill du förbättra nästa gång?</li>
-                <li><strong>Granska regelbundet</strong> - Titta tillbaka varje månad för att se din utveckling</li>
-                <li><strong>Skriv ut eller spara digitalt</strong> - Använd som PDF eller fyll i på papper</li>
+                <li><strong>Rellena después de cada sesión</strong> — documenta de inmediato mientras la memoria está fresca</li>
+                <li><strong>Sé honesto y específico</strong> — escribe tanto aciertos como desafíos</li>
+                <li><strong>Fija objetivos concretos</strong> — ¿qué quieres mejorar para la próxima vez?</li>
+                <li><strong>Revisa regularmente</strong> — vuelve cada mes para ver tu progreso</li>
+                <li><strong>Imprime o guarda en digital</strong> — úsalo como PDF o rellénalo en papel</li>
             </ul>
         </div>
         
-        <!-- Träningspass 1 -->
+        <!-- Sesión de entrenamiento 1 -->
         <div class="session">
             <div class="session-header">
                 <div class="field">
-                    <label>📅 Datum:</label>
+                    <label>📅 Fecha:</label>
                     <input type="date">
                 </div>
                 <div class="field">
-                    <label>⏱️ Tid (min):</label>
+                    <label>⏱️ Tiempo (min):</label>
                     <input type="number" placeholder="45">
                 </div>
                 <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
+                    <label>🌤️ Clima/Superficie:</label>
                     <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
+                        <option>Soleado - Grava</option>
+                        <option>Nublado - Grava</option>
+                        <option>Lluvia - Grava</option>
+                        <option>Soleado - Asfalto</option>
+                        <option>Nublado - Asfalto</option>
+                        <option>Soleado - Arena</option>
                     </select>
                 </div>
             </div>
             
             <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
+                <h4>🎯 Enfoque de hoy (marca lo que entrenaste):</h4>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
                         <input type="checkbox" id="point1">
-                        <label for="point1">Point/Läggning</label>
+                        <label for="point1">Point/Colocación</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="skott1">
-                        <label for="skott1">Skott/Tireur</label>
+                        <label for="skott1">Tiro/Tireur</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="donnee1">
-                        <label for="donnee1">Donnée-precision</label>
+                        <label for="donnee1">Precisión de donnée</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="backspin1">
-                        <label for="backspin1">Backspin/Kontroll</label>
+                        <label for="backspin1">Backspin/Control</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="match1">
-                        <label for="match1">Matchsimulering</label>
+                        <label for="match1">Simulación de partido</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="taktik1">
-                        <label for="taktik1">Taktik/Beslut</label>
+                        <label for="taktik1">Táctica/Decisiones</label>
                     </div>
                 </div>
             </div>
             
             <div class="metrics">
                 <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
+                    <label>Aciertos de point (≤50 cm):</label>
                     <input type="text" placeholder="6/10">
                 </div>
                 <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
+                    <label>Precisión de tiro:</label>
                     <input type="text" placeholder="4/8 = 50%">
                 </div>
                 <div class="metric-box">
-                    <label>Antal carreau:</label>
+                    <label>Número de carreau:</label>
                     <input type="text" placeholder="2">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
+                    <label>Precisión de donnée (6 m):</label>
                     <input type="text" placeholder="5/10">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
+                    <label>Precisión de donnée (8 m):</label>
                     <input type="text" placeholder="3/10">
                 </div>
                 <div class="metric-box">
-                    <label>Bästa avstånd:</label>
+                    <label>Mejor distancia:</label>
                     <input type="text" placeholder="7m">
                 </div>
             </div>
             
             <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
-                <textarea placeholder="T.ex. 'Bra kontroll på backspin, klotet stannade inom 30cm på 7 av 10 kast'"></textarea>
+                <h4>✅ ¿Qué salió bien hoy?</h4>
+                <textarea placeholder="P. ej.: 'Buen control del backspin; la bola se detuvo dentro de 30 cm en 7 de 10 lanzamientos'"></textarea>
             </div>
             
             <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
-                <textarea placeholder="T.ex. 'Skott på längre avstånd (>8m) - missar ofta åt höger'"></textarea>
+                <h4>⚠️ ¿Qué se debe mejorar?</h4>
+                <textarea placeholder="P. ej.: 'Tiros a larga distancia (>8 m) — fallos frecuentes a la derecha'"></textarea>
             </div>
             
             <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
-                <textarea placeholder="T.ex. 'Fokusera på handledsteknik vid release. Mål: 7/10 träffar på donnée vid 8m'"></textarea>
+                <h4>🎯 Siguientes pasos / Objetivos para la próxima sesión:</h4>
+                <textarea placeholder="P. ej.: 'Foco en la técnica de muñeca en la suelta. Meta: 7/10 aciertos de donnée a 8 m'"></textarea>
             </div>
         </div>
         
-        <!-- Träningspass 2 -->
+        <!-- Sesión de entrenamiento 2 -->
         <div class="session">
             <div class="session-header">
                 <div class="field">
-                    <label>📅 Datum:</label>
+                    <label>📅 Fecha:</label>
                     <input type="date">
                 </div>
                 <div class="field">
-                    <label>⏱️ Tid (min):</label>
+                    <label>⏱️ Tiempo (min):</label>
                     <input type="number" placeholder="45">
                 </div>
                 <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
+                    <label>🌤️ Clima/Superficie:</label>
                     <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
+                        <option>Soleado - Grava</option>
+                        <option>Nublado - Grava</option>
+                        <option>Lluvia - Grava</option>
+                        <option>Soleado - Asfalto</option>
+                        <option>Nublado - Asfalto</option>
+                        <option>Soleado - Arena</option>
                     </select>
                 </div>
             </div>
             
             <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
+                <h4>🎯 Enfoque de hoy (marca lo que entrenaste):</h4>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
                         <input type="checkbox" id="point2">
-                        <label for="point2">Point/Läggning</label>
+                        <label for="point2">Point/Colocación</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="skott2">
-                        <label for="skott2">Skott/Tireur</label>
+                        <label for="skott2">Tiro/Tireur</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="donnee2">
-                        <label for="donnee2">Donnée-precision</label>
+                        <label for="donnee2">Precisión de donnée</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="backspin2">
-                        <label for="backspin2">Backspin/Kontroll</label>
+                        <label for="backspin2">Backspin/Control</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="match2">
-                        <label for="match2">Matchsimulering</label>
+                        <label for="match2">Simulación de partido</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="taktik2">
-                        <label for="taktik2">Taktik/Beslut</label>
+                        <label for="taktik2">Táctica/Decisiones</label>
                     </div>
                 </div>
             </div>
             
             <div class="metrics">
                 <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
+                    <label>Aciertos de point (≤50 cm):</label>
                     <input type="text" placeholder="6/10">
                 </div>
                 <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
+                    <label>Precisión de tiro:</label>
                     <input type="text" placeholder="4/8 = 50%">
                 </div>
                 <div class="metric-box">
-                    <label>Antal carreau:</label>
+                    <label>Número de carreau:</label>
                     <input type="text" placeholder="2">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
+                    <label>Precisión de donnée (6 m):</label>
                     <input type="text" placeholder="5/10">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
+                    <label>Precisión de donnée (8 m):</label>
                     <input type="text" placeholder="3/10">
                 </div>
                 <div class="metric-box">
-                    <label>Bästa avstånd:</label>
+                    <label>Mejor distancia:</label>
                     <input type="text" placeholder="7m">
                 </div>
             </div>
             
             <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
+                <h4>✅ ¿Qué salió bien hoy?</h4>
                 <textarea></textarea>
             </div>
             
             <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
+                <h4>⚠️ ¿Qué se debe mejorar?</h4>
                 <textarea></textarea>
             </div>
             
             <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
+                <h4>🎯 Siguientes pasos / Objetivos para la próxima sesión:</h4>
                 <textarea></textarea>
             </div>
         </div>
         
-        <!-- Träningspass 3 -->
+        <!-- Sesión de entrenamiento 3 -->
         <div class="session">
             <div class="session-header">
                 <div class="field">
-                    <label>📅 Datum:</label>
+                    <label>📅 Fecha:</label>
                     <input type="date">
                 </div>
                 <div class="field">
-                    <label>⏱️ Tid (min):</label>
+                    <label>⏱️ Tiempo (min):</label>
                     <input type="number" placeholder="45">
                 </div>
                 <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
+                    <label>🌤️ Clima/Superficie:</label>
                     <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
+                        <option>Soleado - Grava</option>
+                        <option>Nublado - Grava</option>
+                        <option>Lluvia - Grava</option>
+                        <option>Soleado - Asfalto</option>
+                        <option>Nublado - Asfalto</option>
+                        <option>Soleado - Arena</option>
                     </select>
                 </div>
             </div>
             
             <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
+                <h4>🎯 Enfoque de hoy (marca lo que entrenaste):</h4>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
                         <input type="checkbox" id="point3">
-                        <label for="point3">Point/Läggning</label>
+                        <label for="point3">Point/Colocación</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="skott3">
-                        <label for="skott3">Skott/Tireur</label>
+                        <label for="skott3">Tiro/Tireur</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="donnee3">
-                        <label for="donnee3">Donnée-precision</label>
+                        <label for="donnee3">Precisión de donnée</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="backspin3">
-                        <label for="backspin3">Backspin/Kontroll</label>
+                        <label for="backspin3">Backspin/Control</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="match3">
-                        <label for="match3">Matchsimulering</label>
+                        <label for="match3">Simulación de partido</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="taktik3">
-                        <label for="taktik3">Taktik/Beslut</label>
+                        <label for="taktik3">Táctica/Decisiones</label>
                     </div>
                 </div>
             </div>
             
             <div class="metrics">
                 <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
+                    <label>Aciertos de point (≤50 cm):</label>
                     <input type="text" placeholder="6/10">
                 </div>
                 <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
+                    <label>Precisión de tiro:</label>
                     <input type="text" placeholder="4/8 = 50%">
                 </div>
                 <div class="metric-box">
-                    <label>Antal carreau:</label>
+                    <label>Número de carreau:</label>
                     <input type="text" placeholder="2">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
+                    <label>Precisión de donnée (6 m):</label>
                     <input type="text" placeholder="5/10">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
+                    <label>Precisión de donnée (8 m):</label>
                     <input type="text" placeholder="3/10">
                 </div>
                 <div class="metric-box">
-                    <label>Bästa avstånd:</label>
+                    <label>Mejor distancia:</label>
                     <input type="text" placeholder="7m">
                 </div>
             </div>
             
             <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
+                <h4>✅ ¿Qué salió bien hoy?</h4>
                 <textarea></textarea>
             </div>
             
             <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
+                <h4>⚠️ ¿Qué se debe mejorar?</h4>
                 <textarea></textarea>
             </div>
             
             <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
+                <h4>🎯 Siguientes pasos / Objetivos para la próxima sesión:</h4>
                 <textarea></textarea>
             </div>
         </div>
         
         <div class="info-box" style="margin-top: 20px;">
-            <h3>💡 Tips för framgång:</h3>
+            <h3>💡 Consejos para el éxito:</h3>
             <ul>
-                <li>Träna 3-4 gånger per vecka för bäst resultat</li>
-                <li>Variera mellan point-fokus, skott-fokus och matchsimulering</li>
-                <li>Filma dig själv regelbundet och analysera tekniken</li>
-                <li>Sätt realistiska mål och fira små framsteg</li>
-                <li>Efter 4-8 veckor konsekvent träning kommer du se tydlig förbättring!</li>
+                <li>Entrena 3–4 veces por semana para mejores resultados</li>
+                <li>Alterna entre foco en point, foco en tiro y simulación de partido</li>
+                <li>Grábate regularmente y analiza la técnica</li>
+                <li>Fija objetivos realistas y celebra los pequeños avances</li>
+                <li>¡Tras 4–8 semanas de entrenamiento constante verás una mejora clara!</li>
             </ul>
         </div>
     </div>

@@ -5,10 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 11: Análisis Estratégico y Táctica - Guía de Petanca</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="../simple-license.js"></script>
     <script src="../script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <a href="contenido.html" class="toc-button">Contenido</a>
+    <div class="language-switcher">
+        <a href="../fordjupning.html" title="Svenska">🇸🇪</a>
+        <a href="../en/part4-indepth.html" title="English">🇬🇧</a>
+        <a href="del4-kapitel11.html" class="active" title="Español">🇪🇸</a>
+    </div>
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">Parte 4 • Capítulo 11</div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pétanque Hoja de Trucos - En sida</title>
+    <title>Pétanque Hoja de Trucos - Una página</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
         
@@ -254,19 +254,29 @@
             }
         }
     </style>    
+    <style>
+        .language-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px; }
+        .language-switcher a { font-size: 28px; text-decoration: none; filter: grayscale(50%); transition: transform .2s; }
+        .language-switcher a:hover { transform: scale(1.15); filter: grayscale(0%); }
+        .language-switcher a.active { filter: grayscale(0%); transform: scale(1.05); }
+    </style>
 </head>
 <body>
     <a href="../es/contenido.html" class="toc-button">Contenido</a>
+    <div class="language-switcher">
+        <a href="../fusklapp.html" title="Svenska">🇸🇪</a>
+        <a href="fusklapp.html" class="active" title="Español">🇪🇸</a>
+    </div>
     <div class="cheatsheet">
         <div class="header">
-            <h1>🎯 PÉTANQUE FUSKLAPP</h1>
-            <p>Allt du behöver på en sida - Matchrutin, Etikett, Taktik & Tekniker</p>
+            <h1>🎯 PÉTANQUE HOJA DE TRUCOS</h1>
+            <p>Todo lo que necesitas en una página — Rutina de partido, Etiqueta, Táctica y Técnicas</p>
         </div>
         
         <div class="two-column">
             <div>
                 <div class="section">
-                    <h2>⚡ 10 Viktigaste reglerna</h2>
+                    <h2>⚡ 10 reglas más importantes</h2>
                     <table>
                         <tr>
                             <th>#</th>
@@ -274,172 +284,172 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Båda fötterna i cirkeln tills klotet landat</td>
+                            <td>Ambos pies en el círculo hasta que la bola haya aterrizado</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Lillen 6-10m från cirkeln, 1m från hinder</td>
+                            <td>Bolichín a 6–10 m del círculo, 1 m de obstáculos/límites</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Laget utan närmaste klot kastar</td>
+                            <td>Lanza el equipo que NO tiene la bola más cercana</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Poäng = antal klot närmare än motståndaren</td>
+                            <td>Puntos = número de tus bolas más cercanas que la más cercana del rival</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>Första till 13 poäng vinner</td>
+                            <td>El primero a 13 puntos gana</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>Klot/lillen över gräns = dött</td>
+                            <td>Bola/bolichín fuera de límites = muerto</td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>Död lillen = ny mène, samma lag kastar</td>
+                            <td>Bolichín muerto = nueva mène, mismo equipo lanza</td>
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td>Mät bara vid tvivel</td>
+                            <td>Mide solo en caso de duda</td>
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td>Rör inte klot innan mätning</td>
+                            <td>No muevas las bolas antes de medir</td>
                         </tr>
                         <tr>
                             <td>10</td>
-                            <td>Max 1 minut per kast i tävling</td>
+                            <td>Máx. 1 minuto por lanzamiento en competición</td>
                         </tr>
                     </table>
                 </div>
                 
                 <div class="section">
-                    <h2>🎯 Beslutsträd: Lägg eller Skjut?</h2>
+                    <h2>🎯 Árbol de decisión: ¿Colocar o tirar?</h2>
                     <div class="box">
-                        <h3>SKJUT när:</h3>
+                        <h3>DISPARA cuando:</h3>
                         <ul>
-                            <li>Motståndaren <30 cm från lillen + fri bana</li>
-                            <li>Sista klotet + du behöver poäng</li>
-                            <li>2+ motståndarklot inom 20 cm</li>
+                            <li>El rival <30 cm del bolichín + vía libre</li>
+                            <li>Última bola + necesitas puntos</li>
+                            <li>2+ bolas rivales dentro de 20 cm</li>
                         </ul>
                     </div>
                     <div class="box">
-                        <h3>LÄGG när:</h3>
+                        <h3>COLOCA cuando:</h3>
                         <ul>
-                            <li>Du har tydlig donnée du träffar ofta</li>
-                            <li>Du är osäker skytt (<40% träff)</li>
-                            <li>Du leder med 11-12 poäng (defensivt)</li>
+                            <li>Tienes una donnée clara que aciertas a menudo</li>
+                            <li>Eres tirador inseguro (<40% acierto)</li>
+                            <li>Vas ganando con 11–12 puntos (defensivo)</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="section">
-                    <h2>📐 Tre punkter för perfekt point</h2>
+                    <h2>📐 Tres puntos para un point perfecto</h2>
                     <div class="quick-ref">
                         <div class="quick-ref-item">
-                            <strong>1. Lillen</strong>
-                            Målet
+                            <strong>1. Bolichín</strong>
+                            Objetivo
                         </div>
                         <div class="quick-ref-item">
-                            <strong>2. Parkering</strong>
-                            Där klotet stannar
+                            <strong>2. Estacionamiento</strong>
+                            Donde la bola se detiene
                         </div>
                         <div class="quick-ref-item">
                             <strong>3. Donnée</strong>
-                            Landningspunkt
+                            Punto de aterrizaje
                         </div>
                     </div>
                     <div class="highlight">
-                        <strong>💡 Gyllene regel:</strong> "Boule devant, boule d'argent" - Lägg alltid framför lillen (30-50 cm)!
+                        <strong>💡 Regla de oro:</strong> "Boule devant, boule d'argent" — ¡coloca siempre delante del bolichín (30–50 cm)!
                     </div>
                 </div>
             </div>
             
             <div>
                 <div class="section">
-                    <h2>🏹 Kastbanor & Underlag</h2>
+                    <h2>🏹 Trayectorias y superficies</h2>
                     <table>
                         <tr>
-                            <th>Underlag</th>
-                            <th>Kasttyp</th>
+                            <th>Superficie</th>
+                            <th>Tipo de lanzamiento</th>
                         </tr>
                         <tr>
-                            <td>Mjuk grus/sand</td>
-                            <td>Låg rullning - klotet stannar snabbt</td>
+                            <td>Grava blanda/arena</td>
+                            <td>Rodado bajo — la bola se detiene rápido</td>
                         </tr>
                         <tr>
-                            <td>Hård/stenig</td>
-                            <td>Hög lob med backspin - undvik studs</td>
+                            <td>Dura/pedregosa</td>
+                            <td>Lob alto con backspin — evita el rebote</td>
                         </tr>
                         <tr>
-                            <td>Asfalt</td>
-                            <td>Medelhög lob - kontrollerad landning</td>
+                            <td>Asfalto</td>
+                            <td>Lob medio — aterrizaje controlado</td>
                         </tr>
                         <tr>
-                            <td>Lutande bana</td>
-                            <td>Lägg uppför - kompensera för rullning</td>
+                            <td>Pista con pendiente</td>
+                            <td>Coloca cuesta arriba — compensa el rodamiento</td>
                         </tr>
                     </table>
                 </div>
                 
                 <div class="section">
-                    <h2>🎭 Etikett & God sed</h2>
+                    <h2>🎭 Etiqueta y buenas prácticas</h2>
                     <div class="box">
                         <ul>
-                            <li>✓ Stå still och tyst när motståndaren kastar</li>
-                            <li>✓ Gå aldrig mellan spelare och lillen</li>
-                            <li>✓ Vänta med att ta bort klot tills alla är överens</li>
-                            <li>✓ Använd godkänt mätinstrument, inte fötterna</li>
-                            <li>✓ Tacka motståndaren efter matchen</li>
-                            <li>✗ Störa, prata eller röra sig under kast</li>
-                            <li>✗ Flytta klot innan mätning</li>
+                            <li>✓ Quédate quieto y en silencio cuando el oponente lanza</li>
+                            <li>✓ Nunca pases entre los jugadores y el bolichín</li>
+                            <li>✓ Espera a retirar bolas hasta que todos estén de acuerdo</li>
+                            <li>✓ Usa instrumentos homologados para medir, no los pies</li>
+                            <li>✓ Agradece a los oponentes después del partido</li>
+                            <li>✗ No distraigas, hables o te muevas durante el lanzamiento</li>
+                            <li>✗ No muevas bolas antes de medir</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="section">
-                    <h2>🔧 Matchrutin (före/under/efter)</h2>
+                    <h2>🔧 Rutina de partido (antes/durante/después)</h2>
                     <div class="box">
-                        <h3>Före matchen (15 min):</h3>
+                        <h3>Antes del partido (15 min):</h3>
                         <ul>
-                            <li>Dynamisk stretching + rörlighetsövningar</li>
-                            <li>20 uppvärmningskast (variera avstånd)</li>
-                            <li>3 djupa andetag + visualisera framgång</li>
+                            <li>Estiramientos dinámicos + ejercicios de movilidad</li>
+                            <li>20 lanzamientos de calentamiento (varía distancias)</li>
+                            <li>3 respiraciones profundas + visualiza el éxito</li>
                         </ul>
                     </div>
                     <div class="box">
-                        <h3>Under matchen:</h3>
+                        <h3>Durante el partido:</h3>
                         <ul>
-                            <li>Före varje kast: Djupandas, visualisera bana</li>
-                            <li>Sikta på donnée, inte lillen</li>
-                            <li>Kommunicera med laget före varje beslut</li>
+                            <li>Antes de cada lanzamiento: respira profundo y visualiza la trayectoria</li>
+                            <li>Apunta a la donnée, no al bolichín</li>
+                            <li>Comunícate con el equipo antes de cada decisión</li>
                         </ul>
                     </div>
                     <div class="box">
-                        <h3>Efter matchen:</h3>
+                        <h3>Después del partido:</h3>
                         <ul>
-                            <li>Utvärdera: Vad gick bra? Vad kan förbättras?</li>
-                            <li>Logga i träningsjournal</li>
+                            <li>Evalúa: ¿Qué salió bien? ¿Qué puede mejorar?</li>
+                            <li>Regístralo en tu diario de entrenamiento</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="section">
-                    <h2>💪 Snabba träningstips</h2>
+                    <h2>💪 Consejos rápidos de entrenamiento</h2>
                     <div class="quick-ref">
                         <div class="quick-ref-item">
-                            <strong>Fickduken</strong>
-                            6/10 träffar på 7m
+                            <strong>El pañuelo</strong>
+                            6/10 aciertos a 7 m
                         </div>
                         <div class="quick-ref-item">
-                            <strong>6-boule</strong>
-                            50% träffsäkerhet
+                            <strong>6-boules</strong>
+                            50% de acierto
                         </div>
                         <div class="quick-ref-item">
-                            <strong>Tre zoner</strong>
-                            4/5 inom 50cm
+                            <strong>Tres zonas</strong>
+                            4/5 dentro de 50 cm
                         </div>
                     </div>
                 </div>
@@ -447,7 +457,7 @@
         </div>
         
         <div class="highlight" style="margin-top: 15px; text-align: center;">
-            <strong>🎯 Kom ihåg:</strong> Teknik + Taktik + Mental styrka = Framgång | Träna smart 3-4x/vecka | Dokumentera din utveckling
+            <strong>🎯 Recuerda:</strong> Técnica + Táctica + Fortaleza mental = Éxito | Entrena de forma inteligente 3–4×/semana | Documenta tu desarrollo
         </div>
     </div>
 </body>

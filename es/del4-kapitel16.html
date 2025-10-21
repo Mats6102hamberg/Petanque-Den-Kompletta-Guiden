@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 16: Física de las Bolas y Lectura del Terreno - Guía de Petanca</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="../script.js" defer></script>    
+    <script src="../simple-license.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            if (window.PetanqueLicense && typeof PetanqueLicense.requirePremium === 'function') {
+                PetanqueLicense.requirePremium();
+            }
+        });
+    </script>
+    <script src="../script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <a href="../es/contenido.html" class="toc-button">Contenido</a>
+    <div class="language-switcher">
+        <a href="../del4-kapitel16.html" title="Svenska">🇸🇪</a>
+        <a href="../en/part4-chapter16.html" title="English">🇬🇧</a>
+        <a href="../fr/partie4-chapitre16.html" title="Français">🇫🇷</a>
+        <a href="del4-kapitel16.html" class="active" title="Español">🇪🇸</a>
+    </div>
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">Parte 4 • Capítulo 16</div>

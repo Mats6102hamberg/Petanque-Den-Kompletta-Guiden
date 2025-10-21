@@ -51,20 +51,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // License check for premium content
-    function checkPremiumAccess() {
-      if (!PetanqueLicense.hasPremiumAccess()) {
-        // Show popup if trying to access locked chapter
-        if (typeof showPremiumPopup === 'function') {
-          showPremiumPopup();
-        }
-        return false;
-      }
-      return true;
+    // Visa popup vid försök att komma åt låst kapitel
+    function showPremiumPopup() {
+      document.getElementById('premium-popup').classList.remove('hidden');
     }
 
-    // Call this on chapter pages
-    if (window.location.pathname.includes('kapitel')) {
-      checkPremiumAccess();
+    // Koppla funktionen till globalt scope
+    window.showPremiumPopup = showPremiumPopup;
+
+    // License gating: auto-load license module and enforce strict access on book pages
+    function gateIfPremiumPage() {
+      var path = window.location.pathname;
+      // Recognize book pages across SV/ES (Swedish-named files) and EN/FR
+      // SV/ES: delX-kapitelY, fordjupning, ordlista, utrustning, regler
+      // EN: partX-chapterY, partX-indepth, glossary, equipment, rules
+      // FR: partieX-chapitreY, partieX-approfondissement, glossaire, guide-equipement, reglement
+      var isBookPage = /(del\d+-kapitel\d+\.html|fordjupning\.html|ordlista\.html|utrustning\.html|regler\.html|part\d+-chapter\d+\.html|part\d+-indepth\.html|glossary\.html|equipment\.html|rules\.html|partie\d+-chapitre\d+\.html|partie\d+-approfondissement\.html|glossaire\.html|guide-equipement\.html|reglement\.html)/.test(path);
+      if (!isBookPage) return;
+      
+      function callRequire() {
+        if (window.PetanqueLicense && typeof PetanqueLicense.requirePremium === 'function') {
+          PetanqueLicense.requirePremium();
+        }
+      }
+      
+      // If license API exists, use it; otherwise load it dynamically
+      if (window.PetanqueLicense && typeof PetanqueLicense.requirePremium === 'function') {
+        callRequire();
+      } else {
+        var script = document.createElement('script');
+        script.defer = false;
+        script.async = true;
+        script.onload = callRequire;
+        script.src = /(\/en\/|\/fr\/|\/es\/|\/de\/|\/th\/)/.test(path) ? '../simple-license.js' : 'simple-license.js';
+        document.head.appendChild(script);
+      }
     }
+    
+    gateIfPremiumPage();
 });

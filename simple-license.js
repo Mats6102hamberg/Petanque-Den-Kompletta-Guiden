@@ -10,16 +10,19 @@
         return licenseKey && licenseKey.length > 0;
     }
     
-    // Show preview and lock content if no license
+    // Strict access: redirect if no valid license (no preview)
     function requirePremium() {
         if (!hasValidLicense()) {
             // Save current page to return after purchase
             sessionStorage.setItem('petanque_return_url', window.location.href);
             
-            // Add preview overlay after page loads
-            setTimeout(function() {
-                addPreviewOverlay();
-            }, 100);
+            // Redirect to language-specific access page if inside a language folder
+            var path = window.location.pathname;
+            // Using a relative path keeps us inside the current directory (e.g., /es/access.html)
+            var target = 'access.html';
+            
+            // Redirect immediately
+            window.location.href = target;
         }
     }
     
@@ -120,6 +123,8 @@
     // Export functions
     window.PetanqueLicense = {
         hasValidLicense: hasValidLicense,
+        // Backwards compatibility: some pages call hasPremiumAccess()
+        hasPremiumAccess: hasValidLicense,
         requirePremium: requirePremium,
         showPremiumContent: showPremiumContent,
         hidePremiumContent: hidePremiumContent

@@ -15,14 +15,16 @@ Detta system låter dig skriva romankapitel på svenska och automatiskt översä
 **2. Klistra in din text:**
 ```javascript
 const CHAPTER_CONFIG = {
-    chapterNumber: 2,  // Ändra till ditt kapitelnummer
-    chapterTitle_sv: "Den Unga Utmanaren",  // Ändra titel
+    chapterNumber: 0,  // Ändra till ditt kapitelnummer
+    chapterTitle_sv: Mr Boue Petanque,  // Ändra titel
     releaseDate: "November 2025",
     readTime: "~15 minuter",
     
     swedishText: `
-    // KLISTRA IN DIN SVENSKA TEXT HÄR
-    Det var en torsdagskväll...
+   Hej alla, hoppas att jag kan förmedla ett ovanlig sida av boule petanque nämligen en roman figur vid namn Mr Boule Petanque. Ovanligt duktig i petanque, vilket har fått konsekvenser för att privatliv. Han är inte lika aktiv som han var tidigare men dyker upp här och där för att spela matcher. Boule Petanque är viktigt för honom och händelser som har att göra med sporten tar han sig en titt på. Det händer även att folk från den stora petanque världen vänder sig till honom för att få stöd och hjälp eller bara Mr BP reflektioner. 
+
+Snart kommer första avsnittet att finnas här. Kanske det blir en gång i månaden. 
+vänligen mats hamberg förfatare till Petanque- Den kompletta gudien och romanen Mr Boule Petanque. 
     
     [SCENE_BREAK]  // Använd detta för scenbyten
     

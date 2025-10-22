@@ -29,20 +29,20 @@ const OpenAI = require('openai');
 // ===========================================
 
 const CHAPTER_CONFIG = {
-    chapterNumber: 1,
-    chapterTitle_sv: "Boulodromens Hjälte",
+    chapterNumber: 0,
+    chapterTitle_sv: "Introduktion - Mr Boule Pétanque",
     releaseDate: "Oktober 2025",
-    readTime: "~15 minuter",
+    readTime: "~5 minuter",
     
     // KLISTRA IN DIN SVENSKA TEXT HÄR:
     swedishText: `
-Det var en torsdagskväll i juni när Jean-Pierre Dubois för första gången insåg att hans liv hade blivit alldeles för litet. Han stod i sin lägenhet i Marseille, omgiven av troféer och minnen från en karriär som petanque-spelare som hade tagit honom från gatubanorna i sin barndom till världsmästerskap. Men nu, vid 52 års ålder, kände han hur tyngden av alla dessa segrar började kännas mer som en börda än en ära.
-
-Fönstret stod öppet och ljudet från gatan strömmade in: bilar som tutade, människor som skrattade, livet som pågick utan honom. Han plockade upp en av sina äldsta boules – den han hade använt när han vann sitt första nationella mästerskap 1995. Metallen kändes kall och tung i hans hand, precis som den alltid gjort. Men något hade förändrats. Eller kanske var det han själv som hade förändrats.
+Hej alla, hoppas att jag kan förmedla en ovanlig sida av boule pétanque nämligen en romanfigur vid namn Mr Boule Pétanque. Ovanligt duktig i petanque, vilket har fått konsekvenser för hans privatliv. Han är inte lika aktiv som han var tidigare men dyker upp här och där för att spela matcher. Boule Pétanque är viktigt för honom och händelser som har att göra med sporten tar han sig en titt på. Det händer även att folk från den stora petanque-världen vänder sig till honom för att få stöd och hjälp eller bara Mr BP:s reflektioner.
 
 [SCENE_BREAK]
 
-Boulodromen låg vid hamnen, en liten plats med sex banor som var nötta av årtals spel. De äldre männen samlades här varje eftermiddag, samma män som hade spelat här i decennier. De pratade om samma matcher, berättade samma historier, levde i samma minnen.
+Snart kommer första avsnittet att finnas här. Kanske det blir en gång i månaden.
+
+Vänligen Mats Hamberg, författare till Pétanque - Den Kompletta Guiden och romanen Mr Boule Pétanque.
     `.trim()
 };
 

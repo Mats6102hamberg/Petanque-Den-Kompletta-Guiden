@@ -3,10 +3,25 @@
   "version": "1.0.0",
   "description": "Pétanque: Den Kompletta Guiden - Digital Book",
   "scripts": {
-    "build": "echo 'No build needed - static HTML'"
+    "build": "echo 'No build needed - static HTML'",
+    "translate:novel": "node translate-novel-chapter.js",
+    "translate": "npm run translate:novel",
+    "setup:api": "./set-api-key.sh",
+    "test:api": "node -e \"console.log(process.env.OPENAI_API_KEY ? '✅ API key found' : '❌ API key missing')\"",
+    "setup:deepl": "npm install deepl-node",
+    "setup:openai": "npm install openai dotenv",
+    "setup:google": "npm install @google-cloud/translate"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "deepl-node": "^1.12.0",
+    "openai": "^4.104.0"
+  },
+  "optionalDependencies": {
+    "@google-cloud/translate": "^8.0.0"
   }
 }

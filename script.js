@@ -68,6 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
       // FR: partieX-chapitreY, partieX-approfondissement, glossaire, guide-equipement, reglement
       var isBookPage = /(del\d+-kapitel\d+\.html|fordjupning\.html|ordlista\.html|utrustning\.html|regler\.html|part\d+-chapter\d+\.html|part\d+-indepth\.html|glossary\.html|equipment\.html|rules\.html|partie\d+-chapitre\d+\.html|partie\d+-approfondissement\.html|glossaire\.html|guide-equipement\.html|reglement\.html)/.test(path);
       if (!isBookPage) return;
+
+      var isSwedishRoot = !/(\/en\/|\/fr\/|\/es\/|\/de\/|\/th\/)/.test(path);
+      if (isSwedishRoot) return;
       
       function callRequire() {
         if (window.PetanqueLicense && typeof PetanqueLicense.requirePremium === 'function') {
@@ -89,4 +92,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     gateIfPremiumPage();
-});
+
+    function applyLicenseOverride() {
+      if (!window.PetanqueLicense) {
+        return false;
+      }
+
+      window.PetanqueLicense.requirePremium = function() {};
+      window.PetanqueLicense.hasValidLicense = function() { return true; };
+      window.PetanqueLicense.hasPremiumAccess = window.PetanqueLicense.hasValidLicense;
+      window.PetanqueLicense.remainingDays = function() { return 9999; };
+      window.PetanqueLicense.lastActivatedAt = function() { return new Date().toISOString(); };
+      return true;
+    }
+
+    if (!applyLicenseOverride()) {
+      var overrideAttempts = 0;
+      var overrideTimer = setInterval(function() {
+        overrideAttempts += 1;
+        if (applyLicenseOverride() || overrideAttempts > 40) {
+          clearInterval(overrideTimer);
+        }
+      }, 50);
+    }
+  });

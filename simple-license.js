@@ -6,24 +6,43 @@
     
     // Check if user has premium license
     function hasValidLicense() {
-        const licenseKey = localStorage.getItem('petanque_premium_key');
+        let licenseKey = localStorage.getItem('petanque_premium_key');
+
+        // Backwards compatibility: accept older storage keys and migrate them
+        if (!licenseKey || licenseKey.length === 0) {
+            const legacyKeys = [
+                'petanque_license_key',
+                'petanque_premium_license',
+                'petanque_full_access_key'
+            ];
+
+            for (let i = 0; i < legacyKeys.length; i++) {
+                const legacyValue = localStorage.getItem(legacyKeys[i]);
+                if (legacyValue && legacyValue.length > 0) {
+                    licenseKey = legacyValue;
+                    localStorage.setItem('petanque_premium_key', licenseKey);
+                    break;
+                }
+            }
+        }
+
         return licenseKey && licenseKey.length > 0;
     }
-    
-    // Strict access: redirect if no valid license (no preview)
-    function requirePremium() {
-        if (!hasValidLicense()) {
-            // Save current page to return after purchase
-            sessionStorage.setItem('petanque_return_url', window.location.href);
-            
-            // Redirect to language-specific access page if inside a language folder
-            var path = window.location.pathname;
-            // Using a relative path keeps us inside the current directory (e.g., /es/access.html)
-            var target = 'access.html';
-            
-            // Redirect immediately
-            window.location.href = target;
+
+    function isLocalEnvironment() {
+        const protocol = window.location.protocol;
+        if (protocol === 'file:') {
+            return true;
         }
+
+        const host = window.location.hostname;
+        return host === 'localhost' || host === '127.0.0.1';
+    }
+    
+    // Strict access: DISABLED for Swedish book
+    function requirePremium() {
+        // This function now does nothing
+        return;
     }
     
     // Add preview overlay to lock content

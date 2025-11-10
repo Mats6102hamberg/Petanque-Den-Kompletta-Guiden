@@ -216,8 +216,9 @@
         }
     </style>
     <script>
-        // Roman accessible to all book owners
-        // No additional premium check needed
+        window.addEventListener('DOMContentLoaded', function() {
+            PetanqueLicense.requirePremium();
+        });
     </script>
 </head>
 <body>

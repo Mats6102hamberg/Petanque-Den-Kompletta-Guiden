@@ -1,10 +1,43 @@
 # 01_ACTIVE_CONTEXT
 
-## 🎯 AKTUELLT FOKUS: AGENT MEMORY VAULT
+## 🎯 AKTUELLT FOKUS: PÉTANQUE AMAZON-EXPORT
 
-Amazon-export för SV, EN, FR, ES förberedd. SV/EN kompletta. FR/ES kräver innehåll på vissa kapitel.
+### Session 2025-12-16 avslutad ✅
 
-## 📋 ATT GÖRA
+**Sammanfattning:** Amazon-export för 4 språk förberedd och pushad till GitHub. Alla kapitel städade från webb-element (Arkiv, Nyheter, Mr Boule, navigeringsknappar, språkväljare).
+
+## 📊 AMAZON-EXPORT STATUS
+
+| Språk | Kapitel | Status | Redo för Amazon |
+|-------|---------|--------|-----------------|
+| 🇸🇪 SV | 16/16 | ✅ Komplett | ✅ JA |
+| 🇬🇧 EN | 16/16 | ✅ Komplett | ✅ JA |
+| 🇫🇷 FR | 12/16 | ⚠️ Kap 11-14 placeholder | ❌ Väntar |
+| 🇪🇸 ES | 0/16 | ⚠️ Alla placeholder | ❌ Väntar |
+
+**Filer:** `src/content/exports/amazon/[lang]/chapters/`
+
+### Städat bort (ej i bokfilerna):
+- ❌ Arkiv / Archives Historiques
+- ❌ Nyheter / Actualités
+- ❌ Mr Boule
+- ❌ Premium-sektioner
+- ❌ Navigeringsknappar
+- ❌ Språkväljare
+
+## 🚀 NÄSTA STEG
+
+1. **FR Kapitel 11-14:** Väntar på godkända översättningar från live-sajten
+   - Chapitre 11 – Analyse Stratégique et Tactique
+   - Chapitre 12 – Force Mentale et Concentration
+   - Chapitre 13 – Plan d'Entraînement et Développement
+   - Chapitre 14 – Entraînement Physique pour la Pétanque
+
+2. **ES Alla kapitel:** Väntar på spanska översättningar på live-sajten
+
+3. **Amazon-publicering:** SV och EN kan laddas upp direkt
+
+## 📋 SLUTFÖRDA UPPGIFTER
 - [x] Klona Guld-staketet
 - [x] Säkra package.json
 - [x] Skapa .brain-struktur
@@ -13,21 +46,14 @@ Amazon-export för SV, EN, FR, ES förberedd. SV/EN kompletta. FR/ES kräver inn
 - [x] Skapa dynamiska routes för [lang] och [chapter]
 - [x] Förbereda Amazon-exportstruktur (SV, EN, FR, ES)
 - [x] Paketera alla kapitel för Amazon (script: fetch-amazon-chapters.mjs)
-- [ ] Konfigurera GitHub remote och pusha
+- [x] Konfigurera GitHub remote och pusha
+- [x] Städa bort webb-element (Arkiv, Nyheter, Mr Boule, etc.)
+
+## 📋 KVARSTÅENDE UPPGIFTER
 - [ ] Koppla riktig DATABASE_URL till Neon
 - [ ] Komplettera FR kapitel 11-14 (väntar på översättning)
 - [ ] Komplettera ES alla kapitel (väntar på översättning)
-
-## 📊 AMAZON-EXPORT STATUS
-
-| Språk | Kapitel | Status |
-|-------|---------|--------|
-| 🇸🇪 SV | 16/16 | ✅ Komplett |
-| 🇬🇧 EN | 16/16 | ✅ Komplett |
-| 🇫🇷 FR | 12/16 | ⚠️ Kap 11-14 placeholder |
-| 🇪🇸 ES | 0/16 | ⚠️ Alla placeholder |
-
-**Filer:** `src/content/exports/amazon/[lang]/chapters/`
+- [ ] Skapa Amazon-manuskript (manuscript_fr.html, manuscript_es.html)
 
 ## 📁 PROJEKTSTRUKTUR
 ```
@@ -44,14 +70,21 @@ agent-memory-vault/
 │   ├── content/
 │   │   ├── petanque-guide/    # Bokens källfiler (web)
 │   │   └── exports/amazon/    # Amazon-paketerade kapitel
+│   │       ├── sv/chapters/   # 16 kapitel ✅
+│   │       ├── en/chapters/   # 16 kapitel ✅
+│   │       ├── fr/chapters/   # 12 + 4 placeholders
+│   │       └── es/            # Placeholders
 │   └── lib/
 │       └── petanque-content.ts # Utility för innehållsläsning
 ├── prisma/                    # Databasschema
 └── public/                    # Statiska filer
 ```
 
+## 🔗 GITHUB REPO
+https://github.com/Mats6102hamberg/Petanque-Den-Kompletta-Guiden
+
 ## 🔒 DESIGN-PRINCIP
 Petanque-guidens originaldesign är bevarad i en isolerad layout som inte påverkas av Tailwind 4.
 
 ## 📅 SENAST UPPDATERAD
-2025-12-16 – Amazon-export förberedd för 4 språk
+2025-12-16 22:34 – Session avslutad, allt pushat till GitHub

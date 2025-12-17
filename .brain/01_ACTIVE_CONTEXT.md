@@ -12,7 +12,7 @@
 |-------|---------|--------|-----------------|
 | 🇸🇪 SV | 16/16 | ✅ Komplett | ✅ JA |
 | 🇬🇧 EN | 16/16 | ✅ Komplett | ✅ JA |
-| 🇫🇷 FR | 12/16 | ⚠️ Kap 11-14 placeholder | ❌ Väntar |
+| 🇫🇷 FR | 16/16 | ✅ Komplett | ✅ JA |
 | 🇪🇸 ES | 0/16 | ⚠️ Alla placeholder | ❌ Väntar |
 
 **Filer:** `src/content/exports/amazon/[lang]/chapters/`
@@ -27,15 +27,9 @@
 
 ## 🚀 NÄSTA STEG
 
-1. **FR Kapitel 11-14:** Väntar på godkända översättningar från live-sajten
-   - Chapitre 11 – Analyse Stratégique et Tactique
-   - Chapitre 12 – Force Mentale et Concentration
-   - Chapitre 13 – Plan d'Entraînement et Développement
-   - Chapitre 14 – Entraînement Physique pour la Pétanque
+1. **ES Alla kapitel:** Väntar på spanska översättningar
 
-2. **ES Alla kapitel:** Väntar på spanska översättningar på live-sajten
-
-3. **Amazon-publicering:** SV och EN kan laddas upp direkt
+2. **Amazon-publicering:** SV, EN och FR kan laddas upp direkt (48/64 kapitel klara)
 
 ## 📋 SLUTFÖRDA UPPGIFTER
 - [x] Klona Guld-staketet
@@ -51,7 +45,7 @@
 
 ## 📋 KVARSTÅENDE UPPGIFTER
 - [ ] Koppla riktig DATABASE_URL till Neon
-- [ ] Komplettera FR kapitel 11-14 (väntar på översättning)
+- [x] Komplettera FR kapitel 11-14 ✅ (2025-12-17)
 - [ ] Komplettera ES alla kapitel (väntar på översättning)
 - [ ] Skapa Amazon-manuskript (manuscript_fr.html, manuscript_es.html)
 
@@ -72,7 +66,7 @@ agent-memory-vault/
 │   │   └── exports/amazon/    # Amazon-paketerade kapitel
 │   │       ├── sv/chapters/   # 16 kapitel ✅
 │   │       ├── en/chapters/   # 16 kapitel ✅
-│   │       ├── fr/chapters/   # 12 + 4 placeholders
+│   │       ├── fr/chapters/   # 16 kapitel ✅
 │   │       └── es/            # Placeholders
 │   └── lib/
 │       └── petanque-content.ts # Utility för innehållsläsning
@@ -87,4 +81,4 @@ https://github.com/Mats6102hamberg/Petanque-Den-Kompletta-Guiden
 Petanque-guidens originaldesign är bevarad i en isolerad layout som inte påverkas av Tailwind 4.
 
 ## 📅 SENAST UPPDATERAD
-2025-12-16 22:34 – Session avslutad, allt pushat till GitHub
+2025-12-17 04:10 – FR bok 100% komplett (16/16 kapitel), pushat till GitHub

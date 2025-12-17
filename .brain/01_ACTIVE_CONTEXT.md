@@ -1,21 +1,58 @@
 # 01_ACTIVE_CONTEXT
 
-## 🎯 AKTUELLT FOKUS: PÉTANQUE AMAZON-EXPORT
+## 🎄 OFFICIAL LAUNCH VERSION 1.0 – JULEN 2025 🎄
 
-### Session 2025-12-16 avslutad ✅
+### ✅ BOKEN ÄR REDO FÖR AMAZON KDP!
 
-**Sammanfattning:** Amazon-export för 4 språk förberedd och pushad till GitHub. Alla kapitel städade från webb-element (Arkiv, Nyheter, Mr Boule, navigeringsknappar, språkväljare).
+**Lanseringsdatum:** 2025-12-17  
+**Version:** 1.0 – Julen 2025  
+**Git Commit:** `52c1433` – "OFFICIAL LAUNCH VERSION"
+
+---
 
 ## 📊 AMAZON-EXPORT STATUS
 
-| Språk | Kapitel | Status | Redo för Amazon |
-|-------|---------|--------|-----------------|
-| 🇸🇪 SV | 16/16 | ✅ Komplett | ✅ JA |
-| 🇬🇧 EN | 16/16 | ✅ Komplett | ✅ JA |
-| 🇫🇷 FR | 16/16 | ✅ Komplett | ✅ JA |
-| 🇪🇸 ES | 0/16 | ⚠️ Alla placeholder | ❌ Väntar |
+| Språk | Kapitel | Bilagor | Totalt | Status |
+|-------|---------|---------|--------|--------|
+| 🇸🇪 SV | 16 | 4 (A-D) | **20 filer** | ✅ REDO |
+| 🇬🇧 EN | 16 | 4 (A-D) | **20 filer** | ✅ REDO |
+| 🇫🇷 FR | 16 | 4 (A-D) | **20 filer** | ✅ REDO |
+| 🇪🇸 ES | 0 | 0 | 0 | ⏳ Väntar |
 
-**Filer:** `src/content/exports/amazon/[lang]/chapters/`
+**Master-mapp för Amazon:** `src/content/exports/amazon/[lang]/chapters/`
+
+---
+
+## ✅ VERIFIERADE EXPERT-RÄTTNINGAR (Version 1.0)
+
+| Rättning | Kapitel | Status |
+|----------|---------|--------|
+| **Pieds Tanqués** – Fötterna bredvid varandra | Kap 3 | ✅ SV, EN, FR |
+| **Klot-hårdhet** – Mjuka för skyttar, hårda för läggare | Kap 2 | ✅ SV, EN, FR |
+| **Konsekvensträning** – Nytt avsnitt om muskelminne | Kap 8 | ✅ SV, EN, FR |
+| **Fusklapp (Bilaga D)** – Komplett snabbreferens | Bilaga D | ✅ SV, EN, FR |
+
+---
+
+## 📁 BILAGOR PER SPRÅK
+
+### 🇸🇪 Svenska
+- `bilaga_a_utrustning.html` – Utrustningsguide
+- `bilaga_b_regler.html` – Komplett regelbok
+- `bilaga_c_ordlista.html` – Ordförklaringar
+- `bilaga_d_fusklapp.html` – Fusklapp (Version 1.0)
+
+### 🇬🇧 English
+- `appendix_a_equipment.html` – Equipment Guide
+- `appendix_b_rules.html` – Complete Rulebook
+- `appendix_c_glossary.html` – Glossary
+- `appendix_d_cheatsheet.html` – Cheat Sheet (Version 1.0)
+
+### 🇫🇷 Français
+- `annexe_a_equipement.html` – Guide d'Équipement
+- `annexe_b_reglement.html` – Règlement Complet
+- `annexe_c_glossaire.html` – Glossaire
+- `annexe_d_aide_memoire.html` – Aide-Mémoire (Version 1.0)
 
 ### Städat bort (ej i bokfilerna):
 - ❌ Arkiv / Archives Historiques

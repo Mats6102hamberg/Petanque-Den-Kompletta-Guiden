@@ -209,6 +209,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "outline",
   },
   {
+    icon: "🎳",
+    title: "SocialBoule",
+    tagline: "Pétanque Crash-app för klubbar",
+    description:
+      "Komplett app för att organisera boulekvällar med närvaroregistrering, laglottning, matchrapportering och statistik. Perfekt för sociala träffar.",
+    features: [
+      "Närvaroregistrering och laglottning",
+      "Matchrapportering och resultat",
+      "Lagkemi-analys och topplista",
+      "Admin-panel för klubbhantering",
+    ],
+    ctaLabel: "Öppna SocialBoule",
+    ctaHref: "https://socialboule.vercel.app",
+    variant: "primary",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

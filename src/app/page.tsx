@@ -145,6 +145,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "primary",
   },
   {
+    icon: "🛡️",
+    title: "Crash Catcher",
+    tagline: "Systemövervakning och felhantering",
+    description:
+      "Realtidsövervakning av alla tjänster med automatisk felrapportering, latency tracking och health checks för 7 länder.",
+    features: [
+      "Error logging med stack traces",
+      "Latency tracking och performance monitoring",
+      "Health checks för alla tjänster",
+      "Memory monitoring och alerts",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "outline",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

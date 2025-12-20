@@ -241,6 +241,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "outline",
   },
   {
+    icon: "🎵",
+    title: "Tonkompisen",
+    tagline: "Träna din ton och intonation",
+    description:
+      "Få realtidsfeedback på din sång eller gitarrspel. Appen visar med grönt sken när du ligger rätt i ton. Perfekt för övning och utveckling.",
+    features: [
+      "Realtidsfeedback på tonhöjd",
+      "Visuell feedback med grönt sken",
+      "Stöd för både sång och gitarr",
+      "Träna intonation och gehör",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "outline",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

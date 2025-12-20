@@ -179,14 +179,14 @@ const flagshipProducts: ProductCard[] = [
   {
     icon: "👨‍👩‍👧‍👦",
     title: "Familjehemsportalen",
-    tagline: "Digital plattform för familjehem",
+    tagline: "Tryggt stöd för familjehemskonsulenterna",
     description:
-      "Komplett system för hantering av familjehem, placeringar och uppföljning. Underlättar kommunikation mellan socialtjänst och familjehem.",
+      "AI-driven plattform för akutstöd och beslutsfattande i svåra situationer. Hjälper familjehemskonsulenterna med verktyg, checklistor och kunskapsbank.",
     features: [
-      "Hantering av familjehemsplaceringar",
-      "Uppföljning och dokumentation",
-      "Kommunikation socialtjänst ↔ familjehem",
-      "Rapportering och statistik",
+      "Akutstöd i svåra situationer",
+      "AI-genererade mötessammanfattningar",
+      "Verktyg & checklistor för bedömningar",
+      "Kunskapsbank och kursmaterial",
     ],
     ctaLabel: "Läs mer",
     ctaHref: "#kontakt",

@@ -161,6 +161,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "outline",
   },
   {
+    icon: "🧪",
+    title: "Supertestaren",
+    tagline: "API-testning och validering",
+    description:
+      "Automatiserad testplattform för API:er och backend-tjänster med integration till VitalMonitor Pro och andra system.",
+    features: [
+      "Automatiserad API-testning",
+      "Integration med backend-tjänster",
+      "Validering och kvalitetssäkring",
+      "Continuous testing pipeline",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "outline",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

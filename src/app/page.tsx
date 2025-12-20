@@ -26,7 +26,7 @@ type ModalProduct = {
 
 const stats = [
   { label: "Länder", value: "7+" },
-  { label: "Produkter", value: "10+" },
+  { label: "Produkter", value: "19+" },
   { label: "Språk", value: "6" },
   { label: "Support", value: "24/7" },
 ];

@@ -177,6 +177,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "outline",
   },
   {
+    icon: "👨‍👩‍👧‍👦",
+    title: "Familjehemsportalen",
+    tagline: "Digital plattform för familjehem",
+    description:
+      "Komplett system för hantering av familjehem, placeringar och uppföljning. Underlättar kommunikation mellan socialtjänst och familjehem.",
+    features: [
+      "Hantering av familjehemsplaceringar",
+      "Uppföljning och dokumentation",
+      "Kommunikation socialtjänst ↔ familjehem",
+      "Rapportering och statistik",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "primary",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

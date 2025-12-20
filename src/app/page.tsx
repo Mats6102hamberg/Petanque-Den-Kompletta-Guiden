@@ -273,6 +273,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "primary",
   },
   {
+    icon: "✍️",
+    title: "Parviz Skrivrum",
+    tagline: "AI-driven skrivarapp med coaching",
+    description:
+      "Professionell skrivarapp med AI-stöd på 6 språk. Få hjälp med grammatik, struktur, mötessammanfattningar och kreativt skrivande.",
+    features: [
+      "AI-coaching för skrivande",
+      "Grammatik och strukturhjälp",
+      "Mötessammanfattningar",
+      "6 språk (SV, EN, FA, ES, FR, DE)",
+    ],
+    ctaLabel: "Öppna Parviz",
+    ctaHref: "https://parviz-skrivrum.vercel.app",
+    variant: "primary",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

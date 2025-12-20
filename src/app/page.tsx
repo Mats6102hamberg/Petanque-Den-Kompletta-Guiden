@@ -289,6 +289,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "primary",
   },
   {
+    icon: "🌱",
+    title: "Trädgårdsvännerna",
+    tagline: "Digital trädgårdscommunity",
+    description:
+      "Social plattform för trädgårdsentusiaster. Dela tips, plantera tillsammans och få hjälp med din trädgård från erfarna odlare.",
+    features: [
+      "Community för trädgårdsentusiaster",
+      "Dela tips och erfarenheter",
+      "Växtdatabas och odlingsguider",
+      "Säsongsplanering och påminnelser",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "outline",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

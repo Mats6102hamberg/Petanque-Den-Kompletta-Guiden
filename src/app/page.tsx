@@ -129,6 +129,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "outline",
   },
   {
+    icon: "💚",
+    title: "VitalMonitor Pro",
+    tagline: "Klinisk övervakning i realtid",
+    description:
+      "Avancerat övervakningssystem för vårdteam med AI-insikter, NEWS2-beräkningar och realtidsströmning av vitalparametrar.",
+    features: [
+      "Realtidsövervakning av vitala parametrar",
+      "AI-genererade kliniska insikter",
+      "NEWS2-beräkningar och larmhantering",
+      "Ventilator- och infusionspumpsstatus",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "primary",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

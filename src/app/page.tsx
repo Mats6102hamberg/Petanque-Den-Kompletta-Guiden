@@ -225,6 +225,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "primary",
   },
   {
+    icon: "🔐",
+    title: "Koda",
+    tagline: "Krypterings-app med utbildning",
+    description:
+      "Lär dig kryptering genom 30 interaktiva lektioner innan du kan handla säkert. Integrerad med Prospero för smart användarvägledning.",
+    features: [
+      "30 lektioner i kryptering",
+      "Licens efter genomförd utbildning",
+      "Säker handel med kryptovaluta",
+      "Prospero-integration för vägledning",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "outline",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

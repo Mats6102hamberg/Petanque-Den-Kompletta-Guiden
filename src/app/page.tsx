@@ -193,6 +193,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "primary",
   },
   {
+    icon: "📧",
+    title: "eBrevsmotorn",
+    tagline: "Nyhetsbrev och mailutskick",
+    description:
+      "Professionell plattform för att skapa och skicka nyhetsbrev och mailkampanjer. Enkel att använda med kraftfulla funktioner.",
+    features: [
+      "Skapa professionella nyhetsbrev",
+      "Automatiserade mailkampanjer",
+      "Mottagarlistor och segmentering",
+      "Statistik och öppningsfrekvens",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "outline",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

@@ -257,6 +257,22 @@ const flagshipProducts: ProductCard[] = [
     variant: "outline",
   },
   {
+    icon: "🏆",
+    title: "Boule Pro Tävlingar",
+    tagline: "Professionell tävlingshantering",
+    description:
+      "Komplett system för att organisera och administrera boule-tävlingar. Hantera anmälningar, lottningar, resultat och rankinglistor.",
+    features: [
+      "Tävlingsadministration och anmälningar",
+      "Automatisk lottning och schemalläggning",
+      "Resultatrapportering i realtid",
+      "Rankinglistor och statistik",
+    ],
+    ctaLabel: "Läs mer",
+    ctaHref: "#kontakt",
+    variant: "primary",
+  },
+  {
     icon: "🎯",
     title: "Pétanque-guiden",
     tagline: "Den kompletta guiden",

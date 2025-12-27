@@ -47,32 +47,34 @@ export async function POST(request: NextRequest) {
 
         // Logga till databasen
         try {
+          const findingsData = {
+            ...result.scanResult.findings,
+            aiCouncil: {
+              category: aiAnalysis.category,
+              severity: aiAnalysis.severity,
+              reason: aiAnalysis.reason,
+              consensus: aiAnalysis.council.consensus,
+              finalDecision: aiAnalysis.council.finalDecision,
+              riskAI: {
+                model: aiAnalysis.council.riskAI.model,
+                severity: aiAnalysis.council.riskAI.severity,
+                reason: aiAnalysis.council.riskAI.reason
+              },
+              analysisAI: {
+                model: aiAnalysis.council.analysisAI.model,
+                severity: aiAnalysis.council.analysisAI.severity,
+                reason: aiAnalysis.council.analysisAI.reason
+              }
+            }
+          };
+
           await prisma.securityAudit.create({
             data: {
               profileType: profileType,
               contentType: contentType || 'text',
               riskScore: result.scanResult.riskScore + getSeverityScore(aiAnalysis.severity),
               findingsCount: result.scanResult.findings.length + 1,
-              findings: {
-                ...result.scanResult.findings,
-                aiCouncil: {
-                  category: aiAnalysis.category,
-                  severity: aiAnalysis.severity,
-                  reason: aiAnalysis.reason,
-                  consensus: aiAnalysis.council.consensus,
-                  finalDecision: aiAnalysis.council.finalDecision,
-                  riskAI: {
-                    model: aiAnalysis.council.riskAI.model,
-                    severity: aiAnalysis.council.riskAI.severity,
-                    reason: aiAnalysis.council.riskAI.reason
-                  },
-                  analysisAI: {
-                    model: aiAnalysis.council.analysisAI.model,
-                    severity: aiAnalysis.council.analysisAI.severity,
-                    reason: aiAnalysis.council.analysisAI.reason
-                  }
-                }
-              },
+              findings: findingsData as any,
               sanitized: true,
               blocked: ['HIGH', 'CRITICAL'].includes(aiAnalysis.severity),
               recipientEmail: recipientEmail || null

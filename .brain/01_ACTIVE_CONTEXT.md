@@ -1,95 +1,412 @@
 # 01_ACTIVE_CONTEXT
 
-## 🎯 ERS API SERVER - CANDIDATE FINDER & VIP CAMPAIGN (PAUSAT - VÄNTAR PÅ DOMÄN)
+## 🎓 KODA - AI-POWERED CRYPTO LEARNING PLATFORM (SESSION 8 - 2025-12-27)
 
-### ✅ SESSION 7 (2025-12-26) - Role Targeting Uppgraderat! 🎯
+### ✅ DATABASE MIGRATION COMPLETED!
 
-**Projekt:** ERS API Server - Candidate Finder med AI-driven Role Targeting
+**Projekt:** KODA - Revolutionary AI-powered crypto learning app
+**Plats:** `/Users/admin/CascadeProjects/KODA`
+**Repository:** https://github.com/Mats6102hamberg/KODA
+**Status:** ✅ VERCEL POSTGRES MIGRATION COMPLETE - Ready for database setup
+
+---
+
+## 📚 VAD SOM SKAPATS
+
+### 1. Agent Memory Vault (`.brain/`)
+- ✅ **00_CONSTITUTION.md** - KODA AI Coach principles & guidelines
+  - Pedagogiska principer
+  - Tone & style
+  - Red lines (absoluta gränser)
+  - Success metrics
+- ✅ **01_LESSONS_CURRICULUM.md** - Komplett 30-lektioners curriculum
+  - 5 moduler (Foundations, Trading, DeFi, Security, Advanced)
+  - Quiz-system
+  - Badges & Certificates
+  - Lesson format templates
+- ✅ **02_ACTIVE_CONTEXT.md** - Projektstatus och roadmap
+  - MVP plan
+  - Teknisk stack
+  - Arkitektur
+  - Next steps
+
+### 2. GitHub Integration
+- ✅ Pushat till: https://github.com/Mats6102hamberg/KODA
+- ✅ All .brain-dokumentation committed
+- ✅ Force push lyckades (fixed unrelated histories)
+
+### 3. Vercel Deployment Setup
+- ✅ Vercel project created: `mats-hambergs-projects/koda`
+- ⏳ Permission issue (git author email mismatch)
+- ✅ Deployment guide skapad: `VERCEL_DEPLOY_GUIDE.md`
+
+---
+
+## 🎯 30-LEKTIONERS CURRICULUM (ÖVERSIKT)
+
+**Module 1: FOUNDATIONS (Lektion 1-6)**
+1. Vad är pengar?
+2. Blockchain - Den digitala huvudboken
+3. Bitcoin 101 - Digitala pengar
+4. Altcoins & Tokens
+5. Wallets & Keys
+6. Din första transaktion (TESTNET)
+
+**Module 2: TRADING & MARKETS (Lektion 7-12)**
+7. Kryptobörser
+8. Market Orders vs Limit Orders
+9. Technical Analysis
+10. Fundamental Analysis
+11. Risk Management
+12. Portfolio Diversification
+
+**Module 3: DEFI & WEB3 (Lektion 13-18)**
+13. DeFi-ekosystemet
+14. Liquidity Pools
+15. Yield Farming
+16. Staking
+17. Smart Contracts
+18. NFTs
+
+**Module 4: SECURITY & BEST PRACTICES (Lektion 19-24)**
+19. Cold vs Hot Wallets
+20. Seed Phrases - Guld-regler
+21. 2FA & Security Hygiene
+22. Common Scams
+23. Tax Implications
+24. Privacy
+
+**Module 5: ADVANCED TOPICS (Lektion 25-30)**
+25. Layer 2 Solutions
+26. Cross-chain Bridges
+27. DAOs
+28. Tokenomics
+29. Future of Crypto
+30. Building Your Strategy
+
+---
+
+## 🚀 NÄSTA STEG FÖR KODA
+
+**Omedelbart (MVP - Phase 1):**
+1. ✅ Migrera från Supabase till Vercel Postgres + NextAuth.js
+2. ⏳ Skapa Vercel Postgres database i Dashboard
+3. ⏳ Kör Prisma migrations (npx prisma db push)
+4. ⏳ Implementera första 6 lektionerna (Module 1) som MDX-filer
+5. ⏳ Bygga AI Coach integration (OpenAI GPT-4o-mini)
+6. ⏳ Bygga Lesson Viewer component
+
+**Teknisk Stack:**
+- Frontend: Next.js 14 + TypeScript + Tailwind CSS
+- Backend: Vercel Postgres + Prisma ORM + NextAuth.js (MIGRATED ✅)
+- AI: OpenAI GPT-4o-mini (som i ERS)
+- Deployment: Vercel
+
+---
+
+## 🔗 RELEVANTA FILER
+
+```
+/Users/admin/CascadeProjects/KODA/
+├── .brain/
+│   ├── 00_CONSTITUTION.md         # AI Coach guidelines
+│   ├── 01_LESSONS_CURRICULUM.md   # 30 lessons
+│   └── 02_ACTIVE_CONTEXT.md       # Project status
+├── VERCEL_DEPLOY_GUIDE.md         # Deployment instructions
+├── src/                            # Source code (Next.js)
+└── package.json                    # Dependencies
+```
+
+---
+
+## 🚀 ERS API SERVER - VIP CAMPAIGN LIVE! (SESSION 8 - 2025-12-27)
+
+### ✅ KOMPLETT GENOMFÖRD KAMPANJ FÖR ENTERPRISE RESPONSE SYSTEM
+
+**Projekt:** ERS (Enterprise Response System) - Komplett Go-to-Market
 **Plats:** `/Users/admin/CascadeProjects/ers-api-server`
 **Repository:** https://github.com/Mats6102hamberg/ers-api-server
-**Status:** ⏸️ PAUSAT - Väntar på smartflow.se domän och professionell webbplats
+**Domän:** https://www.smartflowab.se (LIVE)
+**Status:** 🟢 AKTIV KAMPANJ - Batch 1 skickad, Batch 2 redo
 
-**Vad som implementerades:**
+---
 
+## 📋 FULLSTÄNDIG KAMPANJHISTORIK
+
+### STEG 1: Role Targeting & Candidate Finder (Session 7)
+
+**Implementerat:**
 1. **Role Targeting-algoritm** (`candidates.js`)
-   - ✅ Priority Roles Array (11 beslutsfattare): CIO, CISO, DPO, IT-chef, Dataskyddsombud, etc.
-   - ✅ Context-window analys (200 tecken runt e-postadress)
-   - ✅ +40 poängs boost om prioriterad roll detekteras nära e-post
-   - ✅ +20 poäng för lednings-URL:er (/ledning, /organisation, /management, /styrelse)
-   - ✅ +15 poäng för specifika funktionsbrevlådor (ej generiska info@)
-   - ✅ Nya search terms: "region ledningsgrupp kontakt", "sjukhusledning kontakt", "dataskyddsombud region kontakt"
+   - Priority Roles Array (11 beslutsfattare): CIO, CISO, DPO, IT-chef, Dataskyddsombud
+   - Context-window analys (200 tecken runt e-postadress)
+   - +40 poängs boost om prioriterad roll detekteras
+   - +20 poäng för lednings-URL:er (/ledning, /organisation, /management)
+   - +15 poäng för specifika funktionsbrevlådor (ej generiska info@)
 
-2. **VIP Leads Identifierade** (`data/private/candidates.csv`)
-   - ✅ **Region Stockholm**: `registrator.rlk@regionstockholm.se` (95% confidence)
-   - ✅ **Västra Götalandsregionen**: `regionstyrelsen@vgregion.se` (95% confidence)
-   - ✅ Region Dalarna: `region.dalarna@regiondalarna.se` (65% confidence)
+2. **VIP Leads Funna:**
+   - Region Stockholm: `registrator.rlk@regionstockholm.se` (95% confidence)
+   - VGR: `regionstyrelsen@vgregion.se` (95% confidence)
+   - Region Skåne: `registrator@skane.se` (identifierad)
+   - Region Uppsala: `regionen@regionuppsala.se` (identifierad)
+   - Region Östergötland: `region@regionostergotland.se` (identifierad)
 
-3. **VIP Campaign Script** (`send_vip_campaign.js`)
-   - ✅ Färdiga, godkända mailtexter för Region Stockholm och VGR
-   - ✅ Mail 1 (Stockholm): Formell, myndighetsanpassad, NIS2-koppling, CE-märkningserbjudande
-   - ✅ Mail 2 (VGR): Visionär, resiliens-fokus, "fungerar när molnet ligger nere"
-   - ✅ Säkerhetskontroller: Kräver professionell domän (ej Gmail), bekräftelse-prompt
-   - ✅ Nodemailer-integration med rate limiting (2s delay mellan utskick)
+---
 
-4. **Handover-dokumentation** (`HANDOVER_STATUS.md`)
-   - ✅ Komplett status över Candidate Finder-uppgraderingen
-   - ✅ VIP-leads sammanfattning med confidence scores
-   - ✅ Nästa steg: Registrera smartflow.se, skapa webbplats, uppdatera avsändare
+### STEG 2: Domän & Infrastruktur (Session 8)
 
-**Tekniska förbättringar i Candidate Finder:**
-- ✅ HTTP redirect-följning (301/302/307/308)
-- ✅ Smart retry-logik (endast 5xx och nätverksfel, ej 4xx)
-- ✅ Respekterar robots.txt (9 regioner blockerade)
-- ✅ Prioriterar svenska kontaktsidor (/kontakt före /contact)
-- ✅ Rate limiting (2000ms delay mellan requests)
+**✅ Domän Köpt & Konfigurerad:**
+- **Domän:** `smartflowab.se` (registrerad hos Loopia)
+- **DNS A-post:** 76.76.21.21 → smartflowab.se
+- **DNS CNAME:** cname.vercel-dns.com → www.smartflowab.se
+- **SSL:** Automatiskt via Vercel (Let's Encrypt)
+- **Status:** ✅ LIVE och verifierad
 
-**Resultat från Role Targeting:**
+**✅ Email-konfiguration:**
+```
+EMAIL_HOST=mailcluster.loopia.se
+EMAIL_PORT=587
+EMAIL_USER=info@smartflowab.se
+EMAIL_PASS=[SÄKRAT I .env]
+EMAIL_FROM_NAME=SmartFlow AB
+```
 
-| Lead | Email | Confidence | Förbättring |
-|------|-------|------------|-------------|
-| Region Stockholm | registrator.rlk@regionstockholm.se | 95% | +15% ⬆️ |
-| VGR | regionstyrelsen@vgregion.se | 95% | +15% ⬆️ |
-| Region Dalarna | region.dalarna@regiondalarna.se | 65% | +15% ⬆️ |
+---
 
-**Sökstatistik:**
-- 23 kandidater genomsökta
-- 3 e-postadresser funna (13% träffsäkerhet)
-- 2 VIP-leads med high confidence (≥95%)
-- 9 regioner blockerade av robots.txt
+### STEG 3: Landningssida Skapad (Session 8)
 
-**Strategiskt beslut:**
-> "Innan vi skickar de skarpa mailen till Region Stockholm och VGR måste vi se till att SmartFlow AB ser professionellt ut med en riktig webbplats och domän. Ingen myndighet köper säkerhetssystem från en Gmail-adress."
+**Fil:** `/Users/admin/CascadeProjects/ers-api-server/LANDING_PAGE_ERS.tsx`
 
-**Nästa steg (BLOCKERAT):**
-1. ⏸️ Registrera domän: smartflow.se
-2. ⏸️ Skapa professionell företagswebbplats
-3. ⏸️ Uppdatera EMAIL_USER i .env till info@smartflow.se
-4. ⏸️ Uppdatera kontaktuppgifter i VIP-kampanjmails
-5. ✅ Kör: `node send_vip_campaign.js`
+**Innehåll:**
+- 🎯 Hero Section: "Enterprise Response System - Autonomt skydd för samhällsviktig IT"
+- ⚠️ NIS2-deadline badge: "17 januari 2025"
+- 💰 Prissättning (matchar emailkampanj):
+  - Engångslicens: **690 000 kr** (ord. 1 850 000 kr) = **-63% RABATT**
+  - Serviceavtal: **250 000 kr/år**
+- 🔒 Features: Kontinuerlig övervakning, Autonom respons, Lokal installation, Rapportering
+- 📧 Kontakt: Mats Hamberg, Grundare & VD, info@smartflowab.se, 070-037 74 59
+- 📝 Funktionellt kontaktformulär
 
-**Relevanta filer:**
+**Design:**
+- Mörk, professionell "Enterprise-look"
+- Gradient-knappar (amber/orange)
+- Responsive (mobil/desktop)
+- Trust badges: GDPR Compliant, NIS2 Ready, System Status: OPERATIONAL
+
+---
+
+### STEG 4: VIP-kampanj Batch 1 (Session 8)
+
+**✅ SKICKAD:**
+
+**Fil:** `/Users/admin/CascadeProjects/ers-api-server/scripts/send_vip_campaign.js`
+
+**Mottagare:**
+1. ✅ Region Stockholm: `registrator.rlk@regionstockholm.se`
+2. ✅ Västra Götaland: `regionstyrelsen@vgregion.se`
+
+**Emailtext (godkänd):**
+```
+Ämne: Info: ERS – Lokal lösning för säkerhet och kontinuitet inför 17 januari
+
+Innehåll:
+- Bakgrund: NIS2-direktiv, deadline 17 januari
+- ERS-funktioner: Kontinuerlig övervakning, autonom respons, lokal drift
+- Pris: 690 000 kr (ord. 1 850 000 kr) + 250 000 kr/år service
+- Länk: www.smartflowab.se
+- Syfte: Diarieföring + vidarebefordran till CISO/IT-chef
+- Signatur: Mats Hamberg, Grundare & VD, SmartFlow AB
+```
+
+**Säkerhetsåtgärder:**
+- Loopia SMTP-server (mailcluster.loopia.se:587)
+- 2 sekunders delay mellan utskick (anti-spam)
+- Professionell domän-validering (info@smartflowab.se)
+- Bekräftelse-prompt: "Type 'SEND LIVE' to proceed"
+
+---
+
+### STEG 5: VIP-kampanj Batch 2 (Session 8)
+
+**⏳ REDO ATT SKICKA:**
+
+**Fil:** `/Users/admin/CascadeProjects/ers-api-server/scripts/send_batch2_campaign.js`
+
+**Mottagare:**
+1. ⏳ Region Skåne: `registrator@skane.se`
+2. ⏳ Region Uppsala: `regionen@regionuppsala.se`
+3. ⏳ Region Östergötland: `region@regionostergotland.se`
+
+**Emailtext:** Samma som Batch 1 (godkänd text)
+
+**Instruktioner för att köra:**
+```bash
+cd ~/CascadeProjects/ers-api-server
+node scripts/send_batch2_campaign.js
+# Type: SEND BATCH 2
+```
+
+---
+
+## 💰 KOMMERSIELLT ERBJUDANDE (TIDSBEGRÄNSAT)
+
+**Engångslicens ERS:**
+- Pris: **690 000 kr**
+- Ordinarie: 1 850 000 kr
+- Rabatt: **-63%**
+- Inkluderar: Full installation, obegränsad användning, teknisk genomgång, dokumentation
+
+**Årligt Serviceavtal:**
+- Pris: **250 000 kr/år**
+- Inkluderar: Säkerhetsuppdateringar, systemunderhåll, support, nya funktioner, incidentanalys
+
+**Deadline:** 17 januari 2025 (NIS2-direktiv)
+
+**Målgrupp:** Regioner och sjukhus som behöver snabb NIS2-efterlevnad
+
+---
+
+## 📊 KAMPANJSTATUS (TOTALT 5 REGIONER)
+
+| Batch | Region | Email | Status |
+|-------|--------|-------|--------|
+| 1 | Region Stockholm | registrator.rlk@regionstockholm.se | ✅ SKICKAD |
+| 1 | Västra Götaland | regionstyrelsen@vgregion.se | ✅ SKICKAD |
+| 2 | Region Skåne | registrator@skane.se | ⏳ REDO |
+| 2 | Region Uppsala | regionen@regionuppsala.se | ⏳ REDO |
+| 2 | Region Östergötland | region@regionostergotland.se | ⏳ REDO |
+
+**Statistik:**
+- ✅ Skickade: 2
+- ⏳ Redo: 3
+- 📧 Totalt: 5 regioner
+- 🎯 Målgrupp: Regionledningar/CISO/IT-säkerhetschefer
+
+---
+
+## 📁 FILSTRUKTUR
+
 ```
 /Users/admin/CascadeProjects/ers-api-server/
-├── candidates.js                    # Uppgraderad med Role Targeting
-├── send_vip_campaign.js            # Färdigt VIP-kampanjscript
-├── HANDOVER_STATUS.md              # Komplett statusdokumentation
+├── .env                                  # Email-credentials (Loopia)
+├── candidates.js                         # Role Targeting-algoritm
+├── HANDOVER_STATUS.md                    # Session 7-dokumentation
+├── LANDING_PAGE_ERS.tsx                  # Landningssida (Next.js/React)
+├── scripts/
+│   ├── send_vip_campaign.js             # Batch 1 (Stockholm, VGR) - SKICKAD
+│   └── send_batch2_campaign.js          # Batch 2 (Skåne, Uppsala, Östergötland) - REDO
 ├── data/private/
-│   ├── candidates.csv              # 2 VIP-leads (95% confidence)
+│   ├── candidates.csv                   # 5 VIP-leads identifierade
 │   └── candidates.json
-└── urls.txt                        # 23 svenska organisationer
+└── urls.txt                             # 23 svenska organisationer
 ```
 
-**Mailtexter (godkända, redo att skickas när domän finns):**
+---
 
-**Mail 1 - Region Stockholm:**
-- Ämne: "Förslag till pilotprojekt: Autonom incidenthantering för vitala system (Vitalmonitor Pro/ERS)"
-- NIS2-koppling, CE-märkningserbjudande, 10 års licens + donation
-- Begär diarieföring och vidarebefordran till CISO
+## 🔐 SÄKERHET & CREDENTIALS
 
-**Mail 2 - VGR:**
-- Ämne: "Strategiskt samarbete kring robusthet i vårdens IT-infrastruktur"
-- Resiliens-fokus, "fungerar när molnet ligger nere"
-- Strategiskt samarbete, inte säljprodukt
+**Domän:**
+- smartflowab.se (Loopia)
+- DNS: A-post (76.76.21.21) + CNAME (cname.vercel-dns.com)
+- SSL: Vercel (Let's Encrypt, auto-förnyelse)
+
+**Email:**
+- Server: mailcluster.loopia.se:587
+- User: info@smartflowab.se
+- Auth: SMTP med TLS (rejectUnauthorized: false)
+- Lösenord: Säkrat i .env-fil (EJ i git history)
+
+**Deployment:**
+- Vercel: Auto-deploy från git push
+- Live URL: https://www.smartflowab.se
+
+---
+
+## 🎯 NÄSTA STEG
+
+**Omedelbart:**
+1. ⏳ Kör Batch 2: `node scripts/send_batch2_campaign.js`
+2. ⏳ Vänta på svar från regioner (deadline 17 januari)
+3. ⏳ Förbered demo/presentation för intresserade
+
+**Vid intresse från region:**
+1. Boka teknisk genomgång (30-60 min)
+2. Visa ERS-dashboard live
+3. Diskutera installation och integration
+4. Skicka offert och avtal
+5. Installera lokalt inom timmar
+
+**Uppföljning:**
+- Vecka 1: Follow-up email om inget svar
+- Vecka 2: Telefon-uppföljning till regionledningar
+- 17 januari: NIS2-deadline passerar (skapa urgency)
+
+---
+
+## 📧 EMAILTEXT (GODKÄND & SKICKAD)
+
+**Ämne:**
+"Info: ERS – Lokal lösning för säkerhet och kontinuitet inför 17 januari"
+
+**Body (sammanfattning):**
+- Hej + syfte med kontakten
+- Bakgrund: NIS2-direktiv, tidspress inför 17 januari
+- ERS-funktioner: Övervakning, autonom respons, lokal drift, molnoberoende
+- Installation: Inom timmar, ingen påverkan på befintliga system
+- Pris: 690 000 kr (ordinarie 1 850 000 kr) + 250 000 kr/år service
+- Call-to-action: Diarieföring + vidarebefordran till CISO/IT-chef
+- Länk: www.smartflowab.se
+- Signatur: Mats Hamberg, Grundare & VD, SmartFlow AB, info@smartflowab.se, 070-037 74 59
+
+---
+
+## 💡 STRATEGISKA INSIKTER
+
+**Varför denna approach fungerar:**
+1. **NIS2-deadline (17 januari)** skapar urgency
+2. **Lokal installation** = ingen molnberoende (USP för sjukhus)
+3. **Snabb deployment** = kan införas innan deadline
+4. **Rabatt 63%** = kraftfull incentive för snabbt beslut
+5. **Professionell webbplats** = trovärdighet för regionledningar
+6. **Role Targeting** = rätt personer (CISO/IT-chef) får mailet
+
+**Positioning:**
+- EJ "säljprodukt" utan "strategiskt samarbete"
+- EJ "molntjänst" utan "lokal, fristående lösning"
+- EJ "framtida projekt" utan "snabb installation (timmar)"
+- EJ "generiskt" utan "specifikt för hälso- och sjukvård"
+
+**Konkurrensfördel:**
+- Autonomt system (ingen manuell intervention)
+- Fungerar vid molnavbrott
+- GDPR-compliant som standard
+- NIS2-ready från dag 1
+
+---
+
+## 🔄 FORTSÄTTNING EXAKT HÄR
+
+**När nästa session startar:**
+
+1. **Kolla kampanjstatus:**
+   - Har Batch 2 skickats?
+   - Finns svar från någon region?
+
+2. **Relevanta filer:**
+   - `/Users/admin/CascadeProjects/ers-api-server/scripts/send_batch2_campaign.js`
+   - `/Users/admin/CascadeProjects/ers-api-server/.env`
+   - `/Users/admin/CascadeProjects/ers-api-server/LANDING_PAGE_ERS.tsx`
+
+3. **Nästa åtgärder:**
+   - Om inget svar: Skicka follow-up email (vecka 1)
+   - Om svar: Boka teknisk genomgång
+   - Om intresse: Skicka detaljerad offert
+
+4. **Kontaktinfo alltid tillgänglig:**
+   - Mats Hamberg: info@smartflowab.se, 070-037 74 59
+   - Webbplats: www.smartflowab.se
+   - Loopia-inloggning: För DNS/email-hantering
+
+**Komplett status sparad. Fortsätt exakt där vi slutade! 🚀**
 
 ---
 

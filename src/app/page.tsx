@@ -349,19 +349,100 @@ export default function ERSLandingPage() {
                 Konfigureras med lägsta möjliga externa exponering.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Ruta 5: Om teamet (NY) */}
-            <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl hover:border-amber-500/50 transition-all md:col-span-2">
-              <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">👥</span>
+      {/* Om SmartFlow AB Section */}
+      <section className="py-20 bg-slate-900/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-200">
+              Om SmartFlow AB
+            </h2>
+            <p className="text-xl text-slate-400">
+              Ett svenskt företag med fokus på säker, lokal IT-drift
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Företaget */}
+            <div className="p-8 bg-slate-800/30 border border-slate-700 rounded-xl">
+              <div className="w-14 h-14 bg-amber-500/10 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🏢</span>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-slate-200">Om teamet</h3>
-              <p className="text-slate-400 leading-relaxed">
-                ERS utvecklas av ett svenskt team med erfarenhet från offentlig verksamhet, informationssäkerhet och verksamhetskritiska system.
-                Arbetet har bedrivits kontinuerligt sedan årets början med fokus på stabilitet, lokal drift och regelefterlevnad.
-                Utvecklingen leds av en oberoende grundare med lång erfarenhet av arbete med känslig information.
+              <h3 className="text-2xl font-bold mb-4 text-slate-200">Företaget</h3>
+              <p className="text-slate-300 leading-relaxed mb-4">
+                SmartFlow AB är ett svenskt teknologiföretag specialiserat på säkerhetslösningar för verksamhetskritiska system.
+                Bolaget grundades med målet att erbjuda stabila, lokala alternativ till molnbaserade tjänster – särskilt för organisationer
+                som hanterar känslig information och har höga krav på integritet och regelefterlevnad.
+              </p>
+              <p className="text-slate-300 leading-relaxed">
+                ERS utvecklades som svar på en tydlig efterfrågan från offentlig sektor: ett system som kan skydda verksamhetskritisk
+                infrastruktur utan att kompromissa med datakontroll eller införa molnberoende.
               </p>
             </div>
+
+            {/* Grundaren */}
+            <div className="p-8 bg-slate-800/30 border border-slate-700 rounded-xl">
+              <div className="w-14 h-14 bg-amber-500/10 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">👤</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-200">Grundare & VD</h3>
+              <p className="text-slate-300 leading-relaxed mb-4">
+                <strong className="text-amber-400">Mats Hamberg</strong> har sedan tidigt 2000-tal arbetat inom offentlig verksamhet,
+                med uppdrag som inneburit hantering av sekretessbelagd information och beslutsunderlag med direkta konsekvenser för enskilda individer.
+              </p>
+              <p className="text-slate-300 leading-relaxed mb-4">
+                Med bakgrund inom socialt arbete och flerårig erfarenhet av myndighetsmiljöer där integritet och informationssäkerhet
+                är grundläggande krav, har arbetet alltid präglats av ansvar och medvetenhet om vikten av korrekt hantering av känsliga uppgifter.
+              </p>
+              <p className="text-slate-300 leading-relaxed">
+                ERS är resultatet av års erfarenhet av att arbeta nära verksamheter där tekniska lösningar måste vara tillförlitliga,
+                spårbara och förutsägbara – inte experimentella.
+              </p>
+            </div>
+          </div>
+
+          {/* Värdegrund */}
+          <div className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-amber-500/30 rounded-xl">
+            <div className="max-w-4xl mx-auto">
+              <div className="w-14 h-14 bg-amber-500/10 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                <span className="text-3xl">⚖️</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-6 text-slate-200 text-center">Värdegrund och arbetssätt</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-amber-400 mb-2">Långsiktighet</h4>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    ERS utvecklas för drift under många år, inte för snabba produktcykler.
+                    Stabilitet och underhållbarhet prioriteras framför funktionsöverflöd.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-amber-400 mb-2">Ansvar</h4>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Varje funktion i systemet är designad med medvetenhet om att tekniken hanterar verksamheter
+                    där fel kan få allvarliga konsekvenser.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-amber-400 mb-2">Transparens</h4>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Systemet är dokumenterat, spårbart och förklarbart. Inga dolda processer,
+                    ingen osäkerhet om vad som sker med organisationens data.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Utvecklingsteam */}
+          <div className="mt-8 p-6 bg-slate-800/20 border border-slate-700/50 rounded-xl">
+            <p className="text-slate-300 leading-relaxed text-center">
+              ERS utvecklas av ett dedikerat svenskt team med kompetens inom systemarkitektur, informationssäkerhet och verksamhetskritiska system.
+              Utvecklingsarbetet pågår kontinuerligt sedan årets början med fokus på stabilitet, regelefterlevnad och drift i känsliga miljöer.
+            </p>
           </div>
         </div>
       </section>

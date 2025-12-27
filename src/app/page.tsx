@@ -95,7 +95,7 @@ export default function ERSLandingPage() {
           {/* Trust Indicators */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-800">
             <div>
-              <div className="text-3xl font-bold text-amber-400 mb-1">< 3ms</div>
+              <div className="text-3xl font-bold text-amber-400 mb-1">&lt; 3ms</div>
               <div className="text-sm text-slate-400">Reaktionstid</div>
             </div>
             <div>
@@ -462,11 +462,29 @@ export default function ERSLandingPage() {
             {/* Contact Info */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-200">
-                Kontakta oss
+                Varför ERS finns
               </h2>
-              <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-                Vi lämnar gärna kompletterande teknisk dokumentation eller genomför en kort genomgång vid intresse.
-              </p>
+              
+              <div className="space-y-4 mb-8">
+                <p className="text-lg text-amber-400 font-semibold leading-relaxed">
+                  ERS är inte skapat ur ett teknikintresse – utan ur ett ansvar.
+                </p>
+                
+                <p className="text-slate-300 leading-relaxed">
+                  Jag som står bakom ERS har arbetat inom offentlig verksamhet med uppdrag där människor, beslut och dokumentation haft verkliga konsekvenser. Med bakgrund inom socialt arbete har jag under många år varit verksam nära verksamheter där integritet, sekretess och tillit är grundläggande krav – inte tillval.
+                </p>
+                
+                <p className="text-slate-300 leading-relaxed">
+                  Sedan årets början har ett dedikerat utvecklingsteam arbetat fokuserat med att ta fram ERS som en stabil och verksamhetsnära lösning för miljöer med höga krav på informationssäkerhet, spårbarhet och kontroll.
+                </p>
+                
+                <div className="p-4 bg-amber-500/5 border-l-4 border-amber-500 rounded">
+                  <p className="text-slate-200 font-semibold italic">
+                    Grundprincipen har varit tydlig från början:<br />
+                    AI får aldrig bli ett riskmoment – den ska vara ett skydd.
+                  </p>
+                </div>
+              </div>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">

@@ -12,12 +12,35 @@ export default function ERSLandingPage() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Här kan du lägga till faktisk submit-logik senare
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Ett fel uppstod');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Ett fel uppstod. Försök igen eller kontakta oss direkt på info@smartflowab.se');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -455,6 +478,36 @@ export default function ERSLandingPage() {
         </div>
       </section>
 
+      {/* Why ERS Exists Section */}
+      <section className="py-20 bg-slate-900/30">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-200 text-center">
+            Varför ERS finns
+          </h2>
+          
+          <div className="space-y-6">
+            <p className="text-xl text-amber-400 font-semibold leading-relaxed text-center">
+              ERS är inte skapat ur ett teknikintresse – utan ur ett ansvar.
+            </p>
+            
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Jag som står bakom ERS har arbetat inom offentlig verksamhet med uppdrag där människor, beslut och dokumentation haft verkliga konsekvenser. Med bakgrund inom socialt arbete har jag under många år varit verksam nära verksamheter där integritet, sekretess och tillit är grundläggande krav – inte tillval.
+            </p>
+            
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Sedan årets början har ett dedikerat utvecklingsteam arbetat fokuserat med att ta fram ERS som en stabil och verksamhetsnära lösning för miljöer med höga krav på informationssäkerhet, spårbarhet och kontroll.
+            </p>
+            
+            <div className="p-6 bg-amber-500/5 border-l-4 border-amber-500 rounded-lg mt-8">
+              <p className="text-lg text-slate-200 font-semibold italic text-center">
+                Grundprincipen har varit tydlig från början:<br />
+                AI får aldrig bli ett riskmoment – den ska vara ett skydd.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -462,29 +515,11 @@ export default function ERSLandingPage() {
             {/* Contact Info */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-200">
-                Varför ERS finns
+                Kontakta oss
               </h2>
-              
-              <div className="space-y-4 mb-8">
-                <p className="text-lg text-amber-400 font-semibold leading-relaxed">
-                  ERS är inte skapat ur ett teknikintresse – utan ur ett ansvar.
-                </p>
-                
-                <p className="text-slate-300 leading-relaxed">
-                  Jag som står bakom ERS har arbetat inom offentlig verksamhet med uppdrag där människor, beslut och dokumentation haft verkliga konsekvenser. Med bakgrund inom socialt arbete har jag under många år varit verksam nära verksamheter där integritet, sekretess och tillit är grundläggande krav – inte tillval.
-                </p>
-                
-                <p className="text-slate-300 leading-relaxed">
-                  Sedan årets början har ett dedikerat utvecklingsteam arbetat fokuserat med att ta fram ERS som en stabil och verksamhetsnära lösning för miljöer med höga krav på informationssäkerhet, spårbarhet och kontroll.
-                </p>
-                
-                <div className="p-4 bg-amber-500/5 border-l-4 border-amber-500 rounded">
-                  <p className="text-slate-200 font-semibold italic">
-                    Grundprincipen har varit tydlig från början:<br />
-                    AI får aldrig bli ett riskmoment – den ska vara ett skydd.
-                  </p>
-                </div>
-              </div>
+              <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+                Vi lämnar gärna kompletterande teknisk dokumentation eller genomför en kort genomgång vid intresse.
+              </p>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -607,11 +642,18 @@ export default function ERSLandingPage() {
                     />
                   </div>
 
+                  {error && (
+                    <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                      <p className="text-red-400 text-sm">{error}</p>
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full px-6 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-lg hover:shadow-xl hover:shadow-amber-500/20 transition-all"
+                    disabled={isSubmitting}
+                    className="w-full px-6 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-lg hover:shadow-xl hover:shadow-amber-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Skicka förfrågan
+                    {isSubmitting ? 'Skickar...' : 'Skicka förfrågan'}
                   </button>
                 </form>
               ) : (

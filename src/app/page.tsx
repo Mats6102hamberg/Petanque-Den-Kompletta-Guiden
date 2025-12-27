@@ -1,850 +1,574 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState } from "react";
+import React, { useState } from 'react';
+import Link from 'next/link';
 
-type ProductCard = {
-  icon: string;
-  title: string;
-  tagline: string;
-  description: string;
-  features: string[];
-  ctaLabel: string;
-  ctaHref?: string;
-  variant?: "primary" | "outline";
-};
+export default function ERSLandingPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    organization: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-type ModalProduct = {
-  id: string;
-  title: string;
-  description: string;
-  features: string[];
-  monthlyPrice: string;
-  yearlyPrice: string;
-  link: string;
-  bonusNote?: string;
-};
-
-const stats = [
-  { label: "Länder", value: "7+" },
-  { label: "Produkter", value: "19+" },
-  { label: "Språk", value: "6" },
-  { label: "Support", value: "24/7" },
-];
-
-const flagshipProducts: ProductCard[] = [
-  {
-    icon: "🛡️",
-    title: "Enterprise Research Shield",
-    tagline: "Säkerhet i realtid för känslig data",
-    description:
-      "Skydda din organisation med AI-driven övervakning av medicinsk och personlig data. Blockera hot automatiskt.",
-    features: [
-      "Realtidsövervakning av känslig data",
-      "Automatisk riskanalys och blockering",
-      "Stöd för medicinska & sociala profiler",
-      "Export och rapportering för compliance",
-    ],
-    ctaLabel: "Se dashboard",
-    ctaHref: "/security-dashboard",
-    variant: "primary",
-  },
-  {
-    icon: "📊",
-    title: "Prospero",
-    tagline: "AI-driven ekonomisk planering",
-    description:
-      "Avancerad finansiell rådgivning med Monte Carlo-simuleringar och scenariojämförelser. Visualisera framtiden.",
-    features: [
-      "Monte Carlo-simuleringar (2000+ scenarion)",
-      "Advisor Mode med scenariojämförelse",
-      "Stresstest & optimistiska prognoser",
-      "PDF-rapporter för kunder",
-    ],
-    ctaLabel: "Öppna Prospero",
-    ctaHref: "https://prospero-lovat.vercel.app",
-    variant: "primary",
-  },
-  {
-    icon: "🇸🇪",
-    title: "FakturaSnap Sverige",
-    tagline: "Smart fakturering för svenska företag",
-    description:
-      "Skapa fakturor på sekunder, skanna kvitton och låt AI fixa moms, SIE-export och påminnelser.",
-    features: [
-      "AI-driven kvittoskanning",
-      "Svensk momsberäkning (25%, 12%, 6%)",
-      "SIE4-export till Visma/Fortnox",
-      "Skatt-O-Meter för egenföretagare",
-    ],
-    ctaLabel: "Kontakta oss",
-    ctaHref: "#kontakt",
-    variant: "primary",
-  },
-  {
-    icon: "🇬🇧",
-    title: "Boris Storbritannien",
-    tagline: "Bokföring för brittiska företag",
-    description:
-      "Boris hjälper dig med VAT, HMRC-rapporter och brittiska skatteregler. Perfekt för sole traders och limited companies.",
-    features: [
-      "UK VAT-beräkning (20%, 5%, 0%)",
-      "HMRC MTD-integration",
-      "Mileage tracking (45p/mile)",
-      "Tax Bill Estimator",
-    ],
-    ctaLabel: "Kontakta oss",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "🇩🇪",
-    title: "Boris Tyskland",
-    tagline: "Bokföring för tyska företag",
-    description:
-      "Boris hjälper dig med Umsatzsteuer, DATEV-export och tyska skatteregler. GoBD-konform och säker.",
-    features: [
-      "Tysk moms (19%, 7%, 0%)",
-      "DATEV CSV-export",
-      "GoBD-konform audit trail",
-      "Steuer-O-Meter",
-    ],
-    ctaLabel: "Kontakta oss",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "🇳🇱",
-    title: "Boris Nederländerna",
-    tagline: "Bokföring för nederländska företag",
-    description:
-      "Boris hjälper dig med BTW, XAF-export och nederländska skatteregler. Perfekt för ZZP:are och kleine ondernemers.",
-    features: [
-      "Nederländsk BTW (21%, 9%, 0%)",
-      "XAF-export för Belastingdienst",
-      "KOR-gränsvarning (€20.000)",
-      "ICP-rapportering för EU-handel",
-    ],
-    ctaLabel: "Kontakta oss",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "💚",
-    title: "VitalMonitor Pro",
-    tagline: "Klinisk övervakning i realtid",
-    description:
-      "Avancerat övervakningssystem för vårdteam med AI-insikter, NEWS2-beräkningar och realtidsströmning av vitalparametrar.",
-    features: [
-      "Realtidsövervakning av vitala parametrar",
-      "AI-genererade kliniska insikter",
-      "NEWS2-beräkningar och larmhantering",
-      "Ventilator- och infusionspumpsstatus",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "primary",
-  },
-  {
-    icon: "🛡️",
-    title: "Crash Catcher",
-    tagline: "Systemövervakning och felhantering",
-    description:
-      "Realtidsövervakning av alla tjänster med automatisk felrapportering, latency tracking och health checks för 7 länder.",
-    features: [
-      "Error logging med stack traces",
-      "Latency tracking och performance monitoring",
-      "Health checks för alla tjänster",
-      "Memory monitoring och alerts",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "🧪",
-    title: "Supertestaren",
-    tagline: "API-testning och validering",
-    description:
-      "Automatiserad testplattform för API:er och backend-tjänster med integration till VitalMonitor Pro och andra system.",
-    features: [
-      "Automatiserad API-testning",
-      "Integration med backend-tjänster",
-      "Validering och kvalitetssäkring",
-      "Continuous testing pipeline",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "👨‍👩‍👧‍👦",
-    title: "Familjehemsportalen",
-    tagline: "Tryggt stöd för familjehemskonsulenterna",
-    description:
-      "AI-driven plattform för akutstöd och beslutsfattande i svåra situationer. Hjälper familjehemskonsulenterna med verktyg, checklistor och kunskapsbank.",
-    features: [
-      "Akutstöd i svåra situationer",
-      "AI-genererade mötessammanfattningar",
-      "Verktyg & checklistor för bedömningar",
-      "Kunskapsbank och kursmaterial",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "primary",
-  },
-  {
-    icon: "📧",
-    title: "eBrevsmotorn",
-    tagline: "Nyhetsbrev och mailutskick",
-    description:
-      "Professionell plattform för att skapa och skicka nyhetsbrev och mailkampanjer. Enkel att använda med kraftfulla funktioner.",
-    features: [
-      "Skapa professionella nyhetsbrev",
-      "Automatiserade mailkampanjer",
-      "Mottagarlistor och segmentering",
-      "Statistik och öppningsfrekvens",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "🎳",
-    title: "SocialBoule",
-    tagline: "Pétanque Crash-app för klubbar",
-    description:
-      "Komplett app för att organisera boulekvällar med närvaroregistrering, laglottning, matchrapportering och statistik. Perfekt för sociala träffar.",
-    features: [
-      "Närvaroregistrering och laglottning",
-      "Matchrapportering och resultat",
-      "Lagkemi-analys och topplista",
-      "Admin-panel för klubbhantering",
-    ],
-    ctaLabel: "Öppna SocialBoule",
-    ctaHref: "https://socialboule.vercel.app",
-    variant: "primary",
-  },
-  {
-    icon: "🔐",
-    title: "Koda",
-    tagline: "Krypterings-app med utbildning",
-    description:
-      "Lär dig kryptering genom 30 interaktiva lektioner innan du kan handla säkert. Integrerad med Prospero för smart användarvägledning.",
-    features: [
-      "30 lektioner i kryptering",
-      "Licens efter genomförd utbildning",
-      "Säker handel med kryptovaluta",
-      "Prospero-integration för vägledning",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "🎵",
-    title: "Tonkompisen",
-    tagline: "Träna din ton och intonation",
-    description:
-      "Få realtidsfeedback på din sång eller gitarrspel. Appen visar med grönt sken när du ligger rätt i ton. Perfekt för övning och utveckling.",
-    features: [
-      "Realtidsfeedback på tonhöjd",
-      "Visuell feedback med grönt sken",
-      "Stöd för både sång och gitarr",
-      "Träna intonation och gehör",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "🏆",
-    title: "Boule Pro Tävlingar",
-    tagline: "Professionell tävlingshantering",
-    description:
-      "Komplett system för att organisera och administrera boule-tävlingar. Hantera anmälningar, lottningar, resultat och rankinglistor.",
-    features: [
-      "Tävlingsadministration och anmälningar",
-      "Automatisk lottning och schemalläggning",
-      "Resultatrapportering i realtid",
-      "Rankinglistor och statistik",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "primary",
-  },
-  {
-    icon: "✍️",
-    title: "Parviz Skrivrum",
-    tagline: "AI-driven skrivarapp med coaching",
-    description:
-      "Professionell skrivarapp med AI-stöd på 6 språk. Få hjälp med grammatik, struktur, mötessammanfattningar och kreativt skrivande.",
-    features: [
-      "AI-coaching för skrivande",
-      "Grammatik och strukturhjälp",
-      "Mötessammanfattningar",
-      "6 språk (SV, EN, FA, ES, FR, DE)",
-    ],
-    ctaLabel: "Öppna Parviz",
-    ctaHref: "https://parviz-skrivrum.vercel.app",
-    variant: "primary",
-  },
-  {
-    icon: "🌱",
-    title: "Trädgårdsvännerna",
-    tagline: "Digital trädgårdscommunity",
-    description:
-      "Social plattform för trädgårdsentusiaster. Dela tips, plantera tillsammans och få hjälp med din trädgård från erfarna odlare.",
-    features: [
-      "Community för trädgårdsentusiaster",
-      "Dela tips och erfarenheter",
-      "Växtdatabas och odlingsguider",
-      "Säsongsplanering och påminnelser",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "#kontakt",
-    variant: "outline",
-  },
-  {
-    icon: "🎯",
-    title: "Pétanque-guiden",
-    tagline: "Den kompletta guiden",
-    description:
-      "Digital bok med 16 kapitel, matchprotokoll och träningsjournal på sex språk.",
-    features: [
-      "16 kapitel",
-      "Matchprotokoll",
-      "Träningsjournal",
-      "6 språk",
-    ],
-    ctaLabel: "Läs mer",
-    ctaHref: "https://petanque-den-kompletta-guiden.vercel.app",
-    variant: "outline",
-  },
-];
-
-const irisProduct: ProductCard = {
-  icon: "🔮",
-  title: "Iris",
-  tagline: "Holistisk självinsikt",
-  description:
-    "Utforska din energisignatur via astrologi, numerologi, färganalys och tarot – med spelifiering.",
-  features: [
-    "Personligt horoskop",
-    "Numerologi & livssiffra",
-    "Färganalys & paletter",
-    "Tarot med animationer",
-  ],
-  ctaLabel: "Öppna Iris",
-  ctaHref: "https://iris-holistisk.vercel.app",
-  variant: "primary",
-};
-
-const textScannerProducts: ModalProduct[] = [
-  {
-    id: "dagbok",
-    title: "Dagboksscannern",
-    description: "Skanna handskrivna dagböcker och skapa berättelser med AI.",
-    features: [
-      "OCR för handskrift",
-      "AI-förtydligande av text",
-      "Automatisk berättarstruktur",
-      "Exportera som PDF",
-      "Inkluderar Minnesböcker & SläktMagi",
-    ],
-    monthlyPrice: "99 kr/mån",
-    yearlyPrice: "990 kr/år",
-    link: "https://textscanner.smartflow.se/dagbok",
-  },
-  {
-    id: "avtal",
-    title: "Avtalsscannern",
-    description: "Ladda upp avtal och få riskanalys och förklaringar på enkel svenska.",
-    features: [
-      "Riskanalys med AI",
-      "Förenklad juridisk text",
-      "Stöd för flera språk",
-      "Exportera sammanfattningar",
-      "Skicka vidare till Prospero",
-    ],
-    monthlyPrice: "99 kr/mån",
-    yearlyPrice: "990 kr/år",
-    link: "https://textscanner.smartflow.se/avtal",
-  },
-  {
-    id: "maskering",
-    title: "Maskeringsverktyget",
-    description: "Maskera känslig information innan dokument delas vidare.",
-    features: [
-      "Identifierar personnummer automatiskt",
-      "Maskerar adresser och kontaktfält",
-      "GDPR-vänligt arbetsflöde",
-      "Stöd för PDF och bilder",
-      "Perfekt för företag & kommuner",
-    ],
-    monthlyPrice: "149 kr/mån",
-    yearlyPrice: "1 490 kr/år",
-    link: "https://textscanner.smartflow.se/maskering",
-  },
-  {
-    id: "minnesbok",
-    title: "Minnesböcker",
-    description: "Skapa en vacker minnesbok med kapitel, tidslinjer och personregister.",
-    features: [
-      "AI-genererad kapitelindelning",
-      "Tidslinje över händelser",
-      "Automatiskt personregister",
-      "Temaanalys",
-      "Export som bok",
-    ],
-    monthlyPrice: "99 kr/mån",
-    yearlyPrice: "990 kr/år",
-    link: "https://textscanner.smartflow.se/minnesbok",
-  },
-  {
-    id: "slaktmagi",
-    title: "SläktMagi",
-    description: "Bygg släktträd och generera berättelser ur ditt arkiv.",
-    features: [
-      "Interaktivt släktträd",
-      "Tidslinje för viktiga händelser",
-      "AI-genererade utkast",
-      "Relationsanalys",
-      "Exportera som film",
-    ],
-    monthlyPrice: "99 kr/mån",
-    yearlyPrice: "990 kr/år",
-    link: "https://textscanner.smartflow.se/slaktmagin",
-  },
-  {
-    id: "sprak",
-    title: "Språkverktyget",
-    description: "Förenkla, sammanfatta och översätt dokument med AI.",
-    features: [
-      "Förenkla svår text",
-      "Sammanfatta långa dokument",
-      "Översätt mellan flera språk",
-      "Anpassa för målgrupp",
-      "Stöd för flera format",
-    ],
-    monthlyPrice: "79 kr/mån",
-    yearlyPrice: "790 kr/år",
-    link: "https://textscanner.smartflow.se/sprak",
-  },
-];
-
-const values = [
-  {
-    icon: "🎯",
-    title: "Enkelhet",
-    text: "Vi tar bort krånglet så du kan fokusera på det viktiga.",
-  },
-  {
-    icon: "🤝",
-    title: "Rättvisa",
-    text: "Schyssta priser så att även små företag har råd med bra verktyg.",
-  },
-  {
-    icon: "🌍",
-    title: "Tillgänglighet",
-    text: "Flera språk och lokala regler i varje land vi verkar i.",
-  },
-];
-
-const navLinks = [
-  { href: "#produkter", label: "Produkter" },
-  { href: "#om-oss", label: "Om oss" },
-  { href: "#kontakt", label: "Kontakt" },
-];
-
-export default function SmartflowPage() {
-  const [selectedProduct, setSelectedProduct] = useState<ModalProduct | null>(
-    null,
-  );
-
-  const modalProducts = useMemo(
-    () =>
-      textScannerProducts.reduce<Record<string, ModalProduct>>(
-        (acc, product) => {
-          acc[product.id] = product;
-          return acc;
-        },
-        {},
-      ),
-    [],
-  );
-
-  useEffect(() => {
-    if (!selectedProduct) {
-      return;
-    }
-
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setSelectedProduct(null);
-      }
-    };
-
-    document.addEventListener("keydown", onKeyDown);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [selectedProduct]);
-
-  const openModal = (id: string) => {
-    setSelectedProduct(modalProducts[id]);
-  };
-
-  const closeModal = () => {
-    setSelectedProduct(null);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Här kan du lägga till faktisk submit-logik senare
+    console.log('Form submitted:', formData);
+    setSubmitted(true);
   };
 
   return (
-    <div className="sf-page">
-      <nav className="sf-nav">
-        <div className="sf-nav__inner">
-          <a href="#" className="sf-logo" aria-label="Smartflow AB">
-            <span className="sf-logo__smart">Smart</span>
-            <span className="sf-logo__flow">flow</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      {/* Header */}
+      <header className="border-b border-slate-800 bg-slate-950/50 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center font-bold text-sm">
+              ERS
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-amber-400">SmartFlow AB</h1>
+              <p className="text-xs text-slate-400">Enterprise Response System</p>
+            </div>
+          </div>
+          <a
+            href="tel:070-037 74 59"
+            className="hidden md:flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-lg hover:bg-amber-500/20 transition-all"
+          >
+            <span className="text-amber-400">📞</span>
+            <span className="text-sm font-medium">070-037 74 59</span>
           </a>
-          <div className="sf-nav__links">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
-            ))}
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgb(148 163 184) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-32 relative">
+          {/* NIS2 Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full mb-8">
+            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            <span className="text-sm font-medium text-red-400">NIS2-DIREKTIV – Deadline 17 januari 2025</span>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent">
+              Enterprise Response System
+            </span>
+            <br />
+            <span className="text-slate-200">
+              Autonomt skydd för samhällsviktig IT
+            </span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl leading-relaxed">
+            Lokal, fristående lösning som övervakar vitala IT-system kontinuerligt och agerar självständigt vid incidenter –
+            <span className="text-amber-400 font-semibold"> utan molnberoende</span>.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a
-              className="sf-btn sf-btn--primary"
-              href="#kontakt"
-              aria-label="Kontakta Smartflow AB"
+              href="#pricing"
+              className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-lg hover:shadow-xl hover:shadow-amber-500/20 transition-all text-center"
             >
-              Kontakta oss
+              Se Tidsbegränsat Erbjudande
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-4 bg-slate-800/50 border border-slate-700 text-white font-bold rounded-lg hover:bg-slate-800 transition-all text-center"
+            >
+              Boka Genomgång
             </a>
           </div>
-        </div>
-      </nav>
 
-      <main>
-        <section className="sf-section sf-hero">
-          <div className="sf-hero__inner">
-            <span className="sf-eyebrow">
-              🚀 Smartflow AB <span>Digitalt produktbolag</span>
-            </span>
-            <h1>
-              Digitala lösningar som <span>förenklar vardagen</span>
-            </h1>
-            <p>
-              Vi utvecklar smarta appar och verktyg för företagare och
-              privatpersoner. Från fakturering till bokföring – vi gör det
-              enkelt.
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-slate-800">
+            <div>
+              <div className="text-3xl font-bold text-amber-400 mb-1">< 3ms</div>
+              <div className="text-sm text-slate-400">Reaktionstid</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-amber-400 mb-1">99.99%</div>
+              <div className="text-sm text-slate-400">Upptid</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-amber-400 mb-1">Lokal</div>
+              <div className="text-sm text-slate-400">Ingen molntrafik</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-amber-400 mb-1">24/7</div>
+              <div className="text-sm text-slate-400">Autonom drift</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NIS2 Section */}
+      <section className="bg-slate-900/50 border-y border-slate-800 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-200">
+              NIS2-efterlevnad inför 17 januari 2025
+            </h2>
+            <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+              Med kommande krav på förstärkt cybersäkerhet inom hälso- och sjukvården erbjuder ERS en
+              snabb och lokal lösning som kan införas utan omfattande förändringar i befintlig infrastruktur.
             </p>
-            <div className="sf-hero__actions">
-              <a className="sf-btn sf-btn--primary" href="#produkter">
-                Se våra produkter
-              </a>
-              <a className="sf-btn sf-btn--outline" href="#kontakt">
+            <div className="grid md:grid-cols-3 gap-6 text-left">
+              <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl">
+                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-amber-400">Snabb installation</h3>
+                <p className="text-slate-400">
+                  Tas i drift inom några timmar. Ingen långdragen integrationprocess.
+                </p>
+              </div>
+              <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl">
+                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🔒</span>
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-amber-400">Lokal kontroll</h3>
+                <p className="text-slate-400">
+                  All data förblir inom regionens infrastruktur. GDPR-compliant.
+                </p>
+              </div>
+              <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl">
+                <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🛡️</span>
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-amber-400">Kontinuitet</h3>
+                <p className="text-slate-400">
+                  Fungerar oberoende vid molnavbrott och systemstörningar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-200">
+              Hur ERS fungerar
+            </h2>
+            <p className="text-xl text-slate-400">
+              Autonom övervakning och incidenthantering utan manuell intervention
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-2xl">
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">👁️</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-200">Kontinuerlig övervakning</h3>
+              <p className="text-slate-400 leading-relaxed mb-4">
+                Övervakar utvalda vitala IT-funktioner dygnet runt. Upptäcker avvikelser och riskbeteenden i realtid.
+              </p>
+              <ul className="space-y-2 text-slate-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Databaser och API-endpoints</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Nätverkstrafik och system load</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Kritiska applikationer</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-2xl">
+              <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🚨</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-200">Autonom respons</h3>
+              <p className="text-slate-400 leading-relaxed mb-4">
+                Agerar självständigt vid kritiska incidenter utan att vänta på manuell intervention.
+              </p>
+              <ul className="space-y-2 text-slate-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Isolerar hotfyllda anslutningar</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Återställer tjänster automatiskt</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Dokumenterar alla händelser</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-2xl">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🖥️</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-200">Lokal installation</h3>
+              <p className="text-slate-400 leading-relaxed mb-4">
+                Installeras lokalt i er infrastruktur. Ingen data lämnar er kontroll.
+              </p>
+              <ul className="space-y-2 text-slate-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Ingen molnberoende drift</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>GDPR-compliant som standard</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Full kontroll över systemet</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-2xl">
+              <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">📊</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-200">Rapportering</h3>
+              <p className="text-slate-400 leading-relaxed mb-4">
+                Komplett dokumentation för efterlevnad och revision.
+              </p>
+              <ul className="space-y-2 text-slate-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Detaljerade incidentloggar</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Compliance-rapporter</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-400 mt-1">✓</span>
+                  <span>Realtids-dashboard</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="bg-slate-900/50 border-y border-slate-800 py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full mb-6">
+              <span className="text-sm font-medium text-amber-400">⏰ Tidsbegränsat erbjudande inför 17 januari</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-200">
+              Kommersiella villkor
+            </h2>
+            <p className="text-xl text-slate-400">
+              Snabb installation för att möta kommande säkerhetskrav
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Engångslicens */}
+            <div className="relative p-8 bg-gradient-to-br from-amber-500/5 to-orange-600/5 border-2 border-amber-500/30 rounded-2xl">
+              <div className="absolute -top-4 left-8 px-4 py-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full text-sm font-bold">
+                -63% RABATT
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-slate-200">Engångslicens ERS</h3>
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-5xl font-bold text-amber-400">690 000 kr</span>
+                </div>
+                <div className="text-slate-500 line-through text-lg">
+                  Ordinarie pris: 1 850 000 kr
+                </div>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Full ERS-installation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Obegränsad användning</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Lokal installation inom timmar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Teknisk genomgång ingår</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Komplett dokumentation</span>
+                </li>
+              </ul>
+              <a
+                href="#contact"
+                className="block w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-lg hover:shadow-xl hover:shadow-amber-500/20 transition-all text-center"
+              >
                 Kontakta oss
               </a>
             </div>
-          </div>
-        </section>
 
-        <section className="sf-section sf-stats">
-          <div className="sf-stats__grid">
-            {stats.map((stat) => (
-              <div key={stat.label} className="sf-stat">
-                <h3>{stat.value}</h3>
-                <p>{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="sf-section" id="produkter">
-          <div className="sf-section__header">
-            <span className="sf-section__label">🚀 Våra produkter</span>
-            <h2 className="sf-section__title">Appar som gör skillnad</h2>
-            <p className="sf-section__subtitle">
-              Från fakturering till bokföring – våra verktyg hjälper tusentals
-              användare varje dag.
-            </p>
-          </div>
-
-          <div className="sf-products__grid">
-            {flagshipProducts.map((product) => (
-              <article key={product.title} className="sf-card">
-                <div className="sf-card__icon" aria-hidden>
-                  {product.icon}
+            {/* Serviceavtal */}
+            <div className="p-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-2xl">
+              <h3 className="text-2xl font-bold mb-2 text-slate-200">Service & Uppdateringar</h3>
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-5xl font-bold text-slate-200">250 000 kr</span>
+                  <span className="text-slate-400">/år</span>
                 </div>
-                <h3 className="sf-card__headline">{product.title}</h3>
-                <p className="sf-card__tagline">{product.tagline}</p>
-                <p className="sf-card__body">{product.description}</p>
-                <ul className="sf-card__list">
-                  {product.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-                {product.ctaHref && (
-                  <a
-                    className={`sf-btn ${
-                      product.variant === "outline"
-                        ? "sf-btn--outline"
-                        : "sf-btn--primary"
-                    }`}
-                    href={product.ctaHref}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {product.ctaLabel}
-                  </a>
-                )}
-              </article>
-            ))}
-          </div>
-
-          <div className="sf-section__header" style={{ marginTop: "4rem" }}>
-            <span className="sf-section__label">🔮 Iris</span>
-            <h2 className="sf-section__title">Din holistiska guide</h2>
-            <p className="sf-section__subtitle">
-              Upptäck dig själv genom astrologi, numerologi, färganalys och
-              tarot – allt i en app.
-            </p>
-          </div>
-
-          <div className="sf-products__grid">
-            <article className="sf-card">
-              <div className="sf-card__icon" aria-hidden>
-                {irisProduct.icon}
+                <div className="text-slate-500 text-lg">
+                  Årligt serviceavtal
+                </div>
               </div>
-              <h3 className="sf-card__headline">{irisProduct.title}</h3>
-              <p className="sf-card__tagline">{irisProduct.tagline}</p>
-              <p className="sf-card__body">{irisProduct.description}</p>
-              <ul className="sf-card__list">
-                {irisProduct.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Säkerhetsuppdateringar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Systemunderhåll</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Teknisk support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Nya funktioner</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber-400 text-xl mt-0.5">✓</span>
+                  <span className="text-slate-300">Incidentanalys</span>
+                </li>
               </ul>
               <a
-                className="sf-btn sf-btn--primary"
-                href={irisProduct.ctaHref}
-                target="_blank"
-                rel="noreferrer"
+                href="#contact"
+                className="block w-full px-6 py-3 bg-slate-800 border border-slate-700 text-white font-bold rounded-lg hover:bg-slate-700 transition-all text-center"
               >
-                {irisProduct.ctaLabel} →
+                Läs mer
               </a>
-            </article>
+            </div>
           </div>
 
-          <div className="sf-section__header" style={{ marginTop: "4rem" }}>
-            <span className="sf-section__label">📄 Textscanner</span>
-            <h2 className="sf-section__title">AI-drivna textverktyg</h2>
-            <p className="sf-section__subtitle">
-              Skanna, analysera och bearbeta dokument med AI. Perfekt för
-              privatpersoner, företag och organisationer.
+          <div className="mt-12 p-6 bg-blue-500/5 border border-blue-500/20 rounded-xl max-w-3xl mx-auto text-center">
+            <p className="text-slate-300 leading-relaxed">
+              <span className="font-semibold text-blue-400">OBS:</span> Detta erbjudande gäller för regioner och sjukhus
+              som behöver snabb installation inför 17 januari 2025. Kontakta oss för skräddarsydda lösningar.
             </p>
           </div>
-
-          <div className="sf-products__grid">
-            {textScannerProducts.map((tool) => (
-              <article key={tool.id} className="sf-card">
-                <div className="sf-card__icon" aria-hidden>
-                  {tool.id === "maskering"
-                    ? "🔒"
-                    : tool.id === "sprak"
-                      ? "🌐"
-                      : tool.id === "slaktmagi"
-                        ? "🌳"
-                        : tool.id === "minnesbok"
-                          ? "📖"
-                          : tool.id === "avtal"
-                            ? "📄"
-                            : "📘"}
-                </div>
-                <h3 className="sf-card__headline">{tool.title}</h3>
-                <p className="sf-card__tagline">{tool.description}</p>
-                <ul className="sf-card__list">
-                  {tool.features.slice(0, 4).map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-                <button
-                  type="button"
-                  className="sf-btn sf-btn--primary"
-                  onClick={() => openModal(tool.id)}
-                >
-                  Välj plan →
-                </button>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="sf-section sf-about" id="om-oss">
-          <div className="sf-about__grid">
-            <div>
-              <div className="sf-section__label">Om Smartflow AB</div>
-              <h2 className="sf-section__title" style={{ textAlign: "left" }}>
-                Teknik med mänskligt fokus
-              </h2>
-              <p>
-                Vi är ett svenskt techbolag som bygger digitala verktyg för att
-                förenkla vardagen för företagare och privatpersoner.
-              </p>
-              <p>
-                Vår filosofi är enkel – teknik ska vara tillgängligt, prisvärt
-                och faktiskt lösa riktiga problem. Därför bygger vi appar som är
-                lätta att använda men ändå kraftfulla under huven.
-              </p>
-              <p>
-                Med kunder i sju länder och produkter på sex språk växer vi
-                snabbt – men vi glömmer aldrig att det handlar om att hjälpa
-                människor.
-              </p>
-            </div>
-            <div className="sf-about__visual" aria-hidden>
-              🚀
-            </div>
-          </div>
-        </section>
-
-        <section className="sf-section">
-          <div className="sf-section__header">
-            <span className="sf-section__label">💡 Våra värderingar</span>
-            <h2 className="sf-section__title">Det vi tror på</h2>
-          </div>
-          <div className="sf-values__grid">
-            {values.map((value) => (
-              <article key={value.title} className="sf-value">
-                <div className="sf-value__icon" aria-hidden>
-                  {value.icon}
-                </div>
-                <h3>{value.title}</h3>
-                <p>{value.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="sf-section sf-contact" id="kontakt">
-          <div className="sf-section__header">
-            <span className="sf-section__label">📬 Kontakt</span>
-            <h2 className="sf-section__title">Kontakta oss</h2>
-            <p className="sf-section__subtitle" style={{ color: "white" }}>
-              Har du frågor om våra produkter eller vill samarbeta? Hör av dig!
-            </p>
-          </div>
-          <a className="sf-btn sf-btn--primary" href="mailto:info@smartflow.se">
-            info@smartflow.se
-          </a>
-          <div className="sf-contact__info">
-            <div>
-              <p className="sf-card__tagline" style={{ color: "white" }}>
-                Företag
-              </p>
-              <p>Smartflow AB</p>
-            </div>
-            <div>
-              <p className="sf-card__tagline" style={{ color: "white" }}>
-                Org.nr
-              </p>
-              <p>559050-6894</p>
-            </div>
-            <div>
-              <p className="sf-card__tagline" style={{ color: "white" }}>
-                Moms.nr
-              </p>
-              <p>SE559050689401</p>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="sf-footer">
-        <div className="sf-logo" style={{ justifyContent: "center" }}>
-          <span className="sf-logo__smart">Smart</span>
-          <span className="sf-logo__flow">flow</span>
         </div>
-        <p>© 2024 Smartflow AB. Alla rättigheter förbehållna.</p>
-        <p>Org.nr: 559050-6894</p>
-      </footer>
+      </section>
 
-      {selectedProduct && (
-        <div className="sf-modal" role="dialog" aria-modal="true">
-          <div className="sf-modal__panel">
-            <button
-              className="sf-modal__close"
-              onClick={closeModal}
-              aria-label="Stäng"
-            >
-              ×
-            </button>
-            <div className="sf-modal__header">
-              <h3>{selectedProduct.title}</h3>
-              <p>{selectedProduct.description}</p>
-            </div>
-            <div className="sf-modal__body">
-              <ul className="sf-card__list" style={{ marginBottom: "1.5rem" }}>
-                {selectedProduct.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
-              </ul>
-              <h4 style={{ marginBottom: "1rem" }}>Välj din plan</h4>
-              <div className="sf-pricing">
-                <a
-                  className="sf-pricing__option"
-                  href={`${selectedProduct.link}?plan=free`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div>
-                    <div className="sf-pricing__label">🎁 Gratis test</div>
-                    <div className="sf-pricing__note">
-                      5 dokument, sedan väntelista i 1 år
-                    </div>
+      {/* Contact Section */}
+      <section id="contact" className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Contact Info */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-200">
+                Kontakta oss
+              </h2>
+              <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+                Vi lämnar gärna kompletterande teknisk dokumentation eller genomför en kort genomgång vid intresse.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">👤</span>
                   </div>
-                  <span className="sf-pricing__price">0 kr</span>
-                </a>
-                <a
-                  className="sf-pricing__option"
-                  href={`${selectedProduct.link}?plan=monthly`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
                   <div>
-                    <div className="sf-pricing__label">
-                      📅 Månadsprenumeration
-                    </div>
-                    <div className="sf-pricing__note">
-                      Obegränsat antal dokument
-                    </div>
+                    <div className="font-bold text-slate-200 mb-1">Mats Hamberg</div>
+                    <div className="text-slate-400">Grundare & VD, SmartFlow AB</div>
                   </div>
-                  <span className="sf-pricing__price">
-                    {selectedProduct.monthlyPrice}
-                  </span>
-                </a>
-                <a
-                  className="sf-pricing__option sf-pricing__option--featured"
-                  href={`${selectedProduct.link}?plan=yearly`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">📧</span>
+                  </div>
                   <div>
-                    <div className="sf-pricing__label">⭐ Årsprenumeration</div>
-                    <div className="sf-pricing__note">
-                      Spara 17% – bästa värdet
-                    </div>
+                    <div className="text-slate-400 mb-1">E-post</div>
+                    <a href="mailto:info@smartflowab.se" className="font-bold text-amber-400 hover:text-amber-300">
+                      info@smartflowab.se
+                    </a>
                   </div>
-                  <span className="sf-pricing__price">
-                    {selectedProduct.yearlyPrice}
-                  </span>
-                </a>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">📞</span>
+                  </div>
+                  <div>
+                    <div className="text-slate-400 mb-1">Telefon</div>
+                    <a href="tel:070-037 74 59" className="font-bold text-amber-400 hover:text-amber-300">
+                      070-037 74 59
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">🌐</span>
+                  </div>
+                  <div>
+                    <div className="text-slate-400 mb-1">Webbplats</div>
+                    <a href="https://www.smartflowab.se" className="font-bold text-amber-400 hover:text-amber-300">
+                      www.smartflowab.se
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Contact Form */}
+            <div className="bg-slate-800/30 border border-slate-700 rounded-2xl p-8">
+              {!submitted ? (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">
+                      Namn *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors"
+                      placeholder="Ditt namn"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">
+                      Organisation *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.organization}
+                      onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors"
+                      placeholder="Region/Sjukhus"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">
+                      E-post *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors"
+                      placeholder="din.email@region.se"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">
+                      Telefon
+                    </label>
+                    <input
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors"
+                      placeholder="070-xxx xx xx"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">
+                      Meddelande
+                    </label>
+                    <textarea
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      rows={4}
+                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors resize-none"
+                      placeholder="Berätta lite om era behov..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold rounded-lg hover:shadow-xl hover:shadow-amber-500/20 transition-all"
+                  >
+                    Skicka förfrågan
+                  </button>
+                </form>
+              ) : (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-4xl">✓</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-200 mb-2">Tack för ditt intresse!</h3>
+                  <p className="text-slate-400">
+                    Vi återkommer inom 24 timmar.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      )}
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-800 bg-slate-950/50 py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center font-bold text-xs">
+                  ERS
+                </div>
+                <span className="font-bold text-slate-200">SmartFlow AB</span>
+              </div>
+              <p className="text-sm text-slate-500">
+                © 2025 SmartFlow AB. Alla rättigheter förbehållna.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              <span className="px-3 py-1 bg-green-500/10 text-green-400 rounded-full">
+                System Status: OPERATIONAL
+              </span>
+              <span className="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full">
+                GDPR Compliant
+              </span>
+              <span className="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full">
+                NIS2 Ready
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

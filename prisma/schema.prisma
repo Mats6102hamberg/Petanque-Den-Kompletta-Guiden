@@ -19,3 +19,22 @@ model User {
   email     String?  @unique
   name      String?
 }
+
+model SecurityAudit {
+  id              String   @id @default(cuid())
+  timestamp       DateTime @default(now())
+  profileType     String
+  contentType     String
+  riskScore       Int
+  findingsCount   Int
+  findings        Json
+  sanitized       Boolean
+  ollamaUsed      Boolean  @default(false)
+  campaignId      String?
+  recipientEmail  String?
+  blocked         Boolean  @default(false)
+  
+  @@index([timestamp])
+  @@index([profileType])
+  @@index([riskScore])
+}

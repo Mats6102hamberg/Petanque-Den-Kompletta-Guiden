@@ -270,6 +270,79 @@ export default function ERSLandingPage() {
         </div>
       </section>
 
+      {/* Security Section */}
+      <section className="bg-slate-900/50 border-y border-slate-800 py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-200">
+              Säkerhet utan kompromisser
+            </h2>
+            <p className="text-xl text-slate-400">
+              ERS är byggt med säkerhet som grundprincip
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* Ruta 1: Tränar inte på kunddata */}
+            <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl hover:border-amber-500/50 transition-all">
+              <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">💾</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-slate-200">Tränar inte på kunddata</h3>
+              <p className="text-slate-400">
+                Era dokument används aldrig för att träna eller förbättra AI-modeller.
+              </p>
+            </div>
+
+            {/* Ruta 2: Skapar inga profiler */}
+            <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl hover:border-amber-500/50 transition-all">
+              <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">👤</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-slate-200">Skapar inga profiler</h3>
+              <p className="text-slate-400">
+                Ingen profilering eller aggregering av personuppgifter.
+              </p>
+            </div>
+
+            {/* Ruta 3: Utför inga prediktioner */}
+            <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl hover:border-amber-500/50 transition-all">
+              <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-slate-200">Utför inga prediktioner</h3>
+              <p className="text-slate-400">
+                ERS är ett analysverktyg, inte ett beslutssystem.
+              </p>
+            </div>
+
+            {/* Ruta 4: Minsta möjliga attackyta */}
+            <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl hover:border-amber-500/50 transition-all">
+              <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-slate-200">Minsta möjliga attackyta</h3>
+              <p className="text-slate-400">
+                Konfigureras med lägsta möjliga externa exponering.
+              </p>
+            </div>
+
+            {/* Ruta 5: Om teamet (NY) */}
+            <div className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl hover:border-amber-500/50 transition-all md:col-span-2">
+              <div className="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">👥</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-slate-200">Om teamet</h3>
+              <p className="text-slate-400 leading-relaxed">
+                ERS utvecklas av ett svenskt team med erfarenhet från offentlig verksamhet, informationssäkerhet och verksamhetskritiska system.
+                Arbetet har bedrivits kontinuerligt sedan årets början med fokus på stabilitet, lokal drift och regelefterlevnad.
+                Utvecklingen leds av en oberoende grundare med lång erfarenhet av arbete med känslig information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="pricing" className="bg-slate-900/50 border-y border-slate-800 py-20">
         <div className="max-w-7xl mx-auto px-6">

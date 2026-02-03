@@ -1,6 +1,6 @@
 # Pétanque-boken: Sessionsammanfattning
 
-**Senaste uppdatering:** 2026-02-03 14:18 UTC+01:00
+**Senaste uppdatering:** 2026-02-03 14:40 UTC+01:00
 
 ## Projektöversikt
 
@@ -68,7 +68,39 @@ Detta är ett flerspråkigt digitalt bokprojekt om Pétanque (boule). Boken finn
 
 ## Utfört arbete (denna session)
 
-### Session 2026-02-03: Git-återställning och GitHub-synkronisering
+### Session 2026-02-03 (14:40): Borttagning av spelarfoton
+
+#### Problem som identifierades
+1. **Upphovsrättsproblem**: Spelarfoton i boken saknar publiceringsrättigheter
+2. **5 spelarfoton** användes i flera filer: dawson.jpg, foyot.jpg, quintais.jpg, rocher.jpg, sangkaew.jpg
+
+#### Åtgärder
+1. **Identifierade alla filer** med spelarfoton:
+   - `del3-kapitel10.html` (4 foton)
+   - `aktuellt.html` (1 foto)
+   - `petanque-bok-komplett.html` (5 foton)
+   - `trycksak/petanque-trycksak.html` (4 foton)
+2. **Tog bort `<img>`-taggar** men behöll all text om spelarna
+3. **Raderade bildfiler** från `/images/players/`
+4. **Verifierade språkversioner** - inga foton där
+
+#### Resultat
+- ✅ Alla spelarfoton borttagna (5 filer raderade)
+- ✅ Text om spelare och deras meriter kvar
+- ✅ 4 HTML-filer uppdaterade
+- ✅ Commit: `3720427` - "Ta bort spelarfoton pga upphovsrättsskäl"
+- ✅ Pushad till GitHub och Vercel
+
+**Spelare som fortfarande omnämns (utan foto):**
+- Philippe Quintais (15 världstitlar)
+- Marco Foyot (6 VM-titlar)
+- Dylan Rocher (5 VM-titlar)
+- Thanakorn Sangkaew (VM-guld 2019)
+- Dawson Herleman (14-årig fenomen)
+
+---
+
+### Session 2026-02-03 (14:18): Git-återställning och GitHub-synkronisering
 
 #### Problem som identifierades
 1. **Trasigt Git-repository**: `.git/`-mappen var tom (0 items), vilket gjorde att Git inte fungerade

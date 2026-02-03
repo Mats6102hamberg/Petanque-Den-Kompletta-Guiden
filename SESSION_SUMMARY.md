@@ -1,8 +1,26 @@
 # Pétanque-boken: Sessionsammanfattning
 
+**Senaste uppdatering:** 2026-02-03 14:18 UTC+01:00
+
 ## Projektöversikt
 
 Detta är ett flerspråkigt digitalt bokprojekt om Pétanque (boule). Boken finns i flera språkversioner och innehåller kapitel, bilagor och interaktiva verktyg.
+
+### Git & Deployment Status
+
+**Lokalt:**
+- `/Users/admin/Petanque första sidan/`
+- Git-repository: ✅ Återställt och fungerande
+
+**GitHub:**
+- Repository: `https://github.com/Mats6102hamberg/Petanque-Den-Kompletta-Guiden.git`
+- Branch: `main`
+- Senaste commit: `e19045f` - "Merge: Kombinerar lokal komplett bok med GitHub-repo"
+- Status: ✅ Pushad och synkroniserad
+
+**Vercel:**
+- Konfiguration: `vercel.json` finns
+- Status: Behöver verifieras
 
 ### Mappstruktur
 
@@ -50,7 +68,32 @@ Detta är ett flerspråkigt digitalt bokprojekt om Pétanque (boule). Boken finn
 
 ## Utfört arbete (denna session)
 
-### Problem som identifierades
+### Session 2026-02-03: Git-återställning och GitHub-synkronisering
+
+#### Problem som identifierades
+1. **Trasigt Git-repository**: `.git/`-mappen var tom (0 items), vilket gjorde att Git inte fungerade
+2. **Ingen koppling till GitHub**: Projektet kunde inte pushas trots att remote-URL fanns konfigurerad
+3. **Boken "försvunnen"**: Användaren kunde inte hitta projektet på GitHub eller Vercel
+
+#### Åtgärder
+1. **Tog bort trasig `.git/`-mapp** och initialiserade nytt Git-repository
+2. **Lade till alla filer** (284 objekt, 4.16 MB) och skapade initial commit
+3. **Kopplade till GitHub-repo**: `https://github.com/Mats6102hamberg/Petanque-Den-Kompletta-Guiden.git`
+4. **Löste merge-konflikter** mellan lokal version och GitHub-version (använde lokala filer som är kompletta)
+5. **Ökade Git buffer** (`http.postBuffer 524288000`) för att hantera stora filer
+6. **Pushade framgångsrikt** till GitHub (commit: `e19045f`)
+
+#### Resultat
+- ✅ Git-repository återställt och fungerande
+- ✅ Alla filer pushade till GitHub
+- ✅ Projektet synkroniserat mellan lokal dator och GitHub
+- ⏳ Vercel-deployment behöver verifieras
+
+---
+
+### Session (tidigare): Tysk översättning
+
+#### Problem som identifierades
 1. **Saknade CSS/JS-filer**: Den tyska versionen saknade styles.css och script.js, vilket gjorde att sidorna visades utan formatering
 2. **Svensk text i tyska filer**: Många kapitel var helt på svenska eller hade blandad svensk/tysk text trots `lang="de"`
 3. **Felaktiga navigationslänkar**: Filer pekade till "innehall.html" (svenska) istället för "inhalt.html" (tyska)

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Köp Premium - Pétanque Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pricing-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .pricing-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-header p {
+            font-size: 20px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 3px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.recommended {
+            border-color: #D2691E;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.recommended::before {
+            content: "⭐ REKOMMENDERAT";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D2691E;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 5px;
+        }
+        
+        .pricing-currency {
+            font-size: 24px;
+            color: #666;
+        }
+        
+        .pricing-description {
+            color: #666;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            color: #333;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .pricing-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .pricing-button {
+            display: block;
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .pricing-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .pricing-button.swish {
+            background: linear-gradient(135deg, #FF5F00 0%, #FF8C42 100%);
+        }
+        
+        .pricing-button.gumroad {
+            background: linear-gradient(135deg, #FF90E8 0%, #FFA6F6 100%);
+        }
+        
+        .custom-amount {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 50px 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .custom-amount h3 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .custom-amount input {
+            padding: 15px;
+            font-size: 24px;
+            border: none;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .payment-method {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .payment-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .what-you-get {
+            background: #f9f9f9;
+            padding: 60px 30px;
+            border-radius: 15px;
+            margin-top: 60px;
+        }
+        
+        .what-you-get h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #8B4513;
+            margin-bottom: 40px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        
+        .feature-desc {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .guarantee {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .guarantee h3 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+        <div class="pricing-header">
+            <h1>🏆 Uppgradera till Premium</h1>
+            <p>Välj det pris som känns rätt för dig. Alla alternativ ger full tillgång till allt innehåll!</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <!-- Grundpris -->
+            <div class="pricing-card">
+                <div class="pricing-icon">🥉</div>
+                <div class="pricing-title">Grundpris</div>
+                <div class="pricing-price">149 <span class="pricing-currency">kr</span></div>
+                <div class="pricing-description">
+                    Full tillgång till allt innehåll
+                </div>
+                <ul class="pricing-features">
+                    <li>Kapitel 1-15</li>
+                    <li>Alla bilagor</li>
+                    <li>Interaktiva verktyg</li>
+                    <li>Alla artiklar</li>
+                    <li>Framtida uppdateringar</li>
+                </ul>
+                <button class="pricing-button swish" onclick="buySwish(149)">
+                    Betala med Swish
+                </button>
+                <button class="pricing-button gumroad" onclick="buyGumroad(15)">
+                    Pay with Gumroad (€15)
+                </button>
+            </div>
+            
+            <!-- Stödjare (Rekommenderat) -->
+            <div class="pricing-card recommended">
+                <div class="pricing-icon">🥈</div>
+                <div class="pricing-title">Stödjare</div>
+                <div class="pricing-price">249 <span class="pricing-currency">kr</span></div>
+                <div class="pricing-description">
+                    Allt + du stödjer utvecklingen
+                </div>
+                <ul class="pricing-features">
+                    <li>Kapitel 1-15</li>
+                    <li>Alla bilagor</li>
+                    <li>Interaktiva verktyg</li>
+                    <li>Alla artiklar</li>
+                    <li>Framtida uppdateringar</li>
+                    <li><strong>Stödjer framtida innehåll</strong></li>
+                </ul>
+                <button class="pricing-button swish" onclick="buySwish(249)">
+                    Betala med Swish
+                </button>
+                <button class="pricing-button gumroad" onclick="buyGumroad(25)">
+                    Pay with Gumroad (€25)
+                </button>
+            </div>
+            
+            <!-- Supporter -->
+            <div class="pricing-card">
+                <div class="pricing-icon">🥇</div>
+                <div class="pricing-title">Supporter</div>
+                <div class="pricing-price">399 <span class="pricing-currency">kr</span></div>
+                <div class="pricing-description">
+                    Allt + stort stöd till projektet
+                </div>
+                <ul class="pricing-features">
+                    <li>Kapitel 1-15</li>
+                    <li>Alla bilagor</li>
+                    <li>Interaktiva verktyg</li>
+                    <li>Alla artiklar</li>
+                    <li>Framtida uppdateringar</li>
+                    <li><strong>Stort stöd till utvecklingen</strong></li>
+                    <li><strong>Vår eviga tacksamhet! ❤️</strong></li>
+                </ul>
+                <button class="pricing-button swish" onclick="buySwish(399)">
+                    Betala med Swish
+                </button>
+                <button class="pricing-button gumroad" onclick="buyGumroad(40)">
+                    Pay with Gumroad (€40)
+                </button>
+            </div>
+        </div>
+        
+        <!-- Custom Amount -->
+        <div class="custom-amount">
+            <h3>💝 Välj ditt eget belopp</h3>
+            <p style="font-size: 18px; margin-bottom: 20px;">Vill du ge mer eller mindre? Du bestämmer!</p>
+            <input type="number" id="customAmount" placeholder="Ange belopp" min="149" value="199">
+            <div class="payment-methods">
+                <button class="payment-method" onclick="buySwishCustom()" style="background: linear-gradient(135deg, #FF5F00 0%, #FF8C42 100%); color: white; border: none; cursor: pointer;">
+                    📱 Betala med Swish
+                </button>
+                <a href="#" class="payment-method" onclick="buyGumroadCustom(); return false;" style="background: linear-gradient(135deg, #FF90E8 0%, #FFA6F6 100%); color: white;">
+                    💳 Pay with Gumroad
+                </a>
+            </div>
+        </div>
+        
+        <!-- What You Get -->
+        <div class="what-you-get">
+            <h2>📚 Vad får du?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📖</div>
+                    <div class="feature-title">15 Kompletta Kapitel</div>
+                    <div class="feature-desc">Från nybörjare till avancerad spelare</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-title">6 Språk</div>
+                    <div class="feature-desc">Svenska, Engelska, Franska, Spanska, Tyska, Thailändska</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📸</div>
+                    <div class="feature-title">Spelarefoton</div>
+                    <div class="feature-desc">Professionella bilder på världens bästa spelare</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📰</div>
+                    <div class="feature-title">Aktuella Artiklar</div>
+                    <div class="feature-desc">Senaste nytt från petanque-världen</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Interaktiva Verktyg</div>
+                    <div class="feature-desc">Matchprotokoll, träningsjournal, fusklapp</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-title">Framtida Uppdateringar</div>
+                    <div class="feature-desc">Nya artiklar och innehåll varje månad</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Guarantee -->
+        <div class="guarantee">
+            <h3>💯 Spara 50+ timmar research</h3>
+            <p style="font-size: 18px;">Allt du behöver veta om petanque, samlat på ett ställe. Från grunderna till avancerade tekniker, aktuella nyheter och historiska matcher.</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="access.html" style="color: #666; text-decoration: none;">← Tillbaka till startsidan</a>
+        </div>
+    </div>
+    
+    <script>
+        function buySwish(amount) {
+            alert(`Swish-betalning:\n\n1. Öppna Swish-appen\n2. Betala ${amount} kr till: 0700-377459\n3. Skriv "Petanque Premium" i meddelandet\n4. Du får din licensnyckel via email inom 24h\n\nTack för ditt köp! 🎉`);
+        }
+        
+        function buySwishCustom() {
+            const amount = document.getElementById('customAmount').value;
+            if (amount < 149) {
+                alert('Minsta belopp är 149 kr');
+                return;
+            }
+            buySwish(amount);
+        }
+        
+        function buyGumroad(euros) {
+            alert(`Gumroad-betalning:\n\nDu kommer att omdirigeras till Gumroad för att betala €${euros}.\n\nOBS: Gumroad-länken är inte konfigurerad än.\nKontakta ägaren för att få din Gumroad-produktlänk.`);
+            // window.location.href = 'https://gumroad.com/l/petanque-guide-basic';
+        }
+        
+        function buyGumroadCustom() {
+            const amount = document.getElementById('customAmount').value;
+            const euros = Math.round(amount / 11);
+            buyGumroad(euros);
+        }
+        
+        // Check if user came from a specific page
+        const returnUrl = sessionStorage.getItem('petanque_return_url');
+        if (returnUrl) {
+            console.log('User will return to:', returnUrl);
+        }
+    </script>
+</body>
+</html>

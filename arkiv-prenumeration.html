@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Arkiv - Pétanque Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .premium-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .premium-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .premium-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .premium-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .premium-header p {
+            font-size: 20px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .premium-content {
+            padding: 60px 40px;
+        }
+
+        .value-proposition {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .value-proposition h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+
+        .value-proposition p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .pricing-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pricing-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .price {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .price-period {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .buy-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .already-have {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .already-have a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .already-have a:hover {
+            text-decoration: underline;
+        }
+
+        .testimonial {
+            background: #f9f9f9;
+            padding: 30px;
+            border-left: 4px solid #D2691E;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #8B4513;
+        }
+
+        .use-cases {
+            margin-bottom: 50px;
+        }
+
+        .use-case {
+            background: #fff;
+            border: 2px solid #D2691E;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .use-case h4 {
+            font-family: 'Playfair Display', serif;
+            color: #8B4513;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .use-case p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+    <script>
+        // Check if user has basic book license
+        (function() {
+            'use strict';
+</head>
+<body>
+    <div class="premium-container">
+        <div class="premium-header">
+            <div class="premium-badge">🏆 PREMIUM ARKIV</div>
+            <h1>Historiskt Arkiv</h1>
+            <p>Exklusiv tillgång till världens mest omfattande petanque-arkiv</p>
+        </div>
+
+        <div class="premium-content">
+            <div class="value-proposition">
+                <h2>En växande skattkammare av petanque-historia</h2>
+                <p>Få tillgång till hundratals artiklar, intervjuer med legender, regeländringar genom tiderna, och turneringsanalyser från hela världen. Perfekt för journalister, historiker, klubbar och seriösa entusiaster.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <div class="feature-title">Omfattande Arkiv</div>
+                    <div class="feature-desc">Hundratals artiklar från alla sex språk, organiserade och sökbara</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <div class="feature-title">Exklusiva Intervjuer</div>
+                    <div class="feature-desc">Djupgående samtal med världsstjärnor och legender</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-title">Regelhistorik</div>
+                    <div class="feature-desc">Alla regeländringar genom tiderna med bakgrund och analys</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <div class="feature-title">Turneringsrapporter</div>
+                    <div class="feature-desc">Detaljerade analyser av stora turneringar och mästerskap</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-title">Avancerad Sökning</div>
+                    <div class="feature-desc">Hitta exakt vad du söker med kraftfulla filter</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-title">Flerspråkigt</div>
+                    <div class="feature-desc">Material på svenska, engelska, franska, spanska, tyska och thailändska</div>
+                </div>
+            </div>
+
+            <div class="use-cases">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #8B4513; text-align: center; margin-bottom: 30px;">Perfekt för:</h2>
+                
+                <div class="use-case">
+                    <h4>📰 Journalister & Media</h4>
+                    <p>Få tillgång till exklusivt material för artiklar, reportage och dokumentärer. Intervjuer med legender, historiska händelser och expertanalyser.</p>
+                </div>
+
+                <div class="use-case">
+                    <h4>🏛️ Historiker & Forskare</h4>
+                    <p>Ett unikt arkiv som dokumenterar petanque-sportens utveckling genom tiderna. Perfekt för akademisk forskning och historiska studier.</p>
+                </div>
+
+                <div class="use-case">
+                    <h4>🎓 Klubbar & Föreningar</h4>
+                    <p>Utbilda medlemmar med historiska perspektiv, regeländringar och teknisk utveckling. Perfekt för klubbmagasin och utbildningsmaterial.</p>
+                </div>
+
+                <div class="use-case">
+                    <h4>🌟 Seriösa Entusiaster</h4>
+                    <p>För dig som vill förstå spelet på djupet och följa dess utveckling. Lär av de bästa genom tiderna.</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "Som sportjournalist är detta arkiv ovärderligt. Jag har hittat material här som inte finns någon annanstans. Intervjuerna med legender är guld värda."
+                </div>
+                <div class="testimonial-author">— Lars Eriksson, Sportjournalist</div>
+            </div>
+
+            <div class="pricing-section">
+                <h3>Premium Arkiv-prenumeration</h3>
+                <div class="price">499 kr</div>
+                <div class="price-period">Per månad - Avsluta när du vill</div>
+                <a href="https://mhg10.gumroad.com/l/petanque-arkiv" class="buy-button">Starta Prenumeration</a>
+                <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;">✓ Månadsvis betalning ✓ Alla uppdateringar inkluderade ✓ Alla språk ✓ Avsluta när som helst</p>
+            </div>
+
+            <div class="already-have">
+                <p style="color: #666; margin-bottom: 10px;">Har du redan köpt arkivtillgång?</p>
+                <a href="arkiv-aktivering.html">Aktivera din arkivlicens här →</a>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 50px;">
+                <h3>💼 Företag & Media</h3>
+                <p>Är du journalist, producent eller representerar ett medieföretag? Kontakta oss för specialpriser och utökad licensiering.</p>
+                <p style="margin-top: 15px;"><strong>Email:</strong> mats@petanqueguiden.se</p>
+            </div>
+
+            <div class="navigation" style="margin-top: 40px;">
+                <a href="aktuellt.html" class="nav-btn">← Tillbaka till Aktuellt</a>
+                <a href="innehall.html" class="nav-btn secondary">Innehållsförteckning</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal d'Entraînement Pétanque</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            font-size: 11pt;
+            line-height: 1.4;
+        }
+        
+        .journal {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 15mm;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24pt;
+            color: #8B4513;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #4a90a4;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 10pt;
+        }
+        
+        .info-box h3 {
+            color: #8B4513;
+            font-size: 12pt;
+            margin-bottom: 8px;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+        }
+        
+        .info-box li {
+            margin-bottom: 4px;
+        }
+        
+        .session {
+            border: 2px solid #D2691E;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .session-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .field {
+            margin-bottom: 10px;
+        }
+        
+        .field label {
+            display: block;
+            font-weight: 700;
+            color: #8B4513;
+            font-size: 10pt;
+            margin-bottom: 3px;
+        }
+        
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-family: 'Lato', sans-serif;
+            font-size: 10pt;
+        }
+        
+        .field textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .metric-box {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #D2691E;
+            border-radius: 3px;
+        }
+        
+        .metric-box label {
+            display: block;
+            font-size: 9pt;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .metric-box input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 11pt;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .goals-section {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        
+        .goals-section h4 {
+            color: #8B4513;
+            font-size: 11pt;
+            margin-bottom: 8px;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .checkbox-item label {
+            font-size: 10pt;
+            margin: 0;
+        }
+        
+        .notes {
+            margin-top: 15px;
+        }
+        
+        .notes h4 {
+            color: #8B4513;
+            font-size: 11pt;
+            margin-bottom: 8px;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 12pt;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            background: #D2691E;
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .journal {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+                padding: 10mm;
+            }
+            
+            .print-btn {
+                display: none;
+            }
+            
+            .session {
+                page-break-inside: avoid;
+            }
+            
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../fr/sommaire.html" class="toc-button">Sommaire</a>
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimer</button>
+    
+    <div class="journal">
+        <div class="header">
+            <h1>📊 JOURNAL D'ENTRAÎNEMENT PÉTANQUE</h1>
+            <p>Documentez vos progrès - Du débutant au maître</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>📝 Comment utiliser le journal d'entraînement:</h3>
+            <ul>
+                <li><strong>Remplissez après chaque séance</strong> - Documentez immédiatement pendant que la mémoire est fraîche</li>
+                <li><strong>Soyez honnête et spécifique</strong> - Écrivez les succès et les défis</li>
+                <li><strong>Fixez des objectifs concrets</strong> - Que voulez-vous améliorer la prochaine fois?</li>
+                <li><strong>Révisez régulièrement</strong> - Regardez en arrière chaque mois pour voir vos progrès</li>
+                <li><strong>Imprimez ou sauvegardez numériquement</strong> - Utilisez comme PDF ou remplissez sur papier</li>
+            </ul>
+        </div>
+        
+        <!-- Séance 1 -->
+        <div class="session">
+            <div class="session-header">
+                <div class="field">
+                    <label>📅 Date:</label>
+                    <input type="date">
+                </div>
+                <div class="field">
+                    <label>⏱️ Durée (min):</label>
+                    <input type="number" placeholder="45">
+                </div>
+                <div class="field">
+                    <label>🌤️ Météo/Surface:</label>
+                    <select>
+                        <option>Ensoleillé - Gravier</option>
+                        <option>Nuageux - Gravier</option>
+                        <option>Pluie - Gravier</option>
+                        <option>Ensoleillé - Asphalte</option>
+                        <option>Nuageux - Asphalte</option>
+                        <option>Ensoleillé - Sable</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="goals-section">
+                <h4>🎯 Focus du jour (cochez ce que vous avez entraîné):</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="point1">
+                        <label for="point1">Pointage/Placement</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tir1">
+                        <label for="tir1">Tir/Tireur</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="donnee1">
+                        <label for="donnee1">Précision donnée</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="retro1">
+                        <label for="retro1">Rétro/Contrôle</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="match1">
+                        <label for="match1">Simulation match</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tactique1">
+                        <label for="tactique1">Tactique/Décision</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric-box">
+                    <label>Touches pointage (dans 50cm):</label>
+                    <input type="text" placeholder="6/10">
+                </div>
+                <div class="metric-box">
+                    <label>Précision tir:</label>
+                    <input type="text" placeholder="4/8 = 50%">
+                </div>
+                <div class="metric-box">
+                    <label>Nombre de carreaux:</label>
+                    <input type="text" placeholder="2">
+                </div>
+                <div class="metric-box">
+                    <label>Précision donnée (6m):</label>
+                    <input type="text" placeholder="5/10">
+                </div>
+                <div class="metric-box">
+                    <label>Précision donnée (8m):</label>
+                    <input type="text" placeholder="3/10">
+                </div>
+                <div class="metric-box">
+                    <label>Meilleure distance:</label>
+                    <input type="text" placeholder="7m">
+                </div>
+            </div>
+            
+            <div class="notes">
+                <h4>✅ Qu'est-ce qui a bien marché aujourd'hui?</h4>
+                <textarea placeholder="Ex: 'Bon contrôle du rétro, la boule s'est arrêtée dans les 30cm sur 7 des 10 lancers'"></textarea>
+            </div>
+            
+            <div class="notes">
+                <h4>⚠️ Qu'est-ce qui doit être amélioré?</h4>
+                <textarea placeholder="Ex: 'Tir à longue distance (>8m) - je rate souvent à droite'"></textarea>
+            </div>
+            
+            <div class="notes">
+                <h4>🎯 Prochaines étapes / Objectifs pour le prochain entraînement:</h4>
+                <textarea placeholder="Ex: 'Se concentrer sur la technique du poignet au relâchement. Objectif: 7/10 touches sur donnée à 8m'"></textarea>
+            </div>
+        </div>
+        
+        <!-- Séance 2 -->
+        <div class="session">
+            <div class="session-header">
+                <div class="field">
+                    <label>📅 Date:</label>
+                    <input type="date">
+                </div>
+                <div class="field">
+                    <label>⏱️ Durée (min):</label>
+                    <input type="number" placeholder="45">
+                </div>
+                <div class="field">
+                    <label>🌤️ Météo/Surface:</label>
+                    <select>
+                        <option>Ensoleillé - Gravier</option>
+                        <option>Nuageux - Gravier</option>
+                        <option>Pluie - Gravier</option>
+                        <option>Ensoleillé - Asphalte</option>
+                        <option>Nuageux - Asphalte</option>
+                        <option>Ensoleillé - Sable</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="goals-section">
+                <h4>🎯 Focus du jour (cochez ce que vous avez entraîné):</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="point2">
+                        <label for="point2">Pointage/Placement</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tir2">
+                        <label for="tir2">Tir/Tireur</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="donnee2">
+                        <label for="donnee2">Précision donnée</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="retro2">
+                        <label for="retro2">Rétro/Contrôle</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="match2">
+                        <label for="match2">Simulation match</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tactique2">
+                        <label for="tactique2">Tactique/Décision</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric-box">
+                    <label>Touches pointage (dans 50cm):</label>
+                    <input type="text" placeholder="6/10">
+                </div>
+                <div class="metric-box">
+                    <label>Précision tir:</label>
+                    <input type="text" placeholder="4/8 = 50%">
+                </div>
+                <div class="metric-box">
+                    <label>Nombre de carreaux:</label>
+                    <input type="text" placeholder="2">
+                </div>
+                <div class="metric-box">
+                    <label>Précision donnée (6m):</label>
+                    <input type="text" placeholder="5/10">
+                </div>
+                <div class="metric-box">
+                    <label>Précision donnée (8m):</label>
+                    <input type="text" placeholder="3/10">
+                </div>
+                <div class="metric-box">
+                    <label>Meilleure distance:</label>
+                    <input type="text" placeholder="7m">
+                </div>
+            </div>
+            
+            <div class="notes">
+                <h4>✅ Qu'est-ce qui a bien marché aujourd'hui?</h4>
+                <textarea></textarea>
+            </div>
+            
+            <div class="notes">
+                <h4>⚠️ Qu'est-ce qui doit être amélioré?</h4>
+                <textarea></textarea>
+            </div>
+            
+            <div class="notes">
+                <h4>🎯 Prochaines étapes / Objectifs pour le prochain entraînement:</h4>
+                <textarea></textarea>
+            </div>
+        </div>
+        
+        <!-- Séance 3 -->
+        <div class="session">
+            <div class="session-header">
+                <div class="field">
+                    <label>📅 Date:</label>
+                    <input type="date">
+                </div>
+                <div class="field">
+                    <label>⏱️ Durée (min):</label>
+                    <input type="number" placeholder="45">
+                </div>
+                <div class="field">
+                    <label>🌤️ Météo/Surface:</label>
+                    <select>
+                        <option>Ensoleillé - Gravier</option>
+                        <option>Nuageux - Gravier</option>
+                        <option>Pluie - Gravier</option>
+                        <option>Ensoleillé - Asphalte</option>
+                        <option>Nuageux - Asphalte</option>
+                        <option>Ensoleillé - Sable</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="goals-section">
+                <h4>🎯 Focus du jour (cochez ce que vous avez entraîné):</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="point3">
+                        <label for="point3">Pointage/Placement</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tir3">
+                        <label for="tir3">Tir/Tireur</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="donnee3">
+                        <label for="donnee3">Précision donnée</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="retro3">
+                        <label for="retro3">Rétro/Contrôle</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="match3">
+                        <label for="match3">Simulation match</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tactique3">
+                        <label for="tactique3">Tactique/Décision</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric-box">
+                    <label>Touches pointage (dans 50cm):</label>
+                    <input type="text" placeholder="6/10">
+                </div>
+                <div class="metric-box">
+                    <label>Précision tir:</label>
+                    <input type="text" placeholder="4/8 = 50%">
+                </div>
+                <div class="metric-box">
+                    <label>Nombre de carreaux:</label>
+                    <input type="text" placeholder="2">
+                </div>
+                <div class="metric-box">
+                    <label>Précision donnée (6m):</label>
+                    <input type="text" placeholder="5/10">
+                </div>
+                <div class="metric-box">
+                    <label>Précision donnée (8m):</label>
+                    <input type="text" placeholder="3/10">
+                </div>
+                <div class="metric-box">
+                    <label>Meilleure distance:</label>
+                    <input type="text" placeholder="7m">
+                </div>
+            </div>
+            
+            <div class="notes">
+                <h4>✅ Qu'est-ce qui a bien marché aujourd'hui?</h4>
+                <textarea></textarea>
+            </div>
+            
+            <div class="notes">
+                <h4>⚠️ Qu'est-ce qui doit être amélioré?</h4>
+                <textarea></textarea>
+            </div>
+            
+            <div class="notes">
+                <h4>🎯 Prochaines étapes / Objectifs pour le prochain entraînement:</h4>
+                <textarea></textarea>
+            </div>
+        </div>
+        
+        <div class="info-box" style="margin-top: 20px;">
+            <h3>💡 Conseils pour réussir:</h3>
+            <ul>
+                <li>Entraînez-vous 3-4 fois par semaine pour de meilleurs résultats</li>
+                <li>Variez entre focus pointage, focus tir et simulation de match</li>
+                <li>Filmez-vous régulièrement et analysez la technique</li>
+                <li>Fixez des objectifs réalistes et célébrez les petits progrès</li>
+                <li>Après 4-8 semaines d'entraînement régulier, vous verrez une nette amélioration!</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias y Entrevistas - Guía de Petanca</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .current-month-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .article-card {
+            background: #f9f9f9;
+            border-left: 4px solid #D2691E;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .article-category {
+            background: #8B4513;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #8B4513;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #D2691E;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #8B4513;
+            transform: translateX(5px);
+        }
+
+        .archive-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .archive-link:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="../license-manager.js"></script>
+</head>
+<body>
+    <a href="contenido.html" class="toc-button">Contenido</a>
+    <div class="language-switcher">
+        <a href="../aktuellt.html" title="Svenska">🇸🇪</a>
+        <a href="../en/news.html" title="English">🇬🇧</a>
+        <a href="../fr/actualites.html" title="Français">🇫🇷</a>
+        <a href="aktuellt.html" class="active" title="Español">🇪🇸</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="chapter-number">🎙️ Noticias y Entrevistas</div>
+            <h1 class="chapter-title">Noticias del Mes</h1>
+            <p class="chapter-subtitle">Últimas noticias del mundo de la petanca</p>
+        </div>
+
+        <div class="content">
+            <div class="current-month-badge">
+                📅 Octubre 2025
+            </div>
+
+            <div class="info-box">
+                <p style="margin: 0; line-height: 1.6;">
+                    <strong>🌍 Contenido en español próximamente</strong><br>
+                    Esta sección está en desarrollo. Las noticias y entrevistas se publicarán pronto en español. 
+                    Mientras tanto, puedes leer el contenido original en sueco cambiando el idioma arriba.
+                </p>
+            </div>
+
+            <!-- ARTÍCULO EJEMPLO: Dawson Herleman -->
+            <div class="article-card">
+                <div class="article-header">
+                    <span class="article-date">Septiembre 2025</span>
+                    <span class="article-category">🎤 Entrevista</span>
+                </div>
+                <h2 class="article-title">Dawson Herleman: El adolescente que aplasta a los veteranos de la petanca</h2>
+                <div class="article-excerpt">
+                    <p><strong>Cuando un chico de catorce años gana una competición junto con un jugador de 72 años y otro de 48, y es el adolescente quien lleva al equipo</strong> – entonces sabes que algo especial está sucediendo.</p>
+                    
+                    <h4>El niño que no quería jugar</h4>
+                    <p>Dawson Herleman nació en 2010 en Vitrolles, en el sur de Francia. Su familia estaba obsesionada con la petanca. Realmente obsesionada – ya sabes, ese tipo de familia donde la Nochebuena termina con todos afuera lanzando bolas en la oscuridad.</p>
+                    
+                    <p>Pero el pequeño Dawson no tenía ningún interés. Mientras sus padres pasaban los fines de semana en el boulódromo local, él prefería jugar videojuegos o hacer cualquier otra cosa. Era como tener un hijo de Messi que odiara el fútbol.</p>
+
+                    <h4>El cambio</h4>
+                    <p>"Tenía nueve años cuando finalmente lo intenté de verdad", dice Dawson hoy. "No sé qué pasó, pero de repente todo hizo clic. Quizás estaba listo. O quizás finalmente vi cómo funcionaba realmente el juego – no solo lanzar bolas sino pensar estratégicamente."</p>
+
+                    <p>Y cuando hizo clic, lo hizo de verdad. En tres años pasó de principiante completo a vencer a jugadores que llevaban décadas entrenando. Su técnica de tiro se volvió legendaria en los círculos locales. La gente venía solo para ver cómo este niño hacía tiros que muchos adultos no podían soñar con hacer.</p>
+
+                    <h4>El éxito llega rápido</h4>
+                    <p>En 2024, con solo 14 años, Dawson ganó su primera competición seria. No era una competición junior – era una competición abierta con algunos de los mejores jugadores de la región. Y no solo ganó; dominó.</p>
+
+                    <p>"La gente estaba en shock", recuerda su entrenador Pierre Dubois. "No era solo que fuera bueno para su edad. Era bueno, punto. Su lectura del terreno, su control de la bola, su calma bajo presión – todo estaba a nivel profesional."</p>
+                </div>
+                <a href="#" class="read-more">Leer más →</a>
+            </div>
+
+            <!-- PRÓXIMAMENTE -->
+            <div class="article-card" style="opacity: 0.7;">
+                <div class="article-header">
+                    <span class="article-date">Próximamente</span>
+                    <span class="article-category">📰 Noticia</span>
+                </div>
+                <h2 class="article-title">Cambios en las reglas de la FIPJP para 2026</h2>
+                <div class="article-excerpt">
+                    <p>Las nuevas regulaciones sobre mediciones y especificaciones de bolas entrarán en vigor el próximo año. Analizamos qué significa esto para jugadores profesionales y recreativos.</p>
+                </div>
+                <span style="color: #999; font-style: italic;">Contenido en desarrollo...</span>
+            </div>
+
+            <div class="article-card" style="opacity: 0.7;">
+                <div class="article-header">
+                    <span class="article-date">Próximamente</span>
+                    <span class="article-category">🎤 Entrevista</span>
+                </div>
+                <h2 class="article-title">Dylan Rocher: El campeón mundial habla sobre su técnica</h2>
+                <div class="article-excerpt">
+                    <p>Entrevista exclusiva con el tres veces campeón mundial sobre su entrenamiento, mentalidad y consejos para jugadores aspirantes.</p>
+                </div>
+                <span style="color: #999; font-style: italic;">Contenido en desarrollo...</span>
+            </div>
+
+            <div class="navigation">
+                <a href="archivo.html" class="archive-link">📚 Ver Archivo Histórico (Premium)</a>
+                <a href="contenido.html" class="nav-btn">← Volver al Contenido</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

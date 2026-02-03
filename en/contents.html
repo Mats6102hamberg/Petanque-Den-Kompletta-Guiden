@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents - Pétanque Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(160deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #FFF8DC;
+            letter-spacing: 2px;
+        }
+        
+        .content {
+            padding: 60px 40px;
+        }
+        
+        .forord {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-left: 4px solid #D2691E;
+            border-radius: 5px;
+        }
+        
+        .forord h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        
+        .forord p {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .toc-section {
+            margin-bottom: 40px;
+        }
+        
+        .toc-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #D2691E;
+        }
+        
+        .chapter-list {
+            list-style: none;
+        }
+        
+        .chapter-item {
+            margin-bottom: 15px;
+        }
+        
+        .chapter-link {
+            display: block;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #CD853F;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .chapter-link:hover {
+            background: #8B4513;
+            color: white;
+            border-left-color: #FFF8DC;
+            transform: translateX(10px);
+        }
+        
+        .chapter-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-link:hover .chapter-number {
+            color: #FFF8DC;
+        }
+        
+        .chapter-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .chapter-link:hover .chapter-desc {
+            color: #FFF8DC;
+        }
+        
+        /* Special styling for matchprotokoll with yellow background */
+        .chapter-link.matchprotokoll-link:hover {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #333;
+            border-left-color: #ff6f00;
+        }
+        
+        .chapter-link.matchprotokoll-link:hover .chapter-number,
+        .chapter-link.matchprotokoll-link:hover .chapter-title,
+        .chapter-link.matchprotokoll-link:hover .chapter-desc {
+            color: #333;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #D2691E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <a href="../innehall.html" title="Svenska">🇸🇪</a>
+        <a href="contents.html" class="active" title="English">🇬🇧</a>
+        <a href="../fr/sommaire.html" title="Français">🇫🇷</a>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>PÉTANQUE</h1>
+            <p>From Beginner to Pro – A Complete Guide</p>
+        </div>
+        
+        <div class="content">
+            <div class="forord">
+                <h2>Foreword</h2>
+                <p>Pétanque is more than just a sport – it's a lifestyle, a social activity, and both a tactical and technical challenge. This book is written to give beginners a solid foundation and offer experienced players new perspectives and improvement tips. Whether you're holding a boule for the first time or already competing at a high level, there's something here for you.</p>
+                <p>An important note about terminology: Pétanque has deep French roots. To ensure your knowledge is complete – and to help you feel at home in all contexts, from your local club to international competitions – we will use the international technical language. This means that throughout the text, we blend English terms (such as boule and shooting) with internationally recognized French expressions (such as carreau and tirer au fer). Consider these French words as the sport's official technical terms; they are an essential part of the game's culture and your education.</p>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #fff; border: 2px solid #D2691E; border-radius: 8px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px; font-size: 24px;">📋 Interactive Tools</h3>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="cheat-sheet.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📝 Cheat Sheet
+                        </a>
+                        <a href="training-journal.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📊 Training Journal
+                        </a>
+                        <a href="match-protocol.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            🏆 Match Protocol
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Part 1: Basics for Beginners</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="part1-chapter1.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 1</div>
+                            <div class="chapter-title">What is Boule Pétanque?</div>
+                            <div class="chapter-desc">The history behind pétanque, basic rules and game concept, differences between pétanque, boule and boccia/bocce</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part1-chapter2.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 2</div>
+                            <div class="chapter-title">Equipment – Choose the Right Boules</div>
+                            <div class="chapter-desc">Weight, size and material, difference between competition and recreational boules, maintenance and cleaning</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part1-chapter3.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 3</div>
+                            <div class="chapter-title">Basic Techniques</div>
+                            <div class="chapter-desc">Proper grip and stance, how to point, how to shoot, training with measurable goals</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part1-chapter4.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 4</div>
+                            <div class="chapter-title">Strategy for Beginners</div>
+                            <div class="chapter-desc">Simple tactics to win points, decision tree (point or shoot?), how to read the terrain, common mistakes</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Part 2: Advanced Techniques for Pros</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="part2-chapter5.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 5</div>
+                            <div class="chapter-title">Improve Your Pointing</div>
+                            <div class="chapter-desc">Advanced placement techniques, adapting your throw to terrain and weather, mental training</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part2-chapter6.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 6</div>
+                            <div class="chapter-title">Championship Shooting (au fer shots)</div>
+                            <div class="chapter-desc">Direct hits vs. rolling shots, training tips to become a skilled shooter, analysis of professional shooting styles</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part2-chapter7.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 7</div>
+                            <div class="chapter-title">High-Level Tactics</div>
+                            <div class="chapter-desc">Controlling game tempo, psychological warfare, team play and communication</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part2-chapter8.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 8</div>
+                            <div class="chapter-title">Train Smarter</div>
+                            <div class="chapter-desc">Effective solo training exercises, video management, physical and mental preparation</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Part 3: Pétanque as a Lifestyle</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="part3-chapter9.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 9</div>
+                            <div class="chapter-title">Competition vs. Social Play</div>
+                            <div class="chapter-desc">Differences in mindset and strategy, how to find clubs and tournaments</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part3-chapter10.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 10</div>
+                            <div class="chapter-title">Pétanque Around the World</div>
+                            <div class="chapter-desc">Cultural differences in the game, major tournaments and legendary players</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Part 4: In-Depth Study and Development</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="part4-indepth.html#strategy" class="chapter-link">
+                            <div class="chapter-number">Chapter 11</div>
+                            <div class="chapter-title">Strategic Analysis and Tactics</div>
+                            <div class="chapter-desc">Advanced game strategy, terrain analysis and psychological play</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part4-indepth.html#mental" class="chapter-link">
+                            <div class="chapter-number">Chapter 12</div>
+                            <div class="chapter-title">Mental Strength and Focus</div>
+                            <div class="chapter-desc">Handling pressure, tilt control and motivation</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part4-indepth.html#training" class="chapter-link">
+                            <div class="chapter-number">Chapter 13</div>
+                            <div class="chapter-title">Training Plan and Development</div>
+                            <div class="chapter-desc">Effective training, video analysis and step-by-step study plan</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part4-indepth.html#physical" class="chapter-link">
+                            <div class="chapter-number">Chapter 14</div>
+                            <div class="chapter-title">Physical Training for Pétanque</div>
+                            <div class="chapter-desc">Strength, balance, mobility and preparation</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part4-chapter15.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 15</div>
+                            <div class="chapter-title">Leading a Boule Pétanque Team</div>
+                            <div class="chapter-desc">Coaching in practice - team selection, tactics under pressure, team building and training environment</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="part4-chapter16.html" class="chapter-link">
+                            <div class="chapter-number">Chapter 16</div>
+                            <div class="chapter-title">Boule Physics and Terrain Reading</div>
+                            <div class="chapter-desc">The science behind the perfect throw - mass, friction, rotation and collisions</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Appendices</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="equipment-guide.html" class="chapter-link">
+                            <div class="chapter-title">Appendix A: Equipment Guide</div>
+                            <div class="chapter-desc">Detailed guide about boules - manufacturing, materials, hardness, models and maintenance</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="rules.html" class="chapter-link">
+                            <div class="chapter-title">Appendix B: Complete Rulebook</div>
+                            <div class="chapter-desc">Complete rule guide from basic to advanced rules and special cases</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="glossary.html" class="chapter-link">
+                            <div class="chapter-title">Appendix C: Glossary</div>
+                            <div class="chapter-desc">Complete glossary with French technical terms and technical concepts - from carreau to tirer au fer</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="appendix-court.html" class="chapter-link">
+                            <div class="chapter-title">Appendix D: Building a Boule Court</div>
+                            <div class="chapter-desc">Complete guide to building your own court - planning, materials, step-by-step instructions, maintenance and cost estimates</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>📥 Downloadable Resources</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="cheat-sheet.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">🎯 Cheat Sheet (1 page)</div>
+                            <div class="chapter-desc">Everything you need on one page: Match routine, etiquette, measurement, donnée tips, throw trajectories and decision tree. Perfect to print and bring to the court!</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="training-journal.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">📊 Training Journal</div>
+                            <div class="chapter-desc">Document your progress: Date, surface, goals, hit percentage, reflections and next steps. Print or fill in digitally.</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="match-protocol.html" class="chapter-link matchprotokoll-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
+                            <div class="chapter-title">📋 Match Protocol (Interactive)</div>
+                            <div class="chapter-desc">Complete match protocol with automatic analysis: Save teams, points per round, statistics (rounds won, average points, shutouts, clutch rounds). Automatically saved in browser. Perfect for competitions and training!</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="index.html" class="back-btn">← Back to Cover</a>
+        </div>
+    </div>
+</body>
+</html>

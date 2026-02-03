@@ -1,0 +1,210 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Translate homepage to all languages
+"""
+
+import os
+import shutil
+
+# Read the Swedish template
+with open('index.html', 'r', encoding='utf-8') as f:
+    swedish = f.read()
+
+# Translation dictionaries
+translations = {
+    'en': {
+        'lang="sv"': 'lang="en"',
+        'Pétanque: Den Kompletta Guiden - Interaktiv Digital Bok': 'Pétanque: The Complete Guide - Interactive Digital Book',
+        'Pétanque: Den Kompletta Guiden': 'Pétanque: The Complete Guide',
+        'Från Nybörjare till Proffs – En Levande, Interaktiv Digital Bok': 'From Beginner to Pro – A Living, Interactive Digital Book',
+        'Mer än bara en bok – ett komplett ekosystem för att bemästra pétanque.': 'More than just a book – a complete ecosystem to master pétanque.',
+        'Med månatliga uppdateringar, interaktiva verktyg och tillgång till premium-appar.': 'With monthly updates, interactive tools and access to premium apps.',
+        '✨ Månatliga Uppdateringar': '✨ Monthly Updates',
+        '📊 Interaktiva Verktyg': '📊 Interactive Tools',
+        '🌍 6 Språk': '🌍 6 Languages',
+        '📱 Inkluderar Appar': '📱 Includes Apps',
+        'Köp Boken Nu →': 'Buy the Book Now →',
+        'Redan köpt? Aktivera': 'Already purchased? Activate',
+        'Den Kompletta Guiden': 'The Complete Guide',
+        '15 Kapitel • 3 Bilagor • Interaktiva Verktyg': '15 Chapters • 3 Appendices • Interactive Tools',
+        'Vad gör denna bok unik?': 'What makes this book unique?',
+        'Inte bara en statisk PDF – en levande plattform som växer och utvecklas varje månad': 'Not just a static PDF – a living platform that grows and evolves every month',
+        '15 Omfattande Kapitel': '15 Comprehensive Chapters',
+        'Från grundläggande tekniker till avancerad klotfysik. Täcker allt från grepp och ställning till psykologisk krigföring och professionell taktik.': 'From basic techniques to advanced ball physics. Covers everything from grip and stance to psychological warfare and professional tactics.',
+        'Månatliga Uppdateringar': 'Monthly Updates',
+        'Nya artiklar, intervjuer med världsstjärnor, regeländringar och turneringsanalyser. Boken uppdateras kontinuerligt med färskt innehåll.': 'New articles, interviews with world stars, rule changes and tournament analyses. The book is continuously updated with fresh content.',
+        'Interaktiva Verktyg': 'Interactive Tools',
+        'Träningsjournal, matchprotokoll med automatisk analys, fusklapp och mer. Allt sparas automatiskt i din webbläsare.': 'Training journal, match protocol with automatic analysis, cheat sheet and more. Everything is automatically saved in your browser.',
+        '6 Språk Tillgängliga': '6 Languages Available',
+        'Svenska, Engelska, Franska, Spanska, Tyska och Thailändska. Välj ditt språk och få hela boken översatt.': 'Swedish, English, French, Spanish, German and Thai. Choose your language and get the entire book translated.',
+        'Nedladdningsbara Resurser': 'Downloadable Resources',
+        'Skriv ut fusklappen och ha med på banan. Använd träningsjournalen för att dokumentera din utveckling över tid.': 'Print the cheat sheet and bring it to the court. Use the training journal to document your development over time.',
+        'Från Proffsen': 'From the Pros',
+        'Lär dig av de bästa. Intervjuer, tekniker och strategier från världens främsta pétanque-spelare.': 'Learn from the best. Interviews, techniques and strategies from the world\'s leading pétanque players.',
+        'Interaktiva Verktyg Inkluderade': 'Interactive Tools Included',
+        'Praktiska verktyg som hjälper dig att förbättra ditt spel och följa din utveckling': 'Practical tools that help you improve your game and track your progress',
+        'Träningsjournal': 'Training Journal',
+        'Dokumentera varje träningspass och följ din utveckling över tid. Perfekt för att identifiera styrkor och svagheter.': 'Document each training session and track your progress over time. Perfect for identifying strengths and weaknesses.',
+        'Spara datum, underlag och väderförhållanden': 'Save date, surface and weather conditions',
+        'Dokumentera träffprocent och teknik': 'Document hit percentage and technique',
+        'Skriv reflektioner och nästa steg': 'Write reflections and next steps',
+        'Exportera och skriv ut': 'Export and print',
+        'Matchprotokoll (Interaktivt)': 'Match Protocol (Interactive)',
+        'Komplett matchprotokoll med automatisk statistik och analys. Sparas automatiskt i webbläsaren.': 'Complete match protocol with automatic statistics and analysis. Automatically saved in the browser.',
+        'Spara lag och poäng per omgång': 'Save teams and points per round',
+        'Automatisk statistik (vunna omgångar, snittpoäng)': 'Automatic statistics (rounds won, average score)',
+        'Identifiera clutch-omgångar och shutouts': 'Identify clutch rounds and shutouts',
+        'Historik över alla dina matcher': 'History of all your matches',
+        'Fusklapp (1 sida)': 'Cheat Sheet (1 page)',
+        'Allt du behöver på en sida. Perfekt att skriva ut och ha med på banan för snabb referens.': 'Everything you need on one page. Perfect to print and bring to the court for quick reference.',
+        'Matchrutin och mental förberedelse': 'Match routine and mental preparation',
+        'Etikett och beteenderegler': 'Etiquette and behavior rules',
+        'Mätning och donnée-tips': 'Measuring and donnée tips',
+        'Beslutsträd för olika situationer': 'Decision trees for different situations',
+        'Exklusiva Boule-Appar': 'Exclusive Boule Apps',
+        'Som bokköpare får du stor rabatt på våra premium pétanque-appar': 'As a book buyer you get a big discount on our premium pétanque apps',
+        'Tränings-Appen': 'Training App',
+        'Strukturerade träningsprogram, videoanalys och personlig utvecklingsplan. Följ din progress med detaljerad statistik.': 'Structured training programs, video analysis and personal development plan. Track your progress with detailed statistics.',
+        '50% rabatt för bokköpare': '50% discount for book buyers',
+        'per månad (ordinarie 199 kr)': 'per month (regular 199 kr)',
+        'Läs mer': 'Read more',
+        'Turnerings-Appen': 'Tournament App',
+        'Hitta turneringar nära dig, anmäl dig direkt och följ resultat i realtid. Perfekt för tävlingsspelare.': 'Find tournaments near you, register directly and follow results in real time. Perfect for competitive players.',
+        'per månad (ordinarie 299 kr)': 'per month (regular 299 kr)',
+        'Statistik-Appen': 'Statistics App',
+        'Avancerad matchanalys med AI-drivna insikter. Jämför dig med andra spelare och identifiera förbättringsområden.': 'Advanced match analysis with AI-driven insights. Compare yourself with other players and identify areas for improvement.',
+        'per månad (ordinarie 399 kr)': 'per month (regular 399 kr)',
+        '💡 <strong>Paketpris:</strong> Köp alla tre appar för endast 349 kr/månad (ordinarie 897 kr)': '💡 <strong>Package price:</strong> Buy all three apps for only 349 kr/month (regular 897 kr)',
+        'Rabattkod skickas automatiskt efter bokköp': 'Discount code sent automatically after book purchase',
+        'En Investering i Ditt Spel': 'An Investment in Your Game',
+        'Allt du behöver för att ta ditt pétanque-spel till nästa nivå': 'Everything you need to take your pétanque game to the next level',
+        'Engångsbetalning - Livstidsåtkomst': 'One-time payment - Lifetime access',
+        '15 omfattande kapitel (200+ sidor)': '15 comprehensive chapters (200+ pages)',
+        'Månatliga uppdateringar med nytt innehåll': 'Monthly updates with new content',
+        'Interaktiva verktyg (träningsjournal, matchprotokoll)': 'Interactive tools (training journal, match protocol)',
+        'Nedladdningsbara resurser': 'Downloadable resources',
+        'Tillgång på 6 olika språk': 'Access in 6 different languages',
+        '50% rabatt på alla premium-appar': '50% discount on all premium apps',
+        'Årlig aktivering krävs (gratis)': 'Annual activation required (free)',
+        'Livstidsåtkomst till alla uppdateringar': 'Lifetime access to all updates',
+        'Köp Nu för 299 kr →': 'Buy Now for 299 kr →',
+        '✓ 30 dagars pengarna-tillbaka-garanti': '✓ 30-day money-back guarantee',
+        '✓ Säker betalning via Gumroad': '✓ Secure payment via Gumroad',
+        '✓ Omedelbar tillgång efter köp': '✓ Immediate access after purchase',
+        "'/index.html'": "'/en/index.html'",
+        "'/en/index.html'": "'/en/index.html'",
+        "'/fr/index.html'": "'/fr/index.html'",
+        "'/es/index.html'": "'/es/index.html'",
+        "'/de/index.html'": "'/de/index.html'",
+        "'/th/index.html'": "'/th/index.html'",
+    },
+    'fr': {
+        'lang="sv"': 'lang="fr"',
+        'Pétanque: Den Kompletta Guiden - Interaktiv Digital Bok': 'Pétanque: Le Guide Complet - Livre Numérique Interactif',
+        'Pétanque: Den Kompletta Guiden': 'Pétanque: Le Guide Complet',
+        'Från Nybörjare till Proffs – En Levande, Interaktiv Digital Bok': 'Du Débutant au Pro – Un Livre Numérique Vivant et Interactif',
+        'Mer än bara en bok – ett komplett ekosystem för att bemästra pétanque.': 'Plus qu\'un simple livre – un écosystème complet pour maîtriser la pétanque.',
+        'Med månatliga uppdateringar, interaktiva verktyg och tillgång till premium-appar.': 'Avec des mises à jour mensuelles, des outils interactifs et l\'accès aux applications premium.',
+        '✨ Månatliga Uppdateringar': '✨ Mises à Jour Mensuelles',
+        '📊 Interaktiva Verktyg': '📊 Outils Interactifs',
+        '🌍 6 Språk': '🌍 6 Langues',
+        '📱 Inkluderar Appar': '📱 Inclut des Apps',
+        'Köp Boken Nu →': 'Acheter le Livre →',
+        'Redan köpt? Aktivera': 'Déjà acheté? Activer',
+        'Den Kompletta Guiden': 'Le Guide Complet',
+        '15 Kapitel • 3 Bilagor • Interaktiva Verktyg': '15 Chapitres • 3 Annexes • Outils Interactifs',
+        'Vad gör denna bok unik?': 'Qu\'est-ce qui rend ce livre unique?',
+        'Inte bara en statisk PDF – en levande plattform som växer och utvecklas varje månad': 'Pas seulement un PDF statique – une plateforme vivante qui grandit et évolue chaque mois',
+        '15 Omfattande Kapitel': '15 Chapitres Complets',
+        'Från grundläggande tekniker till avancerad klotfysik. Täcker allt från grepp och ställning till psykologisk krigföring och professionell taktik.': 'Des techniques de base à la physique avancée des boules. Couvre tout, de la prise et de la posture à la guerre psychologique et aux tactiques professionnelles.',
+        'Månatliga Uppdateringar': 'Mises à Jour Mensuelles',
+        'Nya artiklar, intervjuer med världsstjärnor, regeländringar och turneringsanalyser. Boken uppdateras kontinuerligt med färskt innehåll.': 'Nouveaux articles, interviews avec des stars mondiales, changements de règles et analyses de tournois. Le livre est continuellement mis à jour avec du contenu frais.',
+        'Interaktiva Verktyg': 'Outils Interactifs',
+        'Träningsjournal, matchprotokoll med automatisk analys, fusklapp och mer. Allt sparas automatiskt i din webbläsare.': 'Journal d\'entraînement, protocole de match avec analyse automatique, aide-mémoire et plus. Tout est automatiquement sauvegardé dans votre navigateur.',
+        '6 Språk Tillgängliga': '6 Langues Disponibles',
+        'Svenska, Engelska, Franska, Spanska, Tyska och Thailändska. Välj ditt språk och få hela boken översatt.': 'Suédois, Anglais, Français, Espagnol, Allemand et Thaï. Choisissez votre langue et obtenez le livre entier traduit.',
+        'Nedladdningsbara Resurser': 'Ressources Téléchargeables',
+        'Skriv ut fusklappen och ha med på banan. Använd träningsjournalen för att dokumentera din utveckling över tid.': 'Imprimez l\'aide-mémoire et apportez-le sur le terrain. Utilisez le journal d\'entraînement pour documenter votre développement au fil du temps.',
+        'Från Proffsen': 'Des Professionnels',
+        'Lär dig av de bästa. Intervjuer, tekniker och strategier från världens främsta pétanque-spelare.': 'Apprenez des meilleurs. Interviews, techniques et stratégies des meilleurs joueurs de pétanque du monde.',
+        'Interaktiva Verktyg Inkluderade': 'Outils Interactifs Inclus',
+        'Praktiska verktyg som hjälper dig att förbättra ditt spel och följa din utveckling': 'Outils pratiques qui vous aident à améliorer votre jeu et suivre vos progrès',
+        'Träningsjournal': 'Journal d\'Entraînement',
+        'Dokumentera varje träningspass och följ din utveckling över tid. Perfekt för att identifiera styrkor och svagheter.': 'Documentez chaque session d\'entraînement et suivez vos progrès au fil du temps. Parfait pour identifier les forces et les faiblesses.',
+        'Spara datum, underlag och väderförhållanden': 'Enregistrer la date, la surface et les conditions météorologiques',
+        'Dokumentera träffprocent och teknik': 'Documenter le pourcentage de réussite et la technique',
+        'Skriv reflektioner och nästa steg': 'Écrire des réflexions et les prochaines étapes',
+        'Exportera och skriv ut': 'Exporter et imprimer',
+        'Matchprotokoll (Interaktivt)': 'Protocole de Match (Interactif)',
+        'Komplett matchprotokoll med automatisk statistik och analys. Sparas automatiskt i webbläsaren.': 'Protocole de match complet avec statistiques et analyses automatiques. Sauvegardé automatiquement dans le navigateur.',
+        'Spara lag och poäng per omgång': 'Enregistrer les équipes et les points par manche',
+        'Automatisk statistik (vunna omgångar, snittpoäng)': 'Statistiques automatiques (manches gagnées, score moyen)',
+        'Identifiera clutch-omgångar och shutouts': 'Identifier les manches décisives et les shutouts',
+        'Historik över alla dina matcher': 'Historique de tous vos matchs',
+        'Fusklapp (1 sida)': 'Aide-Mémoire (1 page)',
+        'Allt du behöver på en sida. Perfekt att skriva ut och ha med på banan för snabb referens.': 'Tout ce dont vous avez besoin sur une page. Parfait à imprimer et à emporter sur le terrain pour une référence rapide.',
+        'Matchrutin och mental förberedelse': 'Routine de match et préparation mentale',
+        'Etikett och beteenderegler': 'Étiquette et règles de conduite',
+        'Mätning och donnée-tips': 'Mesure et conseils de donnée',
+        'Beslutsträd för olika situationer': 'Arbres de décision pour différentes situations',
+        'Exklusiva Boule-Appar': 'Applications Boule Exclusives',
+        'Som bokköpare får du stor rabatt på våra premium pétanque-appar': 'En tant qu\'acheteur du livre, vous bénéficiez d\'une réduction importante sur nos applications pétanque premium',
+        'Tränings-Appen': 'Application d\'Entraînement',
+        'Strukturerade träningsprogram, videoanalys och personlig utvecklingsplan. Följ din progress med detaljerad statistik.': 'Programmes d\'entraînement structurés, analyse vidéo et plan de développement personnel. Suivez vos progrès avec des statistiques détaillées.',
+        '50% rabatt för bokköpare': '50% de réduction pour les acheteurs du livre',
+        'per månad (ordinarie 199 kr)': 'par mois (régulier 199 kr)',
+        'Läs mer': 'En savoir plus',
+        'Turnerings-Appen': 'Application de Tournoi',
+        'Hitta turneringar nära dig, anmäl dig direkt och följ resultat i realtid. Perfekt för tävlingsspelare.': 'Trouvez des tournois près de chez vous, inscrivez-vous directement et suivez les résultats en temps réel. Parfait pour les joueurs compétitifs.',
+        'per månad (ordinarie 299 kr)': 'par mois (régulier 299 kr)',
+        'Statistik-Appen': 'Application de Statistiques',
+        'Avancerad matchanalys med AI-drivna insikter. Jämför dig med andra spelare och identifiera förbättringsområden.': 'Analyse de match avancée avec des informations basées sur l\'IA. Comparez-vous avec d\'autres joueurs et identifiez les domaines d\'amélioration.',
+        'per månad (ordinarie 399 kr)': 'par mois (régulier 399 kr)',
+        '💡 <strong>Paketpris:</strong> Köp alla tre appar för endast 349 kr/månad (ordinarie 897 kr)': '💡 <strong>Prix du forfait:</strong> Achetez les trois applications pour seulement 349 kr/mois (régulier 897 kr)',
+        'Rabattkod skickas automatiskt efter bokköp': 'Code de réduction envoyé automatiquement après l\'achat du livre',
+        'En Investering i Ditt Spel': 'Un Investissement dans Votre Jeu',
+        'Allt du behöver för att ta ditt pétanque-spel till nästa nivå': 'Tout ce dont vous avez besoin pour amener votre jeu de pétanque au niveau supérieur',
+        'Engångsbetalning - Livstidsåtkomst': 'Paiement unique - Accès à vie',
+        '15 omfattande kapitel (200+ sidor)': '15 chapitres complets (200+ pages)',
+        'Månatliga uppdateringar med nytt innehåll': 'Mises à jour mensuelles avec du nouveau contenu',
+        'Interaktiva verktyg (träningsjournal, matchprotokoll)': 'Outils interactifs (journal d\'entraînement, protocole de match)',
+        'Nedladdningsbara resurser': 'Ressources téléchargeables',
+        'Tillgång på 6 olika språk': 'Accès en 6 langues différentes',
+        '50% rabatt på alla premium-appar': '50% de réduction sur toutes les applications premium',
+        'Årlig aktivering krävs (gratis)': 'Activation annuelle requise (gratuite)',
+        'Livstidsåtkomst till alla uppdateringar': 'Accès à vie à toutes les mises à jour',
+        'Köp Nu för 299 kr →': 'Acheter Maintenant pour 299 kr →',
+        '✓ 30 dagars pengarna-tillbaka-garanti': '✓ Garantie de remboursement de 30 jours',
+        '✓ Säker betalning via Gumroad': '✓ Paiement sécurisé via Gumroad',
+        '✓ Omedelbar tillgång efter köp': '✓ Accès immédiat après l\'achat',
+        "'/index.html'": "'/fr/index.html'",
+        "'/en/index.html'": "'/en/index.html'",
+        "'/fr/index.html'": "'/fr/index.html'",
+        "'/es/index.html'": "'/es/index.html'",
+        "'/de/index.html'": "'/de/index.html'",
+        "'/th/index.html'": "'/th/index.html'",
+    }
+}
+
+# Create English version
+english = swedish
+for old, new in translations['en'].items():
+    english = english.replace(old, new)
+
+with open('en/index.html', 'w', encoding='utf-8') as f:
+    f.write(english)
+
+print("✓ English version created")
+
+# Create French version
+french = swedish
+for old, new in translations['fr'].items():
+    french = french.replace(old, new)
+
+with open('fr/index.html', 'w', encoding='utf-8') as f:
+    f.write(french)
+
+print("✓ French version created")
+
+print("\nAll translations completed!")

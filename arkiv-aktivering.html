@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktivera Arkivtillgång - Pétanque Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .activation-container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .activation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .activation-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .activation-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .activation-header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: monospace;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .activate-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .activate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .activate-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .info-box {
+            background: #f0f7ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .info-box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .error-message {
+            background: #fee;
+            border-left: 4px solid #f44;
+            padding: 15px;
+            border-radius: 5px;
+            color: #c33;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success-message {
+            background: #efe;
+            border-left: 4px solid #4f4;
+            padding: 15px;
+            border-radius: 5px;
+            color: #3c3;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="activation-container">
+        <div class="activation-header">
+            <div class="activation-icon">🔑</div>
+            <h1>Aktivera Arkivtillgång</h1>
+            <p>Ange din arkivlicensnyckel från Gumroad för att få livstidsåtkomst till det historiska arkivet</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📧 Var hittar jag min licensnyckel?</h3>
+            <p>Efter köpet på Gumroad får du ett email med din unika licensnyckel. Den ser ut ungefär så här: <code>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code></p>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+        <div id="successMessage" class="success-message"></div>
+
+        <form id="activationForm">
+            <div class="form-group">
+                <label class="form-label" for="archiveLicense">Arkivlicensnyckel</label>
+                <input 
+                    type="text" 
+                    id="archiveLicense" 
+                    class="form-input" 
+                    placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="activate-button" id="activateBtn">
+                Aktivera Arkivtillgång
+            </button>
+        </form>
+
+        <div class="back-link">
+            <a href="arkiv-prenumeration.html">← Tillbaka till prenumerationssidan</a>
+        </div>
+    </div>
+
+    <script>
+        // Check if user has basic book license
+        (function() {
+            'use strict';
+</body>
+</html>

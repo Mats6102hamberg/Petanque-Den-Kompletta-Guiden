@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Partido – Pétanque</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .match-protocol {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .protocol-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .protocol-header h1 {
+            font-size: 28px;
+            color: #8B4513;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #f5f5f5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .save-hint {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .section h2 {
+            font-size: 20px;
+            color: #8B4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #D2691E;
+            padding-bottom: 8px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .field label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .field input,
+        .field select,
+        .field textarea {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+            color: #000;
+            background: #fff;
+            font-weight: 500;
+        }
+        
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            outline: none;
+            border-color: #8B4513;
+            background: #fff;
+        }
+        
+        .field input::placeholder {
+            color: #999;
+            font-weight: 400;
+        }
+        
+        .field textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .rounds-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .rounds-table thead {
+            background: #f9f9f9;
+        }
+        
+        .rounds-table th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .rounds-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .rounds-table input {
+            width: 60px;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+            color: #000;
+            background: #fff;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .rounds-table input.note-input {
+            width: 100%;
+        }
+        
+        .rounds-table tfoot {
+            background: #f9f9f9;
+            font-weight: 700;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .stat-box {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+        .stat-box .label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        
+        .stat-box .value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #8B4513;
+        }
+        
+        .signature-line {
+            border-top: 2px dotted #333;
+            padding-top: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        @media print {
+            html, body {
+                background: white !important;
+            }
+            
+            .protocol-header .button-group,
+            .save-hint,
+            .language-switcher {
+                display: none !important;
+            }
+            
+            .section {
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            
+            .match-protocol {
+                padding: 0;
+            }
+            
+            .btn {
+                display: none !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .match-protocol {
+                padding: 10px;
+            }
+            
+            .protocol-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .protocol-header h1 {
+                font-size: 22px;
+            }
+            
+            .button-group {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+            
+            .section h2 {
+                font-size: 18px;
+            }
+            
+            table {
+                font-size: 12px;
+            }
+            
+            table th,
+            table td {
+                padding: 6px 4px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .match-protocol {
+                padding: 5px;
+            }
+            
+            .protocol-header h1 {
+                font-size: 18px;
+            }
+            
+            .section {
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+            
+            .section h2 {
+                font-size: 16px;
+            }
+            
+            .field label {
+                font-size: 12px;
+            }
+            
+            .field input,
+            .field select,
+            .field textarea {
+                padding: 8px;
+                font-size: 14px;
+            }
+            
+            table {
+                font-size: 11px;
+            }
+            
+            table th,
+            table td {
+                padding: 4px 2px;
+            }
+            
+            .btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>    
+</head>
+<body>
+    <a href="../es/contenido.html" class="toc-button">Contenido</a>
+    <div class="language-switcher">
+        <a href="../matchprotokoll.html" title="Svenska">🇸🇪</a>
+        <a href="../en/match-protocol.html" title="English">🇬🇧</a>
+        <a href="../fr/protocole-match.html" title="Français">🇫🇷</a>
+        <a href="matchprotokoll.html" class="active" title="Español">🇪🇸</a>
+    </div>
+    
+    <div class="match-protocol">
+        <div class="protocol-header">
+            <h1>📋 Protocolo de Partido – Pétanque</h1>
+            <div class="button-group">
+                <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
+                <button class="btn" onclick="resetProtocol()">🔄 Restablecer</button>
+            </div>
+        </div>
+        
+        <p class="save-hint">El formulario se guarda automáticamente en este dispositivo.</p>
+        
+        <!-- Match Info -->
+        <div class="section">
+            <h2>Datos del partido</h2>
+            <div class="grid-2">
+                <div class="field">
+                    <label>Fecha</label>
+                    <input type="date" id="date" onchange="saveData()">
+                </div>
+                <div class="field">
+                    <label>Lugar</label>
+                    <input type="text" id="place" placeholder="P. ej. Pista del club" onchange="saveData()">
+                </div>
+                <div class="field">
+                    <label>Superficie</label>
+                    <select id="surface" onchange="saveData()">
+                        <option>Arena</option>
+                        <option>Grava</option>
+                        <option>Duro</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="grid-3">
+                    <div class="field">
+                        <label>Clima</label>
+                        <input type="text" id="weather" placeholder="Soleado" onchange="saveData()">
+                    </div>
+                    <div class="field">
+                        <label>°C</label>
+                        <input type="number" id="temp" placeholder="20" onchange="saveData()">
+                    </div>
+                    <div class="field">
+                        <label>Viento (m/s)</label>
+                        <input type="number" id="wind" placeholder="3" onchange="saveData()">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Tipo de partido</label>
+                    <select id="matchType" onchange="saveData()">
+                        <option>Entrenamiento</option>
+                        <option>Competición</option>
+                        <option>Copa</option>
+                        <option>Liga</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Teams -->
+        <div class="grid-2">
+            <div class="section">
+                <h2>Equipo 1</h2>
+                <div class="field">
+                    <label>Nombre</label>
+                    <input type="text" id="t1Name" placeholder="Nombre del equipo" onchange="saveData()">
+                </div>
+                <div class="field">
+                    <label>Jugadores</label>
+                    <input type="text" id="t1Players" placeholder="Jugador 1, Jugador 2, Jugador 3" onchange="saveData()">
+                </div>
+                <div class="field">
+                    <label>Club</label>
+                    <input type="text" id="t1Club" placeholder="Nombre del club" onchange="saveData()">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Equipo 2</h2>
+                <div class="field">
+                    <label>Nombre</label>
+                    <input type="text" id="t2Name" placeholder="Nombre del equipo" onchange="saveData()">
+                </div>
+                <div class="field">
+                    <label>Jugadores</label>
+                    <input type="text" id="t2Players" placeholder="Jugador 1, Jugador 2, Jugador 3" onchange="saveData()">
+                </div>
+                <div class="field">
+                    <label>Club</label>
+                    <input type="text" id="t2Club" placeholder="Nombre del club" onchange="saveData()">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rounds Table -->
+        <div class="section">
+            <h2>Manos</h2>
+            <table class="rounds-table">
+                <thead>
+                    <tr>
+                        <th>Mano</th>
+                        <th>Puntos Equipo 1</th>
+                        <th>Puntos Equipo 2</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody id="roundsBody">
+                    <!-- Generated by JS -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td id="total1" style="text-align: center;">0</td>
+                        <td id="total2" style="text-align: center;">0</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <!-- Summary & Analysis -->
+        <div class="grid-2">
+            <div class="section">
+                <h2>Resumen</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="label">Total – Equipo 1</div>
+                        <div class="value" id="sumTotal1">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Total – Equipo 2</div>
+                        <div class="value" id="sumTotal2">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Equipo ganador</div>
+                        <div class="value" id="winner">-</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Número de manos jugadas</div>
+                        <div class="value" id="roundsPlayed">0</div>
+                    </div>
+                </div>
+                
+                <div class="field" style="margin-top: 15px;">
+                    <label>Nota táctica antes del partido</label>
+                    <textarea id="preNote" placeholder="P. ej. 'Centrarse en lanzamientos largos; rival débil a >8 m'" onchange="saveData()"></textarea>
+                </div>
+                
+                <div class="field">
+                    <label>Reflexión después del partido</label>
+                    <textarea id="postNote" placeholder="P. ej. 'Buenos tiros al final; practicar más la precisión de la donnée'" onchange="saveData()"></textarea>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Análisis automático</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="label">Manos ganadas – Equipo 1</div>
+                        <div class="value" id="won1">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Manos ganadas – Equipo 2</div>
+                        <div class="value" id="won2">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Promedio puntos/mano – Equipo 1</div>
+                        <div class="value" id="avg1">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Promedio puntos/mano – Equipo 2</div>
+                        <div class="value" id="avg2">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Shutouts (0 puntos) – Equipo 1</div>
+                        <div class="value" id="shut1">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Shutouts (0 puntos) – Equipo 2</div>
+                        <div class="value" id="shut2">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Manos grandes (≥3p) – Equipo 1</div>
+                        <div class="value" id="big1">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Manos grandes (≥3p) – Equipo 2</div>
+                        <div class="value" id="big2">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Racha de victorias más larga – Equipo 1</div>
+                        <div class="value" id="streak1">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Racha de victorias más larga – Equipo 2</div>
+                        <div class="value" id="streak2">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Diferencia de puntos</div>
+                        <div class="value" id="diff">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Manos decisivas</div>
+                        <div class="value" id="clutch">No</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Signatures -->
+        <div class="section">
+            <h2>Firmas</h2>
+            <div class="grid-2">
+                <div class="signature-line">Equipo 1</div>
+                <div class="signature-line">Equipo 2</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f9f9f9; border-radius: 12px;">
+            <p style="font-size: 14px; color: #666;">
+                <strong>💡 Consejos:</strong> Usa Ctrl/Cmd+P para imprimir o guardar como PDF.
+                El formulario se guarda automáticamente en tu navegador.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        const ROUNDS = 13;
+        
+        // Initialize rounds table
+        function initRounds() {
+            const tbody = document.getElementById('roundsBody');
+            for (let i = 0; i < ROUNDS; i++) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight: 600;">${i + 1}</td>
+                    <td><input type="number" min="0" class="t1-score" data-round="${i}" placeholder="0" onchange="calculateStats()"></td>
+                    <td><input type="number" min="0" class="t2-score" data-round="${i}" placeholder="0" onchange="calculateStats()"></td>
+                    <td><input type="text" class="note-input" data-round="${i}" placeholder="Ej.: bloqueo, tiro, fallo..." onchange="saveData()"></td>
+                `;
+                tbody.appendChild(tr);
+            }
+        }
+        
+        // Save data to localStorage
+        function saveData() {
+            const data = {
+                date: document.getElementById('date').value,
+                place: document.getElementById('place').value,
+                surface: document.getElementById('surface').value,
+                weather: document.getElementById('weather').value,
+                temp: document.getElementById('temp').value,
+                wind: document.getElementById('wind').value,
+                matchType: document.getElementById('matchType').value,
+                t1Name: document.getElementById('t1Name').value,
+                t1Players: document.getElementById('t1Players').value,
+                t1Club: document.getElementById('t1Club').value,
+                t2Name: document.getElementById('t2Name').value,
+                t2Players: document.getElementById('t2Players').value,
+                t2Club: document.getElementById('t2Club').value,
+                preNote: document.getElementById('preNote').value,
+                postNote: document.getElementById('postNote').value,
+                rounds: []
+            };
+            
+            document.querySelectorAll('.t1-score').forEach((input, i) => {
+                const t2Input = document.querySelectorAll('.t2-score')[i];
+                const noteInput = document.querySelectorAll('.note-input')[i];
+                data.rounds.push({
+                    t1: input.value,
+                    t2: t2Input.value,
+                    note: noteInput.value
+                });
+            });
+            
+            localStorage.setItem('matchProtocol_es', JSON.stringify(data));
+            calculateStats();
+        }
+        
+        // Load data from localStorage
+        function loadData() {
+            const saved = localStorage.getItem('matchProtocol_es');
+            if (!saved) return;
+            
+            try {
+                const data = JSON.parse(saved);
+                document.getElementById('date').value = data.date || '';
+                document.getElementById('place').value = data.place || '';
+                document.getElementById('surface').value = data.surface || 'Arena';
+                document.getElementById('weather').value = data.weather || '';
+                document.getElementById('temp').value = data.temp || '';
+                document.getElementById('wind').value = data.wind || '';
+                document.getElementById('matchType').value = data.matchType || 'Entrenamiento';
+                document.getElementById('t1Name').value = data.t1Name || '';
+                document.getElementById('t1Players').value = data.t1Players || '';
+                document.getElementById('t1Club').value = data.t1Club || '';
+                document.getElementById('t2Name').value = data.t2Name || '';
+                document.getElementById('t2Players').value = data.t2Players || '';
+                document.getElementById('t2Club').value = data.t2Club || '';
+                document.getElementById('preNote').value = data.preNote || '';
+                document.getElementById('postNote').value = data.postNote || '';
+                
+                if (data.rounds) {
+                    data.rounds.forEach((round, i) => {
+                        const t1Inputs = document.querySelectorAll('.t1-score');
+                        const t2Inputs = document.querySelectorAll('.t2-score');
+                        const noteInputs = document.querySelectorAll('.note-input');
+                        if (t1Inputs[i]) t1Inputs[i].value = round.t1 || '';
+                        if (t2Inputs[i]) t2Inputs[i].value = round.t2 || '';
+                        if (noteInputs[i]) noteInputs[i].value = round.note || '';
+                    });
+                }
+                
+                calculateStats();
+            } catch (e) {
+                console.error('Error loading data:', e);
+            }
+        }
+        
+        // Calculate statistics
+        function calculateStats() {
+            let total1 = 0, total2 = 0;
+            let won1 = 0, won2 = 0;
+            let shut1 = 0, shut2 = 0;
+            let big1 = 0, big2 = 0;
+            let streak1 = 0, streak2 = 0;
+            let maxStreak1 = 0, maxStreak2 = 0;
+            let roundsPlayed = 0;
+            let clutch = false;
+            
+            const t1Scores = document.querySelectorAll('.t1-score');
+            const t2Scores = document.querySelectorAll('.t2-score');
+            
+            let cum1 = 0, cum2 = 0;
+            let lastPlayedIdx = -1;
+            
+            t1Scores.forEach((input, i) => {
+                const s1 = parseInt(input.value) || 0;
+                const s2 = parseInt(t2Scores[i].value) || 0;
+                
+                if (s1 > 0 || s2 > 0) {
+                    lastPlayedIdx = i;
+                    roundsPlayed++;
+                    
+                    const beforeDiff = cum1 - cum2;
+                    
+                    total1 += s1;
+                    total2 += s2;
+                    cum1 += s1;
+                    cum2 += s2;
+                    
+                    if (s1 > s2) {
+                        won1++;
+                        streak1++;
+                        streak2 = 0;
+                        maxStreak1 = Math.max(maxStreak1, streak1);
+                    } else if (s2 > s1) {
+                        won2++;
+                        streak2++;
+                        streak1 = 0;
+                        maxStreak2 = Math.max(maxStreak2, streak2);
+                    }
+                    
+                    if (s1 > 0 && s2 === 0) shut1++;
+                    if (s2 > 0 && s1 === 0) shut2++;
+                    if (s1 >= 3) big1++;
+                    if (s2 >= 3) big2++;
+                    
+                    // Check clutch
+                    if (i === lastPlayedIdx) {
+                        const afterDiff = cum1 - cum2;
+                        const sealedWin = cum1 >= 13 || cum2 >= 13;
+                        const flippedLead = Math.sign(afterDiff) !== Math.sign(beforeDiff) && beforeDiff !== 0;
+                        clutch = sealedWin || flippedLead;
+                    }
+                }
+            });
+            
+            const avg1 = roundsPlayed ? (total1 / roundsPlayed).toFixed(2) : '0.00';
+            const avg2 = roundsPlayed ? (total2 / roundsPlayed).toFixed(2) : '0.00';
+            const diff = total1 - total2;
+            
+            const t1Name = document.getElementById('t1Name').value || 'Equipo 1';
+            const t2Name = document.getElementById('t2Name').value || 'Equipo 2';
+            const winner = total1 === total2 ? '-' : total1 > total2 ? t1Name : t2Name;
+            
+            // Update UI
+            document.getElementById('total1').textContent = total1;
+            document.getElementById('total2').textContent = total2;
+            document.getElementById('sumTotal1').textContent = total1;
+            document.getElementById('sumTotal2').textContent = total2;
+            document.getElementById('winner').textContent = winner;
+            document.getElementById('roundsPlayed').textContent = roundsPlayed;
+            document.getElementById('won1').textContent = won1;
+            document.getElementById('won2').textContent = won2;
+            document.getElementById('avg1').textContent = avg1;
+            document.getElementById('avg2').textContent = avg2;
+            document.getElementById('shut1').textContent = shut1;
+            document.getElementById('shut2').textContent = shut2;
+            document.getElementById('big1').textContent = big1;
+            document.getElementById('big2').textContent = big2;
+            document.getElementById('streak1').textContent = maxStreak1;
+            document.getElementById('streak2').textContent = maxStreak2;
+            document.getElementById('diff').textContent = diff > 0 ? '+' + diff : diff;
+            document.getElementById('clutch').textContent = clutch ? 'Sí' : 'No';
+            
+            saveData();
+        }
+        
+        // Reset protocol
+        function resetProtocol() {
+            if (!confirm('¿Restablecer todos los campos? Esto no se puede deshacer.')) return;
+            
+            localStorage.removeItem('matchProtocol_es');
+            
+            document.querySelectorAll('input, select, textarea').forEach(el => {
+                if (el.type === 'number' || el.type === 'text' || el.type === 'date') {
+                    el.value = '';
+                } else if (el.tagName === 'SELECT') {
+                    el.selectedIndex = 0;
+                } else if (el.tagName === 'TEXTAREA') {
+                    el.value = '';
+                }
+            });
+            
+            calculateStats();
+        }
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            initRounds();
+            loadData();
+        });
+    </script>
+</body>
+</html>

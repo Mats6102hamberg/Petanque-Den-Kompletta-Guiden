@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice - Guía de Petanca</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(160deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #FFF8DC;
+            letter-spacing: 2px;
+        }
+        
+        .content {
+            padding: 60px 40px;
+        }
+        
+        .forord {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-left: 4px solid #D2691E;
+            border-radius: 5px;
+        }
+        
+        .forord h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        
+        .forord p {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .toc-section {
+            margin-bottom: 40px;
+        }
+        
+        .toc-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #D2691E;
+        }
+        
+        .chapter-list {
+            list-style: none;
+        }
+        
+        .chapter-item {
+            margin-bottom: 15px;
+        }
+        
+        .chapter-link {
+            display: block;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #CD853F;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .chapter-link:hover {
+            background: #8B4513;
+            color: white;
+            border-left-color: #FFF8DC;
+            transform: translateX(10px);
+        }
+        
+        .chapter-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-link:hover .chapter-number {
+            color: #FFF8DC;
+        }
+        
+        .chapter-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .chapter-link:hover .chapter-desc {
+            color: #FFF8DC;
+        }
+        
+        /* Special styling for matchprotokoll with yellow background */
+        .chapter-link.matchprotokoll-link:hover {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #333;
+            border-left-color: #ff6f00;
+        }
+        
+        .chapter-link.matchprotokoll-link:hover .chapter-number,
+        .chapter-link.matchprotokoll-link:hover .chapter-title,
+        .chapter-link.matchprotokoll-link:hover .chapter-desc {
+            color: #333;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #D2691E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <a href="../innehall.html" title="Svenska">🇸🇪</a>
+        <a href="../en/contents.html" title="English">🇬🇧</a>
+        <a href="../fr/sommaire.html" title="Français">🇫🇷</a>
+        <a href="contenido.html" class="active" title="Español">🇪🇸</a>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>PETANCA</h1>
+            <p>De Principiante a Profesional – Una Guía Completa</p>
+        </div>
+        
+        <div class="content">
+            <div class="forord">
+                <h2>Prólogo</h2>
+                <p>La petanca es más que un deporte: es un estilo de vida, una actividad social y un desafío tanto táctico como técnico. Este libro está escrito para dar a los principiantes una base sólida y ofrecer a los jugadores experimentados nuevas perspectivas y consejos de mejora. Ya sea que sostengas una bola por primera vez o ya compitas a alto nivel, aquí hay algo para ti.</p>
+                <p>Una nota importante sobre la terminología: La petanca tiene profundas raíces francesas. Para que tu conocimiento sea completo – y para que te sientas cómodo en todos los contextos, desde el club local hasta las competiciones internacionales – utilizaremos el lenguaje técnico internacional. Esto significa que en el texto mezclamos términos españoles (como bola y tiro) con las expresiones francesas universalmente reconocidas (como carreau y tirer au fer). Considera estas palabras francesas como los términos técnicos oficiales del deporte; son una parte esencial de la cultura del juego y de tu educación.</p>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #fff; border: 2px solid #D2691E; border-radius: 8px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px; font-size: 24px;">📋 Herramientas Interactivas</h3>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="fusklapp.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📝 Hoja de Trucos
+                        </a>
+                        <a href="traningsjournal.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📊 Diario de Entrenamiento
+                        </a>
+                        <a href="matchprotokoll.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            🏆 Protocolo de Partido
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Parte 1: Fundamentos para Principiantes</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del1-kapitel1.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 1</div>
+                            <div class="chapter-title">¿Qué es la petanca?</div>
+                            <div class="chapter-desc">La historia de la petanca, reglas básicas e idea del juego, diferencias entre pétanque, boule y boccia/bocce</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel2.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 2</div>
+                            <div class="chapter-title">Equipamiento – Elegir las Bolas Correctas</div>
+                            <div class="chapter-desc">Peso, tamaño y material, diferencias entre bolas de competición y recreativas, mantenimiento y limpieza</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel3.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 3</div>
+                            <div class="chapter-title">Técnicas Básicas</div>
+                            <div class="chapter-desc">Agarre y postura correctos, cómo apuntar (point), cómo tirar (tiro)</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel4.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 4</div>
+                            <div class="chapter-title">Estrategia de Juego para Principiantes</div>
+                            <div class="chapter-desc">Tácticas simples para ganar puntos, cómo leer el terreno, errores comunes y cómo evitarlos</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Parte 2: Técnicas Avanzadas para Profesionales</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del2-kapitel5.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 5</div>
+                            <div class="chapter-title">Mejorar tu Point</div>
+                            <div class="chapter-desc">Técnicas avanzadas de colocación, adaptar el lanzamiento según superficie y clima, entrenamiento mental</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel6.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 6</div>
+                            <div class="chapter-title">Tiro de Campeonato (tirer au fer)</div>
+                            <div class="chapter-desc">Tiros directos vs. tiros rodados, consejos de entrenamiento para convertirse en un tirador experto, análisis del estilo de los profesionales</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel7.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 7</div>
+                            <div class="chapter-title">Táctica de Alto Nivel</div>
+                            <div class="chapter-desc">Controlar el ritmo del juego, guerra psicológica, juego en equipo y comunicación</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel8.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 8</div>
+                            <div class="chapter-title">Entrenar de Manera Inteligente</div>
+                            <div class="chapter-desc">Ejercicios efectivos para entrenamiento individual, análisis de video, preparación física y mental</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Parte 3: Petanca como Estilo de Vida</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del3-kapitel9.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 9</div>
+                            <div class="chapter-title">Juego Competitivo vs. Juego Social</div>
+                            <div class="chapter-desc">Diferencias de actitud y estrategia, cómo encontrar clubes y torneos</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del3-kapitel10.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 10</div>
+                            <div class="chapter-title">Petanca Alrededor del Mundo</div>
+                            <div class="chapter-desc">Diferencias culturales en el juego, grandes torneos y jugadores legendarios</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Parte 4: Profundización y Desarrollo</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="fordjupning.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 11</div>
+                            <div class="chapter-title">Análisis Estratégico y Táctica</div>
+                            <div class="chapter-desc">Estrategia avanzada de juego, análisis de terreno y juego psicológico</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordjupning.html#mental" class="chapter-link">
+                            <div class="chapter-number">Capítulo 12</div>
+                            <div class="chapter-title">Fuerza Mental y Concentración</div>
+                            <div class="chapter-desc">Manejo de presión, control del tilt y motivación</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordjupning.html#traning" class="chapter-link">
+                            <div class="chapter-number">Capítulo 13</div>
+                            <div class="chapter-title">Plan de Entrenamiento y Desarrollo</div>
+                            <div class="chapter-desc">Entrenamiento efectivo, análisis de video y plan de estudios paso a paso</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordjupning.html#fysik" class="chapter-link">
+                            <div class="chapter-number">Capítulo 14</div>
+                            <div class="chapter-title">Entrenamiento Físico para Petanca</div>
+                            <div class="chapter-desc">Fuerza, equilibrio, movilidad y preparación</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del4-kapitel15.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 15</div>
+                            <div class="chapter-title">Dirigir un Equipo de Boule Petanca</div>
+                            <div class="chapter-desc">Coaching en práctica - selección de equipo, táctica bajo presión, construcción de equipo y ambiente de entrenamiento</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del4-kapitel16.html" class="chapter-link">
+                            <div class="chapter-number">Capítulo 16</div>
+                            <div class="chapter-title">Física de las Bolas y Lectura del Terreno</div>
+                            <div class="chapter-desc">La ciencia detrás del lanzamiento perfecto - masa, fricción, rotación y colisiones</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Apéndices</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="utrustning.html" class="chapter-link">
+                            <div class="chapter-title">Apéndice A: Guía de Equipamiento</div>
+                            <div class="chapter-desc">Guía detallada sobre bolas - fabricación, materiales, dureza, modelos y mantenimiento</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="regler.html" class="chapter-link">
+                            <div class="chapter-title">Apéndice B: Reglamento Completo</div>
+                            <div class="chapter-desc">Guía completa de reglas desde básicas hasta avanzadas y casos especiales</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="ordlista.html" class="chapter-link">
+                            <div class="chapter-title">Apéndice C: Glosario</div>
+                            <div class="chapter-desc">Glosario completo con términos técnicos franceses - desde carreau hasta tirer au fer</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="apendice-pista.html" class="chapter-link">
+                            <div class="chapter-title">Apéndice D: Construir una Pista de Petanca</div>
+                            <div class="chapter-desc">Guía completa para construir tu propia pista - planificación, materiales, instrucciones paso a paso, mantenimiento y estimación de costes</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h2>📥 Recursos Descargables</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="fusklapp.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">🎯 Hoja de Trucos (1 página)</div>
+                            <div class="chapter-desc">Todo lo que necesitas en una página: Rutina de partido, etiqueta, medición, consejos de donnée, trayectorias y árbol de decisiones. ¡Perfecto para imprimir y llevar a la pista!</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="traningsjournal.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">📊 Diario de Entrenamiento</div>
+                            <div class="chapter-desc">Documenta tu progreso: Fecha, superficie, objetivos, porcentaje de aciertos, reflexiones y próximos pasos. Imprime o completa digitalmente.</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="matchprotokoll.html" class="chapter-link matchprotokoll-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
+                            <div class="chapter-title">📋 Protocolo de Partido (Interactivo)</div>
+                            <div class="chapter-desc">Protocolo completo con análisis automático: Guarda equipos, puntos por mano, estadísticas (manos ganadas, promedio de puntos, shutouts, manos decisivas). Se guarda automáticamente en el navegador. ¡Perfecto para competiciones y entrenamientos!</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="index.html" class="back-btn">← Volver a la Portada</a>
+        </div>
+    </div>
+</body>
+</html>

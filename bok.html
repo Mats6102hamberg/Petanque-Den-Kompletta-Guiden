@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétanque: Från Provence till Världen - En berättelse om klotens spel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: #f8f5f0;
+            color: #2c2c2c;
+            line-height: 1.8;
+        }
+
+        /* Hero Section - Book Style */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 80px 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .book-cover-3d {
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .book-wrapper {
+            transform-style: preserve-3d;
+            transform: rotateY(-15deg);
+            transition: transform 0.6s ease;
+        }
+
+        .book-wrapper:hover {
+            transform: rotateY(-5deg) translateY(-10px);
+        }
+
+        .book-front {
+            background: linear-gradient(135deg, #654321 0%, #8B4513 100%);
+            width: 400px;
+            height: 550px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 
+                -5px 0 20px rgba(0,0,0,0.3),
+                20px 20px 60px rgba(0,0,0,0.4);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .book-spine {
+            position: absolute;
+            left: -30px;
+            top: 0;
+            width: 30px;
+            height: 550px;
+            background: linear-gradient(to right, #4a2f1a, #654321);
+            border-radius: 10px 0 0 10px;
+        }
+
+        .book-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: #f4a460;
+            text-align: center;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        .book-subtitle {
+            font-family: 'Lora', serif;
+            font-size: 20px;
+            color: #deb887;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        .book-decoration {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #f4a460, transparent);
+            margin: 30px 0;
+        }
+
+        .book-author {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #f4a460;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-tagline {
+            font-size: 28px;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background: #fff;
+            color: #8B4513;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            background: #f4a460;
+            color: #fff;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 120px 20px;
+            background: #fff;
+        }
+
+        .story-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            text-align: center;
+            color: #8B4513;
+            margin-bottom: 30px;
+        }
+
+        .section-subtitle {
+            font-size: 22px;
+            text-align: center;
+            color: #666;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        .story-excerpt {
+            font-size: 20px;
+            line-height: 2;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 40px;
+            padding: 40px;
+            background: #f8f5f0;
+            border-left: 4px solid #D2691E;
+            border-radius: 8px;
+        }
+
+        .story-excerpt::first-letter {
+            font-size: 72px;
+            font-family: 'Playfair Display', serif;
+            float: left;
+            line-height: 60px;
+            padding-right: 10px;
+            color: #D2691E;
+        }
+
+        /* Chapters Section */
+        .chapters-section {
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8dcc8 100%);
+        }
+
+        .chapters-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .chapter-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #D2691E;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .chapter-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #D2691E;
+            opacity: 0.3;
+            margin-bottom: 10px;
+        }
+
+        .chapter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .chapter-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 120px 20px;
+            background: #fff;
+        }
+
+        .features-grid {
+            max-width: 1000px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+
+        .feature-text {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .book-front {
+                width: 300px;
+                height: 420px;
+                padding: 40px 30px;
+            }
+
+            .book-title {
+                font-size: 36px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="book-cover-3d">
+                <div class="book-wrapper">
+                    <div class="book-front">
+                        <div class="book-spine"></div>
+                        <div class="book-title">PÉTANQUE</div>
+                        <div class="book-subtitle">Från Provence till Världen</div>
+                        <div class="book-decoration"></div>
+                        <div style="text-align: center; color: #deb887; font-size: 16px; line-height: 1.8;">
+                            En berättelse om klotens spel<br>
+                            från antikens Grekland<br>
+                            till dagens VM-arenor
+                        </div>
+                        <div class="book-decoration"></div>
+                        <div class="book-author">Mats Hamberg</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <h1>En bok om passion, historia och gemenskap</h1>
+                <p class="hero-tagline">"Mer än bara ett spel – en livsstil"</p>
+                <p class="hero-description">
+                    Följ pétanquens fascinerande resa från de solbelysta grusplanerna i Provence 
+                    till världens största idrottsarenor. En berättelse om Jules Lenoir som inte 
+                    kunde springa längre, om världsmästare som Dylan Rocher och Thongsri Thamakord, 
+                    och om den gemenskap som förenar miljontals spelare världen över.
+                </p>
+                <a href="#" class="cta-button">
+                    Köp boken nu 📖
+                </a>
+                <div class="price-tag">
+                    Endast 99 kr • E-bok (PDF & ePub)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Excerpt -->
+    <section id="story" class="story-section">
+        <div class="story-container">
+            <h2 class="section-title">Upptäck historien</h2>
+            <p class="section-subtitle">Ett utdrag från boken</p>
+            
+            <div class="story-excerpt">
+                En vanlig syn i södra Frankrike – spelare samlade för ett parti pétanque på en grusplan 
+                i Provence. Pétanque (eller boule, som det ofta kallas i Sverige) är mer än bara ett spel; 
+                det är en livsstil och en del av Frankrikes själ. Långt innan moderna tävlingar uppstod 
+                rullade människor klot mot varandra. Redan i antikens Grekland och Rom spelades liknande 
+                klotspel – boule har anor ända från faraonernas Egypten och romarnas väg genom Europa...
+            </div>
+
+            <p style="text-align: center; font-size: 18px; color: #666; font-style: italic;">
+                "En bok som tar dig med på en resa genom tid och rum, från La Ciotats kafé 1907 
+                till dagens VM-finaler. Perfekt för både pétanque-entusiasten och den nyfikne läsaren."
+            </p>
+        </div>
+    </section>
+
+    <!-- Chapters -->
+    <section class="chapters-section">
+        <div class="story-container">
+            <h2 class="section-title">Vad boken innehåller</h2>
+            <p class="section-subtitle">8 fängslande kapitel om pétanquens värld</p>
+        </div>
+
+        <div class="chapters-grid">
+            <div class="chapter-card">
+                <div class="chapter-number">01</div>
+                <h3 class="chapter-title">Från Antiken till Provence</h3>
+                <p class="chapter-description">
+                    Spelets ursprung från faraonernas Egypten, genom romarriket och medeltiden, 
+                    till födelsen i södra Frankrike.
+                </p>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">02</div>
+                <h3 class="chapter-title">Jules Lenoir och Pétanquens Födelse</h3>
+                <p class="chapter-description">
+                    Historien om mannen som inte kunde springa längre, och hur hans vän Ernest Pitiot 
+                    skapade ett nytt spel 1907.
+                </p>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">03</div>
+                <h3 class="chapter-title">Pétanque i Fransk Kultur</h3>
+                <p class="chapter-description">
+                    Marcel Pagnol, Fanny-traditionen och hur pétanque blev en del av Frankrikes själ.
+                </p>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">04</div>
+                <h3 class="chapter-title">Spelets Globala Spridning</h3>
+                <p class="chapter-description">
+                    Från Provence till världen – hur pétanque erövrade fem kontinenter och 50+ länder.
+                </p>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">05</div>
+                <h3 class="chapter-title">Regler och Grunder</h3>
+                <p class="chapter-description">
+                    Lär dig spelets grundregler, terminologi och de tekniker som gör pétanque unikt.
+                </p>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">06</div>
+                <h3 class="chapter-title">Konsten att Bli Mästare</h3>
+                <p class="chapter-description">
+                    Avancerade kasttekniker, taktik, lagspel och mental träning från elitspelare.
+                </p>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">07</div>
+                <h3 class="chapter-title">Mästarporträtt</h3>
+                <p class="chapter-description">
+                    Möt legenderna: Jules Lenoir, Philippe Quintais, Dylan Rocher och Thongsri Thamakord.
+                </p>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-number">08</div>
+                <h3 class="chapter-title">Gemenskap och Tävlingsnerv</h3>
+                <p class="chapter-description">
+                    Upptäck den unika atmosfären där avslappnad gemenskap möter intensiv tävlingsanda.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="story-container">
+            <h2 class="section-title">Varför läsa denna bok?</h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">📚</div>
+                <h3 class="feature-title">Välskriven historia</h3>
+                <p class="feature-text">En berättande bok som tar dig med på en resa genom tid och rum</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">För alla läsare</h3>
+                <p class="feature-text">Perfekt både för pétanque-entusiaster och nyfikna kulturintresserade</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🏆</div>
+                <h3 class="feature-title">Mästarporträtt</h3>
+                <p class="feature-text">Möt legenderna som format sporten från 1907 till idag</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🌍</div>
+                <h3 class="feature-title">Global perspektiv</h3>
+                <p class="feature-text">Från Provence till Thailand – pétanquens resa över världen</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <h2>Börja din resa idag</h2>
+        <p>Upptäck historien bakom klotens spel</p>
+        <a href="#" class="cta-button">
+            Köp "Pétanque: Från Provence till Världen" för 99 kr →
+        </a>
+        <p style="margin-top: 40px; font-size: 16px; opacity: 0.9;">
+            ✓ Omedelbar nedladdning • ✓ PDF & ePub format • ✓ Läs på alla enheter
+        </p>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

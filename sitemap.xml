@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Swedish (Main) -->
+  <url>
+    <loc>https://petanque-den-kompletta-guiden.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://petanque-den-kompletta-guiden.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://petanque-den-kompletta-guiden.vercel.app/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://petanque-den-kompletta-guiden.vercel.app/fr/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://petanque-den-kompletta-guiden.vercel.app/es/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://petanque-den-kompletta-guiden.vercel.app/de/" />
+    <xhtml:link rel="alternate" hreflang="th" href="https://petanque-den-kompletta-guiden.vercel.app/th/" />
+  </url>
+  
+  <!-- Swedish Chapters -->
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del1-kapitel1.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del1-kapitel2.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del1-kapitel3.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del1-kapitel4.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del2-kapitel5.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del2-kapitel6.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del2-kapitel7.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del2-kapitel8.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del3-kapitel9.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/del3-kapitel10.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fordjupning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fusklapp.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/innehall.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/matchprotokoll.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/ordlista.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/regler.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/traningsjournal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/utrustning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- English -->
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part1-chapter1.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part1-chapter2.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part1-chapter3.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part1-chapter4.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part2-chapter5.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part2-chapter6.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part2-chapter7.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part2-chapter8.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part3-chapter9.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part3-chapter10.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/part4-indepth.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/cheat-sheet.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/contents.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/equipment-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/glossary.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/match-protocol.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/rules.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/en/training-journal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  
+  <!-- French -->
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie1-chapitre1.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie1-chapitre2.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie1-chapitre3.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie1-chapitre4.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie2-chapitre5.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie2-chapitre6.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie2-chapitre7.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie2-chapitre8.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie3-chapitre9.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie3-chapitre10.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/partie4-approfondissement.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/feuille-triche.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/glossaire.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/guide-equipement.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/journal-entrainement.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/protocole-match.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/reglement.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/fr/sommaire.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  
+  <!-- Spanish -->
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del1-kapitel1.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del1-kapitel2.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del1-kapitel3.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del1-kapitel4.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del2-kapitel5.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del2-kapitel6.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del2-kapitel7.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del2-kapitel8.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del3-kapitel9.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del3-kapitel10.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del4-kapitel11.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del4-kapitel12.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del4-kapitel13.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/del4-kapitel14.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/contenido.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/fordjupning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/fusklapp.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/innehall.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/matchprotokoll.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/ordlista.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/regler.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/traningsjournal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/es/utrustning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- German -->
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del1-kapitel1.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del1-kapitel2.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del1-kapitel3.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del1-kapitel4.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del2-kapitel5.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del2-kapitel6.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del2-kapitel7.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del2-kapitel8.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del3-kapitel9.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/del3-kapitel10.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/fordjupning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/fusklapp.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/inhalt.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/innehall.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/matchprotokoll.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/ordlista.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/regler.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/traningsjournal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/de/utrustning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Thai -->
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del1-kapitel1.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del1-kapitel2.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del1-kapitel3.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del1-kapitel4.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del2-kapitel5.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del2-kapitel6.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del2-kapitel7.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del2-kapitel8.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del3-kapitel9.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/del3-kapitel10.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/fordjupning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/fusklapp.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/innehall.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/matchprotokoll.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/ordlista.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/regler.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/saraban.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/traningsjournal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://petanque-den-kompletta-guiden.vercel.app/th/utrustning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+</urlset>

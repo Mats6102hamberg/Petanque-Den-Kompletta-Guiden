@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktivera Licens - Pétanque Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .activation-container {
+            max-width: 700px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .activation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .activation-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .activation-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .activation-header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .info-box {
+            background: #f0f7ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .info-box.warning {
+            background: #fff3cd;
+            border-left-color: #ff6b6b;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .info-box.warning h3 {
+            color: #ff6b6b;
+        }
+
+        .info-box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .license-info {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .license-info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .license-info-row:last-child {
+            border-bottom: none;
+        }
+
+        .license-info-label {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .license-info-value {
+            color: #666;
+        }
+
+        .activate-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .activate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .activate-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 5px;
+            color: #155724;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            border-radius: 5px;
+            color: #721c24;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .expiry-warning {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .expiry-warning .days {
+            font-size: 48px;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+    <script src="license-manager.js"></script>
+</head>
+<body>
+    <div class="activation-container">
+        <div class="activation-header">
+            <div class="activation-icon">🔄</div>
+            <h1>Aktivera Din Licens</h1>
+            <p>För att förhindra obehörig delning av licenser kräver vi årlig aktivering. Detta tar bara några sekunder.</p>
+        </div>
+
+        <div id="warningBox" class="expiry-warning" style="display: none;">
+            <div>⚠️ Din licens går ut om</div>
+            <span class="days" id="daysLeft">0</span>
+            <div>dagar</div>
+        </div>
+
+        <div class="info-box warning">
+            <h3>⚠️ Viktigt att veta</h3>
+            <p><strong>Årlig aktivering krävs:</strong> Din licens måste aktiveras minst en gång per år för att fortsätta fungera.</p>
+            <p style="margin-top: 10px;"><strong>18-månaders regel:</strong> Om licensen inte aktiveras inom 18 månader går den ut permanent och du måste köpa boken igen.</p>
+            <p style="margin-top: 10px;"><strong>Ingen delning:</strong> Detta system förhindrar att licenser delas med vänner eller familj.</p>
+        </div>
+
+        <div class="license-info" id="licenseInfo">
+            <div class="license-info-row">
+                <span class="license-info-label">Licensnyckel:</span>
+                <span class="license-info-value" id="licenseKey">Laddar...</span>
+            </div>
+            <div class="license-info-row">
+                <span class="license-info-label">Senaste aktivering:</span>
+                <span class="license-info-value" id="lastActivation">Laddar...</span>
+            </div>
+            <div class="license-info-row">
+                <span class="license-info-label">Månader sedan aktivering:</span>
+                <span class="license-info-value" id="monthsSince">Laddar...</span>
+            </div>
+            <div class="license-info-row">
+                <span class="license-info-label">Status:</span>
+                <span class="license-info-value" id="licenseStatus">Laddar...</span>
+            </div>
+        </div>
+
+        <div id="successMessage" class="success-message"></div>
+        <div id="errorMessage" class="error-message"></div>
+
+        <button id="activateBtn" class="activate-button">
+            Aktivera Licens Nu
+        </button>
+
+        <div class="info-box" style="margin-top: 30px;">
+            <h3>📧 Påminnelser</h3>
+            <p>Du får en påminnelse via email när det är dags att aktivera din licens (efter 11 månader).</p>
+        </div>
+
+        <div class="back-link">
+            <a href="innehall.html">← Tillbaka till boken</a>
+        </div>
+    </div>
+
+    <script>
+        // Ladda licensinformation
+        window.addEventListener('load', () => {
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétanque Fusklapp - En sida</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            font-size: 11pt;
+            line-height: 1.3;
+        }
+        
+        .cheatsheet {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 15mm;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24pt;
+            color: #8B4513;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+        }
+        
+        .section h2 {
+            font-size: 14pt;
+            color: #8B4513;
+            border-bottom: 2px solid #D2691E;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .box {
+            background: #f9f9f9;
+            border-left: 3px solid #D2691E;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .box h3 {
+            font-size: 11pt;
+            color: #8B4513;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .box ul {
+            margin-left: 15px;
+            font-size: 9.5pt;
+        }
+        
+        .box li {
+            margin-bottom: 3px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9.5pt;
+            margin-bottom: 10px;
+        }
+        
+        th {
+            background: #8B4513;
+            color: white;
+            padding: 5px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 9pt;
+        }
+        
+        td {
+            padding: 4px 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            padding: 8px;
+            margin: 10px 0;
+            font-size: 9.5pt;
+        }
+        
+        .quick-ref {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .quick-ref-item {
+            background: #e8f4f8;
+            padding: 6px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 9pt;
+        }
+        
+        .quick-ref-item strong {
+            display: block;
+            color: #8B4513;
+            font-size: 10pt;
+            margin-bottom: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 10pt;
+            }
+            
+            .cheatsheet {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 20pt;
+            }
+            
+            .header p {
+                font-size: 9pt;
+            }
+            
+            .section h2 {
+                font-size: 12pt;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .quick-ref {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+            
+            table {
+                font-size: 9pt;
+            }
+            
+            table th,
+            table td {
+                padding: 6px 4px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+                font-size: 9pt;
+            }
+            
+            .cheatsheet {
+                padding: 8px;
+            }
+            
+            .header h1 {
+                font-size: 18pt;
+            }
+            
+            .section h2 {
+                font-size: 11pt;
+            }
+            
+            .box {
+                padding: 6px;
+            }
+            
+            .box h3 {
+                font-size: 10pt;
+            }
+            
+            .box ul {
+                font-size: 8.5pt;
+                margin-left: 12px;
+            }
+            
+            table {
+                font-size: 8pt;
+            }
+            
+            table th,
+            table td {
+                padding: 4px 2px;
+            }
+            
+            .highlight {
+                font-size: 8.5pt;
+                padding: 6px;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .cheatsheet {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+                padding: 10mm;
+            }
+            
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+        }
+    </style>    
+</head>
+<body>
+    <a href="saraban.html" class="toc-button">สารบัญ</a>
+    <div class="cheatsheet">
+        <div class="header">
+            <h1>🎯 PÉTANQUE FUSKLAPP</h1>
+            <p>Allt du behöver på en sida - Matchrutin, Etikett, Taktik & Tekniker</p>
+        </div>
+        
+        <div class="two-column">
+            <div>
+                <div class="section">
+                    <h2>⚡ 10 Viktigaste reglerna</h2>
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Regel</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Båda fötterna i cirkeln tills klotet landat</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Lillen 6-10m från cirkeln, 1m från hinder</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Laget utan närmaste klot kastar</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Poäng = antal klot närmare än motståndaren</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Första till 13 poäng vinner</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Klot/lillen över gräns = dött</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Död lillen = ny mène, samma lag kastar</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Mät bara vid tvivel</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Rör inte klot innan mätning</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Max 1 minut per kast i tävling</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="section">
+                    <h2>🎯 Beslutsträd: Lägg eller Skjut?</h2>
+                    <div class="box">
+                        <h3>SKJUT när:</h3>
+                        <ul>
+                            <li>Motståndaren <30 cm från lillen + fri bana</li>
+                            <li>Sista klotet + du behöver poäng</li>
+                            <li>2+ motståndarklot inom 20 cm</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>LÄGG när:</h3>
+                        <ul>
+                            <li>Du har tydlig donnée du träffar ofta</li>
+                            <li>Du är osäker skytt (<40% träff)</li>
+                            <li>Du leder med 11-12 poäng (defensivt)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>📐 Tre punkter för perfekt point</h2>
+                    <div class="quick-ref">
+                        <div class="quick-ref-item">
+                            <strong>1. Lillen</strong>
+                            Målet
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>2. Parkering</strong>
+                            Där klotet stannar
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>3. Donnée</strong>
+                            Landningspunkt
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <strong>💡 Gyllene regel:</strong> "Boule devant, boule d'argent" - Lägg alltid framför lillen (30-50 cm)!
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="section">
+                    <h2>🏹 Kastbanor & Underlag</h2>
+                    <table>
+                        <tr>
+                            <th>Underlag</th>
+                            <th>Kasttyp</th>
+                        </tr>
+                        <tr>
+                            <td>Mjuk grus/sand</td>
+                            <td>Låg rullning - klotet stannar snabbt</td>
+                        </tr>
+                        <tr>
+                            <td>Hård/stenig</td>
+                            <td>Hög lob med backspin - undvik studs</td>
+                        </tr>
+                        <tr>
+                            <td>Asfalt</td>
+                            <td>Medelhög lob - kontrollerad landning</td>
+                        </tr>
+                        <tr>
+                            <td>Lutande bana</td>
+                            <td>Lägg uppför - kompensera för rullning</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="section">
+                    <h2>🎭 Etikett & God sed</h2>
+                    <div class="box">
+                        <ul>
+                            <li>✓ Stå still och tyst när motståndaren kastar</li>
+                            <li>✓ Gå aldrig mellan spelare och lillen</li>
+                            <li>✓ Vänta med att ta bort klot tills alla är överens</li>
+                            <li>✓ Använd godkänt mätinstrument, inte fötterna</li>
+                            <li>✓ Tacka motståndaren efter matchen</li>
+                            <li>✗ Störa, prata eller röra sig under kast</li>
+                            <li>✗ Flytta klot innan mätning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>🔧 Matchrutin (före/under/efter)</h2>
+                    <div class="box">
+                        <h3>Före matchen (15 min):</h3>
+                        <ul>
+                            <li>Dynamisk stretching + rörlighetsövningar</li>
+                            <li>20 uppvärmningskast (variera avstånd)</li>
+                            <li>3 djupa andetag + visualisera framgång</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Under matchen:</h3>
+                        <ul>
+                            <li>Före varje kast: Djupandas, visualisera bana</li>
+                            <li>Sikta på donnée, inte lillen</li>
+                            <li>Kommunicera med laget före varje beslut</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Efter matchen:</h3>
+                        <ul>
+                            <li>Utvärdera: Vad gick bra? Vad kan förbättras?</li>
+                            <li>Logga i träningsjournal</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>💪 Snabba träningstips</h2>
+                    <div class="quick-ref">
+                        <div class="quick-ref-item">
+                            <strong>Fickduken</strong>
+                            6/10 träffar på 7m
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>6-boule</strong>
+                            50% träffsäkerhet
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>Tre zoner</strong>
+                            4/5 inom 50cm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight" style="margin-top: 15px; text-align: center;">
+            <strong>🎯 Kom ihåg:</strong> Teknik + Taktik + Mental styrka = Framgång | Träna smart 3-4x/vecka | Dokumentera din utveckling
+        </div>
+    </div>
+</body>
+</html>

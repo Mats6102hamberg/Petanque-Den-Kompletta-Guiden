@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétanque Spickzettel - Eine Seite</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            font-size: 11pt;
+            line-height: 1.3;
+        }
+
+        .cheatsheet {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 15mm;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 24pt;
+            color: #8B4513;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section h2 {
+            font-size: 14pt;
+            color: #8B4513;
+            border-bottom: 2px solid #D2691E;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .box {
+            background: #f9f9f9;
+            border-left: 3px solid #D2691E;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+
+        .box h3 {
+            font-size: 11pt;
+            color: #8B4513;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .box ul {
+            margin-left: 15px;
+            font-size: 9.5pt;
+        }
+
+        .box li {
+            margin-bottom: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9.5pt;
+            margin-bottom: 10px;
+        }
+
+        th {
+            background: #8B4513;
+            color: white;
+            padding: 5px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 9pt;
+        }
+
+        td {
+            padding: 4px 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            padding: 8px;
+            margin: 10px 0;
+            font-size: 9.5pt;
+        }
+
+        .quick-ref {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .quick-ref-item {
+            background: #e8f4f8;
+            padding: 6px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 9pt;
+        }
+
+        .quick-ref-item strong {
+            display: block;
+            color: #8B4513;
+            font-size: 10pt;
+            margin-bottom: 3px;
+        }
+
+        .toc-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: #8B4513;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .toc-button:hover {
+            background: #D2691E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 10pt;
+            }
+
+            .cheatsheet {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 20pt;
+            }
+
+            .header p {
+                font-size: 9pt;
+            }
+
+            .section h2 {
+                font-size: 12pt;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .quick-ref {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            table {
+                font-size: 9pt;
+            }
+
+            table th,
+            table td {
+                padding: 6px 4px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+                font-size: 9pt;
+            }
+
+            .cheatsheet {
+                padding: 8px;
+            }
+
+            .header h1 {
+                font-size: 18pt;
+            }
+
+            .section h2 {
+                font-size: 11pt;
+            }
+
+            .box {
+                padding: 6px;
+            }
+
+            .box h3 {
+                font-size: 10pt;
+            }
+
+            .box ul {
+                font-size: 8.5pt;
+                margin-left: 12px;
+            }
+
+            table {
+                font-size: 8pt;
+            }
+
+            table th,
+            table td {
+                padding: 4px 2px;
+            }
+
+            .highlight {
+                font-size: 8.5pt;
+                padding: 6px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .cheatsheet {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+                padding: 10mm;
+            }
+
+            .toc-button {
+                display: none;
+            }
+
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="inhalt.html" class="toc-button">Inhalt</a>
+    <div class="cheatsheet">
+        <div class="header">
+            <h1>PÉTANQUE SPICKZETTEL</h1>
+            <p>Alles, was Sie auf einer Seite brauchen - Matchroutine, Etikette, Taktik & Techniken</p>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <div class="section">
+                    <h2>10 Wichtigste Regeln</h2>
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Regel</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Beide Füße im Kreis bis die Kugel gelandet ist</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Schweinchen 6-10m vom Kreis, 1m von Hindernissen</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Das Team ohne nächste Kugel wirft</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Punkte = Anzahl Kugeln näher als Gegner</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Erster mit 13 Punkten gewinnt</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kugel/Schweinchen über Grenze = tot</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Totes Schweinchen = neue Aufnahme, gleiches Team wirft</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Nur bei Zweifel messen</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Kugeln nicht vor Messung berühren</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Max. 1 Minute pro Wurf im Wettkampf</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2>Entscheidungsbaum: Legen oder Schießen?</h2>
+                    <div class="box">
+                        <h3>SCHIESSEN wenn:</h3>
+                        <ul>
+                            <li>Gegner <30 cm vom Schweinchen + freie Bahn</li>
+                            <li>Letzte Kugel + Sie brauchen Punkte</li>
+                            <li>2+ Gegnerkugeln innerhalb 20 cm</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>LEGEN wenn:</h3>
+                        <ul>
+                            <li>Sie haben klare Donnée, die Sie oft treffen</li>
+                            <li>Sie sind unsicherer Schütze (<40% Treffer)</li>
+                            <li>Sie führen mit 11-12 Punkten (defensiv)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Drei Punkte für perfektes Legen</h2>
+                    <div class="quick-ref">
+                        <div class="quick-ref-item">
+                            <strong>1. Schweinchen</strong>
+                            Das Ziel
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>2. Parkposition</strong>
+                            Wo die Kugel stoppt
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>3. Donnée</strong>
+                            Landepunkt
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <strong>Goldene Regel:</strong> "Boule devant, boule d'argent" - Immer vor das Schweinchen legen (30-50 cm)!
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section">
+                    <h2>Wurfbahnen & Untergrund</h2>
+                    <table>
+                        <tr>
+                            <th>Untergrund</th>
+                            <th>Wurftyp</th>
+                        </tr>
+                        <tr>
+                            <td>Weicher Kies/Sand</td>
+                            <td>Niedriges Rollen - Kugel stoppt schnell</td>
+                        </tr>
+                        <tr>
+                            <td>Hart/steinig</td>
+                            <td>Hoher Lob mit Backspin - Sprung vermeiden</td>
+                        </tr>
+                        <tr>
+                            <td>Asphalt</td>
+                            <td>Mittlerer Lob - kontrollierte Landung</td>
+                        </tr>
+                        <tr>
+                            <td>Geneigte Bahn</td>
+                            <td>Bergauf legen - Rollen kompensieren</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2>Etikette & Gute Sitten</h2>
+                    <div class="box">
+                        <ul>
+                            <li>Still und ruhig stehen, wenn Gegner wirft</li>
+                            <li>Nie zwischen Spieler und Schweinchen gehen</li>
+                            <li>Warten Sie mit Entfernen der Kugeln bis alle einig sind</li>
+                            <li>Zugelassenes Messgerät verwenden, nicht Füße</li>
+                            <li>Gegner nach dem Spiel danken</li>
+                            <li>Nicht stören, reden oder bewegen während Wurf</li>
+                            <li>Kugeln nicht vor Messung bewegen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Matchroutine (vorher/während/nachher)</h2>
+                    <div class="box">
+                        <h3>Vor dem Spiel (15 min):</h3>
+                        <ul>
+                            <li>Dynamisches Stretching + Beweglichkeitsübungen</li>
+                            <li>20 Aufwärmwürfe (Distanz variieren)</li>
+                            <li>3 tiefe Atemzüge + Erfolg visualisieren</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Während des Spiels:</h3>
+                        <ul>
+                            <li>Vor jedem Wurf: Tief atmen, Bahn visualisieren</li>
+                            <li>Auf Donnée zielen, nicht Schweinchen</li>
+                            <li>Mit Team vor jeder Entscheidung kommunizieren</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Nach dem Spiel:</h3>
+                        <ul>
+                            <li>Auswerten: Was lief gut? Was kann verbessert werden?</li>
+                            <li>Im Trainingstagebuch protokollieren</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Schnelle Trainingstipps</h2>
+                    <div class="quick-ref">
+                        <div class="quick-ref-item">
+                            <strong>Taschentuch</strong>
+                            6/10 Treffer auf 7m
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>6-Kugel</strong>
+                            50% Trefferquote
+                        </div>
+                        <div class="quick-ref-item">
+                            <strong>Drei Zonen</strong>
+                            4/5 innerhalb 50cm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight" style="margin-top: 15px; text-align: center;">
+            <strong>Denken Sie daran:</strong> Technik + Taktik + Mentale Stärke = Erfolg | Intelligent trainieren 3-4x/Woche | Dokumentieren Sie Ihre Entwicklung
+        </div>
+    </div>
+</body>
+</html>

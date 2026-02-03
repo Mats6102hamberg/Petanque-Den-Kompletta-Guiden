@@ -1,0 +1,15 @@
+{
+  "buildCommand": "echo 'Static site - no build needed'",
+  "outputDirectory": ".",
+  "installCommand": "echo 'No dependencies to install'",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/en", "destination": "/en/index.html" },
+    { "source": "/fr", "destination": "/fr/index.html" },
+    { "source": "/es", "destination": "/es/index.html" },
+    { "source": "/de", "destination": "/de/index.html" },
+    { "source": "/th", "destination": "/th/index.html" }
+  ]
+}

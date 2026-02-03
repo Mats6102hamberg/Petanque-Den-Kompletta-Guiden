@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historiskt Arkiv - Pétanque Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .archive-intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .archive-intro h2 {
+            color: white;
+            border: none;
+            margin: 0 0 15px 0;
+            padding: 0;
+        }
+
+        .archive-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .filter-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .filter-btn.active {
+            background: #8B4513;
+            color: white;
+            border-color: #8B4513;
+        }
+
+        .month-section {
+            margin-bottom: 50px;
+            border-left: 4px solid #D2691E;
+            padding-left: 30px;
+        }
+
+        .month-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .month-header:hover {
+            color: #D2691E;
+        }
+
+        .month-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #8B4513;
+            margin: 0;
+        }
+
+        .month-count {
+            background: #8B4513;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        .month-content {
+            display: block;
+        }
+
+        .month-content.collapsed {
+            display: none;
+        }
+
+        .archive-article {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .archive-article:hover {
+            background: #fff;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .archive-article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .archive-article-date {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .archive-article-category {
+            background: #D2691E;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .archive-article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: #8B4513;
+            margin-bottom: 8px;
+        }
+
+        .archive-article-excerpt {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .language-badge {
+            display: inline-block;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        .search-box {
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #8B4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+        }
+    </style>
+    <script>
+        // Premium Archive License Protection
+        (function() {
+            'use strict';
+            
+            // Check basic book license
+</head>
+<body>
+    <a href="innehall.html" class="toc-button">Innehåll</a>
+
+    <div class="container">
+        <div class="header">
+            <div class="chapter-number">📚 Historiskt Arkiv</div>
+            <h1 class="chapter-title">Alla Artiklar och Intervjuer</h1>
+            <p class="chapter-subtitle">En växande skattkammare av petanque-historia</p>
+        </div>
+
+        <div class="content">
+            <!-- Arkiv intro -->
+            <div class="archive-intro">
+                <h2>Välkommen till Arkivet</h2>
+                <p>Här hittar du alla tidigare månaders artiklar, intervjuer och nyheter från petanque-världen. Arkivet växer varje månad och innehåller material på alla sex språk.</p>
+                
+                <div class="archive-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Månader</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">87</span>
+                        <span class="stat-label">Artiklar</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">32</span>
+                        <span class="stat-label">Intervjuer</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Språk</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sökfunktion -->
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="🔍 Sök i arkivet... (spelare, turnering, regel, etc.)" id="searchInput">
+            </div>
+
+            <!-- Filter -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Alla</button>
+                <button class="filter-btn" data-filter="intervju">🎤 Intervjuer</button>
+                <button class="filter-btn" data-filter="regler">📋 Regler</button>
+                <button class="filter-btn" data-filter="turnering">🏆 Turneringar</button>
+                <button class="filter-btn" data-filter="nyheter">📰 Nyheter</button>
+                <button class="filter-btn" data-filter="teknik">🎓 Teknik</button>
+            </div>
+
+            <!-- EXEMPEL: September 2025 -->
+            <div class="month-section">
+                <div class="month-header" onclick="toggleMonth('sep2025')">
+                    <h2 class="month-title">📅 September 2025</h2>
+                    <span class="month-count">5 artiklar</span>
+                </div>
+                <div class="month-content" id="sep2025">
+                    <div class="archive-article" data-category="intervju">
+                        <div class="archive-article-header">
+                            <span class="archive-article-date">28 september 2025</span>
+                            <span class="archive-article-category">🎤 Intervju</span>
+                        </div>
+                        <h3 class="archive-article-title">
+                            <span class="language-badge">🇸🇪</span>
+                            Intervju med Henri Lacroix: "Jag spelar fortfarande för kärleken till spelet"
+                        </h3>
+                        <p class="archive-article-excerpt">
+                            Den 78-årige legenden Henri Lacroix delar sina minnen från 50 år i petanque-världen...
+                        </p>
+                    </div>
+
+                    <div class="archive-article" data-category="turnering">
+                        <div class="archive-article-header">
+                            <span class="archive-article-date">15 september 2025</span>
+                            <span class="archive-article-category">🏆 Turnering</span>
+                        </div>
+                        <h3 class="archive-article-title">
+                            <span class="language-badge">🇫🇷</span>
+                            Championnat de France: Analyse complète
+                        </h3>
+                        <p class="archive-article-excerpt">
+                            Une analyse détaillée du championnat français avec des interviews exclusives...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXEMPEL: Augusti 2025 -->
+            <div class="month-section">
+                <div class="month-header" onclick="toggleMonth('aug2025')">
+                    <h2 class="month-title">📅 Augusti 2025</h2>
+                    <span class="month-count">7 artiklar</span>
+                </div>
+                <div class="month-content collapsed" id="aug2025">
+                    <div class="archive-article" data-category="regler">
+                        <div class="archive-article-header">
+                            <span class="archive-article-date">20 augusti 2025</span>
+                            <span class="archive-article-category">📋 Regler</span>
+                        </div>
+                        <h3 class="archive-article-title">
+                            <span class="language-badge">🇬🇧</span>
+                            New FIPJP Measurement Rules: A Deep Dive
+                        </h3>
+                        <p class="archive-article-excerpt">
+                            Understanding the new measurement protocols and why they were introduced...
+                        </p>
+                    </div>
+
+                    <div class="archive-article" data-category="intervju">
+                        <div class="archive-article-header">
+                            <span class="archive-article-date">5 augusti 2025</span>
+                            <span class="archive-article-category">🎤 Intervju</span>
+                        </div>
+                        <h3 class="archive-article-title">
+                            <span class="language-badge">🇹🇭</span>
+                            สัมภาษณ์พิเศษ: แชมป์โลกจากประเทศไทย
+                        </h3>
+                        <p class="archive-article-excerpt">
+                            การสัมภาษณ์พิเศษกับแชมป์โลกคนแรกจากประเทศไทย...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INSTRUKTIONER -->
+            <div class="highlight-box" style="margin-top: 50px;">
+                <h3>📝 Instruktioner för att uppdatera arkivet:</h3>
+                <ol>
+                    <li><strong>I slutet av varje månad:</strong> Kopiera allt innehåll från aktuellt.html</li>
+                    <li><strong>Skapa en ny month-section</strong> längst upp i arkivet med aktuell månad</li>
+                    <li><strong>Klistra in artiklarna</strong> som archive-article element</li>
+                    <li><strong>Uppdatera statistiken</strong> i archive-intro (antal månader, artiklar, intervjuer)</li>
+                    <li><strong>Språkbadges:</strong> Använd 🇸🇪 🇬🇧 🇫🇷 🇪🇸 🇩🇪 🇹🇭 för att visa vilket språk artikeln är på</li>
+                    <li><strong>Kategorier:</strong> Använd samma kategorier som i aktuellt.html</li>
+                </ol>
+                <p><strong>Tips:</strong> Äldre månader kan vara collapsed (class="collapsed") som standard för att hålla sidan överskådlig.</p>
+            </div>
+
+            <div class="navigation">
+                <a href="aktuellt.html" class="nav-btn">← Tillbaka till Aktuellt</a>
+                <a href="innehall.html" class="nav-btn secondary">Innehållsförteckning</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle month sections
+        function toggleMonth(monthId) {
+            const content = document.getElementById(monthId);
+            content.classList.toggle('collapsed');
+        }
+
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articles = document.querySelectorAll('.archive-article');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                // Filter articles
+                articles.forEach(article => {
+                    if (filter === 'all' || article.dataset.category === filter) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            articles.forEach(article => {
+                const title = article.querySelector('.archive-article-title').textContent.toLowerCase();
+                const excerpt = article.querySelector('.archive-article-excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+
+            // Expand all months when searching
+            if (searchTerm.length > 0) {
+                document.querySelectorAll('.month-content').forEach(content => {
+                    content.classList.remove('collapsed');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

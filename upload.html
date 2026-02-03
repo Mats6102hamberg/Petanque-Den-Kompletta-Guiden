@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktivera din bok - Pétanque: Den Kompletta Guiden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .activation-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .activation-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .activation-header h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .activation-header p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .license-input-box {
+            margin-bottom: 30px;
+        }
+        
+        .license-input-box label {
+            display: block;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .license-input-box input {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+        
+        .license-input-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .activate-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .activate-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .activate-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .success-message {
+            background: #4caf50;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .success-message.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-message h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .success-message p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .access-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #4caf50;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .access-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .error-message {
+            background: #f44336;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .error-message.active {
+            display: block;
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        .instructions {
+            background: #f0f2ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .instructions h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            color: #666;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .instructions strong {
+            color: #333;
+        }
+        
+        .benefits {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .benefits h3 {
+            color: #f57c00;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .back-link a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .activation-container {
+                padding: 30px 20px;
+            }
+            
+            .activation-header h1 {
+                font-size: 2rem;
+            }
+            
+            .activation-header p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="activation-container">
+        <div class="activation-header">
+            <h1>🔑 Aktivera din bok</h1>
+            <p>Tack för ditt köp av <strong>Pétanque: Den Kompletta Guiden</strong>!</p>
+            <p style="margin-top: 10px; font-size: 1rem; color: #999;">Ange din licensnyckel från Gumroad för livslång tillgång</p>
+        </div>
+        
+        <div class="license-input-box">
+            <label for="licenseKey">Licensnyckel</label>
+            <input 
+                type="text" 
+                id="licenseKey" 
+                placeholder="Ange din licensnyckel från Gumroad"
+                autocomplete="off"
+            >
+        </div>
+        
+        <button class="activate-button" id="activateButton">
+            Aktivera boken
+        </button>
+        
+        <div class="error-message" id="errorMessage"></div>
+        
+        <div class="success-message" id="successMessage">
+            <h2>🎉 Välkommen!</h2>
+            <p>Din licensnyckel har aktiverats! Du har nu <strong>livslång tillgång</strong> till boken och alla framtida uppdateringar.</p>
+            <p style="font-size: 0.95rem; opacity: 0.9;">💡 Bokmärk denna sida för att alltid ha tillgång till det senaste innehållet</p>
+            <a href="access.html" class="access-button">Gå till boken →</a>
+        </div>
+        
+        <div class="instructions">
+            <h3>📧 Var hittar jag min licensnyckel?</h3>
+            <ol>
+                <li>Öppna <strong>köpbekräftelsen från Gumroad</strong> i din e-post</li>
+                <li>Leta efter avsnittet som heter <strong>"License key"</strong> eller <strong>"Product key"</strong></li>
+                <li>Kopiera hela nyckeln (brukar vara en lång sträng med bokstäver och siffror)</li>
+                <li>Klistra in den i fältet ovan och klicka på "Aktivera boken"</li>
+            </ol>
+            <p style="margin-top: 15px; font-size: 0.95rem; color: #999;">
+                <strong>Hittar du inte e-posten?</strong> Kolla i skräppost eller logga in på <a href="https://gumroad.com/library" target="_blank" style="color: #667eea;">gumroad.com/library</a>
+            </p>
+        </div>
+        
+        <div class="benefits">
+            <h3>✨ Vad ingår i ditt köp?</h3>
+            <ul>
+                <li><strong>Livslång tillgång</strong> - Betala en gång, använd för alltid</li>
+                <li><strong>Automatiska uppdateringar</strong> - Få alltid den senaste versionen</li>
+                <li><strong>Alla kapitel</strong> - 14 kapitel + 2 bilagor</li>
+                <li><strong>Bonusresurser</strong> - Fusklapp, träningsjournal, matchprotokoll</li>
+                <li><strong>Tillgång på alla enheter</strong> - Mobil, surfplatta, dator</li>
+                <li><strong>Ingen nedladdning krävs</strong> - Läs direkt i webbläsaren</li>
+            </ul>
+        </div>
+        
+        <div class="back-link">
+            <a href="index.html">← Tillbaka till startsidan</a>
+        </div>
+    </div>
+    
+    <script>
+        const licenseInput = document.getElementById('licenseKey');
+        const activateButton = document.getElementById('activateButton');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        // Check if user already has access
+        window.addEventListener('load', () => {
+            const licenseKey = localStorage.getItem('petanque_license_key');
+            if (licenseKey) {
+                showSuccess();
+            }
+        });
+        
+        // Activate button click
+        activateButton.addEventListener('click', async () => {
+            const license = licenseInput.value.trim();
+            
+            if (!license) {
+                showError('Vänligen ange en licensnyckel');
+                return;
+            }
+            
+            // Disable button and show loading
+            activateButton.disabled = true;
+            activateButton.textContent = 'Verifierar...';
+            errorMessage.classList.remove('active');
+            
+            // Verify license key with Gumroad
+            const isValid = await verifyLicense(license);
+            
+            if (isValid) {
+                // Store license key
+                const now = new Date().toISOString();
+                localStorage.setItem('petanque_license_key', license);
+                localStorage.setItem('petanque_activation_date', now);
+                localStorage.setItem('petanque_last_activation', now); // For annual reactivation system
+                
+                // Show success
+                showSuccess();
+            } else {
+                showError('Ogiltig licensnyckel. Kontrollera att du kopierat hela nyckeln från Gumroad.');
+                activateButton.disabled = false;
+                activateButton.textContent = 'Aktivera boken';
+            }
+        });
+        
+        // Enter key to activate
+        licenseInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                activateButton.click();
+            }
+        });
+        
+        async function verifyLicense(license) {
+            // ⚠️ DEMO MODE - REPLACE WITH REAL GUMROAD VERIFICATION
+            // See GUMROAD_SETUP.md for detailed instructions
+            
+            // TODO: Replace this demo code with actual Gumroad API call
+            // Example:
+            // const response = await fetch('https://api.gumroad.com/v2/licenses/verify', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     body: new URLSearchParams({
+            //         'product_id': 'YOUR_PRODUCT_ID',
+            //         'license_key': license,
+            //         'increment_uses_count': 'false'
+            //     })
+            // });
+            // const data = await response.json();
+            // return data.success === true;
+            
+            // DEMO: Simulate API call and accept any 10+ character key
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            return license.length >= 10;
+        }
+        
+        function showSuccess() {
+            licenseInput.style.display = 'none';
+            activateButton.style.display = 'none';
+            document.querySelector('.license-input-box label').style.display = 'none';
+            successMessage.classList.add('active');
+            
+            // Check if user was trying to access a specific page
+            const returnUrl = sessionStorage.getItem('petanque_return_url');
+            if (returnUrl) {
+                // Redirect back to the page they were trying to access after 2 seconds
+                setTimeout(() => {
+                    sessionStorage.removeItem('petanque_return_url');
+                    window.location.href = returnUrl;
+                }, 2000);
+            }
+        }
+        
+        function showError(message) {
+            errorMessage.textContent = '⚠️ ' + message;
+            errorMessage.classList.add('active');
+        }
+    </script>
+    
+</body>
+</html>

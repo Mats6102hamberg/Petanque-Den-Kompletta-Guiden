@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innehållsförteckning - คู่มือเปตองค์</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(160deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #FFF8DC;
+            letter-spacing: 2px;
+        }
+        
+        .content {
+            padding: 60px 40px;
+        }
+        
+        .forord {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-left: 4px solid #D2691E;
+            border-radius: 5px;
+        }
+        
+        .forord h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        
+        .forord p {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .toc-section {
+            margin-bottom: 40px;
+        }
+        
+        .toc-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #D2691E;
+        }
+        
+        .chapter-list {
+            list-style: none;
+        }
+        
+        .chapter-item {
+            margin-bottom: 15px;
+        }
+        
+        .chapter-link {
+            display: block;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #CD853F;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .chapter-link:hover {
+            background: #8B4513;
+            color: white;
+            border-left-color: #FFF8DC;
+            transform: translateX(10px);
+        }
+        
+        .chapter-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-link:hover .chapter-number {
+            color: #FFF8DC;
+        }
+        
+        .chapter-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .chapter-link:hover .chapter-desc {
+            color: #FFF8DC;
+        }
+        
+        /* Special styling for matchprotokoll with yellow background */
+        .chapter-link.matchprotokoll-link:hover {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #333;
+            border-left-color: #ff6f00;
+        }
+        
+        .chapter-link.matchprotokoll-link:hover .chapter-number,
+        .chapter-link.matchprotokoll-link:hover .chapter-title,
+        .chapter-link.matchprotokoll-link:hover .chapter-desc {
+            color: #333;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #D2691E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>    
+</head>
+<body>
+    <!-- Language switcher temporarily hidden -->
+    <!--
+    <div class="language-switcher">
+        <a href="innehall.html" class="active" title="Svenska">🇸🇪</a>
+        <a href="en/contents.html" title="English">🇬🇧</a>
+        <a href="fr/sommaire.html" title="Français">🇫🇷</a>
+    </div>
+    -->
+    
+    <div class="container">
+        <div class="header">
+            <h1>PÉTANQUE</h1>
+            <p>Från Nybörjare till Proffs – En Komplett Guide</p>
+        </div>
+        
+        <div class="content">
+            <div class="forord">
+                <h2>Förord</h2>
+                <p>เปตองค์เป็นมากกว่าแค่กีฬา – มันคือไลฟ์สไตล์ กิจกรรมทางสังคม และความท้าทายทั้งทางยุทธวิธีและเทคนิค. หนังสือเล่มนี้เขียนขึ้นเพื่อให้ผู้เริ่มต้นมีพื้นฐานที่มั่นคงและเสนอมุมมองใหม่และเคล็ดลับการปรับปรุงให้กับผู้เล่นที่มีประสบการณ์. ไม่ว่าคุณจะถือลูกเปตองค์ครั้งแรกหรือแข่งขันในระดับสูงอยู่แล้ว ที่นี่มีบางอย่างสำหรับคุณ.</p>
+                <p>หมายเหตุสำคัญเกี่ยวกับคำศัพท์: เปตองค์มีรากฐานภาษาฝรั่งเศสที่ลึกซึ้ง. เพื่อให้ความรู้ของคุณสมบูรณ์ – และเพื่อให้คุณรู้สึกเป็นส่วนหนึ่งในทุกบริบท, ตั้งแต่คลับท้องถิ่นไปจนถึงการแข่งขันระดับนานาชาติ – เราจะใช้ภาษาเทคนิคระดับสากล. นี่หมายความว่าในข้อความเราจะผสมคำศัพท์ไทย (เช่น ลูก และการยิง) กับสำนวนภาษาฝรั่งเศสที่ยอมรับในระดับสากล (เช่น Carreau และ Tirer au Fer). พิจารณาคำภาษาฝรั่งเศสเหล่านี้เป็นคำศัพท์เทคนิคอย่างเป็นทางการของกีฬา; พวกเขาเป็นส่วนสำคัญของวัฒนธรรมเกมและการศึกษาของคุณ.</p>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #fff; border: 2px solid #D2691E; border-radius: 8px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px; font-size: 24px;">📋 Interaktiva verktyg</h3>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="fusklapp.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📝 Fusklapp
+                        </a>
+                        <a href="traningsjournal.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📊 Träningsjournal
+                        </a>
+                        <a href="matchprotokoll.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            🏆 Matchprotokoll
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="toc-section">
+                <h2>ส่วนที่ 1: พื้นฐานสำหรับผู้เริ่มต้น</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del1-kapitel1.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 1</div>
+                            <div class="chapter-title">เปตองค์คืออะไร?</div>
+                            <div class="chapter-desc">ประวัติของเปตองค์ กฎพื้นฐานและแนวคิดเกม ความแตกต่างระหว่างเปตองค์ บูล และบอคเซีย</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel2.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 2</div>
+                            <div class="chapter-title">อุปกรณ์ - เลือกลูกที่เหมาะสม</div>
+                            <div class="chapter-desc">น้ำหนัก ขนาด และวัสดุ ความแตกต่างระหว่างลูกแข่งขันและลูกสันทนาการ การดูแลและทำความสะอาด</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel3.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 3</div>
+                            <div class="chapter-title">เทคนิคพื้นฐาน</div>
+                            <div class="chapter-desc">การจับและท่าทางที่ถูกต้อง วิธีการพอยท์ วิธีการยิง</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel4.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 4</div>
+                            <div class="chapter-title">กลยุทธ์การเล่นสำหรับผู้เริ่มต้น</div>
+                            <div class="chapter-desc">กลยุทธ์ง่ายๆ ในการทำคะแนน วิธีอ่านสนาม ข้อผิดพลาดทั่วไปและวิธีหลีกเลี่ยง</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>ส่วนที่ 2: เทคนิคขั้นสูงสำหรับมืออาชีพ</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del2-kapitel5.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 5</div>
+                            <div class="chapter-title">ปรับปรุงการพอยท์ของคุณ</div>
+                            <div class="chapter-desc">เทคนิคการวางตำแหน่งขั้นสูง ปรับการขว้างตามพื้นผิวและสภาพอากาศ การฝึกจิตใจ</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel6.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 6</div>
+                            <div class="chapter-title">การยิงระดับแชมป์เปี้ยน (Tirer au Fer)</div>
+                            <div class="chapter-desc">การยิงตรงเป้า vs. การยิงแบบกลิ้ง เคล็ดลับการฝึกเพื่อเป็นนักยิงที่เชี่ยวชาญ การวิเคราะห์สไตล์การยิงของมืออาชีพ</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel7.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 7</div>
+                            <div class="chapter-title">กลยุทธ์ระดับสูง</div>
+                            <div class="chapter-desc">ควบคุมจังหวะเกม สงครามจิตวิทยา การเล่นเป็นทีมและการสื่อสาร</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel8.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 8</div>
+                            <div class="chapter-title">ฝึกอย่างชาญฉลาด</div>
+                            <div class="chapter-desc">แบบฝึกหัดที่มีประสิทธิภาพสำหรับการฝึกคนเดียว การวิเคราะห์วิดีโอ การเตรียมร่างกายและจิตใจ</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>ส่วนที่ 3: เปตองค์เป็นไลฟ์สไตล์</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del3-kapitel9.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 9</div>
+                            <div class="chapter-title">การแข่งขัน vs. การเล่นเพื่อสังคม</div>
+                            <div class="chapter-desc">ความแตกต่างในทัศนคติและกลยุทธ์ วิธีหาคลับและการแข่งขัน</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del3-kapitel10.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 10</div>
+                            <div class="chapter-title">เปตองค์ทั่วโลก</div>
+                            <div class="chapter-desc">ความแตกต่างทางวัฒนธรรมในเกม การแข่งขันใหญ่และผู้เล่นในตำนาน</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>ส่วนที่ 4: การเจาะลึกและพัฒนา</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="fordjupning.html" class="chapter-link">
+                            <div class="chapter-number">บทที่ 11</div>
+                            <div class="chapter-title">การวิเคราะห์เชิงกลยุทธ์และยุทธวิธี</div>
+                            <div class="chapter-desc">กลยุทธ์การเล่นขั้นสูง การวิเคราะห์ภูมิประเทศและเกมจิตวิทยา</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordjupning.html#mental" class="chapter-link">
+                            <div class="chapter-number">บทที่ 12</div>
+                            <div class="chapter-title">พลังจิตและสมาธิ</div>
+                            <div class="chapter-desc">การจัดการกับแรงกดดัน การควบคุมอารมณ์และแรงจูงใจ</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordjupning.html#traning" class="chapter-link">
+                            <div class="chapter-number">บทที่ 13</div>
+                            <div class="chapter-title">แผนการฝึกและพัฒนา</div>
+                            <div class="chapter-desc">การฝึกที่มีประสิทธิภาพ การวิเคราะห์วิดีโอและแผนการศึกษาทีละขั้นตอน</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordjupning.html#fysik" class="chapter-link">
+                            <div class="chapter-number">บทที่ 14</div>
+                            <div class="chapter-title">การฝึกร่างกายสำหรับเปตองค์</div>
+                            <div class="chapter-desc">ความแข็งแรง สมดุล ความคล่องตัวและการเตรียมตัว</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>Bilagor</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="utrustning.html" class="chapter-link">
+                            <div class="chapter-title">ภาคผนวก A: Utrustningsguide</div>
+                            <div class="chapter-desc">คู่มือโดยละเอียดเกี่ยวกับลูก - การผลิต วัสดุ ความแข็ง รุ่น และการดูแล</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="regler.html" class="chapter-link">
+                            <div class="chapter-title">ภาคผนวก B: Komplett regelbok</div>
+                            <div class="chapter-desc">คู่มือกฎที่สมบูรณ์ตั้งแต่กฎพื้นฐานไปจนถึงกฎขั้นสูงและกรณีพิเศษ</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="ordlista.html" class="chapter-link">
+                            <div class="chapter-title">ภาคผนวก C: Ordförklaringar</div>
+                            <div class="chapter-desc">อภิธานศัพท์ที่สมบูรณ์พร้อมคำศัพท์เทคนิคภาษาฝรั่งเศส - จาก Carreau ถึง Tirer au Fer</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="toc-section">
+                <h2>📥 ทรัพยากรที่ดาวน์โหลดได้</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="fusklapp.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">🎯 ชีทสรุป (1 หน้า)</div>
+                            <div class="chapter-desc">ทุกสิ่งที่คุณต้องการในหนึ่งหน้า: กิจวัตรการแข่งขัน มารยาท การวัด เคล็ดลับ Donnée เส้นทางการขว้าง และแผนผังการตัดสินใจ เหมาะสำหรับพิมพ์และนำไปที่สนาม!</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="traningsjournal.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">📊 Träningsjournal</div>
+                            <div class="chapter-desc">บันทึกการพัฒนาของคุณ: วันที่ พื้นผิว เป้าหมาย เปอร์เซ็นต์การโดน การไตร่ตรอง และขั้นตอนถัดไป พิมพ์หรือกรอกแบบดิจิทัล</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="matchprotokoll.html" class="chapter-link matchprotokoll-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
+                            <div class="chapter-title">📋 โปรโตคอลการแข่งขัน (แบบโต้ตอบ)</div>
+                            <div class="chapter-desc">โปรโตคอลการแข่งขันที่สมบูรณ์พร้อมการวิเคราะห์อัตโนมัติ: บันทึกทีม คะแนนต่อรอบ สถิติ (รอบที่ชนะ คะแนนเฉลี่ย Shutouts รอบ Clutch) บันทึกอัตโนมัติในเบราว์เซอร์ เหมาะสำหรับการแข่งขันและการฝึก!</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="index.html" class="back-btn">← กลับไปที่ปก</a>
+        </div>
+    </div>
+</body>
+</html>

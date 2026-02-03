@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+node_modules/
+.vercel
+
+# API Keys - NEVER commit these!
+.env
+.env.local

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pétanque – คู่มือฉบับสมบูรณ์ | Mats Hamberg</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: #000;
+      overflow: hidden;
+    }
+    
+    .font-display {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    /* Full screen book cover */
+    .book-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background: white;
+    }
+
+    .book-frame {
+      position: relative;
+      width: 85%;
+      max-width: 800px;
+      height: 92%;
+      background: linear-gradient(135deg, #c87137 0%, #d88a4f 50%, #c87137 100%);
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .book-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .book-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 6rem;
+      color: white;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: white;
+      letter-spacing: 0.3em;
+      font-weight: 300;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-divider {
+      width: 200px;
+      height: 1px;
+      background: white;
+      margin: 2rem auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-description {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: white;
+      line-height: 1.7;
+      font-weight: 300;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-author-section {
+      margin-top: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .book-author-label {
+      font-size: 0.9rem;
+      letter-spacing: 0.3em;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-author-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: white;
+      font-weight: 700;
+    }
+
+    .book-cta {
+      border: 2px solid white;
+      padding: 1.5rem 3rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: transparent;
+      margin-top: 2rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .book-cta:hover {
+      background: white;
+      color: #c87137;
+      transform: scale(1.05);
+    }
+
+    .welcome-badge {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      color: white;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      z-index: 10;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(200, 113, 55, 0.3);
+      color: #f4a460;
+      padding: 12px 20px;
+      border-radius: 25px;
+      z-index: 1000;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .book-frame {
+        width: 95%;
+        padding: 2rem;
+      }
+
+      .book-title {
+        font-size: 3rem;
+      }
+
+      .book-subtitle {
+        font-size: 1.5rem;
+      }
+
+      .book-description {
+        font-size: 1.2rem;
+      }
+
+      .book-author-name {
+        font-size: 2rem;
+      }
+
+      .book-cta {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Welcome Badge -->
+  <div class="welcome-badge">
+    ✓ เปิดใช้งาน
+  </div>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <select id="languageSelector" style="background: transparent; border: none; color: #f4a460; cursor: pointer; outline: none;">
+      <option value="se">🇸🇪 Svenska</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="th" selected>🇹🇭 ไทย</option>
+    </select>
+  </div>
+
+  <!-- Book Cover -->
+  <div class="book-container">
+    <div class="book-frame">
+      <div>
+        <h1 class="book-title">PÉTANQUE</h1>
+        <p class="book-subtitle">คู่มือฉบับสมบูรณ์</p>
+        
+        <div class="book-divider"></div>
+        
+        <p class="book-description">
+          จากเทคนิคพื้นฐานไปจนถึงกลยุทธ์ขั้นสูง - ทุกสิ่งที่คุณต้องการเพื่อเชี่ยวชาญเกม
+        </p>
+      </div>
+
+      <div class="book-author-section">
+        <p class="book-author-label">ผู้เขียน</p>
+        <p class="book-author-name">Mats Hamberg</p>
+        
+        <a href="innehall.html" class="book-cta">เปิดหนังสือ →</a>
+      </div>
+    </div>
+  </div>
+    
+    <script>
+        // Language switcher functionality
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const lang = this.value;
+            if (lang === 'se') {
+                window.location.href = '../access.html';
+            } else if (lang === 'en') {
+                window.location.href = '../en/access.html';
+            } else if (lang === 'fr') {
+                window.location.href = '../fr/access.html';
+            } else if (lang === 'es') {
+                window.location.href = '../es/access.html';
+            } else if (lang === 'de') {
+                window.location.href = '../de/access.html';
+            } else if (lang === 'th') {
+                window.location.href = 'access.html';
+            }
+        });
+    </script>
+    
+</body>
+</html>

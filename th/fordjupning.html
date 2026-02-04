@@ -2,236 +2,270 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fördjupning i pétanque - คู่มือเปตองค์</title>
-    <link rel="stylesheet" href="styles.css">    
+    <title>การเจาะลึกเปตอง - คู่มือเปตอง</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <a href="saraban.html" class="toc-button">สารบัญ</a>
+    <div class="language-switcher">
+        <a href="../fordjupning.html" title="Svenska">🇸🇪</a>
+        <a href="../en/part4-indepth.html" title="English">🇬🇧</a>
+        <a href="../fr/partie4-approfondissement.html" title="Français">🇫🇷</a>
+        <a href="fordjupning.html" class="active" title="ไทย">🇹🇭</a>
+    </div>
+
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">ส่วนที่ 4</div>
-            <h1 class="chapter-title">Fördjupning och utveckling</h1>
-            <p class="chapter-subtitle">Strategi, mental styrka och träning</p>
+            <h1 class="chapter-title">การเจาะลึกและพัฒนา</h1>
+            <p class="chapter-subtitle">กลยุทธ์ ความแข็งแกร่งทางจิตใจ และการฝึก</p>
         </div>
-        
+
         <div class="content">
-            <p class="quote">Att bemästra pétanque är en livslång resa. Reglerna ger ramen, men det är strategin, psyket och träningsvanorna som gör dig till en vinnare.</p>
-            
-            <h2 id="strategi">บทที่ 11: Strategisk analys och taktik</h2>
-            <p>Reglerna beskriver hur du får spela; strategin beskriver hur du bör spela för att vinna. Att utveckla en medveten strategi hjälper dig att fatta bättre beslut under press.</p>
-            
-            <h3>Grundläggande strategier</h3>
+            <p class="quote">การเชี่ยวชาญเปตองเป็นการเดินทางตลอดชีวิต กฎเกณฑ์ให้กรอบ แต่กลยุทธ์ จิตใจ และนิสัยการฝึกที่ทำให้คุณเป็นผู้ชนะ</p>
+
+            <h2 id="strategi">บทที่ 11: การวิเคราะห์เชิงกลยุทธ์และกลวิธี</h2>
+            <p>กฎเกณฑ์อธิบายว่าคุณสามารถเล่นอย่างไร; กลยุทธ์อธิบายว่าคุณควรเล่นอย่างไรเพื่อชนะ การพัฒนากลยุทธ์อย่างมีสติช่วยให้คุณตัดสินใจได้ดีขึ้นภายใต้แรงกดดัน</p>
+
+            <h3>กลยุทธ์พื้นฐาน</h3>
             <div class="highlight-box">
                 <ul>
-                    <li><strong>Läs underlaget innan du kastar:</strong> Notera om marken är hård, mjuk, sandig eller stenig</li>
-                    <li><strong>Välj rätt klot för din stil:</strong> Material, vikt och diameter påverkar kontrollen</li>
-                    <li><strong>Placera klotet framför lillen:</strong> Första klotet 30–50 cm framför lillen skapar en "mur"</li>
-                    <li><strong>Spela på motståndarnas svagheter:</strong> Observera hur de kastar och anpassa ditt spel</li>
-                    <li><strong>Var flexibel:</strong> Testa olika taktik beroende på situationen</li>
+                    <li><strong>อ่านพื้นผิวก่อนโยน:</strong> สังเกตว่าพื้นแข็ง นุ่ม เป็นทราย หรือเป็นหิน</li>
+                    <li><strong>เลือกลูกบูลที่เหมาะกับสไตล์ของคุณ:</strong> วัสดุ น้ำหนัก และเส้นผ่านศูนย์กลางส่งผลต่อการควบคุม</li>
+                    <li><strong>วางลูกบูลหน้า cochonnet:</strong> ลูกแรก 30-50 ซม. หน้า cochonnet สร้าง "กำแพง"</li>
+                    <li><strong>เล่นบนจุดอ่อนของคู่ต่อสู้:</strong> สังเกตว่าพวกเขาโยนอย่างไรและปรับเกมของคุณ</li>
+                    <li><strong>มีความยืดหยุ่น:</strong> ทดสอบกลวิธีต่างๆ ตามสถานการณ์</li>
                 </ul>
             </div>
-            
-            <h3>Avancerad taktik</h3>
+
+            <h3>กลวิธีขั้นสูง</h3>
             <table>
                 <tr>
-                    <th>Taktik</th>
-                    <th>Beskrivning</th>
+                    <th>กลวิธี</th>
+                    <th>คำอธิบาย</th>
                 </tr>
                 <tr>
-                    <td><strong>Terränganalys i flera steg</strong></td>
-                    <td>Tänk några kast framåt. Var finns stenar som kan fungera som hinder eller stötta klot?</td>
+                    <td><strong>การวิเคราะห์ภูมิประเทศหลายขั้นตอน</strong></td>
+                    <td>คิดล่วงหน้าหลายการโยน หินอยู่ที่ไหนที่อาจเป็นสิ่งกีดขวางหรือรองรับลูกบูล?</td>
                 </tr>
                 <tr>
-                    <td><strong>Positionera lillen med avsikt</strong></td>
-                    <td>Kasta den på en del av banan som passar ditt lag bättre än motståndarnas.</td>
+                    <td><strong>วาง cochonnet อย่างมีเจตนา</strong></td>
+                    <td>โยนมันไปส่วนของสนามที่เหมาะกับทีมของคุณมากกว่าคู่ต่อสู้</td>
                 </tr>
                 <tr>
-                    <td><strong>Byt tempo</strong></td>
-                    <td>Variera mellan snabba och lugna kast för att påverka rytmen.</td>
+                    <td><strong>เปลี่ยนจังหวะ</strong></td>
+                    <td>สลับระหว่างการโยนเร็วและช้าเพื่อส่งผลต่อจังหวะ</td>
                 </tr>
                 <tr>
-                    <td><strong>Få motståndaren att tänka</strong></td>
-                    <td>Välj svåra placeringar eller långa kast för att tvinga motståndarna ur komfortzonen.</td>
+                    <td><strong>ทำให้คู่ต่อสู้คิด</strong></td>
+                    <td>เลือกการวางที่ยากหรือการโยนไกลเพื่อบังคับให้คู่ต่อสู้ออกจากเขตสบาย</td>
                 </tr>
             </table>
-            
-            <h2 id="mental">บทที่ 12: Mental styrka och fokus</h2>
-            <p>Skillnaden mellan goda och utmärkta spelare sitter ofta i huvudet. Mental styrka kan tränas på samma sätt som teknik.</p>
-            
-            <h3>Hantering av press</h3>
+
+            <h2 id="mental">บทที่ 12: ความแข็งแกร่งทางจิตใจและสมาธิ</h2>
+            <p>ความแตกต่างระหว่างนักเล่นที่ดีและยอดเยี่ยมมักอยู่ในหัว ความแข็งแกร่งทางจิตใจสามารถฝึกได้เหมือนกับเทคนิค</p>
+
+            <h3>การจัดการแรงกดดัน</h3>
             <div class="info-box">
-                <h4>Tre tekniker:</h4>
+                <h4>สามเทคนิค:</h4>
                 <ol>
-                    <li><strong>Andning och visualisering:</strong> Djupandning och mental visualisering hjälper dig att lugna nerverna</li>
-                    <li><strong>Positivt mindset:</strong> En positiv attityd gör det lättare att hålla fokus</li>
-                    <li><strong>Rutiner:</strong> Skapa en personlig förberedelse rutin innan varje kast</li>
+                    <li><strong>การหายใจและการจินตนาการ:</strong> หายใจลึกและการจินตนาการทางจิตช่วยให้คุณสงบประสาท</li>
+                    <li><strong>ความคิดเชิงบวก:</strong> ทัศนคติเชิงบวกทำให้ง่ายต่อการรักษาสมาธิ</li>
+                    <li><strong>กิจวัตร:</strong> สร้างกิจวัตรการเตรียมตัวส่วนตัวก่อนทุกการโยน</li>
                 </ol>
             </div>
-            
-            <h3>"Tilt control" – att resetta efter misstag</h3>
-            <p>När du missar ett viktigt kast är risken stor att känslorna tar över. Lär dig att avbryta den negativa spiralen:</p>
-            
+
+            <h3>"การควบคุม Tilt" – การรีเซ็ตหลังความผิดพลาด</h3>
+            <p>เมื่อคุณพลาดการโยนที่สำคัญ มีความเสี่ยงสูงที่อารมณ์จะเข้าครอบงำ เรียนรู้ที่จะหยุดวงจรลบ:</p>
+
             <ul>
-                <li><strong>Steg ur cirkeln, börja om:</strong> Efter ett dåligt kast kliver du ut, samlar dig och kliver in igen</li>
-                <li><strong>Mental checklista:</strong> Gå igenom Stance (ställning), Hold (grepp), Angle (armvinkel), Length (kastlängd), Lean (marklutning)</li>
-                <li><strong>Baklängesvisualisering:</strong> Visualisera klotets bana baklänges – se klotet komma från lillen tillbaka in i din hand</li>
-                <li><strong>Lär av varandra:</strong> Diskutera kast med lagkamrater</li>
+                <li><strong>ก้าวออกจากวงกลม เริ่มใหม่:</strong> หลังจากการโยนที่แย่ คุณก้าวออก รวบรวมตัวเอง และก้าวเข้าไปอีกครั้ง</li>
+                <li><strong>รายการตรวจสอบทางจิต:</strong> ผ่านท่ายืน (Stance) การจับ (Hold) มุมแขน (Angle) ความยาวการโยน (Length) ความลาดเอียงของพื้น (Lean)</li>
+                <li><strong>การจินตนาการย้อนกลับ:</strong> จินตนาการเส้นทางของลูกบูลย้อนกลับ – เห็นลูกบูลกลับจาก cochonnet เข้ามือของคุณ</li>
+                <li><strong>เรียนรู้จากกันและกัน:</strong> พูดคุยเรื่องการโยนกับเพื่อนร่วมทีม</li>
             </ul>
-            
-            <h3>Fokus och koncentration</h3>
+
+            <h3>สมาธิและความมุ่งเน้น</h3>
             <div class="highlight-box">
                 <ul>
-                    <li>Undvik störningar genom att hålla koll på de andra kloten</li>
-                    <li>Utveckla en ritual före kastet</li>
-                    <li>Regelbunden meditation kan förbättra din förmåga att fokusera</li>
-                    <li>Mental imagery - föreställ dig kastet i detalj innan du gör det</li>
+                    <li>หลีกเลี่ยงการรบกวนโดยการติดตามลูกบูลอื่นๆ</li>
+                    <li>พัฒนาพิธีกรรมก่อนการโยน</li>
+                    <li>การทำสมาธิเป็นประจำสามารถปรับปรุงความสามารถในการมีสมาธิของคุณ</li>
+                    <li>การจินตนาการทางจิต - จินตนาการการโยนในรายละเอียดก่อนที่จะทำ</li>
                 </ul>
             </div>
-            
-            <h3>Motivation och mål</h3>
-            <p>Sätt mål som ger riktning och energi till din träning:</p>
-            
+
+            <h3>แรงจูงใจและเป้าหมาย</h3>
+            <p>ตั้งเป้าหมายที่ให้ทิศทางและพลังงานแก่การฝึกของคุณ:</p>
+
             <ul>
-                <li><strong>Kortsiktiga mål:</strong> Träffa en viss punkt tio gånger (dagliga mål)</li>
-                <li><strong>Medellånga mål:</strong> Förbättra din träffprocent (säsongsmål)</li>
-                <li><strong>Långsiktiga mål:</strong> Vinna en turnering</li>
+                <li><strong>เป้าหมายระยะสั้น:</strong> โดนจุดหนึ่งสิบครั้ง (เป้าหมายรายวัน)</li>
+                <li><strong>เป้าหมายระยะกลาง:</strong> ปรับปรุงเปอร์เซ็นต์การโดน (เป้าหมายฤดูกาล)</li>
+                <li><strong>เป้าหมายระยะยาว:</strong> ชนะทัวร์นาเมนต์</li>
             </ul>
-            
-            <h2 id="traning">บทที่ 13: Träningsplan och utveckling</h2>
-            <p>Att bli bättre handlar inte bara om att spela mycket, utan om att spela rätt. Effektiv träning sparar tid och ger större resultat.</p>
-            
-            <h3>Effektiv träning</h3>
+
+            <h2 id="traning">บทที่ 13: แผนการฝึกและพัฒนา</h2>
+            <p>การเก่งขึ้นไม่ใช่แค่การเล่นมาก แต่เกี่ยวกับการเล่นอย่างถูกต้อง การฝึกที่มีประสิทธิภาพประหยัดเวลาและให้ผลลัพธ์ที่ดีกว่า</p>
+
+            <h3>การฝึกที่มีประสิทธิภาพ</h3>
             <div class="highlight-box">
-                <h4>Fem principer:</h4>
+                <h4>ห้าหลักการ:</h4>
                 <ol>
-                    <li><strong>Spela regelbundet:</strong> Tre sessioner per vecka räcker om de planeras väl</li>
-                    <li><strong>Variera motstånd:</strong> Tävla mot olika spelare och delta i turneringar</li>
-                    <li><strong>Spela med erfarna:</strong> Träna med erfarna spelare för att lära dig deras teknik</li>
-                    <li><strong>Deliberate practice:</strong> Fokusera på en specifik färdighet åt gången</li>
-                    <li><strong>Växla mellan teknik och avslappnat spel:</strong> Under träning analyserar du, under match litar du på muskelminnet</li>
+                    <li><strong>เล่นเป็นประจำ:</strong> สามครั้งต่อสัปดาห์เพียงพอถ้าวางแผนดี</li>
+                    <li><strong>เปลี่ยนคู่ต่อสู้:</strong> แข่งกับนักเล่นต่างๆ และเข้าร่วมทัวร์นาเมนต์</li>
+                    <li><strong>เล่นกับผู้มีประสบการณ์:</strong> ฝึกกับนักเล่นที่มีประสบการณ์เพื่อเรียนรู้เทคนิคของพวกเขา</li>
+                    <li><strong>การฝึกอย่างตั้งใจ:</strong> มุ่งเน้นทักษะเฉพาะทีละอย่าง</li>
+                    <li><strong>สลับระหว่างเทคนิคและเล่นผ่อนคลาย:</strong> ระหว่างฝึกคุณวิเคราะห์ ระหว่างแข่งคุณไว้ใจความจำกล้ามเนื้อ</li>
                 </ol>
             </div>
-            
-            <h3>Analys och självvärdering</h3>
+
+            <h3>การวิเคราะห์และการประเมินตนเอง</h3>
             <ul>
-                <li><strong>Fortsatt lärande:</strong> Dokumentera varje träningspass och match</li>
-                <li><strong>Videoanalys:</strong> Filma dina kast och analysera din teknik</li>
-                <li><strong>Prestationsprofil:</strong> Skapa en matris över dina psykologiska, taktiska, tekniska och fysiska färdigheter</li>
+                <li><strong>การเรียนรู้ต่อเนื่อง:</strong> บันทึกทุกการฝึกและเกม</li>
+                <li><strong>การวิเคราะห์วิดีโอ:</strong> ถ่ายการโยนของคุณและวิเคราะห์เทคนิค</li>
+                <li><strong>โปรไฟล์ประสิทธิภาพ:</strong> สร้างเมทริกซ์ของทักษะด้านจิตวิทยา กลยุทธ์ เทคนิค และกายภาพของคุณ</li>
             </ul>
-            
-            <h3>Studieplan – steg för steg</h3>
+
+            <h3>แผนการศึกษา – ทีละขั้นตอน</h3>
             <table>
                 <tr>
-                    <th>Nivå</th>
-                    <th>Tid</th>
-                    <th>Fokus</th>
+                    <th>ระดับ</th>
+                    <th>เวลา</th>
+                    <th>จุดเน้น</th>
                 </tr>
                 <tr>
-                    <td><strong>Nybörjare</strong></td>
-                    <td>0–6 månader</td>
-                    <td>Grundläggande teknik: rätt grepp, ställning och kast. Spela med lättare klot. Delta i sociala matcher.</td>
+                    <td><strong>ผู้เริ่มต้น</strong></td>
+                    <td>0-6 เดือน</td>
+                    <td>เทคนิคพื้นฐาน: การจับ ท่ายืน และการโยนที่ถูกต้อง เล่นด้วยลูกบูลเบา เข้าร่วมเกมเพื่อสังคม</td>
                 </tr>
                 <tr>
-                    <td><strong>Utvecklingsfas</strong></td>
-                    <td>6–18 månader</td>
-                    <td>Analysera terrängen och välja kast. Testa olika klot. Träna på både point och skott. Delta i små tävlingar.</td>
+                    <td><strong>ระยะพัฒนา</strong></td>
+                    <td>6-18 เดือน</td>
+                    <td>วิเคราะห์ภูมิประเทศและเลือกการโยน ทดสอบลูกบูลต่างๆ ฝึกทั้งพอยท์และยิง เข้าร่วมทัวร์นาเมนต์เล็ก</td>
                 </tr>
                 <tr>
-                    <td><strong>Avancerad spelare</strong></td>
-                    <td>18–36 månader</td>
-                    <td>Utveckla strategi och planering. Studera motståndare. Inkludera mental träning. Använd videor och prestationsprofiler.</td>
+                    <td><strong>นักเล่นขั้นสูง</strong></td>
+                    <td>18-36 เดือน</td>
+                    <td>พัฒนากลยุทธ์และการวางแผน ศึกษาคู่ต่อสู้ รวมการฝึกจิต ใช้วิดีโอและโปรไฟล์ประสิทธิภาพ</td>
                 </tr>
                 <tr>
-                    <td><strong>Tävlingsspelare</strong></td>
-                    <td>3 år och mer</td>
-                    <td>Finjustera teknik med coach. Fokusera på små detaljer. Planera säsongen med periodisering.</td>
+                    <td><strong>นักแข่ง</strong></td>
+                    <td>3 ปีขึ้นไป</td>
+                    <td>ปรับแต่งเทคนิคกับโค้ช มุ่งเน้นรายละเอียดเล็ก วางแผนฤดูกาลด้วยการแบ่งช่วง</td>
                 </tr>
             </table>
-            
-            <h2>Utrustning, miljö och förberedelser</h2>
-            
-            <h3>Utrustningsfördelar</h3>
+
+            <h2>อุปกรณ์ สิ่งแวดล้อม และการเตรียมตัว</h2>
+
+            <h3>ข้อได้เปรียบของอุปกรณ์</h3>
             <ul>
-                <li>Anpassa klot efter din hand och stil</li>
-                <li>Välj material efter underlag</li>
-                <li>Underhåll - håll kloten rena och oljade</li>
+                <li>ปรับลูกบูลตามมือและสไตล์ของคุณ</li>
+                <li>เลือกวัสดุตามพื้นผิว</li>
+                <li>การบำรุงรักษา - รักษาลูกบูลให้สะอาดและทาน้ำมัน</li>
             </ul>
-            
-            <h3>Optimal miljö</h3>
+
+            <h3>สิ่งแวดล้อมที่เหมาะสม</h3>
             <ul>
-                <li>Skapa en träningszon hemma (minst 10 m)</li>
-                <li>Välj en lugn plats där du inte störs</li>
-                <li>Träna på olika underlag</li>
+                <li>สร้างโซนฝึกที่บ้าน (อย่างน้อย 10 ม.)</li>
+                <li>เลือกสถานที่เงียบที่คุณไม่ถูกรบกวน</li>
+                <li>ฝึกบนพื้นผิวต่างๆ</li>
             </ul>
-            
-            <h3>Förberedande rutiner</h3>
+
+            <h3>กิจวัตรการเตรียมตัว</h3>
             <div class="highlight-box">
-                <h4>Inför match:</h4>
+                <h4>ก่อนเกม:</h4>
                 <ul>
-                    <li><strong>Matchkläder:</strong> Rätt kläder utifrån väder och bekvämlighet</li>
-                    <li><strong>Energi:</strong> Ta med chokladkaka eller liknande</li>
-                    <li><strong>Vatten:</strong> Stor flaska, alltid till hands</li>
-                    <li><strong>Solskydd:</strong> Skärmmössa och solglasögon av kvalitet</li>
-                    <li><strong>Fysisk uppvärmning:</strong> Dynamiska stretchövningar och provkast</li>
-                    <li><strong>Mental uppvärmning:</strong> Gå igenom dina mål och visualisera</li>
-                    <li><strong>Materialkontroll:</strong> Kontrollera klotens märke och vikt</li>
+                    <li><strong>ชุดแข่ง:</strong> เสื้อผ้าที่เหมาะสมตามสภาพอากาศและความสะดวกสบาย</li>
+                    <li><strong>พลังงาน:</strong> นำช็อกโกแลตบาร์หรือของคล้ายกัน</li>
+                    <li><strong>น้ำ:</strong> ขวดใหญ่ มีพร้อมเสมอ</li>
+                    <li><strong>ป้องกันแดด:</strong> หมวกแก๊ปและแว่นกันแดดคุณภาพ</li>
+                    <li><strong>อุ่นเครื่องกายภาพ:</strong> แบบฝึกหัดยืดแบบไดนามิกและการโยนทดสอบ</li>
+                    <li><strong>อุ่นเครื่องจิตใจ:</strong> ทบทวนเป้าหมายและจินตนาการ</li>
+                    <li><strong>ตรวจสอบอุปกรณ์:</strong> ตรวจสอบเครื่องหมายและน้ำหนักของลูกบูล</li>
                 </ul>
             </div>
-            
-            <h2 id="fysik">บทที่ 14: Fysisk träning för pétanque</h2>
-            <p>Boule Pétanque är en precisionssport, inte en konditions- eller styrkeidrott. Trots det är det viktigt med grundläggande fysisk träning för att förbättra kasttekniken, öka precisionen och förebygga skador.</p>
-            
-            <h3>Styrka och uthållighet i arm och handled</h3>
+
+            <h2 id="fysik">บทที่ 14: การฝึกกายภาพสำหรับเปตอง</h2>
+            <p>เปตองเป็นกีฬาที่เน้นความแม่นยำ ไม่ใช่กีฬาที่เน้นความแข็งแรงหรือความอดทน อย่างไรก็ตาม การฝึกกายภาพพื้นฐานมีความสำคัญในการปรับปรุงเทคนิคการโยน เพิ่มความแม่นยำ และป้องกันการบาดเจ็บ</p>
+
+            <h3>ความแข็งแรงและความอดทนในแขนและข้อมือ</h3>
             <table>
                 <tr>
-                    <th>Övning</th>
-                    <th>Syfte</th>
+                    <th>แบบฝึกหัด</th>
+                    <th>วัตถุประสงค์</th>
                 </tr>
                 <tr>
-                    <td><strong>Underarmscurl med vikt</strong></td>
-                    <td>Stärker underarmarna och greppet</td>
+                    <td><strong>Curl ปลายแขนพร้อมน้ำหนัก</strong></td>
+                    <td>เสริมสร้างปลายแขนและการจับ</td>
                 </tr>
                 <tr>
-                    <td><strong>Handledspendel med klot</strong></td>
-                    <td>Tränar uthållighet i släppmomentet</td>
+                    <td><strong>ลูกตุ้มข้อมือพร้อมลูกบูล</strong></td>
+                    <td>ฝึกความอดทนในช่วงปล่อย</td>
                 </tr>
                 <tr>
-                    <td><strong>Axellyft</strong></td>
-                    <td>Stärker axelmuskulaturen för stabilitet</td>
+                    <td><strong>ยกไหล่</strong></td>
+                    <td>เสริมสร้างกล้ามเนื้อไหล่เพื่อความมั่นคง</td>
                 </tr>
                 <tr>
-                    <td><strong>Armhävningar</strong></td>
-                    <td>Stärker bröst, axlar och bål</td>
+                    <td><strong>วิดพื้น</strong></td>
+                    <td>เสริมสร้างหน้าอก ไหล่ และลำตัว</td>
                 </tr>
             </table>
-            
-            <h3>Balans och stabilitet</h3>
+
+            <h3>สมดุลและความมั่นคง</h3>
             <ul>
-                <li><strong>Enbensstående:</strong> Förbättrar fotens och ankelns balans</li>
-                <li><strong>Knäböj/Utfall:</strong> Stärker ben och höfter för huksittande ställning</li>
-                <li><strong>Plankan:</strong> Bygger upp bålstyrkan</li>
-                <li><strong>Höftrotationer:</strong> Förbättrar rörligheten i höften</li>
+                <li><strong>ยืนขาเดียว:</strong> ปรับปรุงสมดุลของเท้าและข้อเท้า</li>
+                <li><strong>สควอท/ลันจ์:</strong> เสริมสร้างขาและสะโพกสำหรับท่านั่งยอง</li>
+                <li><strong>แพลงก์:</strong> สร้างความแข็งแรงของลำตัว</li>
+                <li><strong>การหมุนสะโพก:</strong> ปรับปรุงความยืดหยุ่นของสะโพก</li>
             </ul>
-            
-            <h3>Rörlighet och uppvärmning</h3>
+
+            <h3>ความยืดหยุ่นและการอุ่นเครื่อง</h3>
             <ul>
-                <li>Axelrotationer - lätta, kontrollerade cirkelrörelser</li>
-                <li>Handleds- och fingersträckningar</li>
-                <li>Pendelövningar utan att kasta klotet</li>
+                <li>การหมุนไหล่ - การเคลื่อนไหวเป็นวงกลมเบาๆ และควบคุมได้</li>
+                <li>การยืดข้อมือและนิ้ว</li>
+                <li>แบบฝึกหัดลูกตุ้มโดยไม่โยนลูกบูล</li>
             </ul>
-            
+
             <div class="warning-box">
-                <p><strong>Tips:</strong> Utför gärna dessa övningar med lätta vikter eller med själva pétanque-klotet, med höga repetitionsantal, för att efterlikna den lågintensiva uthålligheten som behövs under en lång match.</p>
+                <p><strong>เคล็ดลับ:</strong> ทำแบบฝึกหัดเหล่านี้ด้วยน้ำหนักเบาหรือกับลูกเปตองเอง ด้วยจำนวนครั้งสูง เพื่อเลียนแบบความอดทนที่มีความเข้มข้นต่ำที่จำเป็นในเกมยาว</p>
             </div>
-            
-            <h2>Avslutning</h2>
-            <p>Genom att analysera banan, välja rätt taktik, träna fokuserat och vårda din mentala styrka tar du kontroll över både spelet och utvecklingen. Glöm inte att njuta av resan – det sociala samspelet och glädjen i spelet är minst lika viktigt som att vinna.</p>
-            
+
+            <h2>บทสรุป</h2>
+            <p>โดยการวิเคราะห์สนาม เลือกกลยุทธ์ที่ถูกต้อง ฝึกอย่างมีสมาธิ และดูแลความแข็งแกร่งทางจิตใจของคุณ คุณจะควบคุมทั้งเกมและการพัฒนา อย่าลืมเพลิดเพลินกับการเดินทาง – ปฏิสัมพันธ์ทางสังคมและความสุขในเกมมีความสำคัญเท่ากับการชนะ</p>
+
             <div class="navigation">
                 <a href="del3-kapitel10.html" class="nav-btn secondary">← บทที่ 10</a>
-                <a href="utrustning.html" class="nav-btn">ถัดไป: ภาคผนวก A: Utrustningsguide →</a>
+                <a href="del4-kapitel15.html" class="nav-btn">ถัดไป: บทที่ 15 →</a>
             </div>
         </div>
     </div>

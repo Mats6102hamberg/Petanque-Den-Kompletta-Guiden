@@ -3,202 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tillverkning, Storlek, Hårdhet och Modellval - คู่มือเปตองค์</title>
-    <link rel="stylesheet" href="styles.css">    
+    <title>คู่มืออุปกรณ์ - คู่มือเปตอง</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <a href="saraban.html" class="toc-button">สารบัญ</a>
+    <div class="language-switcher">
+        <a href="../utrustning.html" title="Svenska">🇸🇪</a>
+        <a href="../en/equipment.html" title="English">🇬🇧</a>
+        <a href="../fr/equipement.html" title="Français">🇫🇷</a>
+        <a href="utrustning.html" class="active" title="ไทย">🇹🇭</a>
+    </div>
+
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">ภาคผนวก A</div>
-            <h1 class="chapter-title">Utrustningsguide</h1>
-            <p class="chapter-subtitle">Tillverkning, storlek, hårdhet och modellval för pétanque-klot</p>
+            <h1 class="chapter-title">คู่มืออุปกรณ์</h1>
+            <p class="chapter-subtitle">การผลิต ขนาด ความแข็ง และการเลือกรุ่นลูกเปตอง</p>
         </div>
-        
+
         <div class="content">
-            <h2>Tillverkning</h2>
-            <p>Pétanque spelas alltid med metallklot. FIPJP:s officiella regler kräver att kloten är ihåliga och att de inte innehåller bly, sand, kvicksilver eller andra främmande material. De måste även bära tillverkarens namn och vikt och följa storleks- och viktkrav.</p>
-            
-            <h3>Kolstål (acier carbon)</h3>
+            <h2>การผลิต</h2>
+            <p>เปตองเล่นด้วยลูกบูลโลหะเสมอ กฎอย่างเป็นทางการของ FIPJP กำหนดว่าลูกบูลต้องกลวงและต้องไม่มีตะกั่ว ทราย ปรอท หรือวัสดุแปลกปลอมอื่น นอกจากนี้ยังต้องมีชื่อผู้ผลิตและน้ำหนัก และเป็นไปตามข้อกำหนดขนาดและน้ำหนัก</p>
+
+            <h3>เหล็กคาร์บอน (acier carbon)</h3>
             <div class="highlight-box">
-                <h4>Fördelar:</h4>
+                <h4>ข้อดี:</h4>
                 <ul>
-                    <li><strong>Porös yta, bra grepp:</strong> Kolstålsklot har en något strävare yta som ger bättre grepp och mer friktion mot underlaget</li>
-                    <li><strong>Populärt bland proffs:</strong> Proffs föredrar kolstål eftersom den lätta ytråheten ger bättre kontroll</li>
+                    <li><strong>พื้นผิวพรุน จับได้ดี:</strong> ลูกบูลเหล็กคาร์บอนมีพื้นผิวที่หยาบเล็กน้อยซึ่งให้การจับที่ดีกว่าและแรงเสียดทานกับพื้นผิวมากกว่า</li>
+                    <li><strong>เป็นที่นิยมในหมู่มืออาชีพ:</strong> มืออาชีพชอบเหล็กคาร์บอนเพราะความหยาบผิวเล็กน้อยให้การควบคุมที่ดีกว่า</li>
                 </ul>
-                
-                <h4>Nackdelar:</h4>
+
+                <h4>ข้อเสีย:</h4>
                 <ul>
-                    <li><strong>Rostar lättare:</strong> Den porösa ytan gör dem känsligare för rost</li>
-                    <li><strong>Kräver underhåll:</strong> Kloten bör torkas efter spel och smörjas med olja</li>
+                    <li><strong>เป็นสนิมง่ายกว่า:</strong> พื้นผิวพรุนทำให้ไวต่อสนิมมากกว่า</li>
+                    <li><strong>ต้องบำรุงรักษา:</strong> ควรเช็ดลูกบูลหลังเล่นและทาน้ำมัน</li>
                 </ul>
             </div>
-        
-            <h3>Rostfritt stål (inox)</h3>
+
+            <h3>สเตนเลส (inox)</h3>
             <div class="info-box">
-                <h4>Fördelar:</h4>
+                <h4>ข้อดี:</h4>
                 <ul>
-                    <li><strong>Slätare yta:</strong> Ger mindre friktion och gör det lättare att släppa klotet snabbt i skott</li>
-                    <li><strong>Nästan underhållsfria:</strong> Rostfritt stål rostar inte och kräver mindre skötsel</li>
-                    <li><strong>Perfekt för nybörjare:</strong> Lätt att hålla rena, tåliga och behåller sitt utseende</li>
+                    <li><strong>พื้นผิวเรียบกว่า:</strong> ให้แรงเสียดทานน้อยกว่าและทำให้ปล่อยลูกบูลเร็วขึ้นในการยิง</li>
+                    <li><strong>แทบไม่ต้องบำรุงรักษา:</strong> สเตนเลสไม่เป็นสนิมและต้องการการดูแลน้อยกว่า</li>
+                    <li><strong>เหมาะสำหรับผู้เริ่มต้น:</strong> ทำความสะอาดง่าย ทนทาน และรักษาลักษณะภายนอก</li>
                 </ul>
-                
-                <h4>Nackdelar:</h4>
+
+                <h4>ข้อเสีย:</h4>
                 <ul>
-                    <li>Ger lite mindre känsla i handen jämfört med kolstålsklot</li>
-                    <li>Stannar inte lika lätt på hårda underlag</li>
+                    <li>ให้ความรู้สึกในมือน้อยกว่าเมื่อเทียบกับลูกบูลเหล็กคาร์บอน</li>
+                    <li>หยุดไม่ง่ายเท่าบนพื้นแข็ง</li>
                 </ul>
             </div>
-            
-            <h2>Storlek och vikt</h2>
-            <p>Officiella klot (boules) måste ha en diameter mellan <strong>70,5 och 80 mm</strong> och väga <strong>650–800 gram</strong>. För barn under 11 år tillåts mindre klot på 65 mm och 600 g.</p>
-            
-            <h3>Lättare klot (650–700 g)</h3>
+
+            <h2>ขนาดและน้ำหนัก</h2>
+            <p>ลูกบูลอย่างเป็นทางการต้องมีเส้นผ่านศูนย์กลางระหว่าง <strong>70.5 และ 80 มม.</strong> และมีน้ำหนัก <strong>650-800 กรัม</strong> สำหรับเด็กอายุต่ำกว่า 11 ปี อนุญาตให้ใช้ลูกบูลเล็กกว่า 65 มม. และ 600 ก.</p>
+
+            <h3>ลูกบูลเบา (650-700 ก.)</h3>
             <ul>
-                <li>Lättare att kontrollera</li>
-                <li>Mindre vikt gör det enklare att kasta mjukt</li>
-                <li>Skonsammare för hand och handled</li>
-                <li>Passar nybörjare och spelare med mindre handstyrka</li>
-                <li><strong>Nackdel:</strong> Mindre träffkraft i skott</li>
+                <li>ควบคุมง่ายกว่า</li>
+                <li>น้ำหนักน้อยทำให้โยนนุ่มได้ง่ายกว่า</li>
+                <li>อ่อนโยนต่อมือและข้อมือ</li>
+                <li>เหมาะสำหรับผู้เริ่มต้นและผู้เล่นที่มีแรงมือน้อย</li>
+                <li><strong>ข้อเสีย:</strong> แรงกระแทกน้อยในการยิง</li>
             </ul>
-            
-            <h3>Halvmjuka klot och Hardness +</h3>
+
+            <h3>ลูกบูลกึ่งนุ่มและ Hardness +</h3>
             <ul>
-                <li><strong>Halvmjuka klot:</strong> Kombinerar hållbarhet och reducerad studs</li>
-                <li>Passar spelare som växlar mellan point och skott</li>
+                <li><strong>ลูกบูลกึ่งนุ่ม:</strong> รวมความทนทานและการเด้งที่ลดลง</li>
+                <li>เหมาะสำหรับผู้เล่นที่สลับระหว่างพอยท์และยิง</li>
             </ul>
-            
+
             <div class="info-box">
-                <h4>Hardness + Teknologi</h4>
-                <p><strong>Hardness +</strong> är en nyare tillverkningsteknik som använder dubbla stållegeringar eller specialbehandlad ytyta för att kombinera det bästa av två världar:</p>
+                <h4>เทคโนโลยี Hardness +</h4>
+                <p><strong>Hardness +</strong> เป็นเทคนิคการผลิตใหม่ที่ใช้โลหะผสมเหล็กคู่หรือพื้นผิวที่ผ่านการบำบัดพิเศษเพื่อรวมสิ่งที่ดีที่สุดของสองโลก:</p>
                 <ul>
-                    <li><strong>Inre lager:</strong> Mjukare legering som ger låg studs och bra kontroll (som ett mjukt klot)</li>
-                    <li><strong>Yttre lager:</strong> Hårdare behandlad yta som ger hög slitstyrka (som ett hårt klot)</li>
-                    <li><strong>Resultat:</strong> Klot som beter sig mjukt vid kontakt med marken och andra klot, men som tål många års intensivt spel utan att få djupa repor</li>
+                    <li><strong>ชั้นใน:</strong> โลหะผสมที่นุ่มกว่าให้การเด้งต่ำและการควบคุมที่ดี (เหมือนลูกนุ่ม)</li>
+                    <li><strong>ชั้นนอก:</strong> พื้นผิวที่ผ่านการบำบัดให้แข็งกว่าให้ความทนทานสูง (เหมือนลูกแข็ง)</li>
+                    <li><strong>ผลลัพธ์:</strong> ลูกบูลที่มีพฤติกรรมนุ่มเมื่อสัมผัสกับพื้นและลูกบูลอื่น แต่ทนการเล่นอย่างหนักหลายปีโดยไม่มีรอยขีดข่วนลึก</li>
                 </ul>
-                <p>Detta gör Hardness + idealiskt för både höga lobbskott och precisionsskott, särskilt för tireurs som vill ha carreau-egenskaper utan att offra hållbarhet.</p>
+                <p>สิ่งนี้ทำให้ Hardness + เหมาะสำหรับทั้งการโยน lob สูงและการยิงแม่นยำ โดยเฉพาะสำหรับนักยิงที่ต้องการคุณสมบัติ carreau โดยไม่ต้องเสียความทนทาน</p>
             </div>
-            
-            <h3>Tyngre klot (720–800 g)</h3>
+
+            <h3>ลูกบูลหนัก (720-800 ก.)</h3>
             <ul>
-                <li>Stabilare lägg – rullar mindre och stannar snabbare</li>
-                <li>Mer kraft – ger mer energiöverföring vid skott</li>
-                <li>Kan flytta motståndarens klot längre</li>
-                <li><strong>Nackdel:</strong> Kräver mer styrka och bra teknik</li>
+                <li>วางมั่นคงกว่า – กลิ้งน้อยและหยุดเร็วกว่า</li>
+                <li>แรงมากกว่า – ให้การถ่ายโอนพลังงานมากขึ้นในการยิง</li>
+                <li>สามารถผลักลูกบูลของคู่ต่อสู้ได้ไกลกว่า</li>
+                <li><strong>ข้อเสีย:</strong> ต้องใช้แรงมากกว่าและเทคนิคที่ดี</li>
             </ul>
-            
-            <h3>Diameter och handstorlek</h3>
+
+            <h3>เส้นผ่านศูนย์กลางและขนาดมือ</h3>
             <div class="highlight-box">
-                <p><strong>Rekommendationer:</strong></p>
+                <p><strong>คำแนะนำ:</strong></p>
                 <ul>
-                    <li><strong>Pointers:</strong> Något mindre klot (71–73 mm)</li>
-                    <li><strong>Shooters:</strong> Något större (73–76 mm) för att minska målbilden</li>
-                    <li><strong>Standard för de flesta:</strong> 73 mm och 680 g</li>
-                    <li><strong>Småhändiga spelare:</strong> 70,5 mm</li>
+                    <li><strong>นักพอยท์:</strong> ลูกบูลเล็กกว่าเล็กน้อย (71-73 มม.)</li>
+                    <li><strong>นักยิง:</strong> ใหญ่กว่าเล็กน้อย (73-76 มม.) เพื่อลดเป้าหมาย</li>
+                    <li><strong>มาตรฐานสำหรับส่วนใหญ่:</strong> 73 มม. และ 680 ก.</li>
+                    <li><strong>ผู้เล่นมือเล็ก:</strong> 70.5 มม.</li>
                 </ul>
             </div>
-            
-            <h2>Hårdhet och ytstruktur</h2>
-            <p>Klotets "hårdhet" beskriver hur mycket det studsar (elasticitet) och hur motståndskraftigt det är mot repor. Tillverkare använder olika beteckningar, men de vanligaste kategorierna är <strong>tendre</strong> (mjuk), <strong>demi-tendre</strong> (halvmjuk) och <strong>dure</strong> (hård).</p>
-            
+
+            <h2>ความแข็งและพื้นผิว</h2>
+            <p>"ความแข็ง" ของลูกบูลอธิบายว่ามันเด้งมากแค่ไหน (ความยืดหยุ่น) และทนต่อรอยขีดข่วนแค่ไหน ผู้ผลิตใช้ชื่อเรียกต่างกัน แต่หมวดหมู่ที่พบบ่อยที่สุดคือ <strong>tendre</strong> (นุ่ม), <strong>demi-tendre</strong> (กึ่งนุ่ม) และ <strong>dure</strong> (แข็ง)</p>
+
             <table>
                 <tr>
-                    <th>Hårdhetskategori</th>
-                    <th>Beteende</th>
-                    <th>Användning</th>
+                    <th>หมวดหมู่ความแข็ง</th>
+                    <th>พฤติกรรม</th>
+                    <th>การใช้งาน</th>
                 </tr>
                 <tr>
-                    <td><strong>Mjuk (tendre)</strong></td>
-                    <td>Låg studs, absorberar kollisioner, "dör" snabbt</td>
-                    <td>Point på asfalt, lobbskott, carreau. Bra kontroll på hårt underlag.</td>
+                    <td><strong>นุ่ม (tendre)</strong></td>
+                    <td>เด้งต่ำ ดูดซับการชน "ตาย" เร็ว</td>
+                    <td>พอยท์บนแอสฟัลต์ โยน lob carreau ควบคุมได้ดีบนพื้นแข็ง</td>
                 </tr>
                 <tr>
-                    <td><strong>Halvmjuk (demi-tendre)</strong></td>
-                    <td>Balanserad studs, god hållbarhet</td>
-                    <td>Allroundspel – både point och skott. Passar de flesta spelare.</td>
+                    <td><strong>กึ่งนุ่ม (demi-tendre)</strong></td>
+                    <td>เด้งสมดุล ทนทานดี</td>
+                    <td>เล่นรอบด้าน – ทั้งพอยท์และยิง เหมาะสำหรับผู้เล่นส่วนใหญ่</td>
                 </tr>
                 <tr>
-                    <td><strong>Hård (dure)</strong></td>
-                    <td>Hög studs, rullar längre, mycket slitstark</td>
-                    <td>Pointer på mjukt underlag (sand, grus). Tålig mot repor.</td>
+                    <td><strong>แข็ง (dure)</strong></td>
+                    <td>เด้งสูง กลิ้งไกลกว่า ทนทานมาก</td>
+                    <td>นักพอยท์บนพื้นนุ่ม (ทราย กรวด) ทนต่อรอยขีดข่วน</td>
                 </tr>
             </table>
-            
-            <h3>Mjuka klot</h3>
+
+            <h3>ลูกบูลนุ่ม</h3>
             <ul>
-                <li><strong>Låg studs:</strong> Absorberar kollisioner och "dör" snabbt på hård mark</li>
-                <li><strong>Idealisk för skottspelare:</strong> Mjukhet minskar återstuds och ökar chansen till carreau</li>
-                <li><strong>Nackdel:</strong> Får lättare repor och slits snabbare</li>
+                <li><strong>เด้งต่ำ:</strong> ดูดซับการชนและ "ตาย" เร็วบนพื้นแข็ง</li>
+                <li><strong>เหมาะสำหรับนักยิง:</strong> ความนุ่มลดการเด้งกลับและเพิ่มโอกาสในการทำ carreau</li>
+                <li><strong>ข้อเสีย:</strong> เกิดรอยขีดข่วนง่ายกว่าและสึกเร็วกว่า</li>
             </ul>
-            
-            <h3>Hårda klot</h3>
+
+            <h3>ลูกบูลแข็ง</h3>
             <ul>
-                <li><strong>Hög studs:</strong> Studsar mer och rullar längre</li>
-                <li><strong>Passar bättre på mjuka underlag</strong> som sand eller löst grus</li>
-                <li><strong>Slitstarka:</strong> Motståndskraftiga mot repor och håller många års spel</li>
-                <li>Populära bland pointers som spelar på grova banor</li>
+                <li><strong>เด้งสูง:</strong> เด้งมากกว่าและกลิ้งไกลกว่า</li>
+                <li><strong>เหมาะกว่าสำหรับพื้นนุ่ม</strong> เช่น ทรายหรือกรวดหลวม</li>
+                <li><strong>ทนทาน:</strong> ทนต่อรอยขีดข่วนและใช้ได้หลายปี</li>
+                <li>ได้รับความนิยมในหมู่นักพอยท์ที่เล่นบนสนามหยาบ</li>
             </ul>
-            
-            <h2>Klot för point vs. skott</h2>
-            
-            <h3>Point-klot</h3>
+
+            <h2>ลูกบูลสำหรับพอยท์ vs. ยิง</h2>
+
+            <h3>ลูกบูลพอยท์</h3>
             <div class="highlight-box">
                 <ul>
-                    <li>Tyngre och hårdare (700 g och uppåt)</li>
-                    <li>Stannar snabbare och rullar mindre</li>
-                    <li>Mindre diameter och strimmor</li>
-                    <li>Greppmönster eller grov yta ger bra kontroll</li>
+                    <li>หนักกว่าและแข็งกว่า (700 ก. ขึ้นไป)</li>
+                    <li>หยุดเร็วกว่าและกลิ้งน้อยกว่า</li>
+                    <li>เส้นผ่านศูนย์กลางและลายเล็กกว่า</li>
+                    <li>ลายจับหรือพื้นผิวหยาบให้การควบคุมที่ดี</li>
                 </ul>
-                
-                <p><strong>Exempel:</strong> Obut "Décimale" (inox, 680–720 g), La Boule Noire "Carbone" (kolstål, 690–710 g)</p>
+
+                <p><strong>ตัวอย่าง:</strong> Obut "Décimale" (สเตนเลส, 680-720 ก.), La Boule Noire "Carbone" (เหล็กคาร์บอน, 690-710 ก.)</p>
             </div>
-            
-            <h3>Skott-klot</h3>
+
+            <h3>ลูกบูลยิง</h3>
             <div class="info-box">
                 <ul>
-                    <li>Lättare och mjukare (680–690 g)</li>
-                    <li>Mjuk eller mycket mjuk hårdhet minimerar studs</li>
-                    <li>Större diameter (73–76 mm) ger bättre träffyta</li>
-                    <li>Slät yta gör att klotet glider ur handen</li>
+                    <li>เบากว่าและนุ่มกว่า (680-690 ก.)</li>
+                    <li>ความแข็งนุ่มหรือนุ่มมากลดการเด้ง</li>
+                    <li>เส้นผ่านศูนย์กลางใหญ่กว่า (73-76 มม.) ให้พื้นที่โดนดีกว่า</li>
+                    <li>พื้นผิวเรียบทำให้ลูกบูลลื่นออกจากมือ</li>
                 </ul>
-                
-                <p><strong>Exempel:</strong> MS Pétanque "Black Spin" (mycket mjuk), La Boule Bleue "ProShooter" (mjuk), Obut "Match" (tendre)</p>
+
+                <p><strong>ตัวอย่าง:</strong> MS Pétanque "Black Spin" (นุ่มมาก), La Boule Bleue "ProShooter" (นุ่ม), Obut "Match" (tendre)</p>
             </div>
-            
-            <h3>Allround-klot</h3>
-            <p>För spelare som både lägger och skjuter finns halvmjuka klot (demi-tendre) som kombinerar egenskaper. Obut "Zen" (inox, halvmjuk), JB Pétanque "Pro Series" (demi-tendre) och La Boule Noire "Competition" är populära allround-modeller.</p>
-            
-            <h2>Köpråd – så väljer du rätt klot</h2>
+
+            <h3>ลูกบูลรอบด้าน</h3>
+            <p>สำหรับผู้เล่นที่ทั้งวางและยิง มีลูกบูลกึ่งนุ่ม (demi-tendre) ที่รวมคุณสมบัติ Obut "Zen" (สเตนเลส, กึ่งนุ่ม), JB Pétanque "Pro Series" (demi-tendre) และ La Boule Noire "Competition" เป็นรุ่นรอบด้านที่ได้รับความนิยม</p>
+
+            <h2>คำแนะนำการซื้อ – วิธีเลือกลูกบูลที่เหมาะสม</h2>
             <div class="highlight-box">
-                <h4>Nybörjare:</h4>
-                <p>Börja med ett prisvärt set i rostfritt stål med medium hårdhet och vikt runt 700–720 g. Uppgradera senare när du vet vad du vill fokusera på.</p>
-                
-                <h4>Avancerade pointers:</h4>
-                <p>Välj kolstålsklot mellan 680–710 g med mjuk–medium hårdhet för maximal känsla.</p>
-                
-                <h4>Skottspelare (tireurs):</h4>
-                <p>Satsa på mycket mjuka, kontrollerat studsande klot, gärna med teknik "hardness +", och håll vikten runt 680–700 g.</p>
-                
-                <h4>Tävlande allroundspelare:</h4>
-                <p>Välj semi-mjukt klot med medelvikt (710–730 g) som klarar både point och skott.</p>
+                <h4>ผู้เริ่มต้น:</h4>
+                <p>เริ่มด้วยชุดราคาประหยัดในสเตนเลสที่มีความแข็งปานกลางและน้ำหนักประมาณ 700-720 ก. อัพเกรดทีหลังเมื่อคุณรู้ว่าต้องการเน้นอะไร</p>
+
+                <h4>นักพอยท์ขั้นสูง:</h4>
+                <p>เลือกลูกบูลเหล็กคาร์บอนระหว่าง 680-710 ก. พร้อมความแข็งนุ่ม-ปานกลางเพื่อความรู้สึกสูงสุด</p>
+
+                <h4>นักยิง (tireurs):</h4>
+                <p>ลงทุนในลูกบูลที่นุ่มมาก มีการเด้งที่ควบคุมได้ โดยเฉพาะกับเทคนิค "hardness +" และรักษาน้ำหนักประมาณ 680-700 ก.</p>
+
+                <h4>นักแข่งรอบด้าน:</h4>
+                <p>เลือกลูกบูลกึ่งนุ่มพร้อมน้ำหนักกลาง (710-730 ก.) ที่รับมือได้ทั้งพอยท์และยิง</p>
             </div>
-            
-            <h2>Underhåll och skötsel</h2>
+
+            <h2>การบำรุงรักษาและดูแล</h2>
             <ol>
-                <li><strong>Rengör efter varje spel:</strong> Tvätta kloten med ljummet såpvatten och torka dem noggrant</li>
-                <li><strong>Applicera olja eller skyddsspray:</strong> Smörj både rostfritt och kolstål en gång i månaden</li>
-                <li><strong>Förvara torrt:</strong> Låt inte kloten ligga kvar i en fuktig väska eller bil</li>
-                <li><strong>Ta bort rost:</strong> Använd stålborste eller blötlägg i vitvinsvinäger ett dygn</li>
-                <li><strong>Undvik kemikalier:</strong> Mild såpa och lätt olja räcker</li>
+                <li><strong>ทำความสะอาดหลังทุกเกม:</strong> ล้างลูกบูลด้วยน้ำสบู่อุ่นและเช็ดให้แห้งอย่างดี</li>
+                <li><strong>ทาน้ำมันหรือสเปรย์ปกป้อง:</strong> ทาน้ำมันทั้งสเตนเลสและเหล็กคาร์บอนเดือนละครั้ง</li>
+                <li><strong>เก็บในที่แห้ง:</strong> อย่าทิ้งลูกบูลไว้ในกระเป๋าชื้นหรือในรถ</li>
+                <li><strong>กำจัดสนิม:</strong> ใช้แปรงเหล็กหรือแช่ในน้ำส้มสายชูไวน์ขาวหนึ่งวัน</li>
+                <li><strong>หลีกเลี่ยงสารเคมี:</strong> สบู่อ่อนและน้ำมันเบาเพียงพอ</li>
             </ol>
-            
+
             <div class="warning-box">
-                <p><strong>Viktigt att komma ihåg:</strong> Dyrare klot = inte automatiskt bättre spelare. Teknik och träning är viktigast. Men ett klot som passar din hand och spelstil ger definitivt fördelar!</p>
+                <p><strong>สิ่งสำคัญที่ต้องจำ:</strong> ลูกบูลแพงกว่า = ไม่ได้หมายความว่าเป็นนักเล่นที่ดีกว่าโดยอัตโนมัติ เทคนิคและการฝึกสำคัญที่สุด แต่ลูกบูลที่เหมาะกับมือและสไตล์การเล่นของคุณให้ข้อได้เปรียบอย่างแน่นอน!</p>
             </div>
-            
+
             <div class="navigation">
-                <a href="del3-kapitel9.html" class="nav-btn secondary">← ก่อนหน้า</a>
-                <a href="regler.html" class="nav-btn">ถัดไป: Regler →</a>
+                <a href="fordjupning.html" class="nav-btn secondary">← ก่อนหน้า</a>
+                <a href="regler.html" class="nav-btn">ถัดไป: กฎเกณฑ์ →</a>
             </div>
         </div>
     </div>

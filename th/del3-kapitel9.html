@@ -3,170 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ส่วนที่ 3: Pétanque som livsstil - คู่มือเปตองค์</title>
-    <link rel="stylesheet" href="styles.css">    
+    <title>ส่วนที่ 3: เปตองเป็นวิถีชีวิต - คู่มือเปตอง</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <a href="saraban.html" class="toc-button">สารบัญ</a>
+    <div class="language-switcher">
+        <a href="../del3-kapitel9.html" title="Svenska">🇸🇪</a>
+        <a href="../en/part3-chapter9.html" title="English">🇬🇧</a>
+        <a href="../fr/partie3-chapitre9.html" title="Français">🇫🇷</a>
+        <a href="del3-kapitel9.html" class="active" title="ไทย">🇹🇭</a>
+    </div>
+
     <div class="container">
         <div class="header">
             <div class="chapter-number">ส่วนที่ 3</div>
-            <h1 class="chapter-title">Pétanque som livsstil</h1>
-            <p class="chapter-subtitle">Tävling, kultur och gemenskap</p>
+            <h1 class="chapter-title">เปตองเป็นวิถีชีวิต</h1>
+            <p class="chapter-subtitle">การแข่งขัน วัฒนธรรม และชุมชน</p>
         </div>
-        
+
         <div class="content">
-            <p class="quote">Pétanque är mer än en sport – det är en social aktivitet, en kulturell tradition och en global gemenskap.</p>
-            
-            <h2>บทที่ 9 – Tävlingsspel vs. socialt spel</h2>
-            
-            <h3>Skillnader i inställning och strategi</h3>
-            <p>I praktiken används termen "social" eller "casual" pétanque för vänskapsspel utan domare, medan "tävlingsspel" avser sanktionerade turneringar med domare.</p>
-            
+            <p class="quote">เปตองเป็นมากกว่ากีฬา – เป็นกิจกรรมทางสังคม ประเพณีทางวัฒนธรรม และชุมชนระดับโลก</p>
+
+            <h2>บทที่ 9 – การแข่งขัน vs. การเล่นเพื่อสังคม</h2>
+
+            <h3>ความแตกต่างในทัศนคติและกลยุทธ์</h3>
+            <p>ในทางปฏิบัติ คำว่า "สังคม" หรือ "casual" เปตองใช้สำหรับเกมระหว่างเพื่อนโดยไม่มีกรรมการ ในขณะที่ "การแข่งขัน" หมายถึงทัวร์นาเมนต์ที่ได้รับการรับรองพร้อมกรรมการ</p>
+
             <div class="highlight-box">
-                <h4>Socialt spel:</h4>
+                <h4>การเล่นเพื่อสังคม:</h4>
                 <ul>
-                    <li>Spelas utan umpire (domare)</li>
-                    <li>När något oregelbundet händer bestämmer lagen tillsammans</li>
-                    <li>Stämningen är avkopplad och målet är umgänge</li>
-                    <li>Spelare prövar nya taktiker och turas om att kasta</li>
-                    <li>Poängen räknas men är inte det viktigaste</li>
+                    <li>เล่นโดยไม่มีกรรมการ</li>
+                    <li>เมื่อเกิดสิ่งผิดปกติ ทีมจะตัดสินใจร่วมกัน</li>
+                    <li>บรรยากาศผ่อนคลายและเป้าหมายคือการคบหาสมาคม</li>
+                    <li>ผู้เล่นทดลองกลวิธีใหม่และผลัดกันโยน</li>
+                    <li>นับคะแนนแต่ไม่ใช่สิ่งสำคัญที่สุด</li>
                 </ul>
-                
-                <h4>Tävlingsspel:</h4>
+
+                <h4>การเล่นแข่งขัน:</h4>
                 <ul>
-                    <li>Finns en domare som tillkallas vid oregelbundenheter</li>
-                    <li>Domarens beslut kan inte överklagas</li>
-                    <li>Hålla tempot och följa en minuts regeln för kast</li>
-                    <li>Tänka strategiskt – varje poäng kan avgöra matchen</li>
-                    <li>Förbereda kastet, diskutera med lagkamrater, läsa terrängen</li>
+                    <li>มีกรรมการที่ถูกเรียกเมื่อเกิดความผิดปกติ</li>
+                    <li>การตัดสินของกรรมการไม่สามารถอุทธรณ์ได้</li>
+                    <li>รักษาจังหวะและปฏิบัติตามกฎหนึ่งนาทีสำหรับการโยน</li>
+                    <li>คิดอย่างมีกลยุทธ์ – ทุกคะแนนอาจตัดสินเกม</li>
+                    <li>เตรียมการโยน หารือกับเพื่อนร่วมทีม อ่านภูมิประเทศ</li>
                 </ul>
             </div>
-            
-            <h3>Hur man hittar klubbar och turneringar</h3>
-            <p>Att gå med i en klubb är det bästa sättet att utveckla spelet. De flesta länder har ett nationellt förbund med listor över klubbar.</p>
-            
+
+            <h3>วิธีการหาสโมสรและทัวร์นาเมนต์</h3>
+            <p>การเข้าร่วมสโมสรเป็นวิธีที่ดีที่สุดในการพัฒนาเกมของคุณ ประเทศส่วนใหญ่มีสหพันธ์แห่งชาติพร้อมรายชื่อสโมสร</p>
+
             <div class="info-box">
-                <h4>I Sverige:</h4>
-                <p>Svenska Bouleförbundet ansvarar för licenser och tävlingar. Deras webbplats ger kontaktuppgifter till lokala föreningar.</p>
-                
-                <h4>Internationellt:</h4>
+                <h4>ในประเทศไทย:</h4>
+                <p>สมาคมเปตองแห่งประเทศไทยรับผิดชอบใบอนุญาตและการแข่งขัน เว็บไซต์ของพวกเขาให้ข้อมูลติดต่อสำหรับชมรมท้องถิ่น</p>
+
+                <h4>ระหว่างประเทศ:</h4>
                 <ul>
-                    <li>FIPJP:s kalender för internationella tävlingar</li>
-                    <li>European Pétanque Confederations EuroCup</li>
-                    <li>Masters de Pétanque - en "tour de France" för världseliten</li>
-                    <li>Facebookgrupper och Meetup-sidor för informella spel</li>
+                    <li>ปฏิทิน FIPJP สำหรับการแข่งขันระหว่างประเทศ</li>
+                    <li>EuroCup ของสมาพันธ์เปตองยุโรป</li>
+                    <li>Masters de Pétanque - "Tour de France" สำหรับนักเล่นระดับโลก</li>
+                    <li>กลุ่ม Facebook และหน้า Meetup สำหรับเกมไม่เป็นทางการ</li>
                 </ul>
             </div>
-            
-            <h2>บทที่ 10 – Pétanque runt om i världen</h2>
-            
-            <h3>Kulturella skillnader i spelet</h3>
-            <p>Pétanque föddes i Provence men spreds snabbt tack vare de moderna metallkloten (boules). Idag finns starka nationella förbund i Tyskland, Spanien och England, och sporten är särskilt populär i länder med franskt kolonialt arv såsom Laos, Thailand, Vietnam, Kambodja och Puducherry i Indien.</p>
-            
-            <div class="highlight-box">
-                <h4>Några siffror:</h4>
-                <ul>
-                    <li><strong>Frankrike:</strong> Över 300 000 licensierade medlemmar i FFPJP</li>
-                    <li><strong>USA:</strong> Omkring 30 000 spelare; 2 141 medlemmar i 52 klubbar (2015)</li>
-                    <li><strong>FIPJP:</strong> Nästan 800 000 medlemmar år 2022</li>
-                    <li><strong>Thailand:</strong> Cirka 80 000 tävlingsspelare</li>
-                </ul>
-            </div>
-            
-            <h3>Thailand – ett fascinerande exempel</h3>
-            <p>Prinsessan Srinagarindra introducerade pétanque i Thailand på 1970-talet och uppmuntrade skolor, polis, armé och civiltjänst att spela. Idag är pétanque obligatoriskt i thailändsk militär träning, och landet tillhör världseliten tillsammans med Vietnam och Laos.</p>
-            
-            <p>Bouletillverkaren FBT i Bangkok är en av få fabriker som producerar FIPJP-godkända klot utanför Frankrike, vilket visar hur djupt sporten har rotat sig.</p>
-            
-            <h3>Stora turneringar</h3>
-            <table>
-                <tr>
-                    <th>Turnering</th>
-                    <th>Beskrivning</th>
-                </tr>
-                <tr>
-                    <td><strong>Mondial la Marseillaise à Pétanque</strong></td>
-                    <td>Den största och mest prestigefyllda turneringen. Äger rum varje juli i Marseille med runt 15 000 deltagare och 150 000 åskådare.</td>
-                </tr>
-                <tr>
-                    <td><strong>FIPJP:s världsmästerskap</strong></td>
-                    <td>Världsmästerskapen i tripplar för herrar startade 1959. Idag omfattar de individuellt spel, dubbel, trippel och precision shooting.</td>
-                </tr>
-                <tr>
-                    <td><strong>Masters de Pétanque</strong></td>
-                    <td>En serie turneringar som en "Tour de France" med åtta etapper i olika franska städer. Spelats sedan 1999.</td>
-                </tr>
-                <tr>
-                    <td><strong>EuroCup</strong></td>
-                    <td>Lagturnering där nationella mästarklubbar tävlar mot varandra.</td>
-                </tr>
-                <tr>
-                    <td><strong>Pétanque Amelia Island Open</strong></td>
-                    <td>USA:s största turnering, hålls varje november på Amelia Island i Florida.</td>
-                </tr>
-            </table>
-            
-            <h3>Legendariska spelare</h3>
-            <table>
-                <tr>
-                    <th>Spelare</th>
-                    <th>Land</th>
-                    <th>Meriter</th>
-                </tr>
-                <tr>
-                    <td><strong>Philippe Quintais</strong></td>
-                    <td>Frankrike</td>
-                    <td>15 världstitlar - kallas ofta världens bästa spelare. Känd för otrolig precision och jämnhet.</td>
-                </tr>
-                <tr>
-                    <td><strong>Marco Foyot</strong></td>
-                    <td>Frankrike</td>
-                    <td>6 världsmästerskapstitlar. Berömd för taktisk intelligens och förmåga att läsa terrängen.</td>
-                </tr>
-                <tr>
-                    <td><strong>Dylan Rocher</strong></td>
-                    <td>Frankrike</td>
-                    <td>5 världsmästartitlar. Ung fransk stjärna som imponerar med kraft och mångsidighet.</td>
-                </tr>
-                <tr>
-                    <td><strong>Thanakorn Sangkaew</strong></td>
-                    <td>Thailand</td>
-                    <td>Världsmästare 2019 och guld i asiatiska mästerskap 2018 och 2019.</td>
-                </tr>
-                <tr>
-                    <td><strong>Nantawan Fueangsanit</strong></td>
-                    <td>Thailand</td>
-                    <td>Världsmästarinna 2017 och flerfaldig asiatisk mästare.</td>
-                </tr>
-                <tr>
-                    <td><strong>Angélique Colombet</strong></td>
-                    <td>Frankrike</td>
-                    <td>Femfaldig världsmästarinna som excellerar i precisionsläggning.</td>
-                </tr>
-            </table>
-            
-            <p>Dessa spelare representerar olika stilar och bakgrunder. Quintais och Foyot symboliserar det franska arvet, medan Sangkaew och Fueangsanit visar hur sydostasiatiska länder har blivit maktfaktorer på senare år.</p>
-            
-            <h3>Informella traditioner och etikett</h3>
-            <div class="info-box">
-                <h4>"Faire fanny"</h4>
-                <p>Att förlora med 0–13 kallas "faire fanny". I vissa klubbar är det tradition att laget som gör fanny får bjuda motståndarna på en drink eller, enligt gammal fransk sed, kyssa en trästatyett föreställande Fanny. Det är förstås en lekfull ritual som visar hur socialt spelet är.</p>
-            </div>
-            
-            <h4>God etikett innebär:</h4>
-            <ul>
-                <li>Inte gå framför spelaren som kastar</li>
-                <li>Stå still och tyst när någon koncentrerar sig</li>
-                <li>Vänta med att gratulera eller ge kommentarer tills klotet landat</li>
-                <li>Använda godkända instrument vid mätning (inte fötterna)</li>
-                <li>Visa respekt mot motståndare, publik och domare</li>
-            </ul>
-            
-            <p>Genom att kombinera officiella regelkunskaper med god etikett blir du en uppskattad spelare var du än kastar dina klot.</p>
-            
+
             <div class="navigation">
-                <a href="del2-kapitel5.html" class="nav-btn secondary">← ส่วนที่ 2</a>
+                <a href="del2-kapitel8.html" class="nav-btn secondary">← บทที่ 8</a>
                 <a href="del3-kapitel10.html" class="nav-btn">ถัดไป: บทที่ 10 →</a>
             </div>
         </div>

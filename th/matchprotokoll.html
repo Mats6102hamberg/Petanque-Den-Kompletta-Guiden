@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matchprotokoll – Pétanque</title>
+    <title>ใบบันทึกการแข่งขัน – เปตอง</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
@@ -12,24 +12,24 @@
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         .protocol-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-        
+
         .protocol-header h1 {
             font-size: 28px;
             color: #8B4513;
         }
-        
+
         .button-group {
             display: flex;
             gap: 10px;
         }
-        
+
         .btn {
             padding: 10px 20px;
             border: 1px solid #ddd;
@@ -39,18 +39,18 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .btn:hover {
             background: #f5f5f5;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        
+
         .save-hint {
             font-size: 14px;
             color: #666;
             margin-bottom: 20px;
         }
-        
+
         .section {
             background: white;
             border: 1px solid #ddd;
@@ -59,7 +59,7 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
+
         .section h2 {
             font-size: 20px;
             color: #8B4513;
@@ -67,31 +67,31 @@
             border-bottom: 2px solid #D2691E;
             padding-bottom: 8px;
         }
-        
+
         .grid-2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
         }
-        
+
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
         }
-        
+
         .field {
             display: flex;
             flex-direction: column;
             gap: 5px;
         }
-        
+
         .field label {
             font-size: 14px;
             font-weight: 600;
             color: #333;
         }
-        
+
         .field input,
         .field select,
         .field textarea {
@@ -105,7 +105,7 @@
             background: #fff;
             font-weight: 500;
         }
-        
+
         .field input:focus,
         .field select:focus,
         .field textarea:focus {
@@ -113,39 +113,39 @@
             border-color: #8B4513;
             background: #fff;
         }
-        
+
         .field input::placeholder {
             color: #999;
             font-weight: 400;
         }
-        
+
         .field textarea {
             min-height: 100px;
             resize: vertical;
         }
-        
+
         .rounds-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
         }
-        
+
         .rounds-table thead {
             background: #f9f9f9;
         }
-        
+
         .rounds-table th {
             padding: 12px;
             text-align: left;
             font-weight: 700;
             border-bottom: 2px solid #ddd;
         }
-        
+
         .rounds-table td {
             padding: 10px;
             border-bottom: 1px solid #eee;
         }
-        
+
         .rounds-table input {
             width: 60px;
             padding: 8px;
@@ -157,287 +157,315 @@
             font-weight: 600;
             font-size: 14px;
         }
-        
+
         .rounds-table input.note-input {
             width: 100%;
         }
-        
+
         .rounds-table tfoot {
             background: #f9f9f9;
             font-weight: 700;
         }
-        
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
-        
+
         .stat-box {
             background: #f9f9f9;
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 10px;
         }
-        
+
         .stat-box .label {
             font-size: 12px;
             color: #666;
             margin-bottom: 4px;
         }
-        
+
         .stat-box .value {
             font-size: 18px;
             font-weight: 700;
             color: #8B4513;
         }
-        
+
         .signature-line {
             border-top: 2px dotted #333;
             padding-top: 10px;
             margin-top: 40px;
             text-align: center;
         }
-        
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .language-switcher a {
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            opacity: 0.6;
+        }
+
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        .language-switcher a.active {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
         @media print {
             html, body {
                 background: white !important;
             }
-            
+
             .protocol-header .button-group,
             .save-hint,
             .language-switcher {
                 display: none !important;
             }
-            
+
             .section {
                 box-shadow: none !important;
                 page-break-inside: avoid;
             }
-            
+
             .match-protocol {
                 padding: 0;
             }
-            
+
             .btn {
                 display: none !important;
             }
         }
-        
+
         @media (max-width: 768px) {
             .match-protocol {
                 padding: 10px;
             }
-            
+
             .protocol-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
             }
-            
+
             .protocol-header h1 {
                 font-size: 22px;
             }
-            
+
             .button-group {
                 width: 100%;
                 flex-direction: column;
             }
-            
+
             .btn {
                 width: 100%;
             }
-            
+
             .grid-2 {
                 grid-template-columns: 1fr;
             }
-            
+
             .grid-3 {
                 grid-template-columns: 1fr;
             }
-            
+
             .stats-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .section {
                 padding: 15px;
             }
-            
+
             .section h2 {
                 font-size: 18px;
             }
-            
+
             table {
                 font-size: 12px;
             }
-            
+
             table th,
             table td {
                 padding: 6px 4px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .match-protocol {
                 padding: 5px;
             }
-            
+
             .protocol-header h1 {
                 font-size: 18px;
             }
-            
+
             .section {
                 padding: 10px;
                 margin-bottom: 15px;
             }
-            
+
             .section h2 {
                 font-size: 16px;
             }
-            
+
             .field label {
                 font-size: 12px;
             }
-            
+
             .field input,
             .field select,
             .field textarea {
                 padding: 8px;
                 font-size: 14px;
             }
-            
+
             table {
                 font-size: 11px;
             }
-            
+
             table th,
             table td {
                 padding: 4px 2px;
             }
-            
+
             .btn {
                 padding: 8px 15px;
                 font-size: 14px;
             }
         }
-    </style>    
+    </style>
 </head>
 <body>
     <a href="saraban.html" class="toc-button">สารบัญ</a>
-    <!-- Language switcher temporarily hidden -->
-    <!--
     <div class="language-switcher">
-        <a href="matchprotokoll.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/match-sheet.html" title="English">🇬🇧</a>
-        <a href="fr/feuille-match.html" title="Français">🇫🇷</a>
+        <a href="../matchprotokoll.html" title="Svenska">🇸🇪</a>
+        <a href="../en/match-protocol.html" title="English">🇬🇧</a>
+        <a href="../fr/protocole-match.html" title="Français">🇫🇷</a>
+        <a href="matchprotokoll.html" class="active" title="ไทย">🇹🇭</a>
     </div>
-    -->
-    
+
     <div class="match-protocol">
         <div class="protocol-header">
-            <h1>📋 Matchprotokoll – Pétanque</h1>
+            <h1>📋 ใบบันทึกการแข่งขัน – เปตอง</h1>
             <div class="button-group">
-                <button class="btn" onclick="window.print()">🖨️ Skriv ut</button>
-                <button class="btn" onclick="resetProtocol()">🔄 Återställ</button>
+                <button class="btn" onclick="window.print()">🖨️ พิมพ์</button>
+                <button class="btn" onclick="resetProtocol()">🔄 รีเซ็ต</button>
             </div>
         </div>
-        
-        <p class="save-hint">Formuläret sparas automatiskt på denna enhet.</p>
-        
+
+        <p class="save-hint">แบบฟอร์มจะบันทึกอัตโนมัติบนอุปกรณ์นี้</p>
+
         <!-- Match Info -->
         <div class="section">
-            <h2>Matchuppgifter</h2>
+            <h2>ข้อมูลการแข่งขัน</h2>
             <div class="grid-2">
                 <div class="field">
-                    <label>Datum</label>
+                    <label>วันที่</label>
                     <input type="date" id="date" onchange="saveData()">
                 </div>
                 <div class="field">
-                    <label>Plats</label>
-                    <input type="text" id="place" placeholder="T.ex. Klubbens bana" onchange="saveData()">
+                    <label>สถานที่</label>
+                    <input type="text" id="place" placeholder="เช่น สนามสโมสร" onchange="saveData()">
                 </div>
                 <div class="field">
-                    <label>Underlag</label>
+                    <label>พื้นผิว</label>
                     <select id="surface" onchange="saveData()">
-                        <option>Sand</option>
-                        <option>Grus</option>
-                        <option>Hårt</option>
-                        <option>Annat</option>
+                        <option>ทราย</option>
+                        <option>กรวด</option>
+                        <option>แข็ง</option>
+                        <option>อื่นๆ</option>
                     </select>
                 </div>
                 <div class="grid-3">
                     <div class="field">
-                        <label>Väder</label>
-                        <input type="text" id="weather" placeholder="Soligt" onchange="saveData()">
+                        <label>สภาพอากาศ</label>
+                        <input type="text" id="weather" placeholder="แดด" onchange="saveData()">
                     </div>
                     <div class="field">
                         <label>°C</label>
-                        <input type="number" id="temp" placeholder="20" onchange="saveData()">
+                        <input type="number" id="temp" placeholder="30" onchange="saveData()">
                     </div>
                     <div class="field">
-                        <label>Vind (m/s)</label>
+                        <label>ลม (ม./วินาที)</label>
                         <input type="number" id="wind" placeholder="3" onchange="saveData()">
                     </div>
                 </div>
                 <div class="field">
-                    <label>Typ av match</label>
+                    <label>ประเภทการแข่งขัน</label>
                     <select id="matchType" onchange="saveData()">
-                        <option>Träning</option>
-                        <option>Tävling</option>
-                        <option>Cup</option>
-                        <option>Serie</option>
-                        <option>Annat</option>
+                        <option>ฝึกซ้อม</option>
+                        <option>การแข่งขัน</option>
+                        <option>คัพ</option>
+                        <option>ลีก</option>
+                        <option>อื่นๆ</option>
                     </select>
                 </div>
             </div>
         </div>
-        
+
         <!-- Teams -->
         <div class="grid-2">
             <div class="section">
-                <h2>Lag 1</h2>
+                <h2>ทีม 1</h2>
                 <div class="field">
-                    <label>Namn</label>
-                    <input type="text" id="t1Name" placeholder="Lagnamn" onchange="saveData()">
+                    <label>ชื่อ</label>
+                    <input type="text" id="t1Name" placeholder="ชื่อทีม" onchange="saveData()">
                 </div>
                 <div class="field">
-                    <label>Spelare</label>
-                    <input type="text" id="t1Players" placeholder="Spelare 1, Spelare 2, Spelare 3" onchange="saveData()">
+                    <label>ผู้เล่น</label>
+                    <input type="text" id="t1Players" placeholder="ผู้เล่น 1, ผู้เล่น 2, ผู้เล่น 3" onchange="saveData()">
                 </div>
                 <div class="field">
-                    <label>Klubb</label>
-                    <input type="text" id="t1Club" placeholder="Klubbnamn" onchange="saveData()">
+                    <label>สโมสร</label>
+                    <input type="text" id="t1Club" placeholder="ชื่อสโมสร" onchange="saveData()">
                 </div>
             </div>
-            
+
             <div class="section">
-                <h2>Lag 2</h2>
+                <h2>ทีม 2</h2>
                 <div class="field">
-                    <label>Namn</label>
-                    <input type="text" id="t2Name" placeholder="Lagnamn" onchange="saveData()">
+                    <label>ชื่อ</label>
+                    <input type="text" id="t2Name" placeholder="ชื่อทีม" onchange="saveData()">
                 </div>
                 <div class="field">
-                    <label>Spelare</label>
-                    <input type="text" id="t2Players" placeholder="Spelare 1, Spelare 2, Spelare 3" onchange="saveData()">
+                    <label>ผู้เล่น</label>
+                    <input type="text" id="t2Players" placeholder="ผู้เล่น 1, ผู้เล่น 2, ผู้เล่น 3" onchange="saveData()">
                 </div>
                 <div class="field">
-                    <label>Klubb</label>
-                    <input type="text" id="t2Club" placeholder="Klubbnamn" onchange="saveData()">
+                    <label>สโมสร</label>
+                    <input type="text" id="t2Club" placeholder="ชื่อสโมสร" onchange="saveData()">
                 </div>
             </div>
         </div>
-        
+
         <!-- Rounds Table -->
         <div class="section">
-            <h2>Omgångar</h2>
+            <h2>รอบ</h2>
             <table class="rounds-table">
                 <thead>
                     <tr>
-                        <th>Omgång</th>
-                        <th>Lag 1 Poäng</th>
-                        <th>Lag 2 Poäng</th>
-                        <th>Notering</th>
+                        <th>รอบ</th>
+                        <th>คะแนนทีม 1</th>
+                        <th>คะแนนทีม 2</th>
+                        <th>หมายเหตุ</th>
                     </tr>
                 </thead>
                 <tbody id="roundsBody">
@@ -445,7 +473,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td>Totalt</td>
+                        <td>รวม</td>
                         <td id="total1" style="text-align: center;">0</td>
                         <td id="total2" style="text-align: center;">0</td>
                         <td></td>
@@ -453,116 +481,116 @@
                 </tfoot>
             </table>
         </div>
-        
+
         <!-- Summary & Analysis -->
         <div class="grid-2">
             <div class="section">
-                <h2>Sammanfattning</h2>
+                <h2>สรุป</h2>
                 <div class="stats-grid">
                     <div class="stat-box">
-                        <div class="label">Totalt – Lag 1</div>
+                        <div class="label">รวม – ทีม 1</div>
                         <div class="value" id="sumTotal1">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Totalt – Lag 2</div>
+                        <div class="label">รวม – ทีม 2</div>
                         <div class="value" id="sumTotal2">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Vinnande lag</div>
+                        <div class="label">ทีมชนะ</div>
                         <div class="value" id="winner">-</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Antal spelade omgångar</div>
+                        <div class="label">จำนวนรอบที่เล่น</div>
                         <div class="value" id="roundsPlayed">0</div>
                     </div>
                 </div>
-                
+
                 <div class="field" style="margin-top: 15px;">
-                    <label>Taktisk anteckning före match</label>
-                    <textarea id="preNote" placeholder="T.ex. 'Fokusera på långa kast, motståndaren svag på >8m'" onchange="saveData()"></textarea>
+                    <label>บันทึกกลยุทธ์ก่อนแข่ง</label>
+                    <textarea id="preNote" placeholder="เช่น 'เน้นโยนไกล คู่แข่งอ่อนที่ระยะ >8 ม.'" onchange="saveData()"></textarea>
                 </div>
-                
+
                 <div class="field">
-                    <label>Reflektion efter match</label>
-                    <textarea id="postNote" placeholder="T.ex. 'Bra skott i slutet, behöver öva mer på donnée-precision'" onchange="saveData()"></textarea>
+                    <label>สะท้อนหลังแข่ง</label>
+                    <textarea id="postNote" placeholder="เช่น 'ยิงดีตอนท้าย ต้องฝึกความแม่นยำดอนเนมากขึ้น'" onchange="saveData()"></textarea>
                 </div>
             </div>
-            
+
             <div class="section">
-                <h2>Automatisk analys</h2>
+                <h2>การวิเคราะห์อัตโนมัติ</h2>
                 <div class="stats-grid">
                     <div class="stat-box">
-                        <div class="label">Vunna omgångar – Lag 1</div>
+                        <div class="label">รอบที่ชนะ – ทีม 1</div>
                         <div class="value" id="won1">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Vunna omgångar – Lag 2</div>
+                        <div class="label">รอบที่ชนะ – ทีม 2</div>
                         <div class="value" id="won2">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Snittpoäng/omgång – Lag 1</div>
+                        <div class="label">คะแนนเฉลี่ย/รอบ – ทีม 1</div>
                         <div class="value" id="avg1">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Snittpoäng/omgång – Lag 2</div>
+                        <div class="label">คะแนนเฉลี่ย/รอบ – ทีม 2</div>
                         <div class="value" id="avg2">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Shutouts (0-poäng) – Lag 1</div>
+                        <div class="label">ชัตเอาต์ (0 คะแนน) – ทีม 1</div>
                         <div class="value" id="shut1">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Shutouts (0-poäng) – Lag 2</div>
+                        <div class="label">ชัตเอาต์ (0 คะแนน) – ทีม 2</div>
                         <div class="value" id="shut2">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Stora omgångar (≥3p) – Lag 1</div>
+                        <div class="label">รอบใหญ่ (≥3 คะแนน) – ทีม 1</div>
                         <div class="value" id="big1">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Stora omgångar (≥3p) – Lag 2</div>
+                        <div class="label">รอบใหญ่ (≥3 คะแนน) – ทีม 2</div>
                         <div class="value" id="big2">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Längsta segersvit – Lag 1</div>
+                        <div class="label">ชนะติดต่อกันนานสุด – ทีม 1</div>
                         <div class="value" id="streak1">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Längsta segersvit – Lag 2</div>
+                        <div class="label">ชนะติดต่อกันนานสุด – ทีม 2</div>
                         <div class="value" id="streak2">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Poängdifferens</div>
+                        <div class="label">ผลต่างคะแนน</div>
                         <div class="value" id="diff">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="label">Clutch-omgångar</div>
-                        <div class="value" id="clutch">Nej</div>
+                        <div class="label">รอบชี้ขาด</div>
+                        <div class="value" id="clutch">ไม่</div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Signatures -->
         <div class="section">
-            <h2>Signaturer</h2>
+            <h2>ลายเซ็น</h2>
             <div class="grid-2">
-                <div class="signature-line">Lag 1</div>
-                <div class="signature-line">Lag 2</div>
+                <div class="signature-line">ทีม 1</div>
+                <div class="signature-line">ทีม 2</div>
             </div>
         </div>
-        
+
         <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f9f9f9; border-radius: 12px;">
             <p style="font-size: 14px; color: #666;">
-                <strong>💡 Tips:</strong> Använd Ctrl/Cmd+P för att skriva ut eller spara som PDF. 
-                Formuläret sparas automatiskt i din webbläsare.
+                <strong>💡 เคล็ดลับ:</strong> ใช้ Ctrl/Cmd+P เพื่อพิมพ์หรือบันทึกเป็น PDF
+                แบบฟอร์มจะบันทึกอัตโนมัติในเบราว์เซอร์ของคุณ
             </p>
         </div>
     </div>
-    
+
     <script>
         const ROUNDS = 13;
-        
+
         // Initialize rounds table
         function initRounds() {
             const tbody = document.getElementById('roundsBody');
@@ -572,12 +600,12 @@
                     <td style="font-weight: 600;">${i + 1}</td>
                     <td><input type="number" min="0" class="t1-score" data-round="${i}" placeholder="0" onchange="calculateStats()"></td>
                     <td><input type="number" min="0" class="t2-score" data-round="${i}" placeholder="0" onchange="calculateStats()"></td>
-                    <td><input type="text" class="note-input" data-round="${i}" placeholder="Ex: block, skott, miss..." onchange="saveData()"></td>
+                    <td><input type="text" class="note-input" data-round="${i}" placeholder="เช่น: บล็อค, ยิง, พลาด..." onchange="saveData()"></td>
                 `;
                 tbody.appendChild(tr);
             }
         }
-        
+
         // Save data to localStorage
         function saveData() {
             const data = {
@@ -598,7 +626,7 @@
                 postNote: document.getElementById('postNote').value,
                 rounds: []
             };
-            
+
             document.querySelectorAll('.t1-score').forEach((input, i) => {
                 const t2Input = document.querySelectorAll('.t2-score')[i];
                 const noteInput = document.querySelectorAll('.note-input')[i];
@@ -608,25 +636,25 @@
                     note: noteInput.value
                 });
             });
-            
-            localStorage.setItem('matchProtocol_sv', JSON.stringify(data));
+
+            localStorage.setItem('matchProtocol_th', JSON.stringify(data));
             calculateStats();
         }
-        
+
         // Load data from localStorage
         function loadData() {
-            const saved = localStorage.getItem('matchProtocol_sv');
+            const saved = localStorage.getItem('matchProtocol_th');
             if (!saved) return;
-            
+
             try {
                 const data = JSON.parse(saved);
                 document.getElementById('date').value = data.date || '';
                 document.getElementById('place').value = data.place || '';
-                document.getElementById('surface').value = data.surface || 'Sand';
+                document.getElementById('surface').value = data.surface || 'ทราย';
                 document.getElementById('weather').value = data.weather || '';
                 document.getElementById('temp').value = data.temp || '';
                 document.getElementById('wind').value = data.wind || '';
-                document.getElementById('matchType').value = data.matchType || 'Träning';
+                document.getElementById('matchType').value = data.matchType || 'ฝึกซ้อม';
                 document.getElementById('t1Name').value = data.t1Name || '';
                 document.getElementById('t1Players').value = data.t1Players || '';
                 document.getElementById('t1Club').value = data.t1Club || '';
@@ -635,7 +663,7 @@
                 document.getElementById('t2Club').value = data.t2Club || '';
                 document.getElementById('preNote').value = data.preNote || '';
                 document.getElementById('postNote').value = data.postNote || '';
-                
+
                 if (data.rounds) {
                     data.rounds.forEach((round, i) => {
                         const t1Inputs = document.querySelectorAll('.t1-score');
@@ -646,13 +674,13 @@
                         if (noteInputs[i]) noteInputs[i].value = round.note || '';
                     });
                 }
-                
+
                 calculateStats();
             } catch (e) {
                 console.error('Error loading data:', e);
             }
         }
-        
+
         // Calculate statistics
         function calculateStats() {
             let total1 = 0, total2 = 0;
@@ -663,28 +691,28 @@
             let maxStreak1 = 0, maxStreak2 = 0;
             let roundsPlayed = 0;
             let clutch = false;
-            
+
             const t1Scores = document.querySelectorAll('.t1-score');
             const t2Scores = document.querySelectorAll('.t2-score');
-            
+
             let cum1 = 0, cum2 = 0;
             let lastPlayedIdx = -1;
-            
+
             t1Scores.forEach((input, i) => {
                 const s1 = parseInt(input.value) || 0;
                 const s2 = parseInt(t2Scores[i].value) || 0;
-                
+
                 if (s1 > 0 || s2 > 0) {
                     lastPlayedIdx = i;
                     roundsPlayed++;
-                    
+
                     const beforeDiff = cum1 - cum2;
-                    
+
                     total1 += s1;
                     total2 += s2;
                     cum1 += s1;
                     cum2 += s2;
-                    
+
                     if (s1 > s2) {
                         won1++;
                         streak1++;
@@ -696,12 +724,12 @@
                         streak1 = 0;
                         maxStreak2 = Math.max(maxStreak2, streak2);
                     }
-                    
+
                     if (s1 > 0 && s2 === 0) shut1++;
                     if (s2 > 0 && s1 === 0) shut2++;
                     if (s1 >= 3) big1++;
                     if (s2 >= 3) big2++;
-                    
+
                     // Check clutch
                     if (i === lastPlayedIdx) {
                         const afterDiff = cum1 - cum2;
@@ -711,15 +739,15 @@
                     }
                 }
             });
-            
+
             const avg1 = roundsPlayed ? (total1 / roundsPlayed).toFixed(2) : '0.00';
             const avg2 = roundsPlayed ? (total2 / roundsPlayed).toFixed(2) : '0.00';
             const diff = total1 - total2;
-            
-            const t1Name = document.getElementById('t1Name').value || 'Lag 1';
-            const t2Name = document.getElementById('t2Name').value || 'Lag 2';
+
+            const t1Name = document.getElementById('t1Name').value || 'ทีม 1';
+            const t2Name = document.getElementById('t2Name').value || 'ทีม 2';
             const winner = total1 === total2 ? '-' : total1 > total2 ? t1Name : t2Name;
-            
+
             // Update UI
             document.getElementById('total1').textContent = total1;
             document.getElementById('total2').textContent = total2;
@@ -738,17 +766,17 @@
             document.getElementById('streak1').textContent = maxStreak1;
             document.getElementById('streak2').textContent = maxStreak2;
             document.getElementById('diff').textContent = diff > 0 ? '+' + diff : diff;
-            document.getElementById('clutch').textContent = clutch ? 'Ja' : 'Nej';
-            
+            document.getElementById('clutch').textContent = clutch ? 'ใช่' : 'ไม่';
+
             saveData();
         }
-        
+
         // Reset protocol
         function resetProtocol() {
-            if (!confirm('Återställ alla fält? Detta kan inte ångras.')) return;
-            
-            localStorage.removeItem('matchProtocol_sv');
-            
+            if (!confirm('รีเซ็ตทุกช่อง? การดำเนินการนี้ไม่สามารถยกเลิกได้')) return;
+
+            localStorage.removeItem('matchProtocol_th');
+
             document.querySelectorAll('input, select, textarea').forEach(el => {
                 if (el.type === 'number' || el.type === 'text' || el.type === 'date') {
                     el.value = '';
@@ -758,10 +786,10 @@
                     el.value = '';
                 }
             });
-            
+
             calculateStats();
         }
-        
+
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
             initRounds();

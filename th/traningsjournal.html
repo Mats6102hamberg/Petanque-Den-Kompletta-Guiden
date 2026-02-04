@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pétanque Träningsjournal</title>
+    <title>สมุดบันทึกการฝึกซ้อมเปตอง</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Lato', sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -20,7 +20,7 @@
             font-size: 11pt;
             line-height: 1.4;
         }
-        
+
         .journal {
             max-width: 210mm;
             margin: 0 auto;
@@ -29,27 +29,27 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             border-radius: 5px;
         }
-        
+
         .header {
             text-align: center;
             border-bottom: 3px solid #8B4513;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        
+
         .header h1 {
             font-size: 24pt;
             color: #8B4513;
             font-weight: 900;
             margin-bottom: 5px;
         }
-        
+
         .header p {
             font-size: 10pt;
             color: #666;
             font-style: italic;
         }
-        
+
         .info-box {
             background: #e8f4f8;
             border-left: 4px solid #4a90a4;
@@ -57,21 +57,21 @@
             margin-bottom: 20px;
             font-size: 10pt;
         }
-        
+
         .info-box h3 {
             color: #8B4513;
             font-size: 12pt;
             margin-bottom: 8px;
         }
-        
+
         .info-box ul {
             margin-left: 20px;
         }
-        
+
         .info-box li {
             margin-bottom: 4px;
         }
-        
+
         .session {
             border: 2px solid #D2691E;
             padding: 15px;
@@ -79,7 +79,7 @@
             border-radius: 5px;
             page-break-inside: avoid;
         }
-        
+
         .session-header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -88,11 +88,11 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #ddd;
         }
-        
+
         .field {
             margin-bottom: 10px;
         }
-        
+
         .field label {
             display: block;
             font-weight: 700;
@@ -100,7 +100,7 @@
             font-size: 10pt;
             margin-bottom: 3px;
         }
-        
+
         .field input,
         .field select,
         .field textarea {
@@ -111,33 +111,33 @@
             font-family: 'Lato', sans-serif;
             font-size: 10pt;
         }
-        
+
         .field textarea {
             min-height: 60px;
             resize: vertical;
         }
-        
+
         .metrics {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             margin: 15px 0;
         }
-        
+
         .metric-box {
             background: #f9f9f9;
             padding: 10px;
             border-left: 3px solid #D2691E;
             border-radius: 3px;
         }
-        
+
         .metric-box label {
             display: block;
             font-size: 9pt;
             color: #666;
             margin-bottom: 5px;
         }
-        
+
         .metric-box input {
             width: 100%;
             padding: 5px;
@@ -147,7 +147,7 @@
             font-weight: 700;
             text-align: center;
         }
-        
+
         .goals-section {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
@@ -155,45 +155,45 @@
             margin: 15px 0;
             border-radius: 3px;
         }
-        
+
         .goals-section h4 {
             color: #8B4513;
             font-size: 11pt;
             margin-bottom: 8px;
         }
-        
+
         .checkbox-group {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 8px;
         }
-        
+
         .checkbox-item {
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        
+
         .checkbox-item input[type="checkbox"] {
             width: 18px;
             height: 18px;
         }
-        
+
         .checkbox-item label {
             font-size: 10pt;
             margin: 0;
         }
-        
+
         .notes {
             margin-top: 15px;
         }
-        
+
         .notes h4 {
             color: #8B4513;
             font-size: 11pt;
             margin-bottom: 8px;
         }
-        
+
         .print-btn {
             position: fixed;
             top: 20px;
@@ -209,360 +209,393 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
         }
-        
+
         .print-btn:hover {
             background: #D2691E;
             transform: translateY(-2px);
         }
-        
+
+        .language-switcher {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .language-switcher a {
+            text-decoration: none;
+            font-size: 24px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .language-switcher a:hover,
+        .language-switcher a.active {
+            opacity: 1;
+        }
+
         @media print {
             body {
                 background: white;
                 padding: 0;
             }
-            
+
             .journal {
                 box-shadow: none;
                 border-radius: 0;
                 max-width: 100%;
                 padding: 10mm;
             }
-            
+
             .print-btn {
                 display: none;
             }
-            
+
+            .language-switcher {
+                display: none;
+            }
+
             .session {
                 page-break-inside: avoid;
             }
-            
+
             @page {
                 size: A4;
                 margin: 15mm;
             }
         }
-    </style>    
+    </style>
 </head>
 <body>
     <a href="saraban.html" class="toc-button">สารบัญ</a>
-    <button class="print-btn" onclick="window.print()">🖨️ Skriv ut</button>
-    
+    <button class="print-btn" onclick="window.print()">🖨️ พิมพ์</button>
+    <div class="language-switcher">
+        <a href="../traningsjournal.html" title="Svenska">🇸🇪</a>
+        <a href="../en/training-journal.html" title="English">🇬🇧</a>
+        <a href="../fr/journal-entrainement.html" title="Français">🇫🇷</a>
+        <a href="traningsjournal.html" class="active" title="ไทย">🇹🇭</a>
+    </div>
+
     <div class="journal">
         <div class="header">
-            <h1>📊 PÉTANQUE TRÄNINGSJOURNAL</h1>
-            <p>Dokumentera din utveckling - Från nybörjare till mästare</p>
+            <h1>📊 สมุดบันทึกการฝึกซ้อมเปตอง</h1>
+            <p>บันทึกการพัฒนาของคุณ - จากมือใหม่สู่นักกีฬาระดับมืออาชีพ</p>
         </div>
-        
+
         <div class="info-box">
-            <h3>📝 Hur du använder träningsjournalen:</h3>
+            <h3>📝 วิธีใช้สมุดบันทึกการฝึกซ้อม:</h3>
             <ul>
-                <li><strong>Fyll i efter varje träningspass</strong> - Dokumentera direkt medan minnet är färskt</li>
-                <li><strong>Var ärlig och specifik</strong> - Skriv både framgångar och utmaningar</li>
-                <li><strong>Sätt konkreta mål</strong> - Vad vill du förbättra nästa gång?</li>
-                <li><strong>Granska regelbundet</strong> - Titta tillbaka varje månad för att se din utveckling</li>
-                <li><strong>Skriv ut eller spara digitalt</strong> - Använd som PDF eller fyll i på papper</li>
+                <li><strong>กรอกหลังจากการฝึกซ้อมทุกครั้ง</strong> - บันทึกทันทีขณะที่ความทรงจำยังสด</li>
+                <li><strong>ซื่อสัตย์และเฉพาะเจาะจง</strong> - เขียนทั้งความสำเร็จและความท้าทาย</li>
+                <li><strong>ตั้งเป้าหมายที่เป็นรูปธรรม</strong> - คุณต้องการปรับปรุงอะไรครั้งหน้า?</li>
+                <li><strong>ทบทวนเป็นประจำ</strong> - ดูย้อนหลังทุกเดือนเพื่อดูการพัฒนาของคุณ</li>
+                <li><strong>พิมพ์หรือบันทึกเป็นดิจิทัล</strong> - ใช้เป็น PDF หรือกรอกลงบนกระดาษ</li>
             </ul>
         </div>
-        
-        <!-- Träningspass 1 -->
+
+        <!-- รอบฝึกซ้อมที่ 1 -->
         <div class="session">
             <div class="session-header">
                 <div class="field">
-                    <label>📅 Datum:</label>
+                    <label>📅 วันที่:</label>
                     <input type="date">
                 </div>
                 <div class="field">
-                    <label>⏱️ Tid (min):</label>
+                    <label>⏱️ เวลา (นาที):</label>
                     <input type="number" placeholder="45">
                 </div>
                 <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
+                    <label>🌤️ สภาพอากาศ/พื้นผิว:</label>
                     <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
+                        <option>แดด - กรวด</option>
+                        <option>เมฆครึ้ม - กรวด</option>
+                        <option>ฝน - กรวด</option>
+                        <option>แดด - แอสฟัลต์</option>
+                        <option>เมฆครึ้ม - แอสฟัลต์</option>
+                        <option>แดด - ทราย</option>
                     </select>
                 </div>
             </div>
-            
+
             <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
+                <h4>🎯 จุดเน้นวันนี้ (เลือกสิ่งที่คุณฝึกซ้อม):</h4>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
                         <input type="checkbox" id="point1">
-                        <label for="point1">Point/Läggning</label>
+                        <label for="point1">ปวงต์/การวาง</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="skott1">
-                        <label for="skott1">Skott/Tireur</label>
+                        <label for="skott1">ยิง/ตีเรอร์</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="donnee1">
-                        <label for="donnee1">Donnée-precision</label>
+                        <label for="donnee1">ความแม่นยำดอนเน</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="backspin1">
-                        <label for="backspin1">Backspin/Kontroll</label>
+                        <label for="backspin1">แบ็คสปิน/ควบคุม</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="match1">
-                        <label for="match1">Matchsimulering</label>
+                        <label for="match1">จำลองการแข่งขัน</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="taktik1">
-                        <label for="taktik1">Taktik/Beslut</label>
+                        <label for="taktik1">กลยุทธ์/การตัดสินใจ</label>
                     </div>
                 </div>
             </div>
-            
+
             <div class="metrics">
                 <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
+                    <label>ปวงต์ถูกเป้า (ภายใน 50 ซม.):</label>
                     <input type="text" placeholder="6/10">
                 </div>
                 <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
+                    <label>ความแม่นยำในการยิง:</label>
                     <input type="text" placeholder="4/8 = 50%">
                 </div>
                 <div class="metric-box">
-                    <label>Antal carreau:</label>
+                    <label>จำนวนการ์โร:</label>
                     <input type="text" placeholder="2">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
+                    <label>ความแม่นยำดอนเน (6 ม.):</label>
                     <input type="text" placeholder="5/10">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
+                    <label>ความแม่นยำดอนเน (8 ม.):</label>
                     <input type="text" placeholder="3/10">
                 </div>
                 <div class="metric-box">
-                    <label>Bästa avstånd:</label>
-                    <input type="text" placeholder="7m">
+                    <label>ระยะทางที่ดีที่สุด:</label>
+                    <input type="text" placeholder="7 ม.">
                 </div>
             </div>
-            
+
             <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
-                <textarea placeholder="T.ex. 'Bra kontroll på backspin, klotet stannade inom 30cm på 7 av 10 kast'"></textarea>
+                <h4>✅ อะไรดีวันนี้?</h4>
+                <textarea placeholder="เช่น 'ควบคุมแบ็คสปินได้ดี, ลูกหยุดภายใน 30 ซม. ใน 7 จาก 10 ครั้ง'"></textarea>
             </div>
-            
+
             <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
-                <textarea placeholder="T.ex. 'Skott på längre avstånd (>8m) - missar ofta åt höger'"></textarea>
+                <h4>⚠️ อะไรที่ต้องปรับปรุง?</h4>
+                <textarea placeholder="เช่น 'การยิงระยะไกล (>8 ม.) - มักพลาดไปทางขวา'"></textarea>
             </div>
-            
+
             <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
-                <textarea placeholder="T.ex. 'Fokusera på handledsteknik vid release. Mål: 7/10 träffar på donnée vid 8m'"></textarea>
+                <h4>🎯 ขั้นตอนถัดไป / เป้าหมายสำหรับการฝึกซ้อมครั้งหน้า:</h4>
+                <textarea placeholder="เช่น 'เน้นเทคนิคข้อมือตอนปล่อยลูก เป้าหมาย: 7/10 ถูกดอนเนที่ 8 ม.'"></textarea>
             </div>
         </div>
-        
-        <!-- Träningspass 2 -->
+
+        <!-- รอบฝึกซ้อมที่ 2 -->
         <div class="session">
             <div class="session-header">
                 <div class="field">
-                    <label>📅 Datum:</label>
+                    <label>📅 วันที่:</label>
                     <input type="date">
                 </div>
                 <div class="field">
-                    <label>⏱️ Tid (min):</label>
+                    <label>⏱️ เวลา (นาที):</label>
                     <input type="number" placeholder="45">
                 </div>
                 <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
+                    <label>🌤️ สภาพอากาศ/พื้นผิว:</label>
                     <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
+                        <option>แดด - กรวด</option>
+                        <option>เมฆครึ้ม - กรวด</option>
+                        <option>ฝน - กรวด</option>
+                        <option>แดด - แอสฟัลต์</option>
+                        <option>เมฆครึ้ม - แอสฟัลต์</option>
+                        <option>แดด - ทราย</option>
                     </select>
                 </div>
             </div>
-            
+
             <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
+                <h4>🎯 จุดเน้นวันนี้ (เลือกสิ่งที่คุณฝึกซ้อม):</h4>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
                         <input type="checkbox" id="point2">
-                        <label for="point2">Point/Läggning</label>
+                        <label for="point2">ปวงต์/การวาง</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="skott2">
-                        <label for="skott2">Skott/Tireur</label>
+                        <label for="skott2">ยิง/ตีเรอร์</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="donnee2">
-                        <label for="donnee2">Donnée-precision</label>
+                        <label for="donnee2">ความแม่นยำดอนเน</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="backspin2">
-                        <label for="backspin2">Backspin/Kontroll</label>
+                        <label for="backspin2">แบ็คสปิน/ควบคุม</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="match2">
-                        <label for="match2">Matchsimulering</label>
+                        <label for="match2">จำลองการแข่งขัน</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="taktik2">
-                        <label for="taktik2">Taktik/Beslut</label>
+                        <label for="taktik2">กลยุทธ์/การตัดสินใจ</label>
                     </div>
                 </div>
             </div>
-            
+
             <div class="metrics">
                 <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
+                    <label>ปวงต์ถูกเป้า (ภายใน 50 ซม.):</label>
                     <input type="text" placeholder="6/10">
                 </div>
                 <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
+                    <label>ความแม่นยำในการยิง:</label>
                     <input type="text" placeholder="4/8 = 50%">
                 </div>
                 <div class="metric-box">
-                    <label>Antal carreau:</label>
+                    <label>จำนวนการ์โร:</label>
                     <input type="text" placeholder="2">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
+                    <label>ความแม่นยำดอนเน (6 ม.):</label>
                     <input type="text" placeholder="5/10">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
+                    <label>ความแม่นยำดอนเน (8 ม.):</label>
                     <input type="text" placeholder="3/10">
                 </div>
                 <div class="metric-box">
-                    <label>Bästa avstånd:</label>
-                    <input type="text" placeholder="7m">
+                    <label>ระยะทางที่ดีที่สุด:</label>
+                    <input type="text" placeholder="7 ม.">
                 </div>
             </div>
-            
+
             <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
+                <h4>✅ อะไรดีวันนี้?</h4>
                 <textarea></textarea>
             </div>
-            
+
             <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
+                <h4>⚠️ อะไรที่ต้องปรับปรุง?</h4>
                 <textarea></textarea>
             </div>
-            
+
             <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
+                <h4>🎯 ขั้นตอนถัดไป / เป้าหมายสำหรับการฝึกซ้อมครั้งหน้า:</h4>
                 <textarea></textarea>
             </div>
         </div>
-        
-        <!-- Träningspass 3 -->
+
+        <!-- รอบฝึกซ้อมที่ 3 -->
         <div class="session">
             <div class="session-header">
                 <div class="field">
-                    <label>📅 Datum:</label>
+                    <label>📅 วันที่:</label>
                     <input type="date">
                 </div>
                 <div class="field">
-                    <label>⏱️ Tid (min):</label>
+                    <label>⏱️ เวลา (นาที):</label>
                     <input type="number" placeholder="45">
                 </div>
                 <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
+                    <label>🌤️ สภาพอากาศ/พื้นผิว:</label>
                     <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
+                        <option>แดด - กรวด</option>
+                        <option>เมฆครึ้ม - กรวด</option>
+                        <option>ฝน - กรวด</option>
+                        <option>แดด - แอสฟัลต์</option>
+                        <option>เมฆครึ้ม - แอสฟัลต์</option>
+                        <option>แดด - ทราย</option>
                     </select>
                 </div>
             </div>
-            
+
             <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
+                <h4>🎯 จุดเน้นวันนี้ (เลือกสิ่งที่คุณฝึกซ้อม):</h4>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
                         <input type="checkbox" id="point3">
-                        <label for="point3">Point/Läggning</label>
+                        <label for="point3">ปวงต์/การวาง</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="skott3">
-                        <label for="skott3">Skott/Tireur</label>
+                        <label for="skott3">ยิง/ตีเรอร์</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="donnee3">
-                        <label for="donnee3">Donnée-precision</label>
+                        <label for="donnee3">ความแม่นยำดอนเน</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="backspin3">
-                        <label for="backspin3">Backspin/Kontroll</label>
+                        <label for="backspin3">แบ็คสปิน/ควบคุม</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="match3">
-                        <label for="match3">Matchsimulering</label>
+                        <label for="match3">จำลองการแข่งขัน</label>
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="taktik3">
-                        <label for="taktik3">Taktik/Beslut</label>
+                        <label for="taktik3">กลยุทธ์/การตัดสินใจ</label>
                     </div>
                 </div>
             </div>
-            
+
             <div class="metrics">
                 <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
+                    <label>ปวงต์ถูกเป้า (ภายใน 50 ซม.):</label>
                     <input type="text" placeholder="6/10">
                 </div>
                 <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
+                    <label>ความแม่นยำในการยิง:</label>
                     <input type="text" placeholder="4/8 = 50%">
                 </div>
                 <div class="metric-box">
-                    <label>Antal carreau:</label>
+                    <label>จำนวนการ์โร:</label>
                     <input type="text" placeholder="2">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
+                    <label>ความแม่นยำดอนเน (6 ม.):</label>
                     <input type="text" placeholder="5/10">
                 </div>
                 <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
+                    <label>ความแม่นยำดอนเน (8 ม.):</label>
                     <input type="text" placeholder="3/10">
                 </div>
                 <div class="metric-box">
-                    <label>Bästa avstånd:</label>
-                    <input type="text" placeholder="7m">
+                    <label>ระยะทางที่ดีที่สุด:</label>
+                    <input type="text" placeholder="7 ม.">
                 </div>
             </div>
-            
+
             <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
+                <h4>✅ อะไรดีวันนี้?</h4>
                 <textarea></textarea>
             </div>
-            
+
             <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
+                <h4>⚠️ อะไรที่ต้องปรับปรุง?</h4>
                 <textarea></textarea>
             </div>
-            
+
             <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
+                <h4>🎯 ขั้นตอนถัดไป / เป้าหมายสำหรับการฝึกซ้อมครั้งหน้า:</h4>
                 <textarea></textarea>
             </div>
         </div>
-        
+
         <div class="info-box" style="margin-top: 20px;">
-            <h3>💡 Tips för framgång:</h3>
+            <h3>💡 เคล็ดลับสู่ความสำเร็จ:</h3>
             <ul>
-                <li>Träna 3-4 gånger per vecka för bäst resultat</li>
-                <li>Variera mellan point-fokus, skott-fokus och matchsimulering</li>
-                <li>Filma dig själv regelbundet och analysera tekniken</li>
-                <li>Sätt realistiska mål och fira små framsteg</li>
-                <li>Efter 4-8 veckor konsekvent träning kommer du se tydlig förbättring!</li>
+                <li>ฝึกซ้อม 3-4 ครั้งต่อสัปดาห์เพื่อผลลัพธ์ที่ดีที่สุด</li>
+                <li>สลับระหว่างการเน้นปวงต์, การเน้นยิง และการจำลองแข่งขัน</li>
+                <li>ถ่ายวิดีโอตัวเองเป็นประจำและวิเคราะห์เทคนิค</li>
+                <li>ตั้งเป้าหมายที่เป็นจริงและฉลองความสำเร็จเล็กๆ</li>
+                <li>หลังจากฝึกซ้อมอย่างสม่ำเสมอ 4-8 สัปดาห์ คุณจะเห็นการปรับปรุงที่ชัดเจน!</li>
             </ul>
         </div>
     </div>

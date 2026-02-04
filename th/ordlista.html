@@ -3,219 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ภาคผนวก C: Ordförklaringar - คู่มือเปตองค์</title>
-    <link rel="stylesheet" href="styles.css">    
+    <title>ภาคผนวก ค: คำศัพท์ - คู่มือเปตอง</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .language-switcher a {
+            text-decoration: none;
+            font-size: 24px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .language-switcher a:hover,
+        .language-switcher a.active {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <a href="saraban.html" class="toc-button">สารบัญ</a>
+    <div class="language-switcher">
+        <a href="../ordlista.html" title="Svenska">🇸🇪</a>
+        <a href="../en/glossary.html" title="English">🇬🇧</a>
+        <a href="../fr/glossaire.html" title="Français">🇫🇷</a>
+        <a href="ordlista.html" class="active" title="ไทย">🇹🇭</a>
+    </div>
     <div class="container">
         <div class="header">
-            <div class="chapter-number">ภาคผนวก C</div>
-            <h1 class="chapter-title">Ordförklaringar</h1>
-            <p class="chapter-subtitle">Franska facktermer och tekniska begrepp</p>
+            <div class="chapter-number">ภาคผนวก ค</div>
+            <h1 class="chapter-title">คำศัพท์และคำอธิบาย</h1>
+            <p class="chapter-subtitle">ศัพท์เทคนิคภาษาฝรั่งเศสและคำศัพท์เฉพาะทาง</p>
         </div>
-        
+
         <div class="content">
-            <p class="quote">En komplett guide till alla termer du behöver känna till för att förstå och prata om pétanque som en proffs.</p>
-            
+            <p class="quote">คู่มือฉบับสมบูรณ์สำหรับศัพท์ทุกคำที่คุณต้องรู้เพื่อเข้าใจและพูดคุยเรื่องเปตองอย่างมืออาชีพ</p>
+
             <div class="info-box">
-                <h3>📖 Om ordlistan</h3>
-                <p>Pétanque har sitt ursprung i Frankrike och många av sportens facktermer är därför på franska. Dessa termer används internationellt och är en viktig del av spelets kultur. I denna ordlista hittar du både franska facktermer och svenska översättningar, samt tekniska begrepp som används i spelet.</p>
+                <h3>📖 เกี่ยวกับพจนานุกรมศัพท์</h3>
+                <p>เปตองมีต้นกำเนิดในประเทศฝรั่งเศส ดังนั้นศัพท์เฉพาะทางหลายคำจึงเป็นภาษาฝรั่งเศส ศัพท์เหล่านี้ใช้กันทั่วโลกและเป็นส่วนสำคัญของวัฒนธรรมกีฬานี้ ในพจนานุกรมนี้ คุณจะพบทั้งศัพท์เฉพาะทางภาษาฝรั่งเศสพร้อมคำแปลภาษาไทย รวมถึงคำศัพท์เทคนิคที่ใช้ในเกม</p>
             </div>
-            
-            <h2>🇫🇷 Franska facktermer</h2>
-            
+
+            <h2>🇫🇷 ศัพท์เฉพาะทางภาษาฝรั่งเศส</h2>
+
             <div class="highlight-box">
-                <h4>Boule (bul)</h4>
-                <p><strong>Betydelse:</strong> Klot, kula</p>
-                <p><strong>Förklaring:</strong> De metallkulor man spelar med i pétanque. Varje spelare har 2-3 boules beroende på spelformat.</p>
-                <p><strong>Exempel:</strong> "Kasta din boule närmare cochonnet."</p>
+                <h4>Boule (บูล)</h4>
+                <p><strong>ความหมาย:</strong> ลูกบูล, ลูกเหล็ก</p>
+                <p><strong>คำอธิบาย:</strong> ลูกโลหะที่ใช้เล่นเปตอง ผู้เล่นแต่ละคนมี 2-3 ลูก ขึ้นอยู่กับรูปแบบการเล่น</p>
+                <p><strong>ตัวอย่าง:</strong> "โยนลูกบูลของคุณให้ใกล้โกโช่เนต์มากขึ้น"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Carreau (ka-rå)</h4>
-                <p><strong>Betydelse:</strong> Perfekt träff</p>
-                <p><strong>Förklaring:</strong> När du skjuter bort motståndarens klot och ditt eget klot stannar kvar på exakt samma plats. Det ultimata skottet!</p>
-                <p><strong>Exempel:</strong> "Fantastisk carreau! Ditt klot tog exakt motståndarens plats."</p>
+                <h4>Carreau (การ์โร)</h4>
+                <p><strong>ความหมาย:</strong> การยิงที่สมบูรณ์แบบ</p>
+                <p><strong>คำอธิบาย:</strong> เมื่อคุณยิงลูกของคู่แข่งออกไปและลูกของคุณหยุดอยู่ที่ตำแหน่งเดิมพอดี การยิงที่สุดยอดที่สุด!</p>
+                <p><strong>ตัวอย่าง:</strong> "การ์โรสุดยอด! ลูกของคุณอยู่ที่ตำแหน่งเดิมของคู่แข่งพอดี"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Cochonnet (ko-sho-nä)</h4>
-                <p><strong>Betydelse:</strong> Lillen, målet</p>
-                <p><strong>Förklaring:</strong> Den lilla träkulan (vanligtvis 25-35mm i diameter) som är målet i spelet. Kallas också "le but" (målet) eller "le petit" (den lilla).</p>
-                <p><strong>Exempel:</strong> "Kasta cochonnet mellan 6-10 meter."</p>
+                <h4>Cochonnet (โกโช่เนต์)</h4>
+                <p><strong>ความหมาย:</strong> ลูกเป้า, ลูกจุด</p>
+                <p><strong>คำอธิบาย:</strong> ลูกไม้ขนาดเล็ก (ปกติ 25-35 มม.) ที่เป็นเป้าหมายในเกม เรียกอีกชื่อว่า "le but" (เป้าหมาย) หรือ "le petit" (ลูกเล็ก)</p>
+                <p><strong>ตัวอย่าง:</strong> "โยนโกโช่เนต์ระหว่าง 6-10 เมตร"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Donnée (do-né)</h4>
-                <p><strong>Betydelse:</strong> Landningspunkt</p>
-                <p><strong>Förklaring:</strong> Den punkt på marken där du siktar att landa ditt klot. Genom att sikta på donnée istället för direkt på cochonnet får du bättre precision.</p>
-                <p><strong>Exempel:</strong> "Sikta på donnée 50 cm framför cochonnet."</p>
+                <h4>Donnée (ดอนเน)</h4>
+                <p><strong>ความหมาย:</strong> จุดลงพื้น</p>
+                <p><strong>คำอธิบาย:</strong> จุดบนพื้นที่คุณเล็งให้ลูกของคุณลงพื้น การเล็งที่ดอนเนแทนที่จะเล็งตรงไปที่โกโช่เนต์จะให้ความแม่นยำที่ดีกว่า</p>
+                <p><strong>ตัวอย่าง:</strong> "เล็งที่ดอนเน 50 ซม. หน้าโกโช่เนต์"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Mène (män)</h4>
-                <p><strong>Betydelse:</strong> Omgång</p>
-                <p><strong>Förklaring:</strong> En spelomgång från att cochonnet kastas tills alla klot är kastade och poäng räknas. En match spelas till 13 poäng och består av flera mènes.</p>
-                <p><strong>Exempel:</strong> "Vi vann den mènen med 3 poäng."</p>
+                <h4>Mène (แมน)</h4>
+                <p><strong>ความหมาย:</strong> รอบ, เที่ยว</p>
+                <p><strong>คำอธิบาย:</strong> รอบการเล่นตั้งแต่โยนโกโช่เนต์จนกว่าจะโยนลูกทั้งหมดและนับคะแนน การแข่งขันเล่นถึง 13 คะแนนและประกอบด้วยหลายแมน</p>
+                <p><strong>ตัวอย่าง:</strong> "เราชนะแมนนี้ด้วย 3 คะแนน"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Milieu (mi-ljö)</h4>
-                <p><strong>Betydelse:</strong> Mittspelare, allrounder</p>
-                <p><strong>Förklaring:</strong> I trippelspel är milieu spelaren som kan både lägga och skjuta. Fungerar som länk mellan pointeur och tireur.</p>
-                <p><strong>Exempel:</strong> "Som milieu måste du kunna anpassa dig till situationen."</p>
+                <h4>Milieu (มิลเยอ)</h4>
+                <p><strong>ความหมาย:</strong> ผู้เล่นกลาง, ออลราวด์เดอร์</p>
+                <p><strong>คำอธิบาย:</strong> ในการเล่นสามคน มิลเยอคือผู้เล่นที่สามารถทั้งวางและยิง ทำหน้าที่เป็นตัวเชื่อมระหว่างปวงเตอร์และตีเรอร์</p>
+                <p><strong>ตัวอย่าง:</strong> "ในฐานะมิลเยอ คุณต้องปรับตัวตามสถานการณ์"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Pétanque (pe-tank)</h4>
-                <p><strong>Betydelse:</strong> Fötterna tillsammans</p>
-                <p><strong>Förklaring:</strong> Kommer från provensalska "pès tancats" som betyder "fötter samman". Refererar till att båda fötterna måste vara i cirkeln när man kastar.</p>
-                <p><strong>Exempel:</strong> "Pétanque spelas med fötterna i cirkeln."</p>
+                <h4>Pétanque (เปตอง)</h4>
+                <p><strong>ความหมาย:</strong> เท้าชิดกัน</p>
+                <p><strong>คำอธิบาย:</strong> มาจากภาษาโปรวองซ์ "pès tancats" ที่หมายความว่า "เท้าชิดกัน" หมายถึงว่าเท้าทั้งสองต้องอยู่ในวงกลมเมื่อโยน</p>
+                <p><strong>ตัวอย่าง:</strong> "เปตองเล่นโดยมีเท้าอยู่ในวงกลม"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Pointer (poan-té)</h4>
-                <p><strong>Betydelse:</strong> Att lägga, att placera</p>
-                <p><strong>Förklaring:</strong> Att kasta sitt klot så nära cochonnet som möjligt. Motsatsen till att skjuta (tirer).</p>
-                <p><strong>Exempel:</strong> "Jag föredrar att pointer istället för att tirer."</p>
+                <h4>Pointer (ปวงเต)</h4>
+                <p><strong>ความหมาย:</strong> การวาง, การวางลูก</p>
+                <p><strong>คำอธิบาย:</strong> การโยนลูกของคุณให้ใกล้โกโช่เนต์มากที่สุด ตรงข้ามกับการยิง (tirer)</p>
+                <p><strong>ตัวอย่าง:</strong> "ฉันชอบปวงเตมากกว่าตีเร"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Pointeur (poan-tör)</h4>
-                <p><strong>Betydelse:</strong> Läggare</p>
-                <p><strong>Förklaring:</strong> Spelaren som specialiserar sig på att lägga klot nära cochonnet. Spelar ofta först i omgången.</p>
-                <p><strong>Exempel:</strong> "En bra pointeur kan lägga inom 10 cm från cochonnet."</p>
+                <h4>Pointeur (ปวงเตอร์)</h4>
+                <p><strong>ความหมาย:</strong> นักวาง</p>
+                <p><strong>คำอธิบาย:</strong> ผู้เล่นที่เชี่ยวชาญในการวางลูกใกล้โกโช่เนต์ มักเล่นก่อนในแต่ละรอบ</p>
+                <p><strong>ตัวอย่าง:</strong> "ปวงเตอร์ที่ดีสามารถวางลูกได้ภายใน 10 ซม. จากโกโช่เนต์"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Tirer (ti-ré)</h4>
-                <p><strong>Betydelse:</strong> Att skjuta</p>
-                <p><strong>Förklaring:</strong> Att kasta sitt klot med kraft för att slå bort motståndarens klot. Kräver precision och teknik.</p>
-                <p><strong>Exempel:</strong> "När motståndaren ligger bra måste du tirer."</p>
+                <h4>Tirer (ตีเร)</h4>
+                <p><strong>ความหมาย:</strong> การยิง</p>
+                <p><strong>คำอธิบาย:</strong> การโยนลูกของคุณด้วยแรงเพื่อกระแทกลูกของคู่แข่งออกไป ต้องการความแม่นยำและเทคนิค</p>
+                <p><strong>ตัวอย่าง:</strong> "เมื่อคู่แข่งอยู่ในตำแหน่งที่ดี คุณต้องตีเร"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Tirer au fer (ti-ré o fär)</h4>
-                <p><strong>Betydelse:</strong> Skjuta på järnet</p>
-                <p><strong>Förklaring:</strong> Att skjuta direkt på motståndarens klot (på "järnet") med målet att slå bort det eller göra en carreau. Den mest prestigefyllda skjuttekniken.</p>
-                <p><strong>Exempel:</strong> "Ett perfekt tirer au fer resulterade i en carreau."</p>
+                <h4>Tirer au fer (ตีเร โอ แฟร์)</h4>
+                <p><strong>ความหมาย:</strong> ยิงเหล็ก</p>
+                <p><strong>คำอธิบาย:</strong> การยิงตรงไปที่ลูกของคู่แข่ง (บน "เหล็ก") โดยมีเป้าหมายที่จะกระแทกออกไปหรือทำการ์โร เทคนิคการยิงที่ทรงเกียรติที่สุด</p>
+                <p><strong>ตัวอย่าง:</strong> "ตีเร โอ แฟร์ ที่สมบูรณ์แบบกลายเป็นการ์โร"</p>
             </div>
-            
+
             <div class="highlight-box">
-                <h4>Tireur (ti-rör)</h4>
-                <p><strong>Betydelse:</strong> Skytt</p>
-                <p><strong>Förklaring:</strong> Spelaren som specialiserar sig på att skjuta bort motståndarens klot. Spelar ofta sist i omgången.</p>
-                <p><strong>Exempel:</strong> "En skicklig tireur kan träffa 7 av 10 gånger på 8 meter."</p>
+                <h4>Tireur (ตีเรอร์)</h4>
+                <p><strong>ความหมาย:</strong> นักยิง</p>
+                <p><strong>คำอธิบาย:</strong> ผู้เล่นที่เชี่ยวชาญในการยิงลูกของคู่แข่งออกไป มักเล่นเป็นคนสุดท้ายในแต่ละรอบ</p>
+                <p><strong>ตัวอย่าง:</strong> "ตีเรอร์ที่เก่งสามารถยิงถูก 7 จาก 10 ครั้งที่ระยะ 8 เมตร"</p>
             </div>
-            
-            <h2>🎯 Svenska och tekniska termer</h2>
-            
+
+            <h2>🎯 ศัพท์เทคนิคและศัพท์ทั่วไป</h2>
+
             <table>
                 <tr>
-                    <th>Term</th>
-                    <th>Förklaring</th>
+                    <th>คำศัพท์</th>
+                    <th>คำอธิบาย</th>
                 </tr>
                 <tr>
-                    <td><strong>Backspin</strong></td>
-                    <td>Bakåtrotation på klotet som får det att stanna snabbare efter landning. Uppnås genom handledsteknik vid release.</td>
+                    <td><strong>Backspin (แบ็คสปิน)</strong></td>
+                    <td>การหมุนย้อนของลูกที่ทำให้หยุดเร็วขึ้นหลังจากลงพื้น ทำได้โดยใช้เทคนิคข้อมือตอนปล่อยลูก</td>
                 </tr>
                 <tr>
-                    <td><strong>Bana</strong></td>
-                    <td>Spelplanen där pétanque spelas. Kan vara grus, sand, asfalt eller annat underlag.</td>
+                    <td><strong>สนาม</strong></td>
+                    <td>พื้นที่เล่นเปตอง อาจเป็นกรวด, ทราย, แอสฟัลต์ หรือพื้นผิวอื่นๆ</td>
                 </tr>
                 <tr>
-                    <td><strong>Biberon</strong></td>
-                    <td>När klotet "kysser" cochonnet mjukt och stannar precis intill. Perfekt lägg!</td>
+                    <td><strong>Biberon (บีเบอรง)</strong></td>
+                    <td>เมื่อลูก "จูบ" โกโช่เนต์เบาๆ และหยุดอยู่ติดกัน การวางที่สมบูรณ์แบบ!</td>
                 </tr>
                 <tr>
-                    <td><strong>Cirkel</strong></td>
-                    <td>Den 35-50 cm stora cirkeln som ritas på marken och där spelaren måste stå när de kastar.</td>
+                    <td><strong>วงกลม</strong></td>
+                    <td>วงกลมขนาด 35-50 ซม. ที่วาดบนพื้นซึ่งผู้เล่นต้องยืนเมื่อโยน</td>
                 </tr>
                 <tr>
-                    <td><strong>Devant (framför)</strong></td>
-                    <td>"Boule devant, boule d'argent" - Lägg alltid framför cochonnet (30-50 cm). En gyllene regel!</td>
+                    <td><strong>Devant (ดือว็อง = ข้างหน้า)</strong></td>
+                    <td>"Boule devant, boule d'argent" - วางลูกข้างหน้าโกโช่เนต์เสมอ (30-50 ซม.) กฎทองคำ!</td>
                 </tr>
                 <tr>
-                    <td><strong>Direktskott</strong></td>
-                    <td>Att skjuta motståndarens klot genom att träffa det direkt i luften eller med minimal studs.</td>
+                    <td><strong>ยิงตรง</strong></td>
+                    <td>การยิงลูกของคู่แข่งโดยตรงในอากาศหรือโดยมีการเด้งน้อยที่สุด</td>
                 </tr>
                 <tr>
-                    <td><strong>Doublette</strong></td>
-                    <td>Spelformat med 2 spelare per lag, varje spelare har 3 klot.</td>
+                    <td><strong>Doublette (ดูแบลตต์)</strong></td>
+                    <td>รูปแบบการเล่น 2 คนต่อทีม ผู้เล่นแต่ละคนมี 3 ลูก</td>
                 </tr>
                 <tr>
-                    <td><strong>Fanny</strong></td>
-                    <td>När ett lag förlorar 13-0. Traditionellt får förlorarna kyssa en bild av "Fanny" (ofta en kvinna som visar rumpan).</td>
+                    <td><strong>Fanny (แฟนนี่)</strong></td>
+                    <td>เมื่อทีมแพ้ 13-0 ตามประเพณี ผู้แพ้ต้องจูบรูป "แฟนนี่" (มักเป็นรูปผู้หญิงโชว์ก้น)</td>
                 </tr>
                 <tr>
-                    <td><strong>Klot</strong></td>
-                    <td>De metallkulor man spelar med. Väger 650-800 gram och är 70.5-80 mm i diameter.</td>
+                    <td><strong>ลูกบูล</strong></td>
+                    <td>ลูกโลหะที่ใช้เล่น หนัก 650-800 กรัม และมีเส้นผ่านศูนย์กลาง 70.5-80 มม.</td>
                 </tr>
                 <tr>
-                    <td><strong>Lillen</strong></td>
-                    <td>Svensk term för cochonnet. Den lilla träkulan som är målet.</td>
+                    <td><strong>ลูกเป้า</strong></td>
+                    <td>คำไทยสำหรับโกโช่เนต์ ลูกไม้เล็กๆ ที่เป็นเป้าหมาย</td>
                 </tr>
                 <tr>
-                    <td><strong>Lob</strong></td>
-                    <td>Att kasta klotet i en hög båge så det landar mjukt. Används på hårda underlag eller för att undvika hinder.</td>
+                    <td><strong>Lob (ล็อบ)</strong></td>
+                    <td>การโยนลูกเป็นโค้งสูงเพื่อให้ลงพื้นอ่อนๆ ใช้บนพื้นแข็งหรือเพื่อหลีกเลี่ยงสิ่งกีดขวาง</td>
                 </tr>
                 <tr>
-                    <td><strong>Mätning</strong></td>
-                    <td>Att mäta vilket klot som ligger närmast cochonnet. Görs med måttband eller mätinstrument.</td>
+                    <td><strong>การวัด</strong></td>
+                    <td>การวัดว่าลูกไหนอยู่ใกล้โกโช่เนต์ที่สุด ทำโดยใช้สายวัดหรือเครื่องมือวัด</td>
                 </tr>
                 <tr>
-                    <td><strong>Parkering</strong></td>
-                    <td>Den plats där klotet stannar efter kastet. En av de tre punkterna (cochonnet, donnée, parkering).</td>
+                    <td><strong>จุดจอด</strong></td>
+                    <td>ตำแหน่งที่ลูกหยุดหลังจากโยน หนึ่งในสามจุด (โกโช่เนต์, ดอนเน, จุดจอด)</td>
                 </tr>
                 <tr>
-                    <td><strong>Portée</strong></td>
-                    <td>Att kasta klotet i en medelhög båge. Den vanligaste kasttekniken.</td>
+                    <td><strong>Portée (ปอร์เต)</strong></td>
+                    <td>การโยนลูกเป็นโค้งปานกลาง เทคนิคการโยนที่พบบ่อยที่สุด</td>
                 </tr>
                 <tr>
-                    <td><strong>Roulette</strong></td>
-                    <td>Att rulla klotet längs marken. Fungerar bäst på jämna, mjuka underlag.</td>
+                    <td><strong>Roulette (รูแล็ตต์)</strong></td>
+                    <td>การกลิ้งลูกไปตามพื้น ได้ผลดีที่สุดบนพื้นเรียบและนุ่ม</td>
                 </tr>
                 <tr>
-                    <td><strong>Rullskott</strong></td>
-                    <td>Att skjuta genom att rulla klotet längs marken med kraft. Riskabelt på ojämna underlag.</td>
+                    <td><strong>ยิงกลิ้ง</strong></td>
+                    <td>การยิงโดยกลิ้งลูกไปตามพื้นด้วยแรง มีความเสี่ยงบนพื้นไม่เรียบ</td>
                 </tr>
                 <tr>
-                    <td><strong>Shutout</strong></td>
-                    <td>När ett lag inte får någon poäng alls i en mène (0 poäng).</td>
+                    <td><strong>Shutout (ชัตเอาต์)</strong></td>
+                    <td>เมื่อทีมไม่ได้คะแนนเลยในหนึ่งแมน (0 คะแนน)</td>
                 </tr>
                 <tr>
-                    <td><strong>Tête-à-tête</strong></td>
-                    <td>Spelformat 1 mot 1, varje spelare har 3 klot.</td>
+                    <td><strong>Tête-à-tête (เตตาเตต)</strong></td>
+                    <td>รูปแบบการเล่น 1 ต่อ 1 ผู้เล่นแต่ละคนมี 3 ลูก</td>
                 </tr>
                 <tr>
-                    <td><strong>Trippel</strong></td>
-                    <td>Spelformat med 3 spelare per lag, varje spelare har 2 klot.</td>
+                    <td><strong>Triplette (ทริปเพล็ตต์)</strong></td>
+                    <td>รูปแบบการเล่น 3 คนต่อทีม ผู้เล่นแต่ละคนมี 2 ลูก</td>
                 </tr>
             </table>
-            
-            <h2>📏 Mått och regler</h2>
-            
+
+            <h2>📏 ขนาดและกฎ</h2>
+
             <div class="info-box">
                 <ul>
-                    <li><strong>Cochonnet:</strong> 25-35 mm i diameter (vanligen 30 mm)</li>
-                    <li><strong>Klot:</strong> 70.5-80 mm i diameter, 650-800 gram</li>
-                    <li><strong>Cirkel:</strong> 35-50 cm i diameter</li>
-                    <li><strong>Avstånd cochonnet:</strong> 6-10 meter från cirkeln</li>
-                    <li><strong>Avstånd från hinder:</strong> Minst 1 meter</li>
-                    <li><strong>Vinnande poäng:</strong> 13 poäng</li>
-                    <li><strong>Tid per kast (tävling):</strong> Max 1 minut</li>
+                    <li><strong>โกโช่เนต์:</strong> เส้นผ่านศูนย์กลาง 25-35 มม. (ปกติ 30 มม.)</li>
+                    <li><strong>ลูกบูล:</strong> เส้นผ่านศูนย์กลาง 70.5-80 มม., น้ำหนัก 650-800 กรัม</li>
+                    <li><strong>วงกลม:</strong> เส้นผ่านศูนย์กลาง 35-50 ซม.</li>
+                    <li><strong>ระยะโยนโกโช่เนต์:</strong> 6-10 เมตรจากวงกลม</li>
+                    <li><strong>ระยะห่างจากสิ่งกีดขวาง:</strong> อย่างน้อย 1 เมตร</li>
+                    <li><strong>คะแนนชนะ:</strong> 13 คะแนน</li>
+                    <li><strong>เวลาต่อการโยน (แข่งขัน):</strong> ไม่เกิน 1 นาที</li>
                 </ul>
             </div>
-            
+
             <div class="highlight-box" style="margin-top: 30px;">
-                <h4>💡 Tips för att lära sig termerna</h4>
-                <p>Använd de franska termerna när du spelar och pratar om pétanque. Det tar några veckor att vänja sig, men sedan blir det naturligt. Du kommer att märka att alla erfarna spelare använder dessa termer - det är en del av spelets charm och internationella kultur!</p>
+                <h4>💡 เคล็ดลับสำหรับการเรียนรู้คำศัพท์</h4>
+                <p>ใช้คำศัพท์ภาษาฝรั่งเศสเมื่อคุณเล่นและพูดคุยเรื่องเปตอง อาจใช้เวลาสักสองสามสัปดาห์ในการคุ้นเคย แต่หลังจากนั้นจะกลายเป็นธรรมชาติ คุณจะสังเกตว่าผู้เล่นที่มีประสบการณ์ทุกคนใช้คำศัพท์เหล่านี้ - มันเป็นส่วนหนึ่งของเสน่ห์และวัฒนธรรมนานาชาติของกีฬานี้!</p>
             </div>
-            
+
             <div class="navigation">
-                <a href="regler.html" class="nav-btn secondary">← ภาคผนวก B: Regelbok</a>
-                <a href="innehall.html" class="nav-btn">กลับไปที่สารบัญ →</a>
+                <a href="regler.html" class="nav-btn secondary">← ก่อนหน้า: ภาคผนวก ข: กฎกติกา</a>
+                <a href="bilaga-boulebana.html" class="nav-btn">ถัดไป: ภาคผนวก ง: การสร้างสนามบูล →</a>
             </div>
         </div>
     </div>

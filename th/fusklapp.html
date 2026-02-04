@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pétanque Fusklapp - En sida</title>
+    <title>สรุปเปตอง - หนึ่งหน้า</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Lato', sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -20,7 +20,7 @@
             font-size: 11pt;
             line-height: 1.3;
         }
-        
+
         .cheatsheet {
             max-width: 210mm;
             margin: 0 auto;
@@ -29,31 +29,31 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             border-radius: 5px;
         }
-        
+
         .header {
             text-align: center;
             border-bottom: 3px solid #8B4513;
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
-        
+
         .header h1 {
             font-size: 24pt;
             color: #8B4513;
             font-weight: 900;
             margin-bottom: 5px;
         }
-        
+
         .header p {
             font-size: 10pt;
             color: #666;
             font-style: italic;
         }
-        
+
         .section {
             margin-bottom: 15px;
         }
-        
+
         .section h2 {
             font-size: 14pt;
             color: #8B4513;
@@ -62,43 +62,43 @@
             margin-bottom: 8px;
             font-weight: 700;
         }
-        
+
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
         }
-        
+
         .box {
             background: #f9f9f9;
             border-left: 3px solid #D2691E;
             padding: 8px;
             margin-bottom: 8px;
         }
-        
+
         .box h3 {
             font-size: 11pt;
             color: #8B4513;
             margin-bottom: 5px;
             font-weight: 700;
         }
-        
+
         .box ul {
             margin-left: 15px;
             font-size: 9.5pt;
         }
-        
+
         .box li {
             margin-bottom: 3px;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 9.5pt;
             margin-bottom: 10px;
         }
-        
+
         th {
             background: #8B4513;
             color: white;
@@ -107,16 +107,16 @@
             font-weight: 700;
             font-size: 9pt;
         }
-        
+
         td {
             padding: 4px 5px;
             border-bottom: 1px solid #ddd;
         }
-        
+
         tr:nth-child(even) {
             background: #f9f9f9;
         }
-        
+
         .highlight {
             background: #fff3cd;
             border-left: 3px solid #ffc107;
@@ -124,14 +124,14 @@
             margin: 10px 0;
             font-size: 9.5pt;
         }
-        
+
         .quick-ref {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
             margin-top: 10px;
         }
-        
+
         .quick-ref-item {
             background: #e8f4f8;
             padding: 6px;
@@ -139,315 +139,344 @@
             text-align: center;
             font-size: 9pt;
         }
-        
+
         .quick-ref-item strong {
             display: block;
             color: #8B4513;
             font-size: 10pt;
             margin-bottom: 3px;
         }
-        
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .language-switcher a {
+            text-decoration: none;
+            font-size: 24px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .language-switcher a:hover,
+        .language-switcher a.active {
+            opacity: 1;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 10px;
                 font-size: 10pt;
             }
-            
+
             .cheatsheet {
                 padding: 10px;
             }
-            
+
             .header h1 {
                 font-size: 20pt;
             }
-            
+
             .header p {
                 font-size: 9pt;
             }
-            
+
             .section h2 {
                 font-size: 12pt;
             }
-            
+
             .two-column {
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
-            
+
             .quick-ref {
                 grid-template-columns: 1fr;
                 gap: 6px;
             }
-            
+
             table {
                 font-size: 9pt;
             }
-            
+
             table th,
             table td {
                 padding: 6px 4px;
             }
         }
-        
+
         @media (max-width: 480px) {
             body {
                 padding: 5px;
                 font-size: 9pt;
             }
-            
+
             .cheatsheet {
                 padding: 8px;
             }
-            
+
             .header h1 {
                 font-size: 18pt;
             }
-            
+
             .section h2 {
                 font-size: 11pt;
             }
-            
+
             .box {
                 padding: 6px;
             }
-            
+
             .box h3 {
                 font-size: 10pt;
             }
-            
+
             .box ul {
                 font-size: 8.5pt;
                 margin-left: 12px;
             }
-            
+
             table {
                 font-size: 8pt;
             }
-            
+
             table th,
             table td {
                 padding: 4px 2px;
             }
-            
+
             .highlight {
                 font-size: 8.5pt;
                 padding: 6px;
             }
         }
-        
+
         @media print {
             body {
                 background: white;
                 padding: 0;
             }
-            
+
             .cheatsheet {
                 box-shadow: none;
                 border-radius: 0;
                 max-width: 100%;
                 padding: 10mm;
             }
-            
+
             @page {
                 size: A4;
                 margin: 10mm;
             }
         }
-    </style>    
+    </style>
 </head>
 <body>
     <a href="saraban.html" class="toc-button">สารบัญ</a>
+    <div class="language-switcher">
+        <a href="../fusklapp.html" title="Svenska">🇸🇪</a>
+        <a href="../en/cheat-sheet.html" title="English">🇬🇧</a>
+        <a href="../fr/feuille-triche.html" title="Français">🇫🇷</a>
+        <a href="fusklapp.html" class="active" title="ไทย">🇹🇭</a>
+    </div>
     <div class="cheatsheet">
         <div class="header">
-            <h1>🎯 PÉTANQUE FUSKLAPP</h1>
-            <p>Allt du behöver på en sida - Matchrutin, Etikett, Taktik & Tekniker</p>
+            <h1>🎯 สรุปเปตองฉบับย่อ</h1>
+            <p>ทุกสิ่งที่คุณต้องการในหนึ่งหน้า - ขั้นตอนการแข่ง, มารยาท, กลยุทธ์ & เทคนิค</p>
         </div>
-        
+
         <div class="two-column">
             <div>
                 <div class="section">
-                    <h2>⚡ 10 Viktigaste reglerna</h2>
+                    <h2>⚡ 10 กฎที่สำคัญที่สุด</h2>
                     <table>
                         <tr>
                             <th>#</th>
-                            <th>Regel</th>
+                            <th>กฎ</th>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Båda fötterna i cirkeln tills klotet landat</td>
+                            <td>เท้าทั้งสองต้องอยู่ในวงกลมจนกว่าลูกจะลงพื้น</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Lillen 6-10m från cirkeln, 1m från hinder</td>
+                            <td>ลูกเป้า 6-10 ม. จากวงกลม, 1 ม. จากสิ่งกีดขวาง</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Laget utan närmaste klot kastar</td>
+                            <td>ทีมที่ไม่มีลูกใกล้ที่สุดโยน</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Poäng = antal klot närmare än motståndaren</td>
+                            <td>คะแนน = จำนวนลูกที่ใกล้กว่าคู่แข่ง</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>Första till 13 poäng vinner</td>
+                            <td>ถึง 13 คะแนนก่อนชนะ</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>Klot/lillen över gräns = dött</td>
+                            <td>ลูก/ลูกเป้าข้ามเส้น = ตาย</td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>Död lillen = ny mène, samma lag kastar</td>
+                            <td>ลูกเป้าตาย = รอบใหม่, ทีมเดิมโยน</td>
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td>Mät bara vid tvivel</td>
+                            <td>วัดเฉพาะเมื่อไม่แน่ใจ</td>
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td>Rör inte klot innan mätning</td>
+                            <td>อย่าแตะลูกก่อนวัด</td>
                         </tr>
                         <tr>
                             <td>10</td>
-                            <td>Max 1 minut per kast i tävling</td>
+                            <td>ไม่เกิน 1 นาทีต่อการโยนในการแข่งขัน</td>
                         </tr>
                     </table>
                 </div>
-                
+
                 <div class="section">
-                    <h2>🎯 Beslutsträd: Lägg eller Skjut?</h2>
+                    <h2>🎯 การตัดสินใจ: วางหรือยิง?</h2>
                     <div class="box">
-                        <h3>SKJUT när:</h3>
+                        <h3>ยิง เมื่อ:</h3>
                         <ul>
-                            <li>Motståndaren <30 cm från lillen + fri bana</li>
-                            <li>Sista klotet + du behöver poäng</li>
-                            <li>2+ motståndarklot inom 20 cm</li>
+                            <li>คู่แข่งอยู่ <30 ซม. จากลูกเป้า + ทางว่าง</li>
+                            <li>ลูกสุดท้าย + คุณต้องการคะแนน</li>
+                            <li>ลูกคู่แข่ง 2+ ลูกอยู่ภายใน 20 ซม.</li>
                         </ul>
                     </div>
                     <div class="box">
-                        <h3>LÄGG när:</h3>
+                        <h3>วาง เมื่อ:</h3>
                         <ul>
-                            <li>Du har tydlig donnée du träffar ofta</li>
-                            <li>Du är osäker skytt (<40% träff)</li>
-                            <li>Du leder med 11-12 poäng (defensivt)</li>
+                            <li>คุณมีดอนเนที่ชัดเจนที่คุณยิงโดนบ่อย</li>
+                            <li>คุณยิงไม่แม่น (<40% ถูก)</li>
+                            <li>คุณนำอยู่ 11-12 คะแนน (รับอย่างเดียว)</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="section">
-                    <h2>📐 Tre punkter för perfekt point</h2>
+                    <h2>📐 สามจุดสำหรับการวางที่สมบูรณ์แบบ</h2>
                     <div class="quick-ref">
                         <div class="quick-ref-item">
-                            <strong>1. Lillen</strong>
-                            Målet
+                            <strong>1. ลูกเป้า</strong>
+                            เป้าหมาย
                         </div>
                         <div class="quick-ref-item">
-                            <strong>2. Parkering</strong>
-                            Där klotet stannar
+                            <strong>2. จุดจอด</strong>
+                            ที่ลูกหยุด
                         </div>
                         <div class="quick-ref-item">
-                            <strong>3. Donnée</strong>
-                            Landningspunkt
+                            <strong>3. ดอนเน</strong>
+                            จุดลงพื้น
                         </div>
                     </div>
                     <div class="highlight">
-                        <strong>💡 Gyllene regel:</strong> "Boule devant, boule d'argent" - Lägg alltid framför lillen (30-50 cm)!
+                        <strong>💡 กฎทองคำ:</strong> "Boule devant, boule d'argent" - วางลูกข้างหน้าลูกเป้าเสมอ (30-50 ซม.)!
                     </div>
                 </div>
             </div>
-            
+
             <div>
                 <div class="section">
-                    <h2>🏹 Kastbanor & Underlag</h2>
+                    <h2>🏹 การโยน & พื้นผิว</h2>
                     <table>
                         <tr>
-                            <th>Underlag</th>
-                            <th>Kasttyp</th>
+                            <th>พื้นผิว</th>
+                            <th>ประเภทการโยน</th>
                         </tr>
                         <tr>
-                            <td>Mjuk grus/sand</td>
-                            <td>Låg rullning - klotet stannar snabbt</td>
+                            <td>กรวดนุ่ม/ทราย</td>
+                            <td>กลิ้งต่ำ - ลูกหยุดเร็ว</td>
                         </tr>
                         <tr>
-                            <td>Hård/stenig</td>
-                            <td>Hög lob med backspin - undvik studs</td>
+                            <td>แข็ง/มีหิน</td>
+                            <td>ล็อบสูงพร้อมแบ็คสปิน - หลีกเลี่ยงการเด้ง</td>
                         </tr>
                         <tr>
-                            <td>Asfalt</td>
-                            <td>Medelhög lob - kontrollerad landning</td>
+                            <td>แอสฟัลต์</td>
+                            <td>ล็อบกลาง - ลงพื้นควบคุมได้</td>
                         </tr>
                         <tr>
-                            <td>Lutande bana</td>
-                            <td>Lägg uppför - kompensera för rullning</td>
+                            <td>สนามลาดเอียง</td>
+                            <td>วางขึ้นเนิน - ชดเชยการกลิ้ง</td>
                         </tr>
                     </table>
                 </div>
-                
+
                 <div class="section">
-                    <h2>🎭 Etikett & God sed</h2>
+                    <h2>🎭 มารยาท & ความประพฤติที่ดี</h2>
                     <div class="box">
                         <ul>
-                            <li>✓ Stå still och tyst när motståndaren kastar</li>
-                            <li>✓ Gå aldrig mellan spelare och lillen</li>
-                            <li>✓ Vänta med att ta bort klot tills alla är överens</li>
-                            <li>✓ Använd godkänt mätinstrument, inte fötterna</li>
-                            <li>✓ Tacka motståndaren efter matchen</li>
-                            <li>✗ Störa, prata eller röra sig under kast</li>
-                            <li>✗ Flytta klot innan mätning</li>
+                            <li>✓ ยืนนิ่งและเงียบเมื่อคู่แข่งโยน</li>
+                            <li>✓ อย่าเดินระหว่างผู้เล่นและลูกเป้า</li>
+                            <li>✓ รอเก็บลูกจนกว่าทุกคนจะเห็นพ้อง</li>
+                            <li>✓ ใช้เครื่องมือวัดที่ได้รับอนุมัติ ไม่ใช่เท้า</li>
+                            <li>✓ ขอบคุณคู่แข่งหลังแข่ง</li>
+                            <li>✗ รบกวน, พูด หรือเคลื่อนไหวระหว่างโยน</li>
+                            <li>✗ ขยับลูกก่อนวัด</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="section">
-                    <h2>🔧 Matchrutin (före/under/efter)</h2>
+                    <h2>🔧 ขั้นตอนการแข่ง (ก่อน/ระหว่าง/หลัง)</h2>
                     <div class="box">
-                        <h3>Före matchen (15 min):</h3>
+                        <h3>ก่อนแข่ง (15 นาที):</h3>
                         <ul>
-                            <li>Dynamisk stretching + rörlighetsövningar</li>
-                            <li>20 uppvärmningskast (variera avstånd)</li>
-                            <li>3 djupa andetag + visualisera framgång</li>
+                            <li>ยืดกล้ามเนื้อแบบไดนามิก + บริหารความคล่องตัว</li>
+                            <li>โยนอุ่นเครื่อง 20 ครั้ง (ระยะต่างๆ)</li>
+                            <li>หายใจลึก 3 ครั้ง + จินตนาการความสำเร็จ</li>
                         </ul>
                     </div>
                     <div class="box">
-                        <h3>Under matchen:</h3>
+                        <h3>ระหว่างแข่ง:</h3>
                         <ul>
-                            <li>Före varje kast: Djupandas, visualisera bana</li>
-                            <li>Sikta på donnée, inte lillen</li>
-                            <li>Kommunicera med laget före varje beslut</li>
+                            <li>ก่อนโยนทุกครั้ง: หายใจลึก, จินตนาการเส้นทาง</li>
+                            <li>เล็งที่ดอนเน ไม่ใช่ลูกเป้า</li>
+                            <li>สื่อสารกับทีมก่อนการตัดสินใจทุกครั้ง</li>
                         </ul>
                     </div>
                     <div class="box">
-                        <h3>Efter matchen:</h3>
+                        <h3>หลังแข่ง:</h3>
                         <ul>
-                            <li>Utvärdera: Vad gick bra? Vad kan förbättras?</li>
-                            <li>Logga i träningsjournal</li>
+                            <li>ประเมิน: อะไรดี? อะไรปรับปรุงได้?</li>
+                            <li>บันทึกในสมุดฝึกซ้อม</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="section">
-                    <h2>💪 Snabba träningstips</h2>
+                    <h2>💪 เคล็ดลับฝึกซ้อมด่วน</h2>
                     <div class="quick-ref">
                         <div class="quick-ref-item">
-                            <strong>Fickduken</strong>
-                            6/10 träffar på 7m
+                            <strong>ผ้าเช็ดหน้า</strong>
+                            6/10 ถูกที่ 7 ม.
                         </div>
                         <div class="quick-ref-item">
-                            <strong>6-boule</strong>
-                            50% träffsäkerhet
+                            <strong>6-บูล</strong>
+                            50% ถูกเป้า
                         </div>
                         <div class="quick-ref-item">
-                            <strong>Tre zoner</strong>
-                            4/5 inom 50cm
+                            <strong>สามโซน</strong>
+                            4/5 ภายใน 50 ซม.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="highlight" style="margin-top: 15px; text-align: center;">
-            <strong>🎯 Kom ihåg:</strong> Teknik + Taktik + Mental styrka = Framgång | Träna smart 3-4x/vecka | Dokumentera din utveckling
+            <strong>🎯 จำไว้:</strong> เทคนิค + กลยุทธ์ + ความแข็งแกร่งทางจิต = ความสำเร็จ | ฝึกฉลาด 3-4 ครั้ง/สัปดาห์ | บันทึกการพัฒนาของคุณ
         </div>
     </div>
 </body>

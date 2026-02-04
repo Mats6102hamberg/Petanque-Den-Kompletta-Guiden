@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indholdsfortegnelse - Pétanque Guiden</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .language-switcher a {
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            opacity: 0.6;
+        }
+
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        .language-switcher a.active {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(160deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #FFF8DC;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            padding: 60px 40px;
+        }
+
+        .forord {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-left: 4px solid #D2691E;
+            border-radius: 5px;
+        }
+
+        .forord h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+
+        .forord p {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .toc-section {
+            margin-bottom: 40px;
+        }
+
+        .toc-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #8B4513;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #D2691E;
+        }
+
+        .chapter-list {
+            list-style: none;
+        }
+
+        .chapter-item {
+            margin-bottom: 15px;
+        }
+
+        .chapter-link {
+            display: block;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #CD853F;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .chapter-link:hover {
+            background: #8B4513;
+            color: white;
+            border-left-color: #FFF8DC;
+            transform: translateX(10px);
+        }
+
+        .chapter-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #D2691E;
+            margin-bottom: 5px;
+        }
+
+        .chapter-link:hover .chapter-number {
+            color: #FFF8DC;
+        }
+
+        .chapter-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .chapter-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .chapter-link:hover .chapter-desc {
+            color: #FFF8DC;
+        }
+
+        .chapter-link.matchprotokoll-link:hover {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #333;
+            border-left-color: #ff6f00;
+        }
+
+        .chapter-link.matchprotokoll-link:hover .chapter-number,
+        .chapter-link.matchprotokoll-link:hover .chapter-title,
+        .chapter-link.matchprotokoll-link:hover .chapter-desc {
+            color: #333;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #D2691E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <a href="../innehall.html" title="Svenska">🇸🇪</a>
+        <a href="../en/contents.html" title="English">🇬🇧</a>
+        <a href="../fr/sommaire.html" title="Français">🇫🇷</a>
+        <a href="indhold.html" class="active" title="Dansk">🇩🇰</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>PÉTANQUE</h1>
+            <p>Fra Begynder til Professionel – En Komplet Guide</p>
+        </div>
+
+        <div class="content">
+            <div class="forord">
+                <h2>Forord</h2>
+                <p>Pétanque er mere end bare en sport – det er en livsstil, en social aktivitet og en udfordring både taktisk og teknisk. Denne bog er skrevet for at give begyndere et solidt fundament og tilbyde erfarne spillere nye perspektiver og forbedringstips. Uanset om du lige har holdt en kugle (boule) for første gang eller allerede konkurrerer på højt niveau, er der noget her for dig.</p>
+                <p>En vigtig bemærkning om terminologien: Pétanque har dybe franske rødder. For at din viden skal være komplet – og for at du skal føle dig hjemme i alle sammenhænge, fra den lokale klub til internationale turneringer – vil vi bruge det internationale fagsprog. Dette betyder, at vi i den løbende tekst blander danske termer (som kugle og skydning) med de internationalt anerkendte franske udtryk (som carreau og tirer au fer). Betragt disse franske ord som sportens officielle fagtermer; de er en nødvendig del af spillets kultur og din uddannelse.</p>
+
+                <div style="margin-top: 30px; padding: 20px; background: #fff; border: 2px solid #D2691E; border-radius: 8px;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px; font-size: 24px;">📋 Interaktive værktøjer</h3>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="snydeark.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📝 Snydeark
+                        </a>
+                        <a href="traeningsdagbog.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            📊 Træningsdagbog
+                        </a>
+                        <a href="kampprotokol.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
+                            🏆 Kampprotokol
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toc-section">
+                <h2>Del 1: Grundlæggende for begyndere</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del1-kapitel1.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 1</div>
+                            <div class="chapter-title">Hvad er boule pétanque?</div>
+                            <div class="chapter-desc">Historien bag pétanque, grundregler og spillets idé, forskelle mellem pétanque, boule og boccia/bocce</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel2.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 2</div>
+                            <div class="chapter-title">Udstyr – vælg de rigtige kugler</div>
+                            <div class="chapter-desc">Vægt, størrelse og materiale, forskel mellem konkurrence- og fritidskugler, vedligeholdelse og rengøring</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel3.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 3</div>
+                            <div class="chapter-title">Grundteknikker</div>
+                            <div class="chapter-desc">Korrekt greb og stilling, hvordan man lægger (point), hvordan man skyder (skud)</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del1-kapitel4.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 4</div>
+                            <div class="chapter-title">Spillestrategi for begyndere</div>
+                            <div class="chapter-desc">Simple taktikker for at vinde point, hvordan man læser banen, almindelige fejl og hvordan man undgår dem</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h2>Del 2: Avancerede teknikker for professionelle</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del2-kapitel5.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 5</div>
+                            <div class="chapter-title">Forbedr din point</div>
+                            <div class="chapter-desc">Avancerede placeringsteknikker, tilpas kastet til underlag og vejr, mental træning</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel6.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 6</div>
+                            <div class="chapter-title">Mesterskabsskydning (tirer au fer)</div>
+                            <div class="chapter-desc">Fuldtræffere vs. rulleskud, træningstips for at blive en dygtig skytte, analyse af professionelles skudstil</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel7.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 7</div>
+                            <div class="chapter-title">Taktik på højt niveau</div>
+                            <div class="chapter-desc">Styr spillets tempo, psykologisk krigsførelse, holdspil og kommunikation</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del2-kapitel8.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 8</div>
+                            <div class="chapter-title">Træn smartere</div>
+                            <div class="chapter-desc">Effektive øvelser for solotraining, videohåndtering, fysisk og mental forberedelse</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h2>Del 3: Pétanque som livsstil</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="del3-kapitel9.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 9</div>
+                            <div class="chapter-title">Turneringsspil vs. socialt spil</div>
+                            <div class="chapter-desc">Forskelle i indstilling og strategi, hvordan man finder klubber og turneringer</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del3-kapitel10.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 10</div>
+                            <div class="chapter-title">Pétanque rundt om i verden</div>
+                            <div class="chapter-desc">Kulturelle forskelle i spillet, store turneringer og legendariske spillere</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h2>Del 4: Fordybelse og udvikling</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="fordybelse.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 11</div>
+                            <div class="chapter-title">Strategisk analyse og taktik</div>
+                            <div class="chapter-desc">Avanceret spillestrategi, terrænanalyse og psykologisk spil</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordybelse.html#mental" class="chapter-link">
+                            <div class="chapter-number">Kapitel 12</div>
+                            <div class="chapter-title">Mental styrke og fokus</div>
+                            <div class="chapter-desc">Håndtering af pres, tilt control og motivation</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordybelse.html#traening" class="chapter-link">
+                            <div class="chapter-number">Kapitel 13</div>
+                            <div class="chapter-title">Træningsplan og udvikling</div>
+                            <div class="chapter-desc">Effektiv træning, videoanalyse og studieplan trin for trin</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="fordybelse.html#fysik" class="chapter-link">
+                            <div class="chapter-number">Kapitel 14</div>
+                            <div class="chapter-title">Fysisk træning for pétanque</div>
+                            <div class="chapter-desc">Styrke, balance, bevægelighed og forberedelser</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del4-kapitel15.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 15</div>
+                            <div class="chapter-title">At lede et hold i Boule Pétanque</div>
+                            <div class="chapter-desc">Coaching i praksis - holdudtagelse, taktik under pres, holdopbygning og træningsmiljø</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="del4-kapitel16.html" class="chapter-link">
+                            <div class="chapter-number">Kapitel 16</div>
+                            <div class="chapter-title">Kuglefysik og baneaflæsning</div>
+                            <div class="chapter-desc">Videnskaben bag det perfekte kast - masse, friktion, rotation og kollisioner</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h2>Bilag</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="udstyr.html" class="chapter-link">
+                            <div class="chapter-title">Bilag A: Udstyrsguide</div>
+                            <div class="chapter-desc">Detaljeret guide om kugler - fremstilling, materiale, hårdhed, modeller og vedligeholdelse</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="regler.html" class="chapter-link">
+                            <div class="chapter-title">Bilag B: Komplet regelbog</div>
+                            <div class="chapter-desc">Fuldstændig regelguide fra grundlæggende til avancerede regler og specialtilfælde</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="ordliste.html" class="chapter-link">
+                            <div class="chapter-title">Bilag C: Ordforklaringer</div>
+                            <div class="chapter-desc">Komplet ordliste med franske fagtermer og tekniske begreber - fra carreau til tirer au fer</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="bilag-boulebane.html" class="chapter-link">
+                            <div class="chapter-title">Bilag D: Byg en boulebane</div>
+                            <div class="chapter-desc">Komplet guide til at bygge din egen boulebane - materialer, mål, trin-for-trin og vedligeholdelse</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="toc-section">
+                <h2>📥 Ressourcer til download</h2>
+                <ul class="chapter-list">
+                    <li class="chapter-item">
+                        <a href="snydeark.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">🎯 Snydeark (1 side)</div>
+                            <div class="chapter-desc">Alt du behøver på én side: Kamprutine, etikette, måling, donnée-tips, kastebaner og beslutningstrær. Perfekt at printe ud og have med på banen!</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="traeningsdagbog.html" class="chapter-link" target="_blank">
+                            <div class="chapter-title">📊 Træningsdagbog</div>
+                            <div class="chapter-desc">Dokumenter din udvikling: Dato, underlag, mål, træfprocent, refleksioner og næste skridt. Print ud eller udfyld digitalt.</div>
+                        </a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="kampprotokol.html" class="chapter-link matchprotokoll-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
+                            <div class="chapter-title">📋 Kampprotokol (Interaktiv)</div>
+                            <div class="chapter-desc">Komplet kampprotokol med automatisk analyse: Gem hold, point per runde, statistik (vundne runder, gennemsnitspoint, shutouts, clutch-runder). Gemmes automatisk i browseren. Perfekt til turneringer og træning!</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="back-btn">← Tilbage til Omslag</a>
+        </div>
+    </div>
+</body>
+</html>

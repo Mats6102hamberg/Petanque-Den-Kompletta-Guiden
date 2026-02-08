@@ -148,6 +148,81 @@
                 <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Toppvy: En typisk pétanque-situation med kastcirkel, lillen och sex klot.</p>
             </div>
             
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="max-width: 460px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <!-- Rubriker -->
+                    <text x="140" y="28" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" font-weight="700" fill="#222">RÄTT</text>
+                    <text x="390" y="28" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" font-weight="700" fill="#222">FEL</text>
+                    
+                    <!-- Avdelare -->
+                    <line x1="260" y1="15" x2="260" y2="265" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- === RÄTT SIDA === -->
+                    <!-- Mark/golv -->
+                    <line x1="30" y1="230" x2="250" y2="230" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Kastcirkel (sidovy = en ellips) -->
+                    <ellipse cx="140" cy="230" rx="55" ry="6" fill="none" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Vänster ben -->
+                    <line x1="115" y1="100" x2="112" y2="175" stroke="#222" stroke-width="3"/>
+                    <!-- Vänster vad -->
+                    <line x1="112" y1="175" x2="115" y2="222" stroke="#222" stroke-width="3"/>
+                    <!-- Vänster fot -->
+                    <path d="M 100 224 Q 105 218 115 222 L 130 224 Q 132 230 100 230 Z" fill="#222"/>
+                    
+                    <!-- Höger ben -->
+                    <line x1="155" y1="100" x2="160" y2="175" stroke="#222" stroke-width="3"/>
+                    <!-- Höger vad -->
+                    <line x1="160" y1="175" x2="162" y2="222" stroke="#222" stroke-width="3"/>
+                    <!-- Höger fot -->
+                    <path d="M 148 224 Q 153 218 162 222 L 178 224 Q 180 230 148 230 Z" fill="#222"/>
+                    
+                    <!-- Knä-markering -->
+                    <circle cx="112" cy="175" r="4" fill="#555"/>
+                    <circle cx="160" cy="175" r="4" fill="#555"/>
+                    
+                    <!-- Bock ✓ -->
+                    <circle cx="140" cy="60" r="18" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="140" y="67" text-anchor="middle" font-family="Lato, sans-serif" font-size="22" font-weight="700" fill="#222">✓</text>
+                    
+                    <!-- Etikett -->
+                    <text x="140" y="258" text-anchor="middle" font-family="Lato, sans-serif" font-size="11" fill="#555">Båda fötterna i cirkeln</text>
+                    
+                    <!-- === FEL SIDA === -->
+                    <!-- Mark/golv -->
+                    <line x1="270" y1="230" x2="500" y2="230" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Kastcirkel (sidovy) -->
+                    <ellipse cx="370" cy="230" rx="55" ry="6" fill="none" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Vänster ben (innanför) -->
+                    <line x1="355" y1="100" x2="350" y2="175" stroke="#222" stroke-width="3"/>
+                    <line x1="350" y1="175" x2="352" y2="222" stroke="#222" stroke-width="3"/>
+                    <path d="M 338 224 Q 343 218 352 222 L 368 224 Q 370 230 338 230 Z" fill="#222"/>
+                    
+                    <!-- Höger ben (UTANFÖR cirkeln!) -->
+                    <line x1="400" y1="100" x2="420" y2="175" stroke="#222" stroke-width="3"/>
+                    <line x1="420" y1="175" x2="435" y2="222" stroke="#222" stroke-width="3"/>
+                    <path d="M 422 224 Q 427 218 435 222 L 452 224 Q 454 230 422 230 Z" fill="#222"/>
+                    
+                    <!-- Knä-markering -->
+                    <circle cx="350" cy="175" r="4" fill="#555"/>
+                    <circle cx="420" cy="175" r="4" fill="#555"/>
+                    
+                    <!-- Cirkel runt felet -->
+                    <ellipse cx="440" cy="224" rx="22" ry="14" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    
+                    <!-- Kryss ✗ -->
+                    <circle cx="390" cy="60" r="18" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="390" y="68" text-anchor="middle" font-family="Lato, sans-serif" font-size="22" font-weight="700" fill="#222">✗</text>
+                    
+                    <!-- Etikett -->
+                    <text x="390" y="258" text-anchor="middle" font-family="Lato, sans-serif" font-size="11" fill="#555">En fot utanför = regelbrott</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Sidovy: Fotregeln — båda fötterna måste vara innanför kastcirkeln tills klotet landat.</p>
+            </div>
+            
             <h3>Några viktiga regler att känna till</h3>
             <ul>
                 <li><strong>Kastteknik:</strong> Kloten kastas med handflatan nedåt för att skapa stabilitet och kontroll i luften och i nedslaget.</li>

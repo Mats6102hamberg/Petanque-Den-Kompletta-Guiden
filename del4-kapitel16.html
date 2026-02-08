@@ -96,6 +96,97 @@
                 <p>En mästerpointer kontrollerar sin backspin lika noggrant som en golfare kontrollerar sin sving.</p>
             </div>
             
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <!-- Rubriker -->
+                    <text x="260" y="22" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#222">Backspin — bromseffekt vid landning</text>
+                    
+                    <!-- Avdelare -->
+                    <line x1="260" y1="35" x2="260" y2="295" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- Panel-rubriker -->
+                    <text x="130" y="48" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" font-weight="700" fill="#222">1) Utan backspin</text>
+                    <text x="390" y="48" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" font-weight="700" fill="#222">2) Med backspin</text>
+                    
+                    <!-- ========== PANEL 1: UTAN BACKSPIN ========== -->
+                    <!-- Mark -->
+                    <line x1="20" y1="200" x2="250" y2="200" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Kastbåge -->
+                    <path d="M 40 180 Q 80 100 120 198" fill="none" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Landningspunkt -->
+                    <circle cx="120" cy="198" r="3" fill="#222"/>
+                    <text x="120" y="220" text-anchor="middle" font-family="Lato, sans-serif" font-size="8" fill="#888">Landning</text>
+                    
+                    <!-- Klot vid landning (liten) -->
+                    <circle cx="120" cy="190" r="8" fill="none" stroke="#222" stroke-width="1.5"/>
+                    
+                    <!-- Lång rullsträcka -->
+                    <line x1="128" y1="195" x2="230" y2="195" stroke="#222" stroke-width="1.5" stroke-dasharray="3,2"/>
+                    <circle cx="230" cy="190" r="8" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="230" y="220" text-anchor="middle" font-family="Lato, sans-serif" font-size="8" fill="#888">Stopp</text>
+                    
+                    <!-- Rullsträcka-mått -->
+                    <line x1="120" y1="240" x2="230" y2="240" stroke="#222" stroke-width="1.5"/>
+                    <line x1="120" y1="235" x2="120" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <line x1="230" y1="235" x2="230" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <defs>
+                        <marker id="arr7l" markerWidth="6" markerHeight="4" refX="0" refY="2" orient="auto">
+                            <polygon points="6 0, 0 2, 6 4" fill="#222"/>
+                        </marker>
+                        <marker id="arr7r" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+                            <polygon points="0 0, 6 2, 0 4" fill="#222"/>
+                        </marker>
+                    </defs>
+                    <text x="175" y="255" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="700" fill="#222">Lång rull</text>
+                    
+                    <!-- Rotationspil (framåt-rotation) -->
+                    <text x="95" y="170" font-family="Lato, sans-serif" font-size="9" fill="#888">→ rotation</text>
+                    
+                    <!-- Resultat -->
+                    <rect x="55" y="270" width="150" height="22" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+                    <text x="130" y="285" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="600" fill="#333">Svårt att kontrollera</text>
+                    
+                    <!-- ========== PANEL 2: MED BACKSPIN ========== -->
+                    <!-- Mark -->
+                    <line x1="270" y1="200" x2="500" y2="200" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Kastbåge (högre) -->
+                    <path d="M 300 180 Q 340 80 380 198" fill="none" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Landningspunkt -->
+                    <circle cx="380" cy="198" r="3" fill="#222"/>
+                    <text x="380" y="220" text-anchor="middle" font-family="Lato, sans-serif" font-size="8" fill="#888">Landning</text>
+                    
+                    <!-- Klot vid landning -->
+                    <circle cx="380" cy="190" r="8" fill="none" stroke="#222" stroke-width="1.5"/>
+                    
+                    <!-- Kort rullsträcka -->
+                    <line x1="388" y1="195" x2="415" y2="195" stroke="#222" stroke-width="1.5" stroke-dasharray="3,2"/>
+                    <circle cx="415" cy="190" r="8" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="415" y="220" text-anchor="middle" font-family="Lato, sans-serif" font-size="8" fill="#888">Stopp</text>
+                    
+                    <!-- Rullsträcka-mått -->
+                    <line x1="380" y1="240" x2="415" y2="240" stroke="#222" stroke-width="1.5"/>
+                    <line x1="380" y1="235" x2="380" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <line x1="415" y1="235" x2="415" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <text x="397" y="255" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="700" fill="#222">Kort</text>
+                    
+                    <!-- Rotationspil (bakåt-rotation = backspin) -->
+                    <text x="345" y="170" font-family="Lato, sans-serif" font-size="9" fill="#888">← backspin</text>
+                    
+                    <!-- Backspin-symbol på klotet -->
+                    <path d="M 375 82 Q 370 75 380 72 Q 390 75 385 82" fill="none" stroke="#222" stroke-width="1.2"/>
+                    <text x="395" y="80" font-family="Lato, sans-serif" font-size="8" fill="#666">spin</text>
+                    
+                    <!-- Resultat -->
+                    <rect x="315" y="270" width="150" height="22" rx="3" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1"/>
+                    <text x="390" y="285" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="600" fill="#333">Precision & kontroll</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Sidovy: Utan backspin rullar klotet långt — med backspin stannar det snabbt.</p>
+            </div>
+            
             <h2>2) Banans fysik — varför underlag avgör spelet</h2>
             
             <h3>Friktion på olika underlag</h3>

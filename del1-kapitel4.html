@@ -54,6 +54,99 @@
                 <p><strong>Regel att minnas:</strong><br>Först bygga position — sedan förbättra den.</p>
             </div>
             
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <!-- Rubriker -->
+                    <text x="90" y="22" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" font-weight="700" fill="#222">A) Klot framför</text>
+                    <text x="270" y="22" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" font-weight="700" fill="#222">B) Backstop</text>
+                    <text x="450" y="22" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" font-weight="700" fill="#222">C) Promotera</text>
+                    
+                    <!-- Avdelare -->
+                    <line x1="180" y1="10" x2="180" y2="290" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    <line x1="360" y1="10" x2="360" y2="290" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- ========== PANEL A: Klot framför lillen ========== -->
+                    <!-- Lillen -->
+                    <circle cx="90" cy="100" r="6" fill="#222"/>
+                    <text x="90" y="88" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="700" fill="#333">Lillen</text>
+                    
+                    <!-- Ditt klot 30–50 cm framför -->
+                    <circle cx="90" cy="165" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="82" y1="165" x2="98" y2="165" stroke="#222" stroke-width="1.5"/>
+                    <line x1="90" y1="157" x2="90" y2="173" stroke="#222" stroke-width="1.5"/>
+                    <text x="115" y="168" font-family="Lato, sans-serif" font-size="9" fill="#666">Ditt klot</text>
+                    
+                    <!-- Avståndsmått -->
+                    <line x1="65" y1="108" x2="65" y2="152" stroke="#bbb" stroke-width="1"/>
+                    <line x1="60" y1="108" x2="70" y2="108" stroke="#bbb" stroke-width="1"/>
+                    <line x1="60" y1="152" x2="70" y2="152" stroke="#bbb" stroke-width="1"/>
+                    <text x="55" y="134" font-family="Lato, sans-serif" font-size="8" fill="#999" text-anchor="end">30–50</text>
+                    <text x="55" y="143" font-family="Lato, sans-serif" font-size="8" fill="#999" text-anchor="end">cm</text>
+                    
+                    <!-- Kastcirkel -->
+                    <circle cx="90" cy="250" r="16" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="90" y="278" text-anchor="middle" font-family="Lato, sans-serif" font-size="8" fill="#888">Cirkel</text>
+                    
+                    <!-- ========== PANEL B: Backstop ========== -->
+                    <!-- Lillen -->
+                    <circle cx="270" cy="120" r="6" fill="#222"/>
+                    <text x="270" y="108" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="700" fill="#333">Lillen</text>
+                    
+                    <!-- Backstop-klot (bakom lillen) -->
+                    <circle cx="270" cy="80" r="13" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="262" y1="76" x2="278" y2="76" stroke="#222" stroke-width="1"/>
+                    <line x1="262" y1="84" x2="278" y2="84" stroke="#222" stroke-width="1"/>
+                    <text x="295" y="83" font-family="Lato, sans-serif" font-size="9" fill="#666">Backstop</text>
+                    
+                    <!-- Nytt klot som stannar mot backstop -->
+                    <circle cx="270" cy="165" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="262" y1="165" x2="278" y2="165" stroke="#222" stroke-width="1.5"/>
+                    <line x1="270" y1="157" x2="270" y2="173" stroke="#222" stroke-width="1.5"/>
+                    
+                    <!-- Pil: nytt klot kastas mot backstop -->
+                    <defs>
+                        <marker id="arr6" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+                            <polygon points="0 0, 7 2.5, 0 5" fill="#222"/>
+                        </marker>
+                    </defs>
+                    <line x1="270" y1="240" x2="270" y2="182" stroke="#222" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr6)"/>
+                    <text x="295" y="168" font-family="Lato, sans-serif" font-size="9" fill="#666">Stannar</text>
+                    <text x="295" y="178" font-family="Lato, sans-serif" font-size="9" fill="#666">mot stöd</text>
+                    
+                    <!-- Kastcirkel -->
+                    <circle cx="270" cy="250" r="16" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="270" y="278" text-anchor="middle" font-family="Lato, sans-serif" font-size="8" fill="#888">Cirkel</text>
+                    
+                    <!-- ========== PANEL C: Promotera ========== -->
+                    <!-- Lillen -->
+                    <circle cx="450" cy="100" r="6" fill="#222"/>
+                    <text x="450" y="88" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="700" fill="#333">Lillen</text>
+                    
+                    <!-- Eget klot (före = längre bort) -->
+                    <circle cx="450" cy="175" r="13" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="4,2"/>
+                    <text x="475" y="178" font-family="Lato, sans-serif" font-size="9" fill="#999">Före</text>
+                    
+                    <!-- Eget klot (efter = närmare lillen) -->
+                    <circle cx="450" cy="130" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="442" y1="130" x2="458" y2="130" stroke="#222" stroke-width="1.5"/>
+                    <line x1="450" y1="122" x2="450" y2="138" stroke="#222" stroke-width="1.5"/>
+                    <text x="475" y="133" font-family="Lato, sans-serif" font-size="9" fill="#666">Efter</text>
+                    
+                    <!-- Pil: skjuts framåt -->
+                    <path d="M 450 162 L 450 146" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#arr6)"/>
+                    
+                    <!-- Skjutande klot nedifrån -->
+                    <line x1="450" y1="240" x2="450" y2="192" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr6)"/>
+                    <text x="475" y="220" font-family="Lato, sans-serif" font-size="9" fill="#888">Skjuter</text>
+                    <text x="475" y="230" font-family="Lato, sans-serif" font-size="9" fill="#888">eget klot</text>
+                    
+                    <!-- Kastcirkel -->
+                    <circle cx="450" cy="250" r="16" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="450" y="278" text-anchor="middle" font-family="Lato, sans-serif" font-size="8" fill="#888">Cirkel</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Toppvy: Tre grundtaktiker — klot framför, backstop och promotering.</p>
+            </div>
+            
             <h3>4) Begränsa skadan när du ligger illa till</h3>
             <p>Om motståndaren har lagt ett nästan perfekt klot och du inte kan slå det, är det ofta klokare att:</p>
             <ul>

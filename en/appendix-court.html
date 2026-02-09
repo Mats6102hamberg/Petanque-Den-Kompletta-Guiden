@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appendix D: Building a Boule Court - Pétanque Guide</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <a href="contents.html" class="toc-button">Contents</a>
+    <a href="../en/contents.html" class="toc-button">Contents</a>
+    <div class="language-switcher">
+        <a href="../bilaga-boulebana.html" title="Svenska">🇸🇪</a>
+        <a href="appendix-court.html" class="active" title="English">🇬🇧</a>
+        <a href="../fr/annexe-terrain.html" title="Français">🇫🇷</a>
+    </div>
+
     <div class="container">
         <div class="header header-small">
             <div class="chapter-number">Appendix D</div>
@@ -16,340 +47,443 @@
         </div>
 
         <div class="content">
-            <p class="quote">A boule court of your own in the garden is the dream of many pétanque players. With proper planning and materials, you can create a playing surface that will last for many years and provide endless hours of playing enjoyment.</p>
+            <p>Building a boule court is building a place for community, training and competition. A well-made court makes the game more enjoyable, fairer and more durable over time. This guide is written for both private individuals and clubs.</p>
 
-            <h2>Planning and Preparation</h2>
-
-            <h3>Choose the Right Location</h3>
-            <p>Before you start digging, think carefully about the placement:</p>
+            <h2>1) Planning and preparation</h2>
+            <p>Before the first dig — go through this checklist.</p>
 
             <div class="highlight-box">
-                <h4>Placement Checklist:</h4>
+                <h4>Placement checklist</h4>
                 <ul>
-                    <li><strong>Size:</strong> At least 12 × 3 meters for a standard court (preferably 15 × 4 m if you have space)</li>
-                    <li><strong>Clear area around:</strong> At least 50 cm extra on each side for standing and moving</li>
-                    <li><strong>Slope:</strong> The ground should be relatively level – a slight slope (1-2%) for drainage is good</li>
-                    <li><strong>Sun/shade:</strong> Partial shade is ideal – full sun makes the court hot and dries it out quickly</li>
-                    <li><strong>Distance to house:</strong> Remember that boules bounce – keep distance from windows and delicate surfaces</li>
-                    <li><strong>Water drainage:</strong> Avoid low points where water collects</li>
+                    <li><strong>Size:</strong> Is there room for the chosen court type + safety zone around it?</li>
+                    <li><strong>Clear area:</strong> At least 1 metre around the court for movement and spectators.</li>
+                    <li><strong>Slope:</strong> Preferably a slight fall (1–2%) for drainage.</li>
+                    <li><strong>Sun/shade:</strong> A mix is ideal — for comfort during long playing days.</li>
+                    <li><strong>Distance to buildings:</strong> At least 5 metres (noise and safety).</li>
+                    <li><strong>Water drainage:</strong> Avoid low spots where water collects.</li>
+                    <li><strong>Soil type:</strong> Firm ground is best; avoid clay and peat.</li>
                 </ul>
             </div>
 
-            <h3>Dimensions and Measurements</h3>
-            <table>
-                <tr>
-                    <th>Court Type</th>
-                    <th>Length</th>
-                    <th>Width</th>
-                    <th>Usage</th>
-                </tr>
-                <tr>
-                    <td><strong>Minimum Standard</strong></td>
-                    <td>12 m</td>
-                    <td>3 m</td>
-                    <td>Training and social play</td>
-                </tr>
-                <tr>
-                    <td><strong>Recommended</strong></td>
-                    <td>15 m</td>
-                    <td>4 m</td>
-                    <td>Standard matches and training</td>
-                </tr>
-                <tr>
-                    <td><strong>Competition Standard</strong></td>
-                    <td>15 m</td>
-                    <td>4 m</td>
-                    <td>Official competitions (FIPJP)</td>
-                </tr>
-                <tr>
-                    <td><strong>Compact Garden</strong></td>
-                    <td>10 m</td>
-                    <td>2.5 m</td>
-                    <td>Limited space, practice</td>
-                </tr>
-            </table>
-
-            <h2>Materials You Need</h2>
-
-            <h3>For a 15 × 4 Meter Court</h3>
+            <h3>Dimensions — four common court types</h3>
             <div class="info-box">
-                <h4>Base Materials:</h4>
-                <ul>
-                    <li><strong>Landscape fabric (geotextile):</strong> 70-80 m² – prevents weeds and stabilizes</li>
-                    <li><strong>Base layer (crushed stone 0-32 mm):</strong> approx. 6-8 m³ (10-12 cm thickness)</li>
-                    <li><strong>Sub-base layer (stone dust 0-8 mm):</strong> approx. 3-4 m³ (5-6 cm thickness)</li>
-                    <li><strong>Surface layer (boule gravel 0-4 mm):</strong> approx. 2-3 m³ (3-5 cm thickness)</li>
-                </ul>
-
-                <h4>Edging Materials (optional but recommended):</h4>
-                <ul>
-                    <li><strong>Wooden border:</strong> Pressure-treated planks 50 × 150 mm, approx. 40 linear meters</li>
-                    <li><strong>Alternatives:</strong> Curbstone, concrete edging, or steel edging</li>
-                    <li><strong>Posts:</strong> 45 × 45 mm posts to secure the border, approx. 16-20 pieces</li>
-                </ul>
-
-                <h4>Tools:</h4>
-                <ul>
-                    <li>Spade and excavator (or a lot of patience)</li>
-                    <li>Spirit level and string line</li>
-                    <li>Plate compactor (can be rented)</li>
-                    <li>Rake and leveling tool</li>
-                    <li>Wheelbarrow</li>
-                </ul>
-            </div>
-
-            <h2>Building the Court Step by Step</h2>
-
-            <h3>Step 1: Mark Out and Excavate</h3>
-            <div class="highlight-box">
-                <ol>
-                    <li>Mark the outer edges of the court with stakes and string</li>
-                    <li>Check that the corners are square (measure the diagonals – they should be equal)</li>
-                    <li>Excavate 20-25 cm deep within the marked area</li>
-                    <li>Create a slight slope (1-2%) in one direction for water drainage</li>
-                    <li>Compact the bottom thoroughly with a plate compactor or hand tamper</li>
-                </ol>
-            </div>
-
-            <h3>Step 2: Lay Landscape Fabric</h3>
-            <div class="info-box">
-                <p>The landscape fabric is important to prevent weeds from growing through the gravel and to prevent the layers from mixing with the underlying soil.</p>
-                <ul>
-                    <li>Lay out the landscape fabric over the entire excavated area</li>
-                    <li>Let the fabric extend up along the edges (it can be folded in later)</li>
-                    <li>Overlap sheets by at least 20 cm</li>
-                </ul>
-            </div>
-
-            <h3>Step 3: Base Layer (Crushed Stone)</h3>
-            <div class="highlight-box">
-                <ol>
-                    <li>Fill with 10-12 cm of crushed stone (0-32 mm)</li>
-                    <li>Spread evenly with a rake</li>
-                    <li>Compact thoroughly with a plate compactor – go over it several times</li>
-                    <li>Check that the surface is level and has the correct slope</li>
-                    <li>Water lightly and compact again for best results</li>
-                </ol>
-                <p><strong>Tip:</strong> This layer is the foundation – take time to do it properly. A good foundation creates a court that will last for many years.</p>
-            </div>
-
-            <h3>Step 4: Sub-base Layer (Stone Dust)</h3>
-            <div class="info-box">
-                <ol>
-                    <li>Add 5-6 cm of stone dust (0-8 mm)</li>
-                    <li>Spread evenly and level with a rake and straightedge</li>
-                    <li>Compact with a plate compactor</li>
-                    <li>Water and compact again</li>
-                    <li>Allow to settle for a few days before the next step</li>
-                </ol>
-            </div>
-
-            <h3>Step 5: Install the Border (if chosen)</h3>
-            <div class="highlight-box">
-                <h4>Wooden Border:</h4>
-                <ol>
-                    <li>Drive posts along the edges of the court (approx. 1.5 m apart)</li>
-                    <li>Attach the planks to the inside of the posts</li>
-                    <li>Check that the border is level and vertical</li>
-                    <li>The border should extend approx. 5-8 cm above the finished surface</li>
-                </ol>
-                <p><strong>Alternative:</strong> Buried curbstones or steel edging give a cleaner appearance.</p>
-            </div>
-
-            <h3>Step 6: Surface Layer (Boule Gravel)</h3>
-            <div class="highlight-box">
-                <ol>
-                    <li>Add 3-5 cm of boule gravel (0-4 mm, preferably crusite limestone or granite gravel)</li>
-                    <li>Spread evenly with a rake</li>
-                    <li>Compact <strong>lightly</strong> – the surface layer should not become too hard</li>
-                    <li>Water gently and allow to settle</li>
-                    <li>Adjust any unevenness after a few days of play</li>
-                </ol>
-                <p><strong>Important:</strong> The surface layer should be firm enough to walk on but give slightly when the boule lands. Too hard = the boule bounces too much. Too soft = the boule "dies" and doesn't roll.</p>
-            </div>
-
-            <h2>Choosing the Right Gravel</h2>
-
-            <h3>The Surface Layer is Crucial</h3>
-            <p>The quality of play depends largely on the surface layer. Here are the most common options:</p>
-
-            <table>
-                <tr>
-                    <th>Gravel Type</th>
-                    <th>Properties</th>
-                    <th>Advantages</th>
-                    <th>Disadvantages</th>
-                </tr>
-                <tr>
-                    <td><strong>Crushed Limestone 0-4 mm</strong></td>
-                    <td>Light colored, binds well</td>
-                    <td>Classic appearance, stable surface, binds with water</td>
-                    <td>Can become muddy in heavy rain</td>
-                </tr>
-                <tr>
-                    <td><strong>Granite Gravel 0-4 mm</strong></td>
-                    <td>Gray/reddish, hard</td>
-                    <td>Very durable, drains well</td>
-                    <td>Doesn't bind as well, may roll more</td>
-                </tr>
-                <tr>
-                    <td><strong>Specialty Boule Gravel</strong></td>
-                    <td>Optimized blend</td>
-                    <td>Perfect playing surface, professional feel</td>
-                    <td>More expensive, harder to find</td>
-                </tr>
-                <tr>
-                    <td><strong>Sand/Gravel Mix</strong></td>
-                    <td>Softer surface</td>
-                    <td>Cheap, easy to work with</td>
-                    <td>Requires more maintenance, tracks easily</td>
-                </tr>
-            </table>
-
-            <div class="info-box">
-                <h4>Recommendation</h4>
-                <p>For most home courts, <strong>crushed limestone 0-4 mm</strong> is the best choice. It provides an authentic playing feel, binds well when watered, and is relatively inexpensive. Available at most building supply stores and gravel pits.</p>
-            </div>
-
-            <h2>Court Maintenance</h2>
-
-            <h3>Regular Maintenance</h3>
-            <div class="highlight-box">
-                <h4>After Each Game:</h4>
-                <ul>
-                    <li>Level out holes and unevenness with a rake</li>
-                    <li>Spread the gravel evenly across the surface</li>
-                </ul>
-
-                <h4>Every Week (with regular play):</h4>
-                <ul>
-                    <li>Rake the entire court thoroughly</li>
-                    <li>Water if dry – a moist surface plays better</li>
-                    <li>Remove leaves and debris</li>
-                </ul>
-
-                <h4>Every Season:</h4>
-                <ul>
-                    <li>Top up with new surface gravel where needed (normally 0.5-1 m³ per year)</li>
-                    <li>Check the border for rot or damage</li>
-                    <li>Clear any weeds along the edges</li>
-                </ul>
-            </div>
-
-            <h3>Troubleshooting</h3>
-            <table>
-                <tr>
-                    <th>Problem</th>
-                    <th>Cause</th>
-                    <th>Solution</th>
-                </tr>
-                <tr>
-                    <td>Standing water</td>
-                    <td>Poor drainage, low spot</td>
-                    <td>Add gravel, improve slope</td>
-                </tr>
-                <tr>
-                    <td>Weeds growing through</td>
-                    <td>Landscape fabric missing/damaged</td>
-                    <td>Clear and apply weed killer, add gravel</td>
-                </tr>
-                <tr>
-                    <td>Surface too hard</td>
-                    <td>Too much compaction</td>
-                    <td>Rake up and add new loose gravel</td>
-                </tr>
-                <tr>
-                    <td>Surface too loose</td>
-                    <td>Too little compaction/too dry</td>
-                    <td>Water and compact lightly with roller or plate compactor</td>
-                </tr>
-                <tr>
-                    <td>Gravel disappearing</td>
-                    <td>Wind, rain, play</td>
-                    <td>Normal – top up annually</td>
-                </tr>
-            </table>
-
-            <h2>Lighting and Accessories</h2>
-
-            <h3>Lighting for Evening Play</h3>
-            <p>If you want to play in the evening, you need good lighting:</p>
-            <ul>
-                <li><strong>Brightness:</strong> At least 200-300 lux across the entire court</li>
-                <li><strong>Placement:</strong> High (3-4 m) and to the side to avoid glare and shadows</li>
-                <li><strong>Type:</strong> LED floodlights are energy-efficient and provide good light</li>
-                <li><strong>Quantity:</strong> 2-4 floodlights depending on court length</li>
-            </ul>
-
-            <h3>Practical Accessories</h3>
-            <div class="info-box">
-                <ul>
-                    <li><strong>Bench:</strong> Place one or two benches at the side for spectators and rest</li>
-                    <li><strong>Storage:</strong> A small box for boules, rake, and measuring tools</li>
-                    <li><strong>Scoreboard:</strong> Mounted at the side or freestanding</li>
-                    <li><strong>Sun protection:</strong> Parasol or pergola if the court is in full sun</li>
-                    <li><strong>Water hose:</strong> Practical for watering and rinsing the court</li>
-                </ul>
-            </div>
-
-            <h2>Cost Estimate</h2>
-
-            <div class="highlight-box">
-                <h4>For a 15 × 4 Meter Court (DIY):</h4>
-                <table>
-                    <tr>
-                        <th>Material</th>
-                        <th>Estimated Cost (USD)</th>
-                    </tr>
-                    <tr>
-                        <td>Landscape fabric</td>
-                        <td>$50-80</td>
-                    </tr>
-                    <tr>
-                        <td>Crushed stone (base layer)</td>
-                        <td>$200-350</td>
-                    </tr>
-                    <tr>
-                        <td>Stone dust (sub-base layer)</td>
-                        <td>$150-250</td>
-                    </tr>
-                    <tr>
-                        <td>Boule gravel (surface layer)</td>
-                        <td>$150-250</td>
-                    </tr>
-                    <tr>
-                        <td>Wooden border (pressure-treated)</td>
-                        <td>$200-350</td>
-                    </tr>
-                    <tr>
-                        <td>Plate compactor rental</td>
-                        <td>$50-100/day</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Total (materials)</strong></td>
-                        <td><strong>$800-1,400</strong></td>
-                    </tr>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Court type</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Dimensions</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Minimum standard</td>
+                            <td style="padding: 10px;">12 × 3 m</td>
+                            <td style="padding: 10px;">Common standard, perfect for clubs and gardens</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Recommended</td>
+                            <td style="padding: 10px;">15 × 4 m</td>
+                            <td style="padding: 10px;">Close to international standard</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Competition</td>
+                            <td style="padding: 10px;">15 × 4 m</td>
+                            <td style="padding: 10px;">Meets FIPJP recommendation</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: 600;">Compact</td>
+                            <td style="padding: 10px;">10 × 2.5 m</td>
+                            <td style="padding: 10px;">Small plots, practice court</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <p><em>Prices vary depending on your location and current material costs. Gravel delivery is often an additional charge.</em></p>
             </div>
 
-            <h2>Summary</h2>
-            <p>Building your own boule court is an affordable project that provides many years of playing enjoyment. The key success factors are:</p>
+            <div class="warning-box" style="margin-top: 15px;">
+                <p><strong>Our recommendation:</strong> if building from scratch, 15 × 4 m is usually the wisest choice — the court ages better and feels more "real".</p>
+            </div>
 
+            <h2>2) Materials (for a 15 × 4 m court)</h2>
+
+            <div class="highlight-box">
+                <h4>Base materials</h4>
+                <ul>
+                    <li><strong>Landscape fabric (geotextile)</strong> — prevents weeds.</li>
+                    <li><strong>Crushed stone 0–32 mm</strong> — base layer (10–12 cm).</li>
+                    <li><strong>Stone dust 0–8 mm</strong> — sub-base layer (5–6 cm).</li>
+                    <li><strong>Boule gravel 0–4 mm</strong> — surface layer (3–5 cm).</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Edging material (choose one option)</h4>
+                <ul>
+                    <li>Wooden border (pressure-treated)</li>
+                    <li>Curbstone (concrete or granite)</li>
+                    <li>Metal or plastic edging</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 15px;">
+                <h4>Tools</h4>
+                <ul>
+                    <li>Spade and shovel</li>
+                    <li>Spirit level or laser level</li>
+                    <li>Plate compactor (can be rented)</li>
+                    <li>Rake and straightedge</li>
+                    <li>Wheelbarrow and measuring tape</li>
+                </ul>
+            </div>
+
+            <h2>3) Building step by step (six steps)</h2>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <!-- Title -->
+                    <text x="260" y="22" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#222">Cross-section — boule court (layer by layer)</text>
+
+                    <!-- ========== GROUND (excavated) ========== -->
+                    <!-- Excavated profile -->
+                    <path d="M 50 300 L 50 280 L 80 280 L 80 100 L 420 100 L 420 280 L 450 280 L 450 300" fill="none" stroke="#222" stroke-width="2"/>
+                    <!-- Ground surface outside -->
+                    <line x1="20" y1="100" x2="80" y2="100" stroke="#222" stroke-width="2"/>
+                    <line x1="420" y1="100" x2="500" y2="100" stroke="#222" stroke-width="2"/>
+                    <!-- Soil hatching -->
+                    <line x1="55" y1="285" x2="65" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <line x1="65" y1="285" x2="75" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <line x1="430" y1="285" x2="440" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <line x1="440" y1="285" x2="450" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <!-- Ground label -->
+                    <text x="35" y="295" text-anchor="end" font-family="Lato, sans-serif" font-size="9" fill="#888">Ground</text>
+
+                    <!-- ========== LAYER 1: Excavated ground (bottom) ========== -->
+                    <rect x="80" y="260" width="340" height="20" fill="#e0ddd8" stroke="#222" stroke-width="1"/>
+                    <text x="250" y="274" text-anchor="middle" font-family="Lato, sans-serif" font-size="9" fill="#555">Excavated ground (compacted)</text>
+
+                    <!-- ========== LANDSCAPE FABRIC ========== -->
+                    <line x1="80" y1="258" x2="420" y2="258" stroke="#222" stroke-width="2.5" stroke-dasharray="6,2"/>
+                    <!-- Fabric up the sides -->
+                    <line x1="80" y1="258" x2="80" y2="230" stroke="#222" stroke-width="2.5" stroke-dasharray="6,2"/>
+                    <line x1="420" y1="258" x2="420" y2="230" stroke="#222" stroke-width="2.5" stroke-dasharray="6,2"/>
+
+                    <!-- ========== LAYER 2: Crushed stone ========== -->
+                    <rect x="80" y="195" width="340" height="63" fill="#d4cfc7" stroke="#222" stroke-width="1"/>
+                    <!-- Gravel texture -->
+                    <circle cx="120" cy="220" r="3" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="160" cy="235" r="4" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="200" cy="215" r="3" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="250" cy="240" r="3.5" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="300" cy="220" r="4" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="340" cy="235" r="3" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="380" cy="215" r="3.5" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <text x="250" y="228" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="600" fill="#444">Crushed stone 0–32 mm</text>
+
+                    <!-- ========== LAYER 3: Stone dust ========== -->
+                    <rect x="80" y="155" width="340" height="40" fill="#e8e3da" stroke="#222" stroke-width="1"/>
+                    <!-- Fine texture -->
+                    <circle cx="130" cy="175" r="1.5" fill="#bbb"/>
+                    <circle cx="180" cy="170" r="1.5" fill="#bbb"/>
+                    <circle cx="230" cy="178" r="1.5" fill="#bbb"/>
+                    <circle cx="280" cy="168" r="1.5" fill="#bbb"/>
+                    <circle cx="330" cy="175" r="1.5" fill="#bbb"/>
+                    <circle cx="380" cy="170" r="1.5" fill="#bbb"/>
+                    <text x="250" y="180" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="600" fill="#444">Stone dust 0–8 mm</text>
+
+                    <!-- ========== LAYER 4: Boule gravel (surface) ========== -->
+                    <rect x="80" y="125" width="340" height="30" fill="#f0ebe3" stroke="#222" stroke-width="1"/>
+                    <text x="250" y="144" text-anchor="middle" font-family="Lato, sans-serif" font-size="10" font-weight="600" fill="#444">Boule gravel 0–4 mm</text>
+
+                    <!-- ========== BORDER (edging) ========== -->
+                    <!-- Left border -->
+                    <rect x="68" y="100" width="12" height="160" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="72" y1="110" x2="72" y2="250" stroke="#999" stroke-width="0.8"/>
+                    <line x1="76" y1="110" x2="76" y2="250" stroke="#999" stroke-width="0.8"/>
+                    <!-- Right border -->
+                    <rect x="420" y="100" width="12" height="160" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="424" y1="110" x2="424" y2="250" stroke="#999" stroke-width="0.8"/>
+                    <line x1="428" y1="110" x2="428" y2="250" stroke="#999" stroke-width="0.8"/>
+
+                    <!-- Border label -->
+                    <text x="55" y="175" text-anchor="end" font-family="Lato, sans-serif" font-size="9" font-weight="700" fill="#333">Border</text>
+                    <line x1="57" y1="173" x2="67" y2="173" stroke="#222" stroke-width="1"/>
+
+                    <!-- ========== DIMENSION LINES (right side) ========== -->
+                    <!-- Boule gravel: 3–5 cm -->
+                    <line x1="440" y1="125" x2="460" y2="125" stroke="#888" stroke-width="0.8"/>
+                    <line x1="440" y1="155" x2="460" y2="155" stroke="#888" stroke-width="0.8"/>
+                    <line x1="455" y1="125" x2="455" y2="155" stroke="#888" stroke-width="0.8"/>
+                    <text x="465" y="144" font-family="Lato, sans-serif" font-size="9" fill="#666">3–5 cm</text>
+
+                    <!-- Stone dust: 5–6 cm -->
+                    <line x1="440" y1="195" x2="470" y2="195" stroke="#888" stroke-width="0.8"/>
+                    <line x1="465" y1="155" x2="465" y2="195" stroke="#888" stroke-width="0.8"/>
+                    <text x="475" y="179" font-family="Lato, sans-serif" font-size="9" fill="#666">5–6 cm</text>
+
+                    <!-- Crushed stone: 10–12 cm -->
+                    <line x1="440" y1="258" x2="480" y2="258" stroke="#888" stroke-width="0.8"/>
+                    <line x1="475" y1="195" x2="475" y2="258" stroke="#888" stroke-width="0.8"/>
+                    <text x="485" y="230" font-family="Lato, sans-serif" font-size="9" fill="#666">10–12 cm</text>
+
+                    <!-- Landscape fabric label -->
+                    <text x="465" y="256" font-family="Lato, sans-serif" font-size="8" fill="#888">↑ fabric</text>
+
+                    <!-- Total depth -->
+                    <line x1="490" y1="100" x2="500" y2="100" stroke="#222" stroke-width="1"/>
+                    <line x1="490" y1="280" x2="500" y2="280" stroke="#222" stroke-width="1"/>
+                    <line x1="497" y1="100" x2="497" y2="280" stroke="#222" stroke-width="1"/>
+                    <text x="505" y="195" font-family="Lato, sans-serif" font-size="9" font-weight="700" fill="#333" transform="rotate(90, 505, 195)">~20–25 cm</text>
+
+                    <!-- Boules on the surface -->
+                    <circle cx="200" cy="118" r="7" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <circle cx="300" cy="118" r="7" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="250" y="55" text-anchor="middle" font-family="Lato, sans-serif" font-size="9" fill="#888">↓ playing surface ↓</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Cross-section: Boule court with landscape fabric, crushed stone, stone dust, boule gravel and border.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Step 1 — Mark out and excavate (20–25 cm)</h4>
+                <ul>
+                    <li>Mark the outer dimensions of the court.</li>
+                    <li>Excavate to an even depth.</li>
+                    <li>Create a slight slope (1–2%) for drainage.</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Step 2 — Lay landscape fabric</h4>
+                <ul>
+                    <li>Cover the entire area.</li>
+                    <li>Let the fabric extend a few centimetres up the sides.</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 15px;">
+                <h4>Step 3 — Base layer (crushed stone 10–12 cm)</h4>
+                <ul>
+                    <li>Spread the crushed stone.</li>
+                    <li>Water lightly.</li>
+                    <li>Compact firmly with a plate compactor.</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Step 4 — Sub-base layer (stone dust 5–6 cm)</h4>
+                <ul>
+                    <li>Spread an even layer.</li>
+                    <li>Water and compact again.</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 15px;">
+                <h4>Step 5 — Install the border</h4>
+                <ul>
+                    <li>Set edging around the entire court.</li>
+                    <li>Check that everything is level.</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Step 6 — Surface layer (boule gravel 3–5 cm)</h4>
+                <ul>
+                    <li>Spread 0–4 mm boule gravel.</li>
+                    <li>Rake evenly.</li>
+                    <li>Compact lightly — but not rock-hard.</li>
+                </ul>
+            </div>
+
+            <h2>4) Choosing the right gravel</h2>
+
+            <div class="info-box">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Type</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Feel</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Advantage</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Disadvantage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Crushed limestone 0–4 mm</td>
+                            <td style="padding: 10px;">Soft–medium</td>
+                            <td style="padding: 10px;">Best all-round</td>
+                            <td style="padding: 10px;">Can get dusty in dry weather</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Granite gravel 0–4 mm</td>
+                            <td style="padding: 10px;">Harder</td>
+                            <td style="padding: 10px;">Very durable</td>
+                            <td style="padding: 10px;">Faster court</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Specialty gravel</td>
+                            <td style="padding: 10px;">Optimised</td>
+                            <td style="padding: 10px;">Very even play</td>
+                            <td style="padding: 10px;">More expensive</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: 600;">Sand/gravel mix</td>
+                            <td style="padding: 10px;">Soft</td>
+                            <td style="padding: 10px;">Cheap</td>
+                            <td style="padding: 10px;">Less stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box" style="margin-top: 15px;">
+                <p><strong>Recommendation:</strong> Crushed limestone 0–4 mm — best balance for most courts.</p>
+            </div>
+
+            <h2>5) Maintenance — keeping the court in shape for years</h2>
+
+            <div class="highlight-box">
+                <h4>After every game</h4>
+                <ul>
+                    <li>Rake evenly.</li>
+                    <li>Fill in holes.</li>
+                </ul>
+
+                <h4 style="margin-top: 15px;">Every week (during season)</h4>
+                <ul>
+                    <li>Check the borders.</li>
+                    <li>Adjust the surface as needed.</li>
+                    <li>Water lightly in dry conditions.</li>
+                </ul>
+
+                <h4 style="margin-top: 15px;">Every season</h4>
+                <ul>
+                    <li>Top up with 1–2 cm of new gravel.</li>
+                    <li>Compact and level.</li>
+                </ul>
+            </div>
+
+            <h3>Troubleshooting — common problems</h3>
+            <div class="info-box">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Problem</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Cause</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Puddles</td>
+                            <td style="padding: 10px;">Insufficient slope</td>
+                            <td style="padding: 10px;">Adjust fall, add material</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Uneven surface</td>
+                            <td style="padding: 10px;">Wear and tear</td>
+                            <td style="padding: 10px;">Rake + compact</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Weeds</td>
+                            <td style="padding: 10px;">Damaged landscape fabric</td>
+                            <td style="padding: 10px;">Lay new fabric locally</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Court too fast</td>
+                            <td style="padding: 10px;">Over-compacted</td>
+                            <td style="padding: 10px;">Add new softer surface layer</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: 600;">Dust</td>
+                            <td style="padding: 10px;">Too dry</td>
+                            <td style="padding: 10px;">Water lightly</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>6) Lighting and accessories</h2>
+            <p>Make the court usable all year round:</p>
+            <div class="info-box">
+                <ul>
+                    <li><strong>LED floodlights</strong> (directed at the playing surface)</li>
+                    <li><strong>Bench</strong> along the long side</li>
+                    <li><strong>Small storage</strong> for boules and tools</li>
+                    <li><strong>Scoreboard</strong></li>
+                    <li><strong>Sun shade/parasol</strong></li>
+                    <li><strong>Water hose</strong> for maintenance</li>
+                </ul>
+            </div>
+
+            <h2>7) Cost estimate (DIY)</h2>
+
+            <div class="highlight-box">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Item</th>
+                            <th style="text-align: right; padding: 10px; color: #8B4513; font-weight: 700;">Approximate cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px;">Excavation (rented machine)</td>
+                            <td style="padding: 10px; text-align: right;">$200–400</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px;">Landscape fabric</td>
+                            <td style="padding: 10px; text-align: right;">$50–100</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px;">Crushed stone + stone dust</td>
+                            <td style="padding: 10px; text-align: right;">$300–500</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px;">Boule gravel</td>
+                            <td style="padding: 10px; text-align: right;">$150–250</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px;">Edging material</td>
+                            <td style="padding: 10px; text-align: right;">$100–200</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px;">Tools/plate compactor rental</td>
+                            <td style="padding: 10px; text-align: right;">$50–100</td>
+                        </tr>
+                        <tr style="border-top: 2px solid #D2691E;">
+                            <td style="padding: 10px; font-weight: 700;">Total</td>
+                            <td style="padding: 10px; text-align: right; font-weight: 700;">≈ $800–1,400</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px;">With some help from friends and the club, this can be both cheaper — and more fun.</p>
+            </div>
+
+            <h2>8) Tips from experienced court builders</h2>
+
+            <div class="highlight-box">
+                <ul>
+                    <li>Build one really good court rather than two mediocre ones.</li>
+                    <li>Spend extra time on the base layer — it is the backbone of the court.</li>
+                    <li>Always keep a rake by the court.</li>
+                    <li>Make the court slightly bigger than you think you need.</li>
+                    <li>Document the build — it will be invaluable for future improvements.</li>
+                </ul>
+            </div>
+
+            <h2>Summary of Appendix D</h2>
+            <p>A well-built boule court gives you:</p>
             <ul>
-                <li><strong>Good planning:</strong> Choose the right location and size</li>
-                <li><strong>Proper foundation:</strong> Take time with the base layer</li>
-                <li><strong>Right surface material:</strong> Crushed limestone 0-4 mm is recommended</li>
-                <li><strong>Regular maintenance:</strong> Rake and water for the best playing surface</li>
+                <li>better play,</li>
+                <li>fewer disputes about bounce and roll,</li>
+                <li>and a place where people want to gather.</li>
             </ul>
 
-            <div class="highlight-box" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
-                <h4>Tips from Experienced Court Builders</h4>
-                <p><em>"The best advice I can give is not to rush. Let each layer settle properly before moving on. A court built over a weekend will need a lot of adjustment in the first year. A court built over a month with proper compaction and settling between each step will play perfectly right away."</em></p>
+            <div class="warning-box">
+                <p><strong>You are not just building a court — you are building a meeting place.</strong></p>
             </div>
 
             <div class="navigation">
-                <a href="glossary.html" class="nav-btn secondary">&larr; Appendix C: Glossary</a>
+                <a href="glossary.html" class="nav-btn secondary">← Appendix C: Glossary</a>
                 <a href="contents.html" class="nav-btn">Back to Contents</a>
             </div>
         </div>

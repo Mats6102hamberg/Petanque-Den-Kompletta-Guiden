@@ -4,213 +4,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appendix C: Glossary - Pétanque Guide</title>
-    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .language-switcher a {
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            filter: grayscale(50%);
+        }
+        .language-switcher a:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        .language-switcher a.active {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
+    <a href="../en/contents.html" class="toc-button">Contents</a>
+    <div class="language-switcher">
+        <a href="../ordlista.html" title="Svenska">🇸🇪</a>
+        <a href="glossary.html" class="active" title="English">🇬🇧</a>
+        <a href="../fr/glossaire.html" title="Français">🇫🇷</a>
+    </div>
+
     <div class="container">
-        <div class="header">
+        <div class="header header-small">
             <div class="chapter-number">Appendix C</div>
             <h1 class="chapter-title">Glossary</h1>
-            <p class="chapter-subtitle">French technical terms and technical concepts</p>
+            <p class="chapter-subtitle">French technical terms and key concepts</p>
         </div>
-        
+
         <div class="content">
-            <p class="quote">A complete guide to all terms you need to know to understand and talk about pétanque like a pro.</p>
-            
+            <p>This appendix serves as a quick reference for the most common words in pétanque — both French technical terms and English/technical concepts. The idea is that you can look up a word directly when you need it, without browsing through the whole book.</p>
+
+            <h2>Part 1 — French technical terms (12 key concepts)</h2>
+
+            <div class="highlight-box">
+                <h4>Boule</h4>
+                <p>Ball, sphere. The metal ball each player throws.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Carreau</h4>
+                <p>Perfect hit — your boule knocks away the opponent's and stops in exactly the same spot.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Cochonnet</h4>
+                <p>The jack, the small wooden ball that is the target in the game.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Donnée</h4>
+                <p>The landing point where you intend your boule to hit the ground.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Mène</h4>
+                <p>A round in the game — from when the jack is thrown until the points are counted.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Milieu</h4>
+                <p>Middle player in triples; the all-rounder who can both point and shoot.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Pétanque</h4>
+                <p>Comes from Provençal "pieds tanqués" — feet together/standing still.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Pointer</h4>
+                <p>To place the boule close to the jack.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Pointeur</h4>
+                <p>The pointer in the team — the one who usually plays first.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Tirer</h4>
+                <p>To shoot away the opponent's boule.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Tirer au fer</h4>
+                <p>"Shoot at the iron" — a direct shot at the opponent's metal boule.</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 10px;">
+                <h4>Tireur</h4>
+                <p>The shooter in the team — the one who usually plays last.</p>
+            </div>
+
+            <h2>Part 2 — English and technical terms (A–Z)</h2>
+
             <div class="info-box">
-                <h3>📖 About the glossary</h3>
-                <p>Pétanque originates from France and many of the sport's technical terms are therefore in French. These terms are used internationally and are an important part of the game's culture. In this glossary you will find both French technical terms and English translations, as well as technical concepts used in the game.</p>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Term</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Brief explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Backspin</td>
+                            <td style="padding: 10px;">Underspin that makes the boule brake after landing.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Biberon</td>
+                            <td style="padding: 10px;">A very soft boule that "sticks" to the ground.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Circle</td>
+                            <td style="padding: 10px;">The throwing circle where the player must stand.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Court</td>
+                            <td style="padding: 10px;">The playing field (gravel, earth or other surface).</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Devant</td>
+                            <td style="padding: 10px;">"In front" — a boule placed in front of the jack.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Direct shot</td>
+                            <td style="padding: 10px;">A high shot that hits the target head-on.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Doublette</td>
+                            <td style="padding: 10px;">Game format with two players per team (3 boules each).</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Fanny</td>
+                            <td style="padding: 10px;">Losing 0–13 — tradition to buy the winners a drink.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Jack</td>
+                            <td style="padding: 10px;">The target ball (cochonnet).</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Lob</td>
+                            <td style="padding: 10px;">A high throw with a soft landing.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Measuring</td>
+                            <td style="padding: 10px;">Measuring the distance between boules and the jack.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Parking</td>
+                            <td style="padding: 10px;">The spot where you want your boule to stop.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Portée</td>
+                            <td style="padding: 10px;">The range/distance of the throw through the air.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Roulette</td>
+                            <td style="padding: 10px;">When the boule rolls a long distance on the ground.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Rolling shot (raser)</td>
+                            <td style="padding: 10px;">A low, fast shot that rolls towards the target.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Shutout</td>
+                            <td style="padding: 10px;">Winning without the opponent scoring (13–0).</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Tête-à-tête</td>
+                            <td style="padding: 10px;">Singles (1 vs 1, three boules each).</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: 600;">Triples</td>
+                            <td style="padding: 10px;">Three players per team (two boules each).</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            
-            <h2>🇫🇷 French technical terms</h2>
-            
-            <div class="highlight-box">
-                <h4>Boule (bool)</h4>
-                <p><strong>Meaning:</strong> Ball, sphere</p>
-                <p><strong>Explanation:</strong> The metal balls used to play pétanque. Each player has 2-3 boules depending on game format.</p>
-                <p><strong>Example:</strong> "Throw your boule closer to the cochonnet."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Carreau (ka-roh)</h4>
-                <p><strong>Meaning:</strong> Perfect hit</p>
-                <p><strong>Explanation:</strong> When you shoot away the opponent's boule and your own boule stays in exactly the same place. The ultimate shot!</p>
-                <p><strong>Example:</strong> "Fantastic carreau! Your boule took exactly the opponent's place."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Cochonnet (ko-sho-nay)</h4>
-                <p><strong>Meaning:</strong> Jack, target</p>
-                <p><strong>Explanation:</strong> The small wooden ball (usually 25-35mm in diameter) that is the target in the game. Also called "le but" (the target) or "le petit" (the small one).</p>
-                <p><strong>Example:</strong> "Throw the cochonnet between 6-10 meters."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Donnée (do-nay)</h4>
-                <p><strong>Meaning:</strong> Landing point</p>
-                <p><strong>Explanation:</strong> The point on the ground where you aim to land your boule. By aiming at the donnée instead of directly at the cochonnet, you get better precision.</p>
-                <p><strong>Example:</strong> "Aim at the donnée 50 cm in front of the cochonnet."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Mène (men)</h4>
-                <p><strong>Meaning:</strong> Round, end</p>
-                <p><strong>Explanation:</strong> A game round from when the cochonnet is thrown until all boules are thrown and points are counted. A match is played to 13 points and consists of several mènes.</p>
-                <p><strong>Example:</strong> "We won that mène with 3 points."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Milieu (mee-lyuh)</h4>
-                <p><strong>Meaning:</strong> Middle player, all-rounder</p>
-                <p><strong>Explanation:</strong> In triples, the milieu is the player who can both point and shoot. Functions as a link between pointeur and tireur.</p>
-                <p><strong>Example:</strong> "As milieu you must be able to adapt to the situation."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Pétanque (pay-tonk)</h4>
-                <p><strong>Meaning:</strong> Feet together</p>
-                <p><strong>Explanation:</strong> Comes from Provençal "pès tancats" meaning "feet together". Refers to both feet having to be in the circle when throwing.</p>
-                <p><strong>Example:</strong> "Pétanque is played with feet in the circle."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Pointer (pwan-tay)</h4>
-                <p><strong>Meaning:</strong> To point, to place</p>
-                <p><strong>Explanation:</strong> To throw your boule as close to the cochonnet as possible. The opposite of shooting (tirer).</p>
-                <p><strong>Example:</strong> "I prefer to pointer instead of tirer."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Pointeur (pwan-tur)</h4>
-                <p><strong>Meaning:</strong> Pointer, placer</p>
-                <p><strong>Explanation:</strong> The player who specializes in placing boules close to the cochonnet. Often plays first in the round.</p>
-                <p><strong>Example:</strong> "A good pointeur can place within 10 cm of the cochonnet."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Tirer (tee-ray)</h4>
-                <p><strong>Meaning:</strong> To shoot</p>
-                <p><strong>Explanation:</strong> To throw your boule with force to knock away the opponent's boule. Requires precision and technique.</p>
-                <p><strong>Example:</strong> "When the opponent is well placed you must tirer."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Tirer au fer (tee-ray oh fair)</h4>
-                <p><strong>Meaning:</strong> Shoot at the iron</p>
-                <p><strong>Explanation:</strong> To shoot directly at the opponent's boule (at the "iron") with the goal of knocking it away or making a carreau. The most prestigious shooting technique.</p>
-                <p><strong>Example:</strong> "A perfect tirer au fer resulted in a carreau."</p>
-            </div>
-            
-            <div class="highlight-box">
-                <h4>Tireur (tee-rur)</h4>
-                <p><strong>Meaning:</strong> Shooter</p>
-                <p><strong>Explanation:</strong> The player who specializes in shooting away the opponent's boules. Often plays last in the round.</p>
-                <p><strong>Example:</strong> "A skilled tireur can hit 7 out of 10 times at 8 meters."</p>
-            </div>
-            
-            <h2>🎯 English and technical terms</h2>
-            
-            <table>
-                <tr>
-                    <th>Term</th>
-                    <th>Explanation</th>
-                </tr>
-                <tr>
-                    <td><strong>Backspin</strong></td>
-                    <td>Backward rotation on the boule that makes it stop faster after landing. Achieved through wrist technique at release.</td>
-                </tr>
-                <tr>
-                    <td><strong>Biberon</strong></td>
-                    <td>When the boule "kisses" the cochonnet softly and stops right next to it. Perfect pointing!</td>
-                </tr>
-                <tr>
-                    <td><strong>Circle</strong></td>
-                    <td>The 35-50 cm circle drawn on the ground where the player must stand when throwing.</td>
-                </tr>
-                <tr>
-                    <td><strong>Court</strong></td>
-                    <td>The playing field where pétanque is played. Can be gravel, sand, asphalt or other surface.</td>
-                </tr>
-                <tr>
-                    <td><strong>Devant (in front)</strong></td>
-                    <td>"Boule devant, boule d'argent" - Always point in front of the cochonnet (30-50 cm). A golden rule!</td>
-                </tr>
-                <tr>
-                    <td><strong>Direct shot</strong></td>
-                    <td>To shoot the opponent's boule by hitting it directly in the air or with minimal bounce.</td>
-                </tr>
-                <tr>
-                    <td><strong>Doublette</strong></td>
-                    <td>Game format with 2 players per team, each player has 3 boules.</td>
-                </tr>
-                <tr>
-                    <td><strong>Fanny</strong></td>
-                    <td>When a team loses 13-0. Traditionally the losers kiss a picture of "Fanny" (often a woman showing her bottom).</td>
-                </tr>
-                <tr>
-                    <td><strong>Jack</strong></td>
-                    <td>English term for cochonnet. The small wooden ball that is the target.</td>
-                </tr>
-                <tr>
-                    <td><strong>Lob</strong></td>
-                    <td>To throw the boule in a high arc so it lands softly. Used on hard surfaces or to avoid obstacles.</td>
-                </tr>
-                <tr>
-                    <td><strong>Measuring</strong></td>
-                    <td>To measure which boule is closest to the cochonnet. Done with measuring tape or measuring instrument.</td>
-                </tr>
-                <tr>
-                    <td><strong>Parking</strong></td>
-                    <td>The place where the boule stops after the throw. One of the three points (cochonnet, donnée, parking).</td>
-                </tr>
-                <tr>
-                    <td><strong>Portée</strong></td>
-                    <td>To throw the boule in a medium-high arc. The most common throwing technique.</td>
-                </tr>
-                <tr>
-                    <td><strong>Rolling shot</strong></td>
-                    <td>To shoot by rolling the boule along the ground with force. Risky on uneven surfaces.</td>
-                </tr>
-                <tr>
-                    <td><strong>Roulette</strong></td>
-                    <td>To roll the boule along the ground. Works best on smooth, soft surfaces.</td>
-                </tr>
-                <tr>
-                    <td><strong>Shutout</strong></td>
-                    <td>When a team doesn't get any points at all in a mène (0 points).</td>
-                </tr>
-                <tr>
-                    <td><strong>Tête-à-tête</strong></td>
-                    <td>Game format 1 vs 1, each player has 3 boules.</td>
-                </tr>
-                <tr>
-                    <td><strong>Triples</strong></td>
-                    <td>Game format with 3 players per team, each player has 2 boules.</td>
-                </tr>
-            </table>
-            
-            <h2>📏 Measurements and rules</h2>
-            
+
+            <h2>Part 3 — Measurements and rules (quick facts)</h2>
+
             <div class="info-box">
                 <ul>
-                    <li><strong>Cochonnet:</strong> 25-35 mm in diameter (usually 30 mm)</li>
-                    <li><strong>Boules:</strong> 70.5-80 mm in diameter, 650-800 grams</li>
-                    <li><strong>Circle:</strong> 35-50 cm in diameter</li>
-                    <li><strong>Cochonnet distance:</strong> 6-10 meters from circle</li>
-                    <li><strong>Distance from obstacles:</strong> At least 1 meter</li>
-                    <li><strong>Winning points:</strong> 13 points</li>
-                    <li><strong>Time per throw (competition):</strong> Max 1 minute</li>
+                    <li><strong>Cochonnet (jack):</strong> 25–35 mm diameter, 10–18 g</li>
+                    <li><strong>Boules:</strong> 70.5–80 mm diameter, 650–800 g</li>
+                    <li><strong>Circle:</strong> 35–50 cm diameter</li>
+                    <li><strong>Valid jack distance:</strong> 6–10 m from the circle</li>
+                    <li><strong>International court:</strong> 15 × 4 m</li>
+                    <li><strong>National court (common standard):</strong> 12 × 3 m</li>
+                    <li><strong>Time rule:</strong> Max 1 minute per throw</li>
                 </ul>
             </div>
-            
-            <div class="highlight-box" style="margin-top: 30px;">
-                <h4>💡 Tips for learning the terms</h4>
-                <p>Use the French terms when you play and talk about pétanque. It takes a few weeks to get used to, but then it becomes natural. You'll notice that all experienced players use these terms - it's part of the game's charm and international culture!</p>
+
+            <h2>Part 4 — Tips for learning the terms</h2>
+
+            <div class="highlight-box">
+                <h4>Say the words out loud when you practice</h4>
+                <p>"I'm aiming for my donnée."<br>
+                "That was almost a carreau."</p>
+
+                <h4 style="margin-top: 15px;">Link words to actions</h4>
+                <p>Learn the terms by performing the throw at the same time as you say the word.</p>
+
+                <h4 style="margin-top: 15px;">Use the glossary during matches</h4>
+                <p>Keep Appendix C in your training bag as a quick reference.</p>
+
+                <h4 style="margin-top: 15px;">Mix languages deliberately</h4>
+                <p>Some words (e.g. carreau, cochonnet, mène) are used internationally — even outside France.</p>
             </div>
-            
+
+            <h2>Summary of Appendix C</h2>
+            <p>This appendix gives you:</p>
+            <ul>
+                <li>a shared vocabulary,</li>
+                <li>quick reference help,</li>
+                <li>and better understanding both in training and in competition.</li>
+            </ul>
+
             <div class="navigation">
                 <a href="rules.html" class="nav-btn secondary">← Appendix B: Rulebook</a>
-                <a href="appendix-court.html" class="nav-btn">Appendix D: Building a Court →</a>
+                <a href="appendix-court.html" class="nav-btn">Next: Appendix D: Building a Court →</a>
             </div>
         </div>
     </div>

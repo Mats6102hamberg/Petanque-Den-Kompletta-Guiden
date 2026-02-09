@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" >
+<rect width="100%" height="100%" fill="#f5f5f5"/>
+                    <!-- Mark/golv -->
+                    <line x1="30" y1="240" x2="490" y2="240" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Kastcirkel (sidovy = ellips) -->
+                    <ellipse cx="70" cy="240" rx="25" ry="5" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="70" y="260" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">Kastcirkel</text>
+                    
+                    <!-- Landningszon -->
+                    <rect x="390" y="232" width="70" height="8" rx="2" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    <text x="425" y="260" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">Landningszon</text>
+                    
+                    <!-- 1. Rullkast (nästan marknära) -->
+                    <path d="M 95 237 Q 200 225 390 236" fill="none" stroke="#222" stroke-width="2"/>
+                    <circle cx="390" cy="236" r="4" fill="#000"/>
+                    <text x="240" y="222" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" font-weight="700" fill="#000">1. Rullkast</text>
+                    <text x="240" y="234" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" fill="#000">(mjuk mark)</text>
+                    
+                    <!-- 2. Halv-lobb (medelhög båge) -->
+                    <path d="M 95 235 Q 220 140 410 236" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="8,4"/>
+                    <circle cx="410" cy="236" r="4" fill="#000"/>
+                    <text x="215" y="152" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" font-weight="700" fill="#000">2. Halv-lobb</text>
+                    <text x="215" y="164" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" fill="#000">(hård mark)</text>
+                    
+                    <!-- 3. Hög lobb (hög båge) -->
+                    <path d="M 95 233 Q 250 40 430 236" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="4,4"/>
+                    <circle cx="430" cy="236" r="4" fill="#000"/>
+                    <text x="260" y="62" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" font-weight="700" fill="#000">3. Hög lobb</text>
+                    <text x="260" y="74" text-anchor="middle" font-family="Lato, sans-serif" font-size="14" fill="#000">(stenig mark)</text>
+                    
+                    <!-- Höjdpil -->
+                    <line x1="480" y1="240" x2="480" y2="50" stroke="#666" stroke-width="1" stroke-dasharray="3,3"/>
+                    <text x="495" y="150" font-family="Lato, sans-serif" font-size="14" fill="#000" transform="rotate(-90, 495, 150)">Höjd</text>
+                    
+                    <!-- Legend -->
+                    <line x1="50" y1="282" x2="80" y2="282" stroke="#222" stroke-width="2"/>
+                    <text x="85" y="286" font-family="Lato, sans-serif" font-size="14" fill="#111">Rullkast</text>
+                    <line x1="160" y1="282" x2="190" y2="282" stroke="#222" stroke-width="2" stroke-dasharray="8,4"/>
+                    <text x="195" y="286" font-family="Lato, sans-serif" font-size="14" fill="#111">Halv-lobb</text>
+                    <line x1="280" y1="282" x2="310" y2="282" stroke="#222" stroke-width="2" stroke-dasharray="4,4"/>
+                    <text x="315" y="286" font-family="Lato, sans-serif" font-size="14" fill="#111">Hög lobb</text>
+                </svg>

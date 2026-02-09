@@ -1,0 +1,66 @@
+[
+  {
+    "file": "del1-kapitel1.html",
+    "svgFileName": "diagram-1.svg",
+    "pngFileName": "diagram-1.png",
+    "width": 1000,
+    "height": 1400,
+    "ok": true
+  },
+  {
+    "file": "del1-kapitel1.html",
+    "svgFileName": "diagram-2.svg",
+    "pngFileName": "diagram-2.png",
+    "width": 1040,
+    "height": 560,
+    "ok": true
+  },
+  {
+    "file": "del1-kapitel3.html",
+    "svgFileName": "diagram-3.svg",
+    "pngFileName": "diagram-3.png",
+    "width": 720,
+    "height": 1200,
+    "ok": true
+  },
+  {
+    "file": "del1-kapitel3.html",
+    "svgFileName": "diagram-4.svg",
+    "pngFileName": "diagram-4.png",
+    "width": 1040,
+    "height": 600,
+    "ok": true
+  },
+  {
+    "file": "del1-kapitel4.html",
+    "svgFileName": "diagram-5.svg",
+    "pngFileName": "diagram-5.png",
+    "width": 1080,
+    "height": 600,
+    "ok": true
+  },
+  {
+    "file": "del2-kapitel6.html",
+    "svgFileName": "diagram-6.svg",
+    "pngFileName": "diagram-6.png",
+    "width": 1080,
+    "height": 680,
+    "ok": true
+  },
+  {
+    "file": "del4-kapitel16.html",
+    "svgFileName": "diagram-7.svg",
+    "pngFileName": "diagram-7.png",
+    "width": 1040,
+    "height": 640,
+    "ok": true
+  },
+  {
+    "file": "bilaga-boulebana.html",
+    "svgFileName": "diagram-8.svg",
+    "pngFileName": "diagram-8.png",
+    "width": 1040,
+    "height": 680,
+    "ok": true
+  }
+]

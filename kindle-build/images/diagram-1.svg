@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg" >
+<rect width="100%" height="100%" fill="#f5f5f5"/>
+                    <!-- Bana (sidolinjer) -->
+                    <line x1="60" y1="30" x2="60" y2="670" stroke="#666" stroke-width="1.5" stroke-dasharray="8,4"/>
+                    <line x1="440" y1="30" x2="440" y2="670" stroke="#666" stroke-width="1.5" stroke-dasharray="8,4"/>
+                    
+                    <!-- Kastcirkel -->
+                    <circle cx="250" cy="600" r="28" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <circle cx="250" cy="600" r="2" fill="#000"/>
+                    <text x="250" y="655" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">Kastcirkel (35–50 cm)</text>
+                    
+                    <!-- Avståndslinje 7–8 m -->
+                    <line x1="280" y1="600" x2="280" y2="145" stroke="#555" stroke-width="1" stroke-dasharray="4,3"/>
+                    <text x="290" y="380" font-family="Lato, sans-serif" font-size="14" fill="#111" transform="rotate(-90, 290, 380)">7–8 meter</text>
+                    
+                    <!-- Lillen -->
+                    <circle cx="250" cy="140" r="8" fill="#000"/>
+                    <text x="250" y="120" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">Lillen</text>
+                    
+                    <!-- Klot (6 st runt lillen) -->
+                    <!-- Lag A: fyllda -->
+                    <circle cx="230" cy="165" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="222" y1="165" x2="238" y2="165" stroke="#222" stroke-width="1.5"/>
+                    <line x1="230" y1="157" x2="230" y2="173" stroke="#222" stroke-width="1.5"/>
+                    
+                    <circle cx="275" cy="125" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="267" y1="125" x2="283" y2="125" stroke="#222" stroke-width="1.5"/>
+                    <line x1="275" y1="117" x2="275" y2="133" stroke="#222" stroke-width="1.5"/>
+                    
+                    <circle cx="215" cy="115" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="207" y1="115" x2="223" y2="115" stroke="#222" stroke-width="1.5"/>
+                    <line x1="215" y1="107" x2="215" y2="123" stroke="#222" stroke-width="1.5"/>
+                    
+                    <!-- Lag B: randiga -->
+                    <circle cx="265" cy="170" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="255" y1="166" x2="275" y2="166" stroke="#222" stroke-width="1"/>
+                    <line x1="255" y1="174" x2="275" y2="174" stroke="#222" stroke-width="1"/>
+                    
+                    <circle cx="225" cy="145" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="215" y1="141" x2="235" y2="141" stroke="#222" stroke-width="1"/>
+                    <line x1="215" y1="149" x2="235" y2="149" stroke="#222" stroke-width="1"/>
+                    
+                    <circle cx="270" cy="100" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="260" y1="96" x2="280" y2="96" stroke="#222" stroke-width="1"/>
+                    <line x1="260" y1="104" x2="280" y2="104" stroke="#222" stroke-width="1"/>
+                    
+                    <!-- Etikett: Klot -->
+                    <text x="330" y="150" font-family="Lato, sans-serif" font-size="14" fill="#111">← Klot (6 st)</text>
+                    
+                    <!-- Förklaring (legend) -->
+                    <rect x="100" y="50" width="300" height="45" rx="3" fill="none" stroke="#999" stroke-width="1"/>
+                    <circle cx="140" cy="72" r="9" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <line x1="134" y1="72" x2="146" y2="72" stroke="#222" stroke-width="1.2"/>
+                    <line x1="140" y1="66" x2="140" y2="78" stroke="#222" stroke-width="1.2"/>
+                    <text x="155" y="76" font-family="Lato, sans-serif" font-size="14" fill="#111">Lag A (+)</text>
+                    
+                    <circle cx="240" cy="72" r="9" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <line x1="233" y1="69" x2="247" y2="69" stroke="#222" stroke-width="1"/>
+                    <line x1="233" y1="75" x2="247" y2="75" stroke="#222" stroke-width="1"/>
+                    <text x="255" y="76" font-family="Lato, sans-serif" font-size="14" fill="#111">Lag B (=)</text>
+                    
+                    <circle cx="340" cy="72" r="5" fill="#000"/>
+                    <text x="350" y="76" font-family="Lato, sans-serif" font-size="14" fill="#111">Lillen</text>
+                </svg>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 540 340" xmlns="http://www.w3.org/2000/svg" >
+<rect width="100%" height="100%" fill="#f5f5f5"/>
+                    <!-- Rubriker -->
+                    <text x="140" y="25" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">A) Direktskott (tirer au fer)</text>
+                    <text x="405" y="25" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">B) Rullskott (raser)</text>
+                    
+                    <!-- Avdelare -->
+                    <line x1="270" y1="10" x2="270" y2="330" stroke="#777" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- ========== PANEL A: DIREKTSKOTT ========== -->
+                    <!-- Bana (sidolinjer) -->
+                    <line x1="30" y1="40" x2="30" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="6,3"/>
+                    <line x1="250" y1="40" x2="250" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- Lillen -->
+                    <circle cx="140" cy="80" r="6" fill="#000"/>
+                    <text x="160" y="78" font-family="Lato, sans-serif" font-size="13" fill="#000">Lillen</text>
+                    
+                    <!-- Målklot (motståndarens) — FÖRE -->
+                    <circle cx="130" cy="140" r="13" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    <text x="155" y="137" font-family="Lato, sans-serif" font-size="14" fill="#111">Mål (före)</text>
+                    
+                    <!-- Pil: skyttens klot kommer rakt uppifrån (högt kast) -->
+                    <defs>
+                        <marker id="arr1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+                            <polygon points="0 0, 7 2.5, 0 5" fill="#000"/>
+                        </marker>
+                    </defs>
+                    <line x1="130" y1="270" x2="130" y2="160" stroke="#222" stroke-width="2" marker-end="url(#arr1)"/>
+                    <text x="110" y="220" font-family="Lato, sans-serif" font-size="14" fill="#111" text-anchor="end">Högt kast</text>
+                    
+                    <!-- Resultat: carreau — skyttens klot stannar -->
+                    <circle cx="130" cy="140" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="122" y1="140" x2="138" y2="140" stroke="#222" stroke-width="1.5"/>
+                    <line x1="130" y1="132" x2="130" y2="148" stroke="#222" stroke-width="1.5"/>
+                    
+                    <!-- Bortslaget klot -->
+                    <defs>
+                        <marker id="arr2" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+                            <polygon points="0 0, 6 2, 0 4" fill="#111"/>
+                        </marker>
+                    </defs>
+                    <line x1="143" y1="135" x2="200" y2="105" stroke="#555" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+                    <circle cx="205" cy="102" r="10" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
+                    <text x="218" y="100" font-family="Lato, sans-serif" font-size="14" fill="#111">Bort!</text>
+                    
+                    <!-- Carreau-etikett -->
+                    <rect x="75" y="295" width="120" height="22" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+                    <text x="135" y="310" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">= Carreau!</text>
+                    
+                    <!-- ========== PANEL B: RULLSKOTT ========== -->
+                    <!-- Bana (sidolinjer) -->
+                    <line x1="290" y1="40" x2="290" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="6,3"/>
+                    <line x1="520" y1="40" x2="520" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- Lillen -->
+                    <circle cx="405" cy="80" r="6" fill="#000"/>
+                    <text x="425" y="78" font-family="Lato, sans-serif" font-size="13" fill="#000">Lillen</text>
+                    
+                    <!-- Målklot -->
+                    <circle cx="400" cy="150" r="13" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    <text x="425" y="147" font-family="Lato, sans-serif" font-size="14" fill="#111">Mål</text>
+                    
+                    <!-- Rullande klot — kommer från sidan/nedifrån i en kurva -->
+                    <defs>
+                        <marker id="arr3" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+                            <polygon points="0 0, 7 2.5, 0 5" fill="#000"/>
+                        </marker>
+                    </defs>
+                    <path d="M 340 270 Q 345 220 360 190 Q 375 165 387 155" fill="none" stroke="#222" stroke-width="2" marker-end="url(#arr3)"/>
+                    <text x="325" y="235" font-family="Lato, sans-serif" font-size="14" fill="#111" text-anchor="end">Lågt rull</text>
+                    
+                    <!-- Träff från sidan -->
+                    <circle cx="393" cy="150" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="385" y1="146" x2="401" y2="146" stroke="#222" stroke-width="1"/>
+                    <line x1="385" y1="154" x2="401" y2="154" stroke="#222" stroke-width="1"/>
+                    
+                    <!-- Bortslaget klot (åt höger) -->
+                    <line x1="413" y1="148" x2="470" y2="130" stroke="#555" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+                    <circle cx="475" cy="128" r="10" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
+                    <text x="488" y="126" font-family="Lato, sans-serif" font-size="14" fill="#111">Bort!</text>
+                    
+                    <!-- Rullskott-etikett -->
+                    <rect x="340" y="295" width="130" height="22" rx="3" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1"/>
+                    <text x="405" y="310" text-anchor="middle" font-family="Lato, sans-serif" font-size="13" font-weight="700" fill="#000">= Sidoträff</text>
+                </svg>

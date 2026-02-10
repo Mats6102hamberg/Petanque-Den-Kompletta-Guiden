@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Cover — Pétanque: The Complete Guide</title>
+    <style>
+        /* KDP Cover: 1600 x 2560 px (Kindle recommended) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .cover {
+            width: 1600px;
+            height: 2560px;
+            position: relative;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+
+        /* Background image simulation — dark dramatic scene */
+        .cover-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.85) 0%,
+                rgba(0, 0, 0, 0.4) 25%,
+                rgba(0, 0, 0, 0.15) 45%,
+                rgba(0, 0, 0, 0.1) 55%,
+                rgba(0, 0, 0, 0.2) 70%,
+                rgba(0, 0, 0, 0.7) 90%,
+                rgba(0, 0, 0, 0.9) 100%
+            );
+            z-index: 2;
+        }
+
+        /* Earthy texture background */
+        .cover-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: 
+                radial-gradient(ellipse at 50% 55%, #8B7355 0%, #6B5B45 30%, #4A3F35 50%, #2A2520 70%, #1a1510 100%);
+        }
+
+        /* Dust/gravel particles */
+        .dust-layer {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+            width: 80%;
+            height: 35%;
+            z-index: 3;
+            background: 
+                radial-gradient(ellipse at 50% 60%, rgba(180, 160, 130, 0.4) 0%, rgba(140, 120, 90, 0.2) 40%, transparent 70%);
+            filter: blur(2px);
+        }
+
+        /* Boule illustration */
+        .boule-container {
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+
+        .boule {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: radial-gradient(
+                ellipse at 35% 30%,
+                #d4d4d4 0%,
+                #b0b0b0 15%,
+                #8a8a8a 35%,
+                #6a6a6a 55%,
+                #4a4a4a 75%,
+                #333 100%
+            );
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.8),
+                0 5px 20px rgba(0, 0, 0, 0.5),
+                inset 0 -10px 30px rgba(0, 0, 0, 0.4),
+                inset 0 10px 20px rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        /* Boule grooves/lines */
+        .boule::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 2px solid rgba(100, 100, 100, 0.3);
+            background: transparent;
+        }
+
+        .boule::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            border: 1.5px solid rgba(100, 100, 100, 0.2);
+            background: transparent;
+        }
+
+        /* Impact splash effect */
+        .impact {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 120px;
+            background: radial-gradient(ellipse at 50% 20%, rgba(160, 140, 100, 0.6) 0%, rgba(120, 100, 70, 0.3) 40%, transparent 70%);
+            filter: blur(4px);
+        }
+
+        /* Hand silhouette hint */
+        .hand-hint {
+            position: absolute;
+            top: 22%;
+            left: 55%;
+            width: 200px;
+            height: 300px;
+            background: linear-gradient(
+                to bottom,
+                rgba(180, 140, 110, 0.15) 0%,
+                rgba(160, 120, 90, 0.08) 50%,
+                transparent 100%
+            );
+            filter: blur(8px);
+            transform: rotate(-15deg);
+            z-index: 3;
+        }
+
+        /* Title */
+        .title {
+            position: absolute;
+            top: 5%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .title h1 {
+            font-family: 'Arial Black', 'Impact', Arial, sans-serif;
+            font-size: 160px;
+            font-weight: 900;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: 
+                0 4px 8px rgba(0, 0, 0, 0.8),
+                0 2px 4px rgba(0, 0, 0, 0.6);
+            line-height: 1;
+        }
+
+        .subtitle {
+            position: absolute;
+            top: 19%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .subtitle p {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 52px;
+            color: #e8d8c0;
+            font-style: normal;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            line-height: 1.3;
+        }
+
+        /* Author */
+        .author {
+            position: absolute;
+            bottom: 6%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .author p {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 72px;
+            color: #FFFFFF;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Decorative line */
+        .divider {
+            position: absolute;
+            top: 25%;
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(232, 216, 192, 0.5), transparent);
+            z-index: 10;
+        }
+
+        /* Small scattered gravel dots */
+        .gravel-dots {
+            position: absolute;
+            top: 55%;
+            left: 15%;
+            width: 70%;
+            height: 15%;
+            z-index: 3;
+        }
+
+        .dot {
+            position: absolute;
+            border-radius: 40%;
+            background: rgba(140, 120, 90, 0.5);
+            transform: rotate(var(--rot));
+        }
+
+        /* Print instructions */
+        .instructions {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #333;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 100;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+
+        .instructions strong {
+            color: #ffd700;
+        }
+
+        @media print {
+            .instructions { display: none; }
+            body { background: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="instructions">
+    <strong>Instruktioner för att spara som bild:</strong><br>
+    1. Högerklicka på omslaget → "Inspect"<br>
+    2. Högerklicka på .cover-elementet → "Capture node screenshot"<br>
+    <br>
+    Eller ta en skärmdump med <strong>Cmd+Shift+4</strong> och beskär.<br>
+    Rekommenderad storlek: <strong>1600 × 2560 px</strong>
+</div>
+
+<div class="cover">
+    <!-- Background layers -->
+    <div class="cover-texture"></div>
+    <div class="cover-bg"></div>
+    <div class="dust-layer"></div>
+    <div class="hand-hint"></div>
+
+    <!-- Boule -->
+    <div class="boule-container">
+        <div class="boule"></div>
+        <div class="impact"></div>
+    </div>
+
+    <!-- Gravel particles -->
+    <div class="gravel-dots">
+        <div class="dot" style="left:10%; top:20%; width:8px; height:6px; --rot:25deg;"></div>
+        <div class="dot" style="left:25%; top:45%; width:6px; height:5px; --rot:60deg;"></div>
+        <div class="dot" style="left:40%; top:15%; width:10px; height:7px; --rot:10deg;"></div>
+        <div class="dot" style="left:55%; top:55%; width:7px; height:5px; --rot:45deg;"></div>
+        <div class="dot" style="left:70%; top:30%; width:9px; height:6px; --rot:80deg;"></div>
+        <div class="dot" style="left:85%; top:50%; width:5px; height:4px; --rot:30deg;"></div>
+        <div class="dot" style="left:15%; top:65%; width:8px; height:5px; --rot:55deg;"></div>
+        <div class="dot" style="left:60%; top:10%; width:6px; height:4px; --rot:70deg;"></div>
+        <div class="dot" style="left:35%; top:70%; width:11px; height:7px; --rot:15deg;"></div>
+        <div class="dot" style="left:80%; top:20%; width:7px; height:5px; --rot:40deg;"></div>
+    </div>
+
+    <!-- Title -->
+    <div class="title">
+        <h1>PÉTANQUE</h1>
+    </div>
+
+    <div class="subtitle">
+        <p>The Complete Guide - Technique, Tactics & Training</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Author -->
+    <div class="author">
+        <p>Mats Hamberg</p>
+    </div>
+</div>
+
+</body>
+</html>

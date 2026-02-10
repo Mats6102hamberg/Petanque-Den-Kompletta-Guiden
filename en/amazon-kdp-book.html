@@ -1,0 +1,2780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétanque: The Complete Guide — From Beginner to Pro</title>
+    <style>
+        /* ===== AMAZON KDP BOOK STYLES ===== */
+        /* Optimized for B5 format (176 × 250 mm) paperback and EPUB/Kindle export */
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', 'Georgia', serif;
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #222;
+            max-width: 176mm;
+            margin: 0 auto;
+            padding: 20mm;
+        }
+
+        /* ===== PAGE BREAKS ===== */
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        .no-break {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        /* ===== TITLE PAGE ===== */
+        .title-page {
+            text-align: center;
+            padding-top: 2in;
+            page-break-after: always;
+        }
+
+        .title-page h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36pt;
+            font-weight: 900;
+            color: #8B4513;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .title-page .subtitle {
+            font-size: 16pt;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 60px;
+        }
+
+        .title-page .author {
+            font-size: 14pt;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        /* ===== COPYRIGHT PAGE ===== */
+        .copyright-page {
+            font-size: 9pt;
+            color: #666;
+            line-height: 1.8;
+            padding-top: 3in;
+            page-break-after: always;
+        }
+
+        .copyright-page p {
+            margin-bottom: 10px;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            page-break-after: always;
+        }
+
+        .toc h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24pt;
+            color: #8B4513;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .toc-part {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 14pt;
+            font-weight: 700;
+            color: #8B4513;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #D2691E;
+            padding-bottom: 5px;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-size: 11pt;
+        }
+
+        .toc-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* ===== FOREWORD ===== */
+        .foreword {
+            page-break-after: always;
+        }
+
+        .foreword h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24pt;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+
+        /* ===== PART HEADERS ===== */
+        .part-header {
+            text-align: center;
+            padding-top: 2.5in;
+            page-break-after: always;
+        }
+
+        .part-header h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28pt;
+            color: #8B4513;
+            margin-bottom: 15px;
+        }
+
+        .part-header p {
+            font-size: 14pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* ===== CHAPTER HEADERS ===== */
+        .chapter {
+            page-break-before: always;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #D2691E;
+        }
+
+        .chapter-header .chapter-number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 12pt;
+            color: #D2691E;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .chapter-header h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22pt;
+            color: #8B4513;
+            margin-bottom: 8px;
+        }
+
+        .chapter-header p {
+            font-size: 11pt;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* ===== HEADINGS ===== */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 18pt;
+            color: #8B4513;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 14pt;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-size: 12pt;
+            color: #8B4513;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        /* ===== BODY TEXT ===== */
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* ===== TABLES ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+
+        th {
+            background: #f5f0eb;
+            color: #8B4513;
+            font-weight: 700;
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 2px solid #D2691E;
+        }
+
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e0d5c8;
+        }
+
+        tr:nth-child(even) {
+            background: #faf8f5;
+        }
+
+        /* ===== BOXES ===== */
+        .highlight-box {
+            background: #f9f6f2;
+            border-left: 4px solid #D2691E;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+
+        .info-box {
+            background: #f0f6f9;
+            border-left: 4px solid #4a90a4;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+
+        .warning-box {
+            background: #fef9f0;
+            border-left: 4px solid #e6a817;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+
+        /* ===== QUOTES ===== */
+        .quote {
+            font-style: italic;
+            font-size: 12pt;
+            color: #555;
+            border-left: 3px solid #D2691E;
+            padding-left: 20px;
+            margin: 25px 0;
+        }
+
+        /* ===== AUTHOR NOTE ===== */
+        .author-note {
+            margin-top: 40px;
+            padding: 20px 25px;
+            background: #faf8f5;
+            border-left: 4px solid #8B4513;
+            border-radius: 3px;
+            font-style: italic;
+            color: #555;
+            page-break-inside: avoid;
+        }
+
+        .author-note .label {
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8B4513;
+            font-style: normal;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .author-note .text {
+            line-height: 1.8;
+            font-size: 11pt;
+        }
+
+        .author-note .attribution {
+            text-align: right;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* ===== APPENDIX HEADERS ===== */
+        .appendix-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #D2691E;
+        }
+
+        .appendix-header .appendix-label {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 12pt;
+            color: #D2691E;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .appendix-header h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22pt;
+            color: #8B4513;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .appendix-header p {
+            font-size: 11pt;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            body {
+                max-width: 100%;
+                padding: 0;
+                font-size: 10.5pt;
+            }
+
+            @page {
+                size: 176mm 250mm;
+                margin: 20mm 18mm;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+
+            .no-break {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+        }
+
+        /* ===== SCREEN PREVIEW ===== */
+        @media screen {
+            body {
+                background: #f5f5f5;
+                padding: 40px;
+            }
+
+            .book-content {
+                background: white;
+                max-width: 176mm;
+                margin: 0 auto;
+                padding: 20mm;
+                box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+                border-radius: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="book-content">
+
+<!-- ============================================================ -->
+<!-- TITLE PAGE -->
+<!-- ============================================================ -->
+<div class="title-page">
+    <h1>PÉTANQUE</h1>
+    <div class="subtitle">The Complete Guide<br>From Beginner to Pro</div>
+    <div style="margin: 40px 0; font-size: 48pt; color: #D2691E;">⚾</div>
+    <div class="author">Mats Hamberg</div>
+    <div style="margin-top: 20px; font-size: 10pt; color: #999;">First Edition</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- COPYRIGHT PAGE -->
+<!-- ============================================================ -->
+<div class="copyright-page">
+    <p><strong>Pétanque: The Complete Guide — From Beginner to Pro</strong></p>
+    <p>Copyright © 2025 Mats Hamberg. All rights reserved.</p>
+    <p>No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.</p>
+    <p>This book is based on the international rules of the FIPJP (Fédération Internationale de Pétanque et Jeu Provençal). While every effort has been made to ensure accuracy, the author assumes no responsibility for errors or omissions.</p>
+    <p>First published 2025.</p>
+    <p>ISBN: [To be assigned by Amazon KDP]</p>
+    <p style="margin-top: 30px;">Cover design: Mats Hamberg<br>
+    Illustrations: SVG diagrams by the author</p>
+    <p style="margin-top: 30px;">Published independently via Amazon Kindle Direct Publishing.</p>
+    <p>www.petanqueguide.com</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- TABLE OF CONTENTS -->
+<!-- ============================================================ -->
+<div class="toc">
+    <h2>Table of Contents</h2>
+
+    <div style="margin-bottom: 20px;">
+        <div class="toc-item"><a href="#foreword">Foreword</a></div>
+    </div>
+
+    <div class="toc-part">Part 1: Basics for Beginners</div>
+    <div class="toc-item"><a href="#ch1">Chapter 1 — What Is Boule Pétanque?</a></div>
+    <div class="toc-item"><a href="#ch2">Chapter 2 — Equipment: Choose the Right Boules</a></div>
+    <div class="toc-item"><a href="#ch3">Chapter 3 — Basic Techniques</a></div>
+    <div class="toc-item"><a href="#ch4">Chapter 4 — Strategy for Beginners</a></div>
+
+    <div class="toc-part">Part 2: Advanced Techniques for Pros</div>
+    <div class="toc-item"><a href="#ch5">Chapter 5 — Improve Your Pointing</a></div>
+    <div class="toc-item"><a href="#ch6">Chapter 6 — Championship Shooting</a></div>
+    <div class="toc-item"><a href="#ch7">Chapter 7 — High-Level Tactics</a></div>
+    <div class="toc-item"><a href="#ch8">Chapter 8 — Train Smarter</a></div>
+
+    <div class="toc-part">Part 3: Pétanque as a Lifestyle</div>
+    <div class="toc-item"><a href="#ch9">Chapter 9 — Competition vs. Social Play</a></div>
+    <div class="toc-item"><a href="#ch10">Chapter 10 — Pétanque Around the World</a></div>
+
+    <div class="toc-part">Part 4: In-Depth Study and Development</div>
+    <div class="toc-item"><a href="#ch11">Chapter 11 — Strategic Analysis and Tactics</a></div>
+    <div class="toc-item"><a href="#ch12">Chapter 12 — Mental Strength and Focus</a></div>
+    <div class="toc-item"><a href="#ch13">Chapter 13 — Training Plan and Development</a></div>
+    <div class="toc-item"><a href="#ch14">Chapter 14 — Conclusion</a></div>
+    <div class="toc-item"><a href="#ch15">Chapter 15 — Leading a Boule Pétanque Team</a></div>
+    <div class="toc-item"><a href="#ch16">Chapter 16 — Boule Physics and Terrain Reading</a></div>
+
+    <div class="toc-part">Appendices</div>
+    <div class="toc-item"><a href="#appA">Appendix A — Equipment Guide</a></div>
+    <div class="toc-item"><a href="#appB">Appendix B — Complete Rulebook</a></div>
+    <div class="toc-item"><a href="#appC">Appendix C — Glossary</a></div>
+    <div class="toc-item"><a href="#appD">Appendix D — Building a Boule Court</a></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FOREWORD -->
+<!-- ============================================================ -->
+<div class="foreword" id="foreword">
+    <h2>Foreword</h2>
+    <p>Pétanque is more than just a sport — it is a lifestyle, a social activity, and both a tactical and technical challenge. This book is written to give beginners a solid foundation and offer experienced players new perspectives and improvement tips. Whether you are holding a boule for the first time or already competing at a high level, there is something here for you.</p>
+    <p>An important note about terminology: Pétanque has deep French roots. To ensure your knowledge is complete — and to help you feel at home in all contexts, from your local club to international competitions — we will use the international technical language. This means that throughout the text, we blend English terms (such as boule and shooting) with internationally recognized French expressions (such as carreau and tirer au fer). Consider these French words as the sport's official technical terms; they are an essential part of the game's culture and your education.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 1 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Part 1</h2>
+    <p>Basics for Beginners</p>
+</div>
+
+<!-- CHAPTER 1 -->
+<div class="chapter" id="ch1">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 1</div>
+        <h2>What Is Boule Pétanque?</h2>
+        <p>The history, rules and fundamentals of the game</p>
+    </div>
+
+    <h2>The History Behind Pétanque</h2>
+    <p>Pétanque is a relatively young member of the ancient family of boules games, yet its roots reach deep into European sporting history. Throughout the centuries, variations of throwing games with balls have been played across the Mediterranean world.</p>
+    <p>In the late 1800s, a popular game in Provence, southern France, called <em>jeu provençal</em> dominated village squares. Players took several running steps before throwing their metal balls toward a small target ball. It was a dynamic, athletic game requiring both strength and precision.</p>
+    <p>Everything changed around the winter of 1907 in La Ciotat. A highly skilled player, Jules Lenoir, suffered a leg injury and could no longer run before throwing. His friend Ernest Pitiot suggested a brilliant adaptation: shorten the playing field and require players to throw while standing still inside a marked circle.</p>
+    <p>This simple but revolutionary idea gave birth to a new form of the game — <em>pieds tanqués</em>, meaning "feet planted firmly on the ground." Over time, the name evolved into <strong>pétanque</strong>.</p>
+    <p>The first official pétanque tournament was held in La Ciotat in 1910. From there, the sport spread rapidly across France and soon reached the rest of the world.</p>
+    <p>Today, pétanque is played on every continent. National federations exist in Europe, the Americas, Africa, Asia, and Australia, and the sport is governed internationally by the <strong>FIPJP</strong> (Fédération Internationale de Pétanque et Jeu Provençal), which also organizes the World Championships.</p>
+    <p>Pétanque is now both a relaxed social pastime and a highly competitive elite sport — a rare and beautiful combination.</p>
+
+    <h2>Basic Rules and Game Concept</h2>
+    <p>Pétanque can be played in three main formats:</p>
+    <ul>
+        <li><strong>Singles (Tête-à-tête)</strong> — 1 player per team, three balls each</li>
+        <li><strong>Doubles</strong> — 2 players per team, three balls each</li>
+        <li><strong>Triples</strong> — 3 players per team, two balls each</li>
+    </ul>
+    <p>The objective is simple: Throw your metal boules as close as possible to a small wooden target ball called the <strong>jack</strong> (in French: <em>cochonnet</em>).</p>
+
+    <div class="highlight-box">
+        <h4>How to Play</h4>
+        <ol>
+            <li>Players stand inside a circle with a diameter of 35–50 cm and must keep both feet on the ground until their ball has landed.</li>
+            <li>A game consists of several rounds called <strong>ends</strong> (mènes).</li>
+            <li>In each mène, one team throws out the jack between 6 and 10 meters. The teams then alternate throwing their boules until all balls are used.</li>
+            <li>When all balls have been thrown, the distance to the jack is measured.</li>
+            <li>The team with the closest boule scores one point for each of its boules that is closer to the jack than the opponent's nearest boule.</li>
+            <li>The first team to reach <strong>13 points</strong> wins the match.</li>
+        </ol>
+    </div>
+    <p>This structure makes pétanque both strategic and exciting — every single throw can change the game.</p>
+
+    <h3>Some Important Rules to Know</h3>
+    <ul>
+        <li><strong>Throwing technique:</strong> Boules are thrown with the palm facing down, which gives the ball backspin and improves control.</li>
+        <li><strong>Dead balls:</strong> If a boule lands outside the playing area or in an obstacle that stops play, it becomes "dead" and is removed from the game.</li>
+        <li><strong>Approved equipment:</strong> In official competition, boules must be approved by FIPJP, with a diameter of 70.5–80 mm and a weight of 650–800 grams.</li>
+    </ul>
+
+    <h2>Differences Between Pétanque, Boule and Boccia/Bocce</h2>
+
+    <h3>Boule — An Umbrella Term</h3>
+    <p>In Sweden, the word <em>boule</em> is often used as a general term for all ball-throwing games with a small target ball.</p>
+    <p>Internationally, however, <em>boules</em> usually refers to the broader French family of games that includes:</p>
+    <ul>
+        <li>Jeu Provençal</li>
+        <li>Pétanque</li>
+        <li>Other related variants</li>
+    </ul>
+    <p>Therefore, it is more accurate to say that pétanque is one branch of the boules family, rather than the other way around.</p>
+
+    <h3>Bocce — The Italian Variant</h3>
+    <p><strong>Bocce</strong> (sometimes spelled boccia) is an Italian cousin to pétanque, but the games differ in several important ways:</p>
+
+    <div class="info-box">
+        <h4>Bocce vs Pétanque</h4>
+        <ul>
+            <li><strong>Court:</strong> Bocce is played on a long, smooth court (about 28 meters), often with wooden side planks. Pétanque is played on much shorter and more natural surfaces (6–10 meters from the circle).</li>
+            <li><strong>Balls:</strong> Bocce balls are usually larger and heavier, often made of wood or plastic. Pétanque uses solid metal boules.</li>
+            <li><strong>Technique:</strong> In bocce, players may take approach steps and roll the ball with the palm facing up. In pétanque, players must stand still and throw with the palm facing down.</li>
+            <li><strong>Number of balls:</strong> Bocce players typically use four balls each, with up to eight players on the court. In pétanque, players have two or three boules each, depending on the team format.</li>
+        </ul>
+    </div>
+
+    <h3>Boccia — A Paralympic Ball Sport</h3>
+    <p><strong>Boccia</strong> is a Paralympic sport designed for athletes with severe mobility impairments. It is related to bocce but played indoors on a court measuring 12.5 × 6 meters with smooth leather balls.</p>
+    <p>Players may throw with their hand, foot, or use a ramp if needed.</p>
+    <p>Boccia can be played individually, in pairs, or in three-person teams. Each player has six balls per round, and points are awarded in a similar way to pétanque — based on which balls are closest to the jack.</p>
+    <p>The key difference is that boccia is primarily an indoor, adaptive sport, while pétanque is traditionally played outdoors with metal boules and requires players to stand inside a circle.</p>
+
+    <div class="warning-box">
+        <h4>For Beginners — A Simple Summary</h4>
+        <p>If you are new to these games, here is all you really need to remember:</p>
+        <ul>
+            <li><strong>Boccia</strong> is a Paralympic sport.</li>
+            <li><strong>Bocce</strong> and <strong>pétanque</strong> are historical boules games with different traditions and rules.</li>
+            <li><strong>Pétanque</strong> is the most globally played and competitive of them today.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- CHAPTER 2 -->
+<div class="chapter" id="ch2">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 2</div>
+        <h2>Equipment — Choose the Right Boules</h2>
+        <p>Weight, size, material and maintenance</p>
+    </div>
+
+    <h2>Weight, Size and Material — What Suits You?</h2>
+    <p>In official competition, pétanque boules must be hollow metal balls with a diameter between <strong>70.5 and 80 mm</strong> and a weight between <strong>650 and 800 grams</strong>.</p>
+    <p>However, choosing your boules is not just about rules — it is about how they feel in your hand, match your playing style, and suit your role in the team. The right boule can significantly improve your precision, confidence, and enjoyment of the game.</p>
+
+    <h3>Hand Size</h3>
+    <p>Your hand size plays a major role in selecting the correct diameter:</p>
+    <ul>
+        <li>If you have a <strong>smaller hand</strong>, a boule around <strong>71–73 mm</strong> is usually most comfortable.</li>
+        <li>If you have a <strong>larger hand</strong>, you will likely prefer <strong>74–78 mm</strong>.</li>
+    </ul>
+    <p>A good rule of thumb is this: You should be able to grip the boule firmly without straining your fingers or losing control. It should feel like an extension of your hand, not a burden.</p>
+
+    <h3>Weight</h3>
+    <p>The weight of your boules affects how they travel through the air, how they react on different surfaces, and how much strength you need to throw them.</p>
+
+    <div class="highlight-box">
+        <h4>Lighter boules (650–690 g):</h4>
+        <ul>
+            <li>Offer better control and require less physical effort</li>
+            <li>Are ideal for pointers (players who focus on placing balls close to the jack)</li>
+            <li>Are easier for beginners to handle and master</li>
+        </ul>
+        <h4>Heavier boules (710–800 g):</h4>
+        <ul>
+            <li>Hold their line better when shooting</li>
+            <li>Require more strength and stability</li>
+            <li>Provide more power when knocking away opponent's balls</li>
+        </ul>
+    </div>
+    <p>Many experienced players prefer slightly heavier boules for shooting and lighter ones for pointing — but this is ultimately a personal choice.</p>
+
+    <h3>Hardness</h3>
+    <p>Boules come in different levels of hardness:</p>
+    <ul>
+        <li><strong>Harder boules ("carbone")</strong> tend to bounce and roll more. They are generally preferred by shooters, as they travel straighter and resist deformation on impact.</li>
+        <li><strong>Softer boules</strong> absorb impact and stop more quickly. They are excellent for pointers, especially on hard or uneven terrain.</li>
+    </ul>
+    <p>A balanced set — neither too hard nor too soft — is often a great starting point for developing players.</p>
+
+    <h2>The Difference Between Competition and Recreational Boules</h2>
+    <p>Not all boules are made for the same purpose. Understanding the difference will save you money and frustration.</p>
+
+    <div class="info-box">
+        <h4>Recreational Boules</h4>
+        <p>These are designed for casual play, parks, beaches, and family games. They typically:</p>
+        <ul>
+            <li>Are filled with sand or gravel</li>
+            <li>Have a chrome-plated surface</li>
+            <li>Come in only one standard size and weight</li>
+            <li>Are inexpensive</li>
+            <li>Do not meet competition standards</li>
+        </ul>
+        <p>They are perfect for trying the game, but they lack precision, balance, and durability.</p>
+        <h4>Competition Boules</h4>
+        <p>These are precision-crafted sporting tools. They:</p>
+        <ul>
+            <li>Are hollow and carefully machined</li>
+            <li>Fully comply with FIPJP specifications</li>
+            <li>Are available in many combinations of diameter, weight, hardness, and groove patterns</li>
+            <li>Are more expensive — but offer superior balance, control, and longevity</li>
+        </ul>
+        <p>A well-chosen competition boule can last many years and become deeply familiar in your hand, almost like a trusted instrument.</p>
+    </div>
+
+    <h3>A Sensible Advice for Beginners</h3>
+    <p>If you are new to pétanque, it is perfectly reasonable to start with a cheaper recreational set. But once you feel that the game "clicks" for you, invest in proper competition boules.</p>
+    <p>A boule that truly fits your hand will give you better accuracy, better feel, and more confidence on the court.</p>
+    <p>Special junior sizes are available for children, making the sport accessible from a young age.</p>
+
+    <h2>Maintenance and Cleaning of Boules</h2>
+    <p>Metal boules can rust if they are not cared for. Good maintenance is simple — and essential.</p>
+
+    <div class="highlight-box">
+        <h4>After Each Game: Basic Routine</h4>
+        <ol>
+            <li><strong>Wash</strong> the boules with warm water and a little dish soap to remove dust and dirt. Dry them thoroughly with a clean cloth.</li>
+            <li><strong>Lightly oil</strong> them using an oiled cloth or maintenance spray. This creates a thin protective layer that prevents oxidation.</li>
+            <li><strong>Store</strong> them in a dry place inside a suitable bag or box. Avoid damp basements or humid environments.</li>
+        </ol>
+    </div>
+
+    <h3>If Rust Appears</h3>
+    <p>If your boules begin to rust, do not panic. You can:</p>
+    <ul>
+        <li>Scrub them gently with a steel brush, or</li>
+        <li>Let them soak in white wine vinegar, which dissolves rust naturally.</li>
+    </ul>
+    <p>Afterwards, rinse, dry, and oil them again for protection.</p>
+
+    <div class="warning-box">
+        <h4>Important to Remember</h4>
+        <p>With regular care, your boules can last for many years. Treat them well — and they will serve you faithfully on the court.</p>
+    </div>
+</div>
+
+<!-- CHAPTER 3 -->
+<div class="chapter" id="ch3">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 3</div>
+        <h2>Basic Techniques</h2>
+        <p>Grip, stance and throwing technique</p>
+    </div>
+
+    <h2>Proper Grip and Stance</h2>
+    <p>A stable foundation is essential for accuracy and consistency in pétanque. Everything begins with balance, posture, and a relaxed body.</p>
+    <p>Stand inside the throwing circle with your feet slightly apart, your weight evenly distributed, and your upper body calm and loose. Tension in your shoulders or arms will almost always reduce your precision.</p>
+
+    <h3>Grip</h3>
+    <p>Let the boule rest naturally in the cup of your hand. Your fingers should cradle the ball with a soft, controlled grip — your thumb should not act as a clamp.</p>
+    <p>If you squeeze too hard, your movement becomes stiff and the throw loses fluidity. Think of holding the boule firmly, but gently.</p>
+
+    <div class="highlight-box">
+        <h4>Two main types of grip:</h4>
+        <ul>
+            <li><strong>Vise grip:</strong> The boule is held firmly between your fingers and the palm. It feels secure and will not slip out even if you tilt your hand.</li>
+            <li><strong>Cradle grip:</strong> The boule rests mainly on your fingers. During the backswing, you angle your hand slightly backward to keep the boule in place.</li>
+        </ul>
+        <p>Neither grip is "better" — choose the one that feels most natural and gives you the best control.</p>
+    </div>
+
+    <h3>Stance</h3>
+    <p>When standing upright, place one foot slightly in front of the other, pointing toward your intended landing point. Your back foot provides balance and stability.</p>
+    <p>Your center of gravity should be slightly forward, with your knees gently bent. This gives you better control over distance and direction.</p>
+    <p>Many pointers prefer to stand upright because it improves visibility across the court. Others crouch low in a position known as <em>pied tendré</em> to get closer to the ground and better judge terrain.</p>
+    <p>Choose the stance that gives you the best combination of balance, comfort, and aim.</p>
+
+    <h3>Movement and Release</h3>
+    <p>A smooth, rhythmic motion is the heart of a good throw.</p>
+
+    <div class="info-box">
+        <ol>
+            <li>Start with your arm hanging freely at your side.</li>
+            <li>Make a smooth backward and forward swing, bending your wrist slightly backward during the backswing.</li>
+            <li>Extend your wrist at release to give the boule backspin.</li>
+            <li>Try to release the boule when your hand is pointing toward your intended landing spot.</li>
+            <li>Keep your wrist stable through the release to avoid unwanted side spin.</li>
+        </ol>
+        <p>Think of your arm as a pendulum — calm, steady, and controlled.</p>
+    </div>
+
+    <h2>How to Point — Precision and Control</h2>
+    <p>Pointing means placing your boule as close as possible to the jack. Success depends on two things:</p>
+    <ul>
+        <li>Controlling distance and direction</li>
+        <li>Understanding how the terrain will affect the boule</li>
+    </ul>
+
+    <h3>Determine Three Key Points</h3>
+    <p>Experienced pointers always consider three reference points before they throw:</p>
+    <ol>
+        <li><strong>The Jack (cochonnet)</strong> — your final target</li>
+        <li><strong>The Parking Spot</strong> — where you want your boule to come to rest</li>
+        <li><strong>The Donnée</strong> — the exact spot where the boule should first land</li>
+    </ol>
+    <p>This mental map helps you plan your throw instead of reacting randomly.</p>
+
+    <div class="highlight-box">
+        <h4>Important Principle</h4>
+        <p>There is a classic saying in pétanque:</p>
+        <p><em>"Boule devant, boule d'argent."</em> — A boule in front of the jack is worth gold.</p>
+        <p>This means your ideal parking spot should be slightly in front of the jack, not behind it.</p>
+    </div>
+
+    <h3>Choose Throw Type According to Terrain</h3>
+    <p>Different surfaces require different approaches:</p>
+    <ul>
+        <li><strong>Smooth, soft ground:</strong> Use a low, rolling throw so the boule glides gently toward the jack.</li>
+        <li><strong>Hard or gravelly ground:</strong> Use a medium-height throw to reduce unpredictable bouncing.</li>
+        <li><strong>Very rocky ground:</strong> Use a higher lob so the boule lands softly and stops near the jack.</li>
+    </ul>
+    <p>Reading the terrain is a skill that develops with experience — and practice.</p>
+
+    <h3>Execute the Throw</h3>
+    <div class="info-box">
+        <p>Aim at your donnée, not directly at the jack.</p>
+        <p>Make a calm backswing, bend your knees slightly, and throw with a smooth, continuous motion.</p>
+        <ul>
+            <li>Release low for rolling throws.</li>
+            <li>Release higher for lobs.</li>
+        </ul>
+        <p>At the moment of release, extend your wrist for backspin and let your arm follow through naturally in the direction of the throw.</p>
+    </div>
+
+    <h3>Train Systematically</h3>
+    <p>Consistent pointing is built through repetition.</p>
+    <p>A simple exercise is to place a handkerchief on the ground as a marker and try to land your boules on it from different distances.</p>
+    <p>A good pointer is one who regularly forces the opponent to shoot away well-placed boules.</p>
+
+    <h2>How to Shoot — Strength and Accuracy</h2>
+    <p>Shooting means using your boule to hit and remove an opponent's boule — or, in some cases, the jack.</p>
+    <p>A skilled shooter masters several types of shots.</p>
+
+    <h3>Types of Shots</h3>
+    <table>
+        <tr><th>Shot Type</th><th>Description</th></tr>
+        <tr><td><strong>Direct Shot (tir plein fer)</strong></td><td>You throw a high, lobbed boule that lands directly on the target boule and hits it dead center. Requires precision and power.</td></tr>
+        <tr><td><strong>Rolling Shot (raser)</strong></td><td>A powerful, low throw where the boule rolls along the ground and strikes the opponent's boule from the side.</td></tr>
+        <tr><td><strong>Shot on the Jack</strong></td><td>Used in critical situations to move the jack away from the opponent's boules or toward your own.</td></tr>
+        <tr><td><strong>Shot in Front of Boule</strong></td><td>The boule lands just in front of the target and rolls into it — useful on hard terrain.</td></tr>
+    </table>
+
+    <h3>To Shoot Effectively</h3>
+    <div class="highlight-box">
+        <h4>1. Position Yourself</h4>
+        <p>Stand firmly inside the circle. Many shooters move their back foot slightly backward to create a gentle rocking motion. Lower your center of gravity slightly and keep your eyes locked on the target.</p>
+        <h4>2. Swing and Release</h4>
+        <p>Your backswing should be longer than when pointing — this generates speed.</p>
+        <p>When your hand reaches knee height on the forward swing, release the boule by extending your wrist and pointing your fingers toward the target. Aim for the exact center of the opponent's boule.</p>
+        <p>Keep your body still and avoid twisting sideways.</p>
+        <h4>3. Practice with Tires or Rings</h4>
+        <p>A classic training method is to place three boules in a row and practice shooting the middle one.</p>
+        <p>You can also throw into a tire or ring to improve your accuracy. Gradually increase the distance as you become more confident.</p>
+    </div>
+
+    <div class="warning-box">
+        <h4>Important Reminder</h4>
+        <p>Shooting is difficult — but decisive. A shooter with good accuracy can completely change the outcome of a match.</p>
+    </div>
+
+    <h2>Training Sessions with Measurable Goals</h2>
+    <p>To improve quickly, train with clear, concrete targets.</p>
+
+    <div class="highlight-box">
+        <h4>Exercise 1: The Handkerchief — Donnée Precision</h4>
+        <p><strong>Setup:</strong> Place a handkerchief or draw a circle (≈ 50 cm diameter) at 6, 7, and 8 meters.</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+            <li><strong>Beginner:</strong> hit the donnée 4/10 times at 6 m</li>
+            <li><strong>Intermediate:</strong> 6/10 at 7 m</li>
+            <li><strong>Advanced:</strong> 7/10 at 8 m</li>
+        </ul>
+        <p><strong>Log:</strong> date, distance, hits/attempts, and what needs adjustment (height, power, direction).</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Exercise 2: Three Zones — Distance Control</h4>
+        <p><strong>Setup:</strong> Place the jack at 6 m, 8 m, and 10 m. Throw five boules per distance and measure how many land within 50 cm of the jack.</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+            <li><strong>Beginner:</strong> 3/5 within 50 cm at 6 m</li>
+            <li><strong>Intermediate:</strong> 4/5 within 50 cm at 8 m</li>
+            <li><strong>Advanced:</strong> 3/5 within 30 cm at 10 m</li>
+        </ul>
+        <p><strong>Log:</strong> Log which distance feels most difficult.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Exercise 3: Shooting Practice — Accuracy</h4>
+        <p><strong>Setup:</strong> Place six target boules at distances between 6–10 m. Shoot them one by one.</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+            <li><strong>Beginner:</strong> 2/6 hits</li>
+            <li><strong>Intermediate:</strong> 4/6 hits</li>
+            <li><strong>Advanced:</strong> 5/6 hits + at least 2 carreau (perfect shots)</li>
+        </ul>
+        <p><strong>Log:</strong> Hit percentage, toughest distance, and number of carreau.</p>
+    </div>
+
+    <div class="warning-box">
+        <h4>Training Tip</h4>
+        <p>Train 2–3 times per week for 30–45 minutes. Keep a simple training journal — after four weeks you will clearly see your progress.</p>
+    </div>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"When I first started playing, I thought shooting was the most important skill. Over time, I realised that a consistent pointer often wins more matches than a powerful shooter. Technique is the hands — game understanding is the eyes."</div>
+    </div>
+</div>
+
+<!-- CHAPTER 4 -->
+<div class="chapter" id="ch4">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 4</div>
+        <h2>Strategy for Beginners</h2>
+        <p>Tactics, terrain reading and common mistakes</p>
+    </div>
+
+    <h2>Simple Tactics to Win Points</h2>
+    <p>Winning in pétanque is not only about technical skill — it is just as much about smart decision-making. Even beginners can gain a strong advantage by following a few fundamental tactical principles.</p>
+
+    <h3>1. Place Your First Boule in Front of the Jack</h3>
+    <div class="highlight-box">
+        <p>The very first boule of an end should almost always be placed <strong>in front of the jack, ideally 30–50 cm in front</strong>.</p>
+        <p>Why is this so powerful? Because if your opponent tries to shoot it:</p>
+        <ul>
+            <li>they must aim slightly to the side,</li>
+            <li>and if they hit your boule, they may accidentally push it even closer to the jack — a double advantage for you.</li>
+        </ul>
+        <p>A well-placed boule in front of the jack immediately puts psychological pressure on your opponent.</p>
+    </div>
+
+    <h3>2. Use Backstops</h3>
+    <p>If there is already a boule — yours or your opponent's — behind the jack, you can sometimes throw a little harder so that your boule stops against it.</p>
+    <p>This "backstop" makes your boule harder to remove, because any shot transfers energy to the back boule rather than sending yours far away. Used correctly, this tactic can secure important points.</p>
+
+    <h3>3. Promote Your Boules</h3>
+    <p>If you already have boules in front of the jack, you can later shoot at your own boules to gently push them even closer.</p>
+    <p>This is a subtle but very effective advanced tactic.</p>
+    <p>Be careful, however — one wrong hit and you might accidentally promote your opponent's boule instead.</p>
+
+    <h3>4. Limit the Damage</h3>
+    <div class="info-box">
+        <p>Sometimes the opponent places a perfect boule and you simply cannot beat it.</p>
+        <p>In that case, your goal should shift from winning the end to <strong>losing as little as possible</strong>.</p>
+        <p>Place your remaining boules close to their best boule to block them from scoring many points. It is far better to lose 1–2 points than to give away 4–5.</p>
+        <p>If the opponent only needs one point to win the match, you can consider more aggressive tactics such as:</p>
+        <ul>
+            <li>shooting out the jack, or</li>
+            <li>trying to move it toward your own boules.</li>
+        </ul>
+        <p>Smart defense is often as important as attack.</p>
+    </div>
+
+    <h3>To Shoot or to Point?</h3>
+    <p>A classic rule in pétanque is:</p>
+    <p><strong>Shoot when you must — point when you can.</strong></p>
+    <p>Your goal is to force your opponent to use their shots while preserving your well-placed boules.</p>
+
+    <div class="highlight-box">
+        <h4>Decision Guide: Point or Shoot?</h4>
+        <table>
+            <tr><th>Situation</th><th>Decision</th><th>Why</th></tr>
+            <tr><td>Opponent's boule is less than 30 cm from the jack with clear path</td><td><strong>SHOOT</strong></td><td>Hard to out-point. A successful shot gives immediate advantage.</td></tr>
+            <tr><td>You have a clear donnée you hit often</td><td><strong>POINT</strong></td><td>Play to your strength and force the opponent to shoot.</td></tr>
+            <tr><td>A shot could open 3+ points for opponent</td><td><strong>POINT defensively</strong></td><td>Better to limit damage than risk losing many points.</td></tr>
+            <tr><td>You are an uncertain shooter (&lt;40% accuracy)</td><td><strong>POINT</strong></td><td>Missed shots help the opponent.</td></tr>
+            <tr><td>It is your last boule and you need points to win</td><td><strong>SHOOT</strong></td><td>You have nothing to lose.</td></tr>
+            <tr><td>Several opponent boules are clustered near the jack</td><td><strong>SHOOT strategically</strong></td><td>One good shot can change the entire situation.</td></tr>
+        </table>
+        <p><strong>Golden rule:</strong> When in doubt — point. A well-placed boule is always valuable.</p>
+    </div>
+
+    <h2>How to Read the Terrain and Adapt</h2>
+    <p>The ground is your silent opponent. Every surface influences how the boule rolls, bounces, and stops.</p>
+    <p>Before every throw, take a moment to really observe the court.</p>
+
+    <h3>Examine the Surface</h3>
+    <p>Look for:</p>
+    <ul>
+        <li>holes, stones, or small ridges</li>
+        <li>whether the ground is soft or hard</li>
+        <li>slopes that might make the boule drift sideways</li>
+        <li>how previous boules have behaved on the same path</li>
+    </ul>
+    <p>Experienced players "read" the terrain before they ever pick up a boule.</p>
+
+    <h3>Adapt Your Throw</h3>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Smooth ground:</strong> you can use more rolling throws.</li>
+            <li><strong>Uneven ground:</strong> increase the height of your throw to avoid obstacles.</li>
+            <li>Always adjust your force so the boule stops at your intended parking spot.</li>
+        </ul>
+    </div>
+
+    <h3>Vary the Jack Throw</h3>
+    <p>Do not always throw the jack to the same distance.</p>
+    <ul>
+        <li><strong>Short throws (6–7 m)</strong> often favor pointers.</li>
+        <li><strong>Long throws (9–10 m)</strong> often favor shooters.</li>
+    </ul>
+    <p>If your opponents are very strong at short distances, deliberately throw the jack longer to disrupt their rhythm.</p>
+
+    <h3>Play with Weather and Wind</h3>
+    <p>Weather changes everything:</p>
+    <ul>
+        <li><strong>Humid weather</strong> softens the court — boules stop faster.</li>
+        <li><strong>Sun and dry conditions</strong> make the ground harder — boules roll farther.</li>
+        <li><strong>Wind</strong> can slightly affect high lobs.</li>
+    </ul>
+    <p>A smart player adjusts their technique accordingly.</p>
+
+    <h2>Common Mistakes — and How to Avoid Them</h2>
+    <p>Beginners tend to repeat the same errors. Being aware of them will accelerate your progress.</p>
+
+    <div class="warning-box">
+        <h3>1. Aiming Directly at the Jack Instead of the Donnée</h3>
+        <p>Always aim at your landing point in front of the jack — not at the jack itself. This gives you better control over both distance and roll.</p>
+        <h3>2. Throwing Too Hard or Too Short</h3>
+        <p>Many players throw too hard when nervous. Focus on a soft, controlled release and practice varying your power.</p>
+        <h3>3. Ignoring the Surface</h3>
+        <p>If you do not study the terrain, you will be surprised by bad bounces. Take a few seconds before each throw to really observe.</p>
+        <h3>4. Gripping the Boule Too Tightly</h3>
+        <p>A tight grip might feel secure, but it destroys precision. Hold the boule firmly but softly, and let your wrist create backspin naturally.</p>
+        <h3>5. Disturbing the Opponent</h3>
+        <p>Talking, moving, or walking across the throwing line while someone is playing is poor etiquette. Stand still and silent when your opponent throws, and never remove boules until both teams agree on the score.</p>
+        <h3>6. Failing to Communicate in the Team</h3>
+        <p>Discuss your plan before each throw. Clear communication dramatically increases your chances of choosing the right tactic.</p>
+    </div>
+
+    <h3>Final Thought</h3>
+    <p>By understanding these strategies and avoiding common mistakes, you will not only play better — you will also enjoy the game more.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 2 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Part 2</h2>
+    <p>Advanced Techniques for Pros</p>
+</div>
+
+<!-- CHAPTER 5 -->
+<div class="chapter" id="ch5">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 5</div>
+        <h2>Improve Your Pointing</h2>
+        <p>Advanced placement techniques, adaptation and mental training</p>
+    </div>
+
+    <p class="quote">Once you've passed the beginner stage, pétanque is no longer just about placing a ball near the jack, but about solving difficult situations and mastering advanced techniques.</p>
+
+    <h3>Advanced Placement Techniques</h3>
+    <p>At an advanced level, pointing is as much about creativity as precision. A powerful way to train this is to create artificial obstacles.</p>
+    <p>Place three boules around the jack so that it is partly hidden from your view. Your task is to place your boule as close as possible without shooting.</p>
+    <p>This forces you to:</p>
+    <ul>
+        <li>discover new landing zones (données),</li>
+        <li>refine your sense of height and distance,</li>
+        <li>and develop a more sensitive use of backspin.</li>
+    </ul>
+    <p>You learn not just to "hit a spot," but to shape the flight and roll of your boule.</p>
+
+    <div class="highlight-box">
+        <h4>Training Exercise — Obstacle Play</h4>
+        <p>Place bricks, cones, or boules in a small circle around the previous position of the jack.</p>
+        <p>Practice lobbing over the obstacle and letting the boule stop softly near the jack.</p>
+        <p>Vary the distance between 6 and 10 meters, and gradually move the obstacles closer together. Over time, you will notice that your precision improves at all distances — not only your favorite ones.</p>
+    </div>
+
+    <h3>Three Types of Pointing Throws</h3>
+    <p>At a higher level, you should be comfortable with three main trajectories:</p>
+    <table>
+        <tr><th>Throw Type</th><th>When to Use</th></tr>
+        <tr><td><strong>Rolling throw</strong></td><td>Best on smooth surfaces — the boule travels low and straight along the ground.</td></tr>
+        <tr><td><strong>Half-lob</strong></td><td>Most versatile throw for medium distances and mixed terrain.</td></tr>
+        <tr><td><strong>High lob</strong></td><td>Ideal for long throws or very difficult ground — the boule lands softly and stops quickly.</td></tr>
+    </table>
+    <p>A top player does not choose randomly — they select the trajectory that best fits both the terrain and the tactical situation.</p>
+
+    <h3>Adapting Your Throw to Surface and Weather</h3>
+    <p>The court is never neutral. Your success depends on how well you adjust.</p>
+    <ul>
+        <li><strong>Soft gravel court:</strong> The boule sinks and stops quickly — a flat, rolling throw is often safest.</li>
+        <li><strong>Hard or rocky court:</strong> The boule tends to bounce unpredictably — use a higher lob with clear backspin.</li>
+        <li><strong>Sloped court:</strong> Throw slightly uphill to prevent the boule from rolling too far.</li>
+        <li><strong>Rain:</strong> The ground becomes heavier and boules stop faster.</li>
+        <li><strong>Dry weather:</strong> The ground becomes harder, increasing bounce and roll.</li>
+    </ul>
+    <p>A great pointer adapts instinctively — but this instinct is built through experience.</p>
+
+    <h3>Mental Training — Focus and Routines</h3>
+    <p>At elite level, mental strength is often what decides matches. Technique gets you to the circle — mindset determines what happens inside it.</p>
+    <p>Set clear training goals for each season and each session to keep your focus sharp.</p>
+
+    <div class="info-box">
+        <h4>Before every throw:</h4>
+        <ol>
+            <li>Take a few slow, deep breaths.</li>
+            <li>Visualize the trajectory of your boule.</li>
+            <li>Imagine exactly where you want it to land.</li>
+            <li>Once you start the movement — "turn off" conscious control and trust your body.</li>
+        </ol>
+        <p>This balance between concentration and relaxation is one of the hallmarks of top players.</p>
+    </div>
+
+    <h2>Training Sessions for Advanced Pointing</h2>
+    <p>To progress beyond a good club level, your practice must be structured and measurable.</p>
+
+    <div class="highlight-box">
+        <h4>Exercise 1 — The Obstacle Challenge</h4>
+        <p><strong>Setup:</strong> Place 3–6 boules or bricks around the jack so it is not directly visible. Practice lobbing over the obstacles and landing close to the jack.</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+            <li><strong>Intermediate:</strong> 4/10 throws within 50 cm</li>
+            <li><strong>Advanced:</strong> 6/10 within 30 cm</li>
+            <li><strong>Expert:</strong> 3/10 throws closer than all obstacles</li>
+        </ul>
+        <p><strong>Log:</strong> Record number of hits and which trajectory (low/medium/high) worked best.</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Exercise 2 — Different Surfaces: Adaptability</h4>
+        <p><strong>Setup:</strong> Train on three different surfaces in the same session (for example gravel, asphalt, and grass). Throw 10 boules on each surface.</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+            <li>Identify which throw type works best per surface.</li>
+            <li>Hit within 50 cm at least 5/10 times on each surface.</li>
+        </ul>
+        <p><strong>Log:</strong> Note surface, best trajectory, hit percentage, and what needed adjustment.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Exercise 3 — Backspin Control</h4>
+        <p><strong>Setup:</strong> On a hard surface, throw 10 boules focusing on maximum backspin. Measure how far each boule rolls after landing.</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+            <li><strong>Intermediate:</strong> boule rolls less than 1 meter after landing on a 7 m throw.</li>
+            <li><strong>Advanced:</strong> less than 50 cm roll.</li>
+            <li><strong>Expert:</strong> boule "dies" within 30 cm of landing point.</li>
+        </ul>
+        <p><strong>Log:</strong> Record roll distance and which wrist technique worked best.</p>
+    </div>
+
+    <div class="warning-box">
+        <h4>Training Tip</h4>
+        <p>Train 2–3 times per week for 30–45 minutes. Keep a simple journal — after four weeks your progress will be unmistakable.</p>
+    </div>
+</div>
+
+<!-- CHAPTER 6 -->
+<div class="chapter" id="ch6">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 6</div>
+        <h2>Championship Shooting (au fer shots)</h2>
+        <p>From basic shots to masterful techniques</p>
+    </div>
+
+    <p class="quote">A championship shooter is not only powerful — they are intelligent, calm, and tactically aware. They master several types of shots and, just as importantly, they know when to use each one.</p>
+    <p>At this level, shooting is less about brute force and more about timing, trajectory, rhythm, and decision-making.</p>
+
+    <h2>Direct Hits vs. Rolling Shots</h2>
+    <p>A classic <strong>au fer shot</strong> is a direct hit where your boule strikes the opponent's boule dead center. The ideal result is often a <strong>carreau</strong> — your boule takes the opponent's place and stays exactly where the removed boule was.</p>
+    <p>Different situations call for different types of shots:</p>
+
+    <div class="highlight-box">
+        <h4>Main shooting options according to the situation</h4>
+        <ul>
+            <li><strong>Direct Shot (tir au fer):</strong> A high, precise strike straight onto the opponent's boule.</li>
+            <li><strong>Rolling Shot (raser):</strong> A fast, low throw that rolls along the ground and hits from the side.</li>
+            <li><strong>Shot on the Jack:</strong> Used tactically to move or "kill" the end.</li>
+            <li><strong>Shot in Front of Boule:</strong> The boule lands just in front of the target and rolls into it — very useful on hard ground.</li>
+        </ul>
+        <p>A top shooter chooses deliberately, not instinctively.</p>
+    </div>
+
+    <h3>When Should You Choose a Direct Shot?</h3>
+    <p>Choose a direct shot when:</p>
+    <ul>
+        <li>the terrain is uneven or unpredictable,</li>
+        <li>you need a reliable, clean result,</li>
+        <li>or when bouncing is likely to disturb a rolling shot.</li>
+    </ul>
+    <p>A high, controlled trajectory reduces the influence of small stones, slopes, or irregularities in the ground.</p>
+
+    <h3>When Should You Choose a Rolling Shot?</h3>
+    <p>Rolling shots work best when:</p>
+    <ul>
+        <li>the court is smooth and even,</li>
+        <li>you need to hit several opponent boules in a row,</li>
+        <li>or when you want to move many boules with a single shot.</li>
+    </ul>
+    <p>The risk is greater — a small bounce can send your boule off line — but the reward can also be much higher.</p>
+
+    <h2>Training Tips to Become a Skilled Shooter</h2>
+    <p>Power comes from rhythm, not tension. Think of your arm as a pendulum: long, relaxed, and accelerating smoothly through the release.</p>
+    <p>Many elite coaches emphasize swing speed over muscle strength.</p>
+
+    <div class="highlight-box">
+        <h4>The 6-Boule Challenge (classic drill)</h4>
+        <ol>
+            <li>Place six boules as targets in clear positions.</li>
+            <li>Shoot one boule at a time, aiming to replace the target boule.</li>
+            <li>Step out of the circle after every shot — this simulates match pressure.</li>
+            <li>Visualize your next throw before re-entering the circle.</li>
+            <li>Re-enter and shoot again.</li>
+        </ol>
+        <p>Repeat at different distances (6–10 m) to build both power and precision.</p>
+    </div>
+
+    <h2>Analysis of Professional Shooting Styles</h2>
+    <p>The world's best shooters do not all look the same — they have personal styles that suit their body, rhythm, and mindset.</p>
+
+    <table>
+        <tr><th>Technique</th><th>Description</th><th>Typical Result</th></tr>
+        <tr><td><strong>Elbow Shot</strong></td><td>The boule is held near the face; the arm swings back past the hip and releases at a steep angle.</td><td>Very high percentage carreau.</td></tr>
+        <tr><td><strong>Lift and Drop</strong></td><td>Short backswing; the boule is lifted to waist height and released early along the line.</td><td>Soft but extremely precise hit.</td></tr>
+        <tr><td><strong>Wing Spread</strong></td><td>A wide, high arc with powerful release.</td><td>Strong impact with direct hit.</td></tr>
+        <tr><td><strong>Crane School</strong></td><td>The boule rests further out on the fingers to increase control and backspin.</td><td>Excellent for controlled shots.</td></tr>
+        <tr><td><strong>Fold and Roll</strong></td><td>Slower swing with smooth follow-through, often used with heavier boules.</td><td>Stable, controlled shots with consistency.</td></tr>
+    </table>
+
+    <p>There is no "perfect" style — only the style that works best for you.</p>
+
+    <h3>The Importance of Consistent Height</h3>
+    <p>Regardless of technique, elite shooters strive for remarkably consistent height in their throws.</p>
+    <p>Studies of world-class shooters show that:</p>
+    <ul>
+        <li>most shots peak around head height,</li>
+        <li>longer distances require a slightly higher arc,</li>
+        <li>and consistency in height often improves accuracy more than trying to aim directly at the boule.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <h4>Training with a Simple Framework</h4>
+        <p>Set up two elastic bands or ropes:</p>
+        <ul>
+            <li>one at head height,</li>
+            <li>one just above it.</li>
+        </ul>
+        <p>Practice shooting so your boule passes between the bands every time. This builds automatic control of trajectory.</p>
+        <p><strong>Key insight:</strong> When shooters focus on height and rhythm rather than "hitting the boule," accuracy often increases naturally.</p>
+    </div>
+
+    <h3>What Makes a Championship Shooter? — Summary</h3>
+    <p>Becoming a true championship shooter means:</p>
+    <ul>
+        <li>mastering multiple shot types,</li>
+        <li>choosing the right technique for each situation,</li>
+        <li>training systematically with clear drills,</li>
+        <li>maintaining consistent trajectory and height,</li>
+        <li>and studying how the best players in the world shoot.</li>
+    </ul>
+    <p>At this level, shooting is both science and art.</p>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"When I started shooting, I was chasing power. Today I know that accuracy comes from rhythm, balance, and repetition — not strength."</div>
+    </div>
+</div>
+
+<!-- CHAPTER 7 -->
+<div class="chapter" id="ch7">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 7</div>
+        <h2>High-Level Tactics</h2>
+        <p>Strategic play and psychological warfare</p>
+    </div>
+
+    <p class="quote">At an advanced level, pétanque is no longer only about technique. It becomes a game of strategy, anticipation, emotional control, and the ability to read both the terrain and the opponent.</p>
+    <p>Great players do not simply react — they shape the match.</p>
+
+    <h2>Controlling Game Tempo</h2>
+    <p>Tempo in pétanque is not about throwing fast or slow. It is about controlling rhythm, distance, and decision-making.</p>
+    <p>Experienced tacticians manipulate the tempo by using terrain, jack placement, and order of play to their advantage.</p>
+
+    <div class="info-box">
+        <h4>Key principles</h4>
+        <ul>
+            <li>Always discuss jack placement before each end begins.</li>
+            <li>Avoid playing two boules in a row without first evaluating the situation.</li>
+            <li>Vary the distance of the jack between 6 and 10 meters to push opponents out of their comfort zone.</li>
+        </ul>
+    </div>
+
+    <p>By changing tempo and distance, you can:</p>
+    <ul>
+        <li>disturb your opponent's concentration,</li>
+        <li>highlight your own strengths,</li>
+        <li>create uncertainty in the other team,</li>
+        <li>and keep the initiative on your side.</li>
+    </ul>
+
+    <h2>Psychological Warfare — Reading the Opponent</h2>
+    <p>At high level, mental play is just as important as technical play. Your placement of boules can influence not only the score — but your opponent's state of mind.</p>
+
+    <div class="highlight-box">
+        <h4>Positioning tactics</h4>
+        <ul>
+            <li>Place your boules near or in front of your opponent's boules to force difficult shots.</li>
+            <li>Play directly behind or in line with their boules to create tactical pressure.</li>
+            <li>Block their view of the jack to make distance judgment harder.</li>
+        </ul>
+        <p>This is not about being aggressive — it is about being strategically uncomfortable to play against.</p>
+    </div>
+
+    <h3>Adapt to Your Opponent</h3>
+    <table>
+        <tr><th>Opponent's strength</th><th>Your tactic</th></tr>
+        <tr><td>Prefers short throws</td><td>Place the jack longer (9–10 m)</td></tr>
+        <tr><td>Strong shooter</td><td>Point well and make them use their shots</td></tr>
+        <tr><td>Strong pointer</td><td>Shoot aggressively early in the end</td></tr>
+        <tr><td>Prefers even terrain</td><td>Choose uneven parts of the court</td></tr>
+    </table>
+    <p>A smart team adjusts continuously — not just between matches, but within the same match.</p>
+
+    <h2>Team Play — Communication and Roles</h2>
+
+    <h3>The three roles in triples</h3>
+
+    <div class="highlight-box">
+        <h4>1. Pointeur (Pointer)</h4>
+        <p><strong>Main task:</strong> place boules close to the jack.</p>
+        <ul>
+            <li><strong>Focus:</strong> precision, finesse, terrain reading.</li>
+            <li>Usually plays first in the end.</li>
+            <li><strong>Profile:</strong> calm, patient, perceptive.</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>2. Milieu (All-rounder)</h4>
+        <p><strong>Main task:</strong> link between pointer and shooter.</p>
+        <ul>
+            <li><strong>Focus:</strong> adaptability and tactical overview.</li>
+            <li>Usually plays in the middle of the end.</li>
+            <li><strong>Profile:</strong> flexible, decisive, game-intelligent.</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h4>3. Tireur (Shooter)</h4>
+        <p><strong>Main task:</strong> remove dangerous opponent boules.</p>
+        <ul>
+            <li><strong>Focus:</strong> strength, accuracy, concentration.</li>
+            <li>Usually plays last.</li>
+            <li><strong>Specialty:</strong> tir au fer and carreau.</li>
+            <li><strong>Profile:</strong> confident, composed under pressure.</li>
+        </ul>
+    </div>
+
+    <p>A strong team is not three individuals — it is one coordinated unit.</p>
+
+    <h2>Psychological Flexibility — Playing Despite Nervousness</h2>
+    <p>Many believe that great players are completely calm. In reality, the best players are not calmer — they are more <strong>psychologically flexible</strong>.</p>
+    <p>Psychological flexibility means doing the right thing regardless of what you feel.</p>
+
+    <div class="highlight-box">
+        <h4>Common inner experiences in the circle:</h4>
+        <p><strong>Thoughts:</strong></p>
+        <ul>
+            <li>"I'm going to miss."</li>
+            <li>"Everything depends on me."</li>
+            <li>"This surface is terrible."</li>
+        </ul>
+        <p><strong>Body reactions:</strong></p>
+        <ul>
+            <li>Racing heartbeat</li>
+            <li>Shaking hands</li>
+            <li>Tight stomach</li>
+        </ul>
+        <p>These are normal — and they do not have to control your throw.</p>
+    </div>
+
+    <h3>Don't Believe Everything Your Brain Says</h3>
+    <p>The brain is wired to imagine worst-case scenarios. When you stand in the circle it may shout:</p>
+    <p><em>"You're going to miss!"</em></p>
+    <p>If you treat that thought as truth, you become stiff and fearful.</p>
+
+    <div class="info-box">
+        <p><strong>The goal is not to silence your thoughts</strong> — but to notice them, let them be there, and still execute your plan.</p>
+    </div>
+
+    <h2>MGP — Your Mental Checklist for Every Ball</h2>
+    <p>To avoid stress and impulsive decisions, use the <strong>MGP method</strong> before entering the circle.</p>
+
+    <div class="highlight-box">
+        <h4>M — Mathematics</h4>
+        <ul>
+            <li>How many boules do we have left?</li>
+            <li>How many does the opponent have?</li>
+            <li>How many points are currently on the ground?</li>
+        </ul>
+        <p><strong>Never throw without knowing the numbers — they determine your risk level.</strong></p>
+    </div>
+
+    <div class="info-box">
+        <h4>G — Geography</h4>
+        <ul>
+            <li>Which boules are dangerous?</li>
+            <li>Walk up to the jack and look back toward the circle.</li>
+            <li>Visualize the landing point before you move.</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h4>P — The Plan</h4>
+        <p>Choose your exact landing point and purpose:</p>
+        <ul>
+            <li>point,</li>
+            <li>push,</li>
+            <li>or shoot.</li>
+        </ul>
+        <p><strong>Golden rule:</strong> once you step into the circle — do not change the plan.</p>
+        <p>Hesitation is the enemy of precision.</p>
+    </div>
+
+    <h3>Communication Is Key</h3>
+    <div class="info-box">
+        <p>Before each throw ask:</p>
+        <ul>
+            <li>Are we aiming to win points?</li>
+            <li>Should we block?</li>
+            <li>Should we eliminate a dangerous boule?</li>
+        </ul>
+        <p><strong>Never let two players throw without consulting each other.</strong></p>
+        <p>Matches are lost when communication stops.</p>
+    </div>
+
+    <h3>Team Tactics in Practice</h3>
+    <ul>
+        <li><strong>Early in the match:</strong> establish your style and test weaknesses.</li>
+        <li><strong>When leading:</strong> play safe and avoid unnecessary risks.</li>
+        <li><strong>When behind:</strong> dare to take calculated risks.</li>
+        <li><strong>At the end of the match:</strong> stay calm and stick to your plan.</li>
+    </ul>
+</div>
+
+<!-- CHAPTER 8 -->
+<div class="chapter" id="ch8">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 8</div>
+        <h2>Train Smarter</h2>
+        <p>Effective methods for rapid development</p>
+    </div>
+
+    <p class="quote">It is not how much you train that determines your progress — it is how intelligently you train. Focused, structured, and measurable practice will improve your game far faster than random repetition.</p>
+    <p>Smart training means deliberate practice: clear goals, immediate feedback, and systematic reflection.</p>
+
+    <h2>Effective Exercises for Solo Training</h2>
+    <p>You do not need an opponent to train effectively. Much of your technical development can be done alone if your practice is structured.</p>
+
+    <div class="highlight-box">
+        <h4>1. Round Obstacles (precision under pressure)</h4>
+        <p>Place several boules or bricks around the jack and practice placing your boule as close as possible without touching them. This develops your ability to find landing surfaces and increases your sensitivity for backspin.</p>
+        <p><strong>Suggested progression:</strong></p>
+        <ul>
+            <li>Start with 3 obstacles at 6 meters</li>
+            <li>Gradually increase to 6 obstacles</li>
+            <li>Vary the distance between 6–10 meters</li>
+        </ul>
+        <p>Your goal is not power — it is control and creativity.</p>
+    </div>
+
+    <div class="info-box">
+        <h4>2. Band Exercise for Shooting (trajectory control)</h4>
+        <p>Build a simple frame with two bands at head height and practice throwing the boule between them.</p>
+        <p>This exercise helps you:</p>
+        <ul>
+            <li>Maintain a consistent throwing path</li>
+            <li>Control the height of your shot</li>
+            <li>Develop stable technique under pressure</li>
+        </ul>
+        <p><strong>Tip:</strong> Begin with the bands 30–40 cm apart, then narrow the gap as your precision improves.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>3. Hit Landing Surfaces (donnée accuracy)</h4>
+        <p>Mark different target points on the court and aim to land your boule exactly on them.</p>
+        <p><strong>Methods:</strong></p>
+        <ul>
+            <li>Draw circles with chalk or place plates</li>
+            <li>Practice at 6m, 7m, 8m, 9m, 10m</li>
+            <li>Alternate between rolling throws and high lobs</li>
+            <li>Record your results out of 10 attempts</li>
+        </ul>
+        <p>This builds length control — one of the most important skills in pétanque.</p>
+    </div>
+
+    <div class="info-box">
+        <h4>4. Assess Your Skills (measure what matters)</h4>
+        <p>Track your progress using clear benchmarks:</p>
+        <table>
+            <tr><th>Exercise</th><th>Goal</th><th>Beginner</th><th>Advanced</th></tr>
+            <tr><td>Point at 7m</td><td>Within 50 cm of jack</td><td>5/10</td><td>8/10</td></tr>
+            <tr><td>Shot at 8m</td><td>Hit target boule</td><td>3/10</td><td>7/10</td></tr>
+            <tr><td>Long point 10m</td><td>Within 1m of jack</td><td>4/10</td><td>8/10</td></tr>
+        </table>
+        <p>Regular self-assessment keeps your training honest and focused.</p>
+    </div>
+
+    <h2>Video Analysis — Record and Improve</h2>
+    <p>Filming yourself is one of the most powerful tools for improvement.</p>
+
+    <div class="highlight-box">
+        <h4>How to film effectively</h4>
+        <ul>
+            <li>Place the camera sideways so the full movement is visible</li>
+            <li>Capture your entire body — feet, knees, torso, arm, backswing, follow-through</li>
+            <li>Use slow motion if available</li>
+            <li>Record at least 10 throws to detect patterns</li>
+        </ul>
+    </div>
+
+    <h3>What to look for</h3>
+    <div class="info-box">
+        <ul>
+            <li><strong>Stance:</strong> Are your feet stable and aligned?</li>
+            <li><strong>Grip:</strong> Do you hold the boule consistently?</li>
+            <li><strong>Backswing:</strong> Is it smooth and controlled?</li>
+            <li><strong>Release:</strong> Do you release at the same point every time?</li>
+            <li><strong>Follow-through:</strong> Does your hand point toward the target?</li>
+            <li><strong>Balance:</strong> Do you stay centered throughout the throw?</li>
+        </ul>
+    </div>
+
+    <h3>Compare with Elite Players</h3>
+    <p>Watch videos of world-class players and compare one element at a time with your own technique — for example, only focus on backswing or release.</p>
+    <p>Do not try to change everything at once. Master one improvement before moving to the next.</p>
+
+    <h2>Physical and Mental Preparation for Competitions</h2>
+
+    <h3>Warm-up (15–20 minutes)</h3>
+    <div class="highlight-box">
+        <h4>Physical warm-up</h4>
+        <ul>
+            <li><strong>Dynamic stretching</strong> (arm circles, leg swings, torso twists) — 5 min</li>
+            <li><strong>Mobility work</strong> (wrists, shoulders, hips) — 3 min</li>
+            <li><strong>Gradual warm-up throws</strong> — start short and increase distance — 10 min</li>
+        </ul>
+        <p>A good warm-up reduces injuries and improves precision.</p>
+    </div>
+
+    <h3>During Competition</h3>
+    <ul>
+        <li><strong>Hydration:</strong> Drink regularly, especially in heat</li>
+        <li><strong>Stay warm:</strong> Use a jacket between ends in cold weather</li>
+        <li><strong>Eat light:</strong> Prefer fruit, nuts, or energy bars</li>
+        <li><strong>Take breaks:</strong> Use downtime to reset mentally</li>
+    </ul>
+    <p>Your body supports your mind — take care of both.</p>
+
+    <h3>Mental Preparation</h3>
+    <div class="info-box">
+        <h4>Before each match:</h4>
+        <ul>
+            <li>Take 5–10 deep breaths</li>
+            <li>Visualize successful throws</li>
+            <li>Use positive self-talk: "I am prepared." "I trust my technique."</li>
+            <li>Focus on process, not result</li>
+        </ul>
+        <p>You cannot control the score — but you can control your execution.</p>
+    </div>
+
+    <h3>Set Realistic Goals</h3>
+    <table>
+        <tr><th>Type of goal</th><th>Example</th></tr>
+        <tr><td><strong>Outcome goal</strong></td><td>Reach quarterfinals, win 2 matches</td></tr>
+        <tr><td><strong>Performance goal</strong></td><td>Hit 60% of shots, point within 50 cm in 70% of throws</td></tr>
+        <tr><td><strong>Process goal</strong></td><td>Stay focused between throws, communicate clearly with team</td></tr>
+    </table>
+    <p>Process goals are the most powerful — they shape your behavior.</p>
+
+    <h3>After Competition — Reflect and Learn</h3>
+    <div class="highlight-box">
+        <p><strong>Ask yourself:</strong></p>
+        <ul>
+            <li>What worked well?</li>
+            <li>What was difficult?</li>
+            <li>What should I train next?</li>
+        </ul>
+        <p>Remember: you play to develop, not only to win. Every match is a lesson.</p>
+    </div>
+
+    <h2>Weekly Training Plan</h2>
+
+    <div class="highlight-box">
+        <h4>Monday/Tuesday — Pointing Focus (45 min)</h4>
+        <ul>
+            <li>10 min warm-up</li>
+            <li>20 min handkerchief exercise at 6, 7, 8 m</li>
+            <li>15 min obstacle challenge</li>
+        </ul>
+        <p><strong>Goal:</strong> 60% accuracy on donnée at 7 m; 70% within 50 cm with obstacles</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Wednesday/Thursday — Shooting Focus (45 min)</h4>
+        <ul>
+            <li>10 min warm-up shots at 6 m</li>
+            <li>25 min 6-boule challenge at 6–10 m</li>
+            <li>10 min carreau training</li>
+        </ul>
+        <p><strong>Goal:</strong> 50% total shooting accuracy; at least 2 carreaux per session</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Friday/Saturday — Match Simulation (60 min)</h4>
+        <ul>
+            <li>Play against yourself or a partner</li>
+            <li>Change terrain and jack placement each end</li>
+            <li>Practice decision-making: point or shoot?</li>
+        </ul>
+        <p><strong>Goal:</strong> Analyze 10 ends afterwards</p>
+    </div>
+
+    <div class="warning-box">
+        <h4>Sunday — Rest or Video Analysis</h4>
+        <p>Review your recorded throws. Identify ONE thing to improve next week. Write it down in your training journal.</p>
+    </div>
+
+    <p><strong>Train consistently 3–4 times per week — you will see clear results in 4–8 weeks.</strong></p>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"When I started training, I thought more hours was the answer. Today I know that smart minutes beat long hours. Discipline, reflection, and routine are my greatest strengths."</div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 3 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Part 3</h2>
+    <p>Pétanque as a Lifestyle</p>
+</div>
+
+<!-- CHAPTER 9 -->
+<div class="chapter" id="ch9">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 9</div>
+        <h2>Competition vs. Social Play</h2>
+        <p>Differences in mindset and strategy</p>
+    </div>
+
+    <p class="quote">Pétanque is more than just a sport — it is a social activity, a cultural tradition, and a global community. Whether played casually among friends or in high-stakes tournaments, the game creates connection, shared experiences, and a sense of belonging that goes far beyond winning or losing.</p>
+
+    <h3>Differences in Mindset and Strategy</h3>
+    <p>In everyday language, the terms social pétanque and competition pétanque are often used to describe two different ways of engaging with the game. Both are valuable, but they demand different mindsets, behaviors, and expectations.</p>
+
+    <div class="highlight-box">
+        <h4>Social Play</h4>
+        <p>In friendly games without referees, the spirit of the game is based on cooperation, enjoyment, and mutual respect rather than strict enforcement of rules.</p>
+        <p>Typical characteristics of social play include:</p>
+        <ul>
+            <li>Games are played without an official referee.</li>
+            <li>If something unclear or irregular happens, players discuss it together and agree on a solution.</li>
+            <li>The atmosphere is relaxed, and social interaction is as important as the score.</li>
+            <li>Players often experiment with new tactics or alternate who throws first.</li>
+            <li>Points are counted, but winning is not the main objective.</li>
+        </ul>
+        <p>Social pétanque is about friendship, laughter, and shared moments — a tradition that keeps the soul of the game alive.</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Competition Play</h4>
+        <p>In contrast, official competition pétanque follows structured rules and procedures designed to ensure fairness and consistency.</p>
+        <p>Key aspects of competitive play include:</p>
+        <ul>
+            <li>A referee is present and can be called upon in case of disputes.</li>
+            <li>The referee's decision is final and cannot be appealed.</li>
+            <li>Players must respect the official time limit for each throw (typically one minute).</li>
+            <li>Every point matters — matches are often decided by small details.</li>
+            <li>Teams carefully prepare each throw by analyzing the terrain, discussing strategy, and coordinating their roles.</li>
+        </ul>
+        <p>Competition pétanque rewards discipline, concentration, and teamwork under pressure.</p>
+    </div>
+
+    <h3>How to Find Clubs and Tournaments</h3>
+    <p>Joining a local club is the most effective way to improve your game, meet experienced players, and participate in organized competitions. Most countries have a national pétanque federation that provides information about clubs, leagues, and events.</p>
+
+    <div class="info-box">
+        <h4>Internationally</h4>
+        <p>For players who want to compete or travel, several international resources are available:</p>
+        <ul>
+            <li>The FIPJP calendar, which lists major international tournaments.</li>
+            <li>The European Pétanque Confederation's EuroCup, a prestigious team event.</li>
+            <li>The Masters de Pétanque, often described as a "Tour de France" of pétanque, held in multiple French cities.</li>
+            <li>Online communities such as Facebook groups and Meetup pages where players organize informal games.</li>
+        </ul>
+        <p>These platforms help connect players worldwide and strengthen the global pétanque community.</p>
+    </div>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"For me, pétanque is as much a way of life as it is a game. I have met more people, made more friends, and experienced more cultures through boule than through any other activity in my life."</div>
+    </div>
+</div>
+
+<!-- CHAPTER 10 -->
+<div class="chapter" id="ch10">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 10</div>
+        <h2>Pétanque Around the World</h2>
+        <p>Cultural differences, major tournaments and legendary players</p>
+    </div>
+
+    <h3>Cultural Differences in the Game</h3>
+    <p>Pétanque was born in Provence, France, but spread rapidly with the introduction of modern steel boules. Today, the sport has strong national federations in countries such as Germany, Spain, and England — as well as deep roots in former French colonial regions including Laos, Thailand, Vietnam, Cambodia, and Puducherry in India.</p>
+    <p>While the core rules remain the same, playing styles, etiquette, and traditions vary from country to country, giving pétanque a rich cultural diversity.</p>
+
+    <div class="highlight-box">
+        <h4>Some Numbers</h4>
+        <ul>
+            <li><strong>France:</strong> Over 300,000 licensed members in the FFPJP.</li>
+            <li><strong>USA:</strong> Approximately 30,000 players; 2,141 members across 52 clubs (2015).</li>
+            <li><strong>FIPJP:</strong> Nearly 800,000 registered members in 2022.</li>
+            <li><strong>Thailand:</strong> Around 80,000 competitive players.</li>
+        </ul>
+        <p>These figures illustrate how pétanque has evolved from a regional pastime to a truly global sport.</p>
+    </div>
+
+    <h3>Thailand — A Fascinating Example</h3>
+    <p>Princess Srinagarindra introduced pétanque to Thailand in the 1970s and encouraged schools, police, military, and civil services to adopt the sport. Today, pétanque is part of official military training, and Thailand ranks among the world's elite nations alongside Vietnam and Laos.</p>
+    <p>Bangkok-based manufacturer FBT is one of the few factories outside France producing FIPJP-approved boules — a clear sign of how deeply the sport has taken root in the country.</p>
+
+    <h3>Major Tournaments</h3>
+    <table>
+        <tr><th>Tournament</th><th>Description</th></tr>
+        <tr><td><strong>Mondial la Marseillaise à Pétanque</strong></td><td>The world's largest and most prestigious pétanque event, held every July in Marseille, attracting around 15,000 players and 150,000 spectators.</td></tr>
+        <tr><td><strong>FIPJP World Championships</strong></td><td>The official world championships, featuring triples, doubles, individual play, and precision shooting.</td></tr>
+        <tr><td><strong>Masters de Pétanque</strong></td><td>A professional-style circuit played in eight French cities, similar to a "Tour de France" for pétanque.</td></tr>
+        <tr><td><strong>EuroCup</strong></td><td>A team competition where national champion clubs compete against each other.</td></tr>
+        <tr><td><strong>Amelia Island Open (USA)</strong></td><td>The largest pétanque tournament in the United States, held annually in Florida.</td></tr>
+    </table>
+
+    <h3>Legendary Players</h3>
+    <ul>
+        <li><strong>Philippe Quintais (France):</strong> 15 world titles — widely regarded as one of the greatest pétanque players of all time, known for extraordinary precision and consistency.</li>
+        <li><strong>Marco Foyot (France):</strong> Six world titles and renowned for his tactical intelligence and ability to read terrain.</li>
+        <li><strong>Dylan Rocher (France):</strong> Five world titles; a modern star admired for power, versatility, and mental strength.</li>
+        <li><strong>Thanakorn Sangkaew (Thailand):</strong> World Champion 2019 and Asian Champion in 2018 and 2019.</li>
+        <li><strong>Nantawan Fueangsanit (Thailand):</strong> World Champion 2017 and multiple-time Asian champion.</li>
+        <li><strong>Angélique Colombet (France):</strong> Five-time world champion, particularly dominant in precision pointing.</li>
+    </ul>
+    <p>These players represent different styles and traditions, showing how pétanque has evolved into a truly international sport.</p>
+
+    <h3>Informal Traditions and Etiquette</h3>
+    <div class="info-box">
+        <h4>"Faire fanny"</h4>
+        <p>Losing a match 0–13 is traditionally called <em>faire fanny</em>. In some clubs, the losing team buys the winners a drink — and in older French traditions, may even kiss a wooden statue of "Fanny" as a playful ritual. This custom reflects the social and humorous side of the game.</p>
+    </div>
+
+    <h4>Good Etiquette Means:</h4>
+    <ul>
+        <li>Never walk in front of a player who is about to throw.</li>
+        <li>Stand still and remain silent when someone is concentrating.</li>
+        <li>Wait until the boule has landed before commenting or celebrating.</li>
+        <li>Use proper measuring tools instead of feet.</li>
+        <li>Show respect to opponents, spectators, and referees.</li>
+    </ul>
+    <p>By combining official rule knowledge with good etiquette, you become a respected pétanque player wherever you play.</p>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"When I travel and play boule, I am always struck by the same thing: regardless of language and culture, the circle feels like home. That is why pétanque, for me, is not just a game — it is a way of meeting the world."</div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 4 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Part 4</h2>
+    <p>In-Depth Study and Development</p>
+</div>
+
+<!-- CHAPTER 11 -->
+<div class="chapter" id="ch11">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 11</div>
+        <h2>Strategic Analysis and Tactics</h2>
+        <p>Strategy, mental strength and training</p>
+    </div>
+
+    <p class="quote">Mastering pétanque is a lifelong journey. The rules provide the framework, but it is strategy, psychology, and training habits that determine how far you go.</p>
+
+    <p>The rules explain how you are allowed to play; strategy determines how you should play to win. Developing a conscious and structured strategy helps you make better decisions, especially under pressure.</p>
+
+    <h3>Basic Strategies</h3>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Read the surface before throwing.</strong> Observe whether the ground is hard, soft, sandy, or rocky, as this will influence how the boule behaves.</li>
+            <li><strong>Choose the right boule for your style.</strong> Material, weight, and diameter all affect control, precision, and stability.</li>
+            <li><strong>Place the first boule in front of the jack.</strong> Positioning the first boule 30–50 cm in front of the jack helps create a defensive "wall."</li>
+            <li><strong>Play on your opponents' weaknesses.</strong> Carefully observe how they throw and adapt your game accordingly.</li>
+            <li><strong>Be flexible.</strong> Test different tactics depending on the situation instead of sticking rigidly to one approach.</li>
+        </ul>
+    </div>
+
+    <h3>Advanced Tactics</h3>
+    <table>
+        <tr><th>Tactic</th><th>Description</th></tr>
+        <tr><td><strong>Multi-step terrain analysis</strong></td><td>Think several throws ahead. Identify stones, slopes, or obstacles that could serve as support points or barriers.</td></tr>
+        <tr><td><strong>Position the jack intentionally</strong></td><td>Place the jack on a part of the terrain that favors your team more than your opponents.</td></tr>
+        <tr><td><strong>Change tempo</strong></td><td>Alternate between fast, decisive throws and slow, controlled ones to disrupt rhythm.</td></tr>
+        <tr><td><strong>Make the opponent think</strong></td><td>Use difficult placements or long throws to push them out of their comfort zone.</td></tr>
+    </table>
+</div>
+
+<!-- CHAPTER 12 -->
+<div class="chapter" id="ch12">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 12</div>
+        <h2>Mental Strength and Focus</h2>
+        <p>The mind as your greatest asset</p>
+    </div>
+
+    <p>The difference between good and excellent players often lies in mental strength rather than technique alone. The mind can — and should — be trained just like your throwing skills.</p>
+
+    <h3>Handling Pressure — Three Techniques</h3>
+    <div class="info-box">
+        <h4>Breathing and visualization</h4>
+        <p>Slow, deep breathing combined with visualizing a successful throw helps reduce anxiety.</p>
+        <h4>Positive mindset</h4>
+        <p>A confident and optimistic attitude makes it easier to stay focused under stress.</p>
+        <h4>Personal routines</h4>
+        <p>Develop a consistent pre-throw routine to create calm and consistency.</p>
+    </div>
+
+    <h3>Mental Checklist Before Every Throw</h3>
+    <div class="highlight-box">
+        <p>Run through the following steps mentally:</p>
+        <ul>
+            <li><strong>Stance</strong> — Are you balanced?</li>
+            <li><strong>Grip</strong> — Is your hold steady and relaxed?</li>
+            <li><strong>Angle</strong> — Is your arm positioned correctly?</li>
+            <li><strong>Length</strong> — Have you judged the distance properly?</li>
+            <li><strong>Lean</strong> — Are you compensating for any slope in the terrain?</li>
+        </ul>
+    </div>
+
+    <h3>Additional Mental Techniques</h3>
+    <ul>
+        <li><strong>Backward visualization:</strong> Imagine the boule traveling backwards from the jack to your hand — a technique that sharpens your sense of trajectory.</li>
+        <li><strong>Learn from each other:</strong> Discuss throws with teammates to gain new perspectives.</li>
+    </ul>
+
+    <h3>Focus and Concentration</h3>
+    <div class="info-box">
+        <ul>
+            <li>Avoid distractions by staying aware of all boules on the court.</li>
+            <li>Develop a personal ritual before every throw.</li>
+            <li>Regular meditation can significantly improve focus.</li>
+            <li>Use mental imagery — picture the throw clearly before executing it.</li>
+        </ul>
+    </div>
+
+    <h3>Motivation and Goal Setting</h3>
+    <p>Set goals that guide your training:</p>
+    <ul>
+        <li><strong>Short-term goals:</strong> Hit a specific target ten times per session.</li>
+        <li><strong>Medium-term goals:</strong> Improve your accuracy over a season.</li>
+        <li><strong>Long-term goals:</strong> Win a tournament.</li>
+    </ul>
+    <p>Clear goals give both direction and motivation.</p>
+</div>
+
+<!-- CHAPTER 13 -->
+<div class="chapter" id="ch13">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 13</div>
+        <h2>Training Plan and Development</h2>
+        <p>Structured improvement over time</p>
+    </div>
+
+    <p>Improvement is not just about playing more — it is about training smarter. Effective training saves time and leads to better results.</p>
+
+    <h3>Five Principles of Effective Training</h3>
+    <div class="highlight-box">
+        <ol>
+            <li><strong>Play regularly.</strong> Three well-planned sessions per week are usually sufficient.</li>
+            <li><strong>Vary opponents.</strong> Play against different styles and participate in tournaments.</li>
+            <li><strong>Train with experienced players.</strong> Learn from those who have mastered technique and strategy.</li>
+            <li><strong>Practice deliberately.</strong> Focus on one specific skill at a time.</li>
+            <li><strong>Alternate technique and free play.</strong> Analyze during training, but trust your instinct during matches.</li>
+        </ol>
+    </div>
+
+    <h3>Analysis and Self-Assessment</h3>
+    <ul>
+        <li><strong>Continuous learning:</strong> Document every training session and match.</li>
+        <li><strong>Video analysis:</strong> Film your throws and review your technique.</li>
+        <li><strong>Performance profile:</strong> Create a matrix of your psychological, tactical, technical, and physical skills.</li>
+    </ul>
+
+    <h3>Step-by-Step Study Plan</h3>
+    <table>
+        <tr><th>Level</th><th>Timeframe</th><th>Focus</th></tr>
+        <tr><td><strong>Beginner</strong></td><td>0–6 months</td><td>Basic grip, stance, and throw. Play with lighter boules and join social matches.</td></tr>
+        <tr><td><strong>Development phase</strong></td><td>6–18 months</td><td>Analyze terrain, practice both pointing and shooting, and join small competitions.</td></tr>
+        <tr><td><strong>Advanced player</strong></td><td>18–36 months</td><td>Deepen strategy, study opponents, and integrate mental training.</td></tr>
+        <tr><td><strong>Competition player</strong></td><td>3+ years</td><td>Fine-tune technique with a coach and plan training in cycles.</td></tr>
+    </table>
+
+    <div class="warning-box">
+        <h4>Training Tip</h4>
+        <p>Perform exercises with light weights or with the pétanque boule itself, using high repetitions to build the low-intensity endurance required in long matches.</p>
+    </div>
+</div>
+
+<!-- CHAPTER 14 -->
+<div class="chapter" id="ch14">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 14</div>
+        <h2>Conclusion</h2>
+        <p>Bringing it all together</p>
+    </div>
+
+    <p>By analyzing the terrain, choosing the right tactics, training purposefully, and strengthening your mental game, you take control of both your performance and your development.</p>
+    <p>And remember — enjoyment is essential. The social interaction and joy of pétanque are just as important as winning.</p>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"Pétanque is technique, tactics, and psychology — but above all, it is a journey with yourself. Every match teaches you something new about the game and about who you are. Play with joy. Think with clarity."</div>
+    </div>
+</div>
+
+<!-- CHAPTER 15 -->
+<div class="chapter" id="ch15">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 15</div>
+        <h2>Leading a Boule Pétanque Team</h2>
+        <p>Coaching, team building, and preparation for competitive play</p>
+    </div>
+
+    <p>Being a team leader in pétanque is not only about understanding the game — it is about understanding people. A skilled coach does not win matches through their own throws; they win by helping others perform at their best when it matters most.</p>
+
+    <h2>The Coach's Role — Strategy and Humanity in Balance</h2>
+    <p>A good pétanque coach must be able to move fluidly between three roles:</p>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>The Strategist</strong> — analyzes the terrain, opponents, and match situation.</li>
+            <li><strong>The Psychologist</strong> — reads emotions, stress levels, and confidence in players.</li>
+            <li><strong>The Team Builder</strong> — creates cohesion, trust, and psychological safety within the group.</li>
+        </ul>
+        <p><strong>Technique can be taught — but trust must be earned.</strong></p>
+    </div>
+    <p>The best coach is not the one who speaks the most, but the one who listens best and knows what to say — and when to say it.</p>
+
+    <h2>Before Competition — Strategic Considerations</h2>
+    <p>Before a match or league round, the coach should always reflect on four key factors:</p>
+
+    <div class="info-box">
+        <h4>1) Current form</h4>
+        <p>Who is sharp today? Who needs support? Past achievements matter — but today's feeling matters more.</p>
+        <h4>2) Mental readiness</h4>
+        <p>Is the team calm or tense? A nervous player needs reassurance — not pressure.</p>
+        <h4>3) Team combinations</h4>
+        <p>Some players perform better together than others. A strong pointer often benefits from a calm milieu and a confident shooter.</p>
+        <h4>4) Terrain character</h4>
+        <p>Is the surface hard, soft, sloping, or uneven? The team lineup should match the demands of the court.</p>
+    </div>
+
+    <h2>Team Selection — Finding the Right Balance</h2>
+    <p>When assembling a team, the coach should weigh five factors:</p>
+    <ul>
+        <li><strong>Experience</strong> — match routine and competitive background.</li>
+        <li><strong>Mental strength</strong> — how the player handles pressure.</li>
+        <li><strong>Social ability</strong> — how well the person functions in a group.</li>
+        <li><strong>Form</strong> — recent performance.</li>
+        <li><strong>Role understanding</strong> — whether the player knows their task in the team.</li>
+    </ul>
+
+    <h2>Real-Time Coaching — During the Match</h2>
+
+    <h3>Adapting tactics to weather</h3>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Rain</strong> — heavier courts — higher lobs.</li>
+            <li><strong>Dry conditions</strong> — harder surfaces — more rolling throws.</li>
+        </ul>
+    </div>
+
+    <h3>Handling pressure points</h3>
+    <p>At scores like 12–12, composure often decides more than technique. The coach's task is to remind the team of routine — not risk.</p>
+
+    <h3>Clear communication</h3>
+    <div class="info-box">
+        <p>Short, clear instructions — no long lectures in the circle. <strong>A good coach calms with few words.</strong></p>
+    </div>
+
+    <h2>When Things Go Wrong — Morale and Cooperation</h2>
+    <div class="warning-box">
+        <p><strong>Scenario:</strong> A player misses an easy throw and becomes frustrated.</p>
+        <p><strong>The coach should:</strong></p>
+        <ul>
+            <li>Stop the negative spiral — do not scold.</li>
+            <li>Remind them of the plan (MGP: Mind, Game, Process).</li>
+            <li>Give a simple, concrete instruction: <em>"Do your routine — aim for the donnée."</em></li>
+            <li>Shift focus to the next throw.</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>Mistakes are not problems — they are training material.</strong></p>
+    </div>
+
+    <h2>Building a Strong Team</h2>
+    <p>A real team is not created on competition day — it is built over time.</p>
+
+    <h3>Four cornerstones</h3>
+    <div class="info-box">
+        <h4>Common goals</h4>
+        <p>What does the team want to achieve this season?</p>
+        <h4>Clear roles</h4>
+        <p>Who is the pointer, milieu, shooter?</p>
+        <h4>Open communication</h4>
+        <p>No blame — only learning.</p>
+        <h4>Team building</h4>
+        <p>Training, conversation, and shared experiences strengthen the team.</p>
+    </div>
+
+    <h2>Creating a Good Training Environment</h2>
+    <p>A safe training environment is built on four principles:</p>
+    <ul>
+        <li><strong>Safety</strong> — no fear of making mistakes.</li>
+        <li><strong>Structure</strong> — clear sessions with goals.</li>
+        <li><strong>Individual development</strong> — every player should grow.</li>
+        <li><strong>Variation</strong> — different exercises and courts.</li>
+    </ul>
+
+    <div class="info-box">
+        <p><strong>When people feel safe, they dare to play better.</strong></p>
+    </div>
+
+    <h2>The Coach's Compass — Four Guiding Principles</h2>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Safety</strong> — the team must feel supported.</li>
+            <li><strong>Relationships</strong> — the person comes first, the game second.</li>
+            <li><strong>Mental training</strong> — routine and focus before power.</li>
+            <li><strong>Reflection</strong> — learn from every match.</li>
+        </ul>
+    </div>
+
+    <h2>Summary — What Makes a Master Coach?</h2>
+    <p>A truly great coach:</p>
+    <ul>
+        <li>Sees both the game and the people,</li>
+        <li>Creates calm under pressure,</li>
+        <li>Builds a team over time,</li>
+        <li>Makes every player feel important.</li>
+    </ul>
+
+    <div class="warning-box">
+        <p><strong>Leadership in pétanque is about respect — not authority.</strong></p>
+    </div>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"As a coach, I learned that matches are rarely won by the one who throws best. They are won by the team that thinks most clearly, stays united, and dares to trust each other when it truly matters."</div>
+        <div class="attribution">— Dylan Rocher</div>
+    </div>
+</div>
+
+<!-- CHAPTER 16 -->
+<div class="chapter" id="ch16">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapter 16</div>
+        <h2>Boule Physics and Terrain Reading</h2>
+        <p>The science behind the perfect throw</p>
+    </div>
+
+    <p>When two players throw equally well, the difference between winning and losing often comes down to how well they understand the court and the physics of the boule. Technique gives precision — but physics gives predictability.</p>
+    <p>In this chapter, we combine theory and practice. You will learn why the boule behaves as it does — and how to use that knowledge strategically in real play.</p>
+
+    <h2>1) Basic Mechanics — What Happens in the Air and on the Ground?</h2>
+
+    <h3>Mass and Center of Gravity</h3>
+    <p>The weight of the boule is not accidental. It strongly influences how it flies, bounces, rolls, and interacts with the surface.</p>
+
+    <div class="highlight-box">
+        <h4>Heavier boules (750–800 g)</h4>
+        <ul>
+            <li>More stable in the air</li>
+            <li>Better suited for shooting</li>
+            <li>Less affected by wind and small surface irregularities</li>
+        </ul>
+        <h4>Lighter boules (650–700 g)</h4>
+        <ul>
+            <li>Easier to control</li>
+            <li>Better suited for pointing</li>
+            <li>More sensitive to surface variations</li>
+        </ul>
+        <p><strong>Practical rule of thumb: Shoot with weight — point with finesse.</strong></p>
+    </div>
+
+    <h3>Velocity, Gravity, and Friction</h3>
+    <p>Three forces govern every throw:</p>
+    <ul>
+        <li><strong>Gravity</strong> — pulls the boule toward the ground.</li>
+        <li><strong>Air resistance</strong> — slows the boule in flight.</li>
+        <li><strong>Friction</strong> — slows the boule when it lands.</li>
+    </ul>
+    <p>The higher you throw, the more time gravity has to act — and the softer the boule lands.</p>
+
+    <h3>Rotation and Backspin — Your Most Important Tool</h3>
+    <div class="info-box">
+        <p><strong>Backspin creates four decisive effects:</strong></p>
+        <ol>
+            <li><strong>Braking effect</strong> — the boule rolls a shorter distance after landing.</li>
+            <li><strong>Stability</strong> — reduces unwanted sideways drift.</li>
+            <li><strong>Controlled bounce</strong> — helps the boule "settle" into the ground.</li>
+            <li><strong>Gyroscopic effect</strong> — makes the flight path more predictable.</li>
+        </ol>
+        <p>A master pointer controls backspin as precisely as a golfer controls their swing.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>Key lesson:</strong><br>
+        Without backspin, the boule rolls far and becomes difficult to control.<br>
+        With backspin, it lands softly and stops more precisely.</p>
+    </div>
+
+    <h2>2) Terrain Physics — Why the Surface Decides the Game</h2>
+
+    <h3>Friction on Different Surfaces</h3>
+    <table>
+        <tr><th>Surface</th><th>Friction</th><th>Effect on the boule</th></tr>
+        <tr><td><strong>Fine gravel</strong></td><td>High</td><td>Short roll, soft landing</td></tr>
+        <tr><td><strong>Compact gravel</strong></td><td>Medium</td><td>Controlled roll</td></tr>
+        <tr><td><strong>Hard court (packed earth)</strong></td><td>Low</td><td>Long roll and higher bounce</td></tr>
+        <tr><td><strong>Wet court</strong></td><td>Variable</td><td>Boule tends to "stick"</td></tr>
+        <tr><td><strong>Dry grass</strong></td><td>High</td><td>Very short roll</td></tr>
+    </table>
+
+    <div class="highlight-box">
+        <p><strong>Practical conclusion:</strong><br>
+        The harder the court — the more you need to lob and use backspin.<br>
+        The softer the court — the flatter you can play.</p>
+    </div>
+
+    <h3>Slope and Gravity</h3>
+    <p>On a sloping court, gravity pulls the boule sideways.</p>
+
+    <div class="info-box">
+        <p><strong>A simple estimate you can use during play:</strong></p>
+        <p>Side displacement ≈ (slope × distance) / 10</p>
+        <p><strong>Example:</strong> Slope: 5% | Distance: 8 meters<br>
+        → Side displacement ≈ (5 × 8) / 10 = <strong>4 cm</strong></p>
+        <p>This is often enough to decide whether you should aim left or right of the jack.</p>
+    </div>
+
+    <h2>3) Advanced Terrain Reading — Seeing What Others Miss</h2>
+
+    <h3>Visual analysis (the eyes' work)</h3>
+    <p>Look for:</p>
+    <ul>
+        <li>Color shifts in the gravel</li>
+        <li>Shadows revealing small depressions</li>
+        <li>Shiny patches indicating harder ground</li>
+        <li>Tracks from previous boules</li>
+        <li>Vegetation suggesting moisture</li>
+    </ul>
+    <p><strong>A professional player "reads" the court before the first throw.</strong></p>
+
+    <h3>Tactile analysis (the body's work)</h3>
+    <div class="highlight-box">
+        <p><strong>Feel the ground:</strong></p>
+        <ul>
+            <li>Is it hard or loose?</li>
+            <li>Is the surface smooth or grainy?</li>
+            <li>Is there a hidden slope?</li>
+            <li>Is it damp beneath the surface?</li>
+        </ul>
+        <p>You do not play only with your eyes — you play with your whole body.</p>
+    </div>
+
+    <h3>Three test throws — your fastest diagnosis</h3>
+    <div class="info-box">
+        <p><strong>Before the match begins, try:</strong></p>
+        <ol>
+            <li>A rolling throw</li>
+            <li>A half-lob</li>
+            <li>A high lob</li>
+        </ol>
+        <p>These three throws give you more information than ten minutes of watching.</p>
+    </div>
+
+    <h2>4) Collision Physics — What Happens When Boules Meet?</h2>
+    <p>When two boules collide, two principles apply:</p>
+    <ul>
+        <li><strong>Momentum is conserved</strong> — energy transfers from your boule to the target.</li>
+        <li><strong>Energy is partially lost</strong> — which is why your boule often stops near the impact point.</li>
+    </ul>
+
+    <h3>Impact angles and effects</h3>
+    <table>
+        <tr><th>Angle</th><th>Result</th></tr>
+        <tr><td><strong>0° (straight on)</strong></td><td>Maximum energy transfer — best chance for a carreau</td></tr>
+        <tr><td><strong>30–45°</strong></td><td>Target moves sideways; your boule rolls forward</td></tr>
+        <tr><td><strong>60–90°</strong></td><td>Glancing hit — less control</td></tr>
+    </table>
+    <p><strong>Lesson: The straighter the hit, the clearer the result.</strong></p>
+
+    <h2>5) Weather Conditions — The Hidden Player</h2>
+
+    <h3>Temperature</h3>
+    <ul>
+        <li><strong>Cold court</strong> — harder surface — more roll</li>
+        <li><strong>Warm court</strong> — softer surface — less roll</li>
+    </ul>
+
+    <h3>Humidity and rain</h3>
+    <ul>
+        <li>Moisture slows the boule significantly</li>
+        <li>Light rain can make the court unpredictable</li>
+    </ul>
+
+    <h3>Wind</h3>
+    <ul>
+        <li>A light crosswind can move a high boule 2–5 cm over 8 meters</li>
+        <li>Headwind requires more force — tailwind requires less</li>
+    </ul>
+
+    <h2>6) Practical Application — Two Types of Courts</h2>
+
+    <div class="highlight-box">
+        <h4>Fast court (hard, dry)</h4>
+        <ul>
+            <li>Use more lobs</li>
+            <li>Increase backspin</li>
+            <li>Aim slightly shorter than usual</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>Slow court (soft, damp)</h4>
+        <ul>
+            <li>Play flatter</li>
+            <li>Reduce backspin</li>
+            <li>Throw slightly harder</li>
+        </ul>
+    </div>
+
+    <h2>7) Mental Models — Think Like an Engineer in the Circle</h2>
+    <div class="highlight-box">
+        <p><strong>Follow these four steps for every throw:</strong></p>
+        <ol>
+            <li>Read the court (eyes + feel).</li>
+            <li>Choose throw type (rolling, half-lob, or high lob).</li>
+            <li>Decide on the donnée (landing point).</li>
+            <li>Execute without hesitation.</li>
+        </ol>
+    </div>
+
+    <h2>8) Advanced Concepts — For the Curious</h2>
+
+    <h3>The Magnus Effect</h3>
+    <p>Rotation creates small pressure differences in the air that help stabilize the trajectory.</p>
+
+    <h3>The Gyroscopic Effect</h3>
+    <p>Fast rotation makes the boule more stable in the air — especially important for high lobs.</p>
+
+    <h3>Energy conservation</h3>
+    <p>The cleaner the hit, the more energy transfers to the target boule — which is why technique matters more than raw power.</p>
+
+    <h2>9) Four Training Exercises in "Boule Physics"</h2>
+
+    <div class="highlight-box">
+        <h4>Exercise 1 — Friction test</h4>
+        <p>Throw the same boule on three different surfaces and measure how far it rolls.</p>
+        <h4>Exercise 2 — Slope analysis</h4>
+        <p>Play uphill and downhill on the same slope and compare the difference.</p>
+        <h4>Exercise 3 — Collision experiment</h4>
+        <p>Place two boules 30 cm in front of the jack and shoot from different angles.</p>
+        <h4>Exercise 4 — Weather tactics</h4>
+        <p>Practice the same throw on a dry day and a damp day — compare the results.</p>
+    </div>
+
+    <h2>Summary — What You Gain from This Chapter</h2>
+    <p>When you master boule physics and terrain reading:</p>
+    <ul>
+        <li>your decisions become faster,</li>
+        <li>your throws become more consistent,</li>
+        <li>and your wins become more predictable.</li>
+    </ul>
+
+    <div class="warning-box">
+        <p><strong>You no longer play only by feel — you play with insight.</strong></p>
+    </div>
+
+    <div class="author-note">
+        <div class="label">From the Author</div>
+        <div class="text">"Technique makes you good.<br>
+        Physics makes you consistent.<br>
+        And consistency wins matches."</div>
+        <div class="attribution">— Philippe Quintais</div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- APPENDICES -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Appendices</h2>
+    <p>Reference material for players at all levels</p>
+</div>
+
+<!-- APPENDIX A -->
+<div class="chapter" id="appA">
+    <div class="appendix-header">
+        <div class="appendix-label">Appendix A</div>
+        <h2>Equipment Guide</h2>
+        <p>Manufacturing, size, hardness, and model selection for pétanque boules</p>
+    </div>
+
+    <p>Choosing the right boule is one of the most important decisions a pétanque player makes. Your boule is not just a tool — it is an extension of your hand, your feel for the terrain, and your playing style.</p>
+
+    <h2>1) Manufacturing — two main types of metal</h2>
+    <p>Competition boules are almost always made of steel with a hollow center. Two main materials dominate:</p>
+
+    <div class="highlight-box">
+        <h4>Carbon Steel (acier carbon)</h4>
+        <ul>
+            <li>Has a slightly porous surface that provides excellent grip.</li>
+            <li>Very popular among experienced and professional players.</li>
+            <li>Often gives better "feel" both in the hand and on the ground.</li>
+            <li><strong>Disadvantage:</strong> rusts more easily and requires regular maintenance.</li>
+        </ul>
+        <p><strong>Best for you if:</strong> you play often, want maximum feel, and are willing to care for your boules properly.</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Stainless Steel (inox)</h4>
+        <ul>
+            <li>Smoother surface than carbon steel.</li>
+            <li>Almost maintenance-free — rarely rusts.</li>
+            <li>Slightly less "bite" on the ground compared to carbon steel.</li>
+            <li>A very good choice for beginners and recreational players.</li>
+        </ul>
+        <p><strong>Best for you if:</strong> you want easy ownership, train irregularly, or play in humid conditions.</p>
+    </div>
+
+    <h2>2) Size and weight — finding the right balance</h2>
+    <p>All competition-approved boules fall within:</p>
+    <ul>
+        <li><strong>Diameter:</strong> 70.5–80 mm</li>
+        <li><strong>Weight:</strong> 650–800 grams</li>
+    </ul>
+
+    <div class="highlight-box">
+        <h4>Lighter boules (650–700 g)</h4>
+        <ul>
+            <li>Easier to control.</li>
+            <li>Gentler on hand and arm.</li>
+            <li>Often preferred by pointers and players with less hand strength.</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>Heavier boules (720–800 g)</h4>
+        <ul>
+            <li>More stable in the air.</li>
+            <li>Provide more power in shots.</li>
+            <li>Less affected by wind and small surface irregularities.</li>
+            <li>Often preferred by shooters.</li>
+        </ul>
+    </div>
+
+    <h3>Diameter and hand size — a practical rule of thumb</h3>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Pointers:</strong> 71–73 mm</li>
+            <li><strong>Shooters:</strong> 73–76 mm</li>
+        </ul>
+        <p>The boule should feel secure in your hand — not too large and not too small.</p>
+    </div>
+
+    <h2>3) Hardness and surface texture</h2>
+    <table>
+        <tr><th>Type</th><th>Feel</th><th>Ground behavior</th><th>Best for</th></tr>
+        <tr><td><strong>Soft (tendre)</strong></td><td>Grip-friendly</td><td>Stops quickly</td><td>Pointers</td></tr>
+        <tr><td><strong>Semi-soft (demi-tendre)</strong></td><td>Balanced</td><td>Controlled roll</td><td>All-round players</td></tr>
+        <tr><td><strong>Hard (dure)</strong></td><td>Smoother</td><td>Rolls more</td><td>Shooters</td></tr>
+    </table>
+
+    <h2>4) Buying advice — which boule should you choose?</h2>
+
+    <div class="info-box">
+        <h4>Beginner</h4>
+        <p>Stainless steel, 680–710 g, 72–74 mm diameter. Prioritize simplicity and durability over perfection.</p>
+        <h4>Advanced pointer</h4>
+        <p>Carbon steel, 700–730 g, 71–73 mm diameter. Soft or semi-soft hardness.</p>
+        <h4>Shooting player</h4>
+        <p>680–710 g, 73–76 mm diameter. Semi-soft or hard variant.</p>
+        <h4>Competitive all-round player</h4>
+        <p>Semi-soft boule, 700–740 g, 72–74 mm diameter. This gives flexibility in all situations.</p>
+    </div>
+
+    <h2>5) Maintenance and care — five simple steps</h2>
+    <div class="highlight-box">
+        <ol>
+            <li><strong>Clean after every game</strong> — wash with warm water and a little dish soap.</li>
+            <li><strong>Dry thoroughly</strong> — moisture causes rust.</li>
+            <li><strong>Oil lightly</strong> — wipe with a lightly oiled cloth.</li>
+            <li><strong>Remove rust when needed</strong> — use a fine steel brush or white wine vinegar, then rinse and oil.</li>
+            <li><strong>Store dry</strong> — avoid damp basements and cold storage rooms.</li>
+        </ol>
+    </div>
+
+    <p>A well-chosen boule gives you better precision, more predictable play, and greater enjoyment on the court.</p>
+
+    <div class="warning-box">
+        <p><strong>Treat your boules well — and they will serve you well.</strong></p>
+    </div>
+</div>
+
+<!-- APPENDIX B -->
+<div class="chapter" id="appB">
+    <div class="appendix-header">
+        <div class="appendix-label">Appendix B</div>
+        <h2>Complete Rulebook</h2>
+        <p>Official rules for pétanque</p>
+    </div>
+
+    <p>This appendix is based on the international rules of the FIPJP and common competition practice. The aim is to give you a clear, practical, and easy-to-use rule guide — suitable for both beginners and competitive players.</p>
+
+    <h2>10 rules that solve 90% of all situations</h2>
+    <div class="highlight-box">
+        <table>
+            <tr><th>#</th><th>Rule</th><th>Meaning in practice</th></tr>
+            <tr><td><strong>1</strong></td><td>Both feet in the circle</td><td>Both feet must remain in contact with the ground until the boule lands.</td></tr>
+            <tr><td><strong>2</strong></td><td>Jack 6–10 meters</td><td>Valid distance in competition.</td></tr>
+            <tr><td><strong>3</strong></td><td>Team without closest boule throws</td><td>After each throw, the team that is not in the lead plays next.</td></tr>
+            <tr><td><strong>4</strong></td><td>Points = number of boules closer</td><td>You score one point for each boule closer to the jack than the opponent's nearest.</td></tr>
+            <tr><td><strong>5</strong></td><td>First to 13 wins</td><td>A match is normally played to 13 points.</td></tr>
+            <tr><td><strong>6</strong></td><td>Boule/jack over boundary = dead</td><td>If it leaves the playing area, it is removed from play.</td></tr>
+            <tr><td><strong>7</strong></td><td>Dead jack = new end</td><td>If the jack becomes invalid, the end is replayed.</td></tr>
+            <tr><td><strong>8</strong></td><td>Measure only when in doubt</td><td>If the lead is obvious, no measurement is needed.</td></tr>
+            <tr><td><strong>9</strong></td><td>Do not touch boules before measuring</td><td>Otherwise points may be judged incorrectly.</td></tr>
+            <tr><td><strong>10</strong></td><td>1 minute per throw</td><td>Time starts when your team is in turn.</td></tr>
+        </table>
+        <p><strong>Master these ten points and you can handle almost any situation on the court.</strong></p>
+    </div>
+
+    <h3>1) Equipment</h3>
+    <div class="highlight-box">
+        <h4>Boules</h4>
+        <ul>
+            <li>Material: metal, hollow.</li>
+            <li>Weight: 650–800 g.</li>
+            <li>Diameter: 70.5–80 mm.</li>
+            <li>Must be FIPJP-approved in competition play.</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>Jack (cochonnet)</h4>
+        <ul>
+            <li>Wood or synthetic material, FIPJP-approved.</li>
+            <li>Diameter: approx. 30 mm.</li>
+            <li>Weight: 10–18 g.</li>
+        </ul>
+    </div>
+
+    <h3>2) Game formats</h3>
+    <table>
+        <tr><th>Format</th><th>Players</th><th>Boules per player</th></tr>
+        <tr><td><strong>Singles (tête-à-tête)</strong></td><td>1 vs 1</td><td>3</td></tr>
+        <tr><td><strong>Doubles (doublette)</strong></td><td>2 vs 2</td><td>3</td></tr>
+        <tr><td><strong>Triples (triplette)</strong></td><td>3 vs 3</td><td>2</td></tr>
+    </table>
+
+    <h3>3) Court</h3>
+    <ul>
+        <li><strong>International standard (FIPJP):</strong> 15 × 4 meters.</li>
+        <li><strong>National/club standard:</strong> often 12 × 3 meters.</li>
+    </ul>
+
+    <h3>4) Match start</h3>
+    <div class="info-box">
+        <ol>
+            <li>Teams flip a coin to decide who starts.</li>
+            <li>A throwing circle (35–50 cm diameter) is drawn.</li>
+            <li>The starting team throws the jack 6–10 meters straight ahead.</li>
+            <li>The same team throws the first boule.</li>
+        </ol>
+    </div>
+
+    <h3>5) Throwing technique</h3>
+    <div class="highlight-box">
+        <ul>
+            <li>Both feet must remain inside the circle.</li>
+            <li>Feet must stay in contact with the ground until the boule lands.</li>
+            <li>The throw should be a smooth pendulum motion — no overarm action.</li>
+        </ul>
+    </div>
+
+    <h3>6) Scoring</h3>
+    <p>When all boules have been played in an end:</p>
+    <ul>
+        <li>The team with the boule closest to the jack scores.</li>
+        <li>They receive one point per boule closer than the opponent's nearest.</li>
+        <li>Play continues to <strong>13 points</strong>.</li>
+    </ul>
+
+    <h2>Advanced rules</h2>
+
+    <h3>7) The jack — valid and invalid throws</h3>
+    <div class="info-box">
+        <p><strong>The jack is invalid if:</strong></p>
+        <ul>
+            <li>it lands closer than 6 m or farther than 10 m,</li>
+            <li>it is not visible from the circle,</li>
+            <li>it lands outside the playing area,</li>
+            <li>it is moved to an area where play cannot continue.</li>
+        </ul>
+        <p>If the jack becomes invalid, the end is replayed.</p>
+    </div>
+
+    <h3>8) Dead ball — dead boules and dead jack</h3>
+    <div class="highlight-box">
+        <h4>A boule becomes dead if:</h4>
+        <ul>
+            <li>it leaves the playing area,</li>
+            <li>it ends up in a forbidden zone,</li>
+            <li>or it is touched incorrectly before measuring.</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>The jack becomes dead if it:</h4>
+        <ul>
+            <li>leaves the playing area,</li>
+            <li>ends up closer than 3 m from the circle,</li>
+            <li>or farther than 20 m after being moved.</li>
+        </ul>
+        <p>When the jack is dead, a new end begins.</p>
+    </div>
+
+    <h3>9) Time limits</h3>
+    <div class="warning-box">
+        <p><strong>Maximum 1 minute per throw</strong> from the moment your team is in turn. Repeated delays can lead to a warning or point deduction.</p>
+    </div>
+
+    <h3>10) Measuring</h3>
+    <ul>
+        <li>Measuring must be done with an approved instrument (tape measure or measuring stick).</li>
+        <li>Never measure with your feet or by estimation in competition.</li>
+        <li>Boules must not be moved before measuring is complete.</li>
+    </ul>
+
+    <h3>11) Discipline and warnings</h3>
+    <div class="highlight-box">
+        <p><strong>The referee can issue:</strong></p>
+        <ul>
+            <li><strong>Yellow card</strong> — warning</li>
+            <li><strong>Orange card</strong> — penalty throw or point deduction</li>
+            <li><strong>Red card</strong> — exclusion from the match</li>
+        </ul>
+        <p><strong>Common reasons:</strong> unsportsmanlike behavior, time-wasting, or disturbing opponents.</p>
+    </div>
+
+    <h3>Good etiquette — how a respectful player behaves</h3>
+    <div class="info-box">
+        <p><strong>A respectful player:</strong></p>
+        <ul>
+            <li>stands still and remains silent when the opponent is throwing,</li>
+            <li>does not touch boules before measuring,</li>
+            <li>thanks opponents after the match,</li>
+            <li>maintains good composure even in defeat.</li>
+        </ul>
+    </div>
+
+    <h3>Quick guide for referees and teams</h3>
+    <div class="warning-box">
+        <p><strong>If a dispute arises:</strong></p>
+        <ol>
+            <li>Stop play.</li>
+            <li>Call the referee.</li>
+            <li>Do not touch boules or the jack.</li>
+            <li>Accept the referee's decision.</li>
+        </ol>
+    </div>
+
+    <p>Together, these form a compact, reliable rulebook for both casual play and competition.</p>
+</div>
+
+<!-- APPENDIX C -->
+<div class="chapter" id="appC">
+    <div class="appendix-header">
+        <div class="appendix-label">Appendix C</div>
+        <h2>Glossary</h2>
+        <p>French technical terms and key concepts in pétanque</p>
+    </div>
+
+    <p>This glossary serves as a quick reference to the most commonly used words in pétanque — covering both essential French technical terms and important English/technical concepts.</p>
+
+    <h2>Part 1 — French technical terms (12 key concepts)</h2>
+
+    <div class="highlight-box">
+        <p><strong>Boule</strong> — The metal ball each player throws during the game.</p>
+        <p><strong>Carreau</strong> — A perfect hit in which your boule knocks away the opponent's boule and stops exactly in its place.</p>
+        <p><strong>Cochonnet</strong> — The jack — the small wooden target ball toward which all boules are played.</p>
+        <p><strong>Donnée</strong> — The intended landing point where you aim for your boule to hit the ground.</p>
+        <p><strong>Mène</strong> — One complete round of play — from the throwing of the jack until points are counted.</p>
+        <p><strong>Milieu</strong> — The middle player in triples; an all-rounder who can both point and shoot.</p>
+        <p><strong>Pétanque</strong> — Derived from the Provençal phrase "pieds tanqués" — meaning "feet planted" or "standing still."</p>
+        <p><strong>Pointer (to point)</strong> — To place a boule as close as possible to the jack.</p>
+        <p><strong>Pointeur</strong> — The pointer in the team — typically the player who throws first.</p>
+        <p><strong>Tirer</strong> — To shoot — meaning to strike and remove an opponent's boule.</p>
+        <p><strong>Tirer au fer</strong> — Literally "shoot at the iron" — a direct shot aimed at an opponent's metal boule.</p>
+        <p><strong>Tireur</strong> — The shooter in the team — usually the player who throws last.</p>
+    </div>
+
+    <h2>Part 2 — English and technical terms (A–Z)</h2>
+
+    <table>
+        <tr><th>Term</th><th>Brief explanation</th></tr>
+        <tr><td><strong>Backspin</strong></td><td>Reverse rotation applied to control landing and roll.</td></tr>
+        <tr><td><strong>Biberon</strong></td><td>A soft landing shot very close to the jack.</td></tr>
+        <tr><td><strong>Circle</strong></td><td>The throwing circle from which all boules are played.</td></tr>
+        <tr><td><strong>Court</strong></td><td>The marked playing area.</td></tr>
+        <tr><td><strong>Devant</strong></td><td>Placing a boule in front of the jack.</td></tr>
+        <tr><td><strong>Direct shot</strong></td><td>A straight shot aimed at an opponent's boule.</td></tr>
+        <tr><td><strong>Doublette</strong></td><td>A team format of two players per team.</td></tr>
+        <tr><td><strong>Fanny</strong></td><td>Losing a match 13–0.</td></tr>
+        <tr><td><strong>Jack</strong></td><td>See Cochonnet.</td></tr>
+        <tr><td><strong>Lob</strong></td><td>A high-arcing throw.</td></tr>
+        <tr><td><strong>Measuring</strong></td><td>Determining which boule is closest to the jack.</td></tr>
+        <tr><td><strong>Parking</strong></td><td>Placing multiple boules close to the jack.</td></tr>
+        <tr><td><strong>Portée</strong></td><td>A flat, low trajectory throw.</td></tr>
+        <tr><td><strong>Rolling shot (raser)</strong></td><td>A low, fast shot along the ground.</td></tr>
+        <tr><td><strong>Tête-à-tête</strong></td><td>Singles play, one player versus one.</td></tr>
+        <tr><td><strong>Triples</strong></td><td>A team of three players per side.</td></tr>
+    </table>
+
+    <h2>Part 3 — Measurements and rules (quick facts)</h2>
+    <div class="info-box">
+        <ul>
+            <li><strong>Cochonnet (jack):</strong> 25–35 mm diameter, 10–18 g</li>
+            <li><strong>Boules:</strong> 70.5–80 mm diameter, 650–800 g</li>
+            <li><strong>Circle:</strong> 35–50 cm diameter</li>
+            <li><strong>Valid jack distance:</strong> 6–10 meters</li>
+            <li><strong>International court:</strong> 15 × 4 meters</li>
+            <li><strong>National/club court:</strong> 12 × 3 meters</li>
+            <li><strong>Time rule:</strong> Maximum 1 minute per throw</li>
+        </ul>
+    </div>
+
+    <h2>Part 4 — Tips for learning the terms</h2>
+    <div class="highlight-box">
+        <ul>
+            <li>Say the words out loud while you practice.</li>
+            <li>Connect each term to a specific action on the court.</li>
+            <li>Use this glossary during matches when unsure.</li>
+            <li>Mix French and English terms deliberately to build fluency.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- APPENDIX D -->
+<div class="chapter" id="appD">
+    <div class="appendix-header">
+        <div class="appendix-label">Appendix D</div>
+        <h2>Building a Boule Court</h2>
+        <p>A complete guide to creating your own pétanque court</p>
+    </div>
+
+    <h2>Introduction</h2>
+    <p>Building a boule court is more than a construction project — it is creating a place for community, training, and competition. A well-designed court makes the game more enjoyable, fairer, and more durable over time.</p>
+
+    <h2>1) Planning and preparation</h2>
+    <div class="highlight-box">
+        <h4>Placement checklist</h4>
+        <ul>
+            <li><strong>Size:</strong> Is there enough space for the chosen court plus a safety zone around it?</li>
+            <li><strong>Clear area:</strong> Allow at least 1 metre around the court for movement and spectators.</li>
+            <li><strong>Slope:</strong> Preferably a gentle slope of 1–2% for drainage.</li>
+            <li><strong>Sun and shade:</strong> A balance is ideal for comfort during long playing sessions.</li>
+            <li><strong>Distance to buildings:</strong> At least 5 metres (noise and safety).</li>
+            <li><strong>Drainage:</strong> Avoid low areas where water tends to collect.</li>
+            <li><strong>Soil type:</strong> Firm ground is best; avoid clay and peat.</li>
+        </ul>
+    </div>
+
+    <h3>Common court dimensions</h3>
+    <table>
+        <tr><th>Court type</th><th>Dimensions</th><th>Use</th></tr>
+        <tr><td><strong>Minimum standard</strong></td><td>12 × 3 m</td><td>Common for clubs and gardens</td></tr>
+        <tr><td><strong>Recommended</strong></td><td>15 × 4 m</td><td>Close to international standard</td></tr>
+        <tr><td><strong>Competition</strong></td><td>15 × 4 m</td><td>Meets FIPJP recommendation</td></tr>
+        <tr><td><strong>Compact</strong></td><td>10 × 2.5 m</td><td>Small plots, practice court</td></tr>
+    </table>
+
+    <div class="warning-box">
+        <p><strong>Recommendation:</strong> If you are building from scratch, 15 × 4 m is usually the best choice.</p>
+    </div>
+
+    <h2>2) Materials (for a 15 × 4 m court)</h2>
+    <div class="highlight-box">
+        <h4>Base layers</h4>
+        <ul>
+            <li><strong>Landscape fabric (geotextile)</strong> — prevents weeds.</li>
+            <li><strong>Crushed stone 0–32 mm</strong> — base layer (10–12 cm).</li>
+            <li><strong>Stone dust 0–8 mm</strong> — sub-base layer (5–6 cm).</li>
+            <li><strong>Boule gravel 0–4 mm</strong> — surface layer (3–5 cm).</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>Edging options (choose one)</h4>
+        <ul>
+            <li>Pressure-treated wooden border</li>
+            <li>Concrete or granite curbstone</li>
+            <li>Metal or plastic edging</li>
+        </ul>
+    </div>
+
+    <h2>3) Building step by step (six steps)</h2>
+
+    <div class="highlight-box">
+        <h4>Step 1 — Mark out and excavate (20–25 cm)</h4>
+        <p>Mark the court and dig to the required depth.</p>
+        <h4>Step 2 — Lay landscape fabric</h4>
+        <p>Cover the entire base to block weeds.</p>
+        <h4>Step 3 — Base layer (crushed stone 10–12 cm)</h4>
+        <p>Spread evenly and compact thoroughly.</p>
+        <h4>Step 4 — Sub-base layer (stone dust 5–6 cm)</h4>
+        <p>Level and compact again.</p>
+        <h4>Step 5 — Install the border</h4>
+        <p>Secure edging along all sides.</p>
+        <h4>Step 6 — Surface layer (boule gravel 3–5 cm)</h4>
+        <p>Spread, level, and lightly compact.</p>
+    </div>
+
+    <h2>4) Choosing the right gravel</h2>
+    <table>
+        <tr><th>Type</th><th>Feel</th><th>Advantage</th><th>Disadvantage</th></tr>
+        <tr><td><strong>Crushed limestone 0–4 mm</strong></td><td>Soft–medium</td><td>Best all-round</td><td>Can get dusty in dry weather</td></tr>
+        <tr><td><strong>Granite gravel 0–4 mm</strong></td><td>Harder</td><td>Very durable</td><td>Faster court</td></tr>
+        <tr><td><strong>Specialty gravel</strong></td><td>Optimised</td><td>Very even play</td><td>More expensive</td></tr>
+        <tr><td><strong>Sand/gravel mix</strong></td><td>Soft</td><td>Cheap</td><td>Less stable</td></tr>
+    </table>
+
+    <div class="warning-box">
+        <p><strong>Recommendation:</strong> Crushed limestone 0–4 mm offers the best balance for most courts.</p>
+    </div>
+
+    <h2>5) Maintenance — keeping the court in shape</h2>
+    <div class="highlight-box">
+        <h4>After every game</h4>
+        <p>Rake evenly and fill small holes.</p>
+        <h4>Weekly</h4>
+        <p>Check borders. Adjust surface. Light watering in very dry conditions.</p>
+        <h4>Seasonally</h4>
+        <p>Add 1–2 cm new gravel. Compact and level again.</p>
+    </div>
+
+    <h3>Troubleshooting — common problems</h3>
+    <table>
+        <tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+        <tr><td><strong>Puddles</strong></td><td>Insufficient slope</td><td>Adjust fall, add material</td></tr>
+        <tr><td><strong>Uneven surface</strong></td><td>Wear and tear</td><td>Rake + compact</td></tr>
+        <tr><td><strong>Weeds</strong></td><td>Damaged fabric</td><td>Replace fabric locally</td></tr>
+        <tr><td><strong>Court too fast</strong></td><td>Over-compacted</td><td>Add softer surface layer</td></tr>
+        <tr><td><strong>Dust</strong></td><td>Too dry</td><td>Water lightly</td></tr>
+    </table>
+
+    <h2>6) Lighting and accessories</h2>
+    <div class="info-box">
+        <p>Consider adding:</p>
+        <ul>
+            <li>LED floodlights</li>
+            <li>Bench or seating</li>
+            <li>Small storage box</li>
+            <li>Scoreboard</li>
+            <li>Sun shade or parasol</li>
+            <li>Water hose</li>
+        </ul>
+    </div>
+
+    <h2>7) Cost estimate (DIY, approximate)</h2>
+    <div class="highlight-box">
+        <table>
+            <tr><th>Item</th><th style="text-align:right">Approximate cost</th></tr>
+            <tr><td>Excavation (rented machine)</td><td style="text-align:right">$200–400</td></tr>
+            <tr><td>Landscape fabric</td><td style="text-align:right">$50–100</td></tr>
+            <tr><td>Crushed stone + stone dust</td><td style="text-align:right">$300–500</td></tr>
+            <tr><td>Boule gravel</td><td style="text-align:right">$150–250</td></tr>
+            <tr><td>Edging material</td><td style="text-align:right">$100–200</td></tr>
+            <tr><td>Tools/compactor rental</td><td style="text-align:right">$50–100</td></tr>
+            <tr><td style="font-weight:700">Total</td><td style="text-align:right;font-weight:700">≈ $800–1,400</td></tr>
+        </table>
+        <p>(Costs vary by region and supplier.)</p>
+    </div>
+
+    <h2>8) Tips from experienced court builders</h2>
+    <div class="highlight-box">
+        <ul>
+            <li>Build one excellent court rather than two mediocre ones.</li>
+            <li>Invest time in the base layer — it is the backbone of the court.</li>
+            <li>Always keep a rake next to the court.</li>
+            <li>Make the court slightly larger than you think you need.</li>
+            <li>Document the build — it will help with future improvements.</li>
+        </ul>
+    </div>
+
+    <p>A well-built boule court gives you better play, fewer disputes about bounce and roll, and a place where people want to gather.</p>
+
+    <div class="warning-box">
+        <p><strong>You are not just building a court — you are building a meeting place.</strong></p>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- BACK MATTER -->
+<!-- ============================================================ -->
+<div class="page-break" style="text-align: center; padding-top: 3in;">
+    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 20pt; color: #8B4513;">About the Author</h2>
+    <p style="margin-top: 30px; font-size: 12pt; line-height: 1.8; max-width: 4in; margin-left: auto; margin-right: auto;">Mats Hamberg is a passionate pétanque player and coach from Sweden. With years of experience in both competitive and social play, he has dedicated himself to making the sport accessible to English-speaking audiences worldwide. This book represents his comprehensive knowledge of the game — from the fundamentals to the physics of the perfect throw.</p>
+    <p style="margin-top: 40px; font-size: 11pt; color: #888;">For updates and resources, visit:<br><strong>www.petanqueguide.com</strong></p>
+</div>
+
+</div><!-- end book-content -->
+</body>
+</html>

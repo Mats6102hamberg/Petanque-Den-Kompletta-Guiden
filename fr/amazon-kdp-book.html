@@ -1,0 +1,2709 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétanque : Le Guide Complet — Du Débutant au Pro</title>
+    <style>
+        /* ===== AMAZON KDP BOOK STYLES ===== */
+        /* Optimized for B5 format (176 × 250 mm) paperback and EPUB/Kindle export */
+
+        /* Using standard fonts for KDP compatibility */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #222;
+            max-width: 176mm;
+            margin: 0 auto;
+            padding: 20mm;
+        }
+
+        /* ===== PAGE BREAKS ===== */
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        .no-break {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        /* ===== TITLE PAGE ===== */
+        .title-page {
+            text-align: center;
+            padding-top: 2in;
+            page-break-after: always;
+        }
+
+        .title-page h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 36pt;
+            font-weight: 900;
+            color: #8B4513;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .title-page .subtitle {
+            font-size: 16pt;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 60px;
+        }
+
+        .title-page .author {
+            font-size: 14pt;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        /* ===== COPYRIGHT PAGE ===== */
+        .copyright-page {
+            font-size: 9pt;
+            color: #666;
+            line-height: 1.8;
+            padding-top: 3in;
+            page-break-after: always;
+        }
+
+        .copyright-page p {
+            margin-bottom: 10px;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            page-break-after: always;
+        }
+
+        .toc h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 24pt;
+            color: #8B4513;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .toc-part {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14pt;
+            font-weight: 700;
+            color: #8B4513;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .toc-item {
+            font-size: 11pt;
+            margin: 6px 0;
+            padding-left: 20px;
+        }
+
+        .toc-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* ===== FOREWORD ===== */
+        .foreword {
+            page-break-after: always;
+        }
+
+        .foreword h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 20pt;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+
+        .foreword p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* ===== PART HEADERS ===== */
+        .part-header {
+            text-align: center;
+            padding-top: 3in;
+            page-break-before: always;
+            page-break-after: always;
+        }
+
+        .part-header h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 28pt;
+            color: #8B4513;
+            margin-bottom: 15px;
+        }
+
+        .part-header p {
+            font-size: 16pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* ===== CHAPTERS ===== */
+        .chapter {
+            page-break-before: always;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8B4513;
+        }
+
+        .chapter-number {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 12pt;
+            color: #8B4513;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .chapter-header h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 22pt;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .chapter-header p {
+            font-size: 12pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* ===== CONTENT STYLES ===== */
+        h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 16pt;
+            color: #8B4513;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 13pt;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 11pt;
+            color: #555;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 10px 0 15px 25px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* ===== BOXES ===== */
+        .highlight-box {
+            background: #FFF8F0;
+            border-left: 4px solid #D2691E;
+            padding: 15px 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+
+        .info-box {
+            background: #F0F8FF;
+            border-left: 4px solid #4682B4;
+            padding: 15px 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+
+        .warning-box {
+            background: #FFF5F5;
+            border-left: 4px solid #CD5C5C;
+            padding: 15px 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid #8B4513;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        /* ===== TABLES ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #8B4513;
+            color: white;
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        /* ===== AUTHOR BOX ===== */
+        .author-box {
+            background: #f5f0eb;
+            border: 1px solid #d4c5b5;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+
+        .author-box h3 {
+            color: #8B4513;
+            margin-top: 0;
+        }
+
+        /* ===== ABOUT AUTHOR (BACK MATTER) ===== */
+        .about-author {
+            page-break-before: always;
+            text-align: center;
+        }
+
+        .about-author h2 {
+            text-align: center;
+        }
+
+        .about-author p {
+            text-align: justify;
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            body {
+                padding: 0;
+                max-width: none;
+            }
+
+            @page {
+                size: 176mm 250mm;
+                margin: 20mm 18mm;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+
+            .no-break {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+        }
+
+        /* ===== SCREEN PREVIEW ===== */
+        @media screen {
+            body {
+                background: #f5f5f5;
+                padding: 40px;
+            }
+
+            .book-content {
+                background: white;
+                max-width: 176mm;
+                margin: 0 auto;
+                padding: 20mm;
+                box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+                border-radius: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="book-content">
+
+<!-- ============================================================ -->
+<!-- TITLE PAGE -->
+<!-- ============================================================ -->
+<div class="title-page">
+    <h1>PÉTANQUE</h1>
+    <div class="subtitle">Le Guide Complet<br>Du Débutant au Pro</div>
+    <div class="author">Mats Hamberg</div>
+    <div style="margin-top: 20px; font-size: 10pt; color: #999;">Première Édition</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- COPYRIGHT PAGE -->
+<!-- ============================================================ -->
+<div class="copyright-page">
+    <p><strong>Pétanque : Le Guide Complet — Du Débutant au Pro</strong></p>
+    <p>Copyright &copy; 2025 Mats Hamberg. Tous droits réservés.</p>
+    <p>Aucune partie de cette publication ne peut être reproduite, distribuée ou transmise sous quelque forme ou par quelque moyen que ce soit, y compris la photocopie, l'enregistrement ou d'autres méthodes électroniques ou mécaniques, sans l'autorisation écrite préalable de l'éditeur, sauf dans le cas de brèves citations intégrées dans des critiques et certaines autres utilisations non commerciales autorisées par la loi sur le droit d'auteur.</p>
+    <p>Ce livre est basé sur les règles internationales de la FIPJP (Fédération Internationale de Pétanque et Jeu Provençal). Bien que tous les efforts aient été faits pour garantir l'exactitude, l'auteur n'assume aucune responsabilité pour les erreurs ou omissions.</p>
+    <p>Première publication 2025.</p>
+    <p>ISBN : [À attribuer par Amazon KDP]</p>
+    <p style="margin-top: 30px;">Conception de la couverture : Mats Hamberg<br>
+    Illustrations : Diagrammes SVG par l'auteur</p>
+    <p style="margin-top: 30px;">Publié indépendamment via Amazon Kindle Direct Publishing.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- TABLE OF CONTENTS -->
+<!-- ============================================================ -->
+<div class="toc">
+    <h2>Sommaire</h2>
+
+    <div style="margin-bottom: 20px;">
+        <div class="toc-item"><a href="#foreword">Avant-propos</a></div>
+    </div>
+
+    <div class="toc-part">Partie 1 : Les Bases pour Débutants</div>
+    <div class="toc-item"><a href="#ch1">Chapitre 1 — Qu'est-ce que la Pétanque ?</a></div>
+    <div class="toc-item"><a href="#ch2">Chapitre 2 — Équipement — Choisir les Bonnes Boules</a></div>
+    <div class="toc-item"><a href="#ch3">Chapitre 3 — Techniques de Base</a></div>
+    <div class="toc-item"><a href="#ch4">Chapitre 4 — Stratégie pour Débutants</a></div>
+
+    <div class="toc-part">Partie 2 : Techniques Avancées pour Professionnels</div>
+    <div class="toc-item"><a href="#ch5">Chapitre 5 — Perfectionner votre Point</a></div>
+    <div class="toc-item"><a href="#ch6">Chapitre 6 — Tir de Maître</a></div>
+    <div class="toc-item"><a href="#ch7">Chapitre 7 — Tactique de Haut Niveau</a></div>
+    <div class="toc-item"><a href="#ch8">Chapitre 8 — S'entraîner Plus Intelligemment</a></div>
+
+    <div class="toc-part">Partie 3 : La Pétanque comme Mode de Vie</div>
+    <div class="toc-item"><a href="#ch9">Chapitre 9 — Jeu de Compétition vs. Jeu Social</a></div>
+    <div class="toc-item"><a href="#ch10">Chapitre 10 — La Pétanque dans le Monde</a></div>
+
+    <div class="toc-part">Partie 4 : Approfondissement et Développement</div>
+    <div class="toc-item"><a href="#ch11">Chapitre 11 — Analyse Stratégique et Tactique</a></div>
+    <div class="toc-item"><a href="#ch12">Chapitre 12 — Force Mentale et Concentration</a></div>
+    <div class="toc-item"><a href="#ch13">Chapitre 13 — Plan d'Entraînement et Développement</a></div>
+    <div class="toc-item"><a href="#ch14">Chapitre 14 — Entraînement Physique</a></div>
+    <div class="toc-item"><a href="#ch15">Chapitre 15 — Diriger une Équipe de Pétanque</a></div>
+    <div class="toc-item"><a href="#ch16">Chapitre 16 — Physique des Boules et Lecture du Terrain</a></div>
+
+    <div class="toc-part">Annexes</div>
+    <div class="toc-item"><a href="#appA">Annexe A — Guide d'Équipement</a></div>
+    <div class="toc-item"><a href="#appB">Annexe B — Règlement Complet</a></div>
+    <div class="toc-item"><a href="#appC">Annexe C — Glossaire</a></div>
+    <div class="toc-item"><a href="#appD">Annexe D — Construire un Terrain de Pétanque</a></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FOREWORD -->
+<!-- ============================================================ -->
+<div class="foreword" id="foreword">
+    <h2>Avant-propos</h2>
+    <p>La pétanque est plus qu'un sport — c'est un mode de vie, une activité sociale, et un défi à la fois tactique et technique. Ce livre est écrit pour donner aux débutants une base solide et offrir aux joueurs expérimentés de nouvelles perspectives et des conseils d'amélioration. Que vous teniez une boule pour la première fois ou que vous soyez déjà en compétition à haut niveau, il y a quelque chose ici pour vous.</p>
+    <p>Une note importante sur la terminologie : La pétanque a des racines françaises profondes. Pour garantir que vos connaissances soient complètes — et pour vous aider à vous sentir chez vous dans tous les contextes, de votre club local aux compétitions internationales — nous utiliserons le langage technique international. Cela signifie que tout au long du texte, nous mêlons les termes français courants avec des expressions techniques reconnues internationalement. Considérez ces termes comme le vocabulaire officiel du sport ; ils font partie intégrante de la culture du jeu et de votre formation.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 1 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Partie 1</h2>
+    <p>Les Bases pour Débutants</p>
+</div>
+
+<!-- CHAPTER 1 -->
+<div class="chapter" id="ch1">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 1</div>
+        <h2>Qu'est-ce que la Pétanque ?</h2>
+        <p>L'histoire, les règles et les fondamentaux du jeu</p>
+    </div>
+
+    <h2>L'Histoire de la Pétanque</h2>
+    <p>La pétanque est la benjamine de la longue famille des jeux de boules. À la fin des années 1800, on jouait en Provence à un jeu appelé <em>jeu provençal</em> où les joueurs prenaient plusieurs pas de course avant de lancer leurs boules. Un hiver vers 1907, le joueur talentueux Jules Lenoir se blessa aux jambes et ne pouvait plus courir. Son ami Ernest Pitiot y remédia en raccourcissant le terrain de jeu et en demandant aux joueurs de lancer avec les pieds immobiles dans un cercle.</p>
+    <p>Le jeu fut nommé <strong>pieds tanqués</strong> ("pieds ancrés au sol"), qui se transforma au fil du temps en pétanque. La première compétition eut lieu à La Ciotat en 1910 et le sport se répandit rapidement en France et dans le monde. Aujourd'hui, il existe des fédérations en Europe, en Amérique, en Afrique, en Asie et en Australie, et la fédération internationale FIPJP organise les Championnats du Monde.</p>
+    <p>La pétanque est aujourd'hui à la fois un passe-temps social détendu et un sport d'élite hautement compétitif — une combinaison rare et magnifique.</p>
+
+    <h2>Règles de Base et Concept du Jeu</h2>
+    <p>La pétanque se joue en trois formats principaux :</p>
+    <ul>
+        <li><strong>Tête-à-tête</strong> — 1 joueur par équipe, trois boules chacun</li>
+        <li><strong>Doublette</strong> — 2 joueurs par équipe, trois boules chacun</li>
+        <li><strong>Triplette</strong> — 3 joueurs par équipe, deux boules chacun</li>
+    </ul>
+    <p>L'objectif est simple : Lancer vos boules métalliques aussi près que possible d'une petite boule en bois appelée le <strong>cochonnet</strong> (ou <em>but</em>).</p>
+
+    <div class="highlight-box">
+        <h4>Comment Jouer</h4>
+        <ol>
+            <li>Les joueurs se tiennent dans un cercle d'un diamètre de 35–50 cm et doivent garder les deux pieds au sol jusqu'à ce que la boule ait atterri.</li>
+            <li>Une partie se compose de plusieurs tours appelés <strong>mènes</strong>.</li>
+            <li>Dans chaque mène, une équipe lance le cochonnet entre 6 et 10 mètres. Les équipes jouent ensuite à tour de rôle leurs boules jusqu'à ce que toutes soient utilisées.</li>
+            <li>Lorsque toutes les boules ont été lancées, la distance au cochonnet est mesurée.</li>
+            <li>L'équipe avec la boule la plus proche marque un point pour chacune de ses boules qui est plus proche du cochonnet que la boule la plus proche de l'adversaire.</li>
+            <li>La première équipe à atteindre <strong>13 points</strong> gagne le match.</li>
+        </ol>
+    </div>
+    <p>Cette structure rend la pétanque à la fois stratégique et passionnante — chaque lancer peut changer le cours du jeu.</p>
+
+    <!-- SVG: Top view of pétanque court -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg" style="max-width: 420px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <line x1="60" y1="30" x2="60" y2="670" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,4"/>
+            <line x1="440" y1="30" x2="440" y2="670" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,4"/>
+            <circle cx="250" cy="600" r="28" fill="none" stroke="#222" stroke-width="2.5"/>
+            <circle cx="250" cy="600" r="2" fill="#222"/>
+            <text x="250" y="655" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#333">Cercle de lancer (35-50 cm)</text>
+            <line x1="280" y1="600" x2="280" y2="145" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="290" y="380" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#888" transform="rotate(-90, 290, 380)">7-8 metres</text>
+            <circle cx="250" cy="140" r="8" fill="#222"/>
+            <text x="250" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#333">Cochonnet</text>
+            <circle cx="230" cy="165" r="14" fill="none" stroke="#222" stroke-width="2"/>
+            <line x1="222" y1="165" x2="238" y2="165" stroke="#222" stroke-width="1.5"/>
+            <line x1="230" y1="157" x2="230" y2="173" stroke="#222" stroke-width="1.5"/>
+            <circle cx="275" cy="125" r="14" fill="none" stroke="#222" stroke-width="2"/>
+            <line x1="267" y1="125" x2="283" y2="125" stroke="#222" stroke-width="1.5"/>
+            <line x1="275" y1="117" x2="275" y2="133" stroke="#222" stroke-width="1.5"/>
+            <circle cx="215" cy="115" r="14" fill="none" stroke="#222" stroke-width="2"/>
+            <line x1="207" y1="115" x2="223" y2="115" stroke="#222" stroke-width="1.5"/>
+            <line x1="215" y1="107" x2="215" y2="123" stroke="#222" stroke-width="1.5"/>
+            <circle cx="265" cy="170" r="14" fill="none" stroke="#222" stroke-width="2"/>
+            <line x1="255" y1="166" x2="275" y2="166" stroke="#222" stroke-width="1"/>
+            <line x1="255" y1="174" x2="275" y2="174" stroke="#222" stroke-width="1"/>
+            <circle cx="225" cy="145" r="14" fill="none" stroke="#222" stroke-width="2"/>
+            <line x1="215" y1="141" x2="235" y2="141" stroke="#222" stroke-width="1"/>
+            <line x1="215" y1="149" x2="235" y2="149" stroke="#222" stroke-width="1"/>
+            <circle cx="270" cy="100" r="14" fill="none" stroke="#222" stroke-width="2"/>
+            <line x1="260" y1="96" x2="280" y2="96" stroke="#222" stroke-width="1"/>
+            <line x1="260" y1="104" x2="280" y2="104" stroke="#222" stroke-width="1"/>
+            <text x="330" y="150" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#555">Boules (6)</text>
+            <rect x="100" y="50" width="300" height="45" rx="3" fill="none" stroke="#ddd" stroke-width="1"/>
+            <circle cx="140" cy="72" r="9" fill="none" stroke="#222" stroke-width="1.5"/>
+            <line x1="134" y1="72" x2="146" y2="72" stroke="#222" stroke-width="1.2"/>
+            <line x1="140" y1="66" x2="140" y2="78" stroke="#222" stroke-width="1.2"/>
+            <text x="155" y="76" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">Equipe A (+)</text>
+            <circle cx="290" cy="72" r="9" fill="none" stroke="#222" stroke-width="1.5"/>
+            <line x1="282" y1="68" x2="298" y2="68" stroke="#222" stroke-width="1"/>
+            <line x1="282" y1="76" x2="298" y2="76" stroke="#222" stroke-width="1"/>
+            <text x="305" y="76" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">Equipe B (=)</text>
+        </svg>
+        <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Vue de dessus : Une situation typique de pétanque avec cercle de lancer, cochonnet et six boules.</p>
+    </div>
+
+    <!-- SVG: Correct vs wrong foot position -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="max-width: 460px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <text x="140" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#222">CORRECT</text>
+            <circle cx="140" cy="160" r="55" fill="none" stroke="#222" stroke-width="2.5"/>
+            <ellipse cx="130" cy="155" rx="12" ry="22" fill="#666" transform="rotate(-10, 130, 155)"/>
+            <ellipse cx="155" cy="150" rx="12" ry="22" fill="#666" transform="rotate(10, 155, 150)"/>
+            <text x="140" y="67" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#222">OK</text>
+            <text x="140" y="250" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">Les deux pieds dans le cercle</text>
+            <text x="390" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#222">INCORRECT</text>
+            <circle cx="390" cy="160" r="55" fill="none" stroke="#222" stroke-width="2.5"/>
+            <ellipse cx="380" cy="155" rx="12" ry="22" fill="#666" transform="rotate(-10, 380, 155)"/>
+            <ellipse cx="420" cy="130" rx="12" ry="22" fill="#c00" transform="rotate(15, 420, 130)"/>
+            <text x="390" y="68" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#222">X</text>
+            <text x="390" y="250" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">Un pied en dehors = lancer invalide</text>
+        </svg>
+    </div>
+
+    <h2>Quelques Règles à Connaître</h2>
+    <ul>
+        <li><strong>Technique de lancer :</strong> Les boules sont lancées avec la paume vers le bas pour donner un effet <strong>porté</strong> (atterrissage en douceur et minimum de roulement).</li>
+        <li><strong>Boules mortes :</strong> Si une boule se retrouve dans un obstacle ou en dehors de la zone de jeu, elle devient morte et est retirée.</li>
+        <li><strong>Boules approuvées :</strong> Seules les boules métalliques approuvées par la FIPJP peuvent être utilisées en compétition ; diamètre 70,5–80 mm et poids 650–800 g.</li>
+    </ul>
+
+    <h2>Différences Entre Pétanque, Boule et Bocce</h2>
+
+    <h3>Boule — Un Terme Générique</h3>
+    <p>Le terme « boule » est utilisé comme terme générique pour tous les jeux où l'on lance des boules vers une petite boule cible. Internationalement, les boules font souvent référence à la catégorie française qui comprend le jeu provençal, la pétanque et des jeux similaires.</p>
+
+    <h3>Bocce — La Variante Italienne</h3>
+    <div class="info-box">
+        <h4>Bocce vs Pétanque :</h4>
+        <ul>
+            <li><strong>Terrain :</strong> Le bocce se joue sur un terrain plus long avec des planches (environ 28 m), tandis que la pétanque se joue sur des terrains plus courts (6-10 m).</li>
+            <li><strong>Boules :</strong> Les boules de bocce sont plus grandes et plus lourdes (souvent en plastique ou en bois).</li>
+            <li><strong>Technique :</strong> Au bocce, les joueurs peuvent prendre des pas d'élan et la boule est roulée avec la paume vers le haut.</li>
+            <li><strong>Nombre de boules :</strong> Le bocce utilise quatre boules par joueur contre trois en pétanque.</li>
+        </ul>
+    </div>
+
+    <h3>Boccia — Sport Paralympique</h3>
+    <p><strong>Boccia</strong> est un sport paralympique destiné aux personnes ayant de graves déficiences motrices. Le jeu se joue sur un terrain intérieur de 12,5 × 6 m avec des boules en cuir lisse.</p>
+</div>
+
+<!-- CHAPTER 2 -->
+<div class="chapter" id="ch2">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 2</div>
+        <h2>Équipement — Choisir les Bonnes Boules</h2>
+        <p>Poids, taille, matériau et entretien</p>
+    </div>
+
+    <h2>Poids, Taille et Matériau</h2>
+    <p>Les boules homologuées pour la compétition doivent être des boules métalliques creuses d'un diamètre compris entre <strong>70,5 et 80 mm</strong> et d'un poids compris entre <strong>650 et 800 grammes</strong>.</p>
+
+    <h3>Taille de la Main</h3>
+    <p>Une petite main est à l'aise avec une boule d'environ <strong>71–73 mm</strong>, tandis que les grandes mains peuvent choisir <strong>74–78 mm</strong>.</p>
+
+    <h3>Poids</h3>
+    <div class="highlight-box">
+        <h4>Boules plus légères (650–690 g) :</h4>
+        <ul>
+            <li>Offrent un meilleur contrôle et nécessitent moins de force</li>
+            <li>Bonnes pour les pointeurs</li>
+            <li>Plus faciles à contrôler pour les débutants</li>
+        </ul>
+        <h4>Boules plus lourdes (710–800 g) :</h4>
+        <ul>
+            <li>Maintiennent mieux leur ligne lors du tir</li>
+            <li>Nécessitent plus de force</li>
+            <li>Fournissent plus de puissance dans les tirs</li>
+        </ul>
+    </div>
+
+    <h3>Dureté</h3>
+    <p><strong>Les boules plus dures</strong> rebondissent et roulent davantage ; elles conviennent aux tireurs. <strong>Les boules plus tendres</strong> absorbent les impacts et s'arrêtent rapidement — excellentes pour les pointeurs.</p>
+
+    <h2>Boules de Compétition vs. de Loisir</h2>
+    <div class="info-box">
+        <h4>Boules de Loisir :</h4>
+        <ul>
+            <li>Généralement remplies de sable ou de gravier</li>
+            <li>Surface chromée, une seule taille et un seul poids</li>
+            <li>Bon marché mais ne répondent pas aux règlements de compétition</li>
+        </ul>
+        <h4>Boules de Compétition :</h4>
+        <ul>
+            <li>Soigneusement fabriquées, usinées creuses</li>
+            <li>Répondent aux spécifications FIPJP</li>
+            <li>Disponibles en de nombreuses combinaisons de diamètres, poids et duretés</li>
+        </ul>
+    </div>
+
+    <p>En tant que débutant, commencez avec un jeu de loisir moins cher, mais investissez dans des boules de compétition lorsque vous sentez que vous voulez progresser.</p>
+
+    <h2>Entretien et Nettoyage des Boules</h2>
+    <div class="highlight-box">
+        <h4>Routine d'Entretien :</h4>
+        <ol>
+            <li><strong>Laver</strong> les boules à l'eau chaude avec un peu de liquide vaisselle. Sécher soigneusement.</li>
+            <li><strong>Huiler légèrement</strong> avec un chiffon huilé — l'huile forme un film protecteur.</li>
+            <li><strong>Ranger</strong> dans un environnement sec et stable. Éviter les caves humides.</li>
+        </ol>
+    </div>
+
+    <h3>Si la Rouille Apparaît</h3>
+    <p>Frottez avec une brosse métallique ou laissez tremper dans du vinaigre blanc, puis rincez et séchez. Huilez après le nettoyage.</p>
+
+    <div class="warning-box">
+        <p><strong>Important :</strong> Avec un entretien régulier, vos boules dureront de nombreuses années !</p>
+    </div>
+</div>
+
+<!-- CHAPTER 3 -->
+<div class="chapter" id="ch3">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 3</div>
+        <h2>Techniques de Base</h2>
+        <p>Prise, position et technique de lancer</p>
+    </div>
+
+    <h2>Prise et Position Correctes</h2>
+    <p>Une base stable est cruciale pour la précision. Tenez-vous dans le cercle de lancer avec les pieds légèrement écartés, le poids uniformément réparti et le corps détendu.</p>
+
+    <h3>Prise</h3>
+    <div class="highlight-box">
+        <p>Laissez la boule reposer dans le creux de votre main — les doigts tiennent la boule dans une prise douce et le pouce n'est pas utilisé comme une "pince".</p>
+        <h4>Deux types principaux de prise :</h4>
+        <ul>
+            <li><strong>La prise en doigts :</strong> La boule est serrée entre les doigts et la paume</li>
+            <li><strong>La prise en paume :</strong> La boule repose sur les doigts et est maintenue en inclinant la main</li>
+        </ul>
+    </div>
+
+    <h3>Position</h3>
+    <p>En position debout, placez un pied légèrement devant l'autre et pointez vers votre point d'atterrissage ; l'autre pied assure l'équilibre. Votre centre de gravité doit être légèrement en avant mais les genoux sont légèrement pliés.</p>
+    <p>De nombreux pointeurs préfèrent se tenir debout car cela donne une meilleure visibilité sur le terrain ; d'autres s'accroupissent (<strong>pied à terre</strong>) pour se rapprocher du sol. Choisissez la position qui vous donne le meilleur équilibre et la meilleure visée.</p>
+
+    <h3>Mouvement et Relâchement</h3>
+    <div class="info-box">
+        <ol>
+            <li>Commencez avec votre bras pendant librement</li>
+            <li>Faites un balancement doux vers l'arrière et vers l'avant</li>
+            <li>Étendez le poignet au relâchement pour donner de l'effet</li>
+            <li>Relâchez la boule lorsque votre main pointe vers le point d'atterrissage</li>
+            <li>Gardez votre poignet stable pour éviter l'effet latéral</li>
+        </ol>
+    </div>
+
+    <h2>Comment Pointer — Précision et Contrôle</h2>
+    <p>Pointer signifie placer votre boule aussi près que possible du cochonnet. La clé est le contrôle de la longueur et de la direction et la lecture du terrain.</p>
+
+    <h3>Déterminer Trois Points</h3>
+    <ol>
+        <li><strong>Le Cochonnet</strong> — où se trouve la cible</li>
+        <li><strong>Le Point d'Arrêt</strong> — l'endroit où vous voulez que la boule s'arrête</li>
+        <li><strong>La Donnée</strong> — l'endroit où la boule doit atterrir</li>
+    </ol>
+
+    <!-- SVG: Jack, Parking Spot and Donnée -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 360 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 340px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <rect x="80" y="20" width="200" height="560" rx="8" fill="#e8e0d0" stroke="#bbb" stroke-width="1"/>
+            <circle cx="180" cy="100" r="8" fill="#222"/>
+            <text x="200" y="105" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#333">Cochonnet</text>
+            <circle cx="180" cy="180" r="4" fill="#c00" stroke="#c00" stroke-width="2"/>
+            <text x="200" y="185" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#c00">Point d'arret</text>
+            <circle cx="180" cy="320" r="6" fill="none" stroke="#07a" stroke-width="2" stroke-dasharray="4,2"/>
+            <text x="200" y="325" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#07a">Donnee</text>
+            <path d="M180,520 Q160,420 180,320 Q200,220 180,180" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="6,3"/>
+            <text x="125" y="420" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#aaa">trajectoire</text>
+            <circle cx="180" cy="520" r="28" fill="none" stroke="#222" stroke-width="2"/>
+            <text x="180" y="570" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">Cercle de lancer</text>
+        </svg>
+        <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Vue de dessus : Les trois points clés — Cochonnet, Point d'arrêt et Donnée.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>Principe important :</strong> <em>"Boule devant, boule d'argent"</em> — une boule devant le cochonnet vaut de l'or.</p>
+    </div>
+
+    <h3>Choisir le Type de Lancer Selon le Terrain</h3>
+    <ul>
+        <li><strong>Sol lisse et doux :</strong> Rouler la boule bas</li>
+        <li><strong>Sol dur ou graveleux :</strong> Lancer moyen-haut</li>
+        <li><strong>Sol très rocheux :</strong> Lob haut pour que la boule s'arrête près du cochonnet</li>
+    </ul>
+
+    <!-- SVG: Three throw trajectories -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <line x1="40" y1="250" x2="480" y2="250" stroke="#bbb" stroke-width="1.5"/>
+            <circle cx="60" cy="250" r="4" fill="#222"/>
+            <text x="60" y="275" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#555">Lanceur</text>
+            <circle cx="420" cy="248" r="5" fill="#222"/>
+            <text x="420" y="275" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#555">Cochonnet</text>
+            <path d="M60,250 Q240,230 400,250" fill="none" stroke="#4a9" stroke-width="2"/>
+            <text x="240" y="228" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#4a9">Roulee (sol lisse)</text>
+            <path d="M60,250 Q240,160 400,250" fill="none" stroke="#47a" stroke-width="2"/>
+            <text x="240" y="170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#47a">Demi-portee</text>
+            <path d="M60,250 Q200,50 400,250" fill="none" stroke="#a47" stroke-width="2"/>
+            <text x="180" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#a47">Plombee (sol dur)</text>
+        </svg>
+        <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Trois types de lancers selon le terrain : roulée, demi-portée et plombée.</p>
+    </div>
+
+    <h3>Exécuter le Lancer</h3>
+    <div class="info-box">
+        <p><strong>Important :</strong> Visez votre donne, pas le cochonnet. Faites un balancement arrière calme, pliez légèrement les genoux et lancez avec un mouvement doux. Relâchez la boule bas pour les lancers roulants et plus haut pour les lobs. Laissez le poignet s'étendre au relâchement pour donner de l'effet et laissez votre bras suivre la direction du lancer.</p>
+    </div>
+
+    <h3>Entraînement Systématique</h3>
+    <p>Pratiquez le placement de boules qui atterrissent au même endroit à chaque fois. Vous pouvez poser un mouchoir comme marqueur et essayer de le toucher. Un pointeur qui force constamment l'adversaire à tirer de bonnes boules fait son travail.</p>
+
+    <h2>Comment Tirer — Force et Précision</h2>
+    <p>Tirer signifie utiliser votre boule pour essayer de frapper et déplacer la boule de l'adversaire ou le cochonnet. Un bon tireur maîtrise plusieurs types de tirs :</p>
+
+    <h3>Types de Tirs</h3>
+    <table>
+        <tr><th>Type de Tir</th><th>Description</th></tr>
+        <tr><td><strong>Tir au fer</strong></td><td>Votre boule frappe la boule de l'adversaire en plein centre. Nécessite précision et puissance.</td></tr>
+        <tr><td><strong>Tir à la raffle</strong></td><td>Un lancer puissant et bas où la boule roule sur le sol et frappe la boule de l'adversaire sur le côté.</td></tr>
+        <tr><td><strong>Tir sur le cochonnet</strong></td><td>Dans les situations critiques, vous pouvez viser le cochonnet pour le déplacer hors jeu ou vers vos propres boules.</td></tr>
+        <tr><td><strong>Tir devant</strong></td><td>La boule atterrit juste devant la boule cible et roule dedans.</td></tr>
+    </table>
+
+    <h3>Pour Tirer Efficacement</h3>
+    <div class="highlight-box">
+        <h4>1. Positionnez-vous</h4>
+        <p>Tenez-vous fermement avec vos pieds dans le cercle ; certains tireurs reculent légèrement leur pied arrière pour obtenir un mouvement de balancement plus important. Abaissez légèrement votre centre de gravité et concentrez votre regard sur la cible.</p>
+
+        <h4>2. Balancement et Relâchement</h4>
+        <p>Laissez votre bras se balancer librement. Le balancement arrière est plus long que pour les lancers de pointage, ce qui donne plus de vitesse. Lorsque votre main approche de la hauteur du genou, relâchez la boule en étendant votre poignet et en pointant vos doigts vers la cible.</p>
+
+        <h4>3. Pratiquez avec des Pneus ou des Anneaux</h4>
+        <p>Beaucoup pratiquent le tir en lançant des boules dans un pneu ou un anneau pour améliorer la précision. Placez trois boules en ligne et essayez de tirer celle du milieu.</p>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>Rappelez-vous :</strong> Tirer est difficile mais crucial. Un tireur avec une bonne précision peut renverser tout un match.</p>
+    </div>
+
+    <h2>Séances d'Entraînement avec Objectifs Mesurables</h2>
+    <p>Pour progresser rapidement, vous devez vous entraîner systématiquement avec des objectifs clairs. Voici trois exercices de base avec des cibles concrètes :</p>
+
+    <div class="highlight-box">
+        <h4>Exercice 1 : Le Mouchoir — Précision de la Donnée</h4>
+        <p><strong>Configuration :</strong> Posez un mouchoir ou marquez un cercle (~50 cm) à 6, 7 et 8 mètres de distance.</p>
+        <p><strong>Objectifs :</strong></p>
+        <ul>
+            <li><strong>Débutant :</strong> Toucher la donne 4/10 fois à 6 mètres</li>
+            <li><strong>Intermédiaire :</strong> Toucher la donne 6/10 fois à 7 mètres</li>
+            <li><strong>Avancé :</strong> Toucher la donne 7/10 fois à 8 mètres</li>
+        </ul>
+        <p><strong>Enregistrer :</strong> Date, distance, touches/tentatives, ce qui doit être ajusté</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Exercice 2 : Trois Zones — Contrôle de Distance</h4>
+        <p><strong>Configuration :</strong> Placez le cochonnet à 6m, 8m et 10m. Lancez 5 boules par zone et mesurez combien atterrissent à moins de 50 cm du cochonnet.</p>
+        <p><strong>Objectifs :</strong></p>
+        <ul>
+            <li><strong>Débutant :</strong> 3/5 à moins de 50 cm à 6m</li>
+            <li><strong>Intermédiaire :</strong> 4/5 à moins de 50 cm à 8m</li>
+            <li><strong>Avancé :</strong> 3/5 à moins de 30 cm à 10m</li>
+        </ul>
+        <p><strong>Enregistrer :</strong> Pourcentage de touches par zone, quelle distance est la plus difficile</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Exercice 3 : Pratique du Tir — Précision</h4>
+        <p><strong>Configuration :</strong> Placez 6 boules cibles à différentes distances (6-10m). Essayez de les tirer une par une.</p>
+        <p><strong>Objectifs :</strong></p>
+        <ul>
+            <li><strong>Débutant :</strong> 2/6 touches</li>
+            <li><strong>Intermédiaire :</strong> 4/6 touches</li>
+            <li><strong>Avancé :</strong> 5/6 touches + au moins 2 carreaux</li>
+        </ul>
+        <p><strong>Enregistrer :</strong> Pourcentage de touches, distance où vous manquez le plus, nombre de carreaux</p>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>Conseil :</strong> Entraînez-vous 2-3 fois par semaine pendant 30-45 minutes. Documentez votre développement dans un journal d'entraînement. Après 4 semaines, vous verrez une amélioration claire !</p>
+    </div>
+</div>
+
+<!-- CHAPTER 4 -->
+<div class="chapter" id="ch4">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 4</div>
+        <h2>Stratégie pour Débutants</h2>
+        <p>Tactiques, lecture du terrain et erreurs courantes</p>
+    </div>
+
+    <h2>Tactiques Simples pour Gagner des Points</h2>
+
+    <h3>1. Boule Devant le But</h3>
+    <div class="highlight-box">
+        <p>La première boule doit être placée <strong>devant le but, de préférence 30–50 cm devant</strong>. L'adversaire doit alors viser sur le côté de votre boule, et s'il touche votre boule, il peut la pousser plus près du but – double gain !</p>
+        <p><em>"Boule devant, boule d'argent"</em> – Une boule devant le but vaut de l'argent.</p>
+    </div>
+
+    <h3>2. Utiliser un Butée</h3>
+    <p>S'il y a une boule adverse ou la vôtre derrière le cochonnet, vous pouvez lancer un peu plus fort pour que votre boule s'arrête contre la boule arrière. Une boule qui repose contre un butée est difficile à tirer car la force est transférée au butée.</p>
+
+    <h3>3. Pousser Vos Boules</h3>
+    <p>Si vos boules sont devant le cochonnet, vous pouvez les tirer dans les lancers ultérieurs pour les pousser plus près du cochonnet. Faites attention à ne pas pousser une boule adverse à la place.</p>
+
+    <h3>4. Limiter les Dégâts</h3>
+    <div class="info-box">
+        <p>Si l'adversaire a placé une boule parfaite et que vous ne pouvez pas vous rapprocher, vous pouvez placer vos boules près de leur boule. Cela réduit leurs opportunités de gagner plus de points. Mieux vaut perdre avec 1–2 points que d'en donner 4–5 !</p>
+        <p>S'ils n'ont besoin que d'un point pour gagner, vous pouvez envisager de tirer le cochonnet ou de jouer fort pour le tirer vers vos boules.</p>
+    </div>
+
+    <!-- SVG: Three basic tactics -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 520 350" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <text x="90" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#333">Boule devant</text>
+            <rect x="20" y="40" width="140" height="280" rx="5" fill="#f5f0e8" stroke="#ccc" stroke-width="1"/>
+            <circle cx="90" cy="140" r="6" fill="#222"/>
+            <text x="90" y="130" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#555">cochonnet</text>
+            <circle cx="90" cy="180" r="12" fill="none" stroke="#07a" stroke-width="2"/>
+            <text x="90" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#07a">votre boule</text>
+            <text x="90" y="300" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#888">30-50 cm devant</text>
+
+            <text x="270" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#333">Butee</text>
+            <rect x="200" y="40" width="140" height="280" rx="5" fill="#f5f0e8" stroke="#ccc" stroke-width="1"/>
+            <circle cx="270" cy="140" r="6" fill="#222"/>
+            <circle cx="270" cy="110" r="12" fill="none" stroke="#c44" stroke-width="2"/>
+            <text x="270" y="95" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#c44">butee</text>
+            <circle cx="270" cy="170" r="12" fill="none" stroke="#07a" stroke-width="2"/>
+            <text x="270" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#07a">votre boule</text>
+
+            <text x="450" y="30" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#333">Promotion</text>
+            <rect x="380" y="40" width="140" height="280" rx="5" fill="#f5f0e8" stroke="#ccc" stroke-width="1"/>
+            <circle cx="450" cy="140" r="6" fill="#222"/>
+            <circle cx="450" cy="200" r="12" fill="none" stroke="#07a" stroke-width="2"/>
+            <path d="M450,188 L450,155" fill="none" stroke="#07a" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <polygon points="446,158 450,148 454,158" fill="#07a"/>
+            <text x="450" y="230" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#07a">pousser</text>
+        </svg>
+        <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Trois tactiques de base : boule devant, butée et promotion.</p>
+    </div>
+
+    <h3>Tirer ou Pointer ?</h3>
+    <p>Suivez la règle de base : <strong>tirez quand vous devez et pointez quand vous pouvez</strong>. Forcez l'adversaire à utiliser ses tirs pour que vos bons placements restent.</p>
+
+    <div class="highlight-box">
+        <h4>Aide à la Décision : Pointer ou Tirer ?</h4>
+        <table>
+            <tr><th>Situation</th><th>Décision</th><th>Pourquoi ?</th></tr>
+            <tr><td>Boule adverse &lt;30 cm du cochonnet + chemin libre</td><td><strong>TIRER</strong></td><td>Difficile de se rapprocher. Un tir réussi donne des points immédiats.</td></tr>
+            <tr><td>Vous avez une donne claire que vous touchez souvent</td><td><strong>POINTER</strong></td><td>Utilisez votre force. Forcez l'adversaire à tirer.</td></tr>
+            <tr><td>Le tir pourrait ouvrir 3+ points pour l'adversaire</td><td><strong>POINTER défensivement/bloquer</strong></td><td>Limitez les dégâts. Mieux vaut perdre 1-2 points que 4-5.</td></tr>
+            <tr><td>Vous êtes un tireur incertain (&lt;40% de précision)</td><td><strong>POINTER</strong></td><td>Les tirs manqués donnent plus de chances à l'adversaire.</td></tr>
+            <tr><td>Dernière boule + vous avez besoin de points pour gagner</td><td><strong>TIRER</strong></td><td>Rien à perdre. Tentez votre chance !</td></tr>
+            <tr><td>Plusieurs boules adverses près du cochonnet</td><td><strong>TIRER stratégiquement</strong></td><td>Un tir peut déplacer plusieurs boules et changer toute la situation.</td></tr>
+        </table>
+        <p><strong>Règle d'or :</strong> <em>"Boule devant, boule d'argent"</em> — En cas de doute, pointez ! Une boule bien placée est toujours précieuse.</p>
+    </div>
+
+    <h2>Comment Lire le Terrain et S'adapter</h2>
+    <p>La surface affecte le roulement et le rebond de la boule. Il est important d'étudier attentivement le terrain avant de lancer – à la fois avec vos yeux et en sentant le sol :</p>
+
+    <h3>Examiner la Surface</h3>
+    <ul>
+        <li>Cherchez les trous, les pierres et les pentes</li>
+        <li>Une surface douce et sableuse freine rapidement la boule</li>
+        <li>Une surface dure et tassée donne du roulement</li>
+        <li>Une pente peut faire dériver la boule d'un côté</li>
+        <li>Regardez comment les boules précédentes se sont comportées</li>
+    </ul>
+
+    <h3>Adapter Votre Lancer</h3>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Sol lisse :</strong> Vous pouvez rouler votre boule</li>
+            <li><strong>Sol irrégulier :</strong> Vous devez lobber plus haut pour éviter les obstacles</li>
+            <li>Ajustez la force pour que la boule s'arrête au point d'arrêt</li>
+        </ul>
+    </div>
+
+    <h3>Varier le Lancer du Cochonnet</h3>
+    <p>Apprenez à lancer le cochonnet à la fois court (6–7 m) et long (9–10 m). Les distances plus courtes favorisent souvent les pointeurs, tandis que les distances plus longues favorisent les tireurs. Si les adversaires sont forts sur les lancers courts, vous pouvez essayer des lancers plus longs pour perturber leur rythme.</p>
+
+    <h3>Jouer avec la Météo et le Vent</h3>
+    <p>Le temps humide rend le terrain plus doux. Le soleil et la sécheresse rendent le sol plus dur et augmentent le roulement. Adaptez vos lancers en conséquence.</p>
+
+    <h2>Erreurs Courantes et Comment les Éviter</h2>
+    <p>Les débutants font souvent les mêmes erreurs. Voici quelques-unes à surveiller :</p>
+
+    <div class="warning-box">
+        <h3>1. Viser Directement le Cochonnet au Lieu de la Donne</h3>
+        <p>En choisissant un point d'atterrissage (la donne) devant le cochonnet, vous pouvez contrôler à la fois la longueur et le roulement.</p>
+
+        <h3>2. Force Excessive ou Lancer Trop Court</h3>
+        <p>Beaucoup lancent trop fort quand ils deviennent nerveux et la boule roule loin. Concentrez-vous sur un relâchement doux et pratiquez la variation de la force.</p>
+
+        <h3>3. Mauvaise Concentration sur la Surface</h3>
+        <p>Ne pas lire le terrain conduit à des rebonds et des ratés inattendus. Prenez le temps d'étudier le terrain avant chaque lancer.</p>
+
+        <h3>4. Prise Trop Serrée</h3>
+        <p>Une prise détendue donne le bon signal à la main. Une prise trop serrée donne de la sécurité avant le lancer, mais lors du lancer, la main doit être douce et sensible.</p>
+
+        <h3>5. Déranger l'Adversaire</h3>
+        <p>Parler ou bouger quand quelqu'un lance. La bonne étiquette signifie rester immobile et silencieux quand l'adversaire lance ; ne dérangez pas et ne marchez pas entre les joueurs et la ligne du cochonnet.</p>
+
+        <h3>6. Ne Pas Communiquer dans l'Équipe</h3>
+        <p>Discutez de la stratégie avec vos coéquipiers avant chaque lancer. Un plan commun augmente les chances de choisir la bonne tactique.</p>
+    </div>
+
+    <p>En étant conscient de ces erreurs et en travaillant sur les techniques de base, vous obtiendrez rapidement de meilleurs résultats et plus de plaisir de jeu.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 2 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Partie 2</h2>
+    <p>Techniques Avancées pour Professionnels</p>
+</div>
+
+<!-- CHAPTER 5 -->
+<div class="chapter" id="ch5">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 5</div>
+        <h2>Perfectionner votre Point</h2>
+        <p>Techniques de placement avancées</p>
+    </div>
+
+    <p class="quote">Une fois le stade débutant dépassé, la pétanque ne consiste plus seulement à placer une boule près du but, mais à résoudre des situations difficiles et à maîtriser des techniques avancées.</p>
+
+    <h2>Techniques de Placement Avancées</h2>
+    <p>Une méthode efficace pour l'entraînement avancé consiste à créer des obstacles. Placez trois boules autour du but (cochonnet) afin qu'il soit invisible, et entraînez-vous à placer votre boule aussi près que possible sans avoir à tirer. Cela vous force à trouver de nouvelles zones de tombée (donnes) et à développer une sensibilité accrue pour l'effet porté.</p>
+
+    <div class="highlight-box">
+        <h4>Exercice d'Entraînement :</h4>
+        <p>Placez des briques ou des boules en cercle autour du positionnement précédent et entraînez-vous à faire un plombé (une donne haute) par-dessus l'obstacle pour faire stopper la boule près du but. En variant la distance entre 6 et 10 mètres et en déplaçant progressivement les obstacles, vous travaillez la précision sur différentes distances.</p>
+    </div>
+
+    <h3>Trois Types de Lancers de Pointage</h3>
+    <table>
+        <tr><th>Type de Lancer</th><th>Utilisation</th></tr>
+        <tr><td><strong>Roulée</strong></td><td>Pour les surfaces lisses - la boule roule sur une trajectoire plate</td></tr>
+        <tr><td><strong>Demi-Portée</strong></td><td>Pour les lancers de distance moyenne sur terrain varié</td></tr>
+        <tr><td><strong>Plombée / Portée Haute</strong></td><td>Pour les lancers longs sur terrain difficile - la boule atterrit doucement</td></tr>
+    </table>
+
+    <h3>Adapter le Tir à la Surface et à la Météo</h3>
+    <ul>
+        <li><strong>Terrain sableux ou meuble :</strong> La boule s'enfonce et s'arrête rapidement ; un rouler à plat est souvent le plus sûr ici</li>
+        <li><strong>Terrain dur ou caillouteux :</strong> La boule rebondit facilement et peut dévier ; optez pour un lob haut avec effet porté</li>
+        <li><strong>Terrain en pente :</strong> Lancez la boule en montée pour éviter qu'elle ne roule trop loin</li>
+        <li><strong>Pluie :</strong> Le sol devient plus lourd et les boules s'arrêtent plus vite</li>
+        <li><strong>Temps sec :</strong> Augmente le rebond</li>
+    </ul>
+
+    <h3>Entraînement Mental – Concentration et Routines</h3>
+    <div class="info-box">
+        <p>Au niveau élite, la force mentale est souvent décisive. Fixez-vous des objectifs d'entraînement concrets pour chaque saison et chaque session afin de maintenir votre concentration.</p>
+        <h4>Avant de lancer :</h4>
+        <ol>
+            <li>Prenez quelques respirations profondes</li>
+            <li>Visualisez la trajectoire du tir</li>
+            <li>Voyez la boule atterrir là où vous le souhaitez</li>
+            <li>"Lâchez" le contrôle conscient pendant le tir lui-même</li>
+        </ol>
+    </div>
+
+    <h2>Séances d'Entraînement pour Point Avancé</h2>
+    <p>Pour amener votre pointage au niveau supérieur, vous devez vous entraîner avec précision et objectifs mesurables :</p>
+
+    <div class="highlight-box">
+        <h4>Exercice 1 : Le Défi des Obstacles</h4>
+        <p><strong>Configuration :</strong> Placez 3-6 boules ou briques autour du cochonnet pour qu'il ne soit pas directement visible. Entraînez-vous à lobber par-dessus les obstacles et à atterrir près du cochonnet.</p>
+        <p><strong>Objectifs :</strong></p>
+        <ul>
+            <li><strong>Moyen :</strong> 4/10 lancers à moins de 50 cm du cochonnet</li>
+            <li><strong>Avancé :</strong> 6/10 lancers à moins de 30 cm du cochonnet</li>
+            <li><strong>Expert :</strong> 3/10 lancers plus près que tous les obstacles</li>
+        </ul>
+        <p><strong>Enregistrer :</strong> Nombre de touches, quelle trajectoire de lancer (basse/moyenne/haute) a le mieux fonctionné</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Exercice 2 : Différentes Surfaces - Capacité d'Adaptation</h4>
+        <p><strong>Configuration :</strong> Entraînez-vous sur 3 surfaces différentes le même jour (par ex. gravier, asphalte, herbe). Lancez 10 boules par surface.</p>
+        <p><strong>Objectifs :</strong></p>
+        <ul>
+            <li>Identifiez quel type de lancer (roulée/demi-portée/plombée) fonctionne le mieux par surface</li>
+            <li>Toucher à moins de 50 cm : au moins 5/10 sur chaque surface</li>
+        </ul>
+        <p><strong>Enregistrer :</strong> Surface, meilleur type de lancer, pourcentage de touches, ce qui doit être ajusté</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Exercice 3 : Contrôle de l'Effet Porté</h4>
+        <p><strong>Configuration :</strong> Sur surface dure, lancez 10 boules en vous concentrant sur l'effet porté maximal. Mesurez la distance de roulement de la boule après l'atterrissage.</p>
+        <p><strong>Objectifs :</strong></p>
+        <ul>
+            <li><strong>Moyen :</strong> La boule roule moins de 1 mètre après l'atterrissage sur un lancer de 7m</li>
+            <li><strong>Avancé :</strong> La boule roule moins de 50 cm après l'atterrissage</li>
+            <li><strong>Expert :</strong> La boule "meurt" à moins de 30 cm du point d'atterrissage</li>
+        </ul>
+        <p><strong>Enregistrer :</strong> Distance de roulement par lancer, technique de poignet qui a le mieux fonctionné</p>
+    </div>
+</div>
+
+<!-- CHAPTER 6 -->
+<div class="chapter" id="ch6">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 6</div>
+        <h2>Tir de Maître</h2>
+        <p>Des tirs de base aux techniques de maître</p>
+    </div>
+
+    <p class="quote">Un tireur d'élite maîtrise plusieurs types de tirs et sait quand utiliser chaque technique pour maximiser les chances de gagner.</p>
+
+    <h2>Frappes Directes vs. Tirs Roulés</h2>
+    <p>Un tireur d'élite maîtrise plusieurs types de tirs. Le <strong>Tir au Fer</strong> est une frappe directe où votre boule touche la boule adverse en plein centre. L'objectif est souvent de réaliser un <em>carreau</em> — c'est-à-dire que votre boule prend la place de la boule visée et s'y immobilise.</p>
+
+    <div class="highlight-box">
+        <h4>Différents Types de Tirs :</h4>
+        <ul>
+            <li><strong>Tir au Fer :</strong> Élimine la boule adverse directement de face</li>
+            <li><strong>Tir à la Raffle :</strong> La boule est envoyée avec force le long du sol</li>
+            <li><strong>Tir sur le But (but franc) :</strong> Pour annuler la mène</li>
+            <li><strong>Tir Devant :</strong> La boule atterrit juste devant celle de l'adversaire et roule dedans</li>
+        </ul>
+    </div>
+
+    <h3>Quand Choisir un Tir au Fer ?</h3>
+    <p>Choisissez le tir au fer lorsque le terrain est irrégulier ou lorsque vous avez besoin d'un résultat sûr – une boule qui rebondit est moins affectée par la surface.</p>
+
+    <h3>Quand Choisir un Tir à la Raffle ?</h3>
+    <p>Le tir à la raffle fonctionne mieux sur terrains plats ou lorsque vous devez tirer plusieurs boules adverses d'affilée, mais comporte un risque de rebonds et de déviations.</p>
+
+    <!-- SVG: Direct shot vs rolling shot -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" style="max-width: 460px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <text x="250" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#333">Tir au fer vs Tir a la raffle</text>
+            <line x1="30" y1="220" x2="470" y2="220" stroke="#bbb" stroke-width="1.5"/>
+            <circle cx="60" cy="220" r="4" fill="#222"/>
+            <text x="60" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#555">Tireur</text>
+            <circle cx="380" cy="218" r="12" fill="none" stroke="#c44" stroke-width="2"/>
+            <text x="380" y="255" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#c44">Cible</text>
+            <path d="M60,220 Q220,60 380,218" fill="none" stroke="#07a" stroke-width="2"/>
+            <text x="200" y="100" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#07a">Tir au fer (haut)</text>
+            <path d="M60,220 Q220,200 380,218" fill="none" stroke="#a70" stroke-width="2" stroke-dasharray="6,3"/>
+            <text x="200" y="195" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#a70">Raffle (bas)</text>
+        </svg>
+        <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Tir au fer (trajectoire haute) vs tir à la raffle (trajectoire basse).</p>
+    </div>
+
+    <h2>Conseils d'Entraînement pour Devenir un Tireur Habile</h2>
+    <p>Pour tirer avec force et précision, la technique et l'élan sont cruciaux. Le bras doit fonctionner comme un pendule ; concentrez-vous davantage sur la génération de vitesse d'élan que sur la tension musculaire.</p>
+
+    <div class="highlight-box">
+        <h4>Le Défi des 6 Boules :</h4>
+        <p>Un exercice populaire pour améliorer votre technique de tir :</p>
+        <ol>
+            <li>Placez six boules comme cibles à des positions spécifiques</li>
+            <li>Tirez une boule à la fois en vous concentrant sur le remplacement de la boule cible</li>
+            <li>Après chaque tir, sortez du cercle</li>
+            <li>Visualisez le prochain lancer</li>
+            <li>Entrez à nouveau dans le cercle et tirez</li>
+        </ol>
+        <p>Répétez l'exercice à différentes distances pour améliorer à la fois la puissance et la précision.</p>
+    </div>
+
+    <h3>Conseils Principaux pour la Technique de Tir :</h3>
+    <ul>
+        <li><strong>Gardez les doigts joints</strong> – donne un meilleur contrôle de la boule</li>
+        <li><strong>Tenez-vous fermement</strong> avec le pied directeur pointant vers la cible</li>
+        <li><strong>Utilisez le bras libre</strong> pour l'équilibre</li>
+        <li><strong>Terminez le lancer</strong> avec la main pointant vers la cible</li>
+    </ul>
+
+    <h3>Exercices d'Entraînement Supplémentaires</h3>
+    <div class="info-box">
+        <h4>Cadre de Tir avec Fil :</h4>
+        <p>Construisez un cadre d'entraînement avec deux fils à hauteur de tête où vous essayez de lancer la boule entre les fils. Cette technique vous aide à maintenir une trajectoire et une hauteur de lancer constantes.</p>
+
+        <h4>Entraînement avec Balle en Plastique :</h4>
+        <p>Utilisez une balle en plastique comme cible pour créer une surface de frappe claire et vous obliger à lancer avec une hauteur contrôlée.</p>
+    </div>
+
+    <h2>Analyse du Style de Tir des Professionnels</h2>
+    <p>Les meilleurs tireurs ont développé des lancers personnels mais efficaces. Voici quelques-unes des techniques les plus réussies :</p>
+
+    <table>
+        <tr><th>Technique</th><th>Description</th><th>Résultat</th></tr>
+        <tr><td><strong>Le Tir à la Rasade</strong></td><td>La boule est tenue près du visage, l'élan est porté en arrière au-delà de la hanche puis relâché dans un angle prononcé</td><td>Carreau parfait</td></tr>
+        <tr><td><strong>La Plombée</strong></td><td>Le joueur soulève la boule à hauteur de taille, la lâche avec un court élan arrière et un lâcher précoce</td><td>Tir doux mais très précis</td></tr>
+        <tr><td><strong>Le Tir à la Volée</strong></td><td>Un lancer oscillant haut avec un lâcher puissant où le joueur utilise un grand arc</td><td>Frappe la cible avec une grande force</td></tr>
+        <tr><td><strong>L'École de Grue</strong></td><td>Une variante de prise où la boule est tenue plus loin dans les doigts</td><td>Beaucoup d'effet porté – plus de contrôle</td></tr>
+        <tr><td><strong>Pliage et Roulage</strong></td><td>Un élan plus lent avec un suivi modéré</td><td>Utilisé avec des boules plus lourdes pour des tirs contrôlés</td></tr>
+    </table>
+
+    <h3>L'Importance d'une Hauteur Constante</h3>
+    <p>Quelle que soit la technique, les professionnels visent une hauteur constante. Une analyse montre que les tireurs de classe mondiale lancent presque toujours la boule de sorte que le sommet de l'arc se situe autour de la hauteur de la tête ; à des distances plus longues, ils lancent légèrement plus haut.</p>
+
+    <div class="highlight-box">
+        <h4>Entraînement avec Cadre :</h4>
+        <p>En vous entraînant avec un cadre à deux fils – un à hauteur de tête et un juste au-dessus – vous pouvez vous entraîner à lancer entre les fils et obtenir une trajectoire régulière.</p>
+        <p><strong>Important :</strong> Lorsque les tireurs se concentrent sur la hauteur du lancer plutôt que sur la frappe de la boule cible, la précision augmente souvent !</p>
+    </div>
+
+    <h3>Résumé</h3>
+    <p>Devenir un tireur d'élite consiste à :</p>
+    <ul>
+        <li>Maîtriser plusieurs types de tirs différents</li>
+        <li>Choisir la bonne technique pour chaque situation</li>
+        <li>S'entraîner systématiquement avec des exercices ciblés</li>
+        <li>Développer une trajectoire et une hauteur de lancer constantes</li>
+        <li>Étudier et apprendre des techniques des professionnels</li>
+    </ul>
+
+</div>
+
+<!-- CHAPTER 7 -->
+<div class="chapter" id="ch7">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 7</div>
+        <h2>Tactique de Haut Niveau</h2>
+        <p>Jeu stratégique et guerre psychologique</p>
+    </div>
+
+    <p class="quote">À haut niveau, la pétanque ne concerne pas seulement les compétences techniques – il s'agit de penser stratégiquement, de lire l'adversaire et de gérer le rythme du jeu.</p>
+
+    <h2>Gérer le Rythme de Jeu</h2>
+    <div class="info-box">
+        <p>En pétanque, le rythme est plus qu'une question de vitesse de jeu. Les tacticiens expérimentés utilisent le terrain, la distance et l'ordre des tirs pour contrôler la cadence.</p>
+        <h4>Principes Importants :</h4>
+        <ul>
+            <li><strong>Discutez toujours</strong> du placement du but avant que la mène ne commence</li>
+            <li><strong>Évitez de jouer</strong> deux boules de suite sans évaluer d'abord la situation</li>
+            <li><strong>Variez la distance</strong> entre 6 et 10 mètres pour forcer l'adversaire hors de sa zone de confort</li>
+        </ul>
+    </div>
+
+    <h3>Gérer le Rythme du Jeu</h3>
+    <p>En variant le tempo et la distance, vous pouvez :</p>
+    <ul>
+        <li>Perturber la concentration de l'adversaire</li>
+        <li>Exploiter vos forces et éviter les leurs</li>
+        <li>Créer de l'incertitude chez l'adversaire</li>
+        <li>Maintenir l'initiative dans le jeu</li>
+    </ul>
+
+    <h2>Guerre Psychologique – Lire l'Adversaire</h2>
+    <p>Le jeu mental est une partie importante de la pétanque à haut niveau. Voici quelques tactiques efficaces :</p>
+
+    <div class="highlight-box">
+        <h4>Tactiques de Positionnement :</h4>
+        <ul>
+            <li><strong>Placez vos boules près ou devant</strong> les boules adverses pour les forcer à des tirs difficiles</li>
+            <li><strong>Jouez directement derrière</strong> ou dans l'alignement des boules adverses</li>
+            <li><strong>Bloquez la vue</strong> du cochonnet pour rendre plus difficile l'évaluation de la distance</li>
+        </ul>
+    </div>
+
+    <h3>Adaptez-vous à Votre Adversaire</h3>
+    <table>
+        <tr><th>Force de l'Adversaire</th><th>Votre Tactique</th></tr>
+        <tr><td>Préfère les lancers courts</td><td>Placez le cochonnet à plus longue distance (9-10 mètres)</td></tr>
+        <tr><td>Bon tireur</td><td>Concentrez-vous sur le bon pointage – obligez-les à utiliser leurs tirs</td></tr>
+        <tr><td>Pointeur fort</td><td>Utilisez des tirs agressifs tôt dans la mène</td></tr>
+        <tr><td>Préfère terrain plat</td><td>Choisissez des zones irrégulières sur le terrain</td></tr>
+    </table>
+
+    <div class="highlight-box">
+        <h4>Arbre de Décision Avancé : Pointer ou Tirer ?</h4>
+        <p>À haut niveau, il s'agit de lire la situation et de prendre des décisions rapides et stratégiques :</p>
+        <table>
+            <tr><th>Situation</th><th>Décision</th><th>Tactique Avancée</th></tr>
+            <tr><td>L'adversaire a au moins 2 boules à moins de 20 cm</td><td><strong>TIRER agressivement</strong></td><td>Un tir réussi peut éliminer plusieurs menaces simultanément.</td></tr>
+            <tr><td>Vous menez avec 11-12 points</td><td><strong>POINTER défensivement</strong></td><td>Bloquez et limitez les chances de marquer de l'adversaire.</td></tr>
+            <tr><td>L'adversaire a un tireur avec >70% de précision</td><td><strong>POINTER serré + bloquer</strong></td><td>Placez vos boules près de celles de l'adversaire pour rendre les tirs risqués.</td></tr>
+            <tr><td>Dernière boule + vous êtes 2-3 points derrière</td><td><strong>TIRER le but</strong></td><td>Déplacez le but vers vos boules ou hors jeu pour réinitialiser la mène.</td></tr>
+            <tr><td>Donne parfaite + terrain favorable</td><td><strong>POINTER pour obtenir un carreau</strong></td><td>"Boule devant, boule d'argent".</td></tr>
+            <tr><td>L'adversaire semble nerveux/incertain</td><td><strong>POINTER + augmenter la pression</strong></td><td>Continuez à placer de bonnes boules pour augmenter la pression psychologique.</td></tr>
+        </table>
+        <p><strong>Conseil de pro :</strong> Communiquez toujours avec l'équipe avant de décider. Une stratégie commune est plus forte que des décisions individuelles.</p>
+    </div>
+
+    <h2>Jeu d'Équipe – Communication et Rôles</h2>
+
+    <h3>Les Trois Postes en Triplette</h3>
+    <p>En triplette, les postes sont souvent divisés entre trois spécialistes. Chaque poste a sa responsabilité spécifique et ensemble ils forment une unité forte :</p>
+
+    <div class="highlight-box">
+        <h4>1. Pointeur</h4>
+        <p><strong>Tâche Principale :</strong> Placer sa boule le plus près possible du cochonnet.</p>
+        <ul>
+            <li><strong>Focus :</strong> Précision, finesse et observation du terrain</li>
+            <li><strong>Objectif :</strong> Créer des points pour l'équipe grâce à des placements précis</li>
+            <li><strong>Joue souvent :</strong> En premier dans la mène</li>
+            <li><strong>Caractéristiques :</strong> Calme, patient et a une bonne sensation des surfaces</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>2. Milieu (Le Mixte)</h4>
+        <p><strong>Tâche Principale :</strong> Être polyvalent – un joueur qui peut faire à la fois le travail de pointeur et de tireur.</p>
+        <ul>
+            <li><strong>Focus :</strong> Adaptabilité et vue d'ensemble stratégique</li>
+            <li><strong>Objectif :</strong> Agir comme lien entre pointeur et tireur et intervenir là où c'est le plus nécessaire</li>
+            <li><strong>Joue souvent :</strong> Au milieu de la mène</li>
+            <li><strong>Caractéristiques :</strong> Flexible, décisif et a une bonne compréhension du jeu</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h4>3. Tireur</h4>
+        <p><strong>Tâche Principale :</strong> Tirer les boules adverses pour les éloigner du cochonnet et éliminer leur menace de points.</p>
+        <ul>
+            <li><strong>Focus :</strong> Force, précision et concentration</li>
+            <li><strong>Objectif :</strong> Éliminer les boules adverses dangereuses par des tirs précis</li>
+            <li><strong>Joue souvent :</strong> En dernier dans la mène</li>
+            <li><strong>Spécialité :</strong> Le Tir au Fer et le carreau (où votre propre boule reste à la place de la boule éliminée)</li>
+            <li><strong>Caractéristiques :</strong> Confiant, concentré et supporte la pression</li>
+        </ul>
+    </div>
+
+    <h2>Flexibilité Psychologique – Jouer Malgré la Nervosité</h2>
+    <p>Beaucoup croient que la clé du succès à la pétanque est d'être complètement calme et "vidé" de pensées gênantes quand on entre dans le cercle. Mais la vérité est différente. Les meilleurs joueurs ne sont pas nécessairement plus calmes que vous – ils sont plus <strong>psychologiquement flexibles</strong>.</p>
+
+    <p>La flexibilité psychologique concerne la capacité à faire la bonne chose, peu importe ce que vous ressentez ou pensez sur le moment. Elle repose sur l'interaction entre trois parties :</p>
+
+    <div class="highlight-box">
+        <h4>Pensées</h4>
+        <ul>
+            <li>"Je vais rater."</li>
+            <li>"Tout dépend de moi maintenant."</li>
+            <li>"Le terrain est impossible."</li>
+        </ul>
+
+        <h4>Sensations et Corps</h4>
+        <ul>
+            <li>Le coeur qui bat.</li>
+            <li>Les mains qui tremblent.</li>
+            <li>Un noeud dans l'estomac.</li>
+        </ul>
+
+        <h4>Comportement</h4>
+        <p>Comment vous exécutez réellement votre lancer et suivez votre routine.</p>
+    </div>
+
+    <h3>Ne Croyez Pas Tout Ce Que Votre Cerveau Dit</h3>
+    <p>Le cerveau est une machine de survie. Il est fantastique pour créer des scénarios catastrophe sur l'avenir. Quand vous êtes dans le cercle, il peut crier : <em>"Tu vas rater !"</em></p>
+    <p>Si vous traitez cette pensée comme une vérité absolue, vous devenez rigide, prudent et effrayé.</p>
+
+    <div class="info-box">
+        <p><strong>L'exploit à la pétanque n'est pas de faire taire les pensées ou d'arrêter de trembler.</strong></p>
+        <p>L'exploit est de noter la pensée, la laisser être là comme un bruit de fond, et quand même suivre le plan et la décision que vous avez pris avant d'entrer dans le cercle.</p>
+    </div>
+
+    <h3>La Décision dans le Cercle</h3>
+    <p>Quand vous avez décidé quelle ligne choisir ou quelle boule tirer, c'est la <strong>décision</strong> qui contrôle – pas votre nervosité.</p>
+
+    <p>La flexibilité psychologique c'est :</p>
+    <ul>
+        <li>laisser le coeur battre</li>
+        <li>laisser les pensées bavarder</li>
+        <li>et quand même laisser la main exécuter le mouvement que vous avez pratiqué des milliers de fois</li>
+    </ul>
+
+    <div class="highlight-box" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
+        <h4>Rappelez-vous :</h4>
+        <p>Vous n'avez pas besoin de vous sentir confiant pour lancer une boule parfaite.</p>
+        <p><strong>Vous devez juste être prêt à la lancer malgré votre incertitude.</strong></p>
+    </div>
+
+    <h2>MGP – Votre Checklist Mentale pour Chaque Boule</h2>
+    <p>À la pétanque, il est facile de passer en pilote automatique ou de laisser le stress prendre le dessus quand on entre dans le cercle. Pour éliminer la négligence et l'incertitude, nous utilisons la méthode <strong>MGP</strong>.</p>
+    <p>Avant même de mettre le pied dans le cercle, arrêtez-vous mentalement et cochez trois points. C'est votre station de contrôle interne.</p>
+
+    <div class="highlight-box">
+        <h4>M – Mathématiques</h4>
+        <p>Avant de décider de la stratégie, vous devez connaître les chiffres. <strong>Comptez toujours d'abord.</strong></p>
+        <ul>
+            <li><strong>Compte des boules :</strong> Combien de boules vous reste-t-il ? Combien en ont les adversaires ?</li>
+            <li><strong>Situation des points :</strong> Combien de points sont sur le terrain en ce moment ?</li>
+        </ul>
+        <p><strong>Règle de base :</strong> Ne lancez jamais une boule sans savoir si vous avez l'avantage en boules ou êtes en désavantage. Les mathématiques déterminent quel niveau de risque est raisonnable.</p>
+    </div>
+
+    <div class="info-box">
+        <h4>G – Géographie</h4>
+        <p>Maintenant vous lisez la scène devant vous. La géographie concerne la compréhension du terrain et des positions des boules.</p>
+        <ul>
+            <li><strong>Lisez le jeu :</strong> Quelles boules sont vivantes et dangereuses ? Lesquelles sont dans le chemin ?</li>
+            <li><strong>Changez de perspective :</strong> Allez toujours jusqu'au cochonnet. Regarder seulement depuis le cercle donne souvent une fausse image des distances.</li>
+            <li><strong>Visualisez l'atterrissage :</strong> Tenez-vous près du cochonnet et regardez vers le cercle. Évaluez la hauteur requise et cherchez un point d'atterrissage lisse et aplati.</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h4>P – Le Plan</h4>
+        <p>Quand les mathématiques sont calculées et la géographie analysée, il est temps de prendre la décision.</p>
+        <ul>
+            <li><strong>Choisissez le point d'atterrissage :</strong> Décidez exactement où la boule doit atterrir et quel est l'objectif du lancer – pointer, pousser ou tirer.</li>
+        </ul>
+        <p><strong>La règle d'or :</strong> Ne changez jamais votre plan une fois que vous êtes dans le cercle. L'hésitation est le plus grand ennemi de la précision.</p>
+        <p>Si vous avez décidé – allez-y. <strong>Faites confiance à votre décision.</strong></p>
+    </div>
+
+    <h3>La Responsabilité de l'Équipe – Créer la Tranquillité de Travail</h3>
+    <p>Pour que MGP fonctionne, le travail d'équipe est nécessaire. Quand le lanceur entre dans le cercle, une bulle invisible se forme.</p>
+    <ul>
+        <li><strong>Silence total :</strong> Pas de conseils ou changements de dernière seconde.</li>
+        <li><strong>Focus sur l'exécution :</strong> Toute stratégie est discutée avant le cercle. Dans le cercle, seule l'exécution reste.</li>
+        <li><strong>Respectez la bulle :</strong> En tant que coéquipier, votre tâche la plus importante est de donner au lanceur l'espace mental pour faire confiance à son plan.</li>
+    </ul>
+
+    <div class="info-box">
+        <h4>Conseil du Coach</h4>
+        <p>En suivant la routine MGP, vous réduisez la charge mentale. Vous n'avez pas besoin de réfléchir quand vous lancez – toute la réflexion a été faite pendant M, G et P. <strong>Dans le cercle, vous n'êtes qu'un exécutant.</strong></p>
+    </div>
+
+    <h3>MGP et Flexibilité Psychologique – Comment Ils Fonctionnent Ensemble</h3>
+    <p>Le modèle MGP n'est pas seulement un outil tactique. C'est aussi une aide puissante pour la force mentale. Ensemble, MGP et flexibilité psychologique créent les conditions pour performer sous pression.</p>
+
+    <div class="highlight-box">
+        <h4>1. M et G Donnent au Cerveau le Bon Focus</h4>
+        <p>Quand le cerveau commence à produire des pensées inquiétantes – <em>"Et si je rate"</em>, <em>"Tout le monde me regarde"</em> – les Mathématiques et la Géographie vous donnent quelque chose de concret sur quoi vous concentrer.</p>
+        <p>Au lieu de rester coincé dans les sentiments intérieurs, l'attention est dirigée vers l'extérieur : vers le compte des boules, la surface et le point d'atterrissage.</p>
+    </div>
+
+    <div class="info-box">
+        <h4>2. Le Plan (P) est Votre Ancre</h4>
+        <p>La flexibilité psychologique consiste à faire ce que vous devez faire, peu importe ce que vous ressentez.</p>
+        <p><strong>Le plan est ce à quoi vous vous accrochez quand la nervosité se manifeste.</strong> Quand le coeur bat et que le doute s'insinue, c'est votre plan prédéterminé qui contrôle le comportement – pas le sentiment.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>3. Agir Malgré le Bruit</h4>
+        <p>Quand vous avez suivi MGP et êtes entré dans le cercle, le cerveau peut encore bavarder. La différence maintenant est que vous n'avez pas besoin d'écouter.</p>
+        <p>Vous pouvez :</p>
+        <ul>
+            <li>noter le bruit</li>
+            <li>accepter que la nervosité est là</li>
+            <li>et quand même exécuter le lancer selon le plan</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box" style="background: #e3f2fd; border-left: 4px solid #2196f3;">
+        <h4>Résumé</h4>
+        <p><strong>MGP</strong> vous aide à prendre la bonne décision avant le cercle.</p>
+        <p><strong>La flexibilité psychologique</strong> vous aide à exécuter la décision quand la pression est à son maximum.</p>
+        <p><strong>Ensemble, ils transforment l'incertitude en action contrôlée.</strong></p>
+    </div>
+
+    <h3>La Communication est la Clé</h3>
+    <p><strong>Résumé :</strong> Le succès de l'équipe dépend du pointeur qui crée des points, du tireur qui détruit les points de l'adversaire et du milieu qui s'adapte et soutient les deux rôles.</p>
+
+    <div class="info-box">
+        <p>Pour réussir, l'équipe doit agir comme une unité. Communiquez clairement avant chaque lancer :</p>
+        <ul>
+            <li>L'objectif est-il de gagner les points ?</li>
+            <li>Devons-nous bloquer l'adversaire ?</li>
+            <li>Devons-nous éliminer une boule dangereuse ?</li>
+        </ul>
+        <p><strong>Important :</strong> Ne laissez jamais deux joueurs lancer sans se consulter – la mène se perd rapidement quand la communication s'arrête.</p>
+    </div>
+
+    <h3>Tactiques d'Équipe en Pratique</h3>
+    <ul>
+        <li><strong>Tôt dans le match :</strong> Établissez votre style de jeu et testez les faiblesses de l'adversaire</li>
+        <li><strong>En tête :</strong> Jouez prudemment et évitez les risques inutiles</li>
+        <li><strong>En retard :</strong> Osez prendre des risques et essayez de changer la dynamique du jeu</li>
+        <li><strong>À la fin du match :</strong> Restez calme et suivez votre plan de jeu</li>
+    </ul>
+</div>
+
+<!-- CHAPTER 8 -->
+<div class="chapter" id="ch8">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 8</div>
+        <h2>S'entraîner Plus Intelligemment</h2>
+        <p>Méthodes efficaces pour un développement rapide</p>
+    </div>
+
+    <p class="quote">Ce n'est pas la quantité d'entraînement qui compte, mais la qualité. Un entraînement ciblé et structuré donne des résultats plus rapides qu'une pratique aléatoire.</p>
+
+    <h2>Exercices Efficaces pour l'Entraînement en Solo</h2>
+    <p>Vous n'avez pas toujours besoin d'un adversaire pour vous entraîner efficacement. Voici quelques exercices que vous pouvez faire seul :</p>
+
+    <div class="highlight-box">
+        <h4>1. Obstacles Circulaires</h4>
+        <p>Placez plusieurs boules ou briques autour du cochonnet et entraînez-vous à placer votre boule aussi près que possible. Cela vous force à trouver des zones d'atterrissage et à développer une sensation fine pour l'effet porté.</p>
+        <ul>
+            <li>Commencez avec 3 obstacles à 6 mètres de distance</li>
+            <li>Augmentez progressivement à 6 obstacles</li>
+            <li>Variez la distance entre 6-10 mètres</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>2. Exercice du Cadre pour le Tir</h4>
+        <p>Construisez un cadre avec deux fils à hauteur de tête et entraînez-vous à lancer la boule entre les fils. Cela vous aide à :</p>
+        <ul>
+            <li>Maintenir une trajectoire de lancer constante</li>
+            <li>Contrôler la hauteur du lancer</li>
+            <li>Développer une technique cohérente</li>
+        </ul>
+        <p><strong>Conseil :</strong> Placez les fils à environ 30-40 cm l'un de l'autre pour commencer, et réduisez progressivement la distance à mesure que vous gagnez en confiance.</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>3. Cibler les Donnes</h4>
+        <p>Marquez différents points sur le terrain et essayez de faire atterrir les boules exactement sur ces points :</p>
+        <ul>
+            <li>Dessinez des cercles avec de la craie ou utilisez des plaques</li>
+            <li>Variez les distances : 6m, 7m, 8m, 9m, 10m</li>
+            <li>Entraînez-vous aux lancers roulés et aux portées hautes</li>
+            <li>Documentez combien de touches sur 10 tentatives</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>4. Évaluez vos Compétences</h4>
+        <p>Mesurez votre pourcentage de réussite et documentez le développement :</p>
+        <table>
+            <tr><th>Exercice</th><th>Objectif</th><th>Débutant</th><th>Avancé</th></tr>
+            <tr><td>Pointage à 7m</td><td>À moins de 50cm du cochonnet</td><td>5/10</td><td>8/10</td></tr>
+            <tr><td>Tir à 8m</td><td>Toucher la boule cible</td><td>3/10</td><td>7/10</td></tr>
+            <tr><td>Pointage longue distance 10m</td><td>À moins de 1m du cochonnet</td><td>4/10</td><td>8/10</td></tr>
+        </table>
+    </div>
+
+    <h2>Gestion Vidéo – Enregistrer et Analyser vos Tirs</h2>
+    <p>L'une des méthodes les plus efficaces pour améliorer votre technique est de vous filmer et d'analyser le résultat.</p>
+
+    <div class="highlight-box">
+        <h4>Comment Filmer Efficacement :</h4>
+        <ol>
+            <li><strong>Placez la caméra de côté</strong> pour voir l'ensemble du mouvement</li>
+            <li><strong>Filmez l'intégralité du corps :</strong> pieds, genoux, épaules, balancier arrière et suivi</li>
+            <li><strong>Filmez au ralenti</strong> si possible (la plupart des smartphones ont cette fonction)</li>
+            <li><strong>Enregistrez au moins 10 lancers</strong> pour voir les schémas</li>
+        </ol>
+    </div>
+
+    <h3>Que Rechercher dans la Vidéo ?</h3>
+    <div class="info-box">
+        <ul>
+            <li><strong>Position :</strong> Les pieds sont-ils stables ? Le pied directeur pointe-t-il vers la cible ?</li>
+            <li><strong>Prise :</strong> Tenez-vous la boule de manière cohérente de la même façon ?</li>
+            <li><strong>Balancier arrière :</strong> Le balancier est-il fluide et contrôlé ?</li>
+            <li><strong>Le lâcher de boule :</strong> Relâchez-vous la boule au même point à chaque fois ?</li>
+            <li><strong>Suivi :</strong> La main suit-elle vers la cible ?</li>
+            <li><strong>Équilibre :</strong> Maintenez-vous l'équilibre tout au long du lancer ?</li>
+        </ul>
+    </div>
+
+    <h3>Comparez avec les Joueurs d'Élite</h3>
+    <p>Regardez des vidéos de joueurs de classe mondiale et comparez votre technique à la leur. Identifiez les différences et travaillez sur une chose à la fois. N'essayez pas de tout changer en même temps – concentrez-vous sur un aspect jusqu'à ce qu'il devienne naturel.</p>
+
+    <h2>Préparation Physique et Mentale pour les Compétitions</h2>
+
+    <h3>Échauffement</h3>
+    <div class="highlight-box">
+        <h4>Échauffement Physique (15-20 minutes) :</h4>
+        <ol>
+            <li><strong>Étirements dynamiques :</strong> Cercles de bras, balancements de jambes, torsions (5 min)</li>
+            <li><strong>Exercices de mobilité :</strong> Rotations de poignet, roulements d'épaules (3 min)</li>
+            <li><strong>Lancers d'échauffement :</strong> Commencez par des lancers courts et légers et augmentez progressivement la distance et l'intensité (10 min)</li>
+        </ol>
+    </div>
+
+    <h3>Pendant la Compétition</h3>
+    <ul>
+        <li><strong>Hydratation :</strong> Buvez de l'eau régulièrement, surtout par temps chaud</li>
+        <li><strong>Restez au chaud :</strong> Mettez une veste entre les mènes s'il fait froid</li>
+        <li><strong>Mangez léger :</strong> Évitez les repas lourds, choisissez des fruits ou des barres énergétiques</li>
+        <li><strong>Prenez des pauses :</strong> Utilisez le temps entre les matchs pour récupérer mentalement</li>
+    </ul>
+
+    <h3>Préparation Mentale</h3>
+    <div class="info-box">
+        <h4>Avant la Compétition :</h4>
+        <ul>
+            <li><strong>Respirations profondes :</strong> 5-10 respirations profondes pour calmer les nerfs</li>
+            <li><strong>Visualisation :</strong> Voyez-vous faire des lancers parfaits</li>
+            <li><strong>Dialogue intérieur positif :</strong> "Je suis préparé", "Je peux le faire"</li>
+            <li><strong>Concentrez-vous sur le processus :</strong> Pas sur le résultat, mais sur l'exécution de chaque lancer correctement</li>
+        </ul>
+    </div>
+
+    <h3>Objectifs Réalistes</h3>
+    <p>Fixez des objectifs pour le tournoi qui sont ambitieux mais réalisables :</p>
+    <table>
+        <tr><th>Type d'Objectif</th><th>Exemple</th></tr>
+        <tr><td><strong>Objectif de Résultat</strong></td><td>Atteindre les quarts de finale, gagner au moins 2 matchs</td></tr>
+        <tr><td><strong>Objectif de Performance</strong></td><td>Toucher 60% de mes tirs, pointer à moins de 50cm dans 70% des lancers</td></tr>
+        <tr><td><strong>Objectif de Processus</strong></td><td>Maintenir la concentration entre les lancers, bien communiquer avec l'équipe</td></tr>
+    </table>
+
+    <h3>Après la Compétition</h3>
+    <div class="highlight-box">
+        <p><strong>Évaluez votre performance :</strong></p>
+        <ul>
+            <li>Qu'est-ce qui s'est bien passé ? Qu'est-ce qui peut être amélioré ?</li>
+            <li>Quelles situations étaient difficiles à gérer ?</li>
+            <li>Sur quoi devez-vous vous concentrer lors du prochain entraînement ?</li>
+        </ul>
+        <p>Rappelez-vous que vous jouez pour progresser, pas seulement pour gagner. Chaque compétition est une expérience d'apprentissage.</p>
+    </div>
+
+    <h2>Plan d'Entraînement Hebdomadaire avec Objectifs Mesurables</h2>
+    <p>Pour maximiser votre développement, suivez ce plan d'entraînement structuré :</p>
+
+    <div class="highlight-box">
+        <h4>Lundi/Mardi : Focus Point (45 min)</h4>
+        <p><strong>Configuration :</strong></p>
+        <ul>
+            <li>10 min d'échauffement : Lancez 20 boules à différentes distances</li>
+            <li>20 min : Exercice du mouchoir à 6, 7 et 8m (10 lancers par distance)</li>
+            <li>15 min : Défi des obstacles avec 4 boules autour du cochonnet</li>
+        </ul>
+        <p><strong>Objectif :</strong> Toucher la donne 60% à 7m, à moins de 50cm du cochonnet 70% avec obstacles</p>
+        <p><strong>Enregistrer :</strong> Pourcentage de touches par distance, meilleure/pire série</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Mercredi/Jeudi : Focus Tir (45 min)</h4>
+        <p><strong>Configuration :</strong></p>
+        <ul>
+            <li>10 min d'échauffement : Tirs légers à 6m</li>
+            <li>25 min : Défi des 6 boules à distances variées (6-10m)</li>
+            <li>10 min : Entraînement carreau - essayez de faire rester la boule à la place de la boule cible</li>
+        </ul>
+        <p><strong>Objectif :</strong> 50% de précision totale, au moins 2 carreaux par session</p>
+        <p><strong>Enregistrer :</strong> Touches/tentatives, nombre de carreaux, distance où vous manquez le plus</p>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Vendredi/Samedi : Simulation de Match (60 min)</h4>
+        <p><strong>Configuration :</strong></p>
+        <ul>
+            <li>Jouez contre vous-même ou un partenaire d'entraînement</li>
+            <li>Variez la surface et la position du cochonnet à chaque mène</li>
+            <li>Concentrez-vous sur la prise de décision : quand pointer vs. tirer ?</li>
+        </ul>
+        <p><strong>Objectif :</strong> Documentez 10 mènes, analysez les décisions après coup</p>
+        <p><strong>Enregistrer :</strong> Points gagnés avec point vs. tir, meilleures/pires décisions</p>
+    </div>
+
+    <div class="warning-box">
+        <h4>Dimanche : Repos ou Analyse Vidéo</h4>
+        <p>Regardez les lancers filmés de la semaine. Identifiez UNE chose à améliorer la semaine prochaine. Documentez votre développement dans le journal d'entraînement.</p>
+    </div>
+
+    <h2>Résumé</h2>
+    <p>Un entraînement intelligent signifie :</p>
+    <ul>
+        <li>Des exercices structurés avec des objectifs clairs</li>
+        <li>Une analyse vidéo régulière de votre technique</li>
+        <li>Une préparation physique et mentale</li>
+        <li>La documentation de votre développement</li>
+        <li>La qualité plutôt que la quantité</li>
+        <li><strong>Un entraînement cohérent 3-4 fois par semaine donne des résultats en 4-8 semaines !</strong></li>
+    </ul>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 3 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Partie 3</h2>
+    <p>La Pétanque comme Mode de Vie</p>
+</div>
+
+<!-- CHAPTER 9 -->
+<div class="chapter" id="ch9">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 9</div>
+        <h2>Jeu de Compétition vs. Jeu Social</h2>
+        <p>Différences de mentalité et de stratégie</p>
+    </div>
+
+    <p style="font-style: italic; color: #555; margin-bottom: 20px;">La pétanque est plus qu'un sport – c'est une activité sociale, une tradition culturelle et une communauté mondiale.</p>
+
+    <h3>Différences de Mentalité et de Stratégie</h3>
+    <p>En pratique, le terme "social" ou "casual" pétanque est utilisé pour les jeux amicaux sans arbitres, tandis que le "jeu de compétition" fait référence aux tournois sanctionnés avec arbitres.</p>
+
+    <div class="highlight-box">
+        <h4>Jeu Social :</h4>
+        <ul>
+            <li>Se joue sans arbitre</li>
+            <li>Lorsque quelque chose d'irrégulier se produit, les équipes décident ensemble</li>
+            <li>L'atmosphère est détendue et l'objectif est la socialisation</li>
+            <li>Les joueurs essaient de nouvelles tactiques et se relaient pour lancer</li>
+            <li>Les points sont comptés mais ne sont pas le plus important</li>
+        </ul>
+
+        <h4>Jeu de Compétition :</h4>
+        <ul>
+            <li>Il y a un arbitre qui est appelé en cas d'irrégularités</li>
+            <li>La décision de l'arbitre ne peut pas être contestée</li>
+            <li>Maintenir le tempo et suivre la règle d'une minute pour les lancers</li>
+            <li>Penser stratégiquement – chaque point peut décider du match</li>
+            <li>Préparer le lancer, discuter avec les coéquipiers, lire le terrain</li>
+        </ul>
+    </div>
+
+    <h3>Comment Trouver des Clubs et des Tournois</h3>
+    <p>Rejoindre un club est le meilleur moyen de développer votre jeu. La plupart des pays ont une fédération nationale avec des listes de clubs.</p>
+
+    <div class="info-box">
+        <h4>Internationalement :</h4>
+        <ul>
+            <li>Calendrier FIPJP pour les compétitions internationales</li>
+            <li>EuroCup de la Confédération Européenne de Pétanque</li>
+            <li>Masters de Pétanque - un "Tour de France" pour l'élite mondiale</li>
+            <li>Groupes Facebook et pages Meetup pour les jeux informels</li>
+        </ul>
+    </div>
+</div>
+
+<!-- CHAPTER 10 -->
+<div class="chapter" id="ch10">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 10</div>
+        <h2>La Pétanque dans le Monde</h2>
+        <p>Différences culturelles et grands tournois</p>
+    </div>
+
+    <p style="font-style: italic; color: #555; margin-bottom: 20px;">De la Provence à la Thaïlande, des terrains de parc aux championnats du monde – la pétanque est devenue un sport mondial avec de riches traditions.</p>
+
+    <h2>Différences Culturelles dans le Jeu</h2>
+    <p>La pétanque est née en Provence mais s'est rapidement répandue grâce aux boules métalliques modernes. Aujourd'hui, il existe de fortes fédérations nationales en Allemagne, en Espagne et en Angleterre, et le sport est particulièrement populaire dans les pays ayant un héritage colonial français comme le Laos, la Thaïlande, le Vietnam, le Cambodge et Pondichéry en Inde.</p>
+
+    <div class="highlight-box">
+        <h4>Quelques Chiffres :</h4>
+        <ul>
+            <li><strong>France :</strong> Plus de 300 000 membres licenciés à la FFPJP</li>
+            <li><strong>États-Unis :</strong> Environ 30 000 joueurs; 2 141 membres dans 52 clubs (2015)</li>
+            <li><strong>FIPJP :</strong> Près de 800 000 membres en 2022</li>
+            <li><strong>Thaïlande :</strong> Environ 80 000 joueurs de compétition</li>
+        </ul>
+    </div>
+
+    <h3>La Thaïlande – Un Exemple Fascinant</h3>
+    <p>La princesse Srinagarindra a introduit la pétanque en Thaïlande dans les années 1970 et a encouragé les écoles, la police, l'armée et la fonction publique à jouer. Aujourd'hui, la pétanque est obligatoire dans l'entraînement militaire thaïlandais, et le pays appartient à l'élite mondiale avec le Vietnam et le Laos.</p>
+
+    <div class="info-box">
+        <p>Le fabricant de boules FBT à Bangkok est l'une des rares usines produisant des boules homologuées FIPJP en dehors de la France, ce qui montre à quel point le sport s'est enraciné dans le pays.</p>
+    </div>
+
+    <h3>Styles de Jeu Régionaux</h3>
+    <table>
+        <tr><th>Région</th><th>Style de jeu</th></tr>
+        <tr><td><strong>France</strong></td><td>Style traditionnel axé sur la précision et la tactique. Souvent joué sur gravier ou sable.</td></tr>
+        <tr><td><strong>Asie du Sud-Est</strong></td><td>Style de jeu agressif avec beaucoup de tirs. Souvent joué sur surfaces dures.</td></tr>
+        <tr><td><strong>Afrique du Nord</strong></td><td>Mélange de tradition française et de culture locale. Beaucoup de jeu social.</td></tr>
+        <tr><td><strong>Europe du Nord</strong></td><td>Plus structuré et basé sur les clubs. Focus sur l'entraînement et le développement.</td></tr>
+    </table>
+
+    <h2>Grands Tournois</h2>
+
+    <div class="highlight-box">
+        <h4>Mondial la Marseillaise à Pétanque</h4>
+        <p><strong>Le tournoi le plus grand et le plus prestigieux.</strong></p>
+        <ul>
+            <li>Se déroule chaque juillet à Marseille</li>
+            <li>Environ 15 000 participants</li>
+            <li>150 000 spectateurs</li>
+            <li>Joué en format triplette</li>
+            <li>Ouvert à tous – des amateurs aux professionnels</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>Championnats du Monde FIPJP</h4>
+        <p>Les championnats du monde en triplettes masculines ont commencé en 1959. Aujourd'hui, ils comprennent :</p>
+        <ul>
+            <li><strong>Jeu individuel :</strong> Tête-à-tête (1 contre 1)</li>
+            <li><strong>Double :</strong> Doublette (2 contre 2)</li>
+            <li><strong>Triple :</strong> Triplette (3 contre 3)</li>
+            <li><strong>Tir de précision</strong></li>
+            <li><strong>Compétitions féminines et masculines</strong> dans toutes les catégories</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Masters de Pétanque</h4>
+        <p>Une série de tournois comme un "Tour de France" avec huit étapes dans différentes villes françaises. Joué depuis 1999.</p>
+        <ul>
+            <li>Uniquement des joueurs d'élite invités</li>
+            <li>Système de points sur toute la saison</li>
+            <li>Grosse cagnotte</li>
+            <li>Diffusions TV en France</li>
+        </ul>
+    </div>
+
+    <table>
+        <tr><th>Tournoi</th><th>Lieu</th><th>Participants</th></tr>
+        <tr><td><strong>EuroCup</strong></td><td>Différentes villes européennes</td><td>Clubs champions nationaux</td></tr>
+        <tr><td><strong>Pétanque Amelia Island Open</strong></td><td>Floride, États-Unis</td><td>Plus grand tournoi américain</td></tr>
+        <tr><td><strong>Championnats d'Asie</strong></td><td>Différents pays asiatiques</td><td>Équipes nationales asiatiques</td></tr>
+    </table>
+
+    <h2>Joueurs Légendaires</h2>
+
+    <h3>Légendes Françaises</h3>
+    <div class="highlight-box">
+        <h4>Philippe Quintais</h4>
+        <p><strong>15 titres mondiaux</strong> – souvent appelé le meilleur joueur de tous les temps.</p>
+        <ul>
+            <li>Connu pour sa précision incroyable et sa régularité</li>
+            <li>A dominé les années 2000 et 2010</li>
+            <li>Maître du pointage et du tir</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h4>Marco Foyot</h4>
+        <p><strong>6 titres de champion du monde</strong></p>
+        <ul>
+            <li>Célèbre pour son intelligence tactique</li>
+            <li>Capacité à lire le terrain</li>
+            <li>Excellent joueur d'équipe</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h4>Dylan Rocher</h4>
+        <p><strong>5 titres de champion du monde</strong></p>
+        <ul>
+            <li>Jeune star française</li>
+            <li>Impressionne par sa puissance et sa polyvalence</li>
+            <li>Représente la nouvelle génération</li>
+        </ul>
+    </div>
+
+    <h3>Stars Asiatiques</h3>
+    <table>
+        <tr><th>Joueur</th><th>Pays</th><th>Palmarès</th></tr>
+        <tr><td><strong>Thanakorn Sangkaew</strong></td><td>Thaïlande</td><td>Champion du monde 2019, or aux championnats d'Asie 2018 et 2019</td></tr>
+        <tr><td><strong>Nantawan Fueangsanit</strong></td><td>Thaïlande</td><td>Championne du monde 2017, multiple championne d'Asie</td></tr>
+        <tr><td><strong>Angélique Colombet</strong></td><td>France</td><td>Quintuple championne du monde, excelle dans le pointage de précision</td></tr>
+    </table>
+
+    <p>Ces joueurs représentent différents styles et origines. Quintais et Foyot symbolisent l'héritage français, tandis que Sangkaew et Fueangsanit montrent comment les pays d'Asie du Sud-Est sont devenus des puissances ces dernières années.</p>
+
+    <h2>Traditions Informelles et Étiquette</h2>
+
+    <div class="highlight-box">
+        <h4>"Faire Fanny"</h4>
+        <p>Perdre 0–13 s'appelle <strong>"faire fanny"</strong>.</p>
+        <p>Dans certains clubs, la tradition veut que l'équipe qui fait fanny doive :</p>
+        <ul>
+            <li>Offrir un verre aux adversaires</li>
+            <li>Embrasser une statuette en bois représentant Fanny (ancienne coutume française)</li>
+            <li>Effectuer un autre rituel ludique</li>
+        </ul>
+        <p>C'est bien sûr un rituel ludique qui montre à quel point le jeu est social !</p>
+    </div>
+
+    <h3>La Bonne Étiquette Comprend :</h3>
+    <div class="info-box">
+        <ul>
+            <li><strong>Ne pas passer devant</strong> le joueur qui lance</li>
+            <li><strong>Rester immobile et silencieux</strong> quand quelqu'un se concentre</li>
+            <li><strong>Attendre pour féliciter</strong> ou commenter jusqu'à ce que la boule ait atterri</li>
+            <li><strong>Utiliser des instruments approuvés</strong> pour mesurer (pas les pieds)</li>
+            <li><strong>Montrer du respect</strong> envers les adversaires, le public et les arbitres</li>
+            <li><strong>Garder le terrain propre</strong> et ramasser les déchets</li>
+            <li><strong>Remercier les adversaires</strong> après le match, quel que soit le résultat</li>
+        </ul>
+    </div>
+
+    <h3>Différences Culturelles dans l'Étiquette</h3>
+    <ul>
+        <li><strong>France :</strong> Beaucoup de discussions entre les lancers sont acceptées</li>
+        <li><strong>Thaïlande :</strong> Plus formel et respectueux, moins de discussions pendant le jeu</li>
+        <li><strong>Europe du Nord :</strong> Focus sur le silence et la concentration</li>
+        <li><strong>Afrique du Nord :</strong> Animé et social, beaucoup d'interaction avec les spectateurs</li>
+    </ul>
+
+    <h2>Résumé</h2>
+    <p>La pétanque est un sport véritablement mondial avec :</p>
+    <ul>
+        <li>Près de 800 000 joueurs licenciés dans le monde</li>
+        <li>De grands tournois sur tous les continents</li>
+        <li>De riches traditions culturelles dans différents pays</li>
+        <li>Des opportunités sociales et compétitives</li>
+        <li>Une communauté forte qui accueille tout le monde</li>
+    </ul>
+
+    <p>En combinant la connaissance des règles officielles avec une bonne étiquette, vous deviendrez un joueur apprécié où que vous lanciez vos boules.</p>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART 4 -->
+<!-- ============================================================ -->
+<div class="part-header">
+    <h2>Partie 4</h2>
+    <p>Approfondissement et Développement</p>
+</div>
+
+<!-- CHAPTER 11 -->
+<div class="chapter" id="ch11">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 11</div>
+        <h2>Analyse Stratégique et Tactique</h2>
+        <p>Stratégies de base et tactiques avancées</p>
+    </div>
+
+    <p style="font-style: italic; color: #555; margin-bottom: 20px;">Maîtriser la pétanque est un voyage de toute une vie. Les règles fournissent le cadre, mais ce sont la stratégie, la psychologie et les habitudes d'entraînement qui font de vous un gagnant.</p>
+
+    <p>Les règles décrivent comment vous pouvez jouer; la stratégie décrit comment vous devriez jouer pour gagner. Développer une stratégie consciente vous aide à prendre de meilleures décisions sous pression.</p>
+
+    <h3>Stratégies de Base</h3>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Lisez la surface avant de lancer :</strong> Notez si le sol est dur, mou, sablonneux ou rocheux</li>
+            <li><strong>Choisissez les bonnes boules pour votre style :</strong> Le matériau, le poids et le diamètre affectent le contrôle</li>
+            <li><strong>Placez la boule devant le cochonnet :</strong> La première boule 30–50 cm devant le cochonnet crée un "mur"</li>
+            <li><strong>Jouez sur les faiblesses des adversaires :</strong> Observez comment ils lancent et adaptez votre jeu</li>
+            <li><strong>Soyez flexible :</strong> Testez différentes tactiques selon la situation</li>
+        </ul>
+    </div>
+
+    <h3>Tactiques Avancées</h3>
+    <table>
+        <tr><th>Tactique</th><th>Description</th></tr>
+        <tr><td><strong>Analyse du terrain en plusieurs étapes</strong></td><td>Pensez plusieurs lancers à l'avance. Où sont les pierres qui peuvent servir d'obstacles ou de support aux boules ?</td></tr>
+        <tr><td><strong>Positionnez le cochonnet intentionnellement</strong></td><td>Lancez-le sur une partie du terrain qui convient mieux à votre équipe qu'aux adversaires.</td></tr>
+        <tr><td><strong>Changez le tempo</strong></td><td>Variez entre lancers rapides et calmes pour affecter le rythme.</td></tr>
+        <tr><td><strong>Faites réfléchir l'adversaire</strong></td><td>Choisissez des placements difficiles ou des lancers longs pour forcer les adversaires hors de leur zone de confort.</td></tr>
+    </table>
+</div>
+
+<!-- CHAPTER 12 -->
+<div class="chapter" id="ch12">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 12</div>
+        <h2>Force Mentale et Concentration</h2>
+        <p>La différence entre les bons et les excellents joueurs</p>
+    </div>
+
+    <p>La différence entre les bons et les excellents joueurs réside souvent dans la tête. La force mentale peut être entraînée de la même manière que la technique.</p>
+
+    <h3>Gestion de la Pression</h3>
+    <div class="info-box">
+        <h4>Trois Techniques :</h4>
+        <ol>
+            <li><strong>Respiration et visualisation :</strong> La respiration profonde et la visualisation mentale vous aident à calmer les nerfs</li>
+            <li><strong>État d'esprit positif :</strong> Une attitude positive facilite le maintien de la concentration</li>
+            <li><strong>Routines :</strong> Créez une routine de préparation personnelle avant chaque lancer</li>
+        </ol>
+    </div>
+
+    <h3>"Contrôle du Tilt" – Réinitialiser Après les Erreurs</h3>
+    <p>Lorsque vous manquez un lancer important, il y a un risque élevé que les émotions prennent le dessus. Apprenez à briser la spirale négative :</p>
+    <ul>
+        <li><strong>Sortez du cercle, recommencez :</strong> Après un mauvais lancer, sortez, reprenez-vous et entrez à nouveau</li>
+        <li><strong>Liste de contrôle mentale :</strong> Passez en revue la Position, la Prise, l'Angle (angle du bras), la Longueur (longueur du lancer), l'Inclinaison (pente du sol)</li>
+        <li><strong>Visualisation inversée :</strong> Visualisez la trajectoire de la boule à l'envers – voyez la boule revenir du cochonnet dans votre main</li>
+        <li><strong>Apprenez les uns des autres :</strong> Discutez des lancers avec les coéquipiers</li>
+    </ul>
+
+    <h3>Concentration et Focalisation</h3>
+    <div class="highlight-box">
+        <ul>
+            <li>Évitez les distractions en gardant un oeil sur les autres boules</li>
+            <li>Développez un rituel avant le lancer</li>
+            <li>La méditation régulière peut améliorer votre capacité à vous concentrer</li>
+            <li>Imagerie mentale - imaginez le lancer en détail avant de le faire</li>
+        </ul>
+    </div>
+
+    <h3>Motivation et Objectifs</h3>
+    <p>Fixez des objectifs qui donnent direction et énergie à votre entraînement :</p>
+    <ul>
+        <li><strong>Objectifs à court terme :</strong> Toucher un certain point dix fois (objectifs quotidiens)</li>
+        <li><strong>Objectifs à moyen terme :</strong> Améliorer votre pourcentage de touches (objectifs de saison)</li>
+        <li><strong>Objectifs à long terme :</strong> Gagner un tournoi</li>
+    </ul>
+</div>
+
+<!-- CHAPTER 13 -->
+<div class="chapter" id="ch13">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 13</div>
+        <h2>Plan d'Entraînement et Développement</h2>
+        <p>Jouer correctement, pas seulement beaucoup</p>
+    </div>
+
+    <p>S'améliorer ne consiste pas seulement à jouer beaucoup, mais à jouer correctement. Un entraînement efficace fait gagner du temps et donne de meilleurs résultats.</p>
+
+    <h3>Entraînement Efficace</h3>
+    <div class="highlight-box">
+        <h4>Cinq Principes :</h4>
+        <ol>
+            <li><strong>Jouez régulièrement :</strong> Trois sessions par semaine suffisent si bien planifiées</li>
+            <li><strong>Variez les adversaires :</strong> Affrontez différents joueurs et participez à des tournois</li>
+            <li><strong>Jouez avec des joueurs expérimentés :</strong> Entraînez-vous avec des joueurs expérimentés pour apprendre leur technique</li>
+            <li><strong>Pratique délibérée :</strong> Concentrez-vous sur une compétence spécifique à la fois</li>
+            <li><strong>Alternez entre technique et jeu détendu :</strong> Pendant l'entraînement vous analysez, pendant les matchs vous faites confiance à la mémoire musculaire</li>
+        </ol>
+    </div>
+
+    <h3>Analyse et Auto-évaluation</h3>
+    <ul>
+        <li><strong>Apprentissage continu :</strong> Documentez chaque session d'entraînement et match</li>
+        <li><strong>Analyse vidéo :</strong> Filmez vos lancers et analysez votre technique</li>
+        <li><strong>Profil de performance :</strong> Créez une matrice de vos compétences psychologiques, tactiques, techniques et physiques</li>
+    </ul>
+
+    <h3>Plan d'Étude – Étape par Étape</h3>
+    <table>
+        <tr><th>Niveau</th><th>Temps</th><th>Focus</th></tr>
+        <tr><td><strong>Débutant</strong></td><td>0–6 mois</td><td>Technique de base : prise, position et lancer corrects. Jouez avec des boules plus légères. Participez à des matchs sociaux.</td></tr>
+        <tr><td><strong>Phase de Développement</strong></td><td>6–18 mois</td><td>Analysez le terrain et choisissez les lancers. Testez différentes boules. Entraînez-vous au pointage et au tir. Participez à de petites compétitions.</td></tr>
+        <tr><td><strong>Joueur Avancé</strong></td><td>18–36 mois</td><td>Développez stratégie et planification. Étudiez les adversaires. Incluez l'entraînement mental. Utilisez vidéos et profils de performance.</td></tr>
+        <tr><td><strong>Joueur de Compétition</strong></td><td>3 ans et plus</td><td>Affinez la technique avec un coach. Concentrez-vous sur les petits détails. Planifiez la saison avec périodisation.</td></tr>
+    </table>
+
+    <h2>Équipement, Environnement et Préparations</h2>
+
+    <h3>Avantages de l'Équipement</h3>
+    <ul>
+        <li>Adaptez les boules à votre main et votre style</li>
+        <li>Choisissez le matériau selon la surface</li>
+        <li>Entretien - gardez les boules propres et huilées</li>
+    </ul>
+
+    <h3>Environnement Optimal</h3>
+    <ul>
+        <li>Créez une zone d'entraînement à la maison (au moins 10 m)</li>
+        <li>Choisissez un endroit calme où vous ne serez pas dérangé</li>
+        <li>Entraînez-vous sur différentes surfaces</li>
+    </ul>
+
+    <h3>Routines Préparatoires</h3>
+    <div class="highlight-box">
+        <h4>Avant le Match :</h4>
+        <ul>
+            <li><strong>Vêtements de match :</strong> Bons vêtements selon la météo et le confort</li>
+            <li><strong>Énergie :</strong> Apportez une barre chocolatée ou similaire</li>
+            <li><strong>Eau :</strong> Grande bouteille, toujours à portée de main</li>
+            <li><strong>Protection solaire :</strong> Casquette et lunettes de soleil de qualité</li>
+            <li><strong>Échauffement physique :</strong> Exercices d'étirement dynamiques et lancers d'essai</li>
+            <li><strong>Échauffement mental :</strong> Passez en revue vos objectifs et visualisez</li>
+            <li><strong>Vérification de l'équipement :</strong> Vérifiez la marque et le poids des boules</li>
+        </ul>
+    </div>
+</div>
+
+<!-- CHAPTER 14 -->
+<div class="chapter" id="ch14">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 14</div>
+        <h2>Entraînement Physique</h2>
+        <p>Précision, pas cardio — mais l'entraînement physique est important</p>
+    </div>
+
+    <p>La pétanque est un sport de précision, pas un sport cardio ou de force. Malgré cela, l'entraînement physique de base est important pour améliorer la technique de lancer, augmenter la précision et prévenir les blessures.</p>
+
+    <h3>Force et Endurance du Bras et du Poignet</h3>
+    <table>
+        <tr><th>Exercice</th><th>Objectif</th></tr>
+        <tr><td><strong>Curl d'avant-bras avec poids</strong></td><td>Renforce les avant-bras et la prise</td></tr>
+        <tr><td><strong>Pendule du poignet avec boule</strong></td><td>Entraîne l'endurance au moment du relâchement</td></tr>
+        <tr><td><strong>Élévation d'épaule</strong></td><td>Renforce les muscles de l'épaule pour la stabilité</td></tr>
+        <tr><td><strong>Pompes</strong></td><td>Renforce la poitrine, les épaules et le tronc</td></tr>
+    </table>
+
+    <h3>Équilibre et Stabilité</h3>
+    <ul>
+        <li><strong>Position sur une jambe :</strong> Améliore l'équilibre du pied et de la cheville</li>
+        <li><strong>Squats/Fentes :</strong> Renforce les jambes et les hanches pour la position accroupie</li>
+        <li><strong>Planche :</strong> Développe la force du tronc</li>
+        <li><strong>Rotations de hanche :</strong> Améliore la mobilité de la hanche</li>
+    </ul>
+
+    <h3>Mobilité et Échauffement</h3>
+    <ul>
+        <li>Rotations d'épaules - mouvements circulaires légers et contrôlés</li>
+        <li>Étirements du poignet et des doigts</li>
+        <li>Exercices de pendule sans lancer la boule</li>
+    </ul>
+
+    <div class="warning-box">
+        <p><strong>Conseil :</strong> Effectuez ces exercices avec des poids légers ou avec la boule de pétanque elle-même, avec des répétitions élevées, pour imiter l'endurance de faible intensité nécessaire pendant un long match.</p>
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>En analysant le terrain, en choisissant les bonnes tactiques, en vous entraînant de manière ciblée et en cultivant votre force mentale, vous prenez le contrôle du jeu et de votre développement. N'oubliez pas de profiter du voyage – l'interaction sociale et la joie du jeu sont au moins aussi importantes que gagner.</p>
+</div>
+
+<!-- CHAPTER 15 -->
+<div class="chapter" id="ch15">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 15</div>
+        <h2>Diriger une Équipe de Pétanque</h2>
+        <p>Coaching, construction d'équipe et préparation pour la compétition</p>
+    </div>
+
+    <h2>Introduction – Le Rôle de l'Entraîneur</h2>
+    <p>Diriger une équipe de pétanque, c'est équilibrer stratégie et compréhension humaine. Un bon entraîneur n'est pas seulement un tacticien – mais aussi un motivateur, un psychologue et un bâtisseur d'équipe. Il s'agit de voir à la fois l'ensemble et l'individu, de créer la sécurité et le courage, et de prendre des décisions judicieuses quand cela compte le plus.</p>
+
+    <p>Dans ce chapitre, nous explorons comment vous, en tant qu'entraîneur :</p>
+    <ul>
+        <li>choisissez les bons joueurs pour la bonne occasion,</li>
+        <li>préparez l'équipe pour la compétition,</li>
+        <li>gérez la pression et les revers,</li>
+        <li>et construisez une culture où développement et esprit d'équipe vont de pair.</li>
+    </ul>
+
+    <h2>Avant la Compétition – Considérations Stratégiques</h2>
+    <p>Affronter une forte opposition nécessite plus que de la technique. Il s'agit de comprendre le contexte : la forme, les adversaires, la météo et la dynamique de l'équipe.</p>
+
+    <div class="highlight-box">
+        <h4>Questions Centrales :</h4>
+        <ul>
+            <li>Quelle est la forme et la préparation mentale des joueurs ?</li>
+            <li>Quelles combinaisons fonctionnent le mieux dans l'équipe ?</li>
+            <li>Comment le caractère du terrain affecte-t-il les choix tactiques ?</li>
+            <li>Qu'est-ce qui pèse le plus dans la sélection de l'équipe – l'expérience, la forme ou la force mentale ?</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <p>Un entraîneur expérimenté sait que parfois le joueur le plus concentré est plus important que le plus technique.</p>
+    </div>
+
+    <h2>Sélection de l'Équipe – Trouver le Bon Équilibre</h2>
+    <p>La sélection de l'équipe est un art qui pèse connaissances, intuition et chimie d'équipe. L'objectif est de créer une équipe où tous ont confiance en l'entraîneur et leurs coéquipiers.</p>
+
+    <h3>Facteurs à Considérer :</h3>
+    <ul>
+        <li><strong>Expérience et compétences :</strong> performances passées, technique, compréhension du jeu.</li>
+        <li><strong>Force mentale :</strong> confiance en soi, capacité à gérer la pression, concentration.</li>
+        <li><strong>Capacité sociale :</strong> communication, volonté de coopérer, dynamique de groupe.</li>
+        <li><strong>Forme :</strong> niveau d'entraînement actuel, détermination, courbe de développement.</li>
+        <li><strong>Compréhension du rôle :</strong> le joueur accepte-t-il son rôle – leader, remplaçant, rôle de soutien ?</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p>Créez un simple tableau de sélection d'équipe où vous attribuez des points (1–5) pour chaque facteur. Cela rend la sélection plus réfléchie et ouverte à la réflexion.</p>
+    </div>
+
+    <h2>Pendant la Compétition – Coaching en Temps Réel</h2>
+    <p>Lorsque le match est en cours, le rôle de l'entraîneur se transforme de planificateur en chef d'orchestre. Vos décisions affectent non seulement le jeu – mais aussi l'état émotionnel de l'équipe.</p>
+
+    <h3>Aspects Importants :</h3>
+    <ul>
+        <li>Adapter la tactique aux conditions météorologiques (pluie, vent, terrain).</li>
+        <li>Reconnaître les points de pression – par exemple, à 12–12 dans la dernière mène.</li>
+        <li>Être clair dans la communication, mais garder son calme.</li>
+        <li>Rester concentré sur le processus, pas seulement sur les résultats.</li>
+    </ul>
+
+    <div class="info-box">
+        <p><strong>L'État d'Esprit de l'Entraîneur :</strong></p>
+        <p><em>"Une équipe qui se sent en sécurité sous pression joue avec clarté – pas avec panique."</em></p>
+    </div>
+
+    <h2>Moral et Coopération – Quand les Choses Tournent Mal</h2>
+    <p>Les erreurs arrivent dans chaque match. C'est la réaction de l'entraîneur qui détermine comment l'équipe se remet.</p>
+
+    <div class="warning-box">
+        <h4>Scénario :</h4>
+        <p>Un joueur rate un lancer et devient frustré. Les adversaires célèbrent, le moral baisse.</p>
+        <p><strong>La tâche de l'entraîneur devient :</strong></p>
+        <ul>
+            <li>calmer le joueur,</li>
+            <li>restaurer la concentration de l'équipe,</li>
+            <li>transformer la frustration en concentration.</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <p>Une conversation, un sourire, ou juste un calme "c'est bon" peut faire la différence entre la défaite et le retournement.</p>
+    </div>
+
+    <h2>Construire une Équipe</h2>
+    <p>Passer d'individus à une équipe fonctionnelle nécessite du travail et du temps.</p>
+
+    <h3>Piliers de la Construction d'Équipe :</h3>
+    <ul>
+        <li><strong>Objectifs communs :</strong> Que voulons-nous accomplir ensemble ?</li>
+        <li><strong>Distribution des rôles :</strong> Chacun connaît sa tâche et l'accepte.</li>
+        <li><strong>Communication :</strong> Dialogue ouvert, honnête et respectueux.</li>
+        <li><strong>Team building :</strong> Les activités hors terrain renforcent les relations.</li>
+    </ul>
+
+    <div class="info-box">
+        <p><strong>Réflexion :</strong></p>
+        <p>Une équipe avec des objectifs clairs et une forte communication survit même aux revers.</p>
+    </div>
+
+    <h2>Team Building à Distance</h2>
+    <p>À une époque où les joueurs peuvent vivre dans différents endroits, la communauté numérique est cruciale.</p>
+    <ul>
+        <li>Réunions vidéo pour la tactique, l'analyse et la discussion.</li>
+        <li>Séances d'entraînement communes en ligne.</li>
+        <li>Objectifs partagés et résultats d'entraînement.</li>
+        <li>Activités sociales – quiz, conversations, analyses.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>Leçon de l'Entraîneur :</strong></p>
+        <p>La distance ne doit pas signifier un manque de cohésion – juste de nouvelles façons de la créer.</p>
+    </div>
+
+    <h2>Créer un Bon Environnement d'Entraînement</h2>
+    <p>L'entraînement est l'endroit où l'équipe se forme. C'est ici que la sécurité, la discipline et la motivation grandissent.</p>
+
+    <h3>Clés d'un Environnement Positif :</h3>
+    <ul>
+        <li><strong>Sécurité et confiance :</strong> les joueurs osent échouer et essayer de nouvelles choses.</li>
+        <li><strong>Structure claire :</strong> séances d'entraînement planifiées avec objectifs et retours.</li>
+        <li><strong>Développement individuel :</strong> exercices personnalisés selon les besoins.</li>
+        <li><strong>Variation :</strong> différents environnements et styles de jeu.</li>
+    </ul>
+
+    <div class="info-box">
+        <p><strong>Réflexion :</strong></p>
+        <p>Le meilleur environnement d'entraînement est celui où le rire et la concentration coexistent sur le même terrain.</p>
+    </div>
+
+    <h2>La Boussole de l'Entraîneur</h2>
+    <p>Entraîner en pétanque est un leadership construit sur l'équilibre. Cela nécessite de voir la personne derrière la boule.</p>
+
+    <div class="highlight-box">
+        <h4>Les Principes Directeurs de l'Entraîneur :</h4>
+        <ul>
+            <li><strong>Créer la sécurité</strong> – alors les joueurs osent prendre des risques.</li>
+            <li><strong>Construire des relations</strong> – alors la confiance grandit.</li>
+            <li><strong>Entraîner mentalement</strong> – alors le calme est maintenu dans les situations de pression.</li>
+            <li><strong>Réfléchir</strong> – alors l'entraîneur et les joueurs se développent.</li>
+        </ul>
+    </div>
+
+    <div class="info-box" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
+        <p style="font-style: italic; text-align: center;"><strong>"Une bonne équipe ne se construit pas en évitant les erreurs, mais en apprenant ensemble après chaque erreur."</strong></p>
+    </div>
+
+    <h2>Résumé</h2>
+    <p>L'entraînement en pétanque est à la fois une science et un art. Il s'agit de comprendre la technique, la psychologie et la dynamique humaine – et de les tisser ensemble en un tout fonctionnel.</p>
+    <p>Un entraîneur qui réussit à créer la sécurité, la clarté et la confiance a déjà jeté les bases du succès – quel que soit le résultat sur le tableau de marque.</p>
+
+    <div class="highlight-box" style="background: #f3e5f5; border-left: 4px solid #9c27b0;">
+        <p><em>"Le meilleur entraîneur que j'ai eu ne parlait jamais beaucoup – mais quand il parlait, tout le monde écoutait. Son calme se propageait à nous. Quand nous ressentions la pression, nous le regardions et savions : Nous pouvons gérer ça. C'est ce sentiment qui gagne les matchs."</em></p>
+        <p style="text-align: right; margin-top: 10px;"><strong>— Dylan Rocher, Champion de France</strong></p>
+    </div>
+</div>
+
+<!-- CHAPTER 16 -->
+<div class="chapter" id="ch16">
+    <div class="chapter-header">
+        <div class="chapter-number">Chapitre 16</div>
+        <h2>Physique des Boules et Lecture du Terrain</h2>
+        <p>La science derrière le lancer parfait</p>
+    </div>
+
+    <h2>Introduction à la Physique des Boules</h2>
+    <p>La pétanque n'est pas seulement un sport – c'est de la physique appliquée en pratique. Chaque lancer implique des interactions complexes entre la masse de la boule, la vitesse, la rotation, la pente du terrain et les conditions du sol. En comprenant la physique fondamentale, vous pouvez améliorer votre précision et prendre des décisions plus intelligentes sur le terrain.</p>
+
+    <h2>Mécanique de Base</h2>
+
+    <h3>Masse et Centre de Gravité</h3>
+    <p>Une boule de pétanque pèse entre 650 et 800 grammes et a un diamètre de 70,5 à 80 mm. La masse de la boule et sa distribution affectent considérablement son comportement :</p>
+
+    <div class="highlight-box">
+        <h4>Propriétés Importantes de la Masse :</h4>
+        <ul>
+            <li><strong>Boules plus lourdes (750-800g) :</strong> Meilleures pour le tir, conservent plus d'énergie lors des collisions, moins affectées par un terrain irrégulier</li>
+            <li><strong>Boules plus légères (650-700g) :</strong> Plus faciles à contrôler au pointer, nécessitent moins de force, meilleures pour les joueurs âgés</li>
+            <li><strong>Centre de gravité :</strong> Doit être parfaitement centré pour un comportement prévisible</li>
+            <li><strong>Distribution de masse :</strong> Affecte la façon dont la boule roule et tourne</li>
+        </ul>
+    </div>
+
+    <h3>Vitesse et Accélération</h3>
+    <p>Lorsque vous lancez une boule, vous lui donnez une vitesse initiale. À partir de ce moment, plusieurs forces commencent à l'affecter :</p>
+    <ul>
+        <li><strong>Gravité :</strong> Tire la boule vers le bas à 9,82 m/s2</li>
+        <li><strong>Résistance de l'air :</strong> Effet minimal sur de courtes distances mais notable sur les lancers hauts</li>
+        <li><strong>Friction :</strong> La force la plus importante lorsque la boule touche le sol</li>
+    </ul>
+
+    <h3>Rotation et Rétro</h3>
+    <p>La technique classique de lancer de pétanque avec la paume vers le bas crée un effet rétro (rotation arrière). Ce n'est pas seulement une tradition – cela a d'importants avantages physiques :</p>
+
+    <div class="highlight-box">
+        <h4>Avantages de l'Effet Rétro :</h4>
+        <ol>
+            <li><strong>Effet de freinage :</strong> Lorsque la boule atterrit, l'effet rétro s'oppose à la direction du mouvement, la faisant s'arrêter plus rapidement</li>
+            <li><strong>Stabilité :</strong> La rotation stabilise la trajectoire de la boule dans l'air (effet gyroscopique)</li>
+            <li><strong>Rebond contrôlé :</strong> L'effet rétro réduit la hauteur du rebond à l'atterrissage</li>
+            <li><strong>Prévisibilité :</strong> Fournit un comportement plus cohérent sur différentes surfaces</li>
+        </ol>
+    </div>
+
+    <!-- SVG: Backspin braking effect -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg" style="max-width: 460px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <text x="250" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#333">Effet retro vs Sans effet</text>
+            <line x1="30" y1="180" x2="470" y2="180" stroke="#bbb" stroke-width="1.5"/>
+            <circle cx="100" cy="178" r="10" fill="none" stroke="#07a" stroke-width="2"/>
+            <text x="100" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#07a">avec retro</text>
+            <line x1="112" y1="178" x2="200" y2="178" stroke="#07a" stroke-width="2"/>
+            <circle cx="200" cy="178" r="10" fill="none" stroke="#07a" stroke-width="2" stroke-dasharray="3,2"/>
+            <text x="200" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#07a">arret rapide</text>
+            <circle cx="100" cy="130" r="10" fill="none" stroke="#c44" stroke-width="2"/>
+            <text x="100" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#c44">sans retro</text>
+            <line x1="112" y1="130" x2="380" y2="130" stroke="#c44" stroke-width="2"/>
+            <circle cx="380" cy="130" r="10" fill="none" stroke="#c44" stroke-width="2" stroke-dasharray="3,2"/>
+            <text x="380" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#c44">roule loin</text>
+        </svg>
+        <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">L'effet rétro freine la boule significativement.</p>
+    </div>
+
+    <h2>Physique du Terrain</h2>
+
+    <h3>Friction et Résistance au Roulement</h3>
+    <p>Lorsque la boule touche le sol, la friction commence à la ralentir. Le coefficient de friction varie énormément selon la surface :</p>
+
+    <table>
+        <tr><th>Surface</th><th>Coefficient de Friction</th><th>Résistance au Roulement</th><th>Effet sur le Jeu</th></tr>
+        <tr><td>Gravier fin</td><td>0,4-0,6</td><td>Élevée</td><td>La boule s'arrête rapidement, nécessite plus de force</td></tr>
+        <tr><td>Gravier compact</td><td>0,3-0,4</td><td>Moyenne</td><td>Conditions de jeu standard</td></tr>
+        <tr><td>Gravier dur</td><td>0,2-0,3</td><td>Faible</td><td>La boule roule plus loin, plus difficile à contrôler</td></tr>
+        <tr><td>Gravier mouillé</td><td>0,5-0,7</td><td>Très élevée</td><td>La boule s'arrête très rapidement, colle</td></tr>
+        <tr><td>Herbe sèche</td><td>0,3-0,5</td><td>Variable</td><td>Irrégulier, difficile à prévoir</td></tr>
+    </table>
+
+    <h3>Pente et Gravité</h3>
+    <p>Même de petites pentes affectent considérablement la trajectoire de la boule. Une pente de seulement 2-3 degrés peut faire rouler une boule de plusieurs décimètres sur le côté.</p>
+
+    <div class="highlight-box">
+        <h4>Calculer l'Effet de la Pente :</h4>
+        <p><strong>Formule de base :</strong> Déplacement latéral = (pente en degrés x distance en mètres) / 10</p>
+        <p><strong>Exemple :</strong> À 8 mètres de distance avec une pente de 3 degrés :</p>
+        <p>Déplacement latéral = (3 x 8) / 10 = 2,4 dm = 24 cm</p>
+        <p><em>C'est une simplification, mais elle donne une estimation utile !</em></p>
+    </div>
+
+    <h2>Lecture Avancée du Terrain</h2>
+
+    <h3>Analyse Visuelle</h3>
+    <p>Les joueurs professionnels lisent le terrain comme un joueur d'échecs lit un échiquier. Voici ce qu'il faut rechercher :</p>
+    <ul>
+        <li><strong>Variations de couleur :</strong> Les zones plus sombres sont souvent plus humides (friction plus élevée)</li>
+        <li><strong>Ombres :</strong> Révèlent de petites différences d'élévation et des dépressions</li>
+        <li><strong>Brillance :</strong> Les zones brillantes peuvent être compactes ou mouillées</li>
+        <li><strong>Traces :</strong> Les trajectoires de boules précédentes donnent des indices sur la pente</li>
+        <li><strong>Végétation :</strong> Même de petites graines d'herbe affectent le roulement</li>
+    </ul>
+
+    <h3>Investigation Tactile</h3>
+    <p>Avant le début du match, marchez sur le terrain et sentez avec vos pieds :</p>
+    <div class="highlight-box">
+        <h4>Ce qu'il Faut Sentir :</h4>
+        <ul>
+            <li><strong>Compacité :</strong> Combien le sol cède-t-il ?</li>
+            <li><strong>Texture :</strong> Surface fine ou grossière ?</li>
+            <li><strong>Humidité :</strong> Sec ou mouillé ?</li>
+            <li><strong>Pente :</strong> Dans quelle direction le terrain s'incline-t-il ?</li>
+            <li><strong>Irrégularités :</strong> Y a-t-il des dépressions ou des élévations ?</li>
+        </ul>
+    </div>
+
+    <h3>Boules de Test</h3>
+    <p>Avant le début du match, utilisez vos lancers d'entraînement stratégiquement :</p>
+    <ol>
+        <li><strong>Lancer de test 1 :</strong> Lancez droit devant à vitesse moyenne pour évaluer la friction de base</li>
+        <li><strong>Lancer de test 2 :</strong> Lancez à différentes hauteurs pour voir comment le sol affecte le rebond</li>
+        <li><strong>Lancer de test 3 :</strong> Testez les pentes latérales en lançant dans différentes directions</li>
+    </ol>
+
+    <h2>Physique des Collisions</h2>
+
+    <h3>Collisions Élastiques et Inélastiques</h3>
+    <p>Lorsque deux boules entrent en collision, une collision partiellement inélastique se produit – une partie de l'énergie est conservée, mais une partie est perdue sous forme de son et de chaleur :</p>
+    <div class="highlight-box">
+        <h4>Principes Clés :</h4>
+        <ul>
+            <li><strong>La quantité de mouvement est conservée :</strong> Masse totale x vitesse avant = après</li>
+            <li><strong>Perte d'énergie :</strong> Environ 20-30% de l'énergie est perdue lors de la collision</li>
+            <li><strong>Angle d'impact :</strong> Détermine comment l'énergie est distribuée entre les boules</li>
+            <li><strong>La masse compte :</strong> Les boules plus lourdes transfèrent plus d'énergie</li>
+        </ul>
+    </div>
+
+    <h3>Angles d'Impact Optimaux</h3>
+    <table>
+        <tr><th>Angle d'Impact</th><th>Effet sur la Cible</th><th>Effet sur Votre Boule</th><th>Meilleur Pour</th></tr>
+        <tr><td>0 degres (frontal)</td><td>Mouvement maximum vers l'avant</td><td>S'arrête ou rebondit en arrière</td><td>Pousser les boules adverses</td></tr>
+        <tr><td>30-45 degres</td><td>Mouvement diagonal</td><td>Continue dans une nouvelle direction</td><td>Tirs combinés</td></tr>
+        <tr><td>60-90 degres (latéral)</td><td>Mouvement minimal</td><td>Continue presque tout droit</td><td>Frôler les obstacles</td></tr>
+    </table>
+
+    <h2>Conditions Météorologiques et Physique</h2>
+
+    <h3>Température</h3>
+    <ul>
+        <li><strong>Temps chaud (>25 C) :</strong> Le sol devient plus mou, friction plus élevée, les boules s'arrêtent plus vite</li>
+        <li><strong>Temps froid (<10 C) :</strong> Le sol devient plus dur, friction plus faible, les boules roulent plus loin</li>
+        <li><strong>Expansion du métal :</strong> Les boules se dilatent minimalement avec la chaleur (effet négligeable)</li>
+    </ul>
+
+    <h3>Humidité et Pluie</h3>
+    <div class="highlight-box">
+        <h4>Effets de l'Humidité :</h4>
+        <ul>
+            <li><strong>Humidité légère :</strong> Augmente la friction de 20-30%</li>
+            <li><strong>Surface mouillée :</strong> Augmente la friction de 50-100%</li>
+            <li><strong>Flaques :</strong> La boule peut "labourer" à travers l'eau et perdre beaucoup d'énergie</li>
+            <li><strong>Séchage :</strong> Le terrain change continuellement pendant qu'il sèche</li>
+        </ul>
+    </div>
+
+    <h3>Vent</h3>
+    <p>Bien que les boules soient lourdes, elles sont affectées par un vent fort, surtout sur les lancers hauts :</p>
+    <ul>
+        <li><strong>Vent arrière :</strong> Peut ajouter 10-20 cm au lancer</li>
+        <li><strong>Vent de face :</strong> Peut retirer 10-20 cm</li>
+        <li><strong>Vent latéral :</strong> Peut déplacer la boule de 5-15 cm sur le côté</li>
+        <li><strong>Turbulence :</strong> Rend les lancers hauts plus imprévisibles</li>
+    </ul>
+
+    <h2>Application Pratique</h2>
+
+    <h3>Adaptez Votre Lancer aux Conditions</h3>
+    <div class="highlight-box">
+        <h4>Terrain rapide (faible friction) :</h4>
+        <ul>
+            <li>Utilisez plus d'effet rétro</li>
+            <li>Lancez plus bas pour minimiser le rebond</li>
+            <li>Diminuez la vitesse de lancer</li>
+            <li>Visez plus court que la normale</li>
+        </ul>
+
+        <h4>Terrain lent (friction élevée) :</h4>
+        <ul>
+            <li>Lancez plus haut pour minimiser la friction du sol</li>
+            <li>Augmentez la vitesse de lancer</li>
+            <li>Visez plus loin que la normale</li>
+            <li>Utilisez moins d'effet rétro</li>
+        </ul>
+    </div>
+
+    <h3>Modèles Mentaux</h3>
+    <p>Développez des modèles mentaux pour différents scénarios :</p>
+    <ol>
+        <li><strong>Visualisez la trajectoire :</strong> Voyez le chemin de la boule dans votre esprit avant de lancer</li>
+        <li><strong>Ajustez pour la pente :</strong> Ajoutez une "compensation" mentale pour la pente latérale</li>
+        <li><strong>Anticipez le rebond :</strong> Pensez à comment la boule se comportera à l'atterrissage</li>
+        <li><strong>Planifiez les collisions :</strong> Calculez comment les boules vont interagir</li>
+    </ol>
+
+    <h2>Résumé</h2>
+    <p>Comprendre la physique derrière la pétanque fait de vous un joueur plus intelligent. Vous n'avez pas besoin de calculer des équations exactes sur le terrain, mais une compréhension intuitive de la masse, de la friction, de la rotation et des collisions vous aide à :</p>
+    <ul>
+        <li>Faire de meilleurs jugements sur le comportement de la boule</li>
+        <li>Adapter votre jeu à différentes conditions</li>
+        <li>Comprendre pourquoi certains lancers fonctionnent et d'autres non</li>
+        <li>Développer une technique plus cohérente</li>
+        <li>Mieux communiquer avec les coéquipiers sur la tactique</li>
+    </ul>
+
+    <p>Rappelez-vous : La physique est toujours la même, mais chaque terrain et chaque lancer est unique. Utilisez vos connaissances comme un outil, pas comme une règle. Le meilleur joueur est celui qui peut combiner compréhension théorique avec expérience pratique et intuition.</p>
+
+    <div class="highlight-box" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
+        <p><em>"Je ne pense pas à la physique quand je lance – mais je me suis tellement entraîné que mon corps la ressent. Chaque lancer est une expérience, et chaque résultat m'apprend quelque chose de nouveau sur le terrain. C'est pourquoi les premières manches sont si importantes – elles vous donnent des données avec lesquelles travailler."</em></p>
+        <p style="text-align: right; margin-top: 10px;"><strong>— Philippe Quintais, Champion du Monde</strong></p>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- APPENDIX A -->
+<!-- ============================================================ -->
+<div class="chapter" id="appA">
+    <div class="chapter-header">
+        <div class="chapter-number">Annexe A</div>
+        <h2>Guide d'Équipement</h2>
+        <p>Fabrication, taille, dureté et choix de modèle</p>
+    </div>
+
+    <h2>Fabrication</h2>
+    <h3>Acier au Carbone</h3>
+    <div class="highlight-box">
+        <h4>Avantages :</h4>
+        <ul>
+            <li>Surface poreuse, bonne prise</li>
+            <li>Populaire parmi les professionnels</li>
+        </ul>
+        <h4>Inconvénients :</h4>
+        <ul>
+            <li>Rouille plus facilement</li>
+            <li>Nécessite de l'entretien</li>
+        </ul>
+    </div>
+
+    <h3>Acier Inoxydable (Inox)</h3>
+    <div class="info-box">
+        <h4>Avantages :</h4>
+        <ul>
+            <li>Surface plus lisse, presque sans entretien</li>
+            <li>Parfait pour les débutants</li>
+        </ul>
+        <h4>Inconvénients :</h4>
+        <ul>
+            <li>Moins de sensation en main</li>
+        </ul>
+    </div>
+
+    <h2>Dureté</h2>
+    <table>
+        <tr><th>Catégorie</th><th>Comportement</th><th>Utilisation</th></tr>
+        <tr><td><strong>Tendre</strong></td><td>Faible rebond, absorbe les collisions</td><td>Pointage sur asphalte, tirs en plombée</td></tr>
+        <tr><td><strong>Demi-tendre</strong></td><td>Rebond équilibré</td><td>Jeu polyvalent</td></tr>
+        <tr><td><strong>Dure</strong></td><td>Rebond élevé, très résistante</td><td>Pointage sur surface douce</td></tr>
+    </table>
+
+    <h2>Taille et Poids</h2>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>Diamètre :</strong> 70,5–80 mm</li>
+            <li><strong>Poids :</strong> 650–800 grammes</li>
+            <li><strong>Pointeurs :</strong> 71–73 mm, légèrement plus petites</li>
+            <li><strong>Tireurs :</strong> 73–76 mm, légèrement plus grandes</li>
+            <li><strong>Standard :</strong> 73 mm et 680 g</li>
+        </ul>
+    </div>
+
+    <h2>Conseils d'Achat</h2>
+    <div class="info-box">
+        <h4>Débutants :</h4>
+        <p>Acier inoxydable, dureté moyenne, 700–720 g.</p>
+        <h4>Pointeurs avancés :</h4>
+        <p>Acier au carbone, 680–710 g, dureté tendre–moyenne.</p>
+        <h4>Tireurs :</h4>
+        <p>Boules très tendres, 680–700 g, technologie "hardness +".</p>
+    </div>
+
+    <h2>Entretien</h2>
+    <ol>
+        <li><strong>Nettoyez</strong> après chaque jeu avec de l'eau savonneuse</li>
+        <li><strong>Huilez</strong> une fois par mois</li>
+        <li><strong>Stockez au sec</strong></li>
+        <li><strong>Rouille :</strong> Brosse métallique ou vinaigre blanc</li>
+    </ol>
+
+    <div class="warning-box">
+        <p><strong>Important :</strong> Boules plus chères ne signifie pas automatiquement meilleur joueur. La technique et l'entraînement sont les plus importants !</p>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- APPENDIX B -->
+<!-- ============================================================ -->
+<div class="chapter" id="appB">
+    <div class="chapter-header">
+        <div class="chapter-number">Annexe B</div>
+        <h2>Règlement Complet</h2>
+        <p>Règles officielles de la pétanque</p>
+    </div>
+
+    <div class="highlight-box">
+        <h2>10 Règles Essentielles</h2>
+        <table>
+            <tr><th>#</th><th>Règle</th><th>Signification</th></tr>
+            <tr><td>1</td><td>Deux pieds dans le cercle</td><td>Sinon lancer invalide</td></tr>
+            <tr><td>2</td><td>Cochonnet à 6-10 mètres</td><td>Au moins 1m des obstacles</td></tr>
+            <tr><td>3</td><td>L'équipe sans la plus proche lance</td><td>Jusqu'à obtenir la plus proche</td></tr>
+            <tr><td>4</td><td>Points = boules plus proches</td><td>Comptez après chaque mène</td></tr>
+            <tr><td>5</td><td>Premier à 13 gagne</td><td>Pas de prolongation</td></tr>
+            <tr><td>6</td><td>Boule hors limite = morte</td><td>Retirée du jeu</td></tr>
+            <tr><td>7</td><td>Cochonnet mort = nouvelle mène</td><td>Du même cercle</td></tr>
+            <tr><td>8</td><td>Mesurer en cas de doute</td><td>Instrument approuvé</td></tr>
+            <tr><td>9</td><td>Ne pas toucher avant mesure</td><td>Sinon perte de la mène</td></tr>
+            <tr><td>10</td><td>1 minute par lancer</td><td>En compétition</td></tr>
+        </table>
+    </div>
+
+    <h2>Formats de Jeu</h2>
+    <table>
+        <tr><th>Format</th><th>Joueurs</th><th>Boules/joueur</th></tr>
+        <tr><td><strong>Tête-à-tête</strong></td><td>1 contre 1</td><td>3</td></tr>
+        <tr><td><strong>Doublette</strong></td><td>2 contre 2</td><td>3</td></tr>
+        <tr><td><strong>Triplette</strong></td><td>3 contre 3</td><td>2</td></tr>
+    </table>
+
+    <h2>Cochonnet Mort</h2>
+    <div class="warning-box">
+        <p>Le cochonnet est "mort" s'il sort de la zone, se déplace à plus de 20m ou moins de 3m du cercle, ou devient invisible.</p>
+        <ul>
+            <li>Deux équipes ont des boules : mène nulle</li>
+            <li>Une seule équipe a des boules : points = boules restantes</li>
+        </ul>
+    </div>
+
+    <h2>Comportement et Pénalités</h2>
+    <div class="highlight-box">
+        <h4>Interdit :</h4>
+        <ul>
+            <li>Déranger l'adversaire pendant le lancer</li>
+            <li>Marcher entre le joueur et le cochonnet</li>
+            <li>Toucher les boules avant le comptage</li>
+        </ul>
+        <h4>Pénalités :</h4>
+        <ul>
+            <li>1re infraction : Avertissement</li>
+            <li>2e infraction : Perte de la mène</li>
+            <li>3e infraction : Disqualification</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <p>Pour le règlement officiel complet : <strong>www.fipjp.org</strong></p>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- APPENDIX C -->
+<!-- ============================================================ -->
+<div class="chapter" id="appC">
+    <div class="chapter-header">
+        <div class="chapter-number">Annexe C</div>
+        <h2>Glossaire</h2>
+        <p>Termes techniques et concepts du jeu</p>
+    </div>
+
+    <table>
+        <tr><th>Terme</th><th>Explication</th></tr>
+        <tr><td><strong>Boule</strong></td><td>Sphères métalliques utilisées pour jouer. 2-3 par joueur.</td></tr>
+        <tr><td><strong>Carreau</strong></td><td>Coup parfait : votre boule prend la place de l'adverse.</td></tr>
+        <tr><td><strong>Cochonnet</strong></td><td>Petite boule en bois, la cible. Aussi appelé "le but".</td></tr>
+        <tr><td><strong>Donnée</strong></td><td>Le point d'atterrissage visé.</td></tr>
+        <tr><td><strong>Mène</strong></td><td>Un tour de jeu complet.</td></tr>
+        <tr><td><strong>Milieu</strong></td><td>Joueur polyvalent en triplette.</td></tr>
+        <tr><td><strong>Pétanque</strong></td><td>Du provençal "pès tancats" = pieds joints.</td></tr>
+        <tr><td><strong>Pointer</strong></td><td>Lancer sa boule le plus près du cochonnet.</td></tr>
+        <tr><td><strong>Pointeur</strong></td><td>Spécialiste du placement.</td></tr>
+        <tr><td><strong>Tirer</strong></td><td>Lancer avec force pour déloger la boule adverse.</td></tr>
+        <tr><td><strong>Tir au fer</strong></td><td>Tirer directement sur la boule adverse.</td></tr>
+        <tr><td><strong>Tireur</strong></td><td>Spécialiste du tir.</td></tr>
+        <tr><td><strong>Rétro</strong></td><td>Rotation arrière, freine la boule.</td></tr>
+        <tr><td><strong>Biberon</strong></td><td>Boule qui "embrasse" le cochonnet.</td></tr>
+        <tr><td><strong>Fanny</strong></td><td>Perdre 13-0.</td></tr>
+        <tr><td><strong>Plombée</strong></td><td>Lancer en arc haut, atterrissage doux.</td></tr>
+        <tr><td><strong>Roulette</strong></td><td>Faire rouler la boule au sol.</td></tr>
+        <tr><td><strong>Doublette</strong></td><td>Format 2 contre 2, 3 boules chacun.</td></tr>
+        <tr><td><strong>Triplette</strong></td><td>Format 3 contre 3, 2 boules chacun.</td></tr>
+    </table>
+
+    <h2>Mesures et Règles</h2>
+    <div class="info-box">
+        <ul>
+            <li><strong>Cochonnet :</strong> 25-35 mm</li>
+            <li><strong>Boules :</strong> 70,5-80 mm, 650-800 g</li>
+            <li><strong>Cercle :</strong> 35-50 cm</li>
+            <li><strong>Distance cochonnet :</strong> 6-10 mètres</li>
+            <li><strong>Points gagnants :</strong> 13</li>
+            <li><strong>Temps par lancer :</strong> Max 1 minute</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- APPENDIX D -->
+<!-- ============================================================ -->
+<div class="chapter" id="appD">
+    <div class="chapter-header">
+        <div class="chapter-number">Annexe D</div>
+        <h2>Construire un Terrain de Pétanque</h2>
+        <p>Guide complet pour votre propre terrain</p>
+    </div>
+
+    <h2>Planification</h2>
+    <div class="highlight-box">
+        <h4>Liste de contrôle :</h4>
+        <ul>
+            <li><strong>Taille :</strong> Au moins 12 x 3 m (de préférence 15 x 4 m)</li>
+            <li><strong>Pente :</strong> 1-2% pour le drainage</li>
+            <li><strong>Soleil/ombre :</strong> Mi-ombre idéale</li>
+            <li><strong>Distance de la maison :</strong> Les boules rebondissent !</li>
+        </ul>
+    </div>
+
+    <h3>Dimensions</h3>
+    <table>
+        <tr><th>Type</th><th>Longueur</th><th>Largeur</th></tr>
+        <tr><td>Standard Minimum</td><td>12 m</td><td>3 m</td></tr>
+        <tr><td>Recommandé</td><td>15 m</td><td>4 m</td></tr>
+        <tr><td>Compétition</td><td>15 m</td><td>4 m</td></tr>
+        <tr><td>Jardin Compact</td><td>10 m</td><td>2,5 m</td></tr>
+    </table>
+
+    <h2>Construction Étape par Étape</h2>
+    <div class="highlight-box">
+        <h4>Étape 1 : Tracer et Creuser</h4>
+        <p>Creuser à 20-25 cm. Créer une légère pente pour le drainage. Compacter le fond.</p>
+        <h4>Étape 2 : Géotextile</h4>
+        <p>Empêche les mauvaises herbes. Chevaucher les lés d'au moins 20 cm.</p>
+        <h4>Étape 3 : Couche de Fondation</h4>
+        <p>10-12 cm de gravats (0-32 mm). Compacter soigneusement.</p>
+        <h4>Étape 4 : Couche Intermédiaire</h4>
+        <p>5-6 cm de sable concassé (0-8 mm). Niveler et compacter.</p>
+        <h4>Étape 5 : Bordure</h4>
+        <p>Planches traitées ou bordures en pierre. Dépasser de 5-8 cm.</p>
+        <h4>Étape 6 : Couche de Surface</h4>
+        <p>3-5 cm de gravier pour pétanque (0-4 mm). Compacter légèrement.</p>
+    </div>
+
+    <!-- SVG: Court cross-section -->
+    <div style="text-align: center; margin: 30px 0;">
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="max-width: 460px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+            <text x="250" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#333">Coupe transversale du terrain</text>
+            <rect x="50" y="220" width="400" height="50" fill="#8B7355" stroke="#666" stroke-width="1"/>
+            <text x="250" y="250" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="white">Sol naturel</text>
+            <rect x="50" y="200" width="400" height="20" fill="#aaa" stroke="#666" stroke-width="1"/>
+            <text x="250" y="214" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="white">Geotextile</text>
+            <rect x="50" y="160" width="400" height="40" fill="#999" stroke="#666" stroke-width="1"/>
+            <text x="250" y="184" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="white">Gravats 0-32 mm (10-12 cm)</text>
+            <rect x="50" y="130" width="400" height="30" fill="#bba" stroke="#666" stroke-width="1"/>
+            <text x="250" y="149" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333">Sable concasse 0-8 mm (5-6 cm)</text>
+            <rect x="50" y="110" width="400" height="20" fill="#ddc" stroke="#666" stroke-width="1"/>
+            <text x="250" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333">Gravier petanque 0-4 mm (3-5 cm)</text>
+            <rect x="40" y="100" width="10" height="170" fill="#8B4513" stroke="#666" stroke-width="1"/>
+            <rect x="450" y="100" width="10" height="170" fill="#8B4513" stroke="#666" stroke-width="1"/>
+            <text x="25" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#888" transform="rotate(-90, 25, 185)">bordure</text>
+            <text x="465" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#888" transform="rotate(-90, 465, 185)">bordure</text>
+        </svg>
+        <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Coupe transversale montrant les différentes couches du terrain.</p>
+    </div>
+
+    <h2>Choisir le Bon Gravier</h2>
+    <table>
+        <tr><th>Type</th><th>Avantages</th><th>Inconvénients</th></tr>
+        <tr><td><strong>Calcaire concassé 0-4 mm</strong></td><td>Aspect classique, surface stable</td><td>Peut devenir boueux</td></tr>
+        <tr><td><strong>Gravier de granite</strong></td><td>Très durable, bon drainage</td><td>Se lie moins bien</td></tr>
+        <tr><td><strong>Gravier spécial pétanque</strong></td><td>Surface parfaite</td><td>Plus cher</td></tr>
+    </table>
+
+    <h2>Entretien</h2>
+    <div class="highlight-box">
+        <h4>Après chaque partie :</h4>
+        <p>Niveler les trous avec un râteau.</p>
+        <h4>Chaque semaine :</h4>
+        <p>Ratisser, arroser si sec, enlever les feuilles.</p>
+        <h4>Chaque saison :</h4>
+        <p>Ajouter du gravier, vérifier la bordure, désherber.</p>
+    </div>
+
+    <h2>Estimation des Coûts (15 x 4 m, DIY)</h2>
+    <table>
+        <tr><th>Matériau</th><th>Coût (EUR)</th></tr>
+        <tr><td>Géotextile</td><td>50-80</td></tr>
+        <tr><td>Gravats</td><td>200-350</td></tr>
+        <tr><td>Sable concassé</td><td>150-250</td></tr>
+        <tr><td>Gravier pétanque</td><td>150-250</td></tr>
+        <tr><td>Bordure en bois</td><td>200-350</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>800-1 400</strong></td></tr>
+    </table>
+
+    <div class="highlight-box" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
+        <p><em>"Le meilleur conseil : ne vous précipitez pas. Laissez chaque couche se tasser correctement. Un terrain construit sur un mois jouera parfaitement dès le début."</em></p>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ABOUT THE AUTHOR -->
+<!-- ============================================================ -->
+<div class="about-author">
+    <h2>À Propos de l'Auteur</h2>
+
+    <div class="author-box">
+        <h3>Mats Hamberg</h3>
+        <p>Mats Hamberg est un passionné de pétanque et auteur basé en Suède. Avec des années d'expérience en tant que joueur et entraîneur, il a écrit ce guide complet pour partager sa passion et ses connaissances avec les joueurs de tous niveaux.</p>
+        <p>Ce livre est le fruit de nombreuses heures passées sur les terrains de pétanque, d'observations de joueurs professionnels et de recherches approfondies sur la technique, la stratégie et la psychologie du jeu.</p>
+        <p>Mats croit fermement que la pétanque est plus qu'un sport — c'est un mode de vie qui rassemble les gens, favorise l'amitié et offre un défi intellectuel et physique à tout âge.</p>
+        <p style="margin-top: 20px;"><strong>Contact :</strong> Via Amazon Author Central</p>
+    </div>
+</div>
+
+</div><!-- end book-content -->
+</body>
+</html>

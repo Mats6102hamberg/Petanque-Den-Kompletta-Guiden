@@ -66,7 +66,42 @@ Detta är ett flerspråkigt digitalt bokprojekt om Pétanque (boule). Boken finn
 └── th/                     # Thailändsk version (ej granskad)
 ```
 
-## Utfört arbete (denna session)
+## Utfört arbete
+
+### Session 2026-02-10/11: Amazon KDP Publicering (Engelsk version)
+
+#### Vad som gjordes
+1. **Integrerade 8 SVG-illustrationer** i `en/amazon-kdp-book.html` från individuella kapitel-filer
+2. **Genererade EPUB + PDF** med Calibre (`ebook-convert`)
+3. **Publicerade Kindle eBook** — $9.99 USD, 70% royalty, "In review"
+4. **Publicerade Paperback** — $24.95 USD, 60% royalty, Standard color, "In review"
+5. **Skapade engelskt omslag** med Gemini AI (porträttformat 1600×2560)
+6. **Designade paperback-omslag** i KDP Cover Creator (framsida + baksida + rygg)
+7. **Fixade fontfel** — bytte LucidaGrande-Bold → Arial/Georgia för KDP-kompatibilitet
+8. **Bytte Unicode-tecken** (✓✗←→↑↓) till ASCII-alternativ för att undvika fontproblem
+9. **AI-Generated Content deklarerat** — Text: ChatGPT, Bilder: Gemini, Översättning: ChatGPT
+
+#### Kvarstående problem
+- **STAVFEL I FÖRFATTARNAMN:** "Nats Hamberg" istället för "Mats Hamberg" — kan inte ändras förrän review är klar
+- Gå till KDP Bookshelf → klicka på titeln → ändra Author till "Mats Hamberg" → spara
+
+#### Amazon KDP Status
+| Format | Pris | Status | ISBN |
+|--------|------|--------|------|
+| Kindle eBook | $9.99 USD | In review | — |
+| Paperback | $24.95 USD | In review | 9798247830016 |
+
+#### Paperback-inställningar
+- **Ink and Paper Type:** Standard color interior with white paper
+- **Trim Size:** 6.93 x 9.84 in (17.6 × 24.99 cm)
+- **Bleed:** No Bleed
+- **Cover finish:** Matte
+- **Page Count:** 137
+- **Printing Cost:** $6.51/bok (Amazon.com)
+
+---
+
+## Tidigare sessioner
 
 ### Session 2026-02-03 (14:40): Borttagning av spelarfoton
 

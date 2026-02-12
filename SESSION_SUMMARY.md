@@ -1,31 +1,39 @@
 # Pétanque-boken: Sessionsammanfattning
 
-**Senaste uppdatering:** 2026-02-03 14:40 UTC+01:00
+**Senaste uppdatering:** 2026-02-12 01:50 UTC+01:00
 
 ## Projektöversikt
 
-Detta är ett flerspråkigt digitalt bokprojekt om Pétanque (boule). Boken finns i flera språkversioner och innehåller kapitel, bilagor och interaktiva verktyg.
+Detta är ett flerspråkigt digitalt bokprojekt om Pétanque (boule). Boken finns i flera språkversioner och innehåller kapitel, bilagor och interaktiva verktyg. Boken publiceras på Amazon KDP i tre språk.
+
+### VIKTIGA LÄNKAR
+
+| Resurs | Länk/Plats |
+|--------|-----------|
+| **Lokal mapp** | `/Users/matshamberg/CascadeProjects/Petanque-Den-Kompletta-Guiden` |
+| **GitHub** | https://github.com/Mats6102hamberg/Petanque-Den-Kompletta-Guiden.git |
+| **Vercel** | Ej konfigurerad för detta projekt |
+| **Amazon KDP** | https://kdp.amazon.com/bookshelf |
 
 ### Git & Deployment Status
 
 **Lokalt:**
-- `/Users/admin/Petanque första sidan/`
-- Git-repository: ✅ Återställt och fungerande
+- `/Users/matshamberg/CascadeProjects/Petanque-Den-Kompletta-Guiden`
+- Git-repository: ✅ Fungerande
 
 **GitHub:**
 - Repository: `https://github.com/Mats6102hamberg/Petanque-Den-Kompletta-Guiden.git`
 - Branch: `main`
-- Senaste commit: `e19045f` - "Merge: Kombinerar lokal komplett bok med GitHub-repo"
-- Status: ✅ Pushad och synkroniserad
+- Status: ⚠️ Behöver commit + push (senaste ändringar ej pushade)
 
 **Vercel:**
 - Konfiguration: `vercel.json` finns
-- Status: Behöver verifieras
+- Status: Ej konfigurerad
 
 ### Mappstruktur
 
 ```
-/Users/admin/Petanque första sidan/
+/Users/matshamberg/CascadeProjects/Petanque-Den-Kompletta-Guiden/
 ├── index.html              # Svensk startsida
 ├── innehall.html           # Svensk innehållsförteckning
 ├── styles.css              # Gemensam CSS
@@ -67,6 +75,67 @@ Detta är ett flerspråkigt digitalt bokprojekt om Pétanque (boule). Boken finn
 ```
 
 ## Utfört arbete
+
+### Session 2026-02-11/12: KDP-uppdateringar — Svenska, Engelska & Franska
+
+#### Vad som gjordes
+
+1. **Lade till författarboxar (author-note)** i alla tre böcker (SV, EN, FR) — 9 st per bok
+2. **Tog bort spelarcitat** — Dylan Rocher och Philippe Quintais citat ersatta med författarens egna citat
+3. **Ändrade "psykologisk krigföring"** → **"mentalt schackspel på grus"** i alla tre språk:
+   - SV: "Mentalt schackspel på grus"
+   - EN: "A Mental Chess Game on Gravel"
+   - FR: "Jeu d'Échecs Mental sur Gravier"
+4. **Skapade ren svensk KDP-fil** (`amazon-kdp-book-sv.html`) — extraherade bara bokkapitlen, exkluderade nyheter, Mr Boule-roman, Premium Arkiv, fusklapp, träningsjournal, matchprotokoll
+5. **Genererade tre EPUB-filer** med Calibre:
+   - 🇸🇪 `petanque-bok-komplett-kdp.epub` (76 KB)
+   - 🇬🇧 `petanque-complete-guide-kdp.epub` (86 KB)
+   - 🇫🇷 `petanque-guide-complet-kdp.epub` (82 KB)
+6. **Skapade franskt bokomslag** (`kindle-cover-fr-1600x2560.jpg`) med Pillow — baserat på svenska omslaget med fransk text
+7. **Publicerade fransk Kindle eBook** på Amazon KDP — $9.99 USD
+8. **Laddade upp svensk EPUB** till KDP (uppdaterat manuskript)
+9. **Engelsk EPUB redo** — väntar på att "In review" blir klar
+
+#### Amazon KDP Status (2026-02-12)
+
+| Bok | Format | Pris | Status |
+|-----|--------|------|--------|
+| 🇬🇧 Engelska | Kindle eBook | $9.99 USD | In review |
+| 🇬🇧 Engelska | Paperback | $24.95 USD | In review |
+| 🇫🇷 Franska | Kindle eBook | $9.99 USD | Submitted (ny!) |
+| 🇫🇷 Franska | Paperback | — | Live |
+| 🇸🇪 Svenska | Kindle eBook | — | EPUB uppladdad |
+
+#### Filer på Skrivbordet (`/Users/matshamberg/Desktop/`)
+
+| Fil | Beskrivning |
+|-----|-------------|
+| `petanque-bok-komplett-kdp.epub` | 🇸🇪 Svensk KDP EPUB (ren, utan webbinnehåll) |
+| `petanque-complete-guide-kdp.epub` | 🇬🇧 Engelsk KDP EPUB (uppdaterad) |
+| `petanque-guide-complet-kdp.epub` | 🇫🇷 Fransk KDP EPUB |
+| `kindle-cover-fr-1600x2560.jpg` | 🇫🇷 Franskt bokomslag (1600×2560) |
+| `kindle-cover-fr.jpg` | 🇫🇷 Franskt omslag (ren JPG, ingen EXIF) |
+| `kindle-cover-1600x2560.jpeg` | 🇸🇪 Svenskt omslag |
+| `kindle-cover-en.jpg` | 🇬🇧 Engelskt omslag |
+| `author-photo.jpg.jpeg` | Författarfoto (Mats Hamberg) |
+
+#### KDP-filer i projektet
+
+| Fil | Sökväg | Beskrivning |
+|-----|--------|-------------|
+| **SV KDP HTML** | `amazon-kdp-book-sv.html` | Ren svensk KDP-fil (3602 rader) |
+| **EN KDP HTML** | `en/amazon-kdp-book.html` | Engelsk KDP-fil (3335 rader) |
+| **FR KDP HTML** | `fr/amazon-kdp-book.html` | Fransk KDP-fil (3002 rader) |
+
+#### Kvarstående uppgifter
+
+1. **Fixa dubbelt författarnamn** på FR-boken ("Mats Hamberg, Mats Hamberg" → "Mats Hamberg")
+2. **Fixa stavfel** "Nats" → "Mats Hamberg" på EN-boken (väntar på review klar)
+3. **Ladda upp EN EPUB** (`petanque-complete-guide-kdp.epub`) när EN-boken blir redigerbar
+4. **Author Central** — ladda upp författarfoto + biografi (https://author.amazon.com)
+5. **Commit + push** alla ändringar till GitHub
+
+---
 
 ### Session 2026-02-10/11: Amazon KDP Publicering (Engelsk version)
 

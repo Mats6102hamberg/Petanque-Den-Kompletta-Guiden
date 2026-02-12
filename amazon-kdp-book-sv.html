@@ -3,137 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pétanque – Den kompletta boken</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Pétanque: Den kompletta guiden — teknik, taktik &amp; träning</title>
     <style>
-        :root {
-            --brown-900: #4a2f22;
-            --brown-500: #b1784c;
-            --sand-100: #f5efe6;
-            --text: #1f1c1a;
-        }
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background: #faf7f3;
-            color: var(--text);
+        /* ===== AMAZON KDP BOOK STYLES ===== */
+        /* Optimized for B5 format (176 × 250 mm) paperback and EPUB/Kindle export */
+
+        /* Using standard fonts for KDP compatibility */
+
+        * {
             margin: 0;
-            line-height: 1.7;
-        }
-        .book-cover {
-            min-height: 90vh;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #45210e, #b56a2a);
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .book-cover h1 {
-            font-size: clamp(42px, 6vw, 84px);
-            letter-spacing: 6px;
-            margin-bottom: 16px;
-        }
-        .book-cover h2 {
-            font-size: clamp(20px, 3vw, 36px);
-            font-weight: 400;
-            margin-bottom: 48px;
-            opacity: 0.9;
-        }
-        .book-cover p {
-            max-width: 640px;
-            margin: 0 auto;
-            font-size: 20px;
-            opacity: 0.85;
-        }
-        .book-toc {
-            background: white;
-            margin: -80px auto 40px;
-            padding: 40px;
-            border-radius: 24px;
-            max-width: 960px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-        }
-        .book-toc h3 {
-            margin-top: 0;
-            font-size: 26px;
-            color: var(--brown-900);
-        }
-        .book-toc ul {
-            list-style: none;
             padding: 0;
-            margin: 24px 0 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            box-sizing: border-box;
         }
-        .book-toc li a {
-            display: flex;
-            gap: 16px;
-            text-decoration: none;
-            color: inherit;
-            padding: 16px;
-            border-radius: 16px;
-            border: 1px solid rgba(0,0,0,0.08);
-            background: var(--sand-100);
-            transition: transform 0.2s, box-shadow 0.2s;
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #222;
+            max-width: 176mm;
+            margin: 0 auto;
+            padding: 20mm;
         }
-        .book-toc li a:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+
+        /* ===== PAGE BREAKS ===== */
+        .page-break {
+            page-break-before: always;
+            break-before: page;
         }
-        .toc-index {
-            font-weight: 700;
-            font-size: 32px;
-            color: var(--brown-500);
-            min-width: 48px;
+
+        .no-break {
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
-        .toc-label {
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #7a6a5a;
-        }
-        .toc-title {
-            font-size: 18px;
-            font-weight: 600;
-        }
-        .book-chapter {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .book-chapter-inner {
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
-        }
-        .book-chapter:not(:last-of-type) {
+
+        /* ===== TITLE PAGE ===== */
+        .title-page {
+            text-align: center;
+            padding-top: 2in;
             page-break-after: always;
         }
-        .book-chapter .toc-button,
-        .book-chapter .language-switcher,
-        .book-chapter .navigation {
-            display: none;
+
+        .title-page h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 36pt;
+            font-weight: 900;
+            color: #8B4513;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
-        @media print {
-            body {
-                background: #fff;
-            }
-            .book-cover,
-            .book-toc,
-            .book-chapter-inner {
-                box-shadow: none;
-            }
-            .book-toc {
-                margin: 0;
-                padding: 20px;
-            }
-            .book-chapter {
-                margin: 20px auto;
-            }
+
+        .title-page .subtitle {
+            font-size: 16pt;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 60px;
+        }
+
+        .title-page .author {
+            font-size: 14pt;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        /* ===== COPYRIGHT PAGE ===== */
+        .copyright-page {
+            font-size: 9pt;
+            color: #666;
+            line-height: 1.8;
+            padding-top: 3in;
+            page-break-after: always;
+        }
+
+        .copyright-page p {
+            margin-bottom: 10px;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            page-break-after: always;
+        }
+
+        .toc h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 24pt;
+            color: #8B4513;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .toc-part {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14pt;
+            font-weight: 700;
+            color: #8B4513;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #D2691E;
+            padding-bottom: 5px;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-size: 11pt;
+        }
+
+        .toc-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* ===== FOREWORD ===== */
+        .foreword {
+            page-break-after: always;
+        }
+
+        .foreword h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 24pt;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+
+        /* ===== PART HEADERS ===== */
+        .part-header {
+            text-align: center;
+            padding-top: 2.5in;
+            page-break-after: always;
+        }
+
+        .part-header h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 28pt;
+            color: #8B4513;
+            margin-bottom: 15px;
+        }
+
+        .part-header p {
+            font-size: 14pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* ===== CHAPTER HEADERS ===== */
+        .chapter {
+            page-break-before: always;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #D2691E;
+        }
+
+        .chapter-header .chapter-number {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 12pt;
+            color: #D2691E;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .chapter-header h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 22pt;
+            color: #8B4513;
+            margin-bottom: 8px;
+        }
+
+        .chapter-header p {
+            font-size: 11pt;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* ===== HEADINGS ===== */
+        h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 18pt;
+            color: #8B4513;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 14pt;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-size: 12pt;
+            color: #8B4513;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        /* ===== BODY TEXT ===== */
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* ===== TABLES ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+
+        th {
+            background: #f5f0eb;
+            color: #8B4513;
+            font-weight: 700;
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 2px solid #D2691E;
+        }
+
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e0d5c8;
+        }
+
+        tr:nth-child(even) {
+            background: #faf8f5;
+        }
+
+        /* ===== BOXES ===== */
+        .highlight-box {
+            background: #f9f6f2;
+            border-left: 4px solid #D2691E;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+
+        .info-box {
+            background: #f0f6f9;
+            border-left: 4px solid #4a90a4;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+
+        .warning-box {
+            background: #fef9f0;
+            border-left: 4px solid #e6a817;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+
+        /* ===== QUOTES ===== */
+        .quote {
+            font-style: italic;
+            font-size: 12pt;
+            color: #555;
+            border-left: 3px solid #D2691E;
+            padding-left: 20px;
+            margin: 25px 0;
         }
 
         /* ===== AUTHOR NOTE ===== */
@@ -162,1151 +321,169 @@
             line-height: 1.8;
             font-size: 11pt;
         }
+
+        .author-note .attribution {
+            text-align: right;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* ===== APPENDIX HEADERS ===== */
+        .appendix-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #D2691E;
+        }
+
+        .appendix-header .appendix-label {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 12pt;
+            color: #D2691E;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .appendix-header h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 22pt;
+            color: #8B4513;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .appendix-header p {
+            font-size: 11pt;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            body {
+                max-width: 100%;
+                padding: 0;
+                font-size: 10.5pt;
+            }
+
+            @page {
+                size: 176mm 250mm;
+                margin: 20mm 18mm;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+
+            .no-break {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+        }
+
+        /* ===== SCREEN PREVIEW ===== */
+        @media screen {
+            body {
+                background: #f5f5f5;
+                padding: 40px;
+            }
+
+            .book-content {
+                background: white;
+                max-width: 176mm;
+                margin: 0 auto;
+                padding: 20mm;
+                box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+                border-radius: 3px;
+            }
+        }
     </style>
 </head>
 <body>
-    <section class="book-cover">
-        <h1>PÉTANQUE</h1>
-        <h2>Den kompletta guiden</h2>
-        <p>Alla delar, kapitel och fördjupningar samlade i en läs- och utskriftsvänlig version.
-        <br>Mats Hamberg</p>
-    </section>
+<div class="book-content">
 
-    <section class="book-toc">
-        <h3>Innehåll</h3>
-        <ul>
+<!-- TITLE PAGE -->
+<div class="title-page">
+    <h1>PETANQUE</h1>
+    <div class="subtitle">Den kompletta guiden<br>Teknik, taktik &amp; träning</div>
+    <div class="author">Mats Hamberg</div>
+    <div style="margin-top: 20px; font-size: 10pt; color: #999;">Första upplagan</div>
+</div>
 
-        <li>
-            <a href="#forord">
-                <span class="toc-index">01</span>
-                <div class="toc-text">
-                    <span class="toc-label">Förord</span>
-                    <span class="toc-title">Förord & interaktiva verktyg</span>
-                </div>
-            </a>
-        </li>
+<!-- COPYRIGHT PAGE -->
+<div class="copyright-page">
+    <p><strong>Pétanque: Den kompletta guiden — teknik, taktik &amp; träning</strong></p>
+    <p>Copyright © 2025 Mats Hamberg. Alla rättigheter förbehållna.</p>
+    <p>Ingen del av denna publikation får reproduceras, distribueras eller överföras i någon form utan författarens skriftliga medgivande.</p>
+    <p>Denna bok är baserad på de internationella reglerna från FIPJP (Fédération Internationale de Pétanque et Jeu Provençal).</p>
+    <p>Första upplagan 2025.</p>
+    <p>Omslagsdesign: Mats Hamberg</p>
+    <p style="margin-top: 30px;">Utgiven via Amazon Kindle Direct Publishing.</p>
+</div>
 
-        <li>
-            <a href="#aktuellt">
-                <span class="toc-index">02</span>
-                <div class="toc-text">
-                    <span class="toc-label">Aktuellt</span>
-                    <span class="toc-title">Månadens nyheter</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#roman-oversikt">
-                <span class="toc-index">03</span>
-                <div class="toc-text">
-                    <span class="toc-label">Roman</span>
-                    <span class="toc-title">Mr. Boule Pétanque – översikt</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#roman-kapitel0">
-                <span class="toc-index">04</span>
-                <div class="toc-text">
-                    <span class="toc-label">Roman • Kapitel 0</span>
-                    <span class="toc-title">Introduktion – Mr Boule Pétanque</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#roman-kapitel1">
-                <span class="toc-index">05</span>
-                <div class="toc-text">
-                    <span class="toc-label">Roman • Kapitel 1</span>
-                    <span class="toc-title">Boulodromens hjälte</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del1-kapitel1">
-                <span class="toc-index">06</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 1 • Kapitel 1</span>
-                    <span class="toc-title">Vad är boule pétanque?</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del1-kapitel2">
-                <span class="toc-index">07</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 1 • Kapitel 2</span>
-                    <span class="toc-title">Utrustning – välj rätt boules</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del1-kapitel3">
-                <span class="toc-index">08</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 1 • Kapitel 3</span>
-                    <span class="toc-title">Grundtekniker</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del1-kapitel4">
-                <span class="toc-index">09</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 1 • Kapitel 4</span>
-                    <span class="toc-title">Spelstrategi för nybörjare</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del2-kapitel5">
-                <span class="toc-index">10</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 2</span>
-                    <span class="toc-title">Avancerade tekniker för proffs</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del2-kapitel6">
-                <span class="toc-index">11</span>
-                <div class="toc-text">
-                    <span class="toc-label">Kapitel 6</span>
-                    <span class="toc-title">Mästerskapsskjutning (tirer au fer)</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del2-kapitel7">
-                <span class="toc-index">12</span>
-                <div class="toc-text">
-                    <span class="toc-label">Kapitel 7</span>
-                    <span class="toc-title">Taktik på hög nivå</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del2-kapitel8">
-                <span class="toc-index">13</span>
-                <div class="toc-text">
-                    <span class="toc-label">Kapitel 8</span>
-                    <span class="toc-title">Träna smartare</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del3-kapitel9">
-                <span class="toc-index">14</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 3</span>
-                    <span class="toc-title">Pétanque som livsstil</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del3-kapitel10">
-                <span class="toc-index">15</span>
-                <div class="toc-text">
-                    <span class="toc-label">Kapitel 10</span>
-                    <span class="toc-title">Pétanque runt om i världen</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del4-kapitel11-14">
-                <span class="toc-index">16</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 4 • Kapitel 11-14</span>
-                    <span class="toc-title">Fördjupning och utveckling</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del4-kapitel15">
-                <span class="toc-index">17</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 4 • Kapitel 15</span>
-                    <span class="toc-title">Att leda ett lag i Boule Pétanque</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#del4-kapitel16">
-                <span class="toc-index">18</span>
-                <div class="toc-text">
-                    <span class="toc-label">Del 4 • Kapitel 16</span>
-                    <span class="toc-title">Klotfysik och Baneläsning</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#bilaga-utrustning">
-                <span class="toc-index">19</span>
-                <div class="toc-text">
-                    <span class="toc-label">Bilaga A</span>
-                    <span class="toc-title">Utrustningsguide</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#bilaga-regler">
-                <span class="toc-index">20</span>
-                <div class="toc-text">
-                    <span class="toc-label">Bilaga B</span>
-                    <span class="toc-title">Komplett regelbok</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#bilaga-ordlista">
-                <span class="toc-index">21</span>
-                <div class="toc-text">
-                    <span class="toc-label">Bilaga C</span>
-                    <span class="toc-title">Ordförklaringar</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#premium-arkiv">
-                <span class="toc-index">22</span>
-                <div class="toc-text">
-                    <span class="toc-label">Premiumarkiv</span>
-                    <span class="toc-title">Historiskt arkiv</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#resurs-fusklapp">
-                <span class="toc-index">23</span>
-                <div class="toc-text">
-                    <span class="toc-label">Resurs</span>
-                    <span class="toc-title">Fusklapp</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#resurs-traningsjournal">
-                <span class="toc-index">24</span>
-                <div class="toc-text">
-                    <span class="toc-label">Resurs</span>
-                    <span class="toc-title">Träningsjournal</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="#resurs-matchprotokoll">
-                <span class="toc-index">25</span>
-                <div class="toc-text">
-                    <span class="toc-label">Resurs</span>
-                    <span class="toc-title">Matchprotokoll</span>
-                </div>
-            </a>
-        </li>
-        </ul>
-    </section>
-
-
-    <section class="book-chapter" id="forord">
-        <div class="book-chapter-inner">
-            <div class="language-switcher">
-        <a href="innehall.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/contents.html" title="English">🇬🇧</a>
-        <a href="fr/sommaire.html" title="Français">🇫🇷</a>
-        <a href="es/contenido.html" title="Español">🇪🇸</a>
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <h2>Innehållsförteckning</h2>
+    <div style="margin-bottom: 20px;">
+        <div class="toc-item"><a href="#foreword">Förord</a></div>
     </div>
-    
-    <div class="container">
-        <div class="header">
-            <h1>PÉTANQUE</h1>
-            <p>Från Nybörjare till Proffs – En Komplett Guide</p>
-        </div>
-        
-        <div class="content">
-            <div class="forord">
-                <h2>Förord</h2>
-                <p>Pétanque är mer än bara en sport — det är en livsstil, en social aktivitet och en utmaning både taktiskt och tekniskt.</p>
-                <p>För mig började allt ganska anspråkslöst. Pétanque kom till mig via en arbetskamrat som ansåg att lunchrasterna absolut måste förgyllas av ett parti pétanque. Året var 1993 — och sedan dess har mitt hjärta slagit hårt för spelet. Det som började som ett tidsfördriv har blivit en passion som följt mig genom livet.</p>
-                <p>Den här boken är skriven för att ge nybörjare en stabil grund och samtidigt erbjuda erfarna spelare nya perspektiv och förbättringstips. Oavsett om du precis håller i ett klot (boule) för första gången eller redan tävlar på hög nivå, finns det något här för dig.</p>
-                <p>Genom åren har jag lärt mig att pétanque inte bara handlar om teknik. Det handlar lika mycket om känsla, fokus, samspel och förståelse för spelets natur. När allt stämmer uppstår den där magiska känslan — känslan av kontroll och närvaro på banan.</p>
-                <p>En viktig anmärkning om terminologi: Pétanque har djupa franska rötter. För att din kunskap ska vara komplett — och för att du ska känna dig hemmastadd i alla sammanhang, från den lokala klubben till internationella tävlingar — kommer vi att använda både svenska termer (som klot och skytte) och de internationellt vedertagna franska uttrycken (som carreau och tirer au fer). Betrakta dessa franska ord som sportens officiella facktermer; de är en nödvändig del av spelets kultur och din utbildning.</p>
-                <p>Boken innehåller också interaktiva verktyg — ett fuskblad, en träningsjournal och ett matchprotokoll — som är tänkta att hjälpa dig att reflektera över ditt spel, dokumentera din utveckling och göra din träning mer medveten och strukturerad.</p>
-                <p>Min förhoppning är att denna bok inte bara ska göra dig till en bättre spelare, utan också fördjupa din kärlek till pétanque och ge dig den där magiska känslan varje gång du kliver ut på banan.</p>
-                
-                <div style="margin-top: 30px; padding: 20px; background: #fff; border: 2px solid #D2691E; border-radius: 8px;">
-                    <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px; font-size: 24px;">📋 Interaktiva verktyg</h3>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <a href="fusklapp.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
-                            📝 Fusklapp
-                        </a>
-                        <a href="traningsjournal.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
-                            📊 Träningsjournal
-                        </a>
-                        <a href="matchprotokoll.html" style="flex: 1; min-width: 200px; padding: 15px 20px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: 600; transition: transform 0.2s;">
-                            🏆 Matchprotokoll
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- AKTUELLT OCH INTERVJUER -->
-            <div class="toc-section">
-                <h2>🎙️ Aktuellt och Intervjuer</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="aktuellt.html" class="chapter-link">
-                            <div class="chapter-number">📰 Nytt</div>
-                            <div class="chapter-title">Månadens Nyheter</div>
-                            <div class="chapter-desc">Senaste nytt från petanque-världen: nya regler, turneringar, intervjuer med profiler och legendariska spelare</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- MR. BOULE PÉTANQUE - ROMAN -->
-            <div class="toc-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 10px; border: 2px solid #2c3e50;">
-                <h2 style="color: #2c3e50;">📖 Mr. Boule Pétanque – Exklusiv Roman</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="mr-boule-petanque.html" class="chapter-link" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; border-left: 4px solid #D2691E;">
-                            <div class="chapter-number" style="color: #D2691E;">🎭 ROMAN</div>
-                            <div class="chapter-title" style="color: white;">Mr. Boule Pétanque</div>
-                            <div class="chapter-desc" style="color: rgba(255,255,255,0.9);">
-                                <strong>En roman om passion, vänskap och petanque</strong><br>
-                                Följ Jean-Pierre Dubois, en fallen mästare, och Amélie Rousseau, den unga utmanaren. Nytt kapitel varje månad – inkluderat för alla bokägare!
-                                <br><br>
-                                <span style="background: #e74c3c; padding: 5px 15px; border-radius: 15px; font-size: 12px; display: inline-block; margin-top: 10px;">
-                                    🆕 Kapitel 1 tillgängligt nu!
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="toc-section">
-                <h2>Del 1: Grunderna för nybörjare</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="del1-kapitel1.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 1</div>
-                            <div class="chapter-title">Vad är boule pétanque?</div>
-                            <div class="chapter-desc">Historien bakom pétanque, grundregler och spelidé, skillnader mellan pétanque, boule och boccia/bocce</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del1-kapitel2.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 2</div>
-                            <div class="chapter-title">Utrustning – välj rätt klot</div>
-                            <div class="chapter-desc">Vikt, storlek och material, skillnaden mellan tävlings- och fritidsklot, underhåll och rengöring</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del1-kapitel3.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 3</div>
-                            <div class="chapter-title">Grundtekniker</div>
-                            <div class="chapter-desc">Rätt grepp och ställning, hur man lägger (point), hur man skjuter (skott)</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del1-kapitel4.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 4</div>
-                            <div class="chapter-title">Spelstrategi för nybörjare</div>
-                            <div class="chapter-desc">Enkla taktiker för att vinna poäng, hur man läser banan, vanliga misstag och hur man undviker dem</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="toc-section">
-                <h2>Del 2: Avancerade tekniker för proffs</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="del2-kapitel5.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 5</div>
-                            <div class="chapter-title">Förbättra din point</div>
-                            <div class="chapter-desc">Avancerade placeringstekniker, anpassa kastet efter underlag och väder, mental träning</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del2-kapitel6.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 6</div>
-                            <div class="chapter-title">Mästerskapsskjutning (tirer au fer)</div>
-                            <div class="chapter-desc">Fullträffar vs. rullskott, träningstips för att bli en skicklig skytt, analys av proffsens skottstil</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del2-kapitel7.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 7</div>
-                            <div class="chapter-title">Taktik på hög nivå</div>
-                            <div class="chapter-desc">Styra spelets tempo, mentalt schackspel på grus, lagspel och kommunikation</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del2-kapitel8.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 8</div>
-                            <div class="chapter-title">Träna smartare</div>
-                            <div class="chapter-desc">Effektiva övningar för ensamträning, videohantering, fysisk och mental förberedelse</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="toc-section">
-                <h2>Del 3: Pétanque som livsstil</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="del3-kapitel9.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 9</div>
-                            <div class="chapter-title">Tävlingsspel vs. socialt spel</div>
-                            <div class="chapter-desc">Skillnader i inställning och strategi, hur man hittar klubbar och turneringar</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del3-kapitel10.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 10</div>
-                            <div class="chapter-title">Pétanque runt om i världen</div>
-                            <div class="chapter-desc">Kulturella skillnader i spelet, stora turneringar och legendariska spelare</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="toc-section">
-                <h2>Del 4: Fördjupning och utveckling</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="fordjupning.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 11</div>
-                            <div class="chapter-title">Strategisk analys och taktik</div>
-                            <div class="chapter-desc">Avancerad spelstrategi, terränganalys och psykologiskt spel</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="fordjupning.html#mental" class="chapter-link">
-                            <div class="chapter-number">Kapitel 12</div>
-                            <div class="chapter-title">Mental styrka och fokus</div>
-                            <div class="chapter-desc">Hantering av press, tilt control och motivation</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="fordjupning.html#traning" class="chapter-link">
-                            <div class="chapter-number">Kapitel 13</div>
-                            <div class="chapter-title">Träningsplan och utveckling</div>
-                            <div class="chapter-desc">Effektiv träning, videoanalys och studieplan steg för steg</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="fordjupning.html#fysik" class="chapter-link">
-                            <div class="chapter-number">Kapitel 14</div>
-                            <div class="chapter-title">Fysisk träning för pétanque</div>
-                            <div class="chapter-desc">Styrka, balans, rörlighet och förberedelser</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del4-kapitel15.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 15</div>
-                            <div class="chapter-title">Att leda ett lag i Boule Pétanque</div>
-                            <div class="chapter-desc">Coachning i praktiken - laguttagning, taktik under press, lagbygge och träningsmiljö</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="del4-kapitel16.html" class="chapter-link">
-                            <div class="chapter-number">Kapitel 16</div>
-                            <div class="chapter-title">Klotfysik och baneläsning</div>
-                            <div class="chapter-desc">Vetenskapen bakom det perfekta kastet - massa, friktion, rotation och kollisioner</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- PREMIUM ARKIV -->
-            <div class="toc-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 10px; border: 2px solid #667eea;">
-                <h2 style="color: #667eea;">📚 Premium Historiskt Arkiv</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="arkiv.html" class="chapter-link" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: 4px solid #ffd700;">
-                            <div class="chapter-number" style="color: #ffd700;">🔒 Premium</div>
-                            <div class="chapter-title" style="color: white;">Historiskt Arkiv</div>
-                            <div class="chapter-desc" style="color: rgba(255,255,255,0.9);">
-                                <strong>Månadsprenumeration: 149 kr/månad</strong><br>
-                                Exklusivt arkiv med hundratals artiklar, intervjuer med legender, regeländringar genom tiderna och turneringsanalyser. 
-                                Perfekt för journalister, media, historiker, klubbar och seriösa entusiaster. Material på alla sex språk.
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #ffc107;">
-                    <p style="margin: 0; color: #666; line-height: 1.6;">
-                        <strong>💼 För Media & Företag:</strong> Kontakta oss för specialpriser och utökad licensiering på 
-                        <a href="mailto:mats@petanqueguiden.se" style="color: #667eea; text-decoration: none; font-weight: 700;">mats@petanqueguiden.se</a>
-                    </p>
-                </div>
-            </div>
-            
-            <div class="toc-section">
-                <h2>Bilagor</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="utrustning.html" class="chapter-link">
-                            <div class="chapter-title">Bilaga A: Utrustningsguide</div>
-                            <div class="chapter-desc">Detaljerad guide om klot - tillverkning, material, hårdhet, modeller och underhåll</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="regler.html" class="chapter-link">
-                            <div class="chapter-title">Bilaga B: Komplett regelbok</div>
-                            <div class="chapter-desc">Fullständig regelguide från grundläggande till avancerade regler och specialfall</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="ordlista.html" class="chapter-link">
-                            <div class="chapter-title">Bilaga C: Ordförklaringar</div>
-                            <div class="chapter-desc">Komplett ordlista med franska facktermer och tekniska begrepp - från carreau till tirer au fer</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="toc-section">
-                <h2>📥 Nedladdningsbara resurser</h2>
-                <ul class="chapter-list">
-                    <li class="chapter-item">
-                        <a href="fusklapp.html" class="chapter-link" target="_blank">
-                            <div class="chapter-title">🎯 Fusklapp (1 sida)</div>
-                            <div class="chapter-desc">Allt du behöver på en sida: Matchrutin, etikett, mätning, donnée-tips, kastbanor och beslutsträd. Perfekt att skriva ut och ha med på banan!</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="traningsjournal.html" class="chapter-link" target="_blank">
-                            <div class="chapter-title">📊 Träningsjournal</div>
-                            <div class="chapter-desc">Dokumentera din utveckling: Datum, underlag, mål, träffprocent, reflektioner och nästa steg. Skriv ut eller fyll i digitalt.</div>
-                        </a>
-                    </li>
-                    <li class="chapter-item">
-                        <a href="matchprotokoll.html" class="chapter-link matchprotokoll-link" target="_blank" style="background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%); border-left: 4px solid #ffc107;">
-                            <div class="chapter-title">📋 Matchprotokoll (Interaktivt)</div>
-                            <div class="chapter-desc">Komplett matchprotokoll med automatisk analys: Spara lag, poäng per omgång, statistik (vunna omgångar, snittpoäng, shutouts, clutch-omgångar). Sparas automatiskt i webbläsaren. Perfekt för tävlingar och träning!</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <a href="index.html" class="back-btn">← Tillbaka till Omslag</a>
-        </div>
-    </div>
-        </div>
-    </section>
+    <div class="toc-part">Del 1: Grunderna för nybörjare</div>
+    <div class="toc-item"><a href="#ch1">Kapitel 1 — Vad är boule pétanque?</a></div>
+    <div class="toc-item"><a href="#ch2">Kapitel 2 — Utrustning: Välj rätt boules</a></div>
+    <div class="toc-item"><a href="#ch3">Kapitel 3 — Grundtekniker</a></div>
+    <div class="toc-item"><a href="#ch4">Kapitel 4 — Spelstrategi för nybörjare</a></div>
+    <div class="toc-part">Del 2: Avancerade tekniker för proffs</div>
+    <div class="toc-item"><a href="#ch5">Kapitel 5 — Förbättra din point</a></div>
+    <div class="toc-item"><a href="#ch6">Kapitel 6 — Mästerskapsskjutning</a></div>
+    <div class="toc-item"><a href="#ch7">Kapitel 7 — Taktik på hög nivå</a></div>
+    <div class="toc-item"><a href="#ch8">Kapitel 8 — Träna smartare</a></div>
+    <div class="toc-part">Del 3: Pétanque som livsstil</div>
+    <div class="toc-item"><a href="#ch9">Kapitel 9 — Tävlingsspel vs. socialt spel</a></div>
+    <div class="toc-item"><a href="#ch10">Kapitel 10 — Pétanque runt om i världen</a></div>
+    <div class="toc-part">Del 4: Fördjupning och utveckling</div>
+    <div class="toc-item"><a href="#ch11">Kapitel 11 — Strategisk analys och taktik</a></div>
+    <div class="toc-item"><a href="#ch12">Kapitel 12 — Mental styrka och fokus</a></div>
+    <div class="toc-item"><a href="#ch13">Kapitel 13 — Träningsplan och utveckling</a></div>
+    <div class="toc-item"><a href="#ch14">Kapitel 14 — Fysisk träning för pétanque</a></div>
+    <div class="toc-item"><a href="#ch15">Kapitel 15 — Att leda ett lag</a></div>
+    <div class="toc-item"><a href="#ch16">Kapitel 16 — Klotfysik och baneläsning</a></div>
+    <div class="toc-part">Bilagor</div>
+    <div class="toc-item"><a href="#appA">Bilaga A — Utrustningsguide</a></div>
+    <div class="toc-item"><a href="#appB">Bilaga B — Komplett regelbok</a></div>
+    <div class="toc-item"><a href="#appC">Bilaga C — Ordförklaringar</a></div>
+</div>
 
-    <section class="book-chapter" id="aktuellt">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
+<!-- FOREWORD -->
+<div class="foreword" id="foreword">
+    <h2>Förord</h2>
+    <p>Pétanque är mer än bara en sport — det är en livsstil, en social aktivitet och en utmaning både taktiskt och tekniskt.</p>
+    <p>För mig började allt ganska anspråkslöst. Pétanque kom till mig via en arbetskamrat som ansåg att lunchrasterna absolut måste förgyllas av ett parti pétanque. Året var 1993 — och sedan dess har mitt hjärta slagit hårt för spelet. Det som började som ett tidsfördriv har blivit en passion som följt mig genom livet.</p>
+    <p>Den här boken är skriven för att ge nybörjare en stabil grund och samtidigt erbjuda erfarna spelare nya perspektiv och förbättringstips. Oavsett om du precis håller i ett klot (boule) för första gången eller redan tävlar på hög nivå, finns det något här för dig.</p>
+    <p>Genom åren har jag lärt mig att pétanque inte bara handlar om teknik. Det handlar lika mycket om känsla, fokus, samspel och förståelse för spelets natur. När allt stämmer uppstår den där magiska känslan — känslan av kontroll och närvaro på banan.</p>
+    <p>En viktig anmärkning om terminologi: Pétanque har djupa franska rötter. För att din kunskap ska vara komplett — och för att du ska känna dig hemmastadd i alla sammanhang, från den lokala klubben till internationella tävlingar — kommer vi att använda både svenska termer (som klot och skytte) och de internationellt vedertagna franska uttrycken (som carreau och tirer au fer). Betrakta dessa franska ord som sportens officiella facktermer; de är en nödvändig del av spelets kultur och din utbildning.</p>
+    <p>Min förhoppning är att denna bok inte bara ska göra dig till en bättre spelare, utan också fördjupa din kärlek till pétanque och ge dig den där magiska känslan varje gång du kliver ut på banan.</p>
+</div>
 
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">🎙️ Aktuellt och Intervjuer</div>
-            <h1 class="chapter-title">Månadens Nyheter</h1>
-            <p class="chapter-subtitle">Senaste nytt från petanque-världen</p>
-        </div>
+<!-- DEL 1 -->
+<div class="part-header">
+    <h2>Del 1</h2>
+    <p>Grunderna för nybörjare</p>
+</div>
 
-        <div class="content">
-            <div class="current-month-badge">
-                📅 Oktober 2025
-            </div>
-
-            <!-- ARTIKEL: Dawson Herleman - tonårsfenomenet -->
-            <div class="article-card">
-                <div class="article-header">
-                    <span class="article-date">September 2025</span>
-                    <span class="article-category">🎤 Intervju</span>
-                </div>
-                <h2 class="article-title">Dawson Herleman: Tonåringen som krossar petanque-pensionärer</h2>
-                <div class="article-excerpt">
-                    <div style="text-align: center; margin: 20px 0;">
-                        <p style="font-style: italic; color: #666; margin-top: 10px;">Dawson Herleman - 14-årig petanque-fenomen</p>
-                    </div>
-                    <p><strong>När en fjortonåring vinner en tävling tillsammans med en 72-åring och en 48-åring, och det är fjortonåringen som bär laget</strong> – då vet du att något speciellt är på gång.</p>
-                    
-                    <h4>Ungen som inte ville spela</h4>
-                    <p>Dawson Herleman föddes 2010 i Vitrolles i södra Frankrike. Hans familj var besatta av petanque. Typ riktigt besatta – du vet den där typen av familj där julafton slutar med att alla står ute och kastar kulor i mörkret.</p>
-                    
-                    <p>Lilla Dawson? Han var inte intresserad. Alls.</p>
-                    
-                    <p><em>"Till en början gillade jag det inte riktigt,"</em> erkänner han själv med ett leende.</p>
-                    
-                    <p>Men familjen gav sig inte. Vid åtta års ålder började han kasta kulor. Och upptäckte att... hej, han var ju faktiskt sjukt bra på det här.</p>
-                    
-                    <h4>Från nolla till världsmästare på tre år</h4>
-                    <p>Vid elva år gammal vann Dawson VM för ungdomar 2021.</p>
-                    
-                    <p><strong>Elva. År.</strong></p>
-                    
-                    <p>De flesta elvaåringar försöker fortfarande lista ut hur man pratar med tjejer. Dawson stod på en scen och tog emot VM-guld.</p>
-                    
-                    <p>Två år senare, vid 13, blev han fransk juniormästare i triplette. Och han gjorde det genom att bara... kedja perfekta skott som om det vore det enklaste i världen.</p>
-                    
-                    <h4>September 2025: Showtime i Ajaccio</h4>
-                    <p>Så kommer vi till höjdpunkten. International d'Ajaccio – en av Frankrikes största petanque-turneringar. Fullsatta läktare. De bästa spelarna i landet. Och så en fjortonårig kille från Rumilly med blont gelhår.</p>
-                    
-                    <p>Hans lagkamrater? Jean-Michel Puccinelli (48 år) och Nonce Murati (72 år).</p>
-                    
-                    <p>Tillsammans var de 134 år. Dawson var 14.</p>
-                    
-                    <p>Gissa vem som var bäst?</p>
-                    
-                    <h4>Legenderna blir tysta</h4>
-                    <p>I semifinalen mötte de Marco Foyot och Christian Fazzino – två petanque-legender som har sett och gjort allt i sporten.</p>
-                    
-                    <p>Efter matchen, som Dawson och hans lag vann, sa legenderna bara: <em>"Det lilla Dawson tir väldigt bra, inget att säga."</em></p>
-                    
-                    <p>Det är kanske den mest respektfulla käftsmällen någonsin. När legender inte har något att säga utom "ja, han är bra" – då VET du att ungen är något speciellt.</p>
-                    
-                    <h4>Finalen: Carreaux på löpande band</h4>
-                    <p>I finalen fortsatte showen. Dawson kastade carreaux – alltså perfekta träffar där din kula stannar exakt där motståndarens låg – som om han vore en robot programmerad för perfektion.</p>
-                    
-                    <p>Folk i publiken reste sig. Folk ropade. Inte för att han var söt eller ung, utan för att det var tekniskt fantastiskt att se.</p>
-                    
-                    <p><strong>Slutresultat: 13-9. Vinst.</strong></p>
-                    
-                    <p>Vid 14 år gammal hade Dawson precis vunnit en av Frankrikes största senior-turneringar.</p>
-                    
-                    <h4>"Jag drömmer om VM-guld"</h4>
-                    <p>Efter matchen intervjuades Dawson av en journalist från France 3 Corse. Och han sa, helt naturligt:</p>
-                    
-                    <p><em>"Jag drömmer om att bli europamästare och världsmästare."</em></p>
-                    
-                    <p>Normalt skulle vuxna le vänligt åt en fjortonårings drömmar om världsdominans. Men ingen log. För alla hade precis sett honom spela.</p>
-                    
-                    <p>Hans dröm var inte naiv. Den var faktiskt... ganska realistisk.</p>
-                    
-                    <h4>Petanque blir coolt (vem hade gissat det?)</h4>
-                    <p>Klipp av Dawsons spel sprids på TikTok. Petanque-kanaler går bananas. Ungdomar som aldrig brytt sig om sporten börjar kolla in matcher.</p>
-                    
-                    <p>YPulse, som analyserar Gen Z-trender, jämförde honom med Luke Littler – tonåringen som gjorde dart coolt igen förra året.</p>
-                    
-                    <p><em>"Precis som Littler, ger Herleman fresh vibes till petanque,"</em> skrev de.</p>
-                    
-                    <p>För en sport känd som "gammal-mans-lek" är en fjortonårig stjärna guld värd.</p>
-                    
-                    <h4>Vad säger klubben?</h4>
-                    <p>Dawson spelar för Joyeuse Pétanque Rumillienne i Haute-Savoie. De är... lite pumpade.</p>
-                    
-                    <p><em>"Han är en ambassadör för klubben, en modell för sina kamrater, och motorn för vår framgång,"</em> säger klubbledningen, troligen medan de försöker hålla tillbaka glädjetårar.</p>
-                    
-                    <p>Lokala ungdomar ser honom och tänker: "Fan, kanske petanque inte är så tråkigt?"</p>
-                    
-                    <p>Och plötsligt har klubben fler unga medlemmar än de haft på årtionden.</p>
-                    
-                    <h4>Sponsorkontrakt vid 11</h4>
-                    <p>Här är det galna: Vid 11 års ålder fick Dawson ett sponsorkontrakt.</p>
-                    
-                    <p>De flesta elvaåringar får typ 50 kronor i veckopeng. Dawson fick företag som ville betala honom för att kasta kulor.</p>
-                    
-                    <p>Hans palmarès läser som en 30-årings karriär:</p>
-                    <ul>
-                        <li>VM-guld för ungdom vid 11</li>
-                        <li>Fransk juniormästare vid 13</li>
-                        <li>Vinner National de Martigues 2024 med Mickaël Bonetto (en av Frankrikes bästa)</li>
-                        <li>Vinner International d'Ajaccio 2025 vid 14</li>
-                    </ul>
-                    
-                    <h4>Framtiden?</h4>
-                    <p>Dawson vill in i det franska landslaget. <em>"Jag vill fortsätta utvecklas,"</em> säger han enkelt.</p>
-                    
-                    <p>Med tanke på att han redan slår senior-spelare som varit i gamet i 40 år, är frågan inte OM han kommer in i laget.</p>
-                    
-                    <p>Frågan är när.</p>
-                    
-                    <p>Och hur många äldre spelare som kommer att tvingas ta plats på bänken för att göra plats åt fjortonåringen.</p>
-                    
-                    <div class="highlight-box" style="margin-top: 20px;">
-                        <h4>📊 Dawson Herleman – fakta:</h4>
-                        <ul>
-                            <li><strong>Ålder:</strong> 14 år (född oktober 2010)</li>
-                            <li><strong>Från:</strong> Rumilly, Haute-Savoie</li>
-                            <li><strong>VM-mästare:</strong> Vid 11 år</li>
-                            <li><strong>Fransk juniormästare:</strong> Vid 13 år</li>
-                            <li><strong>Vinnare av International d'Ajaccio:</strong> Vid 14 år</li>
-                            <li><strong>Framtid:</strong> Så ljus att den bländar ✨</li>
-                        </ul>
-                    </div>
-                    
-                    <p style="margin-top: 20px;"><strong>Slutsatsen:</strong> Dawson Herleman är inte "bra för sin ålder." Han är inte "lovande."</p>
-                    
-                    <p>Han är redan riktigt jävla bra. Period.</p>
-                    
-                    <p>Och alla de där pensionärerna som trodde de kunde njuta av några lugna petanque-år framför sig?</p>
-                    
-                    <p>Tja, nu måste de kämpa mot en tonåring som kastar kulor som om han hade GPS i fingrarna.</p>
-                    
-                    <p>Lycka till med det, grabbar. Ni kommer att behöva det. 🎯</p>
-                </div>
-            </div>
-
-            <!-- ARTIKEL: Thailand SEA Games drama -->
-            <div class="article-card">
-                <div class="article-header">
-                    <span class="article-date">1 oktober 2025</span>
-                    <span class="article-category">📰 Nyheter</span>
-                </div>
-                <h2 class="article-title">Thailand-kaoset: När världsettan i petanque nästan blev utkastad från sitt eget party</h2>
-                <div class="article-excerpt">
-                    <p><strong>Föreställ dig att du ska ha världens största fest hemma hos dig.</strong> Du har skickat ut 10 länder värt av inbjudningar, beställt maten, fixat lokalerna. Och så, tre månader innan festen, ringer polisen... eller ja, i det här fallet världsfederationen... och säger: <em>"Du får faktiskt inte ha den här festen."</em></p>
-                    
-                    <h4>Välkommen till SEA Games 2025 (eller inte?)</h4>
-                    <p>Thailand skulle vara stolta värdnation för Southeast Asian Games i december 2025. Som världens bästa nation i petanque – ja, ni läste rätt, Thailand rankas före Frankrike där sporten uppfanns – såg de fram emot att visa upp sina färdigheter på hemmaplan.</p>
-                    
-                    <p>Men den 20 september 2025 kom ett brev som fick hela den thailändska sportvärlden att sätta kaffet i halsen.</p>
-                    
-                    <h4>Claude Azéma är inte nöjd</h4>
-                    <p>Claude Azéma, ordförande för World Petanque and Bowls Federation (WPBF), skrev ett brev. Inte ett vanligt "hoppas allt är bra"-brev. Nej, ett riktigt "vi-är-så-besvikna-på-dig-att-vi-tar-bort-din-godis"-brev.</p>
-                    
-                    <p>Innehållet? WPBF förbjöd helt enkelt Thailand från att arrangera petanque vid SEA Games.</p>
-                    
-                    <p>Anledningen var inte att de var dåliga på att spela (som sagt, de är nummer 1 i världen). Problemet var vad som pågick bakom kulisserna.</p>
-                    
-                    <h4>Skurken som inte vill försvinna</h4>
-                    <p>I hjärtat av dramat fanns en person – vars namn diskret utelämnades i officiella dokument – som tidigare varit ordförande för Thailands petanqueförbund.</p>
-                    
-                    <p>Denna person hade:</p>
-                    <ul>
-                        <li>Förskingrat pengar ✓</li>
-                        <li>Riggat val ✓</li>
-                        <li>Begått sexuella övergrepp ✓</li>
-                        <li>Blivit avstängd på livstid från all idrottsverksamhet ✓</li>
-                    </ul>
-                    
-                    <p>Logiskt nog skulle man tro att detta var slutet på historien. Men nej! Likt en dålig superskurk i en B-film vägrade personen att ge upp. Trots livstids avstängning fortsatte denne att ha inflytande över thailändsk petanque.</p>
-                    
-                    <p>Och värre – Thailands Sports Authority (SAT) verkade... okej med det?</p>
-                    
-                    <h4>"Vi kan inte låta sporten bli ett verktyg för personlig vinning"</h4>
-                    <p>Azémas brev var brutalt tydligt. WPBF hade sett nog. De hade försökt. De hade varnat. De hade till och med satt upp en neutral sjupersoners interimskommitté för att städa upp röran.</p>
-                    
-                    <p>Men SAT vägrade erkänna den. Istället fortsatte de stödja den tidigare, avstängda ledningen.</p>
-                    
-                    <p>Världsfederationens besked? <em>"Nej. Inget petanque för er. Och för övrigt – om något land skickar spelare till er tävling ändå, får de tvåårig avstängning från ALLA internationella turneringar."</em></p>
-                    
-                    <p>Oj.</p>
-                    
-                    <h4>Panik i Bangkok</h4>
-                    <p>Föreställ er scenen: SEA Games skulle börja om mindre än tre månader. Elva länder hade förberett sina lag. Atleter hade tränat i åratal. Och nu? Ingen petanque.</p>
-                    
-                    <p>Pimol Srivikorn, ordförande för Thailands olympiska kommitté, var tvungen att gå ut och säga: <em>"Tja... petanque måste avbokas."</em></p>
-                    
-                    <p>Varför? För om länder ändå skickade spelare skulle de straffas och missa SEA Games 2027 i Malaysia, Asiatiska spelen, World Games, och typ allt annat värt att spela.</p>
-                    
-                    <p>Det var som att hela regionen blev gisslan i en thailändsk intern feud.</p>
-                    
-                    <h4>Diplomatiskt räddningsuppdrag</h4>
-                    <p>Nu blev det allvar. Vice premiärministern i Thailand, Thammanat Prompao, la sig i. Sportkrishantering blev regeringsfråga.</p>
-                    
-                    <p>Den 29 september – bara nio dagar efter bombrevét – flög en thailändsk delegation till Frankrike. På plats: ordförande Pimol, vice ordförande Chaiphak Siriwat, och general Mangorn Kosin.</p>
-                    
-                    <p>Mötet med Claude Azéma i Frankrike måste ha varit... intressant.</p>
-                    
-                    <h4>Lösningen: "Okej, okej, vi fixar det!"</h4>
-                    <p>Thailand lovade:</p>
-                    <ul>
-                        <li>Att göra sig av med problemet i ledningen (hint: den livstidsavstängda personen)</li>
-                        <li>Att faktiskt följa världsfederationens regler</li>
-                        <li>Att driva rättsliga processer för transparens</li>
-                    </ul>
-                    
-                    <p>Och nyckeln: Sutthiroj Prapanpat, ordförande för Petanque Association of Thailand, avgick den 30 september.</p>
-                    
-                    <p>Två dagar senare, den 1 oktober, kom beskedet: <strong>WPBF återkallade förbudet. Petanque var tillbaka i SEA Games!</strong></p>
-                    
-                    <h4>Happy ending?</h4>
-                    <p>Pimol, synligt lättad, sa: <em>"Detta var ett lagarbete som ledde till framgång. Jag är glad för alla atleter och för det thailändska folket. Åtminstone har Thailands rykte och trovärdighet inom ASEAN återställts."</em></p>
-                    
-                    <p>Man kan tänka sig hans inre monolog: <em>"Jag kan inte tro att vi nästan saboterade vårt eget mästerskap på grund av en kille som inte kan sluta bråka."</em></p>
-                    
-                    <h4>Lärdomen?</h4>
-                    <p>När du är nummer 1 i världen på något, och du ska vara värd för regionens största sportevenemang, är det förmodligen en bra idé att:</p>
-                    <ol>
-                        <li>Inte ha korrupta ledare</li>
-                        <li>Faktiskt lyssna när världsfederationen säger "snälla, sluta"</li>
-                        <li>Kanske inte vänta tills tre månader innan evenemanget med att fixa problemen</li>
-                    </ol>
-                    
-                    <p>Men å andra sidan – var skulle spänningen vara utan lite sista-minuten-diplomati?</p>
-                    
-                    <div class="highlight-box" style="margin-top: 20px;">
-                        <h4>📊 Status idag:</h4>
-                        <ul>
-                            <li><strong>Petanque:</strong> ✓ Återinstallerat</li>
-                            <li><strong>SEA Games 2025:</strong> 9-20 december</li>
-                            <li><strong>Thailands ranking:</strong> Fortfarande #1</li>
-                            <li><strong>Drama-nivå:</strong> 11/10</li>
-                        </ul>
-                    </div>
-                    
-                    <p style="margin-top: 20px;"><strong>Slutsatsen:</strong> Thailand får ha sitt petanque vid SEA Games i december 2025. Världsettan får äntligen spela på hemmaplan. Regionens atleter kan tävla utan rädsla för avstängning.</p>
-                    
-                    <p>Och någonstans i Thailand sitter förmodligen en viss före detta ordförande och undrar varför ingen längre svarar på hans samtal.</p>
-                    
-                    <p>Ibland löser sig saker. Men herregud, vilken tur att det gjorde det. 🇹🇭</p>
-                </div>
-            </div>
-
-            <!-- ARTIKEL: Madagaskar vinner La Marseillaise -->
-            <div class="article-card">
-                <div class="article-header">
-                    <span class="article-date">9 juli 2025</span>
-                    <span class="article-category">🏆 Turnering</span>
-                </div>
-                <h2 class="article-title">Madagaskar chockar petanquevärlden: "Madagastars" skriver historia i Marseille</h2>
-                <div class="article-excerpt">
-                    <p><strong>När kulorna rullade i Parc Borély i juli 2025 visste ingen att de skulle bevittna petanquehistoria.</strong> Tre killar från "den stora ön" skulle göra det omöjliga – vinna La Marseillaise.</p>
-                    
-                    <h4>"Tonnerre" och hans bröder som trotsar oddsen</h4>
-                    <p>Det lät som en dålig idé från början. Ta sig an La Marseillaise – petanquens svar på Wimbledon – som helt nytt utländskt lag? I Marseille? På hemmaplan för de franska legenderna?</p>
-                    
-                    <p>Men Yves Sédrick Rakotoarisoa, hans lagkamrat Lova Satamandimby Rakotoarisoa, och den 15 år äldre veteranen Tiana Laurens Razanadrakoto (kallad "Tonnerre", alltså "åskan" på franska) var inte där för att turista. De var där för att vinna.</p>
-                    
-                    <h4>Från hot till hjältar</h4>
-                    <p>Turneringen började inte med champagne och konfetti för de malgassiska spelarna. Faktum är att det började med... verbala hot.</p>
-                    
-                    <p>Efter en brutal 13-3-seger i femte omgången var deras motståndare från Vaucluse så upprörda att de började hota tripletten. Orden flög, stämningen blev hätsk, och säkerhetsväktare fick eskortera madagaskerna till säkerhet under läktarna.</p>
-                    
-                    <p><em>"Om du fortsätter med dina carreaux [perfekta träffar], ska jag slå sönder dig,"</em> var bara en av de charmerande kommentarer de fick höra.</p>
-                    
-                    <p>Men som alla bra berättelser visar: motgång bygger karaktär. Eller i det här fallet – ännu bättre kulkastning.</p>
-                    
-                    <h4>Carreaux efter carreaux efter carreaux</h4>
-                    <p>För de som inte är insatta: ett "carreau" i petanque är när du träffar motståndarens kula så perfekt att din kula stannar exakt där den andra låg. Det är svårt. Riktigt svårt.</p>
-                    
-                    <p>Madagaskarna? De gjorde det som om de vore på frukostbuffén. Fem i rad. Sex i rad. Publiken flippade. Motståndarna kunde bara gapa.</p>
-                    
-                    <p>I kvartfinalen mot Begnis: 13-8, med så många carreaux att det blev löjligt. I semifinalen mot favoriterna Bauer, Molins och Prudhomme: 13-7, med ännu mer carreau-magi.</p>
-                    
-                    <h4>Finalen: När legender möter ödet</h4>
-                    <p>Den 9 juli 2025 klockan 17:45 stod finalen. Motståndare? Bara Philippe Quintais, Philippe Suchaud och Jean-Claude Jouffre – alltså typ petanquens svar på Dream Team.</p>
-                    
-                    <p>Quintais hade vunnit La Marseillaise fem gånger. Suchaud fyra gånger. De var regerande mästare. De spelade på hemmaplan. Publiken var på deras sida.</p>
-                    
-                    <p>Madagaskarna? De hade åkt 11 timmar i flygplan, blivit hotade, och var totala underdogs.</p>
-                    
-                    <p>Finalen blev episk. Över 2 timmar och 45 minuter av nervkittlande petanque. Solen började gå ner. Båda lagen kämpade.</p>
-                    
-                    <p>Vid 12-10 hade Yves Rakotoarisoa matchboll. Han kastade... och missade. Publiken gick i taket. Men på nästa mène fick laget en ny chans.</p>
-                    
-                    <p>Quintais försökte, Suchaud släppte loss sina bästa skott, men när allt var klart: <strong>13-10 till Madagaskar.</strong></p>
-                    
-                    <h4>"Jag kan inte tro det"</h4>
-                    <p>Yves Rakotoarisoa, tårögd efter segern: <em>"Jag spelade dåligt vid ett tillfälle, jag hade matchen i min hand och jag tappade mina kulor, det gjorde ont. Jag är helt omtumlad... Men jag tackar Lova och Tonnerre som bar mig."</em></p>
-                    
-                    <p>För första gången på 64 år hade ett utländskt lag vunnit La Marseillaise. Första gången någonsin hade namnet på annat än franska skrivits i vinnarkupan.</p>
-                    
-                    <h4>"Madagastars" blir legender</h4>
-                    <p>Sociala medier exploderade. "Madagastars" blev trenden. Tillbaka i Madagaskar firades de som hjältar.</p>
-                    
-                    <p>Eric Rassat, koordinator för den malgassiska federationen, hade sagt före turneringen: <em>"Vi hoppas bli den första utländska nationen att vinna."</em></p>
-                    
-                    <p>Hans önskan blev verklighet – med stil, drama och en hel del carreaux.</p>
-                    
-                    <div class="highlight-box" style="margin-top: 20px;">
-                        <h4>📊 Fakta om segern:</h4>
-                        <ul>
-                            <li><strong>Finale score:</strong> Madagaskar 13 - Frankrike 10</li>
-                            <li><strong>Matchtid:</strong> 2 timmar och 45 minuter</li>
-                            <li><strong>Första utländska seger:</strong> På 64 år</li>
-                            <li><strong>Antal åskådare som trodde det var möjligt innan turneringen:</strong> ungefär 3</li>
-                            <li><strong>Antal som tror det nu:</strong> alla</li>
-                        </ul>
-                    </div>
-                    
-                    <p style="margin-top: 20px;"><strong>Moralen?</strong> Ibland är den bästa kärlekshistorien inte mellan två människor, utan mellan tre killar från Madagaskar, några metallkulor, och en dröm som verkade omöjlig.</p>
-                    
-                    <p>La Marseillaise kommer aldrig bli detsamma igen. Och det är precis så det ska vara. 🇲🇬🏆</p>
-                    
-                    <div class="info-box" style="margin-top: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
-                        <h4 style="color: white;">🎥 Se finalen!</h4>
-                        <p>Vill du se den historiska finalen? Klicka här för att se matchen mellan Quintais och Rakotoarisoa:</p>
-                        <a href="https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/direct-finale-la-marseillaise-2025-suivez-le-choc-entre-quintais-et-rakotoarisoa-3181422.html" target="_blank" style="display: inline-block; background: white; color: #667eea; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: 700; margin-top: 10px; transition: all 0.3s ease;">
-                            ▶️ Titta på finalen (France 3)
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- INSTRUKTIONER FÖR UPPDATERING -->
-            <div class="highlight-box" style="margin-top: 50px;">
-                <h3>📝 Instruktioner för att uppdatera denna sida:</h3>
-                <ol>
-                    <li><strong>Ändra månadsbadgen</strong> längst upp till aktuell månad</li>
-                    <li><strong>Lägg till nya artiklar</strong> genom att kopiera en artikel-card och ändra innehållet</li>
-                    <li><strong>Kategorier att använda:</strong>
-                        <ul>
-                            <li>🎤 Intervju - för intervjuer med spelare</li>
-                            <li>📋 Nya Regler - för regeländringar</li>
-                            <li>🏆 Turnering - för turneringsrapporter</li>
-                            <li>📰 Nyheter - för allmänna nyheter</li>
-                            <li>🎓 Teknik - för tekniska artiklar</li>
-                        </ul>
-                    </li>
-                    <li><strong>I slutet av månaden:</strong> Flytta allt innehåll till arkiv.html och börja med en tom sida för nästa månad</li>
-                </ol>
-            </div>
-
-            <div class="navigation">
-                <a href="arkiv.html" class="archive-link">📚 Se Historiskt Arkiv (Premium)</a>
-                <a href="innehall.html" class="nav-btn">← Tillbaka till Innehåll</a>
-            </div>
-        </div>
-    </div>
-        </div>
-    </section>
-
-    <section class="book-chapter" id="roman-oversikt">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="language-switcher">
-        <a href="mr-boule-petanque.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/mr-boule-petanque.html" title="English">🇬🇧</a>
-        <a href="fr/mr-boule-petanque.html" title="Français">🇫🇷</a>
-        <a href="es/mr-boule-petanque.html" title="Español">🇪🇸</a>
+<!-- KAPITEL 1 -->
+<div class="chapter" id="ch1">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 1</div>
+        <h2>Vad är boule pétanque?</h2>
+        <p>Historien, reglerna och spelets grunder</p>
     </div>
 
-    <div class="container">
-        <div class="novel-header">
-            <div class="novel-title">📖 Mr. Boule Pétanque</div>
-            <div class="novel-subtitle">En roman om passion, vänskap och petanque</div>
-            <div class="novel-author">Av Mats Hamberg</div>
-            <div class="update-badge">🆕 Nytt kapitel varje månad</div>
-        </div>
-
-        <div class="content">
-            <div class="intro-box">
-                <h3>✨ Om romanen</h3>
-                <p><strong>Välkommen till världen av Mr. Boule Pétanque!</strong></p>
-                <p>Detta är en exklusiv roman som publiceras månadsvis, kapitel för kapitel, för alla som har köpt Pétanque-guiden. Följ med på en resa genom petanque-världen, där passion, vänskap, rivalitet och livets upp- och nedgångar vävs samman med sportens skönhet.</p>
-                <p>Varje månad släpps ett nytt kapitel här på denna sida. Som bokägare får du automatisk tillgång till alla nya kapitel när de publiceras – ingen extra kostnad, bara ren läsglädje!</p>
-                <p><strong>🎯 Nästa kapitel släpps:</strong> <span style="color: #D2691E; font-weight: 700;">15 november 2025</span></p>
-            </div>
-
-            <h2 style="font-family: 'Playfair Display', serif; color: #2c3e50; margin-bottom: 30px;">📚 Kapitel</h2>
-
-            <div class="timeline">
-                <!-- KAPITEL 1 - Tillgängligt -->
-                <div class="chapter-card" onclick="location.href='mr-boule-kapitel1.html'">
-                    <div class="chapter-header">
-                        <span class="chapter-number">Kapitel 1</span>
-                        <span class="chapter-date">Oktober 2025</span>
-                    </div>
-                    <h3 class="chapter-title-main">BoulodromensHjälte</h3>
-                    <div class="chapter-excerpt">
-                        <p>Det var en torsdagskväll i juni när Jean-Pierre Dubois för första gången insåg att hans liv hade blivit alldeles för litet. Han stod i sin lägenhet i Marseille, omgiven av troféer och minnen från en karriär som petanque-spelare som hade tagit honom från gatubanorna i sin barndom till världsmästerskap. Men nu, vid 52 års ålder, kände han hur tyngden av alla dessa segrar började kännas mer som en börda än en ära...</p>
-                        <p><em>En berättelse om en fallen mästare, en återkomst och en ung challenger som ska utmana allt han trodde sig veta om spelet.</em></p>
-                    </div>
-                    <a href="mr-boule-kapitel1.html" class="read-chapter-btn">Läs kapitel 1 →</a>
-                </div>
-
-                <!-- KAPITEL 2 - Kommer snart -->
-                <div class="chapter-card locked">
-                    <div class="chapter-header">
-                        <span class="chapter-number">Kapitel 2</span>
-                        <span class="chapter-date">November 2025</span>
-                    </div>
-                    <h3 class="chapter-title-main">🔒 Den Unga Utmanaren</h3>
-                    <div class="chapter-excerpt">
-                        <p><em>Släpps 15 november 2025</em></p>
-                        <p>Amélie Rousseau är 19 år och spelar petanque som om hennes liv hänger på det – för det gör det. Från de trånga gränderna i Toulouse till den nationella scenen har hon kämpat sig fram med en precision och passion som få kan matcha. Men när hennes väg korsas med Jean-Pierres, sätts allt på spel...</p>
-                    </div>
-                    <span class="coming-soon"><span class="locked-icon">🔒</span>Kommer 15 november</span>
-                </div>
-
-                <!-- KAPITEL 3 - Kommer snart -->
-                <div class="chapter-card locked">
-                    <div class="chapter-header">
-                        <span class="chapter-number">Kapitel 3</span>
-                        <span class="chapter-date">December 2025</span>
-                    </div>
-                    <h3 class="chapter-title-main">🔒 Första Mötet</h3>
-                    <div class="chapter-excerpt">
-                        <p><em>Släpps 15 december 2025</em></p>
-                        <p>När två världar kolliderar på en liten boulodrome i södra Frankrike, är det början på något som kommer att förändra båda deras liv för alltid...</p>
-                    </div>
-                    <span class="coming-soon"><span class="locked-icon">🔒</span>Kommer 15 december</span>
-                </div>
-
-                <!-- KAPITEL 4 - Placeholder -->
-                <div class="chapter-card locked">
-                    <div class="chapter-header">
-                        <span class="chapter-number">Kapitel 4</span>
-                        <span class="chapter-date">Januari 2026</span>
-                    </div>
-                    <h3 class="chapter-title-main">🔒 Tränaren och Eleven</h3>
-                    <div class="chapter-excerpt">
-                        <p><em>Släpps 15 januari 2026</em></p>
-                    </div>
-                    <span class="coming-soon"><span class="locked-icon">🔒</span>Kommer januari 2026</span>
-                </div>
-
-                <!-- Mer kapitel kommer... -->
-                <div class="chapter-card locked" style="border: 2px dashed #ccc;">
-                    <div class="chapter-header">
-                        <span class="chapter-number">Fler kapitel...</span>
-                    </div>
-                    <h3 class="chapter-title-main">📖 Fortsättning följer</h3>
-                    <div class="chapter-excerpt">
-                        <p style="text-align: center; color: #999;">
-                            <em>Nya kapitel publiceras varje månad. Som bokägare får du automatiskt tillgång till alla nya avsnitt när de släpps!</em>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-top: 50px;">
-                <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px;">💬 Om författaren</h3>
-                <p><strong>Mats Hamberg</strong> är en passionerad petanque-spelare och författare som vill dela med sig av sin kärlek till sporten genom både praktiska guider och berättelser. "Mr. Boule Pétanque" är hans första roman, där han blandar sin djupa kunskap om spelet med berättarkonst för att skapa en värld där petanque blir metaforen för livet självt.</p>
-                <p style="margin-top: 15px;">
-                    <strong>📧 Kontakt:</strong> <a href="mailto:mats@petanqueguiden.se" style="color: #D2691E; text-decoration: none; font-weight: 700;">mats@petanqueguiden.se</a>
-                </p>
-            </div>
-
-            <div class="navigation">
-                <a href="innehall.html" class="nav-btn">← Tillbaka till Innehåll</a>
-            </div>
-        </div>
-    </div>
-        </div>
-    </section>
-
-    <section class="book-chapter" id="roman-kapitel0">
-        <div class="book-chapter-inner">
-            <a href="mr-boule-petanque.html" class="toc-button">← Roman</a>
-
-    <div class="container">
-        <div class="chapter-header-novel">
-            <div class="chapter-breadcrumb">
-                <a href="innehall.html">Innehåll</a> / <a href="mr-boule-petanque.html">Mr. Boule Pétanque</a>
-            </div>
-            <div class="chapter-number-novel">Kapitel 0</div>
-            <h1 class="chapter-title-novel">Introduktion - Mr Boule Pétanque</h1>
-            <div class="chapter-meta">Publicerad: Oktober 2025 | Läslängd: ~5 minuter</div>
-        </div>
-
-        <div class="content">
-            <div class="novel-text">
-                <p>Hej alla, hoppas att jag kan förmedla en ovanlig sida av boule pétanque nämligen en romanfigur vid namn Mr Boule Pétanque. Ovanligt duktig i petanque, vilket har fått konsekvenser för hans privatliv. Han är inte lika aktiv som han var tidigare men dyker upp här och där för att spela matcher. Boule Pétanque är viktigt för honom och händelser som har att göra med sporten tar han sig en titt på. Det händer även att folk från den stora petanque-världen vänder sig till honom för att få stöd och hjälp eller bara Mr BP:s reflektioner.</p>
-                <div class="scene-break">* * *</div>
-                <p>Snart kommer första avsnittet att finnas här. Kanske det blir en gång i månaden.</p>
-                <p>Vänligen Mats Hamberg, författare till Pétanque - Den Kompletta Guiden och romanen Mr Boule Pétanque.</p>
-                
-                <p><em>Fortsättning följer i Kapitel 1 (släpps 15 november 2025)</em></p>
-            </div>
-
-            <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin: 40px 0;">
-                <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px;">💭 Din feedback är viktig!</h3>
-                <p>Vad tyckte du om detta kapitel? Din feedback hjälper mig att göra romanen ännu bättre. Skicka gärna dina tankar till:</p>
-                <p style="margin-top: 15px;">
-                    <strong>📧</strong> <a href="mailto:mats@petanqueguiden.se?subject=Feedback%20-%20Mr.%20Boule%20Pétanque%20Kapitel%200" style="color: #D2691E; text-decoration: none; font-weight: 700;">mats@petanqueguiden.se</a>
-                </p>
-            </div>
-
-            <div class="chapter-nav">
-                <a href="mr-boule-petanque.html" class="chapter-nav-btn">
-                    <div class="chapter-nav-label">← Föregående</div>
-                    <div class="chapter-nav-title">Tillbaka till översikt</div>
-                </a>
-                <a href="#" class="chapter-nav-btn disabled" onclick="return false;">
-                    <div class="chapter-nav-label">Nästa →</div>
-                    <div class="chapter-nav-title">Kapitel 1 släpps 15 nov</div>
-                </a>
-            </div>
-        </div>
-    </div>
-        </div>
-    </section>
-
-    <section class="book-chapter" id="roman-kapitel1">
-        <div class="book-chapter-inner">
-            <a href="mr-boule-petanque.html" class="toc-button">← Roman</a>
-
-    <div class="container">
-        <div class="chapter-header-novel">
-            <div class="chapter-breadcrumb">
-                <a href="innehall.html">Innehåll</a> / <a href="mr-boule-petanque.html">Mr. Boule Pétanque</a>
-            </div>
-            <div class="chapter-number-novel">Kapitel 1</div>
-            <h1 class="chapter-title-novel">Boulodromens Hjälte</h1>
-            <div class="chapter-meta">Publicerad: Oktober 2025 | Läslängd: ~15 minuter</div>
-        </div>
-
-        <div class="content">
-            <div class="novel-text">
-                <p>Det var en torsdagskväll i juni när Jean-Pierre Dubois för första gången insåg att hans liv hade blivit alldeles för litet. Han stod i sin lägenhet i Marseille, omgiven av troféer och minnen från en karriär som petanque-spelare som hade tagit honom från gatubanorna i sin barndom till världsmästerskap. Men nu, vid 52 års ålder, kände han hur tyngden av alla dessa segrar började kännas mer som en börda än en ära.</p>
-                <p>Fönstret stod öppet och ljudet från gatan strömmade in: bilar som tutade, människor som skrattade, livet som pågick utan honom. Han plockade upp en av sina äldsta boules – den han hade använt när han vann sitt första nationella mästerskap 1995. Metallen kändes kall och tung i hans hand, precis som den alltid gjort. Men något hade förändrats. Eller kanske var det han själv som hade förändrats.</p>
-                <div class="scene-break">* * *</div>
-                <p>Boulodromen låg vid hamnen, en liten plats med sex banor som var nötta av årtals spel. De äldre männen samlades här varje eftermiddag, samma män som hade spelat här i decennier. De pratade om samma matcher, berättade samma historier, levde i samma minnen.</p>
-                
-                <p><em>Fortsättning följer i Kapitel 2 (släpps 15 november 2025)</em></p>
-            </div>
-
-            <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin: 40px 0;">
-                <h3 style="font-family: 'Playfair Display', serif; color: #8B4513; margin-bottom: 15px;">💭 Din feedback är viktig!</h3>
-                <p>Vad tyckte du om detta kapitel? Din feedback hjälper mig att göra romanen ännu bättre. Skicka gärna dina tankar till:</p>
-                <p style="margin-top: 15px;">
-                    <strong>📧</strong> <a href="mailto:mats@petanqueguiden.se?subject=Feedback%20-%20Mr.%20Boule%20Pétanque%20Kapitel%201" style="color: #D2691E; text-decoration: none; font-weight: 700;">mats@petanqueguiden.se</a>
-                </p>
-            </div>
-
-            <div class="chapter-nav">
-                <a href="mr-boule-petanque.html" class="chapter-nav-btn">
-                    <div class="chapter-nav-label">← Föregående</div>
-                    <div class="chapter-nav-title">Tillbaka till översikt</div>
-                </a>
-                <a href="#" class="chapter-nav-btn disabled" onclick="return false;">
-                    <div class="chapter-nav-label">Nästa →</div>
-                    <div class="chapter-nav-title">Kapitel 2 släpps 15 nov</div>
-                </a>
-            </div>
-        </div>
-    </div>
-        </div>
-    </section>
-
-    <section class="book-chapter" id="del1-kapitel1">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="language-switcher">
-        <a href="del1-kapitel1.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/part1-chapter1.html" title="English">🇬🇧</a>
-        <a href="fr/partie1-chapitre1.html" title="Français">🇫🇷</a>
-    </div>
-    
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Del 1 • Kapitel 1</div>
-            <h1 class="chapter-title">Vad är boule pétanque?</h1>
-            <p class="chapter-subtitle">Historien, reglerna och spelets grunder</p>
-        </div>
-        
-        <div class="content">
             <h2>Historien bakom pétanque</h2>
             <p>Pétanque är ett ungt släkte i den långa familjen klotspel (boules-spel). I slutet av 1800-talet spelades i Provence ett närbesläktat spel kallat jeu provençal, där spelarna tog flera löpsteg innan de kastade sina bollar. Spelet var fysiskt krävande och byggde både på kraft och precision.</p>
             <p>En vinter runt 1907 skadade den skicklige spelaren Jules Lenoir sina ben och kunde inte längre springa fram vid kastet. Hans vän Ernest Pitiot löste problemet genom att korta spelbanan och låta spelarna kasta med fötterna stilla i en cirkel. Ur denna situation växte ett nytt sätt att spela fram — där precision, känsla och strategi blev viktigare än fysisk styrka. Det var här pétanque i praktiken föddes.</p>
@@ -1369,32 +546,19 @@
                 <p>För dig som nybörjare räcker det att veta att boccia är en parasport medan bocce och pétanque är olika historiska boules-spel.</p>
             </div>
             
-            <div class="navigation">
-                <a href="innehall.html" class="nav-btn secondary">← Innehåll</a>
-                <a href="del1-kapitel2.html" class="nav-btn">Nästa: Utrustning →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del1-kapitel2">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="language-switcher">
-        <a href="del1-kapitel2.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/part1-chapter2.html" title="English">🇬🇧</a>
-        <a href="fr/partie1-chapitre2.html" title="Français">🇫🇷</a>
+<!-- KAPITEL 2 -->
+<div class="chapter" id="ch2">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 2</div>
+        <h2>Utrustning – välj rätt boules</h2>
+        <p>Material, vikt och storlek</p>
     </div>
-    
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Del 1 • Kapitel 2</div>
-            <h1 class="chapter-title">Utrustning – välj rätt boules</h1>
-            <p class="chapter-subtitle">Vikt, storlek, material och underhåll</p>
-        </div>
-        
-        <div class="content">
+
             <h2>Vikt, storlek och material – vad passar dig?</h2>
             <p>Tävlingsgodkända boules måste vara håliga metallklot med en diameter mellan <strong>70,5 och 80 mm</strong> och vikt mellan <strong>650 och 800 gram</strong>. Valet av storlek och vikt påverkas av din handstorlek, roll i laget och spelstil:</p>
             
@@ -1464,26 +628,19 @@
                 <p><strong>Viktigt:</strong> Med regelbundet underhåll kommer dina boules att hålla i många år. Behandla dem väl och de kommer att tjäna dig väl på banan!</p>
             </div>
             
-            <div class="navigation">
-                <a href="del1-kapitel1.html" class="nav-btn secondary">← Föregående</a>
-                <a href="del1-kapitel3.html" class="nav-btn">Nästa: Grundtekniker →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del1-kapitel3">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Del 1 • Kapitel 3</div>
-            <h1 class="chapter-title">Grundtekniker</h1>
-            <p class="chapter-subtitle">Grepp, ställning och kastteknik</p>
-        </div>
-        
-        <div class="content">
+<!-- KAPITEL 3 -->
+<div class="chapter" id="ch3">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 3</div>
+        <h2>Grundtekniker</h2>
+        <p>Point, tir och de första stegen</p>
+    </div>
+
             <h2>Rätt grepp och ställning</h2>
             <p>En stabil grund är avgörande för precision. Ställ dig i kastcirkeln med fötterna lätt isär, vikten jämnt fördelad och kroppen avslappnad.</p>
             
@@ -1635,26 +792,19 @@
                 <div class="text">"När jag började spela trodde jag att skjutning var den viktigaste färdigheten. Med tiden insåg jag att en konsekvent pointör ofta vinner fler matcher än en kraftfull skytt. Tekniken är händerna — spelförståelsen är ögonen."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del1-kapitel2.html" class="nav-btn secondary">← Föregående</a>
-                <a href="del1-kapitel4.html" class="nav-btn">Nästa: Spelstrategi →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del1-kapitel4">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Del 1 • Kapitel 4</div>
-            <h1 class="chapter-title">Spelstrategi för nybörjare</h1>
-            <p class="chapter-subtitle">Taktiker, banläsning och vanliga misstag</p>
-        </div>
-        
-        <div class="content">
+<!-- KAPITEL 4 -->
+<div class="chapter" id="ch4">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 4</div>
+        <h2>Spelstrategi för nybörjare</h2>
+        <p>Tänk taktiskt från start</p>
+    </div>
+
             <h2>Enkla taktiker för att vinna poäng</h2>
             
             <h3>1. Klot framför lillen</h3>
@@ -1679,7 +829,7 @@
             <p>Följ grundregeln: <strong>skjut när du måste och lägg när du kan</strong>. Tvinga motståndaren att använda sina skott så att dina bra läggningar står kvar. Om deras klot ligger mycket nära lillen och ett skott är den enda realistiska chansen, ta skottet. Men om läget är jämnt, lägg ett klot som blockerar linjen.</p>
             
             <div class="highlight-box">
-                <h4>📋 Beslutsträd: Lägg eller skjut?</h4>
+                <h4> Beslutsträd: Lägg eller skjut?</h4>
                 <table>
                     <tr>
                         <th>Situation</th>
@@ -1778,26 +928,25 @@
                 <div class="text">"Taktik handlar inte om att alltid göra det perfekta kastet — det handlar om att fatta kloka beslut med de resurser du har. Den bästa strategin är den som gör motståndaren osäker."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del1-kapitel3.html" class="nav-btn secondary">← Föregående</a>
-                <a href="del2-kapitel5.html" class="nav-btn">Nästa: Del 2 →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del2-kapitel5">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">Del 2</div>
-            <h1 class="chapter-title">Avancerade tekniker för proffs</h1>
-            <p class="chapter-subtitle">Från grundläggande till mästerskap</p>
-        </div>
-        
-        <div class="content">
+<!-- DEL 2 -->
+<div class="part-header">
+    <h2>Del 2</h2>
+    <p>Avancerade tekniker för proffs</p>
+</div>
+
+<!-- KAPITEL 5 -->
+<div class="chapter" id="ch5">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 5</div>
+        <h2>Förbättra din point</h2>
+        <p>Avancerade tekniker för proffs</p>
+    </div>
+
             <p class="quote">När man har passerat nybörjarstadiet handlar pétanque inte längre bara om att lägga en kula nära lillen utan att lösa svåra situationer och bemästra avancerade tekniker.</p>
             
             <h2>Kapitel 5 – Förbättra din point</h2>
@@ -2031,26 +1180,19 @@
                 <li><strong>Realistiska mål:</strong> Sätt mål för turneringen och påminn dig om att du spelar för att utvecklas</li>
             </ul>
             
-            <div class="navigation">
-                <a href="del1-kapitel4.html" class="nav-btn secondary">← Del 1</a>
-                <a href="del3-kapitel9.html" class="nav-btn">Nästa: Del 3 →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del2-kapitel6">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">Kapitel 6</div>
-            <h1 class="chapter-title">Mästerskapsskjutning (tirer au fer)</h1>
-            <p class="chapter-subtitle">Från grundläggande skott till mästerliga tekniker</p>
-        </div>
-        
-        <div class="content">
+<!-- KAPITEL 6 -->
+<div class="chapter" id="ch6">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 6</div>
+        <h2>Mästerskapsskjutning</h2>
+        <p>Tirer au fer</p>
+    </div>
+
             <p class="quote">En mästerskapsskytt behärskar flera typer av skott och vet när varje teknik ska användas för att maximera chansen att vinna.</p>
             
             <h2>Fullträffar vs. rullskott</h2>
@@ -2165,26 +1307,19 @@
                 <div class="text">"När jag började skjuta jagade jag kraft. Idag vet jag att precision kommer från rytm, balans och upprepning — inte styrka."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del2-kapitel5.html" class="nav-btn secondary">← Kapitel 5</a>
-                <a href="del2-kapitel7.html" class="nav-btn">Nästa: Kapitel 7 →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del2-kapitel7">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">Kapitel 7</div>
-            <h1 class="chapter-title">Taktik på hög nivå</h1>
-            <p class="chapter-subtitle">Strategiskt spel och mentalt schackspel på grus</p>
-        </div>
-        
-        <div class="content">
+<!-- KAPITEL 7 -->
+<div class="chapter" id="ch7">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 7</div>
+        <h2>Taktik på hög nivå</h2>
+        <p>Strategisk spelanalys</p>
+    </div>
+
             <p class="quote">På hög nivå handlar pétanque inte bara om teknisk skicklighet – det handlar om att tänka strategiskt, läsa motståndaren och kontrollera spelets tempo.</p>
             
             <h2>Styra spelets tempo</h2>
@@ -2245,7 +1380,7 @@
             </table>
             
             <div class="highlight-box">
-                <h4>📋 Avancerat beslutsträd: Lägg eller skjut?</h4>
+                <h4> Avancerat beslutsträd: Lägg eller skjut?</h4>
                 <p>På hög nivå handlar det om att läsa situationen och fatta snabba, strategiska beslut:</p>
                 <table>
                     <tr>
@@ -2348,26 +1483,19 @@
                 <li><strong>I slutet av matchen:</strong> Behåll lugnet och följ er spelplan</li>
             </ul>
             
-            <div class="navigation">
-                <a href="del2-kapitel6.html" class="nav-btn secondary">← Kapitel 6</a>
-                <a href="del2-kapitel8.html" class="nav-btn">Nästa: Kapitel 8 →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del2-kapitel8">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">Kapitel 8</div>
-            <h1 class="chapter-title">Träna smartare</h1>
-            <p class="chapter-subtitle">Effektiva metoder för snabb utveckling</p>
-        </div>
-        
-        <div class="content">
+<!-- KAPITEL 8 -->
+<div class="chapter" id="ch8">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 8</div>
+        <h2>Träna smartare</h2>
+        <p>Effektiv träning och utveckling</p>
+    </div>
+
             <p class="quote">Det är inte hur mycket du tränar som räknas, utan hur smart du tränar. Fokuserad och strukturerad träning ger snabbare resultat än slumpmässig övning.</p>
             
             <h2>Effektiva övningar för ensamträning</h2>
@@ -2587,26 +1715,25 @@
                 <div class="text">"När jag började träna trodde jag att fler timmar var svaret. Idag vet jag att smarta minuter slår långa timmar. Disciplin, reflektion och rutin är mina största styrkor."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del2-kapitel7.html" class="nav-btn secondary">← Kapitel 7</a>
-                <a href="del3-kapitel9.html" class="nav-btn">Nästa: Del 3 →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del3-kapitel9">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">Del 3</div>
-            <h1 class="chapter-title">Pétanque som livsstil</h1>
-            <p class="chapter-subtitle">Tävling, kultur och gemenskap</p>
-        </div>
-        
-        <div class="content">
+<!-- DEL 3 -->
+<div class="part-header">
+    <h2>Del 3</h2>
+    <p>Pétanque som livsstil</p>
+</div>
+
+<!-- KAPITEL 9 -->
+<div class="chapter" id="ch9">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 9</div>
+        <h2>Tävlingsspel vs. socialt spel</h2>
+        <p>Pétanque som livsstil</p>
+    </div>
+
             <p class="quote">Pétanque är mer än en sport – det är en social aktivitet, en kulturell tradition och en global gemenskap.</p>
             
             <h2>Kapitel 9 – Tävlingsspel vs. socialt spel</h2>
@@ -2761,26 +1888,19 @@
                 <div class="text">"För mig är pétanque lika mycket en livsstil som ett spel. Jag har träffat fler människor, fått fler vänner och upplevt fler kulturer genom boule än genom någon annan aktivitet i mitt liv."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del2-kapitel5.html" class="nav-btn secondary">← Del 2</a>
-                <a href="del3-kapitel10.html" class="nav-btn">Nästa: Kapitel 10 →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del3-kapitel10">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">Kapitel 10</div>
-            <h1 class="chapter-title">Pétanque runt om i världen</h1>
-            <p class="chapter-subtitle">Kulturella skillnader och stora turneringar</p>
-        </div>
-        
-        <div class="content">
+<!-- KAPITEL 10 -->
+<div class="chapter" id="ch10">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 10</div>
+        <h2>Pétanque runt om i världen</h2>
+        <p>Kultur, turneringar och traditioner</p>
+    </div>
+
             <p class="quote">Från Provence till Thailand, från parkbanor till världsmästerskap – pétanque har blivit en global sport med rika traditioner.</p>
             
             <h2>Kulturella skillnader i spelet</h2>
@@ -2946,7 +2066,7 @@
                 }
                 
                 .player-achievements li:before {
-                    content: "🏆";
+                    content: "";
                     position: absolute;
                     left: 0;
                 }
@@ -3081,26 +2201,25 @@
                 <div class="text">"När jag reser och spelar boule slås jag alltid av samma sak: oavsett språk och kultur känns cirkeln som hemma. Det är därför pétanque för mig inte bara är ett spel — det är ett sätt att möta världen."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del3-kapitel9.html" class="nav-btn secondary">← Kapitel 9</a>
-                <a href="fordjupning.html" class="nav-btn">Nästa: Del 4 →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del4-kapitel11-14">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Del 4</div>
-            <h1 class="chapter-title">Fördjupning och utveckling</h1>
-            <p class="chapter-subtitle">Strategi, mental styrka och träning</p>
-        </div>
-        
-        <div class="content">
+<!-- DEL 4 -->
+<div class="part-header">
+    <h2>Del 4</h2>
+    <p>Fördjupning och utveckling</p>
+</div>
+
+<!-- KAPITEL 11–14 -->
+<div class="chapter" id="ch11">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 11–14</div>
+        <h2>Fördjupning och utveckling</h2>
+        <p>Strategi, mental styrka, träning och fysik</p>
+    </div>
+
             <p class="quote">Att bemästra pétanque är en livslång resa. Reglerna ger ramen, men det är strategin, psyket och träningsvanorna som gör dig till en vinnare.</p>
             
             <h2 id="strategi">Kapitel 11: Strategisk analys och taktik</h2>
@@ -3318,32 +2437,19 @@
                 <div class="text">"Pétanque är teknik, taktik och psykologi — men framför allt är det en resa med dig själv. Varje match lär dig något nytt om spelet och om vem du är. Spela med glädje. Tänk med klarhet."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del3-kapitel10.html" class="nav-btn secondary">← Kapitel 10</a>
-                <a href="utrustning.html" class="nav-btn">Nästa: Bilaga A: Utrustningsguide →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del4-kapitel15">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="language-switcher">
-        <a href="del4-kapitel15.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/part4-chapter15.html" title="English">🇬🇧</a>
-        <a href="fr/partie4-chapitre15.html" title="Français">🇫🇷</a>
+<!-- KAPITEL 15 -->
+<div class="chapter" id="ch15">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 15</div>
+        <h2>Att leda ett lag</h2>
+        <p>Lagbygge och coaching</p>
     </div>
-    
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Del 4 • Kapitel 15</div>
-            <h1 class="chapter-title">Att leda ett lag i Boule Pétanque</h1>
-            <p class="chapter-subtitle">Coachning, lagbygge och förberedelser inför seriespel</p>
-        </div>
-        
-        <div class="content">
+
             <h2>Introduktion – Coachens roll i Boule Pétanque</h2>
             <p>Att leda ett lag i Boule Pétanque är att balansera mellan strategi och mänsklig förståelse. En bra coach är inte bara taktiker – utan också motivatör, psykolog och lagbyggare. Det handlar om att se både helheten och individen, att skapa trygghet och mod, och att fatta kloka beslut när det gäller som mest.</p>
             
@@ -3369,7 +2475,7 @@
             </div>
             
             <div class="info-box">
-                <p><strong>🎯 Reflektion:</strong></p>
+                <p><strong> Reflektion:</strong></p>
                 <p>En erfaren coach vet att ibland är den mest fokuserade spelaren viktigare än den mest tekniska.</p>
             </div>
             
@@ -3386,7 +2492,7 @@
             </ul>
             
             <div class="highlight-box">
-                <p><strong>📊 Tips:</strong></p>
+                <p><strong> Tips:</strong></p>
                 <p>Skapa en enkel laguttagningstabell där du sätter poäng (1–5) på varje faktor. Det gör urvalet mer genomtänkt och öppet för reflektion.</p>
             </div>
             
@@ -3402,7 +2508,7 @@
             </ul>
             
             <div class="info-box">
-                <p><strong>🧠 Coachens mindset:</strong></p>
+                <p><strong> Coachens mindset:</strong></p>
                 <p><em>"Ett lag som känner trygghet under press spelar med klarhet – inte panik."</em></p>
             </div>
             
@@ -3422,7 +2528,7 @@
             </div>
             
             <div class="info-box">
-                <p><strong>💬 Reflektion:</strong></p>
+                <p><strong> Reflektion:</strong></p>
                 <p>Ett samtal, ett leende eller bara ett lugnt "det är okej" kan vara skillnaden mellan förlust och vändning.</p>
             </div>
             
@@ -3438,7 +2544,7 @@
             </ul>
             
             <div class="info-box">
-                <p><strong>🤝 Reflektion:</strong></p>
+                <p><strong> Reflektion:</strong></p>
                 <p>Ett lag med tydliga mål och stark kommunikation överlever även motgångar.</p>
             </div>
             
@@ -3454,7 +2560,7 @@
             </ul>
             
             <div class="highlight-box">
-                <p><strong>💡 Coachens lärdom:</strong></p>
+                <p><strong> Coachens lärdom:</strong></p>
                 <p>Avstånd behöver inte betyda brist på samhörighet – bara nya sätt att skapa den.</p>
             </div>
             
@@ -3470,7 +2576,7 @@
             </ul>
             
             <div class="info-box">
-                <p><strong>🏗️ Reflektion:</strong></p>
+                <p><strong>️ Reflektion:</strong></p>
                 <p>Den bästa träningsmiljön är den där skratt och fokus samsas på samma bana.</p>
             </div>
             
@@ -3493,7 +2599,7 @@
                 </p>
             </div>
             
-            <h2>📘 Sammanfattning</h2>
+            <h2> Sammanfattning</h2>
             <p>Coachning i Boule Pétanque är både en vetenskap och en konst. Det handlar om att förstå teknik, psykologi och mänsklig dynamik – och att väva ihop dem till en fungerande helhet.</p>
             
             <p>En coach som lyckas skapa trygghet, tydlighet och tillit har redan lagt grunden till framgång – oavsett resultatet på tavlan.</p>
@@ -3503,32 +2609,19 @@
                 <div class="text">"Som coach har jag lärt mig att matcher sällan vinns av den som kastar bäst. De vinns av laget som tänker klarast, håller ihop och vågar lita på varandra när det verkligen gäller."</div>
             </div>
             
-            <div class="navigation">
-                <a href="fordjupning.html" class="nav-btn secondary">← Föregående: Kapitel 14</a>
-                <a href="del4-kapitel16.html" class="nav-btn">Nästa: Klotfysik och Baneläsning →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="del4-kapitel16">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="language-switcher">
-        <a href="del4-kapitel16.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/part4-chapter16.html" title="English">🇬🇧</a>
-        <a href="fr/partie4-chapitre16.html" title="Français">🇫🇷</a>
+<!-- KAPITEL 16 -->
+<div class="chapter" id="ch16">
+    <div class="chapter-header">
+        <div class="chapter-number">Kapitel 16</div>
+        <h2>Klotfysik och baneläsning</h2>
+        <p>Vetenskap bakom spelet</p>
     </div>
-    
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Del 4 • Kapitel 16</div>
-            <h1 class="chapter-title">Klotfysik och Baneläsning</h1>
-            <p class="chapter-subtitle">Vetenskapen bakom det perfekta kastet</p>
-        </div>
-        
-        <div class="content">
+
             <h2>Introduktion till klotfysik</h2>
             <p>Pétanque är inte bara en sport – det är tillämpad fysik i praktiken. Varje kast involverar komplexa interaktioner mellan klotets massa, hastighet, rotation, banans lutning och markens beskaffenhet. Genom att förstå den grundläggande fysiken kan du förbättra din precision och fatta smartare beslut på banan.</p>
             
@@ -3816,26 +2909,19 @@
                 <div class="text">"Teknik gör dig bra. Fysik gör dig konsekvent. Och konsekvens vinner matcher. När du förstår varför klotet beter sig som det gör slutar du gissa — och börjar spela med verklig insikt."</div>
             </div>
             
-            <div class="navigation">
-                <a href="del4-kapitel15.html" class="nav-btn secondary">← Föregående: Kapitel 15</a>
-                <a href="innehall.html" class="nav-btn">Innehållsförteckning</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="bilaga-utrustning">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Bilaga A</div>
-            <h1 class="chapter-title">Utrustningsguide</h1>
-            <p class="chapter-subtitle">Tillverkning, storlek, hårdhet och modellval för pétanque-klot</p>
-        </div>
-        
-        <div class="content">
+<!-- BILAGA A -->
+<div class="chapter page-break" id="appA">
+    <div class="appendix-header">
+        <div class="appendix-label">Bilaga A</div>
+        <h2>Utrustningsguide</h2>
+        <p>Komplett guide till pétanque-utrustning</p>
+    </div>
+
             <h2>Tillverkning</h2>
             <p>Pétanque spelas alltid med metallklot. FIPJP:s officiella regler kräver att kloten är ihåliga och att de inte innehåller bly, sand, kvicksilver eller andra främmande material. De måste även bära tillverkarens namn och vikt och följa storleks- och viktkrav.</p>
             
@@ -4016,31 +3102,24 @@
                 <p><strong>Viktigt att komma ihåg:</strong> Dyrare klot = inte automatiskt bättre spelare. Teknik och träning är viktigast. Men ett klot som passar din hand och spelstil ger definitivt fördelar!</p>
             </div>
             
-            <div class="navigation">
-                <a href="del3-kapitel9.html" class="nav-btn secondary">← Föregående</a>
-                <a href="regler.html" class="nav-btn">Nästa: Regler →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="bilaga-regler">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header header-small">
-            <div class="chapter-number">Bilaga B</div>
-            <h1 class="chapter-title">Komplett regelbok</h1>
-            <p class="chapter-subtitle">Officiella regler för pétanque</p>
-        </div>
-        
-        <div class="content">
+<!-- BILAGA B -->
+<div class="chapter page-break" id="appB">
+    <div class="appendix-header">
+        <div class="appendix-label">Bilaga B</div>
+        <h2>Komplett regelbok</h2>
+        <p>Officiella regler för pétanque</p>
+    </div>
+
             <h2>Inledning</h2>
             <p>Pétanque är en del av boule-familjen – de franska spel där man kastar klot mot en liten träkula. Spelet är folkligt, socialt och precisionskrävande. Många lär sig grunderna på några minuter, men reglerna har en rik detaljeringsgrad för tävlingar.</p>
             
             <div class="highlight-box">
-                <h2>⚡ 10 regler som löser 90% av situationerna</h2>
+                <h2> 10 regler som löser 90% av situationerna</h2>
                 <p>Lär dig dessa regler först – de täcker de vanligaste situationerna i spelet:</p>
                 
                 <table>
@@ -4101,7 +3180,7 @@
                     </tr>
                 </table>
                 
-                <p><strong>💡 Protip:</strong> Dessa 10 regler täcker nästan alla situationer i socialt spel. Läs vidare för specialfall och tävlingsregler!</p>
+                <p><strong> Protip:</strong> Dessa 10 regler täcker nästan alla situationer i socialt spel. Läs vidare för specialfall och tävlingsregler!</p>
             </div>
             
             <h2>Grundläggande regler och spelidén</h2>
@@ -4294,34 +3373,27 @@
                 <li>Visa respekt mot motståndare, publik och domare</li>
             </ul>
             
-            <div class="navigation">
-                <a href="utrustning.html" class="nav-btn secondary">← Föregående</a>
-                <a href="ordlista.html" class="nav-btn">Nästa: Ordförklaringar →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="bilaga-ordlista">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">Bilaga C</div>
-            <h1 class="chapter-title">Ordförklaringar</h1>
-            <p class="chapter-subtitle">Franska facktermer och tekniska begrepp</p>
-        </div>
-        
-        <div class="content">
+<!-- BILAGA C -->
+<div class="chapter page-break" id="appC">
+    <div class="appendix-header">
+        <div class="appendix-label">Bilaga C</div>
+        <h2>Ordförklaringar</h2>
+        <p>Pétanque-termer från A till Ö</p>
+    </div>
+
             <p class="quote">En komplett guide till alla termer du behöver känna till för att förstå och prata om pétanque som en proffs.</p>
             
             <div class="info-box">
-                <h3>📖 Om ordlistan</h3>
+                <h3> Om ordlistan</h3>
                 <p>Pétanque har sitt ursprung i Frankrike och många av sportens facktermer är därför på franska. Dessa termer används internationellt och är en viktig del av spelets kultur. I denna ordlista hittar du både franska facktermer och svenska översättningar, samt tekniska begrepp som används i spelet.</p>
             </div>
             
-            <h2>🇫🇷 Franska facktermer</h2>
+            <h2> Franska facktermer</h2>
             
             <div class="highlight-box">
                 <h4>Boule (bul)</h4>
@@ -4407,7 +3479,7 @@
                 <p><strong>Exempel:</strong> "En skicklig tireur kan träffa 7 av 10 gånger på 8 meter."</p>
             </div>
             
-            <h2>🎯 Svenska och tekniska termer</h2>
+            <h2> Svenska och tekniska termer</h2>
             
             <table>
                 <tr>
@@ -4492,7 +3564,7 @@
                 </tr>
             </table>
             
-            <h2>📏 Mått och regler</h2>
+            <h2> Mått och regler</h2>
             
             <div class="info-box">
                 <ul>
@@ -4507,931 +3579,25 @@
             </div>
             
             <div class="highlight-box" style="margin-top: 30px;">
-                <h4>💡 Tips för att lära sig termerna</h4>
+                <h4> Tips för att lära sig termerna</h4>
                 <p>Använd de franska termerna när du spelar och pratar om pétanque. Det tar några veckor att vänja sig, men sedan blir det naturligt. Du kommer att märka att alla erfarna spelare använder dessa termer - det är en del av spelets charm och internationella kultur!</p>
             </div>
             
-            <div class="navigation">
-                <a href="regler.html" class="nav-btn secondary">← Bilaga B: Regelbok</a>
-                <a href="innehall.html" class="nav-btn">Tillbaka till innehåll →</a>
-            </div>
         </div>
     </div>
         </div>
-    </section>
+</div>
 
-    <section class="book-chapter" id="premium-arkiv">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-
-    <div class="container">
-        <div class="header">
-            <div class="chapter-number">📚 Historiskt Arkiv</div>
-            <h1 class="chapter-title">Alla Artiklar och Intervjuer</h1>
-            <p class="chapter-subtitle">En växande skattkammare av petanque-historia</p>
-        </div>
-
-        <div class="content">
-            <!-- Arkiv intro -->
-            <div class="archive-intro">
-                <h2>Välkommen till Arkivet</h2>
-                <p>Här hittar du alla tidigare månaders artiklar, intervjuer och nyheter från petanque-världen. Arkivet växer varje månad och innehåller material på alla sex språk.</p>
-                
-                <div class="archive-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">24</span>
-                        <span class="stat-label">Månader</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">87</span>
-                        <span class="stat-label">Artiklar</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">32</span>
-                        <span class="stat-label">Intervjuer</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">6</span>
-                        <span class="stat-label">Språk</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sökfunktion -->
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="🔍 Sök i arkivet... (spelare, turnering, regel, etc.)" id="searchInput">
-            </div>
-
-            <!-- Filter -->
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">Alla</button>
-                <button class="filter-btn" data-filter="intervju">🎤 Intervjuer</button>
-                <button class="filter-btn" data-filter="regler">📋 Regler</button>
-                <button class="filter-btn" data-filter="turnering">🏆 Turneringar</button>
-                <button class="filter-btn" data-filter="nyheter">📰 Nyheter</button>
-                <button class="filter-btn" data-filter="teknik">🎓 Teknik</button>
-            </div>
-
-            <!-- EXEMPEL: September 2025 -->
-            <div class="month-section">
-                <div class="month-header" onclick="toggleMonth('sep2025')">
-                    <h2 class="month-title">📅 September 2025</h2>
-                    <span class="month-count">5 artiklar</span>
-                </div>
-                <div class="month-content" id="sep2025">
-                    <div class="archive-article" data-category="intervju">
-                        <div class="archive-article-header">
-                            <span class="archive-article-date">28 september 2025</span>
-                            <span class="archive-article-category">🎤 Intervju</span>
-                        </div>
-                        <h3 class="archive-article-title">
-                            <span class="language-badge">🇸🇪</span>
-                            Intervju med Henri Lacroix: "Jag spelar fortfarande för kärleken till spelet"
-                        </h3>
-                        <p class="archive-article-excerpt">
-                            Den 78-årige legenden Henri Lacroix delar sina minnen från 50 år i petanque-världen...
-                        </p>
-                    </div>
-
-                    <div class="archive-article" data-category="turnering">
-                        <div class="archive-article-header">
-                            <span class="archive-article-date">15 september 2025</span>
-                            <span class="archive-article-category">🏆 Turnering</span>
-                        </div>
-                        <h3 class="archive-article-title">
-                            <span class="language-badge">🇫🇷</span>
-                            Championnat de France: Analyse complète
-                        </h3>
-                        <p class="archive-article-excerpt">
-                            Une analyse détaillée du championnat français avec des interviews exclusives...
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EXEMPEL: Augusti 2025 -->
-            <div class="month-section">
-                <div class="month-header" onclick="toggleMonth('aug2025')">
-                    <h2 class="month-title">📅 Augusti 2025</h2>
-                    <span class="month-count">7 artiklar</span>
-                </div>
-                <div class="month-content collapsed" id="aug2025">
-                    <div class="archive-article" data-category="regler">
-                        <div class="archive-article-header">
-                            <span class="archive-article-date">20 augusti 2025</span>
-                            <span class="archive-article-category">📋 Regler</span>
-                        </div>
-                        <h3 class="archive-article-title">
-                            <span class="language-badge">🇬🇧</span>
-                            New FIPJP Measurement Rules: A Deep Dive
-                        </h3>
-                        <p class="archive-article-excerpt">
-                            Understanding the new measurement protocols and why they were introduced...
-                        </p>
-                    </div>
-
-                    <div class="archive-article" data-category="intervju">
-                        <div class="archive-article-header">
-                            <span class="archive-article-date">5 augusti 2025</span>
-                            <span class="archive-article-category">🎤 Intervju</span>
-                        </div>
-                        <h3 class="archive-article-title">
-                            <span class="language-badge">🇹🇭</span>
-                            สัมภาษณ์พิเศษ: แชมป์โลกจากประเทศไทย
-                        </h3>
-                        <p class="archive-article-excerpt">
-                            การสัมภาษณ์พิเศษกับแชมป์โลกคนแรกจากประเทศไทย...
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- INSTRUKTIONER -->
-            <div class="highlight-box" style="margin-top: 50px;">
-                <h3>📝 Instruktioner för att uppdatera arkivet:</h3>
-                <ol>
-                    <li><strong>I slutet av varje månad:</strong> Kopiera allt innehåll från aktuellt.html</li>
-                    <li><strong>Skapa en ny month-section</strong> längst upp i arkivet med aktuell månad</li>
-                    <li><strong>Klistra in artiklarna</strong> som archive-article element</li>
-                    <li><strong>Uppdatera statistiken</strong> i archive-intro (antal månader, artiklar, intervjuer)</li>
-                    <li><strong>Språkbadges:</strong> Använd 🇸🇪 🇬🇧 🇫🇷 🇪🇸 🇩🇪 🇹🇭 för att visa vilket språk artikeln är på</li>
-                    <li><strong>Kategorier:</strong> Använd samma kategorier som i aktuellt.html</li>
-                </ol>
-                <p><strong>Tips:</strong> Äldre månader kan vara collapsed (class="collapsed") som standard för att hålla sidan överskådlig.</p>
-            </div>
-
-            <div class="navigation">
-                <a href="aktuellt.html" class="nav-btn">← Tillbaka till Aktuellt</a>
-                <a href="innehall.html" class="nav-btn secondary">Innehållsförteckning</a>
-            </div>
-        </div>
+<!-- ABOUT THE AUTHOR -->
+<div class="chapter page-break">
+    <div class="chapter-header">
+        <h2>Om författaren</h2>
     </div>
-        </div>
-    </section>
+    <p><strong>Mats Hamberg</strong> är en passionerad pétanque-spelare och författare som vill dela med sig av sin kärlek till sporten genom både praktiska guider och berättelser.</p>
+    <p>Pétanque kom in i hans liv 1993 via en arbetskamrat som ansåg att lunchrasterna absolut måste förgyllas av ett parti pétanque. Sedan dess har hans hjärta slagit hårt för spelet.</p>
+    <p>Denna bok är resultatet av årtionden av spelande, lärande och passion för pétanque.</p>
+</div>
 
-    <section class="book-chapter" id="resurs-fusklapp">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="cheatsheet">
-        <div class="header">
-            <h1>🎯 PÉTANQUE FUSKLAPP</h1>
-            <p>Allt du behöver på en sida - Matchrutin, Etikett, Taktik & Tekniker</p>
-        </div>
-        
-        <div class="two-column">
-            <div>
-                <div class="section">
-                    <h2>⚡ 10 Viktigaste reglerna</h2>
-                    <table>
-                        <tr>
-                            <th>#</th>
-                            <th>Regel</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Båda fötterna i cirkeln tills klotet landat</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Lillen 6-10m från cirkeln, 1m från hinder</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Laget utan närmaste klot kastar</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Poäng = antal klot närmare än motståndaren</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Första till 13 poäng vinner</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Klot/lillen över gräns = dött</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Död lillen = ny mène, samma lag kastar</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Mät bara vid tvivel</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Rör inte klot innan mätning</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Max 1 minut per kast i tävling</td>
-                        </tr>
-                    </table>
-                </div>
-                
-                <div class="section">
-                    <h2>🎯 Beslutsträd: Lägg eller Skjut?</h2>
-                    <div class="box">
-                        <h3>SKJUT när:</h3>
-                        <ul>
-                            <li>Motståndaren <30 cm från lillen + fri bana</li>
-                            <li>Sista klotet + du behöver poäng</li>
-                            <li>2+ motståndarklot inom 20 cm</li>
-                        </ul>
-                    </div>
-                    <div class="box">
-                        <h3>LÄGG när:</h3>
-                        <ul>
-                            <li>Du har tydlig donnée du träffar ofta</li>
-                            <li>Du är osäker skytt (<40% träff)</li>
-                            <li>Du leder med 11-12 poäng (defensivt)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h2>📐 Tre punkter för perfekt point</h2>
-                    <div class="quick-ref">
-                        <div class="quick-ref-item">
-                            <strong>1. Lillen</strong>
-                            Målet
-                        </div>
-                        <div class="quick-ref-item">
-                            <strong>2. Parkering</strong>
-                            Där klotet stannar
-                        </div>
-                        <div class="quick-ref-item">
-                            <strong>3. Donnée</strong>
-                            Landningspunkt
-                        </div>
-                    </div>
-                    <div class="highlight">
-                        <strong>💡 Gyllene regel:</strong> "Boule devant, boule d'argent" - Lägg alltid framför lillen (30-50 cm)!
-                    </div>
-                </div>
-            </div>
-            
-            <div>
-                <div class="section">
-                    <h2>🏹 Kastbanor & Underlag</h2>
-                    <table>
-                        <tr>
-                            <th>Underlag</th>
-                            <th>Kasttyp</th>
-                        </tr>
-                        <tr>
-                            <td>Mjuk grus/sand</td>
-                            <td>Låg rullning - klotet stannar snabbt</td>
-                        </tr>
-                        <tr>
-                            <td>Hård/stenig</td>
-                            <td>Hög lob med backspin - undvik studs</td>
-                        </tr>
-                        <tr>
-                            <td>Asfalt</td>
-                            <td>Medelhög lob - kontrollerad landning</td>
-                        </tr>
-                        <tr>
-                            <td>Lutande bana</td>
-                            <td>Lägg uppför - kompensera för rullning</td>
-                        </tr>
-                    </table>
-                </div>
-                
-                <div class="section">
-                    <h2>🎭 Etikett & God sed</h2>
-                    <div class="box">
-                        <ul>
-                            <li>✓ Stå still och tyst när motståndaren kastar</li>
-                            <li>✓ Gå aldrig mellan spelare och lillen</li>
-                            <li>✓ Vänta med att ta bort klot tills alla är överens</li>
-                            <li>✓ Använd godkänt mätinstrument, inte fötterna</li>
-                            <li>✓ Tacka motståndaren efter matchen</li>
-                            <li>✗ Störa, prata eller röra sig under kast</li>
-                            <li>✗ Flytta klot innan mätning</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h2>🔧 Matchrutin (före/under/efter)</h2>
-                    <div class="box">
-                        <h3>Före matchen (15 min):</h3>
-                        <ul>
-                            <li>Dynamisk stretching + rörlighetsövningar</li>
-                            <li>20 uppvärmningskast (variera avstånd)</li>
-                            <li>3 djupa andetag + visualisera framgång</li>
-                        </ul>
-                    </div>
-                    <div class="box">
-                        <h3>Under matchen:</h3>
-                        <ul>
-                            <li>Före varje kast: Djupandas, visualisera bana</li>
-                            <li>Sikta på donnée, inte lillen</li>
-                            <li>Kommunicera med laget före varje beslut</li>
-                        </ul>
-                    </div>
-                    <div class="box">
-                        <h3>Efter matchen:</h3>
-                        <ul>
-                            <li>Utvärdera: Vad gick bra? Vad kan förbättras?</li>
-                            <li>Logga i träningsjournal</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h2>💪 Snabba träningstips</h2>
-                    <div class="quick-ref">
-                        <div class="quick-ref-item">
-                            <strong>Fickduken</strong>
-                            6/10 träffar på 7m
-                        </div>
-                        <div class="quick-ref-item">
-                            <strong>6-boule</strong>
-                            50% träffsäkerhet
-                        </div>
-                        <div class="quick-ref-item">
-                            <strong>Tre zoner</strong>
-                            4/5 inom 50cm
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="highlight" style="margin-top: 15px; text-align: center;">
-            <strong>🎯 Kom ihåg:</strong> Teknik + Taktik + Mental styrka = Framgång | Träna smart 3-4x/vecka | Dokumentera din utveckling
-        </div>
-    </div>
-        </div>
-    </section>
-
-    <section class="book-chapter" id="resurs-traningsjournal">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <button class="print-btn" onclick="window.print()">🖨️ Skriv ut</button>
-    
-    <div class="journal">
-        <div class="header">
-            <h1>📊 PÉTANQUE TRÄNINGSJOURNAL</h1>
-            <p>Dokumentera din utveckling - Från nybörjare till mästare</p>
-        </div>
-        
-        <div class="info-box">
-            <h3>📝 Hur du använder träningsjournalen:</h3>
-            <ul>
-                <li><strong>Fyll i efter varje träningspass</strong> - Dokumentera direkt medan minnet är färskt</li>
-                <li><strong>Var ärlig och specifik</strong> - Skriv både framgångar och utmaningar</li>
-                <li><strong>Sätt konkreta mål</strong> - Vad vill du förbättra nästa gång?</li>
-                <li><strong>Granska regelbundet</strong> - Titta tillbaka varje månad för att se din utveckling</li>
-                <li><strong>Skriv ut eller spara digitalt</strong> - Använd som PDF eller fyll i på papper</li>
-            </ul>
-        </div>
-        
-        <!-- Träningspass 1 -->
-        <div class="session">
-            <div class="session-header">
-                <div class="field">
-                    <label>📅 Datum:</label>
-                    <input type="date">
-                </div>
-                <div class="field">
-                    <label>⏱️ Tid (min):</label>
-                    <input type="number" placeholder="45">
-                </div>
-                <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
-                    <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="point1">
-                        <label for="point1">Point/Läggning</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="skott1">
-                        <label for="skott1">Skott/Tireur</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="donnee1">
-                        <label for="donnee1">Donnée-precision</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="backspin1">
-                        <label for="backspin1">Backspin/Kontroll</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="match1">
-                        <label for="match1">Matchsimulering</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="taktik1">
-                        <label for="taktik1">Taktik/Beslut</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="metrics">
-                <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
-                    <input type="text" placeholder="6/10">
-                </div>
-                <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
-                    <input type="text" placeholder="4/8 = 50%">
-                </div>
-                <div class="metric-box">
-                    <label>Antal carreau:</label>
-                    <input type="text" placeholder="2">
-                </div>
-                <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
-                    <input type="text" placeholder="5/10">
-                </div>
-                <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
-                    <input type="text" placeholder="3/10">
-                </div>
-                <div class="metric-box">
-                    <label>Bästa avstånd:</label>
-                    <input type="text" placeholder="7m">
-                </div>
-            </div>
-            
-            <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
-                <textarea placeholder="T.ex. 'Bra kontroll på backspin, klotet stannade inom 30cm på 7 av 10 kast'"></textarea>
-            </div>
-            
-            <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
-                <textarea placeholder="T.ex. 'Skott på längre avstånd (>8m) - missar ofta åt höger'"></textarea>
-            </div>
-            
-            <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
-                <textarea placeholder="T.ex. 'Fokusera på handledsteknik vid release. Mål: 7/10 träffar på donnée vid 8m'"></textarea>
-            </div>
-        </div>
-        
-        <!-- Träningspass 2 -->
-        <div class="session">
-            <div class="session-header">
-                <div class="field">
-                    <label>📅 Datum:</label>
-                    <input type="date">
-                </div>
-                <div class="field">
-                    <label>⏱️ Tid (min):</label>
-                    <input type="number" placeholder="45">
-                </div>
-                <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
-                    <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="point2">
-                        <label for="point2">Point/Läggning</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="skott2">
-                        <label for="skott2">Skott/Tireur</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="donnee2">
-                        <label for="donnee2">Donnée-precision</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="backspin2">
-                        <label for="backspin2">Backspin/Kontroll</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="match2">
-                        <label for="match2">Matchsimulering</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="taktik2">
-                        <label for="taktik2">Taktik/Beslut</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="metrics">
-                <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
-                    <input type="text" placeholder="6/10">
-                </div>
-                <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
-                    <input type="text" placeholder="4/8 = 50%">
-                </div>
-                <div class="metric-box">
-                    <label>Antal carreau:</label>
-                    <input type="text" placeholder="2">
-                </div>
-                <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
-                    <input type="text" placeholder="5/10">
-                </div>
-                <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
-                    <input type="text" placeholder="3/10">
-                </div>
-                <div class="metric-box">
-                    <label>Bästa avstånd:</label>
-                    <input type="text" placeholder="7m">
-                </div>
-            </div>
-            
-            <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
-                <textarea></textarea>
-            </div>
-            
-            <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
-                <textarea></textarea>
-            </div>
-            
-            <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
-                <textarea></textarea>
-            </div>
-        </div>
-        
-        <!-- Träningspass 3 -->
-        <div class="session">
-            <div class="session-header">
-                <div class="field">
-                    <label>📅 Datum:</label>
-                    <input type="date">
-                </div>
-                <div class="field">
-                    <label>⏱️ Tid (min):</label>
-                    <input type="number" placeholder="45">
-                </div>
-                <div class="field">
-                    <label>🌤️ Väder/Underlag:</label>
-                    <select>
-                        <option>Soligt - Grus</option>
-                        <option>Molnigt - Grus</option>
-                        <option>Regn - Grus</option>
-                        <option>Soligt - Asfalt</option>
-                        <option>Molnigt - Asfalt</option>
-                        <option>Soligt - Sand</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="goals-section">
-                <h4>🎯 Dagens fokus (kryssa för vad du tränade):</h4>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="point3">
-                        <label for="point3">Point/Läggning</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="skott3">
-                        <label for="skott3">Skott/Tireur</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="donnee3">
-                        <label for="donnee3">Donnée-precision</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="backspin3">
-                        <label for="backspin3">Backspin/Kontroll</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="match3">
-                        <label for="match3">Matchsimulering</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="taktik3">
-                        <label for="taktik3">Taktik/Beslut</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="metrics">
-                <div class="metric-box">
-                    <label>Point-träffar (inom 50cm):</label>
-                    <input type="text" placeholder="6/10">
-                </div>
-                <div class="metric-box">
-                    <label>Skott-träffsäkerhet:</label>
-                    <input type="text" placeholder="4/8 = 50%">
-                </div>
-                <div class="metric-box">
-                    <label>Antal carreau:</label>
-                    <input type="text" placeholder="2">
-                </div>
-                <div class="metric-box">
-                    <label>Donnée-precision (6m):</label>
-                    <input type="text" placeholder="5/10">
-                </div>
-                <div class="metric-box">
-                    <label>Donnée-precision (8m):</label>
-                    <input type="text" placeholder="3/10">
-                </div>
-                <div class="metric-box">
-                    <label>Bästa avstånd:</label>
-                    <input type="text" placeholder="7m">
-                </div>
-            </div>
-            
-            <div class="notes">
-                <h4>✅ Vad gick bra idag?</h4>
-                <textarea></textarea>
-            </div>
-            
-            <div class="notes">
-                <h4>⚠️ Vad behöver förbättras?</h4>
-                <textarea></textarea>
-            </div>
-            
-            <div class="notes">
-                <h4>🎯 Nästa steg / Mål till nästa träning:</h4>
-                <textarea></textarea>
-            </div>
-        </div>
-        
-        <div class="info-box" style="margin-top: 20px;">
-            <h3>💡 Tips för framgång:</h3>
-            <ul>
-                <li>Träna 3-4 gånger per vecka för bäst resultat</li>
-                <li>Variera mellan point-fokus, skott-fokus och matchsimulering</li>
-                <li>Filma dig själv regelbundet och analysera tekniken</li>
-                <li>Sätt realistiska mål och fira små framsteg</li>
-                <li>Efter 4-8 veckor konsekvent träning kommer du se tydlig förbättring!</li>
-            </ul>
-        </div>
-    </div>
-        </div>
-    </section>
-
-    <section class="book-chapter" id="resurs-matchprotokoll">
-        <div class="book-chapter-inner">
-            <a href="innehall.html" class="toc-button">Innehåll</a>
-    <div class="language-switcher">
-        <a href="matchprotokoll.html" class="active" title="Svenska">🇸🇪</a>
-        <a href="en/match-protocol.html" title="English">🇬🇧</a>
-        <a href="fr/protocole-match.html" title="Français">🇫🇷</a>
-        <a href="es/matchprotokoll.html" title="Español">🇪🇸</a>
-    </div>
-    
-    <div class="match-protocol">
-        <div class="protocol-header">
-            <h1>📋 Matchprotokoll – Pétanque</h1>
-            <div class="button-group">
-                <button class="btn" onclick="window.print()">🖨️ Skriv ut</button>
-                <button class="btn" onclick="resetProtocol()">🔄 Återställ</button>
-            </div>
-        </div>
-        
-        <p class="save-hint">Formuläret sparas automatiskt på denna enhet.</p>
-        
-        <!-- Match Info -->
-        <div class="section">
-            <h2>Matchinformation</h2>
-            <div class="grid-2">
-                <div class="field">
-                    <label>Datum</label>
-                    <input type="date" id="date" onchange="saveData()">
-                </div>
-                <div class="field">
-                    <label>Plats</label>
-                    <input type="text" id="place" placeholder="T.ex. Klubbens bana" onchange="saveData()">
-                </div>
-                <div class="field">
-                    <label>Underlag</label>
-                    <select id="surface" onchange="saveData()">
-                        <option>Sand</option>
-                        <option>Grus</option>
-                        <option>Hårt</option>
-                        <option>Annat</option>
-                    </select>
-                </div>
-                <div class="grid-3">
-                    <div class="field">
-                        <label>Väder</label>
-                        <input type="text" id="weather" placeholder="Soligt" onchange="saveData()">
-                    </div>
-                    <div class="field">
-                        <label>°C</label>
-                        <input type="number" id="temp" placeholder="20" onchange="saveData()">
-                    </div>
-                    <div class="field">
-                        <label>Vind (m/s)</label>
-                        <input type="number" id="wind" placeholder="3" onchange="saveData()">
-                    </div>
-                </div>
-                <div class="field">
-                    <label>Matchtyp</label>
-                    <select id="matchType" onchange="saveData()">
-                        <option>Träning</option>
-                        <option>Tävling</option>
-                        <option>Cup</option>
-                        <option>Liga</option>
-                        <option>Annat</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Teams -->
-        <div class="grid-2">
-            <div class="section">
-                <h2>Lag 1</h2>
-                <div class="field">
-                    <label>Namn</label>
-                    <input type="text" id="t1Name" placeholder="Lagnamn" onchange="saveData()">
-                </div>
-                <div class="field">
-                    <label>Spelare</label>
-                    <input type="text" id="t1Players" placeholder="Spelare 1, Spelare 2, Spelare 3" onchange="saveData()">
-                </div>
-                <div class="field">
-                    <label>Klubb</label>
-                    <input type="text" id="t1Club" placeholder="Klubbnamn" onchange="saveData()">
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>Lag 2</h2>
-                <div class="field">
-                    <label>Namn</label>
-                    <input type="text" id="t2Name" placeholder="Lagnamn" onchange="saveData()">
-                </div>
-                <div class="field">
-                    <label>Spelare</label>
-                    <input type="text" id="t2Players" placeholder="Spelare 1, Spelare 2, Spelare 3" onchange="saveData()">
-                </div>
-                <div class="field">
-                    <label>Klubb</label>
-                    <input type="text" id="t2Club" placeholder="Klubbnamn" onchange="saveData()">
-                </div>
-            </div>
-        </div>
-        
-        <!-- Rounds Table -->
-        <div class="section">
-            <h2>Omgångar</h2>
-            <table class="rounds-table">
-                <thead>
-                    <tr>
-                        <th>Omgång</th>
-                        <th>Poäng Lag 1</th>
-                        <th>Poäng Lag 2</th>
-                        <th>Notering</th>
-                    </tr>
-                </thead>
-                <tbody id="roundsBody">
-                    <!-- Generated by JS -->
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>Totalt</td>
-                        <td id="total1" style="text-align: center;">0</td>
-                        <td id="total2" style="text-align: center;">0</td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-        
-        <!-- Summary & Analysis -->
-        <div class="grid-2">
-            <div class="section">
-                <h2>Sammanfattning</h2>
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <div class="label">Totalt – Lag 1</div>
-                        <div class="value" id="sumTotal1">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Totalt – Lag 2</div>
-                        <div class="value" id="sumTotal2">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Vinnande lag</div>
-                        <div class="value" id="winner">-</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Antal spelade omgångar</div>
-                        <div class="value" id="roundsPlayed">0</div>
-                    </div>
-                </div>
-                
-                <div class="field" style="margin-top: 15px;">
-                    <label>Taktisk notering före match</label>
-                    <textarea id="preNote" placeholder="T.ex. 'Fokus på långa kast; motståndare svag på >8 m'" onchange="saveData()"></textarea>
-                </div>
-                
-                <div class="field">
-                    <label>Reflektion efter match</label>
-                    <textarea id="postNote" placeholder="T.ex. 'Bra skott i slutet; träna mer på donnée-precision'" onchange="saveData()"></textarea>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>Automatisk analys</h2>
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <div class="label">Vunna omgångar – Lag 1</div>
-                        <div class="value" id="won1">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Vunna omgångar – Lag 2</div>
-                        <div class="value" id="won2">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Snittpoäng/omgång – Lag 1</div>
-                        <div class="value" id="avg1">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Snittpoäng/omgång – Lag 2</div>
-                        <div class="value" id="avg2">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Shutouts (0 poäng) – Lag 1</div>
-                        <div class="value" id="shut1">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Shutouts (0 poäng) – Lag 2</div>
-                        <div class="value" id="shut2">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Stora omgångar (≥3p) – Lag 1</div>
-                        <div class="value" id="big1">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Stora omgångar (≥3p) – Lag 2</div>
-                        <div class="value" id="big2">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Längsta segersvit – Lag 1</div>
-                        <div class="value" id="streak1">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Längsta segersvit – Lag 2</div>
-                        <div class="value" id="streak2">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Poängskillnad</div>
-                        <div class="value" id="diff">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="label">Avgörande omgångar</div>
-                        <div class="value" id="clutch">Nej</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Signatures -->
-        <div class="section">
-            <h2>Underskrifter</h2>
-            <div class="grid-2">
-                <div class="signature-line">Lag 1</div>
-                <div class="signature-line">Lag 2</div>
-            </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f9f9f9; border-radius: 12px;">
-            <p style="font-size: 14px; color: #666;">
-                <strong>💡 Tips:</strong> Använd Ctrl/Cmd+P för att skriva ut eller spara som PDF.
-                Formuläret sparas automatiskt i din webbläsare.
-            </p>
-        </div>
-    </div>
-        </div>
-    </section>
-
+</div> <!-- end book-content -->
 </body>
 </html>

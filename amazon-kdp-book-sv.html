@@ -457,6 +457,11 @@
     <div class="toc-item"><a href="#appA">Bilaga A — Utrustningsguide</a></div>
     <div class="toc-item"><a href="#appB">Bilaga B — Komplett regelbok</a></div>
     <div class="toc-item"><a href="#appC">Bilaga C — Ordförklaringar</a></div>
+    <div class="toc-item"><a href="#appD">Bilaga D — Bygga en boulebana</a></div>
+    <div class="toc-part">Resurser</div>
+    <div class="toc-item"><a href="#resurs-fusklapp">Fusklapp — Allt du behöver på en sida</a></div>
+    <div class="toc-item"><a href="#resurs-traningsjournal">Träningsjournal — Dokumentera din utveckling</a></div>
+    <div class="toc-item"><a href="#resurs-matchprotokoll">Matchprotokoll — Dokumentera dina matcher</a></div>
 </div>
 
 <!-- FOREWORD -->
@@ -511,12 +516,155 @@
                 </ol>
             </div>
             
+<div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg" style="max-width: 420px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <!-- Bana (sidolinjer) -->
+                    <line x1="60" y1="30" x2="60" y2="670" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,4"/>
+                    <line x1="440" y1="30" x2="440" y2="670" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,4"/>
+                    
+                    <!-- Kastcirkel -->
+                    <circle cx="250" cy="600" r="28" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <circle cx="250" cy="600" r="2" fill="#222"/>
+                    <text x="250" y="655" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#333">Kastcirkel (35–50 cm)</text>
+                    
+                    <!-- Avståndslinje 7–8 m -->
+                    <line x1="280" y1="600" x2="280" y2="145" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+                    <text x="290" y="380" font-family="Georgia, serif" font-size="11" fill="#888" transform="rotate(-90, 290, 380)">7–8 meter</text>
+                    
+                    <!-- Lillen -->
+                    <circle cx="250" cy="140" r="8" fill="#222"/>
+                    <text x="250" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#333">Lillen</text>
+                    
+                    <!-- Klot (6 st runt lillen) -->
+                    <!-- Lag A: fyllda -->
+                    <circle cx="230" cy="165" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="222" y1="165" x2="238" y2="165" stroke="#222" stroke-width="1.5"/>
+                    <line x1="230" y1="157" x2="230" y2="173" stroke="#222" stroke-width="1.5"/>
+                    
+                    <circle cx="275" cy="125" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="267" y1="125" x2="283" y2="125" stroke="#222" stroke-width="1.5"/>
+                    <line x1="275" y1="117" x2="275" y2="133" stroke="#222" stroke-width="1.5"/>
+                    
+                    <circle cx="215" cy="115" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="207" y1="115" x2="223" y2="115" stroke="#222" stroke-width="1.5"/>
+                    <line x1="215" y1="107" x2="215" y2="123" stroke="#222" stroke-width="1.5"/>
+                    
+                    <!-- Lag B: randiga -->
+                    <circle cx="265" cy="170" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="255" y1="166" x2="275" y2="166" stroke="#222" stroke-width="1"/>
+                    <line x1="255" y1="174" x2="275" y2="174" stroke="#222" stroke-width="1"/>
+                    
+                    <circle cx="225" cy="145" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="215" y1="141" x2="235" y2="141" stroke="#222" stroke-width="1"/>
+                    <line x1="215" y1="149" x2="235" y2="149" stroke="#222" stroke-width="1"/>
+                    
+                    <circle cx="270" cy="100" r="14" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="260" y1="96" x2="280" y2="96" stroke="#222" stroke-width="1"/>
+                    <line x1="260" y1="104" x2="280" y2="104" stroke="#222" stroke-width="1"/>
+                    
+                    <!-- Etikett: Klot -->
+                    <text x="330" y="150" font-family="Georgia, serif" font-size="12" fill="#555">← Klot (6 st)</text>
+                    
+                    <!-- Förklaring (legend) -->
+                    <rect x="100" y="50" width="300" height="45" rx="3" fill="none" stroke="#ddd" stroke-width="1"/>
+                    <circle cx="140" cy="72" r="9" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <line x1="134" y1="72" x2="146" y2="72" stroke="#222" stroke-width="1.2"/>
+                    <line x1="140" y1="66" x2="140" y2="78" stroke="#222" stroke-width="1.2"/>
+                    <text x="155" y="76" font-family="Georgia, serif" font-size="11" fill="#555">Lag A (+)</text>
+                    
+                    <circle cx="240" cy="72" r="9" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <line x1="233" y1="69" x2="247" y2="69" stroke="#222" stroke-width="1"/>
+                    <line x1="233" y1="75" x2="247" y2="75" stroke="#222" stroke-width="1"/>
+                    <text x="255" y="76" font-family="Georgia, serif" font-size="11" fill="#555">Lag B (=)</text>
+                    
+                    <circle cx="340" cy="72" r="5" fill="#222"/>
+                    <text x="350" y="76" font-family="Georgia, serif" font-size="11" fill="#555">Lillen</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Toppvy: En typisk pétanque-situation med kastcirkel, lillen och sex klot.</p>
+            </div>
+            
             <h3>Några regler att känna till</h3>
             <ul>
                 <li><strong>Kastteknik:</strong> Metallkloten kastas med handflatan nedåt för att ge klotet en stabil rörelse och bättre kontroll mot underlaget.</li>
                 <li><strong>Döda klot:</strong> Om ett klot hamnar i ett hinder eller utanför spelområdet blir det dött och tas ur spel för resten av omgången.</li>
                 <li><strong>Godkända klot:</strong> Endast metallklot godkända av FIPJP får användas i tävlingsspel; diameter 70,5–80 mm och vikt 650–800 g.</li>
             </ul>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="max-width: 460px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <!-- Rubriker -->
+                    <text x="140" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#222">RÄTT</text>
+                    <text x="390" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#222">FEL</text>
+                    
+                    <!-- Avdelare -->
+                    <line x1="260" y1="15" x2="260" y2="265" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- === RÄTT SIDA === -->
+                    <!-- Mark/golv -->
+                    <line x1="30" y1="230" x2="250" y2="230" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Kastcirkel (sidovy = en ellips) -->
+                    <ellipse cx="140" cy="230" rx="55" ry="6" fill="none" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Vänster ben -->
+                    <line x1="115" y1="100" x2="112" y2="175" stroke="#222" stroke-width="3"/>
+                    <!-- Vänster vad -->
+                    <line x1="112" y1="175" x2="115" y2="222" stroke="#222" stroke-width="3"/>
+                    <!-- Vänster fot -->
+                    <path d="M 100 224 Q 105 218 115 222 L 130 224 Q 132 230 100 230 Z" fill="#222"/>
+                    
+                    <!-- Höger ben -->
+                    <line x1="155" y1="100" x2="160" y2="175" stroke="#222" stroke-width="3"/>
+                    <!-- Höger vad -->
+                    <line x1="160" y1="175" x2="162" y2="222" stroke="#222" stroke-width="3"/>
+                    <!-- Höger fot -->
+                    <path d="M 148 224 Q 153 218 162 222 L 178 224 Q 180 230 148 230 Z" fill="#222"/>
+                    
+                    <!-- Knä-markering -->
+                    <circle cx="112" cy="175" r="4" fill="#555"/>
+                    <circle cx="160" cy="175" r="4" fill="#555"/>
+                    
+                    <!-- Bock ✓ -->
+                    <circle cx="140" cy="60" r="18" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="140" y="67" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#222">✓</text>
+                    
+                    <!-- Etikett -->
+                    <text x="140" y="258" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#555">Båda fötterna i cirkeln</text>
+                    
+                    <!-- === FEL SIDA === -->
+                    <!-- Mark/golv -->
+                    <line x1="270" y1="230" x2="500" y2="230" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Kastcirkel (sidovy) -->
+                    <ellipse cx="370" cy="230" rx="55" ry="6" fill="none" stroke="#222" stroke-width="2"/>
+                    
+                    <!-- Vänster ben (innanför) -->
+                    <line x1="355" y1="100" x2="350" y2="175" stroke="#222" stroke-width="3"/>
+                    <line x1="350" y1="175" x2="352" y2="222" stroke="#222" stroke-width="3"/>
+                    <path d="M 338 224 Q 343 218 352 222 L 368 224 Q 370 230 338 230 Z" fill="#222"/>
+                    
+                    <!-- Höger ben (UTANFÖR cirkeln!) -->
+                    <line x1="400" y1="100" x2="420" y2="175" stroke="#222" stroke-width="3"/>
+                    <line x1="420" y1="175" x2="435" y2="222" stroke="#222" stroke-width="3"/>
+                    <path d="M 422 224 Q 427 218 435 222 L 452 224 Q 454 230 422 230 Z" fill="#222"/>
+                    
+                    <!-- Knä-markering -->
+                    <circle cx="350" cy="175" r="4" fill="#555"/>
+                    <circle cx="420" cy="175" r="4" fill="#555"/>
+                    
+                    <!-- Cirkel runt felet -->
+                    <ellipse cx="440" cy="224" rx="22" ry="14" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    
+                    <!-- Kryss ✗ -->
+                    <circle cx="390" cy="60" r="18" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="390" y="68" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#222">✗</text>
+                    
+                    <!-- Etikett -->
+                    <text x="390" y="258" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#555">En fot utanför = regelbrott</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Sidovy: Fotregeln — båda fötterna måste vara innanför kastcirkeln tills klotet landat.</p>
+            </div>
+
             
             <h2>Skillnader mellan pétanque, boule och boccia/bocce</h2>
             
@@ -686,6 +834,38 @@
                 <p><strong>Viktig princip:</strong> <em>"Boule devant, boule d'argent"</em> – "en boule framför lillen är guld värd". Parkeringen bör ligga en bit framför lillen.</p>
             </div>
             
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 360 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 340px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <line x1="50" y1="20" x2="50" y2="570" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,4"/>
+                    <line x1="310" y1="20" x2="310" y2="570" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,4"/>
+                    <circle cx="180" cy="500" r="26" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <circle cx="180" cy="500" r="2" fill="#222"/>
+                    <text x="180" y="545" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#333">Kastcirkel</text>
+                    <line x1="180" y1="474" x2="180" y2="255" stroke="#999" stroke-width="1.5" stroke-dasharray="6,4"/>
+                    <text x="200" y="370" font-family="Georgia, serif" font-size="10" fill="#888" transform="rotate(-90, 200, 370)">Kastbana</text>
+                    <circle cx="180" cy="240" r="16" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="5,3"/>
+                    <circle cx="180" cy="240" r="3" fill="#222"/>
+                    <text x="215" y="236" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#333">3. Donnee</text>
+                    <text x="215" y="250" font-family="Georgia, serif" font-size="10" fill="#666">(landningspunkt)</text>
+                    <path d="M 180 224 Q 175 190 178 160" fill="none" stroke="#aaa" stroke-width="1.2" stroke-dasharray="3,3"/>
+                    <text x="145" y="195" font-family="Georgia, serif" font-size="9" fill="#aaa" text-anchor="end">rull</text>
+                    <circle cx="178" cy="145" r="16" fill="none" stroke="#222" stroke-width="2"/>
+                    <circle cx="178" cy="145" r="3" fill="#222"/>
+                    <text x="210" y="141" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#333">2. Parkering</text>
+                    <text x="210" y="155" font-family="Georgia, serif" font-size="10" fill="#666">(stoppunkt)</text>
+                    <line x1="145" y1="130" x2="145" y2="90" stroke="#bbb" stroke-width="1"/>
+                    <line x1="140" y1="130" x2="150" y2="130" stroke="#bbb" stroke-width="1"/>
+                    <line x1="140" y1="90" x2="150" y2="90" stroke="#bbb" stroke-width="1"/>
+                    <text x="135" y="115" font-family="Georgia, serif" font-size="9" fill="#999" text-anchor="end">30-50 cm</text>
+                    <circle cx="180" cy="80" r="8" fill="#222"/>
+                    <text x="210" y="77" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#333">1. Lillen</text>
+                    <text x="210" y="91" font-family="Georgia, serif" font-size="10" fill="#666">(cochonnet)</text>
+                    <rect x="70" y="560" width="220" height="28" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+                    <text x="180" y="579" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#333">Boule devant = guld</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Toppvy: De tre punkterna — Lillen, Parkering och Donnée.</p>
+            </div>
+            
             <h3>Välj kasttyp efter underlaget</h3>
             <ul>
                 <li><strong>Jämn, mjuk mark:</strong> Rulla klotet lågt</li>
@@ -696,6 +876,37 @@
             <h3>Genomför kastet</h3>
             <div class="info-box">
                 <p><strong>Viktigt:</strong> Sikta mot din donnée, inte mot lillen. Gör en lugn baksväng, böj knäna lätt och kasta med en mjuk rörelse. Släpp klotet lågt vid rullkast och högre vid lobbar. Låt handleden sträckas ut vid release för underskruv (backspin) och låt armen följa kastets riktning.</p>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <line x1="30" y1="240" x2="490" y2="240" stroke="#222" stroke-width="2"/>
+                    <ellipse cx="70" cy="240" rx="25" ry="5" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="70" y="260" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">Kastcirkel</text>
+                    <rect x="390" y="232" width="70" height="8" rx="2" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    <text x="425" y="260" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">Landningszon</text>
+                    <path d="M 95 237 Q 200 225 390 236" fill="none" stroke="#222" stroke-width="2"/>
+                    <circle cx="390" cy="236" r="4" fill="#222"/>
+                    <text x="240" y="222" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#333">1. Rullkast</text>
+                    <text x="240" y="234" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">(mjuk mark)</text>
+                    <path d="M 95 235 Q 220 140 410 236" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="8,4"/>
+                    <circle cx="410" cy="236" r="4" fill="#222"/>
+                    <text x="215" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#333">2. Halv-lobb</text>
+                    <text x="215" y="164" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">(hard mark)</text>
+                    <path d="M 95 233 Q 250 40 430 236" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="4,4"/>
+                    <circle cx="430" cy="236" r="4" fill="#222"/>
+                    <text x="260" y="62" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#333">3. Hog lobb</text>
+                    <text x="260" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#666">(stenig mark)</text>
+                    <line x1="480" y1="240" x2="480" y2="50" stroke="#bbb" stroke-width="1" stroke-dasharray="3,3"/>
+                    <text x="495" y="150" font-family="Georgia, serif" font-size="9" fill="#aaa" transform="rotate(-90, 495, 150)">Hojd</text>
+                    <line x1="50" y1="282" x2="80" y2="282" stroke="#222" stroke-width="2"/>
+                    <text x="85" y="286" font-family="Georgia, serif" font-size="9" fill="#555">Rullkast</text>
+                    <line x1="160" y1="282" x2="190" y2="282" stroke="#222" stroke-width="2" stroke-dasharray="8,4"/>
+                    <text x="195" y="286" font-family="Georgia, serif" font-size="9" fill="#555">Halv-lobb</text>
+                    <line x1="280" y1="282" x2="310" y2="282" stroke="#222" stroke-width="2" stroke-dasharray="4,4"/>
+                    <text x="315" y="286" font-family="Georgia, serif" font-size="9" fill="#555">Hog lobb</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Sidovy: Tre kastbanor — rullkast, halv-lobb och hög lobb beroende på underlag.</p>
             </div>
             
             <h3>Träna systematiskt</h3>
@@ -817,6 +1028,65 @@
             
             <h3>3. Promotera dina klot</h3>
             <p>Ligger dina klot (boules) framför lillen kan du i senare kast skjuta på dem för att knuffa dem närmare lillen. Var försiktig så att du inte knuffar ett motståndarklot istället.</p>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <text x="90" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#222">A) Klot framfor</text>
+                    <text x="270" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#222">B) Backstop</text>
+                    <text x="450" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#222">C) Promotera</text>
+                    
+                    <line x1="180" y1="10" x2="180" y2="290" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    <line x1="360" y1="10" x2="360" y2="290" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    
+                    <!-- Panel A: Klot framfor lillen -->
+                    <circle cx="90" cy="100" r="6" fill="#222"/>
+                    <text x="90" y="88" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">Lillen</text>
+                    <circle cx="90" cy="165" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="82" y1="165" x2="98" y2="165" stroke="#222" stroke-width="1.5"/>
+                    <line x1="90" y1="157" x2="90" y2="173" stroke="#222" stroke-width="1.5"/>
+                    <text x="115" y="168" font-family="Georgia, serif" font-size="9" fill="#666">Ditt klot</text>
+                    <line x1="65" y1="108" x2="65" y2="152" stroke="#bbb" stroke-width="1"/>
+                    <line x1="60" y1="108" x2="70" y2="108" stroke="#bbb" stroke-width="1"/>
+                    <line x1="60" y1="152" x2="70" y2="152" stroke="#bbb" stroke-width="1"/>
+                    <text x="55" y="134" font-family="Georgia, serif" font-size="8" fill="#999" text-anchor="end">30-50</text>
+                    <text x="55" y="143" font-family="Georgia, serif" font-size="8" fill="#999" text-anchor="end">cm</text>
+                    <circle cx="90" cy="250" r="16" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="90" y="278" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Cirkel</text>
+                    
+                    <!-- Panel B: Backstop -->
+                    <circle cx="270" cy="120" r="6" fill="#222"/>
+                    <text x="270" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">Lillen</text>
+                    <circle cx="270" cy="80" r="13" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="262" y1="76" x2="278" y2="76" stroke="#222" stroke-width="1"/>
+                    <line x1="262" y1="84" x2="278" y2="84" stroke="#222" stroke-width="1"/>
+                    <text x="295" y="83" font-family="Georgia, serif" font-size="9" fill="#666">Backstop</text>
+                    <circle cx="270" cy="165" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="262" y1="165" x2="278" y2="165" stroke="#222" stroke-width="1.5"/>
+                    <line x1="270" y1="157" x2="270" y2="173" stroke="#222" stroke-width="1.5"/>
+                    <line x1="270" y1="240" x2="270" y2="182" stroke="#222" stroke-width="1.5" stroke-dasharray="5,3"/>
+                    <text x="295" y="168" font-family="Georgia, serif" font-size="9" fill="#666">Stannar</text>
+                    <text x="295" y="178" font-family="Georgia, serif" font-size="9" fill="#666">mot stod</text>
+                    <circle cx="270" cy="250" r="16" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="270" y="278" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Cirkel</text>
+                    
+                    <!-- Panel C: Promotera -->
+                    <circle cx="450" cy="100" r="6" fill="#222"/>
+                    <text x="450" y="88" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">Lillen</text>
+                    <circle cx="450" cy="175" r="13" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="4,2"/>
+                    <text x="475" y="178" font-family="Georgia, serif" font-size="9" fill="#999">Fore</text>
+                    <circle cx="450" cy="130" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="442" y1="130" x2="458" y2="130" stroke="#222" stroke-width="1.5"/>
+                    <line x1="450" y1="122" x2="450" y2="138" stroke="#222" stroke-width="1.5"/>
+                    <text x="475" y="133" font-family="Georgia, serif" font-size="9" fill="#666">Efter</text>
+                    <path d="M 450 162 L 450 146" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <line x1="450" y1="240" x2="450" y2="192" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
+                    <text x="475" y="220" font-family="Georgia, serif" font-size="9" fill="#888">Skjuter</text>
+                    <text x="475" y="230" font-family="Georgia, serif" font-size="9" fill="#888">eget klot</text>
+                    <circle cx="450" cy="250" r="16" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="450" y="278" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Cirkel</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Toppvy: Tre grundtaktiker — klot framfor, backstop och promotering.</p>
+            </div>
             
             <h3>4. Begränsa skadan</h3>
             <div class="info-box">
@@ -1079,19 +1349,19 @@
                     <th>Beskrivning</th>
                 </tr>
                 <tr>
-                    <td><strong>Elbow Shot</strong></td>
+                    <td><strong>Armbågsskottet (Elbow Shot)</strong></td>
                     <td>Klotet hålls nära ansiktet, svingen förs bakåt förbi höften och släpps i en brant vinkel</td>
                 </tr>
                 <tr>
-                    <td><strong>Lift and Drop</strong></td>
+                    <td><strong>Lyft och släpp (Lift and Drop)</strong></td>
                     <td>Spelaren lyfter klotet till midjehöjd med kort bakåtsving och tidig release</td>
                 </tr>
                 <tr>
-                    <td><strong>Wing Spread</strong></td>
+                    <td><strong>Vingspridningen (Wing Spread)</strong></td>
                     <td>Ett högt svängande kast med kraftfull release och stor båge</td>
                 </tr>
                 <tr>
-                    <td><strong>Crane School</strong></td>
+                    <td><strong>Trangreppet (Crane School)</strong></td>
                     <td>Klotet hålls längre ut i fingrarna för att generera mycket backspin</td>
                 </tr>
             </table>
@@ -1214,6 +1484,47 @@
             <h3>När ska du välja rullskott?</h3>
             <p>Rullskott fungerar bäst på jämna banor eller när du behöver skjuta flera motståndarklot i rad, men medför risk för studs och avvikelser.</p>
             
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 540 340" xmlns="http://www.w3.org/2000/svg" style="max-width: 500px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <text x="140" y="25" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#222">A) Direktskott (tirer au fer)</text>
+                    <text x="405" y="25" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#222">B) Rullskott (raser)</text>
+                    <line x1="270" y1="10" x2="270" y2="330" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    <line x1="30" y1="40" x2="30" y2="300" stroke="#ddd" stroke-width="1" stroke-dasharray="6,3"/>
+                    <line x1="250" y1="40" x2="250" y2="300" stroke="#ddd" stroke-width="1" stroke-dasharray="6,3"/>
+                    <circle cx="140" cy="80" r="6" fill="#222"/>
+                    <text x="160" y="78" font-family="Georgia, serif" font-size="10" fill="#666">Lillen</text>
+                    <circle cx="130" cy="140" r="13" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    <text x="155" y="137" font-family="Georgia, serif" font-size="9" fill="#999">Mal (fore)</text>
+                    <line x1="130" y1="270" x2="130" y2="160" stroke="#222" stroke-width="2"/>
+                    <text x="110" y="220" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="end">Hogt kast</text>
+                    <circle cx="130" cy="140" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="122" y1="140" x2="138" y2="140" stroke="#222" stroke-width="1.5"/>
+                    <line x1="130" y1="132" x2="130" y2="148" stroke="#222" stroke-width="1.5"/>
+                    <line x1="143" y1="135" x2="200" y2="105" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
+                    <circle cx="205" cy="102" r="10" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+                    <text x="218" y="100" font-family="Georgia, serif" font-size="9" fill="#999">Bort!</text>
+                    <rect x="75" y="295" width="120" height="22" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+                    <text x="135" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">= Carreau!</text>
+                    <line x1="290" y1="40" x2="290" y2="300" stroke="#ddd" stroke-width="1" stroke-dasharray="6,3"/>
+                    <line x1="520" y1="40" x2="520" y2="300" stroke="#ddd" stroke-width="1" stroke-dasharray="6,3"/>
+                    <circle cx="405" cy="80" r="6" fill="#222"/>
+                    <text x="425" y="78" font-family="Georgia, serif" font-size="10" fill="#666">Lillen</text>
+                    <circle cx="400" cy="150" r="13" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,2"/>
+                    <text x="425" y="147" font-family="Georgia, serif" font-size="9" fill="#999">Mal</text>
+                    <path d="M 340 270 Q 345 220 360 190 Q 375 165 387 155" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="325" y="235" font-family="Georgia, serif" font-size="9" fill="#888" text-anchor="end">Lagt rull</text>
+                    <circle cx="393" cy="150" r="13" fill="none" stroke="#222" stroke-width="2.5"/>
+                    <line x1="385" y1="146" x2="401" y2="146" stroke="#222" stroke-width="1"/>
+                    <line x1="385" y1="154" x2="401" y2="154" stroke="#222" stroke-width="1"/>
+                    <line x1="413" y1="148" x2="470" y2="130" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
+                    <circle cx="475" cy="128" r="10" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+                    <text x="488" y="126" font-family="Georgia, serif" font-size="9" fill="#999">Bort!</text>
+                    <rect x="340" y="295" width="130" height="22" rx="3" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1"/>
+                    <text x="405" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">= Sidotraff</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Toppvy: Direktskott (carreau) vs. rullskott (raser) — två sätt att slå bort motståndarens klot.</p>
+            </div>
+            
             <h2>Träningstips för att bli en skicklig skytt</h2>
             <p>För att skjuta med kraft och precision krävs teknik och momentum. Enligt experter bör armen fungera som en pendel; tänk mer på att generera svänghastighet än på att spänna musklerna.</p>
             
@@ -1257,27 +1568,27 @@
                     <th>Resultat</th>
                 </tr>
                 <tr>
-                    <td><strong>Elbow Shot</strong></td>
+                    <td><strong>Armbågsskottet (Elbow Shot)</strong></td>
                     <td>Klotet hålls nära ansiktet, svingen förs bakåt förbi höften och släpps sedan i en brant vinkel</td>
                     <td>Kulan faller ned på målkulan och ersätter den – perfekt carreau</td>
                 </tr>
                 <tr>
-                    <td><strong>Lift and Drop</strong></td>
+                    <td><strong>Lyft och släpp (Lift and Drop)</strong></td>
                     <td>Spelaren lyfter klotet till midjehöjd, släpper det längs kastlinjen med kort bakåtsving och tidig release</td>
                     <td>Ger ett mjukt men mycket precist skott</td>
                 </tr>
                 <tr>
-                    <td><strong>Wing Spread</strong></td>
+                    <td><strong>Vingspridningen (Wing Spread)</strong></td>
                     <td>Ett högt svängande kast med kraftfull release där spelaren använder en stor båge</td>
                     <td>Träffar målet direkt med stor kraft</td>
                 </tr>
                 <tr>
-                    <td><strong>Crane School</strong></td>
+                    <td><strong>Trangreppet (Crane School)</strong></td>
                     <td>En greppvariant där klotet hålls längre ut i fingrarna</td>
                     <td>Genererar mycket backspin – passar när du behöver mer kontroll</td>
                 </tr>
                 <tr>
-                    <td><strong>Fold and Roll</strong></td>
+                    <td><strong>Vik och rulla (Fold and Roll)</strong></td>
                     <td>En långsammare sving med moderat uppföljning</td>
                     <td>Används med tyngre klot för kontrollerade skott</td>
                 </tr>
@@ -1482,6 +1793,68 @@
                 <li><strong>Vid underläge:</strong> Våga ta risker och försök ändra spelets dynamik</li>
                 <li><strong>I slutet av matchen:</strong> Behåll lugnet och följ er spelplan</li>
             </ul>
+            
+            <h2>Psykologisk flexibilitet — spela med ditt huvud</h2>
+            <p>Alla spelare upplever nervositet. Skillnaden är hur du hanterar den.</p>
+            
+            <h3>Tre nivåer att förstå:</h3>
+            <div class="info-box">
+                <h4>Tankar</h4>
+                <p>Vad du säger till dig själv.</p>
+                
+                <h4>Känslor i kroppen</h4>
+                <p>Puls, andning, spänning.</p>
+                
+                <h4>Beteende</h4>
+                <p>Hur du agerar i ringen.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>En central princip:</strong><br>
+                Tro inte på allt din hjärna säger.<br>
+                Nervositet är naturligt — men beslutet i ringen måste vara ditt, inte rädslans.</p>
+            </div>
+            
+            <h2>MGP — din mentala kompass</h2>
+            
+            <div class="highlight-box">
+                <h4>M — Matematik</h4>
+                <p>Räkna alltid:</p>
+                <ul>
+                    <li>hur många klot som finns kvar,</li>
+                    <li>hur många poäng som står på spel.</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h4>G — Geografi</h4>
+                <p>Läs:</p>
+                <ul>
+                    <li>terrängen,</li>
+                    <li>lutningar,</li>
+                    <li>var kloten faktiskt ligger.</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>P — Planen</h4>
+                <p>Bestäm din donnée innan du går in i ringen — och ändra den inte när du står där.</p>
+                <p><strong>Planen är ditt ankare i stormen.</strong></p>
+            </div>
+            
+            <h3>Hur MGP och psykologi samverkar</h3>
+            <div class="info-box">
+                <ul>
+                    <li><strong>M och G</strong> ger hjärnan rätt fokus.</li>
+                    <li><strong>P (Planen)</strong> skapar trygghet och stabilitet.</li>
+                    <li>När bruset kommer — håll fast vid planen och agera lugnt.</li>
+                </ul>
+                <p><strong>Detta är exakt hur världsspelare tänker.</strong></p>
+            </div>
+            
+            <div class="author-note">
+                <p>"När jag spelade mina första tävlingar trodde jag att det viktigaste var tekniken. I dag vet jag att matchen ofta avgörs innan klotet lämnar handen — i hur du tänker, hur du andas och hur du väljer din plan."</p>
+            </div>
             
         </div>
     </div>
@@ -2664,6 +3037,46 @@
                 </ol>
             </div>
             
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <text x="260" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#222">Backspin - bromseffekt vid landning</text>
+                    <line x1="260" y1="35" x2="260" y2="295" stroke="#ccc" stroke-width="1" stroke-dasharray="6,3"/>
+                    <text x="130" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#222">1) Utan backspin</text>
+                    <text x="390" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#222">2) Med backspin</text>
+                    <line x1="20" y1="200" x2="250" y2="200" stroke="#222" stroke-width="2"/>
+                    <path d="M 40 180 Q 80 100 120 198" fill="none" stroke="#222" stroke-width="2"/>
+                    <circle cx="120" cy="198" r="3" fill="#222"/>
+                    <text x="120" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Landning</text>
+                    <circle cx="120" cy="190" r="8" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <line x1="128" y1="195" x2="230" y2="195" stroke="#222" stroke-width="1.5" stroke-dasharray="3,2"/>
+                    <circle cx="230" cy="190" r="8" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="230" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Stopp</text>
+                    <line x1="120" y1="240" x2="230" y2="240" stroke="#222" stroke-width="1.5"/>
+                    <line x1="120" y1="235" x2="120" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <line x1="230" y1="235" x2="230" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <text x="175" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#222">Lang rull</text>
+                    <text x="95" y="170" font-family="Georgia, serif" font-size="9" fill="#888">rotation</text>
+                    <rect x="55" y="270" width="150" height="22" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+                    <text x="130" y="285" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="600" fill="#333">Svart att kontrollera</text>
+                    <line x1="270" y1="200" x2="500" y2="200" stroke="#222" stroke-width="2"/>
+                    <path d="M 300 180 Q 340 80 380 198" fill="none" stroke="#222" stroke-width="2"/>
+                    <circle cx="380" cy="198" r="3" fill="#222"/>
+                    <text x="380" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Landning</text>
+                    <circle cx="380" cy="190" r="8" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <line x1="388" y1="195" x2="415" y2="195" stroke="#222" stroke-width="1.5" stroke-dasharray="3,2"/>
+                    <circle cx="415" cy="190" r="8" fill="none" stroke="#222" stroke-width="2"/>
+                    <text x="415" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#888">Stopp</text>
+                    <line x1="380" y1="240" x2="415" y2="240" stroke="#222" stroke-width="1.5"/>
+                    <line x1="380" y1="235" x2="380" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <line x1="415" y1="235" x2="415" y2="245" stroke="#222" stroke-width="1.5"/>
+                    <text x="397" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#222">Kort</text>
+                    <text x="345" y="170" font-family="Georgia, serif" font-size="9" fill="#888">backspin</text>
+                    <rect x="315" y="270" width="150" height="22" rx="3" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1"/>
+                    <text x="390" y="285" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="600" fill="#333">Precision och kontroll</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Sidovy: Utan backspin rullar klotet långt — med backspin stannar det snabbt.</p>
+            </div>
+            
             <h2>Banans fysik</h2>
             
             <h3>Friktion och rullmotstånd</h3>
@@ -3586,6 +3999,786 @@
         </div>
     </div>
         </div>
+</div>
+
+<!-- BILAGA D -->
+<div class="chapter page-break" id="appD">
+    <div class="appendix-header">
+        <div class="appendix-label">Bilaga D</div>
+        <h2>Bygga en boulebana</h2>
+        <p>Komplett guide för din egen bana</p>
+    </div>
+
+            <p>Att bygga en boulebana är att bygga en plats för gemenskap, träning och tävling. En välgjord bana gör spelet roligare, rättvisare och mer hållbart över tid. Denna guide är skriven för både privatpersoner och klubbar.</p>
+
+            <h2>1) Planering och förberedelser</h2>
+            <p>Innan första spadtaget — gå igenom denna checklista.</p>
+
+            <div class="highlight-box">
+                <h4>Checklista för placering</h4>
+                <ul>
+                    <li><strong>Storlek:</strong> Finns plats för vald bantyp + säkerhetszon runtom?</li>
+                    <li><strong>Fri yta:</strong> Minst 1 meter runt banan för rörelse och publik.</li>
+                    <li><strong>Lutning:</strong> Helst svagt fall (1–2 %) för avrinning.</li>
+                    <li><strong>Sol/skugga:</strong> Blanda gärna — för komfort under långa speldagar.</li>
+                    <li><strong>Avstånd till hus:</strong> Minst 5 meter (ljud och säkerhet).</li>
+                    <li><strong>Vattenavrinning:</strong> Undvik lågpunkt där vatten samlas.</li>
+                    <li><strong>Marktyp:</strong> Fast jord är bäst; undvik lera och torv.</li>
+                </ul>
+            </div>
+
+            <h3>Mått – fyra vanliga bantyper</h3>
+            <div class="info-box">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Bantyp</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Mått</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Användning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Minimistandard</td>
+                            <td style="padding: 10px;">12 x 3 m</td>
+                            <td style="padding: 10px;">Vanlig i Sverige, perfekt för klubbar och trädgård</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Rekommenderad</td>
+                            <td style="padding: 10px;">15 x 4 m</td>
+                            <td style="padding: 10px;">Nära internationell standard</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Tävling</td>
+                            <td style="padding: 10px;">15 x 4 m</td>
+                            <td style="padding: 10px;">Uppfyller FIPJP-rekommendation</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: 600;">Kompakt</td>
+                            <td style="padding: 10px;">10 x 2,5 m</td>
+                            <td style="padding: 10px;">Små tomter, övningsbana</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="author-note" style="margin-top: 15px;">
+                <p><strong>Mitt råd:</strong> Bygger man nytt är 15 x 4 m oftast det klokaste valet — banan åldras bättre och känns mer "riktig".</p>
+            </div>
+
+            <h2>2) Material (för 15 x 4 m bana)</h2>
+
+            <div class="highlight-box">
+                <h4>Grundmaterial</h4>
+                <ul>
+                    <li><strong>Markduk (geotextil)</strong> — stoppar ogräs.</li>
+                    <li><strong>Makadam 0–32 mm</strong> — bärlager (10–12 cm).</li>
+                    <li><strong>Stenmjöl 0–8 mm</strong> — förstärkningslager (5–6 cm).</li>
+                    <li><strong>Boule-grus 0–4 mm</strong> — ytlager (3–5 cm).</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Kantmaterial (välj ett alternativ)</h4>
+                <ul>
+                    <li>Träsarg (tryckimpregnerat)</li>
+                    <li>Kantsten (betong eller granit)</li>
+                    <li>Metall- eller plastkant</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 15px;">
+                <h4>Verktyg</h4>
+                <ul>
+                    <li>Spade och skyffel</li>
+                    <li>Vattenpass eller laserpass</li>
+                    <li>Vibroplatta (kan hyras)</li>
+                    <li>Kratta och rätskiva</li>
+                    <li>Skottkärra och tumstock</li>
+                </ul>
+            </div>
+
+            <h2>3) Bygga steg för steg (sex steg)</h2>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" style="max-width: 480px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; background: #fafafa;">
+                    <text x="260" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#222">Tvarsektion - boulebana (lager-pa-lager)</text>
+                    <path d="M 50 300 L 50 280 L 80 280 L 80 100 L 420 100 L 420 280 L 450 280 L 450 300" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="20" y1="100" x2="80" y2="100" stroke="#222" stroke-width="2"/>
+                    <line x1="420" y1="100" x2="500" y2="100" stroke="#222" stroke-width="2"/>
+                    <line x1="55" y1="285" x2="65" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <line x1="65" y1="285" x2="75" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <line x1="430" y1="285" x2="440" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <line x1="440" y1="285" x2="450" y2="295" stroke="#aaa" stroke-width="0.8"/>
+                    <text x="35" y="295" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#888">Mark</text>
+                    <rect x="80" y="260" width="340" height="20" fill="#e0ddd8" stroke="#222" stroke-width="1"/>
+                    <text x="250" y="274" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Urgravd mark (packad)</text>
+                    <line x1="80" y1="258" x2="420" y2="258" stroke="#222" stroke-width="2.5" stroke-dasharray="6,2"/>
+                    <line x1="80" y1="258" x2="80" y2="230" stroke="#222" stroke-width="2.5" stroke-dasharray="6,2"/>
+                    <line x1="420" y1="258" x2="420" y2="230" stroke="#222" stroke-width="2.5" stroke-dasharray="6,2"/>
+                    <rect x="80" y="195" width="340" height="63" fill="#d4cfc7" stroke="#222" stroke-width="1"/>
+                    <circle cx="120" cy="220" r="3" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="160" cy="235" r="4" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="200" cy="215" r="3" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="250" cy="240" r="3.5" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="300" cy="220" r="4" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="340" cy="235" r="3" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <circle cx="380" cy="215" r="3.5" fill="none" stroke="#aaa" stroke-width="0.8"/>
+                    <text x="250" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#444">Makadam 0-32 mm</text>
+                    <rect x="80" y="155" width="340" height="40" fill="#e8e3da" stroke="#222" stroke-width="1"/>
+                    <circle cx="130" cy="175" r="1.5" fill="#bbb"/>
+                    <circle cx="180" cy="170" r="1.5" fill="#bbb"/>
+                    <circle cx="230" cy="178" r="1.5" fill="#bbb"/>
+                    <circle cx="280" cy="168" r="1.5" fill="#bbb"/>
+                    <circle cx="330" cy="175" r="1.5" fill="#bbb"/>
+                    <circle cx="380" cy="170" r="1.5" fill="#bbb"/>
+                    <text x="250" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#444">Stenmjol 0-8 mm</text>
+                    <rect x="80" y="125" width="340" height="30" fill="#f0ebe3" stroke="#222" stroke-width="1"/>
+                    <text x="250" y="144" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#444">Boulegrus 0-4 mm</text>
+                    <rect x="68" y="100" width="12" height="160" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="72" y1="110" x2="72" y2="250" stroke="#999" stroke-width="0.8"/>
+                    <line x1="76" y1="110" x2="76" y2="250" stroke="#999" stroke-width="0.8"/>
+                    <rect x="420" y="100" width="12" height="160" fill="none" stroke="#222" stroke-width="2"/>
+                    <line x1="424" y1="110" x2="424" y2="250" stroke="#999" stroke-width="0.8"/>
+                    <line x1="428" y1="110" x2="428" y2="250" stroke="#999" stroke-width="0.8"/>
+                    <text x="55" y="175" text-anchor="end" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#333">Sarg</text>
+                    <line x1="57" y1="173" x2="67" y2="173" stroke="#222" stroke-width="1"/>
+                    <line x1="440" y1="125" x2="460" y2="125" stroke="#888" stroke-width="0.8"/>
+                    <line x1="440" y1="155" x2="460" y2="155" stroke="#888" stroke-width="0.8"/>
+                    <line x1="455" y1="125" x2="455" y2="155" stroke="#888" stroke-width="0.8"/>
+                    <text x="465" y="144" font-family="Arial, sans-serif" font-size="9" fill="#666">3-5 cm</text>
+                    <line x1="440" y1="195" x2="470" y2="195" stroke="#888" stroke-width="0.8"/>
+                    <line x1="465" y1="155" x2="465" y2="195" stroke="#888" stroke-width="0.8"/>
+                    <text x="475" y="179" font-family="Arial, sans-serif" font-size="9" fill="#666">5-6 cm</text>
+                    <line x1="440" y1="258" x2="480" y2="258" stroke="#888" stroke-width="0.8"/>
+                    <line x1="475" y1="195" x2="475" y2="258" stroke="#888" stroke-width="0.8"/>
+                    <text x="485" y="230" font-family="Arial, sans-serif" font-size="9" fill="#666">10-12 cm</text>
+                    <text x="465" y="256" font-family="Arial, sans-serif" font-size="8" fill="#888">markduk</text>
+                    <line x1="490" y1="100" x2="500" y2="100" stroke="#222" stroke-width="1"/>
+                    <line x1="490" y1="280" x2="500" y2="280" stroke="#222" stroke-width="1"/>
+                    <line x1="497" y1="100" x2="497" y2="280" stroke="#222" stroke-width="1"/>
+                    <text x="505" y="195" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#333" transform="rotate(90, 505, 195)">~20-25 cm</text>
+                    <circle cx="200" cy="118" r="7" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <circle cx="300" cy="118" r="7" fill="none" stroke="#222" stroke-width="1.5"/>
+                    <text x="250" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">spelyta</text>
+                </svg>
+                <p style="font-size: 10pt; color: #888; margin-top: 8px; font-style: italic;">Tvarsektion: Boulebana med markduk, makadam, stenmjol, boulegrus och sarg.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Steg 1 — Markera och gräv ur (20–25 cm)</h4>
+                <ul>
+                    <li>Märk upp banans yttermått.</li>
+                    <li>Gräv ur jämnt djup.</li>
+                    <li>Skapa svagt fall (1–2 %) för dränering.</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Steg 2 — Lägg markduk</h4>
+                <ul>
+                    <li>Täck hela ytan.</li>
+                    <li>Låt duken gå upp några centimeter på sidorna.</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 15px;">
+                <h4>Steg 3 — Bärlager (makadam 10–12 cm)</h4>
+                <ul>
+                    <li>Lägg ut makadam.</li>
+                    <li>Vattna lätt.</li>
+                    <li>Packa hårt med vibroplatta.</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Steg 4 — Förstärkningslager (stenmjöl 5–6 cm)</h4>
+                <ul>
+                    <li>Lägg ut jämnt lager.</li>
+                    <li>Vattna och packa igen.</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 15px;">
+                <h4>Steg 5 — Montera sarg</h4>
+                <ul>
+                    <li>Sätt kanter runt hela banan.</li>
+                    <li>Kontrollera att allt är i våg.</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 15px;">
+                <h4>Steg 6 — Ytlager (boule-grus 3–5 cm)</h4>
+                <ul>
+                    <li>Lägg ut 0–4 mm boule-grus.</li>
+                    <li>Kratta jämnt.</li>
+                    <li>Packa lätt — men inte stenhårt.</li>
+                </ul>
+            </div>
+
+            <h2>4) Välja rätt grus</h2>
+
+            <div class="info-box">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Typ</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Känsla</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Fördel</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Nackdel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Kalkkross 0–4 mm</td>
+                            <td style="padding: 10px;">Mjuk–medel</td>
+                            <td style="padding: 10px;">Bästa allround</td>
+                            <td style="padding: 10px;">Kan damma i torka</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Granitgrus 0–4 mm</td>
+                            <td style="padding: 10px;">Hårdare</td>
+                            <td style="padding: 10px;">Mycket hållbart</td>
+                            <td style="padding: 10px;">Snabb bana</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Specialgrus</td>
+                            <td style="padding: 10px;">Optimerat</td>
+                            <td style="padding: 10px;">Mycket jämnt spel</td>
+                            <td style="padding: 10px;">Dyrare</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: 600;">Sand/grus-blandning</td>
+                            <td style="padding: 10px;">Mjuk</td>
+                            <td style="padding: 10px;">Billigt</td>
+                            <td style="padding: 10px;">Mindre stabilt</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="author-note" style="margin-top: 15px;">
+                <p><strong>Rekommendation:</strong> Kalkkross 0–4 mm — bäst balans för de flesta banor.</p>
+            </div>
+
+            <h2>5) Underhåll – så håller banan i många år</h2>
+
+            <div class="highlight-box">
+                <h4>Efter varje spel</h4>
+                <ul>
+                    <li>Kratta jämnt.</li>
+                    <li>Fyll igen gropar.</li>
+                </ul>
+
+                <h4 style="margin-top: 15px;">Varje vecka (säsong)</h4>
+                <ul>
+                    <li>Kontrollera kanter.</li>
+                    <li>Justera ytan vid behov.</li>
+                    <li>Vattna lätt vid torka.</li>
+                </ul>
+
+                <h4 style="margin-top: 15px;">Varje säsong</h4>
+                <ul>
+                    <li>Fyll på 1–2 cm nytt grus.</li>
+                    <li>Packa och jämna till.</li>
+                </ul>
+            </div>
+
+            <h3>Problemlösning – vanliga problem</h3>
+            <div class="info-box">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Problem</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Orsak</th>
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Lösning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Vattenpölar</td>
+                            <td style="padding: 10px;">För dålig lutning</td>
+                            <td style="padding: 10px;">Justera fall, fyll på material</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">Ojämn yta</td>
+                            <td style="padding: 10px;">Slitage</td>
+                            <td style="padding: 10px;">Kratta + packa</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px; font-weight: 600;">Ogräs</td>
+                            <td style="padding: 10px;">Trasig markduk</td>
+                            <td style="padding: 10px;">Lägg ny duk lokalt</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px; font-weight: 600;">För snabb bana</td>
+                            <td style="padding: 10px;">För hårt packat</td>
+                            <td style="padding: 10px;">Lägg nytt mjukare ytlager</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: 600;">Damm</td>
+                            <td style="padding: 10px;">För torrt</td>
+                            <td style="padding: 10px;">Vattna lätt</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>6) Belysning och tillbehör</h2>
+            <p>Gör banan användbar året runt:</p>
+            <div class="info-box">
+                <ul>
+                    <li><strong>LED-strålkastare</strong> (riktade mot spelytan)</li>
+                    <li><strong>Bänk</strong> längs långsidan</li>
+                    <li><strong>Litet förråd</strong> för klot och verktyg</li>
+                    <li><strong>Poängtavla</strong></li>
+                    <li><strong>Solskydd/parasoll</strong></li>
+                    <li><strong>Vattenslang</strong> för underhåll</li>
+                </ul>
+            </div>
+
+            <h2>7) Kostnadsuppskattning (gör-det-själv)</h2>
+
+            <div class="highlight-box">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #D2691E;">
+                            <th style="text-align: left; padding: 10px; color: #8B4513; font-weight: 700;">Post</th>
+                            <th style="text-align: right; padding: 10px; color: #8B4513; font-weight: 700;">Ungefärlig kostnad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px;">Grävning (hyrmaskin)</td>
+                            <td style="padding: 10px; text-align: right;">2 000–4 000 kr</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px;">Markduk</td>
+                            <td style="padding: 10px; text-align: right;">500–1 000 kr</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px;">Makadam + stenmjöl</td>
+                            <td style="padding: 10px; text-align: right;">3 000–5 000 kr</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px;">Boule-grus</td>
+                            <td style="padding: 10px; text-align: right;">1 500–2 500 kr</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8;">
+                            <td style="padding: 10px;">Kantmaterial</td>
+                            <td style="padding: 10px; text-align: right;">1 000–2 000 kr</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                            <td style="padding: 10px;">Verktyg/hyra vibroplatta</td>
+                            <td style="padding: 10px; text-align: right;">500–1 000 kr</td>
+                        </tr>
+                        <tr style="border-top: 2px solid #D2691E;">
+                            <td style="padding: 10px; font-weight: 700;">Totalt</td>
+                            <td style="padding: 10px; text-align: right; font-weight: 700;">ca 8 000–14 000 kr</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px;">Med lite hjälp från vänner och klubben kan detta bli både billigare — och roligare.</p>
+            </div>
+
+            <h2>8) Tips från erfarna banbyggare</h2>
+
+            <div class="highlight-box">
+                <ul>
+                    <li>Bygg hellre en riktigt bra bana än två halvdåliga.</li>
+                    <li>Lägg extra tid på bärlagret — det är banans ryggrad.</li>
+                    <li>Ha alltid en kratta vid banan.</li>
+                    <li>Gör banan lite större än du tror att du behöver.</li>
+                    <li>Dokumentera bygget — det blir guld värt vid framtida förbättringar.</li>
+                </ul>
+            </div>
+
+            <h2>Sammanfattning av Bilaga D</h2>
+            <p>En välbyggd boulebana ger:</p>
+            <ul>
+                <li>bättre spel,</li>
+                <li>färre konflikter om studs och rull,</li>
+                <li>och en plats där människor vill samlas.</li>
+            </ul>
+
+            <div class="author-note">
+                <p><strong>Du bygger inte bara en bana — du bygger en mötesplats.</strong></p>
+            </div>
+
+        </div>
+</div>
+
+<!-- RESURS: FUSKLAPP -->
+<div class="chapter page-break" id="resurs-fusklapp">
+    <div class="appendix-header">
+        <div class="appendix-label">Resurs</div>
+        <h2>Petanque Fusklapp</h2>
+        <p>Allt du behover pa en sida - Matchrutin, Etikett, Taktik och Tekniker</p>
+    </div>
+
+    <h3>10 Viktigaste reglerna</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr style="border-bottom: 2px solid #D2691E;">
+                <th style="text-align: left; padding: 8px; color: #8B4513; width: 40px;">#</th>
+                <th style="text-align: left; padding: 8px; color: #8B4513;">Regel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="padding: 8px;">1</td><td style="padding: 8px;">Bada fotterna i cirkeln tills klotet landat</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="padding: 8px;">2</td><td style="padding: 8px;">Lillen 6-10m fran cirkeln, 1m fran hinder</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="padding: 8px;">3</td><td style="padding: 8px;">Laget utan narmaste klot kastar</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="padding: 8px;">4</td><td style="padding: 8px;">Poang = antal klot narmare an motstandaren</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="padding: 8px;">5</td><td style="padding: 8px;">Forsta till 13 poang vinner</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="padding: 8px;">6</td><td style="padding: 8px;">Klot/lillen over grans = dott</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="padding: 8px;">7</td><td style="padding: 8px;">Dod lillen = ny mene, samma lag kastar</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="padding: 8px;">8</td><td style="padding: 8px;">Mat bara vid tvivel</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="padding: 8px;">9</td><td style="padding: 8px;">Ror inte klot innan matning</td></tr>
+            <tr><td style="padding: 8px;">10</td><td style="padding: 8px;">Max 1 minut per kast i tavling</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Beslutsstöd: Lägg eller Skjut?</h3>
+    <div class="highlight-box">
+        <h4>SKJUT när:</h4>
+        <ul>
+            <li>Motståndaren mindre än 30 cm från lillen + fri bana</li>
+            <li>Sista klotet + du behöver poäng</li>
+            <li>2+ motståndarklot inom 20 cm</li>
+        </ul>
+    </div>
+    <div class="info-box" style="margin-top: 10px;">
+        <h4>LÄGG när:</h4>
+        <ul>
+            <li>Du har tydlig donnée du träffar ofta</li>
+            <li>Du är osäker skytt (under 40% träff)</li>
+            <li>Du leder med 11-12 poäng (defensivt)</li>
+        </ul>
+    </div>
+
+    <h3>Tre punkter för perfekt point</h3>
+    <div class="highlight-box">
+        <ul>
+            <li><strong>1. Lillen</strong> — Målet</li>
+            <li><strong>2. Parkering</strong> — Där klotet stannar</li>
+            <li><strong>3. Donnée</strong> — Landningspunkt</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Gyllene regel:</strong> "Boule devant, boule d'argent" — Lägg alltid framför lillen (30-50 cm)!</p>
+    </div>
+
+    <h3>Kastbanor och underlag</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr style="border-bottom: 2px solid #D2691E;">
+                <th style="text-align: left; padding: 8px; color: #8B4513;">Underlag</th>
+                <th style="text-align: left; padding: 8px; color: #8B4513;">Kasttyp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="padding: 8px; font-weight: 600;">Mjuk grus/sand</td><td style="padding: 8px;">Låg rullning — klotet stannar snabbt</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="padding: 8px; font-weight: 600;">Hård/stenig</td><td style="padding: 8px;">Hög lob med backspin — undvik studs</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="padding: 8px; font-weight: 600;">Asfalt</td><td style="padding: 8px;">Medelhög lob — kontrollerad landning</td></tr>
+            <tr><td style="padding: 8px; font-weight: 600;">Lutande bana</td><td style="padding: 8px;">Lägg uppför — kompensera för rullning</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Etikett och god sed</h3>
+    <div class="highlight-box">
+        <ul>
+            <li>Stå still och tyst när motståndaren kastar</li>
+            <li>Gå aldrig mellan spelare och lillen</li>
+            <li>Vänta med att ta bort klot tills alla är överens</li>
+            <li>Använd godkänt mätinstrument, inte fötterna</li>
+            <li>Tacka motståndaren efter matchen</li>
+        </ul>
+    </div>
+
+    <h3>Matchrutin (före/under/efter)</h3>
+    <div class="highlight-box">
+        <h4>Före matchen (15 min):</h4>
+        <ul>
+            <li>Dynamisk stretching + rörlighetsövningar</li>
+            <li>20 uppvärmningskast (variera avstånd)</li>
+            <li>3 djupa andetag + visualisera framgång</li>
+        </ul>
+    </div>
+    <div class="info-box" style="margin-top: 10px;">
+        <h4>Under matchen:</h4>
+        <ul>
+            <li>Före varje kast: Djupandas, visualisera bana</li>
+            <li>Sikta på donnée, inte lillen</li>
+            <li>Kommunicera med laget före varje beslut</li>
+        </ul>
+    </div>
+    <div class="highlight-box" style="margin-top: 10px;">
+        <h4>Efter matchen:</h4>
+        <ul>
+            <li>Utvärdera: Vad gick bra? Vad kan förbättras?</li>
+            <li>Logga i träningsjournal</li>
+        </ul>
+    </div>
+
+    <h3>Snabba träningstips</h3>
+    <div class="info-box">
+        <ul>
+            <li><strong>Fickduken:</strong> 6/10 träffar på 7m</li>
+            <li><strong>6-boule:</strong> 50% träffsäkerhet</li>
+            <li><strong>Tre zoner:</strong> 4/5 inom 50cm</li>
+        </ul>
+    </div>
+
+    <div class="author-note" style="margin-top: 20px;">
+        <p><strong>Kom ihåg:</strong> Teknik + Taktik + Mental styrka = Framgång. Träna smart 3-4 gånger per vecka. Dokumentera din utveckling!</p>
+    </div>
+</div>
+
+<!-- RESURS: TRÄNINGSJOURNAL -->
+<div class="chapter page-break" id="resurs-traningsjournal">
+    <div class="appendix-header">
+        <div class="appendix-label">Resurs</div>
+        <h2>Pétanque Träningsjournal</h2>
+        <p>Dokumentera din utveckling — Från nybörjare till mästare</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Hur du använder träningsjournalen:</h4>
+        <ul>
+            <li><strong>Fyll i efter varje träningspass</strong> — Dokumentera direkt medan minnet är färskt</li>
+            <li><strong>Var ärlig och specifik</strong> — Skriv både framgångar och utmaningar</li>
+            <li><strong>Sätt konkreta mål</strong> — Vad vill du förbättra nästa gång?</li>
+            <li><strong>Granska regelbundet</strong> — Titta tillbaka varje månad för att se din utveckling</li>
+            <li><strong>Kopiera denna sida</strong> — Skriv ut eller kopiera mallen för varje träningspass</li>
+        </ul>
+    </div>
+
+    <h3>Träningspass — Mall</h3>
+
+    <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600; width: 200px;">Datum:</td>
+            <td style="padding: 10px; border-bottom: 1px dotted #ccc;">____________________</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+            <td style="padding: 10px; font-weight: 600;">Tid (minuter):</td>
+            <td style="padding: 10px; border-bottom: 1px dotted #ccc;">____________________</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600;">Väder/Underlag:</td>
+            <td style="padding: 10px; border-bottom: 1px dotted #ccc;">____________________</td>
+        </tr>
+    </table>
+
+    <h4 style="margin-top: 20px;">Dagens fokus (markera vad du tränade):</h4>
+    <div class="highlight-box">
+        <ul>
+            <li>[ ] Point/Läggning</li>
+            <li>[ ] Skott/Tireur</li>
+            <li>[ ] Donnée-precision</li>
+            <li>[ ] Backspin/Kontroll</li>
+            <li>[ ] Matchsimulering</li>
+            <li>[ ] Taktik/Beslut</li>
+        </ul>
+    </div>
+
+    <h4 style="margin-top: 20px;">Resultat och mätningar:</h4>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600; width: 250px;">Point-träffar (inom 50cm):</td>
+            <td style="padding: 10px;">_______ / _______</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+            <td style="padding: 10px; font-weight: 600;">Skott-träffsäkerhet:</td>
+            <td style="padding: 10px;">_______ / _______ = _______ %</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600;">Antal carreau:</td>
+            <td style="padding: 10px;">_______</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+            <td style="padding: 10px; font-weight: 600;">Donnée-precision (6m):</td>
+            <td style="padding: 10px;">_______ / _______</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600;">Donnée-precision (8m):</td>
+            <td style="padding: 10px;">_______ / _______</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; font-weight: 600;">Bästa avstånd:</td>
+            <td style="padding: 10px;">_______ m</td>
+        </tr>
+    </table>
+
+    <h4 style="margin-top: 20px;">Vad gick bra idag?</h4>
+    <div style="border: 1px solid #e0d5c8; padding: 15px; min-height: 60px; margin-bottom: 15px; background: #faf8f5;">
+        <p style="color: #999; font-style: italic;">T.ex. "Bra kontroll på backspin, klotet stannade inom 30cm på 7 av 10 kast"</p>
+    </div>
+
+    <h4>Vad behöver förbättras?</h4>
+    <div style="border: 1px solid #e0d5c8; padding: 15px; min-height: 60px; margin-bottom: 15px; background: #faf8f5;">
+        <p style="color: #999; font-style: italic;">T.ex. "Skott på längre avstånd (>8m) — missar ofta åt höger"</p>
+    </div>
+
+    <h4>Nästa steg / Mål till nästa träning:</h4>
+    <div style="border: 1px solid #e0d5c8; padding: 15px; min-height: 60px; margin-bottom: 15px; background: #faf8f5;">
+        <p style="color: #999; font-style: italic;">T.ex. "Fokusera på handledsteknik vid release. Mål: 7/10 träffar på donnée vid 8m"</p>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <h4>Tips för framgång:</h4>
+        <ul>
+            <li>Träna 3-4 gånger per vecka för bäst resultat</li>
+            <li>Variera mellan point-fokus, skott-fokus och matchsimulering</li>
+            <li>Filma dig själv regelbundet och analysera tekniken</li>
+            <li>Sätt realistiska mål och fira små framsteg</li>
+            <li>Efter 4-8 veckor konsekvent träning kommer du se tydlig förbättring!</li>
+        </ul>
+    </div>
+
+    <div class="author-note" style="margin-top: 15px;">
+        <p><strong>Tips:</strong> Kopiera denna mall och fyll i efter varje träningspass. Du kan också använda ett vanligt anteckningsblock med samma rubriker.</p>
+    </div>
+</div>
+
+<!-- RESURS: MATCHPROTOKOLL -->
+<div class="chapter page-break" id="resurs-matchprotokoll">
+    <div class="appendix-header">
+        <div class="appendix-label">Resurs</div>
+        <h2>Matchprotokoll — Pétanque</h2>
+        <p>Dokumentera dina matcher för analys och utveckling</p>
+    </div>
+
+    <h3>Matchinformation</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600; width: 180px;">Datum:</td>
+            <td style="padding: 10px;">____________________</td>
+            <td style="padding: 10px; font-weight: 600; width: 180px;">Plats:</td>
+            <td style="padding: 10px;">____________________</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+            <td style="padding: 10px; font-weight: 600;">Underlag:</td>
+            <td style="padding: 10px;">____________________</td>
+            <td style="padding: 10px; font-weight: 600;">Matchtyp:</td>
+            <td style="padding: 10px;">____________________</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600;">Väder:</td>
+            <td style="padding: 10px;">____________________</td>
+            <td style="padding: 10px; font-weight: 600;">Temperatur:</td>
+            <td style="padding: 10px;">_______ grader C</td>
+        </tr>
+    </table>
+
+    <h3 style="margin-top: 20px;">Lag</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr style="border-bottom: 2px solid #D2691E;">
+                <th style="text-align: left; padding: 10px; color: #8B4513;"></th>
+                <th style="text-align: left; padding: 10px; color: #8B4513;">Lag 1</th>
+                <th style="text-align: left; padding: 10px; color: #8B4513;">Lag 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0d5c8;">
+                <td style="padding: 10px; font-weight: 600;">Lagnamn:</td>
+                <td style="padding: 10px;">____________________</td>
+                <td style="padding: 10px;">____________________</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+                <td style="padding: 10px; font-weight: 600;">Spelare:</td>
+                <td style="padding: 10px;">____________________</td>
+                <td style="padding: 10px;">____________________</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-weight: 600;">Klubb:</td>
+                <td style="padding: 10px;">____________________</td>
+                <td style="padding: 10px;">____________________</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 style="margin-top: 20px;">Omgångar</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr style="border-bottom: 2px solid #D2691E;">
+                <th style="text-align: center; padding: 8px; color: #8B4513; width: 80px;">Omgång</th>
+                <th style="text-align: center; padding: 8px; color: #8B4513;">Poäng Lag 1</th>
+                <th style="text-align: center; padding: 8px; color: #8B4513;">Poäng Lag 2</th>
+                <th style="text-align: center; padding: 8px; color: #8B4513;">Ack. Lag 1</th>
+                <th style="text-align: center; padding: 8px; color: #8B4513;">Ack. Lag 2</th>
+                <th style="text-align: left; padding: 8px; color: #8B4513;">Notering</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="text-align: center; padding: 8px;">1</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="text-align: center; padding: 8px;">2</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="text-align: center; padding: 8px;">3</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="text-align: center; padding: 8px;">4</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="text-align: center; padding: 8px;">5</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="text-align: center; padding: 8px;">6</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="text-align: center; padding: 8px;">7</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="text-align: center; padding: 8px;">8</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="text-align: center; padding: 8px;">9</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="text-align: center; padding: 8px;">10</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="text-align: center; padding: 8px;">11</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;"><td style="text-align: center; padding: 8px;">12</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-bottom: 1px solid #e0d5c8;"><td style="text-align: center; padding: 8px;">13</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="text-align: center; padding: 8px;">_____</td><td style="padding: 8px;">________________</td></tr>
+            <tr style="border-top: 2px solid #D2691E;">
+                <td style="text-align: center; padding: 8px; font-weight: 700;">Totalt</td>
+                <td style="text-align: center; padding: 8px; font-weight: 700;">_____</td>
+                <td style="text-align: center; padding: 8px; font-weight: 700;">_____</td>
+                <td style="text-align: center; padding: 8px;"></td>
+                <td style="text-align: center; padding: 8px;"></td>
+                <td style="padding: 8px;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 style="margin-top: 20px;">Sammanfattning</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600;">Vinnande lag:</td>
+            <td style="padding: 10px;">____________________</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8; background: #faf8f5;">
+            <td style="padding: 10px; font-weight: 600;">Antal spelade omgångar:</td>
+            <td style="padding: 10px;">_______</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e0d5c8;">
+            <td style="padding: 10px; font-weight: 600;">Slutresultat:</td>
+            <td style="padding: 10px;">_______ — _______</td>
+        </tr>
+    </table>
+
+    <h4 style="margin-top: 20px;">Taktisk notering före match:</h4>
+    <div style="border: 1px solid #e0d5c8; padding: 15px; min-height: 50px; margin-bottom: 15px; background: #faf8f5;">
+        <p style="color: #999; font-style: italic;">T.ex. "Fokus på långa kast; motståndare svag på >8 m"</p>
+    </div>
+
+    <h4>Reflektion efter match:</h4>
+    <div style="border: 1px solid #e0d5c8; padding: 15px; min-height: 50px; margin-bottom: 15px; background: #faf8f5;">
+        <p style="color: #999; font-style: italic;">T.ex. "Bra skott i slutet; träna mer på donnée-precision"</p>
+    </div>
+
+    <h3 style="margin-top: 20px;">Underskrifter</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <tr>
+            <td style="padding: 20px; text-align: center; border-bottom: 1px solid #333; width: 45%;">
+            </td>
+            <td style="padding: 20px; width: 10%;"></td>
+            <td style="padding: 20px; text-align: center; border-bottom: 1px solid #333; width: 45%;">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 5px; text-align: center; font-weight: 600;">Lag 1</td>
+            <td></td>
+            <td style="padding: 5px; text-align: center; font-weight: 600;">Lag 2</td>
+        </tr>
+    </table>
+
+    <div class="author-note" style="margin-top: 20px;">
+        <p><strong>Tips:</strong> Kopiera denna mall och fyll i för varje match. Att dokumentera dina matcher hjälper dig att identifiera mönster och förbättra din strategi över tid.</p>
+    </div>
 </div>
 
 <!-- ABOUT THE AUTHOR -->
